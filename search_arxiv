@@ -1,0 +1,155 @@
+import arxiv
+from datetime import datetime, date
+from typing import List, Dict, Optional, Union
+from dateutil.relativedelta import relativedelta
+
+class ArxivSearcher:
+    """
+    A utility class to search arXiv for papers based on keywords and criteria.
+    """
+    
+    def __init__(self, max_results: int = 10):
+        """
+        Initialize the searcher with maximum number of results to return.
+        
+        Args:
+            max_results (int): Maximum number of papers to return per search
+        """
+        self.max_results = max_results
+        self.client = arxiv.Client()
+    
+    def _build_date_query(self, 
+                         month: Optional[int] = None, 
+                         year: Optional[int] = None) -> str:
+        """
+        Build date range query for arXiv search.
+        
+        Args:
+            month (int, optional): Month to search for (1-12)
+            year (int, optional): Year to search for
+            
+        Returns:
+            str: Date range query string
+        """
+        if year is None:
+            return ""
+            
+        # Validate month if provided
+        if month is not None and not (1 <= month <= 12):
+            raise ValueError("Month must be between 1 and 12")
+            
+        # Create start date
+        if month is None:
+            # If only year provided, search whole year
+            start_date = date(year, 1, 1)
+            end_date = date(year + 1, 1, 1)
+        else:
+            # If month and year provided, search specific month
+            start_date = date(year, month, 1)
+            # Move to first day of next month
+            if month == 12:
+                end_date = date(year + 1, 1, 1)
+            else:
+                end_date = date(year, month + 1, 1)
+        
+        # Format dates for arXiv query
+        return f"submittedDate:[{start_date.strftime('%Y%m%d')}0000 TO {end_date.strftime('%Y%m%d')}0000]"
+    
+    def search(self, 
+               keywords: str,
+               categories: List[str] = None,
+               month: Optional[int] = None,
+               year: Optional[int] = None,
+               sort_by: arxiv.SortCriterion = arxiv.SortCriterion.Relevance,
+               sort_order: arxiv.SortOrder = arxiv.SortOrder.Descending) -> List[Dict]:
+        """
+        Search arXiv for papers matching the given keywords and criteria.
+        
+        Args:
+            keywords (str): Search query string
+            categories (List[str]): List of arXiv categories to search in (e.g., ['cs.AI', 'cs.LG'])
+            month (int, optional): Month to search for (1-12)
+            year (int, optional): Year to search for
+            sort_by (arxiv.SortCriterion): How to sort results (Relevance, LastUpdatedDate, SubmittedDate)
+            sort_order (arxiv.SortOrder): Order of sorting (Ascending or Descending)
+            
+        Returns:
+            List[Dict]: List of papers with their details
+        """
+        # Construct search query
+        search_parts = [keywords]
+        
+        # Add category filter if provided
+        if categories:
+            cat_query = ' OR '.join(f'cat:{cat}' for cat in categories)
+            search_parts.append(f'({cat_query})')
+            
+        # Add date filter if provided
+        date_query = self._build_date_query(month, year)
+        if date_query:
+            search_parts.append(date_query)
+            
+        # Combine all parts with AND
+        search_query = ' AND '.join(f'({part})' for part in search_parts if part)
+            
+        # Create search parameters
+        search = arxiv.Search(
+            query=search_query,
+            max_results=self.max_results,
+            sort_by=sort_by,
+            sort_order=sort_order
+        )
+        
+        # Execute search and format results
+        results = []
+        for result in self.client.results(search):
+            paper = {
+                'title': result.title,
+                'authors': [author.name for author in result.authors],
+                'published': result.published.strftime('%Y-%m-%d'),
+                'summary': result.summary,
+                'pdf_url': result.pdf_url,
+                'article_url': result.entry_id,
+                'categories': result.categories
+            }
+            results.append(paper)
+            
+        return results
+    
+    def print_results(self, results: List[Dict]) -> None:
+        """
+        Print search results in a formatted way.
+        
+        Args:
+            results (List[Dict]): List of paper results to print
+        """
+        if not results:
+            print("No results found.")
+            return
+            
+        for i, paper in enumerate(results, 1):
+            print(f"\n{'-'*80}\n{i}. {paper['title']}")
+            print(f"Authors: {', '.join(paper['authors'])}")
+            print(f"Published: {paper['published']}")
+            print(f"Categories: {', '.join(paper['categories'])}")
+            print(f"PDF: {paper['pdf_url']}")
+            print(f"Article: {paper['article_url']}")
+            print("\nAbstract:")
+            print(paper['summary'])
+
+# Example usage
+if __name__ == "__main__":
+    # Create searcher instance
+    searcher = ArxivSearcher(max_results=5)
+    
+    # Example search for machine learning papers from March 2024
+    results = searcher.search(
+        keywords="transformer neural networks",
+        categories=['cs.AI', 'cs.LG'],
+        month=3,
+        year=2024,
+        sort_by=arxiv.SortCriterion.SubmittedDate
+    )
+    
+    # Print results
+    searcher.print_results(results)
