@@ -1,0 +1,8 @@
+python-dateutil
+arxiv
+anthropic
+pypdf
+arxiv_latex_cleaner
+datasets
+pdfplumber
+python-dotenv
