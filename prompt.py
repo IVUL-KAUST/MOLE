@@ -12,7 +12,7 @@ import numpy as np
 from dotenv import load_dotenv
 from pylatexenc.latex2text import LatexNodes2Text
 from openai import OpenAI
-from utils import _setup_logger
+from utils import _setup_logger, find_best_match
 import argparse
 
 load_dotenv()
@@ -35,36 +35,53 @@ import pandas as pd
 df = pd.read_csv(url, usecols=range(34))
 df.columns.values[0] = "No."
 df.columns.values[1] = "Name"
+dialect_remapped = {'Classic': 'ar-CLS: (Arabic (Classic))','Modern Standard Arabic': 'ar-MSA: (Arabic (Modern Standard Arabic))','United Arab Emirates': 'ar-AE: (Arabic (United Arab Emirates))','Bahrain': 'ar-BH: (Arabic (Bahrain))','Djibouti': 'ar-DJ: (Arabic (Djibouti))','Algeria': 'ar-DZ: (Arabic (Algeria))','Egypt': 'ar-EG: (Arabic (Egypt))','Iraq': 'ar-IQ: (Arabic (Iraq))','Jordan': 'ar-JO: (Arabic (Jordan))','Comoros': 'ar-KM: (Arabic (Comoros))','Kuwait': 'ar-KW: (Arabic (Kuwait))','Lebanon': 'ar-LB: (Arabic (Lebanon))','Libya': 'ar-LY: (Arabic (Libya))','Morocco': 'ar-MA: (Arabic (Morocco))','Mauritania': 'ar-MR: (Arabic (Mauritania))','Oman': 'ar-OM: (Arabic (Oman))','Palestine': 'ar-PS: (Arabic (Palestine))','Qatar': 'ar-QA: (Arabic (Qatar))','Saudi Arabia': 'ar-SA: (Arabic (Saudi Arabia))','Sudan': 'ar-SD: (Arabic (Sudan))','Somalia': 'ar-SO: (Arabic (Somalia))','South Sudan': 'ar-SS: (Arabic (South Sudan))','Syria': 'ar-SY: (Arabic (Syria))','Tunisia': 'ar-TN: (Arabic (Tunisia))','Yemen': 'ar-YE: (Arabic (Yemen))','Levant': 'ar-LEV: (Arabic(Levant))','North Africa': 'ar-NOR: (Arabic (North Africa))','Gulf': 'ar-GLF: (Arabic (Gulf))','mixed': 'mixed'}
+column_options = {
+    'License': 'Apache-2.0, Non Commercial Use - ELRA END USER, BSD, CC BY 2.0, CC BY 3.0, CC BY 4.0, CC BY-NC 2.0, CC BY-NC-ND 4.0, CC BY-SA, CC BY-SA 3.0, CC BY-NC 4.0, CC BY-NC-SA 4.0, CC BY-SA 3.0, CC BY-SA 4.0, CC0, CDLA-Permissive-1.0, GPL-2.0, LDC User Agreement, LGPL-3.0, MIT License, ODbl-1.0, MPL-2.0, unknown, custom',
+    'Dialect': ', '.join(list(dialect_remapped.keys())),
+    'Collection Style': 'crawling, crawling and annotation(translation), crawling and annotation(other), machine translation, human translation, manual curation, other',
+    'Domain': 'social media, news articles, reviews, commentary, books, transcribed audio, wikipedia, web pages, handwriting, other',
+    'Form': 'text, spoken, images',
+    'Unit': 'tokens, sentences, documents, hours, images',
+    'Ethical Risks': 'Low, Mid, High',
+    'Script': 'Arab, Latin, Arab-Latin',
+    'Tokenized': 'Yes, No',
+    'Host': 'CAMeL Resources, CodaLab, data.world, Dropbox, Gdrive, GitHub, GitLab, kaggle, LDC, MPDI, Mendeley Data, Mozilla, OneDrive, QCRI Resources, ResearchGate, sourceforge, zenodo, HuggingFace, ELRA, other',
+    'Access': 'Free, Upon-request, Paid',
+    'Test Split': 'Yes, No',
+    'Tasks': 'machine translation, speech recognition, sentiment analysis, language modeling, topic classification, dialect identification, text generation, cross-lingual information retrieval, named entity recognition, question answering, information retrieval, part of speech tagging, language identification, summarization, speaker identification, transliteration, morphological analysis, offensive language detection, review classification, gender identification, fake news detection, dependency parsing, irony detection, meter classification, natural language inference, instruction tuning',
+    'Venue Type': 'Conference, Workshop, Journal, Preprint'
+}
 
-questions = "1. What is the name of the dataset?\n\
+questions = f"1. What is the name of the dataset? \n\
   2. What are the subsets of this dataset? \n\
-  3. What is the link to access the dataset?\n\
-  4. What is the Huggingface link of the dataset?\n\
-  5. What is the License of the dataset? Choose form the following: Apache-2.0, Non Commercial Use - ELRA END USER, BSD, CC BY 2.0, CC BY 3.0, CC BY 4.0, CC BY-NC 2.0, CC BY-NC-ND 4.0, CC BY-SA, CC BY-SA 3.0, CC BY-NC 4.0, CC BY-NC-SA 4.0, CC BY-SA 3.0, CC BY-SA 4.0, CC0, CDLA-Permissive-1.0, GPL-2.0, LDC User Agreement, LGPL-3.0, MIT License, ODbl-1.0, MPL-2.0, unknown, custom\n\
-  6. What year was the dataset published?\n\
-  7. Is the dataset multilingual or ar?\n\
-  8. Choose a dialect for the dataset from the following list ar-CLS (Arabic (Classic)), ar-MSA (Arabic (Modern Standard Arabic)), ar-AE (Arabic (United Arab Emirates)), ar-BH (Arabic (Bahrain)), ar-DJ (Arabic (Djibouti)), ar-DZ (Arabic (Algeria)), ar-EG (Arabic (Egypt)), ar-IQ (Arabic (Iraq)), ar-JO (Arabic (Jordan)), ar-KM (Arabic (Comoros)), ar-KW (Arabic (Kuwait)), ar-LB (Arabic (Lebanon)), ar-LY (Arabic (Libya)), ar-MA (Arabic (Morocco)), ar-MR (Arabic (Mauritania)), ar-OM (Arabic (Oman)), ar-PS (Arabic (Palestine)), ar-QA (Arabic (Qatar)), ar-SA (Arabic (Saudi Arabia)), ar-SD (Arabic (Sudan)), ar-SO (Arabic (Somalia)), ar-SS (Arabic (South Sudan)), ar-SY (Arabic (Syria)), ar-TN (Arabic (Tunisia)), ar-YE (Arabic (Yemen)), ar-LEV (Arabic(Levant)), ar-NOR (Arabic (North Africa)), ar-GLF (Arabic (Gulf)), mixed\n\
-  9. What is the domain of the dataset? choose from the following: social media, news articles, reviews, commentary, books, transcribed audio, wikipedia, web pages, handwriting, other\n\
-  10. Is the dataset text, spoken, images?\n\
-  11. How was this dataset collected? Choose from crawling, crawling and annotation(translation), crawling and annotation(other), machine translation, human translation, manual curation, other. \n\
+  3. What is the link to access the dataset? \n\
+  4. What is the Huggingface link of the dataset? \n\
+  5. What is the License of the dataset? Options: {column_options['License']} \n\
+  6. What year was the dataset published? \n\
+  7. Is the dataset multilingual or ar? \n\
+  8. Choose a dialect for the dataset from the following options: {column_options['Dialect']} \n\
+  9. What is the domain of the dataset? Options: {column_options['Domain']} \n\
+  10. What is the form of the dataset? Options {column_options['Form']} \n\
+  11. How was this dataset collected? Options: {column_options['Collection Style']} \n\
   12. Write a brief description of the dataset. \n\
-  13. What is the size of the dataset? Output numbers only with , seperated each thousand.\n\
-  14. Does the dataset contain tokens, sentences, documents, hours or images? \n\
-  15. What is the level of the ethical risks of the dataset? low, mid, high \n\
+  13. What is the size of the dataset? Output numbers only with , seperated each thousand\n\
+  14. What is the unit of the size? Options: {column_options['Unit']} \n\
+  15. What is the level of the ethical risks of the dataset? Options: {column_options['Ethical Risks']}\n\
   16. What entity is the provider of the dataset? \n\
   17. What dataset is this dataset derived from? \n\
-  18. What is the paper title?\n\
+  18. What is the paper title? \n\
   19. What is the paper link? \n\
-  20. What is the script of this dataset? Arab, Latin, Arab-Latin \n\
-  21. Is the dataset tokenized? Yes or No \n\
-  22. Who is the host of the dataset, choose form the following: CAMeL Resources, CodaLab, data.world, Dropbox, Gdrive, GitHub, GitLab, kaggle, LDC, MPDI, Mendeley Data, Mozilla, OneDrive, QCRI Resources, ResearchGate, sourceforge, zenodo, HuggingFace, ELRA, other\n\
-  23. Is the dataset Free, Upon-request, Paid?\n\
+  20. What is the script of this dataset? Options: {column_options['Script']} \n\
+  21. Is the dataset tokenized? Options: {column_options['Tokenized']} \n\
+  22. Who is the host of the dataset? Options: {column_options['Host']} \n\
+  23. What is the accessability of the dataset? Options: {column_options['Access']} \n\
   24. What is the cost of the dataset? \n\
-  25. Does the dataset contain a test split? Yes or No\n\
-  26. What is the task of the dataset. If there are multiple tasks, separate them by ','. Choose from the following separated by comma: machine translation, speech recognition, sentiment analysis, language modeling, topic classification, dialect identification, text generation, cross-lingual information retrieval, named entity recognition, question answering, information retrieval, part of speech tagging, language identification, summarization, speaker identification, transliteration, morphological analysis, offensive language detection, review classification, gender identification, fake news detection, dependency parsing, irony detection, meter classification, natural language inference, instruction tuning\n\
+  25. Does the dataset contain a test split? Options: {column_options['Test Split']} \n\
+  26. What is the task of the dataset. If there are multiple tasks, separate them by ','. Options: {column_options['Tasks']} \n\
   27. What is the Venue title this paper was published in? \n\
   28. How many citations this paper got? \n\
-  29. What is the venue the dataset is published in ? Conference, Workshop, Journal, Preprint. \n\
+  29. What is the venue the dataset is published in? Options: {column_options['Venue Type']} \n\
   30. What is the Venue full name this paper was published in? \n\
   31. Who are the authors of the paper, list them separated by comma. \n\
   32. What are the affiliations of the authors, separate by comma. \n\
@@ -107,6 +124,24 @@ def is_resource(abstract):
   response = message.content[0].text
   return response.lower()
 
+def fix_options(metadata):
+    fixed_metadata = {}
+    for column in metadata:
+        if column in column_options:
+            options = [c.strip() for c in column_options[column].split(',')]
+            pred_option = metadata[column]
+            if pred_option in options:
+                fixed_metadata[column] = pred_option
+            else:                    
+                fixed_metadata[column] = find_best_match(pred_option, options)
+        else:
+            fixed_metadata[column] = metadata[column]
+        
+        if column == 'Dialect':
+            fixed_metadata[column] = dialect_remapped[fixed_metadata[column]]
+
+
+    return fixed_metadata
 
 def validate(metadata):
     dataset = df[df['Name'] == metadata['Name']]
@@ -130,17 +165,19 @@ def validate(metadata):
             # print(column, gold_answer, pred_answer)
 
     return accuracy/ len(columns)
+def get_answer(answers, question_number = '1.'):
+    for answer in answers:
+        if answer.startswith(question_number):
+            return re.sub(r'(\d+)\.', '', answer).strip()
 
 def get_metadata(paper_text):
-  prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset. \
-  {questions}\
-  For each question, output a short and concise answer responding to the exact question without any extra text. If there is no answer output N/A.\
-  "
+  prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
   message = client.messages.create(
       model="claude-3-5-sonnet-latest",
       max_tokens=1000,
       temperature=0,
-      system="You are a profressional research paper reader",
+      system="You are a profressional research paper reader. You will be provided 33 questions. \
+      If a question has choices which are separated by ',' , only provide an answer from the choices. If the answer is not provided, then answer only N/A.",
       messages=[
           {
               "role": "user",
@@ -155,15 +192,15 @@ def get_metadata(paper_text):
   )
   predictions = {}
   response = message.content[0].text
-  for i,  answer in enumerate(response.split('\n')):
-    if i < 33:
-        predictions[columns[i]] = re.sub(r'(\d+)\.', '', answer).strip()
+#   print(response)
+  for i in range(1, 34):
+      predictions[columns[i-1]] = get_answer(response.split('\n'), question_number=f'{i}.')
   return message, predictions
 
 def get_metadata_chatgpt(paper_text):
     prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset. \
     {questions}\
-    For each question, output a short and concise answer responding to the exact question without any extra text. If there is no answer output N/A.\
+    For each question, output a short and concise answer responding to the exact question without any extra text. If the answer is not provided, then answer only N/A.\
     "
     message = chatgpt_client.chat.completions.create(
             model="gpt-4o",
@@ -181,7 +218,10 @@ def get_metadata_chatgpt(paper_text):
 
 
 if __name__ == "__main__":
-
+    # print(column_options['Dialect'].split(','))
+    # out = find_best_match('ar-MSA', column_options['Dialect'].split(','))
+    # print(out)
+    # raise
     parser = argparse.ArgumentParser(description='Process keywords, month, and year parameters')
     
     # Add arguments
@@ -229,7 +269,7 @@ if __name__ == "__main__":
         abstract = r['summary']
         article_url = r['article_url']
         title = r['title']
-        logger.info('Checking Abstract:')
+        logger.info('Checking Abstract ...')
         if is_resource(abstract) == 'yes':
             logger.info('Abstract indicates resource: True')
             paper_id = article_url.split('/')[-1]
@@ -248,6 +288,7 @@ if __name__ == "__main__":
             
             if len(source_files):
                 source_file = source_files[0]
+                logger.info(f'Reading {source_file} ...')
                 if source_file.endswith('.pdf'):
                     with pdfplumber.open(source_file) as pdf:
                         text_pages = []
@@ -258,7 +299,8 @@ if __name__ == "__main__":
                     paper_text = open(source_file, 'r').read() # maybe clean comments
                 else:
                     logger.error('Not acceptable source file')
-                    continue 
+                    continue
+                logger.info(f'Extracting Metadata ...') 
                 message, metadata = get_metadata(paper_text)
                 # message , metadata = get_metadata_chatgpt(paper_text)
                 cost = compute_cost(message)
@@ -278,6 +320,7 @@ if __name__ == "__main__":
                     if 'N/A' in metadata[c]:
                         metadata[c] = ''
 
+                metadata = fix_options(metadata)
                 validation_score = validate(metadata)
                 results = {}
                 results ['metadata'] = metadata
