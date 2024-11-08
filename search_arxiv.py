@@ -9,7 +9,7 @@ import tarfile
 import os
 import re
 from urllib.parse import urlparse
-import logging
+from utils import _setup_logger
 import gzip
 
 class ArxivSourceDownloader:
@@ -26,21 +26,8 @@ class ArxivSourceDownloader:
             download_path (str): Directory where files will be downloaded
         """
         self.download_path = download_path
-        self.logger = self._setup_logger()
+        self.logger = _setup_logger()
         self.client = arxiv.Client()
-        
-    def _setup_logger(self) -> logging.Logger:
-        """Set up logging configuration."""
-        logger = logging.getLogger('results')
-        logger.setLevel(logging.INFO)
-        
-        if not logger.handlers:
-            handler = logging.StreamHandler()
-            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-            handler.setFormatter(formatter)
-            logger.addHandler(handler)
-            
-        return logger
 
     def _get_paper_id(self, identifier: str) -> str:
         """Extract paper ID from various forms of arXiv identifiers."""
@@ -402,8 +389,6 @@ class ArxivSearcher:
             
         # Combine all parts with AND
         search_query = ' AND '.join(f'({part})' for part in search_parts if part)
-
-        print(search_query)
         
         # Create search parameters
         search = arxiv.Search(
@@ -449,20 +434,3 @@ class ArxivSearcher:
             print(f"Article: {paper['article_url']}")
             print("\nAbstract:")
             print(paper['summary'])
-
-# Example usage
-if __name__ == "__main__":
-    # Create searcher instance
-    searcher = ArxivSearcher(max_results=10)
-    
-    # Example search for machine learning papers from March 2024
-    results = searcher.search(
-        keywords= ['Dataset', 'Arabic'],
-        categories=['cs.AI', 'cs.LG'],
-        month=2,
-        year=2024,
-        sort_by=arxiv.SortCriterion.SubmittedDate
-    )
-    
-    # Print results
-    searcher.print_results(results)

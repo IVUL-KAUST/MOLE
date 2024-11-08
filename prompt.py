@@ -10,6 +10,10 @@ import json
 import pdfplumber
 import numpy as np
 from dotenv import load_dotenv
+from pylatexenc.latex2text import LatexNodes2Text
+from openai import OpenAI
+from utils import _setup_logger
+import argparse
 
 load_dotenv()
 
@@ -17,8 +21,11 @@ anthropic_key = os.environ['anthropic_key']
 
 
 client = anthropic.Anthropic(api_key=anthropic_key)
+chatgpt_client = OpenAI(api_key=os.environ['chatgpt_key'])
+
 columns = ['Name', 'Subsets', 'Link', 'HF Link', 'License', 'Year', 'Language', 'Dialect', 'Domain', 'Form', 'Collection Style', 'Description', 'Volume', 'Unit', 'Ethical Risks', 'Provider', 'Derived From', 'Paper Title', 'Paper Link', 'Script', 'Tokenized', 'Host', 'Access', 'Cost', 'Test Split', 'Tasks',  'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
-extra_columns = ['Description', 'Paper Link', 'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
+extra_columns = ['Description', 'Paper Link', 'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract','Year']
+required_columns = ['Name', 'Link', 'License', 'Year', 'Language', 'Dialect', 'Domain', 'Form', 'Collection Style', 'Description', 'Volume', 'Unit', 'Ethical Risks', 'Paper Title', 'Paper Link', 'Script', 'Tokenized', 'Host', 'Access', 'Cost', 'Test Split', 'Tasks',  'Venue Title', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
 
 sheet_id = "1YO-Vl4DO-lnp8sQpFlcX1cDtzxFoVkCmU1PVw_ZHJDg"
 sheet_name = "filtered_clean"
@@ -63,10 +70,8 @@ questions = "1. What is the name of the dataset?\n\
   32. What are the affiliations of the authors, separate by comma. \n\
   33. What is the abstract of the dataset?"
 
-def download_and_extract(arxiv_id, download_path = 'results'):
-  with requests.get(f'https://arxiv.org/src/{arxiv_id}' , stream=True, auth=('user', 'pass')) as  rx  , tarfile.open(fileobj=rx.raw  , mode="r:gz") as  tarobj  :
-          tarobj.extractall(f'{download_path}/{arxiv_id}')
-        #   !arxiv_latex_cleaner {download_path}
+def compute_filling(metadata):
+    return len([m for m in metadata if m!= '']) / len(metadata)
 
 def compute_cost(message):
   num_inp_tokens = message.usage.input_tokens
@@ -74,9 +79,10 @@ def compute_cost(message):
   cost =(num_inp_tokens / 1e6) * 3 + (num_out_tokens / 1e6) * 15 
   return {
     'cost': cost,
-    'input tokens': num_inp_tokens,
-    'output tokens': num_out_tokens
+    'input_tokens': num_inp_tokens,
+    'output_tokens': num_out_tokens
   }
+
 def is_resource(abstract):
   prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published dataset, please answer 'yes' or 'no' only"
 
@@ -120,7 +126,8 @@ def validate(metadata):
         elif pred_answer.lower() in str(gold_answer).lower():
             accuracy += 1
         else:
-            print(column, gold_answer, pred_answer)
+            pass
+            # print(column, gold_answer, pred_answer)
 
     return accuracy/ len(columns)
 
@@ -147,47 +154,98 @@ def get_metadata(paper_text):
       ]
   )
   predictions = {}
-  print(compute_cost(message))
-
   response = message.content[0].text
   for i,  answer in enumerate(response.split('\n')):
     if i < 33:
         predictions[columns[i]] = re.sub(r'(\d+)\.', '', answer).strip()
-  return predictions
+  return message, predictions
+
+def get_metadata_chatgpt(paper_text):
+    prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset. \
+    {questions}\
+    For each question, output a short and concise answer responding to the exact question without any extra text. If there is no answer output N/A.\
+    "
+    message = chatgpt_client.chat.completions.create(
+            model="gpt-4o",
+            messages=[{"role": "system", "content": "You are a profressional research paper reader"},
+                {"role": "user", "content":prompt}]
+            )
+    response = message.choices[0].message.content
+    predictions = {}
+
+    for i,  answer in enumerate(response.split('\n')):
+        if i < 33:
+            predictions[columns[i]] = re.sub(r'(\d+)\.', '', answer).strip()
+    return message, predictions
+    
 
 
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description='Process keywords, month, and year parameters')
     
+    # Add arguments
+    parser.add_argument('-k', '--keywords', 
+                        type=str, 
+                        required=True,
+                        help='Comma-separated list of keywords')
+    
+    parser.add_argument('-m', '--month', 
+                        type=int, 
+                        required=True,
+                        help='Month (1-12)')
+    
+    parser.add_argument('-y', '--year', 
+                        type=int, 
+                        required=True,
+                        help='Year (4-digit format)')
+
+    parser.add_argument('-n', '--model_name', 
+                        type=str, 
+                        required=False,
+                        default = 'claude-3-5-sonnet-latest',
+                        help='Name of the model to use')
+
+    # Parse arguments
+    args = parser.parse_args()
+
+    logger = _setup_logger()
     # Create searcher instance
     searcher = ArxivSearcher(max_results=10)
     
     # Example search for machine learning papers from March 2024
-    results = searcher.search(
-        keywords= ['CIDAR'],
+    year = args.year
+    month = args.month
+    keywords = args.keywords.split(',')                   
+    search_results = searcher.search(
+        keywords= keywords,
         categories=['cs.AI', 'cs.LG', 'cs.CL'],
-        month=2,
-        year=2024,
+        month=month,
+        year=year,
         sort_by=arxiv.SortCriterion.SubmittedDate
     )
 
-    for r in results:
+    for r in search_results:
         abstract = r['summary']
         article_url = r['article_url']
         title = r['title']
-        print(title)
-        print(article_url)
+        logger.info('Checking Abstract:')
         if is_resource(abstract) == 'yes':
+            logger.info('Abstract indicates resource: True')
             paper_id = article_url.split('/')[-1]
             downloader = ArxivSourceDownloader(download_path="results")
     
             # Download and extract source files
             success, path = downloader.download_paper(paper_id)
-            if success:
-                print(f"\nSource files downloaded and extracted to: {path}")
-            else:
-                print("\nFailed to download source files. The paper might not have available source files.")
+
+            if not success:
+                continue
+
+            logger.info('Cleaning Latex ...')
+            os.system(f'arxiv_latex_cleaner {path}')
+            path = f'{path}_arXiv'
             source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
-            # source_files = glob(f'{path}/*.pdf')
+            
             if len(source_files):
                 source_file = source_files[0]
                 if source_file.endswith('.pdf'):
@@ -199,9 +257,13 @@ if __name__ == "__main__":
                 elif source_file.endswith('.tex'):
                     paper_text = open(source_file, 'r').read() # maybe clean comments
                 else:
-                    print('corrputed source files')
-                    raise 
-                metadata = get_metadata(paper_text)
+                    logger.error('Not acceptable source file')
+                    continue 
+                message, metadata = get_metadata(paper_text)
+                # message , metadata = get_metadata_chatgpt(paper_text)
+                cost = compute_cost(message)
+
+                metadata = {k:str(v) for k,v in metadata.items()}
 
                 if 'N/A' in metadata['Venue Title']:
                     metadata['Venue Title'] = 'arXiv'
@@ -210,25 +272,26 @@ if __name__ == "__main__":
                 if 'N/A' in metadata['Paper Link']:
                     metadata['Paper Link'] = article_url
                 
+                metadata['Year'] = str(year)
+                
                 for c in metadata:
                     if 'N/A' in metadata[c]:
                         metadata[c] = ''
 
-                print(metadata)
-                print('Validation ', validate(metadata))
-                with open(f"{path}/metadata.json", "w") as outfile: 
-                    json.dump(metadata, outfile)
+                validation_score = validate(metadata)
+                results = {}
+                results ['metadata'] = metadata
+                results ['cost'] = cost
+                results ['validation'] = validation_score
+                results ['config'] = {
+                    'model_name': args.model_name,
+                    'month': args.month,
+                    'year': args.year,
+                    'keywords': args.keywords
+                }
+                results['ratio_filling'] = compute_filling(metadata)
+                logger.info(f"Results saved to: {path}/results.json")
+                with open(f"{path}/results.json", "w") as outfile: 
+                    json.dump(results, outfile, indent=4)
         else:
-            print()
-
-
-
-# Steps in the pipeline:
-"""
-- Do optimization for the latex source. Try different optimization methods, consider without cleaning, with cleaning, converting from tex to text. We may also consider the cost in the comparision?
-- Try searching with semantic scholar as well. We may start from there.
-- Compare ChatGPT and Claude.
-- If the resource has GitHub page, browse, get the README and Licenese for more improved information.
-- Perform the pipeline on a dev set of 100 paper from Masader.
-- Do the engineering stuff, perform the action on weekly bases and submit a PR for each paper.
-"""
+            logger.info('Abstract indicates resource: False')

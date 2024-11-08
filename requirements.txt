@@ -6,3 +6,5 @@ arxiv_latex_cleaner
 datasets
 pdfplumber
 python-dotenv
+arxiv-latex-cleaner
+openai
