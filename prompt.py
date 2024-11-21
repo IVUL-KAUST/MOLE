@@ -1,8 +1,6 @@
 import anthropic
 from glob import glob
 import os
-import requests
-import tarfile
 import re
 import arxiv
 from search_arxiv import ArxivSearcher, ArxivSourceDownloader
@@ -10,7 +8,6 @@ import json
 import pdfplumber
 import numpy as np
 from dotenv import load_dotenv
-from pylatexenc.latex2text import LatexNodes2Text
 from openai import OpenAI
 from utils import _setup_logger, find_best_match
 import argparse
@@ -53,7 +50,7 @@ column_options = {
     'Venue Type': 'Conference, Workshop, Journal, Preprint'
 }
 
-questions = f"1. What is the name of the dataset? \n\
+questions = f"1. What is the name of the dataset? If the dataset has a short name please use it. \n\
   2. What are the subsets of this dataset? \n\
   3. What is the link to access the dataset? \n\
   4. What is the Huggingface link of the dataset? \n\
@@ -170,10 +167,10 @@ def get_answer(answers, question_number = '1.'):
         if answer.startswith(question_number):
             return re.sub(r'(\d+)\.', '', answer).strip()
 
-def get_metadata(paper_text):
+def get_metadata(paper_text, model_name):
   prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
   message = client.messages.create(
-      model="claude-3-5-sonnet-latest",
+      model=model_name,
       max_tokens=1000,
       temperature=0,
       system="You are a profressional research paper reader. You will be provided 33 questions. \
@@ -301,7 +298,7 @@ if __name__ == "__main__":
                     logger.error('Not acceptable source file')
                     continue
                 logger.info(f'Extracting Metadata ...') 
-                message, metadata = get_metadata(paper_text)
+                message, metadata = get_metadata(paper_text, args.model_name)
                 # message , metadata = get_metadata_chatgpt(paper_text)
                 cost = compute_cost(message)
 
