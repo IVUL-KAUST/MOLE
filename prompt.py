@@ -21,7 +21,7 @@ client = anthropic.Anthropic(api_key=anthropic_key)
 chatgpt_client = OpenAI(api_key=os.environ['chatgpt_key'])
 
 columns = ['Name', 'Subsets', 'Link', 'HF Link', 'License', 'Year', 'Language', 'Dialect', 'Domain', 'Form', 'Collection Style', 'Description', 'Volume', 'Unit', 'Ethical Risks', 'Provider', 'Derived From', 'Paper Title', 'Paper Link', 'Script', 'Tokenized', 'Host', 'Access', 'Cost', 'Test Split', 'Tasks',  'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
-extra_columns = ['Description', 'Paper Link', 'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract','Year']
+extra_columns = ['Subsets', 'Description', 'Paper Link', 'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract','Year']
 required_columns = ['Name', 'Link', 'License', 'Year', 'Language', 'Dialect', 'Domain', 'Form', 'Collection Style', 'Description', 'Volume', 'Unit', 'Ethical Risks', 'Paper Title', 'Paper Link', 'Script', 'Tokenized', 'Host', 'Access', 'Cost', 'Test Split', 'Tasks',  'Venue Title', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
 
 sheet_id = "1YO-Vl4DO-lnp8sQpFlcX1cDtzxFoVkCmU1PVw_ZHJDg"
@@ -52,7 +52,7 @@ column_options = {
 
 questions = f"1. What is the name of the dataset? If the dataset has a short name please use it. \n\
   2. What are the subsets of this dataset? \n\
-  3. What is the link to access the dataset? \n\
+  3. What is the link to access the dataset? The link most contain the dataset not the code. \n\
   4. What is the Huggingface link of the dataset? \n\
   5. What is the License of the dataset? Options: {column_options['License']} \n\
   6. What year was the dataset published? \n\
@@ -63,7 +63,7 @@ questions = f"1. What is the name of the dataset? If the dataset has a short nam
   11. How was this dataset collected? Options: {column_options['Collection Style']} \n\
   12. Write a brief description of the dataset. \n\
   13. What is the size of the dataset? Output numbers only with , seperated each thousand\n\
-  14. What is the unit of the size? Options: {column_options['Unit']} \n\
+  14. What is the unit of the size? Options: {column_options['Unit']}. Only use documents for datasets that contain documents or files as examples. \n\
   15. What is the level of the ethical risks of the dataset? Options: {column_options['Ethical Risks']}\n\
   16. What entity is the provider of the dataset? \n\
   17. What dataset is this dataset derived from? \n\
@@ -73,7 +73,7 @@ questions = f"1. What is the name of the dataset? If the dataset has a short nam
   21. Is the dataset tokenized? Options: {column_options['Tokenized']} \n\
   22. Who is the host of the dataset? Options: {column_options['Host']} \n\
   23. What is the accessability of the dataset? Options: {column_options['Access']} \n\
-  24. What is the cost of the dataset? \n\
+  24. What is the cost of the dataset? If the dataset is free don't output anything. \n\
   25. Does the dataset contain a test split? Options: {column_options['Test Split']} \n\
   26. What is the task of the dataset. If there are multiple tasks, separate them by ','. Options: {column_options['Tasks']} \n\
   27. What is the Venue title this paper was published in? \n\
