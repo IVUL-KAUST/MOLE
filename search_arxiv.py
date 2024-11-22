@@ -204,7 +204,7 @@ class ArxivSourceDownloader:
         """
         try:
             file_type = self._detect_file_type(file_path)
-            self.logger.info(f"Detected file type: {file_type}")
+            # self.logger.info(f"Detected file type: {file_type}")
             
             self._save_direct(file_path, extract_path, file_type)
             
@@ -230,7 +230,7 @@ class ArxivSourceDownloader:
             Tuple[bool, str]: (Success status, Path to downloaded files)
         """
         paper_id = self._get_paper_id(identifier)
-        self.logger.info(f"Processing paper ID: {paper_id}")
+        self.logger.info(f"🔄  Processing paper ID: {paper_id} ...")
         
         paper_dir = self._create_download_dir(paper_id)
         success = True
@@ -241,7 +241,7 @@ class ArxivSourceDownloader:
                 pdf_path = os.path.join(paper_dir, f"{paper_id}.pdf")
                 pdf_success = self._download_file(pdf_url, pdf_path)
                 if pdf_success:
-                    self.logger.info(f"PDF downloaded successfully to {pdf_path}")
+                    self.logger.info(f"📄 PDF downloaded successfully to {pdf_path}")
                 else:
                     self.logger.warning("Failed to download PDF")
                     success = False

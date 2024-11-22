@@ -111,28 +111,16 @@ def compute_cost(message):
 
 @spinner_decorator
 def is_resource(abstract):
-  prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published Arabic dataset, please answer 'yes' or 'no' only"
-
-  message = client.messages.create(
-      model="claude-3-5-sonnet-20241022",
-      max_tokens=1000,
-      temperature=0,
-      system="You are a profressional research paper reader",
-      messages=[
-          {
-              "role": "user",
-              "content": [
-                  {
-                      "type": "text",
-                      "text": prompt
-                  }
-              ]
-          }
-      ]
-  )
+  prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published Arabic dataset, please answer 'yes' or 'no' only"  
+  model = genai.GenerativeModel("gemini-1.5-flash",system_instruction ="You are a prefoessional research paper reader" )  
   
-  response = message.content[0].text
-  return response.lower()
+  message = model.generate_content(prompt, 
+        generation_config = genai.GenerationConfig(
+        max_output_tokens=1000,
+        temperature=0.0,
+    ))
+  
+  return True if 'yes' in message.text.lower() else False
 
 def fix_options(metadata):
     fixed_metadata = {}
@@ -249,8 +237,21 @@ def get_metadata_chatgpt(paper_text, model_name):
             predictions[columns[i]] = re.sub(r'(\d+)\.', '', answer).strip()
     return message, predictions
 
+@spinner_decorator
 def clean_latex(path):
     os.system(f'arxiv_latex_cleaner {path}')
+
+@spinner_decorator
+def get_search_results(keywords, month, year):
+    searcher = ArxivSearcher(max_results=10)
+    return searcher.search(
+        keywords= keywords,
+        categories=['cs.AI', 'cs.LG', 'cs.CL'],
+        month=month,
+        year=year,
+        sort_by=arxiv.SortCriterion.SubmittedDate
+    )
+    
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process keywords, month, and year parameters')
@@ -280,39 +281,31 @@ if __name__ == "__main__":
     parser.add_argument('-c', '--check_abstract', 
                         type=bool, 
                         required= False,
-                        default = False,
+                        default = True,
                         help='whether to check the abstract')
 
     # Parse arguments
     args = parser.parse_args()
 
     logger = setup_logger()
-    # Create searcher instance
-    searcher = ArxivSearcher(max_results=10)
     
     # Example search for machine learning papers from March 2024
     year = args.year
     month = args.month
-    keywords = args.keywords.split(',')                   
-    search_results = searcher.search(
-        keywords= keywords,
-        categories=['cs.AI', 'cs.LG', 'cs.CL'],
-        month=month,
-        year=year,
-        sort_by=arxiv.SortCriterion.SubmittedDate
-    )
+    keywords = args.keywords.split(',')
+    logger.info('🔍 Searching arXiv ...')                   
+    search_results = get_search_results(keywords, month, year)
 
     for r in search_results:
         abstract = r['summary']
         article_url = r['article_url']
         title = r['title']
-        _is_resource = 'yes'
+        _is_resource = True
         if args.check_abstract:
-            logger.info('Checking Abstract ...')
+            logger.info('🚧 Checking Abstract ...')
             _is_resource = is_resource(abstract)
 
-        if _is_resource == 'yes':
-            logger.info('Abstract indicates resource: True')
+        if _is_resource:
             paper_id = article_url.split('/')[-1]
             downloader = ArxivSourceDownloader(download_path="results")
     
@@ -322,14 +315,14 @@ if __name__ == "__main__":
             if not success:
                 continue
 
-            logger.info('Cleaning Latex ...')
+            logger.info('✨ Cleaning Latex ...')
             clean_latex(path)
             path = f'{path}_arXiv'
             source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
             
             if len(source_files):
                 source_file = source_files[0]
-                logger.info(f'Reading {source_file} ...')
+                logger.info(f'📖 Reading {source_file} ...')
                 if source_file.endswith('.pdf'):
                     with pdfplumber.open(source_file) as pdf:
                         text_pages = []
@@ -341,7 +334,7 @@ if __name__ == "__main__":
                 else:
                     logger.error('Not acceptable source file')
                     continue
-                logger.info(f'Extracting Metadata ...')
+                logger.info(f'🧠 Extracting Metadata ...')
                 if 'claude' in args.model_name: 
                     message, metadata = get_metadata(paper_text, args.model_name)
                 elif 'gpt' in args.model_name:
@@ -378,7 +371,7 @@ if __name__ == "__main__":
                     'keywords': args.keywords
                 }
                 results['ratio_filling'] = compute_filling(metadata)
-                logger.info(f"Results saved to: {path}/results.json")
+                logger.info(f"📥 Results saved to: {path}/results.json")
                 with open(f"{path}/results.json", "w") as outfile: 
                     json.dump(results, outfile, indent=4)
         else:
