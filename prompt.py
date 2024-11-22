@@ -11,14 +11,16 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from utils import *
 import argparse
+import google.generativeai as genai
+
         
 load_dotenv()
 
-anthropic_key = os.environ['anthropic_key']
 
-
-client = anthropic.Anthropic(api_key=anthropic_key)
+client = anthropic.Anthropic(api_key=os.environ['anthropic_key'])
 chatgpt_client = OpenAI(api_key=os.environ['chatgpt_key'])
+genai.configure(api_key=os.environ['gemini_key'])
+
 
 stop_event = threading.Event()  # Event to signal the spinner to stop
 spinner_thread = threading.Thread(target=spinner_animation, args=(stop_event,))
@@ -55,7 +57,7 @@ column_options = {
 
 questions = f"1. What is the name of the dataset? If the dataset has a short name please use it. \n\
   2. What are the subsets of this dataset? \n\
-  3. What is the link to access the dataset? The link most contain the dataset not the code. \n\
+  3. What is the link to access the dataset? The link most contain the dataset. \n\
   4. What is the Huggingface link of the dataset? \n\
   5. What is the License of the dataset? Options: {column_options['License']} \n\
   6. What year was the dataset published? \n\
@@ -91,18 +93,25 @@ def compute_filling(metadata):
     return len([m for m in metadata if m!= '']) / len(metadata)
 
 def compute_cost(message):
-  num_inp_tokens = message.usage.input_tokens
-  num_out_tokens = message.usage.output_tokens
-  cost =(num_inp_tokens / 1e6) * 3 + (num_out_tokens / 1e6) * 15 
+  try:
+    num_inp_tokens = message.usage.input_tokens
+    num_out_tokens = message.usage.output_tokens
+    cost =(num_inp_tokens / 1e6) * 3 + (num_out_tokens / 1e6) * 15 
+  except:
+    num_inp_tokens = -1
+    num_out_tokens = -1
+    cost = -1
+      
   return {
-    'cost': cost,
-    'input_tokens': num_inp_tokens,
-    'output_tokens': num_out_tokens
-  }
+        'cost': cost,
+        'input_tokens': num_inp_tokens,
+        'output_tokens': num_out_tokens
+    }
+      
 
 @spinner_decorator
 def is_resource(abstract):
-  prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published dataset, please answer 'yes' or 'no' only"
+  prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published Arabic dataset, please answer 'yes' or 'no' only"
 
   message = client.messages.create(
       model="claude-3-5-sonnet-20241022",
@@ -139,7 +148,9 @@ def fix_options(metadata):
             fixed_metadata[column] = metadata[column]
         
         if column == 'Dialect':
-            fixed_metadata[column] = dialect_remapped[fixed_metadata[column]]
+            dialect = fixed_metadata[column]
+            if dialect in dialect_remapped:
+                fixed_metadata[column] = dialect_remapped[dialect]
 
 
     return fixed_metadata
@@ -180,7 +191,8 @@ def get_metadata(paper_text, model_name):
       max_tokens=1000,
       temperature=0,
       system="You are a profressional research paper reader. You will be provided 33 questions. \
-      If a question has choices which are separated by ',' , only provide an answer from the choices. If the answer is not provided, then answer only N/A.",
+      If a question has choices which are separated by ',' , only provide an answer from the choices. \
+      If the question has no choices and the answer is not found in the paper, then answer only N/A.",
       messages=[
           {
               "role": "user",
@@ -200,13 +212,32 @@ def get_metadata(paper_text, model_name):
       predictions[columns[i-1]] = get_answer(response.split('\n'), question_number=f'{i}.')
   return message, predictions
 
-def get_metadata_chatgpt(paper_text):
+@spinner_decorator
+def get_metadata_gemini(paper_text, model_name):
+  prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
+  
+  model = genai.GenerativeModel(model_name,system_instruction ="You are a profressional research paper reader. You will be provided 33 questions. \
+      If a question has choices which are separated by ',' , only provide an answer from the choices. \
+      If the question has no choices and the answer is not found in the paper, then answer only N/A." )  
+  
+  message = model.generate_content(prompt, 
+        generation_config = genai.GenerationConfig(
+        max_output_tokens=1000,
+        temperature=0.0,
+    ))
+  predictions = {}
+  response = message.text
+  for i in range(1, 34):
+      predictions[columns[i-1]] = get_answer(response.split('\n'), question_number=f'{i}.')
+  return message, predictions
+
+def get_metadata_chatgpt(paper_text, model_name):
     prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset. \
     {questions}\
     For each question, output a short and concise answer responding to the exact question without any extra text. If the answer is not provided, then answer only N/A.\
     "
     message = chatgpt_client.chat.completions.create(
-            model="gpt-4o",
+            model= model_name,
             messages=[{"role": "system", "content": "You are a profressional research paper reader"},
                 {"role": "user", "content":prompt}]
             )
@@ -245,6 +276,12 @@ if __name__ == "__main__":
                         required=False,
                         default = 'claude-3-5-sonnet-latest',
                         help='Name of the model to use')
+    
+    parser.add_argument('-c', '--check_abstract', 
+                        type=bool, 
+                        required= False,
+                        default = False,
+                        help='whether to check the abstract')
 
     # Parse arguments
     args = parser.parse_args()
@@ -269,8 +306,12 @@ if __name__ == "__main__":
         abstract = r['summary']
         article_url = r['article_url']
         title = r['title']
-        logger.info('Checking Abstract ...')
-        if is_resource(abstract) == 'yes':
+        _is_resource = 'yes'
+        if args.check_abstract:
+            logger.info('Checking Abstract ...')
+            _is_resource = is_resource(abstract)
+
+        if _is_resource == 'yes':
             logger.info('Abstract indicates resource: True')
             paper_id = article_url.split('/')[-1]
             downloader = ArxivSourceDownloader(download_path="results")
@@ -300,9 +341,13 @@ if __name__ == "__main__":
                 else:
                     logger.error('Not acceptable source file')
                     continue
-                logger.info(f'Extracting Metadata ...') 
-                message, metadata = get_metadata(paper_text, args.model_name)
-                # message , metadata = get_metadata_chatgpt(paper_text)
+                logger.info(f'Extracting Metadata ...')
+                if 'claude' in args.model_name: 
+                    message, metadata = get_metadata(paper_text, args.model_name)
+                elif 'gpt' in args.model_name:
+                    message , metadata = get_metadata_chatgpt(paper_text, args.model_name)
+                elif 'gemini' in args.model_name:
+                    message, metadata = get_metadata_gemini(paper_text, args.model_name)
                 cost = compute_cost(message)
 
                 metadata = {k:str(v) for k,v in metadata.items()}

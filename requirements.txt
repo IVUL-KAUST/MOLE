@@ -7,3 +7,4 @@ pdfplumber
 python-dotenv
 arxiv-latex-cleaner
 openai
+google-generativeai
