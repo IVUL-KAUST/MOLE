@@ -9,9 +9,9 @@ import pdfplumber
 import numpy as np
 from dotenv import load_dotenv
 from openai import OpenAI
-from utils import _setup_logger, find_best_match
+from utils import *
 import argparse
-
+        
 load_dotenv()
 
 anthropic_key = os.environ['anthropic_key']
@@ -19,6 +19,9 @@ anthropic_key = os.environ['anthropic_key']
 
 client = anthropic.Anthropic(api_key=anthropic_key)
 chatgpt_client = OpenAI(api_key=os.environ['chatgpt_key'])
+
+stop_event = threading.Event()  # Event to signal the spinner to stop
+spinner_thread = threading.Thread(target=spinner_animation, args=(stop_event,))
 
 columns = ['Name', 'Subsets', 'Link', 'HF Link', 'License', 'Year', 'Language', 'Dialect', 'Domain', 'Form', 'Collection Style', 'Description', 'Volume', 'Unit', 'Ethical Risks', 'Provider', 'Derived From', 'Paper Title', 'Paper Link', 'Script', 'Tokenized', 'Host', 'Access', 'Cost', 'Test Split', 'Tasks',  'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
 extra_columns = ['Subsets', 'Description', 'Paper Link', 'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract','Year']
@@ -97,6 +100,7 @@ def compute_cost(message):
     'output_tokens': num_out_tokens
   }
 
+@spinner_decorator
 def is_resource(abstract):
   prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published dataset, please answer 'yes' or 'no' only"
 
@@ -140,6 +144,7 @@ def fix_options(metadata):
 
     return fixed_metadata
 
+@spinner_decorator
 def validate(metadata):
     dataset = df[df['Name'] == metadata['Name']]
 
@@ -167,6 +172,7 @@ def get_answer(answers, question_number = '1.'):
         if answer.startswith(question_number):
             return re.sub(r'(\d+)\.', '', answer).strip()
 
+@spinner_decorator
 def get_metadata(paper_text, model_name):
   prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
   message = client.messages.create(
@@ -211,14 +217,11 @@ def get_metadata_chatgpt(paper_text):
         if i < 33:
             predictions[columns[i]] = re.sub(r'(\d+)\.', '', answer).strip()
     return message, predictions
-    
 
+def clean_latex(path):
+    os.system(f'arxiv_latex_cleaner {path}')
 
 if __name__ == "__main__":
-    # print(column_options['Dialect'].split(','))
-    # out = find_best_match('ar-MSA', column_options['Dialect'].split(','))
-    # print(out)
-    # raise
     parser = argparse.ArgumentParser(description='Process keywords, month, and year parameters')
     
     # Add arguments
@@ -246,7 +249,7 @@ if __name__ == "__main__":
     # Parse arguments
     args = parser.parse_args()
 
-    logger = _setup_logger()
+    logger = setup_logger()
     # Create searcher instance
     searcher = ArxivSearcher(max_results=10)
     
@@ -279,7 +282,7 @@ if __name__ == "__main__":
                 continue
 
             logger.info('Cleaning Latex ...')
-            os.system(f'arxiv_latex_cleaner {path}')
+            clean_latex(path)
             path = f'{path}_arXiv'
             source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
             

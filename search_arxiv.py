@@ -7,10 +7,9 @@ import shutil
 import requests
 import tarfile
 import os
-import re
 from urllib.parse import urlparse
-from utils import _setup_logger
 import gzip
+from utils import *
 
 class ArxivSourceDownloader:
     """
@@ -26,7 +25,7 @@ class ArxivSourceDownloader:
             download_path (str): Directory where files will be downloaded
         """
         self.download_path = download_path
-        self.logger = _setup_logger()
+        self.logger = setup_logger()
         self.client = arxiv.Client()
 
     def _get_paper_id(self, identifier: str) -> str:
