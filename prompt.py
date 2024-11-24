@@ -13,6 +13,7 @@ from utils import *
 import argparse
 import google.generativeai as genai
 
+logger = setup_logger()
         
 load_dotenv()
 
@@ -62,7 +63,7 @@ questions = f"1. What is the name of the dataset? If the dataset has a short nam
   5. What is the License of the dataset? Options: {column_options['License']} \n\
   6. What year was the dataset published? \n\
   7. Is the dataset multilingual or ar? \n\
-  8. Choose a dialect for the dataset from the following options: {column_options['Dialect']} \n\
+  8. Choose a dialect for the dataset from the following options: {column_options['Dialect']}. If the type of the dialect is not clear output mixed. \n\
   9. What is the domain of the dataset? Options: {column_options['Domain']} \n\
   10. What is the form of the dataset? Options {column_options['Form']} \n\
   11. How was this dataset collected? Options: {column_options['Collection Style']} \n\
@@ -111,7 +112,7 @@ def compute_cost(message):
 
 @spinner_decorator
 def is_resource(abstract):
-  prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published Arabic dataset, please answer 'yes' or 'no' only"  
+  prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published Arabic dataset or multilingual dataset that contains Arabic? please answer 'yes' or 'no' only"  
   model = genai.GenerativeModel("gemini-1.5-flash",system_instruction ="You are a prefoessional research paper reader" )  
   
   message = model.generate_content(prompt, 
@@ -143,6 +144,19 @@ def fix_options(metadata):
 
     return fixed_metadata
 
+import re
+
+def process_url(url):
+    url = re.sub(r'\\url\{(.*?)\}', r'\1', url).strip()
+    url = re.sub('huggingface', 'hf', url)
+    return url
+
+def postprocess(metadata):
+    metadata['Link'] = process_url(metadata['Link'])
+    metadata['HF Link'] = process_url(metadata['HF Link'])
+
+    return metadata
+
 @spinner_decorator
 def validate(metadata):
     dataset = df[df['Name'] == metadata['Name']]
@@ -162,8 +176,8 @@ def validate(metadata):
         elif pred_answer.lower() in str(gold_answer).lower():
             accuracy += 1
         else:
+            # logger.info(f"{column} ✅ {gold_answer} ❌ {pred_answer}")
             pass
-            # print(column, gold_answer, pred_answer)
 
     return accuracy/ len(columns)
 def get_answer(answers, question_number = '1.'):
@@ -252,7 +266,106 @@ def get_search_results(keywords, month, year):
         sort_by=arxiv.SortCriterion.SubmittedDate
     )
     
+def run(args):
+    # Example search for machine learning papers from March 2024
+    year = args.year
+    month = args.month
+    keywords = args.keywords.split(' ')
+    if args.verbose:
+        logger.info('🔍 Searching arXiv ...')                   
+    search_results = get_search_results(keywords, month, year)
 
+    for r in search_results:
+        abstract = r['summary']
+        article_url = r['article_url']
+        title = r['title']
+        if args.verbose:
+            logger.info(f'🎧 Reading {title} ...')
+        _is_resource = True
+        if args.check_abstract:
+            if args.verbose:
+                logger.info('🚧 Checking Abstract ...')
+            _is_resource = is_resource(abstract)
+
+        if _is_resource:
+            paper_id = article_url.split('/')[-1]
+            downloader = ArxivSourceDownloader(download_path="results")
+    
+            # Download and extract source files
+            success, path = downloader.download_paper(paper_id, verbose=args.verbose)
+
+            if not success:
+                continue
+            if args.verbose:
+                logger.info('✨ Cleaning Latex ...')
+            clean_latex(path)
+            path = f'{path}_arXiv'
+            source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
+            
+            if len(source_files):
+                source_file = source_files[0]
+                if args.verbose:
+                    logger.info(f'📖 Reading {source_file} ...')
+                if source_file.endswith('.pdf'):
+                    with pdfplumber.open(source_file) as pdf:
+                        text_pages = []
+                        for page in pdf.pages:
+                            text_pages.append(page.extract_text())
+                        paper_text = ' '.join(text_pages)
+                elif source_file.endswith('.tex'):
+                    paper_text = open(source_file, 'r').read() # maybe clean comments
+                else:
+                    if args.verbose:
+                        logger.error('Not acceptable source file')
+                    continue
+                if args.verbose:
+                    logger.info(f'🧠 Extracting Metadata ...')
+                if 'claude' in args.model_name: 
+                    message, metadata = get_metadata(paper_text, args.model_name)
+                elif 'gpt' in args.model_name:
+                    message , metadata = get_metadata_chatgpt(paper_text, args.model_name)
+                elif 'gemini' in args.model_name:
+                    message, metadata = get_metadata_gemini(paper_text, args.model_name)
+                cost = compute_cost(message)
+
+                metadata = {k:str(v) for k,v in metadata.items()}
+
+                if 'N/A' in metadata['Venue Title']:
+                    metadata['Venue Title'] = 'arXiv'
+                if 'N/A' in metadata['Venue Type']:
+                    metadata['Venue Title'] = 'Preprint'
+                if 'N/A' in metadata['Paper Link']:
+                    metadata['Paper Link'] = article_url
+                
+                metadata['Year'] = str(year)
+                
+                for c in metadata:
+                    if 'N/A' in metadata[c]:
+                        metadata[c] = ''
+
+                metadata = fix_options(metadata)
+                metadata = postprocess(metadata)
+                validation_score = validate(metadata)
+                results = {}
+                results ['metadata'] = metadata
+                results ['cost'] = cost
+                results ['validation'] = validation_score
+                results ['config'] = {
+                    'model_name': args.model_name,
+                    'month': args.month,
+                    'year': args.year,
+                    'keywords': args.keywords
+                }
+                results['ratio_filling'] = compute_filling(metadata)
+                if args.verbose:
+                    logger.info(f"📊 Validation socre: {validation_score*100:.2f} %")
+                    logger.info(f"📥 Results saved to: {path}/results.json")
+                with open(f"{path}/results.json", "w") as outfile: 
+                    json.dump(results, outfile, indent=4)
+                return results
+
+        else:
+            logger.info('Abstract indicates resource: False')
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process keywords, month, and year parameters')
     
@@ -283,96 +396,14 @@ if __name__ == "__main__":
                         required= False,
                         default = True,
                         help='whether to check the abstract')
+    
+    parser.add_argument('-v', '--verbose', 
+                        type=bool, 
+                        required= False,
+                        default = True,
+                        help='whether to check the abstract')
 
     # Parse arguments
     args = parser.parse_args()
 
-    logger = setup_logger()
-    
-    # Example search for machine learning papers from March 2024
-    year = args.year
-    month = args.month
-    keywords = args.keywords.split(',')
-    logger.info('🔍 Searching arXiv ...')                   
-    search_results = get_search_results(keywords, month, year)
-
-    for r in search_results:
-        abstract = r['summary']
-        article_url = r['article_url']
-        title = r['title']
-        _is_resource = True
-        if args.check_abstract:
-            logger.info('🚧 Checking Abstract ...')
-            _is_resource = is_resource(abstract)
-
-        if _is_resource:
-            paper_id = article_url.split('/')[-1]
-            downloader = ArxivSourceDownloader(download_path="results")
-    
-            # Download and extract source files
-            success, path = downloader.download_paper(paper_id)
-
-            if not success:
-                continue
-
-            logger.info('✨ Cleaning Latex ...')
-            clean_latex(path)
-            path = f'{path}_arXiv'
-            source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
-            
-            if len(source_files):
-                source_file = source_files[0]
-                logger.info(f'📖 Reading {source_file} ...')
-                if source_file.endswith('.pdf'):
-                    with pdfplumber.open(source_file) as pdf:
-                        text_pages = []
-                        for page in pdf.pages:
-                            text_pages.append(page.extract_text())
-                        paper_text = ' '.join(text_pages)
-                elif source_file.endswith('.tex'):
-                    paper_text = open(source_file, 'r').read() # maybe clean comments
-                else:
-                    logger.error('Not acceptable source file')
-                    continue
-                logger.info(f'🧠 Extracting Metadata ...')
-                if 'claude' in args.model_name: 
-                    message, metadata = get_metadata(paper_text, args.model_name)
-                elif 'gpt' in args.model_name:
-                    message , metadata = get_metadata_chatgpt(paper_text, args.model_name)
-                elif 'gemini' in args.model_name:
-                    message, metadata = get_metadata_gemini(paper_text, args.model_name)
-                cost = compute_cost(message)
-
-                metadata = {k:str(v) for k,v in metadata.items()}
-
-                if 'N/A' in metadata['Venue Title']:
-                    metadata['Venue Title'] = 'arXiv'
-                if 'N/A' in metadata['Venue Type']:
-                    metadata['Venue Title'] = 'Preprint'
-                if 'N/A' in metadata['Paper Link']:
-                    metadata['Paper Link'] = article_url
-                
-                metadata['Year'] = str(year)
-                
-                for c in metadata:
-                    if 'N/A' in metadata[c]:
-                        metadata[c] = ''
-
-                metadata = fix_options(metadata)
-                validation_score = validate(metadata)
-                results = {}
-                results ['metadata'] = metadata
-                results ['cost'] = cost
-                results ['validation'] = validation_score
-                results ['config'] = {
-                    'model_name': args.model_name,
-                    'month': args.month,
-                    'year': args.year,
-                    'keywords': args.keywords
-                }
-                results['ratio_filling'] = compute_filling(metadata)
-                logger.info(f"📥 Results saved to: {path}/results.json")
-                with open(f"{path}/results.json", "w") as outfile: 
-                    json.dump(results, outfile, indent=4)
-        else:
-            logger.info('Abstract indicates resource: False')
+    run(args)

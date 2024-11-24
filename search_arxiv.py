@@ -217,7 +217,7 @@ class ArxivSourceDownloader:
             self.logger.error(f"Error processing source file: {e}")
             return False
 
-    def download_paper(self, identifier: str, download_pdf: bool = True, download_source: bool = True) -> Tuple[bool, str]:
+    def download_paper(self, identifier: str, download_pdf: bool = True, download_source: bool = True, verbose: bool = True) -> Tuple[bool, str]:
         """
         Download paper files (PDF and/or source files).
         
@@ -230,7 +230,8 @@ class ArxivSourceDownloader:
             Tuple[bool, str]: (Success status, Path to downloaded files)
         """
         paper_id = self._get_paper_id(identifier)
-        self.logger.info(f"🔄  Processing paper ID: {paper_id} ...")
+        if verbose:
+            self.logger.info(f"🔄  Processing paper ID: {paper_id} ...")
         
         paper_dir = self._create_download_dir(paper_id)
         success = True
@@ -241,7 +242,8 @@ class ArxivSourceDownloader:
                 pdf_path = os.path.join(paper_dir, f"{paper_id}.pdf")
                 pdf_success = self._download_file(pdf_url, pdf_path)
                 if pdf_success:
-                    self.logger.info(f"📄 PDF downloaded successfully to {pdf_path}")
+                    if verbose:
+                        self.logger.info(f"📄 PDF downloaded successfully to {pdf_path}")
                 else:
                     self.logger.warning("Failed to download PDF")
                     success = False
@@ -374,7 +376,7 @@ class ArxivSearcher:
             List[Dict]: List of papers with their details
         """
         # Construct search query
-        search_parts = keywords
+        search_parts = [' AND '.join(f'ti:{k}' for k in keywords)]
         
         # Add category filter if provided
         if categories:
@@ -388,7 +390,7 @@ class ArxivSearcher:
             
         # Combine all parts with AND
         search_query = ' AND '.join(f'({part})' for part in search_parts if part)
-        
+
         # Create search parameters
         search = arxiv.Search(
             query=search_query,

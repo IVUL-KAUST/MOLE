@@ -22,14 +22,21 @@ A Python script that searches arXiv for research papers, extracts dataset metada
 
 ## Installation
 ```bash
-git clone https://github.com/yourusername/research-metadata-extractor.git
-cd research-metadata-extractor
+git clone https://github.com/arbml/masader-bot.git
+cd masader-bot
 pip install -r requirements.txt
 ```
 
 ## Usage
 ```bash
-python script.py -k "arabic,dataset" -m 3 -y 2024 -n claude-3-5-sonnet-latest
+python prompt.py -k "arabic dataset" -m 3 -y 2024 -n claude-3-5-sonnet-latest
+```
+
+### Benchmarking
+The following script can be used to evaluate different models on multiple datasets
+
+```bash
+python3 compare.py -k "ArabicMMLU,CIDAR" -m 2 -y 2024 -n gemini-1.5-flash,claude-3-5-sonnet-latest 
 ```
 
 ### Arguments

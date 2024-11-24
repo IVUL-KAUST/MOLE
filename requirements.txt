@@ -9,3 +9,4 @@ arxiv-latex-cleaner
 openai
 google-generativeai
 grpcio==1.60.1
+tabulate
