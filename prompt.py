@@ -56,7 +56,7 @@ column_options = {
     'Venue Type': 'Conference, Workshop, Journal, Preprint'
 }
 
-questions = f"1. What is the name of the dataset? If the dataset has a short name please use it. \n\
+questions = f"1. What is the name of the dataset? Only use a short name of the dataset. \n\
   2. What are the subsets of this dataset? \n\
   3. What is the link to access the dataset? The link most contain the dataset. \n\
   4. What is the Huggingface link of the dataset? \n\
@@ -159,18 +159,18 @@ def postprocess(metadata):
 
 @spinner_decorator
 def validate(metadata):
-    dataset = df[df['Name'] == metadata['Name']]
+    dataset = df[df['Name'].str.contains(metadata['Name'], case=False, na=False)]
 
     if len(dataset) <= 0:
         return 0
 
     accuracy = 0
+    
     for column in columns:
         gold_answer = np.asarray((dataset[column]))[0]
         if str(gold_answer) == 'nan':
             gold_answer = ''
         pred_answer = metadata[column]
-
         if column in extra_columns:
             accuracy += 1            
         elif pred_answer.lower() in str(gold_answer).lower():
@@ -209,7 +209,7 @@ def get_metadata(paper_text, model_name):
   )
   predictions = {}
   response = message.content[0].text
-#   print(response)
+
   for i in range(1, 34):
       predictions[columns[i-1]] = get_answer(response.split('\n'), question_number=f'{i}.')
   return message, predictions
@@ -249,6 +249,7 @@ def get_metadata_chatgpt(paper_text, model_name):
     for i,  answer in enumerate(response.split('\n')):
         if i < 33:
             predictions[columns[i]] = re.sub(r'(\d+)\.', '', answer).strip()
+    
     return message, predictions
 
 @spinner_decorator
@@ -360,9 +361,12 @@ def run(args):
                 for c in metadata:
                     if 'N/A' in metadata[c]:
                         metadata[c] = ''
+                    if metadata[c] is None:
+                        metadata[c] = ''
 
                 metadata = fix_options(metadata)
                 metadata = postprocess(metadata)
+
                 validation_score = validate(metadata)
                 results = {}
                 results ['metadata'] = metadata
