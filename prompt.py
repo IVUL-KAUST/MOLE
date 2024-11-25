@@ -279,27 +279,45 @@ def run(args):
         abstract = r['summary']
         article_url = r['article_url']
         title = r['title']
+
+        paper_id = article_url.split('/')[-1]
+        paper_id_no_version = paper_id.replace('v1', '').replace('v2', '').replace('v3', '')
+            
+
         if args.verbose:
             logger.info(f'🎧 Reading {title} ...')
+        
+        re_check = not os.path.isdir(f'results/{paper_id_no_version}')
         _is_resource = True
         if args.check_abstract:
-            if args.verbose:
-                logger.info('🚧 Checking Abstract ...')
-            _is_resource = is_resource(abstract)
+            if re_check:
+                if args.verbose:
+                    logger.info('🚧 Checking Abstract ...')
+                _is_resource = is_resource(abstract)
 
         if _is_resource:
-            paper_id = article_url.split('/')[-1]
-            downloader = ArxivSourceDownloader(download_path="results")
+            if re_check:
+                downloader = ArxivSourceDownloader(download_path="results")
     
-            # Download and extract source files
-            success, path = downloader.download_paper(paper_id, verbose=args.verbose)
+                # Download and extract source files
+                success, path = downloader.download_paper(paper_id, verbose=args.verbose)
+
+                if args.verbose:
+                    logger.info('✨ Cleaning Latex ...')
+                clean_latex(path)
+            else:
+                success = True
+                path = f'results/{paper_id_no_version}'
 
             if not success:
                 continue
-            if args.verbose:
-                logger.info('✨ Cleaning Latex ...')
-            clean_latex(path)
+            
             path = f'{path}_arXiv'
+            save_path = f'{path}/{args.model_name}-results.json'
+
+            if os.path.exists(save_path):
+                logger.info('📂 Loading saved results ...')
+                return json.load(open(save_path))
             source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
             
             if len(source_files):
@@ -359,33 +377,42 @@ def run(args):
                 results['ratio_filling'] = compute_filling(metadata)
                 if args.verbose:
                     logger.info(f"📊 Validation socre: {validation_score*100:.2f} %")
-                    logger.info(f"📥 Results saved to: {path}/results.json")
-                with open(f"{path}/results.json", "w") as outfile: 
+
+                with open(save_path, "w") as outfile:
+                    logger.info(f"📥 Results saved to: {save_path}") 
                     json.dump(results, outfile, indent=4)
                 return results
 
         else:
             logger.info('Abstract indicates resource: False')
-if __name__ == "__main__":
+
+def create_args():
     parser = argparse.ArgumentParser(description='Process keywords, month, and year parameters')
     
     # Add arguments
     parser.add_argument('-k', '--keywords', 
                         type=str, 
-                        required=True,
+                        required=False,
                         help='Comma-separated list of keywords')
+    
+    parser.add_argument('-d', '--datasets', 
+                        type=str, 
+                        required=False,
+                        help='Comma-separated list of datasets')
     
     parser.add_argument('-m', '--month', 
                         type=int, 
-                        required=True,
+                        required= False,
+                        default = None,
                         help='Month (1-12)')
     
     parser.add_argument('-y', '--year', 
                         type=int, 
-                        required=True,
+                        required= False,
+                        default = None,
                         help='Year (4-digit format)')
 
-    parser.add_argument('-n', '--model_name', 
+    parser.add_argument('-n', '--models', 
                         type=str, 
                         required=False,
                         default = 'claude-3-5-sonnet-latest',
@@ -405,5 +432,8 @@ if __name__ == "__main__":
 
     # Parse arguments
     args = parser.parse_args()
+    return args
 
+if __name__ == "__main__":
+    args = create_args()
     run(args)
