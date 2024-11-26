@@ -317,7 +317,7 @@ def run(args):
             path = f'{path}_arXiv'
             save_path = f'{path}/{args.model_name}-results.json'
 
-            if os.path.exists(save_path):
+            if os.path.exists(save_path) and not args.overwrite:
                 logger.info('📂 Loading saved results ...')
                 return json.load(open(save_path))
             source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
@@ -430,10 +430,12 @@ def create_args():
                         help='whether to check the abstract')
     
     parser.add_argument('-v', '--verbose', 
-                        type=bool, 
-                        required= False,
-                        default = True,
+                        action="store_true",
                         help='whether to check the abstract')
+    
+    parser.add_argument('-o', '--overwrite', 
+                        action="store_true",
+                        help='overwrite the extracted metadata')
 
     # Parse arguments
     args = parser.parse_args()
