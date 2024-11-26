@@ -17,10 +17,11 @@ if __name__ == "__main__":
             if metadata:
                 data_results.append(round(metadata['validation']* 100, 2))
         
-        data.append([model_name]+data_results)
+        data.append([model_name]+data_results+[round(sum([x for x in data_results])/len(data_results), 2)])
 
     # Build the markdown table
-    headers = ['Model']+args.datasets.split(',')
+    headers = ['Model']+args.datasets.split(',')+['Average']
+    data = sorted(data, key=lambda x: x[-1])
 
     # Combine all parts
     print(tabulate(data, headers=headers, tablefmt="grid"))

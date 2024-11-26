@@ -159,7 +159,7 @@ def postprocess(metadata):
 
 @spinner_decorator
 def validate(metadata):
-    dataset = df[df['Name'].str.contains(metadata['Name'], case=False, na=False)]
+    dataset = df[df['Name'].apply(lambda x: metadata['Name'].lower() in str(x).lower())]
 
     if len(dataset) <= 0:
         return 0
@@ -246,9 +246,8 @@ def get_metadata_chatgpt(paper_text, model_name):
     response = message.choices[0].message.content
     predictions = {}
 
-    for i,  answer in enumerate(response.split('\n')):
-        if i < 33:
-            predictions[columns[i]] = re.sub(r'(\d+)\.', '', answer).strip()
+    for i in range(1, 34):
+      predictions[columns[i-1]] = get_answer(response.split('\n'), question_number=f'{i}.')
     
     return message, predictions
 
