@@ -131,6 +131,8 @@ def fix_options(metadata):
             pred_option = metadata[column]
             if pred_option in options:
                 fixed_metadata[column] = pred_option
+            elif pred_option == '':
+                fixed_metadata[column] = ''
             else:                    
                 fixed_metadata[column] = find_best_match(pred_option, options)
         else:
@@ -337,7 +339,7 @@ def run(args):
                         logger.error('Not acceptable source file')
                     continue
                 if args.verbose:
-                    logger.info(f'🧠 Extracting Metadata ...')
+                    logger.info(f'🧠 {args.model_name} is extracting Metadata ...')
                 if 'claude' in args.model_name: 
                     message, metadata = get_metadata(paper_text, args.model_name)
                 elif 'gpt' in args.model_name:
