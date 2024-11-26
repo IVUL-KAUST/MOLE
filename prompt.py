@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from utils import *
 import argparse
-import google.generativeai as genai
+import google.generativeai as genai # type: ignore
 
 logger = setup_logger()
         

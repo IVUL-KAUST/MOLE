@@ -1,5 +1,5 @@
 from prompt import run, create_args
-from tabulate import tabulate
+from tabulate import tabulate # type: ignore
 
 
 if __name__ == "__main__":
