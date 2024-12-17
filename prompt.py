@@ -159,9 +159,14 @@ def postprocess(metadata):
 
     return metadata
 
+def match_titles(title, masader_title):
+    if isinstance(masader_title, float):
+        return 0
+    return difflib.SequenceMatcher(None, title, masader_title).ratio()
+
 @spinner_decorator
 def validate(metadata):
-    dataset = df[df['Name'].apply(lambda x: metadata['Name'].lower() in str(x).lower())]
+    dataset = df[df['Paper Title'].apply(lambda x: match_titles(str(metadata['Paper Title']), x)) > 0.8]
 
     if len(dataset) <= 0:
         return 0
@@ -175,7 +180,7 @@ def validate(metadata):
         pred_answer = metadata[column]
         if column in extra_columns:
             accuracy += 1            
-        elif pred_answer.lower() in str(gold_answer).lower():
+        elif pred_answer.lower() == str(gold_answer).lower():
             accuracy += 1
         else:
             # logger.info(f"{column} ✅ {gold_answer} ❌ {pred_answer}")
@@ -315,7 +320,9 @@ def run(args):
             if not success:
                 continue
             
-            path = f'{path}_arXiv'
+            if len(glob(f'{path}/*.tex')) > 0:
+                path = f'{path}_arXiv'
+
             save_path = f'{path}/{args.model_name}-results.json'
 
             if os.path.exists(save_path) and not args.overwrite:
@@ -341,11 +348,11 @@ def run(args):
                     continue
                 if args.verbose:
                     logger.info(f'🧠 {args.model_name} is extracting Metadata ...')
-                if 'claude' in args.model_name: 
+                if 'claude' in args.model_name.lower(): 
                     message, metadata = get_metadata(paper_text, args.model_name)
-                elif 'gpt' in args.model_name:
+                elif 'gpt' in args.model_name.lower():
                     message , metadata = get_metadata_chatgpt(paper_text, args.model_name)
-                elif 'gemini' in args.model_name:
+                elif 'gemini' in args.model_name.lower():
                     message, metadata = get_metadata_gemini(paper_text, args.model_name)
                 cost = compute_cost(message)
 
@@ -401,6 +408,11 @@ def create_args():
                         required=False,
                         help='Comma-separated list of keywords')
     
+    parser.add_argument('-t', '--title', 
+                        type=str, 
+                        required=False,
+                        help='title of the paper')
+    
     parser.add_argument('-d', '--datasets', 
                         type=str, 
                         required=False,
@@ -425,9 +437,7 @@ def create_args():
                         help='Name of the model to use')
     
     parser.add_argument('-c', '--check_abstract', 
-                        type=bool, 
-                        required= False,
-                        default = True,
+                        action = 'store_true',
                         help='whether to check the abstract')
     
     parser.add_argument('-v', '--verbose', 
@@ -437,6 +447,10 @@ def create_args():
     parser.add_argument('-o', '--overwrite', 
                         action="store_true",
                         help='overwrite the extracted metadata')
+    
+    parser.add_argument('-mv', '--masader_validate', 
+                        action="store_true",
+                        help='evaluate masader')
 
     # Parse arguments
     args = parser.parse_args()

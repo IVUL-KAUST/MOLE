@@ -3,6 +3,17 @@ import sys
 import time
 import threading
 from functools import wraps
+import pandas as pd
+
+def get_masader_data():
+    sheet_id = "1-07izL_VBZfdKT0fBllZHW8E1psOU-VM"
+    sheet_name = "Sheet1"
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+
+    df = pd.read_csv(url, usecols=range(35))
+    df.columns.values[0] = "No."
+    df.columns.values[1] = "Name"
+    return df
 
 def spinner_decorator(func):
     @wraps(func)
