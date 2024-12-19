@@ -21,7 +21,8 @@ load_dotenv()
 client = anthropic.Anthropic(api_key=os.environ['anthropic_key'])
 chatgpt_client = OpenAI(api_key=os.environ['chatgpt_key'])
 genai.configure(api_key=os.environ['gemini_key'])
-
+# print([m.name for m in genai.list_models()])
+# raise()
 
 stop_event = threading.Event()  # Event to signal the spinner to stop
 spinner_thread = threading.Thread(target=spinner_animation, args=(stop_event,))
@@ -34,7 +35,7 @@ content_columns = ['Volume', 'Unit', 'Tokenized', 'Script', 'Form', 'Collection 
 accessability_columns = ['Provider', 'Host', 'Link', 'License', 'Cost']
 diversity_columns = ['Language', 'Subsets', 'Dialect']
 evaluation_columns = ['Test Split', 'Tasks', 'Derived From']
-validation_columns = publication_columns+content_columns+accessability_columns+diversity_columns+evaluation_columns
+validation_columns = content_columns+accessability_columns+diversity_columns+evaluation_columns
 
 sheet_id = "1YO-Vl4DO-lnp8sQpFlcX1cDtzxFoVkCmU1PVw_ZHJDg"
 sheet_name = "filtered_clean"
@@ -173,7 +174,7 @@ def match_titles(title, masader_title):
 @spinner_decorator
 def validate(metadata):
     results = {
-        'PUBLICATION': 0,
+        # 'PUBLICATION': 0,
         'CONTENT':0,
         'ACCESSABILITY':0,
         'DIVERSITY':0,
@@ -192,7 +193,7 @@ def validate(metadata):
             gold_answer = ''
         pred_answer = metadata[column]
         if pred_answer.lower() == str(gold_answer).lower():
-            results['AVERAGE'] += 1/25
+            results['AVERAGE'] += 1/len(validation_columns)
             if column in publication_columns:
                 results['PUBLICATION'] += 1/6
             elif column in content_columns:
@@ -371,7 +372,7 @@ def run(args):
                     message, metadata = get_metadata(paper_text, args.model_name)
                 elif 'gpt' in args.model_name.lower():
                     message , metadata = get_metadata_chatgpt(paper_text, args.model_name)
-                elif 'gemini' in args.model_name.lower():
+                elif 'gem' in args.model_name.lower():
                     message, metadata = get_metadata_gemini(paper_text, args.model_name)
                 cost = compute_cost(message)
 
@@ -464,7 +465,11 @@ def create_args():
     
     parser.add_argument('-mv', '--masader_validate', 
                         action="store_true",
-                        help='evaluate masader')
+                        help='validate on masader dataset')
+    
+    parser.add_argument('-mt', '--masader_test', 
+                        action="store_true",
+                        help='test on masader dataset')
     
     parser.add_argument('-agg', '--aggergate', 
                         action="store_true",

@@ -1,6 +1,6 @@
 from prompt import run, create_args
 from tabulate import tabulate # type: ignore
-from utils import get_masader_data
+from utils import get_masader_test, get_masader_valid
 
 if __name__ == "__main__":
     args = create_args()
@@ -11,9 +11,13 @@ if __name__ == "__main__":
         per_data_results = []
         per_metric_results = []
         if args.masader_validate:
-            masader_data = get_masader_data()
+            masader_data = get_masader_valid()
+            titles = [str(x['Paper Title']) for idx,x in masader_data.iterrows()]
+            data_names = [str(x['Name']) for idx,x in masader_data.iterrows()]
+        elif args.masader_test:
+            masader_data = get_masader_test()
             titles = [str(x['Paper Title']) for idx,x in masader_data.iterrows()][0:2]
-            data_names = [str(x['Name']) for idx,x in masader_data.iterrows()][0:2]            
+            data_names = [str(x['Name']) for idx,x in masader_data.iterrows()][0:2]             
         else:
             data_names = args.keywords.split(',')
             titles = ['' for _ in data_names]
@@ -42,7 +46,7 @@ if __name__ == "__main__":
         print(tabulate(sorted(data_results, key=lambda x: x[-1]), headers=headers, tablefmt="grid", floatfmt=".2f"))
     
     else:
-        headers = ['MODEL', 'PUBLICATION', 'CONTENT', 'ACCESSABILITY', 'DIVERSITY','EVALUATION','AVERAGE']
+        headers = ['MODEL', 'CONTENT', 'ACCESSABILITY', 'DIVERSITY','EVALUATION','AVERAGE']
 
         # Combine all parts
         print(tabulate(sorted(metric_results, key=lambda x: x[-1]), headers=headers, tablefmt="grid",floatfmt=".2f"))
