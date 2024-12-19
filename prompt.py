@@ -28,7 +28,13 @@ spinner_thread = threading.Thread(target=spinner_animation, args=(stop_event,))
 
 columns = ['Name', 'Subsets', 'Link', 'HF Link', 'License', 'Year', 'Language', 'Dialect', 'Domain', 'Form', 'Collection Style', 'Description', 'Volume', 'Unit', 'Ethical Risks', 'Provider', 'Derived From', 'Paper Title', 'Paper Link', 'Script', 'Tokenized', 'Host', 'Access', 'Cost', 'Test Split', 'Tasks',  'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
 extra_columns = ['Subsets', 'Year', 'Description', 'Paper Link', 'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract','Year']
-required_columns = ['Name', 'Link', 'License', 'Year', 'Language', 'Dialect', 'Domain', 'Form', 'Collection Style', 'Description', 'Volume', 'Unit', 'Ethical Risks', 'Paper Title', 'Paper Link', 'Script', 'Tokenized', 'Host', 'Access', 'Cost', 'Test Split', 'Tasks',  'Venue Title', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
+
+publication_columns = ['Paper Title', 'Paper Link', 'Year', 'Venue Title', 'Venue Type', 'Venue Name']
+content_columns = ['Volume', 'Unit', 'Tokenized', 'Script', 'Form', 'Collection Style', 'Domain', 'Ethical Risks']
+accessability_columns = ['Provider', 'Host', 'Link', 'License', 'Cost']
+diversity_columns = ['Language', 'Subsets', 'Dialect']
+evaluation_columns = ['Test Split', 'Tasks', 'Derived From']
+validation_columns = publication_columns+content_columns+accessability_columns+diversity_columns+evaluation_columns
 
 sheet_id = "1YO-Vl4DO-lnp8sQpFlcX1cDtzxFoVkCmU1PVw_ZHJDg"
 sheet_name = "filtered_clean"
@@ -166,27 +172,39 @@ def match_titles(title, masader_title):
 
 @spinner_decorator
 def validate(metadata):
+    results = {
+        'PUBLICATION': 0,
+        'CONTENT':0,
+        'ACCESSABILITY':0,
+        'DIVERSITY':0,
+        'EVALUATION':0,
+        'AVERAGE':0,
+    }
+
     dataset = df[df['Paper Title'].apply(lambda x: match_titles(str(metadata['Paper Title']), x)) > 0.8]
 
     if len(dataset) <= 0:
-        return 0
+        return results
 
-    accuracy = 0
-    
-    for column in columns:
+    for column in validation_columns:
         gold_answer = np.asarray((dataset[column]))[0]
         if str(gold_answer) == 'nan':
             gold_answer = ''
         pred_answer = metadata[column]
-        if column in extra_columns:
-            accuracy += 1            
-        elif pred_answer.lower() == str(gold_answer).lower():
-            accuracy += 1
-        else:
-            # logger.info(f"{column} ✅ {gold_answer} ❌ {pred_answer}")
-            pass
+        if pred_answer.lower() == str(gold_answer).lower():
+            results['AVERAGE'] += 1/25
+            if column in publication_columns:
+                results['PUBLICATION'] += 1/6
+            elif column in content_columns:
+                results['CONTENT'] += 1/8
+            elif column in accessability_columns:
+                results['ACCESSABILITY']+= 1/5
+            elif column in diversity_columns:
+                results['DIVERSITY']+= 1/3
+            elif column in evaluation_columns:
+                results['EVALUATION'] += 1/3
+    return results
 
-    return accuracy/ len(columns)
 def get_answer(answers, question_number = '1.'):
     for answer in answers:
         if answer.startswith(question_number):
@@ -279,7 +297,8 @@ def run(args):
     month = args.month
     keywords = args.keywords.split(' ')
     if args.verbose:
-        logger.info('🔍 Searching arXiv ...')                   
+        logger.info('🔍 Searching arXiv ...')
+
     search_results = get_search_results(keywords, month, year)
 
     for r in search_results:
@@ -376,11 +395,11 @@ def run(args):
                 metadata = fix_options(metadata)
                 metadata = postprocess(metadata)
 
-                validation_score = validate(metadata)
+                validation_results = validate(metadata)
                 results = {}
                 results ['metadata'] = metadata
                 results ['cost'] = cost
-                results ['validation'] = validation_score
+                results ['validation'] = validation_results
                 results ['config'] = {
                     'model_name': args.model_name,
                     'month': args.month,
@@ -389,7 +408,7 @@ def run(args):
                 }
                 results['ratio_filling'] = compute_filling(metadata)
                 if args.verbose:
-                    logger.info(f"📊 Validation socre: {validation_score*100:.2f} %")
+                    logger.info(f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %")
 
                 with open(save_path, "w") as outfile:
                     logger.info(f"📥 Results saved to: {save_path}") 
@@ -406,17 +425,12 @@ def create_args():
     parser.add_argument('-k', '--keywords', 
                         type=str, 
                         required=False,
-                        help='Comma-separated list of keywords')
+                        help='space separated keywords')
     
     parser.add_argument('-t', '--title', 
                         type=str, 
                         required=False,
                         help='title of the paper')
-    
-    parser.add_argument('-d', '--datasets', 
-                        type=str, 
-                        required=False,
-                        help='Comma-separated list of datasets')
     
     parser.add_argument('-m', '--month', 
                         type=int, 
@@ -451,6 +465,10 @@ def create_args():
     parser.add_argument('-mv', '--masader_validate', 
                         action="store_true",
                         help='evaluate masader')
+    
+    parser.add_argument('-agg', '--aggergate', 
+                        action="store_true",
+                        help='aggergate and show all metrics')
 
     # Parse arguments
     args = parser.parse_args()
