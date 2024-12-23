@@ -382,7 +382,7 @@ def run(args):
                         logger.info('📂 Loading saved results ...')
                         results = json.load(open(save_path))
                         st.write(results)
-                        st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=http://localhost:8501/app/{save_path}")
+                        st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}")
                         return results
                 source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
                 
@@ -454,7 +454,7 @@ def run(args):
                             logger.info(f"📥 Results saved to: {save_path}") 
                             json.dump(results, outfile, indent=4)
                     st.write(results)
-                    st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=http://localhost:8501/app/{save_path}")
+                    st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}")
                     return results
 
             else:
