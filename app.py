@@ -12,6 +12,7 @@ from openai import OpenAI
 from utils import *
 import argparse
 import google.generativeai as genai # type: ignore
+import streamlit as st
 
 logger = setup_logger()
         
@@ -294,130 +295,173 @@ def get_search_results(keywords, month, year):
     
 def run(args):
     # Example search for machine learning papers from March 2024
-    year = args.year
-    month = args.month
-    keywords = args.keywords.split(' ')
-    if args.verbose:
-        logger.info('🔍 Searching arXiv ...')
+    submitted = None
+    if args:
+        year = args.year
+        month = args.month
+        keywords = args.keywords.split(' ')
+        verbose = args.verbose
+        check_abstract = args.check_abstract
+        model_name = args.model_name
+        overwrite = args.overwrite
+    else:
+        verbose = True
+        with st.form(key='search_form'):
+            check_abstract = st.checkbox("Abstract")
+            overwrite = st.checkbox("Overwrite")
 
-    search_results = get_search_results(keywords, month, year)
+            # Create columns for arranging elements in a single row
+            col1, col2, col3, col4, col5 = st.columns(5)
 
-    for r in search_results:
-        abstract = r['summary']
-        article_url = r['article_url']
-        title = r['title']
-        year = r['published'].split('-')[0]
+            with col1:
+                keywords = st.text_input("Keywords/Title")
+            with col2:
+                year = st.number_input("Year", min_value=1900, max_value=2100, value=2024, step=1)
+            with col3:
+                month = st.number_input("Month", min_value=1, max_value=12, value=1, step=1)
+            with col4:
+                model_name = st.selectbox("Model", ["gemini-1.5-flash", "claude-3-5-sonnet-latest", "gpt-4o"], index=0)
+            with col5:
+                submitted = st.form_submit_button("Search")
 
-        paper_id = article_url.split('/')[-1]
-        paper_id_no_version = paper_id.replace('v1', '').replace('v2', '').replace('v3', '')
+    # Process input values
+    keywords = keywords.split(',')
+
+    if submitted or args:
+        with st.spinner('🔍 Searching arXiv ...'):
+            if verbose:
+                logger.info('🔍 Searching arXiv ...')
+            search_results = get_search_results(keywords, month, year)
+
+        for r in search_results:
+            abstract = r['summary']
+            article_url = r['article_url']
+            title = r['title']
+            year = r['published'].split('-')[0]
+
+            paper_id = article_url.split('/')[-1]
+            paper_id_no_version = paper_id.replace('v1', '').replace('v2', '').replace('v3', '')
+                
+
+            if verbose:
+                logger.info(f'🎧 Reading {title} ...')
             
+            re_check = not os.path.isdir(f'static/results/{paper_id_no_version}')
+            _is_resource = True
+            if check_abstract:
+                if re_check:
+                    with st.spinner('🚧 Checking Abstract ...'):
+                        if verbose:
+                            logger.info('🚧 Checking Abstract ...')
+                        _is_resource = is_resource(abstract)
 
-        if args.verbose:
-            logger.info(f'🎧 Reading {title} ...')
+            if _is_resource:
+                if re_check:
+                    downloader = ArxivSourceDownloader(download_path="static/results")
         
-        re_check = not os.path.isdir(f'results/{paper_id_no_version}')
-        _is_resource = True
-        if args.check_abstract:
-            if re_check:
-                if args.verbose:
-                    logger.info('🚧 Checking Abstract ...')
-                _is_resource = is_resource(abstract)
-
-        if _is_resource:
-            if re_check:
-                downloader = ArxivSourceDownloader(download_path="results")
-    
-                # Download and extract source files
-                success, path = downloader.download_paper(paper_id, verbose=args.verbose)
-
-                if args.verbose:
-                    logger.info('✨ Cleaning Latex ...')
-                clean_latex(path)
-            else:
-                success = True
-                path = f'results/{paper_id_no_version}'
-
-            if not success:
-                continue
-            
-            if len(glob(f'{path}/*.tex')) > 0:
-                path = f'{path}_arXiv'
-
-            save_path = f'{path}/{args.model_name}-results.json'
-
-            if os.path.exists(save_path) and not args.overwrite:
-                logger.info('📂 Loading saved results ...')
-                return json.load(open(save_path))
-            source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
-            
-            if len(source_files):
-                source_file = source_files[0]
-                if args.verbose:
-                    logger.info(f'📖 Reading {source_file} ...')
-                if source_file.endswith('.pdf'):
-                    with pdfplumber.open(source_file) as pdf:
-                        text_pages = []
-                        for page in pdf.pages:
-                            text_pages.append(page.extract_text())
-                        paper_text = ' '.join(text_pages)
-                elif source_file.endswith('.tex'):
-                    paper_text = open(source_file, 'r').read() # maybe clean comments
+                    # Download and extract source files
+                    success, path = downloader.download_paper(paper_id, verbose=verbose)
+                    with st.spinner('✨ Cleaning Latex ...'):
+                        if verbose:
+                            logger.info('✨ Cleaning Latex ...')
+                        clean_latex(path)
                 else:
-                    if args.verbose:
-                        logger.error('Not acceptable source file')
+                    success = True
+                    path = f'static/results/{paper_id_no_version}'
+
+                if not success:
                     continue
-                if args.verbose:
-                    logger.info(f'🧠 {args.model_name} is extracting Metadata ...')
-                if 'claude' in args.model_name.lower(): 
-                    message, metadata = get_metadata(paper_text, args.model_name)
-                elif 'gpt' in args.model_name.lower():
-                    message , metadata = get_metadata_chatgpt(paper_text, args.model_name)
-                elif 'gem' in args.model_name.lower():
-                    message, metadata = get_metadata_gemini(paper_text, args.model_name)
-                cost = compute_cost(message)
-
-                metadata = {k:str(v) for k,v in metadata.items()}
-
-                if 'N/A' in metadata['Venue Title']:
-                    metadata['Venue Title'] = 'arXiv'
-                if 'N/A' in metadata['Venue Type']:
-                    metadata['Venue Title'] = 'Preprint'
-                if 'N/A' in metadata['Paper Link']:
-                    metadata['Paper Link'] = article_url
                 
-                metadata['Year'] = str(year)
+                if len(glob(f'{path}/*.tex')) > 0:
+                    path = f'{path}_arXiv'
+
+                save_path = f'{path}/{model_name}-results.json'
+
+                if os.path.exists(save_path) and not overwrite:
+                    with st.spinner('📂 Loading saved results ...'):
+                        logger.info('📂 Loading saved results ...')
+                        results = json.load(open(save_path))
+                        st.write(results)
+                        st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=http://localhost:8501/app/{save_path}")
+                        return results
+                source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
                 
-                for c in metadata:
-                    if 'N/A' in metadata[c]:
-                        metadata[c] = ''
-                    if metadata[c] is None:
-                        metadata[c] = ''
+                if len(source_files):
+                    source_file = source_files[0]
+                    with st.spinner(f'📖 Reading {source_file} ...'):
+                        if verbose:
+                            logger.info(f'📖 Reading {source_file} ...')
+                        if source_file.endswith('.pdf'):
+                            with pdfplumber.open(source_file) as pdf:
+                                text_pages = []
+                                for page in pdf.pages:
+                                    text_pages.append(page.extract_text())
+                                paper_text = ' '.join(text_pages)
+                        elif source_file.endswith('.tex'):
+                            paper_text = open(source_file, 'r').read() # maybe clean comments
+                        else:
+                            if verbose:
+                                logger.error('Not acceptable source file')
+                            continue
+                    with st.spinner('🧠 Extracting Metadata ...'):
+                        if verbose:
+                            logger.info(f'🧠 {model_name} is extracting Metadata ...')
+                        if 'claude' in model_name.lower(): 
+                            message, metadata = get_metadata(paper_text, model_name)
+                        elif 'gpt' in model_name.lower():
+                            message , metadata = get_metadata_chatgpt(paper_text, model_name)
+                        elif 'gem' in model_name.lower():
+                            message, metadata = get_metadata_gemini(paper_text, model_name)
+                    cost = compute_cost(message)
 
-                metadata = fix_options(metadata)
-                metadata = postprocess(metadata)
+                    metadata = {k:str(v) for k,v in metadata.items()}
 
-                validation_results = validate(metadata)
-                results = {}
-                results ['metadata'] = metadata
-                results ['cost'] = cost
-                results ['validation'] = validation_results
-                results ['config'] = {
-                    'model_name': args.model_name,
-                    'month': args.month,
-                    'year': args.year,
-                    'keywords': args.keywords
-                }
-                results['ratio_filling'] = compute_filling(metadata)
-                if args.verbose:
-                    logger.info(f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %")
+                    if 'N/A' in metadata['Venue Title']:
+                        metadata['Venue Title'] = 'arXiv'
+                    if 'N/A' in metadata['Venue Type']:
+                        metadata['Venue Title'] = 'Preprint'
+                    if 'N/A' in metadata['Paper Link']:
+                        metadata['Paper Link'] = article_url
+                    
+                    metadata['Year'] = str(year)
+                    
+                    for c in metadata:
+                        if 'N/A' in metadata[c]:
+                            metadata[c] = ''
+                        if metadata[c] is None:
+                            metadata[c] = ''
 
-                with open(save_path, "w") as outfile:
-                    logger.info(f"📥 Results saved to: {save_path}") 
-                    json.dump(results, outfile, indent=4)
-                return results
+                    metadata = fix_options(metadata)
+                    metadata = postprocess(metadata)
 
+                    validation_results = validate(metadata)
+                    results = {}
+                    results ['metadata'] = metadata
+                    results ['cost'] = cost
+                    results ['validation'] = validation_results
+                    results ['config'] = {
+                        'model_name': model_name,
+                        'month': month,
+                        'year': year,
+                        'keywords': keywords
+                    }
+                    results['ratio_filling'] = compute_filling(metadata)
+                    if verbose:
+                        logger.info(f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %")
+
+                    with st.spinner('📥 Saving Results ...'):
+                        with open(save_path, "w") as outfile:
+                            logger.info(f"📥 Results saved to: {save_path}") 
+                            json.dump(results, outfile, indent=4)
+                    st.write(results)
+                    st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=http://localhost:8501/app/{save_path}")
+                    return results
+
+            else:
+                logger.info('Abstract indicates resource: False')
+                st.error('Abstract indicates resource: False')
         else:
-            logger.info('Abstract indicates resource: False')
+            st.error('No papers found')
 
 def create_args():
     parser = argparse.ArgumentParser(description='Process keywords, month, and year parameters')
@@ -480,5 +524,6 @@ def create_args():
     return args
 
 if __name__ == "__main__":
-    args = create_args()
+    # args = create_args()
+    args = None
     run(args)

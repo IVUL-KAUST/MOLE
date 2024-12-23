@@ -1,4 +1,4 @@
-from prompt import run, create_args
+from app import run, create_args
 from tabulate import tabulate # type: ignore
 from utils import get_masader_test, get_masader_valid
 
