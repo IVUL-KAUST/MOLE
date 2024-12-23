@@ -14,73 +14,15 @@ import argparse
 import google.generativeai as genai # type: ignore
 import streamlit as st
 from constants import *
+from datasets import load_dataset
 
 logger = setup_logger()
         
 load_dotenv()
-
-
+dataset = load_dataset('arbml/masader')
 client = anthropic.Anthropic(api_key=os.environ['anthropic_key'])
 chatgpt_client = OpenAI(api_key=os.environ['chatgpt_key'])
 genai.configure(api_key=os.environ['gemini_key'])
-# print([m.name for m in genai.list_models()])
-# raise()
-
-stop_event = threading.Event()  # Event to signal the spinner to stop
-spinner_thread = threading.Thread(target=spinner_animation, args=(stop_event,))
-
-columns = ['Name', 'Subsets', 'Link', 'HF Link', 'License', 'Year', 'Language', 'Dialect', 'Domain', 'Form', 'Collection Style', 'Description', 'Volume', 'Unit', 'Ethical Risks', 'Provider', 'Derived From', 'Paper Title', 'Paper Link', 'Script', 'Tokenized', 'Host', 'Access', 'Cost', 'Test Split', 'Tasks',  'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
-extra_columns = ['Subsets', 'Year', 'Description', 'Paper Link', 'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract','Year']
-
-publication_columns = ['Paper Title', 'Paper Link', 'Year', 'Venue Title', 'Venue Type', 'Venue Name']
-content_columns = ['Volume', 'Unit', 'Tokenized', 'Script', 'Form', 'Collection Style', 'Domain', 'Ethical Risks']
-accessability_columns = ['Provider', 'Host', 'Link', 'License', 'Cost']
-diversity_columns = ['Language', 'Subsets', 'Dialect']
-evaluation_columns = ['Test Split', 'Tasks', 'Derived From']
-validation_columns = content_columns+accessability_columns+diversity_columns+evaluation_columns
-
-sheet_id = "1YO-Vl4DO-lnp8sQpFlcX1cDtzxFoVkCmU1PVw_ZHJDg"
-sheet_name = "filtered_clean"
-url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
-
-import pandas as pd
-df = pd.read_csv(url, usecols=range(34))
-df.columns.values[0] = "No."
-df.columns.values[1] = "Name"
-print(column_options['Dialect'])
-questions = f"1. What is the name of the dataset? Only use a short name of the dataset. \n\
-  2. What are the subsets of this dataset? \n\
-  3. What is the link to access the dataset? The link most contain the dataset. \n\
-  4. What is the Huggingface link of the dataset? \n\
-  5. What is the License of the dataset? Options: {column_options['License']} \n\
-  6. What year was the dataset published? \n\
-  7. Is the dataset multilingual or ar? \n\
-  8. Choose a dialect for the dataset from the following options: {column_options['Dialect']}. If the type of the dialect is not clear output mixed. \n\
-  9. What is the domain of the dataset? Options: {column_options['Domain']} \n\
-  10. What is the form of the dataset? Options {column_options['Form']} \n\
-  11. How was this dataset collected? Options: {column_options['Collection Style']} \n\
-  12. Write a brief description of the dataset. \n\
-  13. What is the size of the dataset? Output numbers only with , seperated each thousand\n\
-  14. What is the unit of the size? Options: {column_options['Unit']}. Only use documents for datasets that contain documents or files as examples. \n\
-  15. What is the level of the ethical risks of the dataset? Options: {column_options['Ethical Risks']}\n\
-  16. What entity is the provider of the dataset? \n\
-  17. What dataset is this dataset derived from? \n\
-  18. What is the paper title? \n\
-  19. What is the paper link? \n\
-  20. What is the script of this dataset? Options: {column_options['Script']} \n\
-  21. Is the dataset tokenized? Options: {column_options['Tokenized']} \n\
-  22. Who is the host of the dataset? Options: {column_options['Host']} \n\
-  23. What is the accessability of the dataset? Options: {column_options['Access']} \n\
-  24. What is the cost of the dataset? If the dataset is free don't output anything. \n\
-  25. Does the dataset contain a test split? Options: {column_options['Test Split']} \n\
-  26. What is the task of the dataset. If there are multiple tasks, separate them by ','. Options: {column_options['Tasks']} \n\
-  27. What is the Venue title this paper was published in? \n\
-  28. How many citations this paper got? \n\
-  29. What is the venue the dataset is published in? Options: {column_options['Venue Type']} \n\
-  30. What is the Venue full name this paper was published in? \n\
-  31. Who are the authors of the paper, list them separated by comma. \n\
-  32. What are the affiliations of the authors, separate by comma. \n\
-  33. What is the abstract of the dataset?"
 
 def compute_filling(metadata):
     return len([m for m in metadata if m!= '']) / len(metadata)
@@ -101,8 +43,6 @@ def compute_cost(message):
         'output_tokens': num_out_tokens
     }
       
-
-@spinner_decorator
 def is_resource(abstract):
   prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published Arabic dataset or multilingual dataset that contains Arabic? please answer 'yes' or 'no' only"  
   model = genai.GenerativeModel("gemini-1.5-flash",system_instruction ="You are a prefoessional research paper reader" )  
@@ -151,7 +91,6 @@ def match_titles(title, masader_title):
         return 0
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
-@spinner_decorator
 def validate(metadata):
     results = {
         # 'PUBLICATION': 0,
@@ -162,13 +101,15 @@ def validate(metadata):
         'AVERAGE':0,
     }
 
-    dataset = df[df['Paper Title'].apply(lambda x: match_titles(str(metadata['Paper Title']), x)) > 0.8]
-
-    if len(dataset) <= 0:
+    matched_row = None
+    for row in dataset['train']:
+        if match_titles(str(metadata['Paper Title']), row['Paper Title']) > 0.8:
+            matched_row = row
+    if not matched_row:
         return results
-
+    
     for column in validation_columns:
-        gold_answer = np.asarray((dataset[column]))[0]
+        gold_answer = matched_row[column]
         if str(gold_answer) == 'nan':
             gold_answer = ''
         pred_answer = metadata[column]
@@ -191,7 +132,6 @@ def get_answer(answers, question_number = '1.'):
         if answer.startswith(question_number):
             return re.sub(r'(\d+)\.', '', answer).strip()
 
-@spinner_decorator
 def get_metadata(paper_text, model_name):
   prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
   message = client.messages.create(
@@ -220,7 +160,6 @@ def get_metadata(paper_text, model_name):
       predictions[columns[i-1]] = get_answer(response.split('\n'), question_number=f'{i}.')
   return message, predictions
 
-@spinner_decorator
 def get_metadata_gemini(paper_text, model_name):
   prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
   
