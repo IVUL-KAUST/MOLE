@@ -4,6 +4,9 @@ import time
 import threading
 from functools import wraps
 import pandas as pd
+from datasets import load_dataset
+from constants import *
+import difflib
 
 def get_masader_test():
     sheet_id = "1-07izL_VBZfdKT0fBllZHW8E1psOU-VM"
@@ -76,8 +79,119 @@ def setup_logger() -> logging.Logger:
             
         return logger
 
+def match_titles(title, masader_title):
+    if isinstance(masader_title, float):
+        return 0
+    return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
-import difflib
+def validate(metadata):
+    dataset = load_dataset('arbml/masader')
+    results = {
+        'CONTENT':0,
+        'ACCESSABILITY':0,
+        'DIVERSITY':0,
+        'EVALUATION':0,
+        'AVERAGE':0,
+    }
+
+    matched_row = None
+    for row in dataset['train']:
+        if match_titles(str(metadata['Paper Title']), row['Paper Title']) > 0.8:
+            matched_row = row
+    if not matched_row:
+        return results
+    
+    for column in validation_columns:
+
+        gold_answer = matched_row[column]
+        if str(gold_answer) == 'nan':
+            gold_answer = ''
+        pred_answer = metadata[column]
+        if column == 'Subsets':
+            if len(pred_answer) != len(gold_answer):
+                continue
+            for subset in gold_answer:
+                for key in subset:
+                    if key not in pred_answer:
+                        continue
+                    if subset[key] != pred_answer[key]:
+                        continue
+            
+            results['AVERAGE'] += 1/len(validation_columns) 
+            results['DIVERSITY']+= 1/3
+            continue
+
+        if pred_answer.lower() == str(gold_answer).lower():
+            results['AVERAGE'] += 1/len(validation_columns)
+            if column in publication_columns:
+                results['PUBLICATION'] += 1/6
+            elif column in content_columns:
+                results['CONTENT'] += 1/8
+            elif column in accessability_columns:
+                results['ACCESSABILITY']+= 1/5
+            elif column in diversity_columns:
+                results['DIVERSITY']+= 1/3
+            elif column in evaluation_columns:
+                results['EVALUATION'] += 1/3
+    return results
+
+from collections import Counter
+
+def majority_vote(dicts):
+    result = {}
+    
+    for key in columns:
+        if key == 'Subsets':
+            result[key] = []
+            continue
+        
+        # only use smarter models as a judge       
+        values = [dicts[model_name][key] for model_name in dicts if any([m in model_name for m in ['gemini-1.5-flash','pro','sonnet']])]
+        
+        # Count the occurrences of each value
+        value_counts = Counter(values)
+        # Find the value with the highest count (majority vote)
+        majority_value, score = value_counts.most_common(1)[0]
+        # if score > 3:
+        #     result[key] = majority_value
+        # else:
+        #     for model_name in dicts:
+        #         if 'pro' in model_name: #bias towards sonnet
+        #             result[key] = dicts[model_name][key]
+        result[key] = majority_value
+    
+    return result
+
+def get_metadata_judge(dicts):
+    all_metadata = {d['config']['model_name']:d['metadata'] for d in dicts}
+    return '', majority_vote(all_metadata)
+
+def get_metadata_human(paper_title):
+    dataset = load_dataset('arbml/masader')
+    for row in dataset['train']:
+        if match_titles(str(paper_title), row['Paper Title']) > 0.8:
+            return '', row
+
+import pandas as pd
+
+def compare_results(r1, r2):
+    results = {}
+    model1_name = r1['config']['model_name']
+    model2_name = r2['config']['model_name']
+    metadata1 = r1['metadata']
+    metadata2 = r2['metadata']
+    for c in metadata1.keys():
+        value1 = metadata1[c]
+        value2 = metadata2[c]
+        if value1 != value2:
+            results[c] = {
+                f"{model1_name}": value1,
+                f"{model2_name}": value2,
+            }
+
+    df = pd.DataFrame(results)
+    return df.transpose()
+
 
 def find_best_match(text, options):
     """

@@ -15,11 +15,10 @@ import google.generativeai as genai # type: ignore
 import streamlit as st
 from constants import *
 from datasets import load_dataset
-
+st.set_page_config(layout="wide")
 logger = setup_logger()
         
 load_dotenv()
-dataset = load_dataset('arbml/masader')
 client = anthropic.Anthropic(api_key=os.environ['anthropic_key'])
 chatgpt_client = OpenAI(api_key=os.environ['chatgpt_key'])
 genai.configure(api_key=os.environ['gemini_key'])
@@ -85,47 +84,6 @@ def postprocess(metadata):
     metadata['HF Link'] = process_url(metadata['HF Link'])
 
     return metadata
-
-def match_titles(title, masader_title):
-    if isinstance(masader_title, float):
-        return 0
-    return difflib.SequenceMatcher(None, title, masader_title).ratio()
-
-def validate(metadata):
-    results = {
-        # 'PUBLICATION': 0,
-        'CONTENT':0,
-        'ACCESSABILITY':0,
-        'DIVERSITY':0,
-        'EVALUATION':0,
-        'AVERAGE':0,
-    }
-
-    matched_row = None
-    for row in dataset['train']:
-        if match_titles(str(metadata['Paper Title']), row['Paper Title']) > 0.8:
-            matched_row = row
-    if not matched_row:
-        return results
-    
-    for column in validation_columns:
-        gold_answer = matched_row[column]
-        if str(gold_answer) == 'nan':
-            gold_answer = ''
-        pred_answer = metadata[column]
-        if pred_answer.lower() == str(gold_answer).lower():
-            results['AVERAGE'] += 1/len(validation_columns)
-            if column in publication_columns:
-                results['PUBLICATION'] += 1/6
-            elif column in content_columns:
-                results['CONTENT'] += 1/8
-            elif column in accessability_columns:
-                results['ACCESSABILITY']+= 1/5
-            elif column in diversity_columns:
-                results['DIVERSITY']+= 1/3
-            elif column in evaluation_columns:
-                results['EVALUATION'] += 1/3
-    return results
 
 def get_answer(answers, question_number = '1.'):
     for answer in answers:
@@ -214,13 +172,14 @@ def get_search_results(keywords, month, year):
 def run(args):
     # Example search for machine learning papers from March 2024
     submitted = None
+    model_names = ["gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-2.0-flash-exp", "gemini-1.5-pro", "claude-3-5-sonnet-latest", "claude-3-5-haiku-latest", "gpt-4o", "judge", "human"]
     if args:
         year = args.year
         month = args.month
         keywords = args.keywords.split(' ')
         verbose = args.verbose
         check_abstract = args.check_abstract
-        model_name = args.model_name
+        model_names = args.model_name.split(',')
         overwrite = args.overwrite
     else:
         verbose = True
@@ -229,16 +188,19 @@ def run(args):
             overwrite = st.checkbox("Overwrite")
 
             # Create columns for arranging elements in a single row
-            col1, col2, col3, col4, col5 = st.columns(5)
+            col1, col2, col3, col4, col5 = st.columns([2, 1, 1, 4, 1])
 
             with col1:
-                keywords = st.text_input("Keywords/Title")
+                keywords = st.text_input("Keywords/Title", "CIDAR")
             with col2:
                 year = st.number_input("Year", min_value=1900, max_value=2100, value=2024, step=1)
             with col3:
-                month = st.number_input("Month", min_value=1, max_value=12, value=1, step=1)
+                month = st.number_input("Month", min_value=1, max_value=12, value=2, step=1)
             with col4:
-                model_name = st.selectbox("Model", ["gemini-1.5-flash", "claude-3-5-sonnet-latest", "gpt-4o"], index=0)
+                model_names = st.multiselect("Model", model_names)
+                if 'judge' in model_names:
+                    model_names.remove('judge')
+                    model_names = model_names + ['judge'] # judge is last to be computed
             with col5:
                 submitted = st.form_submit_button("Search")
 
@@ -293,95 +255,107 @@ def run(args):
                 if len(glob(f'{path}/*.tex')) > 0:
                     path = f'{path}_arXiv'
 
-                save_path = f'{path}/{model_name}-results.json'
+                for model_name in model_names:
+                    save_path = f'{path}/{model_name}-results.json'
 
-                if os.path.exists(save_path) and not overwrite:
-                    with st.spinner('📂 Loading saved results ...'):
-                        logger.info('📂 Loading saved results ...')
-                        results = json.load(open(save_path))
-                        st.write(results)
-                        st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}")
-                        return results
-                source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
-                
-                if len(source_files):
-                    source_file = source_files[0]
-                    with st.spinner(f'📖 Reading {source_file} ...'):
-                        if verbose:
-                            logger.info(f'📖 Reading {source_file} ...')
-                        if source_file.endswith('.pdf'):
-                            with pdfplumber.open(source_file) as pdf:
-                                text_pages = []
-                                for page in pdf.pages:
-                                    text_pages.append(page.extract_text())
-                                paper_text = ' '.join(text_pages)
-                        elif source_file.endswith('.tex'):
-                            paper_text = open(source_file, 'r').read() # maybe clean comments
-                        else:
-                            if verbose:
-                                logger.error('Not acceptable source file')
+                    if os.path.exists(save_path) and not overwrite and model_name != 'judge':
+                        with st.spinner('📂 Loading saved results ...'):
+                            logger.info('📂 Loading saved results ...')
+                            results = json.load(open(save_path))
+                            # st.write(results)
+                            st.link_button(f"{model_name} => Masader Form", f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}")
                             continue
-                    with st.spinner('🧠 Extracting Metadata ...'):
+
+                    source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
+                    
+                    if len(source_files):
+                        source_file = source_files[0]
+                        with st.spinner(f'📖 Reading {source_file} ...'):
+                            if verbose:
+                                logger.info(f'📖 Reading {source_file} ...')
+                            if source_file.endswith('.pdf'):
+                                with pdfplumber.open(source_file) as pdf:
+                                    text_pages = []
+                                    for page in pdf.pages:
+                                        text_pages.append(page.extract_text())
+                                    paper_text = ' '.join(text_pages)
+                            elif source_file.endswith('.tex'):
+                                paper_text = open(source_file, 'r').read() # maybe clean comments
+                            else:
+                                if verbose:
+                                    logger.error('Not acceptable source file')
+                                continue
+                        with st.spinner(f'🧠 {model_name} is extracting Metadata ...'):
+                            if verbose:
+                                logger.info(f'🧠 {model_name} is extracting Metadata ...')
+                            if 'claude' in model_name.lower(): 
+                                message, metadata = get_metadata(paper_text, model_name)
+                            elif 'gpt' in model_name.lower():
+                                message , metadata = get_metadata_chatgpt(paper_text, model_name)
+                            elif 'gem' in model_name.lower():
+                                message, metadata = get_metadata_gemini(paper_text, model_name)
+                            elif 'judge' in model_name.lower():
+                                all_results = []
+                                for file in glob(f'{path}/**.json'):
+                                    if 'judge' not in file and 'human' not in file:
+                                        all_results.append(json.load(open(file)))
+                                message, metadata = get_metadata_judge(all_results)
+                            elif 'human' in model_name.lower():
+                                message, metadata = get_metadata_human(title)
+                        cost = compute_cost(message)
+                        for k, v in metadata.items():
+                            if k!= 'Subsets':
+                                metadata[k] = str(v)
+                            else:
+                                metadata[k] = v
+                        if model_name != 'human':
+                            if 'N/A' in metadata['Venue Title']:
+                                metadata['Venue Title'] = 'arXiv'
+                            if 'N/A' in metadata['Venue Type']:
+                                metadata['Venue Title'] = 'Preprint'
+                            if 'N/A' in metadata['Paper Link']:
+                                metadata['Paper Link'] = article_url
+                            
+                            metadata['Year'] = str(year)
+                            
+                            for c in metadata:
+                                if 'N/A' in metadata[c]:
+                                    metadata[c] = ''
+                                if metadata[c] is None:
+                                    metadata[c] = ''
+
+                                metadata = fix_options(metadata)
+                                metadata = postprocess(metadata)
+
+                        with st.spinner('🔍 Validating Metadata ...'):
+                            validation_results = validate(metadata)
+                        results = {}
+                        results ['metadata'] = metadata
+                        results ['cost'] = cost
+                        results ['validation'] = validation_results
+                        results ['config'] = {
+                            'model_name': model_name,
+                            'month': month,
+                            'year': year,
+                            'keywords': keywords
+                        }
+                        results['ratio_filling'] = compute_filling(metadata)
                         if verbose:
-                            logger.info(f'🧠 {model_name} is extracting Metadata ...')
-                        if 'claude' in model_name.lower(): 
-                            message, metadata = get_metadata(paper_text, model_name)
-                        elif 'gpt' in model_name.lower():
-                            message , metadata = get_metadata_chatgpt(paper_text, model_name)
-                        elif 'gem' in model_name.lower():
-                            message, metadata = get_metadata_gemini(paper_text, model_name)
-                    cost = compute_cost(message)
+                            logger.info(f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %")
 
-                    metadata = {k:str(v) for k,v in metadata.items()}
-
-                    if 'N/A' in metadata['Venue Title']:
-                        metadata['Venue Title'] = 'arXiv'
-                    if 'N/A' in metadata['Venue Type']:
-                        metadata['Venue Title'] = 'Preprint'
-                    if 'N/A' in metadata['Paper Link']:
-                        metadata['Paper Link'] = article_url
-                    
-                    metadata['Year'] = str(year)
-                    
-                    for c in metadata:
-                        if 'N/A' in metadata[c]:
-                            metadata[c] = ''
-                        if metadata[c] is None:
-                            metadata[c] = ''
-
-                    metadata = fix_options(metadata)
-                    metadata = postprocess(metadata)
-
-                    validation_results = validate(metadata)
-                    results = {}
-                    results ['metadata'] = metadata
-                    results ['cost'] = cost
-                    results ['validation'] = validation_results
-                    results ['config'] = {
-                        'model_name': model_name,
-                        'month': month,
-                        'year': year,
-                        'keywords': keywords
-                    }
-                    results['ratio_filling'] = compute_filling(metadata)
-                    if verbose:
-                        logger.info(f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %")
-
-                    with st.spinner('📥 Saving Results ...'):
-                        # remove the subsets
-                        results['metadata']['Subsets'] = []
-                        with open(save_path, "w") as outfile:
-                            logger.info(f"📥 Results saved to: {save_path}") 
-                            json.dump(results, outfile, indent=4)
-                    st.write(results)
-                    st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}")
-                    return results
+                        with st.spinner('📥 Saving Results ...'):
+                            # remove the subsets
+                            if model_name != 'human':
+                                results['metadata']['Subsets'] = []
+                            with open(save_path, "w") as outfile:
+                                logger.info(f"📥 Results saved to: {save_path}") 
+                                json.dump(results, outfile, indent=4)
+                        # st.write(results)
+                        st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}")
 
             else:
                 logger.info('Abstract indicates resource: False')
                 st.error('Abstract indicates resource: False')
-        else:
-            st.error('No papers found')
 
 def create_args():
     parser = argparse.ArgumentParser(description='Process keywords, month, and year parameters')
