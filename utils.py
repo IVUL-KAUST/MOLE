@@ -121,7 +121,7 @@ def validate(metadata):
             results['DIVERSITY']+= 1/3
             continue
 
-        if pred_answer.lower() == str(gold_answer).lower():
+        if pred_answer.lower() in [o.strip() for o in str(gold_answer).lower().split(',')]:
             results['AVERAGE'] += 1/len(validation_columns)
             if column in publication_columns:
                 results['PUBLICATION'] += 1/6
@@ -172,26 +172,23 @@ def get_metadata_human(paper_title):
         if match_titles(str(paper_title), row['Paper Title']) > 0.8:
             return '', row
 
-import pandas as pd
-
-def compare_results(r1, r2):
+def compare_results(rs, show_diff = False):
     results = {}
-    model1_name = r1['config']['model_name']
-    model2_name = r2['config']['model_name']
-    metadata1 = r1['metadata']
-    metadata2 = r2['metadata']
-    for c in metadata1.keys():
-        value1 = metadata1[c]
-        value2 = metadata2[c]
-        if value1 != value2:
-            results[c] = {
-                f"{model1_name}": value1,
-                f"{model2_name}": value2,
-            }
-
+    
+    for c in columns:
+        for r in rs:
+            model_name = r['config']['model_name']
+            value = r['metadata'][c]
+            if c not in results:
+                results[c] = {}        
+            results[c][model_name] = value
+        
+        if show_diff:
+            if all([results[c][m]==value for m in results[c]]):
+                del results[c]
+        
     df = pd.DataFrame(results)
     return df.transpose()
-
 
 def find_best_match(text, options):
     """

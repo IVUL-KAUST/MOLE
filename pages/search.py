@@ -64,8 +64,9 @@ def fix_options(metadata):
                 fixed_metadata[column] = pred_option
             elif pred_option == '':
                 fixed_metadata[column] = ''
-            else:                    
-                fixed_metadata[column] = find_best_match(pred_option, options)
+            else:
+                # also consider multiple outputs like ','
+                fixed_metadata[column] = ','.join(find_best_match(option, options) for option in pred_option.split(','))
         else:
             fixed_metadata[column] = metadata[column]
 

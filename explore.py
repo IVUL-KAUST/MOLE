@@ -6,10 +6,10 @@ import pandas as pd
 from utils import *
 
 st.set_page_config(layout="wide")
-def load_json_files(folder_path, model_name=None):
+def load_json_files(foulder_path = 'static/results'):
     """Load JSON files from the specified folder and filter by model name."""
     json_files = {}
-    for file in glob('static/results/**/**.json'):
+    for file in glob(f'{foulder_path}/**/**.json'):
         if file.endswith(".json"):
             with open(file, "r") as f:
                 try:
@@ -38,11 +38,12 @@ def main():
             with st.expander(title):
                 models = st.multiselect("Select a model:", [r['config']['model_name'] for r in all_jsons[arxiv_id]], key = f'{arxiv_id}_model')
                 compare = st.button('Compare', key = f'{arxiv_id}_compare_btn')
+                show_diff = st.toggle('show diff', key = f'{arxiv_id}_show_diff')
                 eval_all = st.button('Eval Table', key = f'{arxiv_id}_compare_all_btn')
                 if compare:
-                    if len(models) == 2:
-                        r1, r2 = [r for r in all_jsons[arxiv_id] if r['config']['model_name'] in models]
-                        st.session_state['output'] = compare_results(r1, r2)
+                    if len(models) >= 1:
+                        results = [r for r in all_jsons[arxiv_id] if r['config']['model_name'] in models]
+                        st.session_state['output'] = compare_results(results, show_diff = show_diff)
                     elif len(models) == 1:
                         for model in models:
                             for result in all_jsons[arxiv_id]:

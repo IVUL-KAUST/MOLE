@@ -2,6 +2,7 @@ dialect_remapped = {'Classical Arabic': 'ar-CLS: (Arabic (Classic))','Modern Sta
 column_options = {
     'License': ',Apache-2.0,Non Commercial Use - ELRA END USER,BSD,CC BY 2.0,CC BY 3.0,CC BY 4.0,CC BY-NC 2.0,CC BY-NC-ND 4.0,CC BY-SA,CC BY-SA 3.0,CC BY-NC 4.0,CC BY-NC-SA 4.0,CC BY-SA 3.0,CC BY-SA 4.0,CC0,CDLA-Permissive-1.0,GPL-2.0,LDC User Agreement,LGPL-3.0,MIT License,ODbl-1.0,MPL-2.0,unknown,custom',
     'Dialect': ','.join(list(dialect_remapped.keys())),
+    'Language': 'ar,multilingual',
     'Collection Style': 'crawling,machine translation,human translation,manual curation,LLM generated,other',
     'Domain': 'social media,news articles,reviews,commentary,books,wikipedia,web pages,handwriting,LLM,other',
     'Form': 'text,spoken,images',
@@ -32,7 +33,7 @@ questions = f"1. What is the name of the dataset? Only use a short name of the d
   4. What is the Huggingface link of the dataset? \n\
   5. What is the License of the dataset? Options: {column_options['License']} \n\
   6. What year was the dataset published? \n\
-  7. Is the dataset multilingual or ar? \n\
+  7. Is the dataset {column_options['Language']}? \n\
   8. Choose a dialect for the dataset from the following options: {column_options['Dialect']}. If the type of the dialect is not clear output mixed. \n\
   9. What is the domain of the dataset? Options: {column_options['Domain']} \n\
   10. What is the form of the dataset? Options {column_options['Form']} \n\
