@@ -85,7 +85,7 @@ def match_titles(title, masader_title):
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
 def validate(metadata):
-    dataset = load_dataset('arbml/masader')
+    dataset = load_dataset('arbml/masader', trust_remote_code=True)
     results = {
         'CONTENT':0,
         'ACCESSABILITY':0,
@@ -167,7 +167,7 @@ def get_metadata_judge(dicts):
     return '', majority_vote(all_metadata)
 
 def get_metadata_human(paper_title):
-    dataset = load_dataset('arbml/masader')
+    dataset = load_dataset('arbml/masader', trust_remote_code=True)
     for row in dataset['train']:
         if match_titles(str(paper_title), row['Paper Title']) > 0.8:
             return '', row
