@@ -362,6 +362,7 @@ def run(args):
                         results['ratio_filling'] = compute_filling(metadata)
                         if verbose:
                             logger.info(f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %")
+                            st.write(f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %")
 
                         with st.spinner('📥 Saving Results ...'):
                             # remove the subsets
