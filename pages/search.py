@@ -14,7 +14,6 @@ import argparse
 import google.generativeai as genai # type: ignore
 import streamlit as st
 from constants import *
-from datasets import load_dataset
 st.set_page_config(layout="wide")
 logger = setup_logger()
         
