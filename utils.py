@@ -121,7 +121,7 @@ def validate(metadata):
             results['DIVERSITY']+= 1/3
             continue
 
-        if pred_answer.lower() in [o.strip() for o in str(gold_answer).lower().split(',')]:
+        if pred_answer.strip().lower() == gold_answer.strip().lower():
             results['AVERAGE'] += 1/len(validation_columns)
             if column in publication_columns:
                 results['PUBLICATION'] += 1/6
@@ -133,6 +133,8 @@ def validate(metadata):
                 results['DIVERSITY']+= 1/3
             elif column in evaluation_columns:
                 results['EVALUATION'] += 1/3
+        else:
+            print(pred_answer, gold_answer)
     return results
 
 from collections import Counter

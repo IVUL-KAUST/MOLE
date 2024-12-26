@@ -27,36 +27,41 @@ diversity_columns = ['Language', 'Subsets', 'Dialect']
 evaluation_columns = ['Test Split', 'Tasks', 'Derived From']
 validation_columns = content_columns+accessability_columns+diversity_columns+evaluation_columns
 
-questions = f"1. What is the name of the dataset? Only use a short name of the dataset. \n\
-  2. What are the subsets of this dataset? \n\
-  3. What is the link to access the dataset? The link most contain the dataset. \n\
-  4. What is the Huggingface link of the dataset? \n\
-  5. What is the License of the dataset? Options: {column_options['License']} \n\
-  6. What year was the dataset published? \n\
-  7. Is the dataset {column_options['Language']}? \n\
-  8. Choose a dialect for the dataset from the following options: {column_options['Dialect']}. If the type of the dialect is not clear output mixed. \n\
-  9. What is the domain of the dataset? Options: {column_options['Domain']} \n\
-  10. What is the form of the dataset? Options {column_options['Form']} \n\
-  11. How was this dataset collected? Options: {column_options['Collection Style']} \n\
-  12. Write a brief description of the dataset. \n\
-  13. What is the size of the dataset? Output numbers only with , seperated each thousand\n\
-  14. What is the unit of the size? Options: {column_options['Unit']}. Only use documents for datasets that contain documents or files as examples. \n\
-  15. What is the level of the ethical risks of the dataset? Options: {column_options['Ethical Risks']}\n\
-  16. What entity is the provider of the dataset? \n\
-  17. What dataset is this dataset derived from? \n\
-  18. What is the paper title? \n\
-  19. What is the paper link? \n\
-  20. What is the script of this dataset? Options: {column_options['Script']} \n\
-  21. Is the dataset tokenized? Options: {column_options['Tokenized']} \n\
-  22. Who is the host of the dataset? Options: {column_options['Host']} \n\
-  23. What is the accessability of the dataset? Options: {column_options['Access']} \n\
-  24. What is the cost of the dataset? If the dataset is free don't output anything. \n\
-  25. Does the dataset contain a test split? Options: {column_options['Test Split']} \n\
-  26. What is the task of the dataset. If there are multiple tasks, separate them by ','. Options: {column_options['Tasks']} \n\
-  27. What is the Venue title this paper was published in? \n\
-  28. How many citations this paper got? \n\
-  29. What is the venue the dataset is published in? Options: {column_options['Venue Type']} \n\
-  30. What is the Venue full name this paper was published in? \n\
-  31. Who are the authors of the paper, list them separated by comma. \n\
-  32. What are the affiliations of the authors, separate by comma. \n\
-  33. What is the abstract of the dataset?"
+questions = f"Name: What is the name of the dataset? Only use a short name of the dataset. \n\
+  Subsets: What are the subsets of this dataset? \n\
+  Link: What is the link to access the dataset? The link most contain the dataset. \n\
+  HF Link: What is the Huggingface link of the dataset? \n\
+  License: What is the License of the dataset? Options: {column_options['License']} \n\
+  Year: What year was the dataset published? \n\
+  Language: Is the dataset {column_options['Language']}? \n\
+  Dialect: Choose a dialect for the dataset from the following options: {column_options['Dialect']}. If the type of the dialect is not clear output mixed. \n\
+  Domain What is the domain of the dataset? Options: {column_options['Domain']} \n\
+  Form: What is the form of the dataset? Options {column_options['Form']} \n\
+  Collection Style: How was this dataset collected? Options: {column_options['Collection Style']} \n\
+  Description: Write a brief description of the dataset. \n\
+  Volume: What is the size of the dataset? Output numbers only with , seperated each thousand\n\
+  Unit: What kind of examples does the dataset include? Options: {column_options['Unit']} \n\
+  Ethical Risks: What is the level of the ethical risks of the dataset? Options: {column_options['Ethical Risks']}\n\
+  Provider: What entity is the provider of the dataset? \n\
+  Derived From: What dataset is this dataset derived from? \n\
+  Paper Title: What is the paper title? \n\
+  Paper Link: What is the paper link? \n\
+  Script: What is the script of this dataset? Options: {column_options['Script']} \n\
+  Tokenized: Is the dataset tokenized? Options: {column_options['Tokenized']} \n\
+  Host: Who is the host of the dataset? Options: {column_options['Host']} \n\
+  Access: What is the accessability of the dataset? Options: {column_options['Access']} \n\
+  Cost: What is the cost of the dataset? If the dataset is free don't output anything. \n\
+  Test Split: Does the dataset contain a test split? Options: {column_options['Test Split']} \n\
+  Tasks: What are the tasks of the dataset. Separate them by ','. Options: {column_options['Tasks']} \n\
+  Venue Title: What is the Venue title this paper was published in? \n\
+  Citations: How many citations this paper got? \n\
+  Venue Type: What is the venue the dataset is published in? Options: {column_options['Venue Type']} \n\
+  Venue Name: What is the Venue full name this paper was published in? \n\
+  Authors: Who are the authors of the paper, list them separated by comma. \n\
+  Affiliations: What are the affiliations of the authors, separate by comma. \n\
+  Abstract: What is the abstract of the dataset?"
+
+system_prompt = "You are a profressional research paper reader. You will be provided 33 questions. \
+            If a question has choices which are separated by ',' , only provide an answer from the choices. \
+            If the question has no choices and the answer is not found in the paper, then answer only N/A. \
+            Each question is in the format Key:question, please use Key as a json key for each question and return the answer in json"

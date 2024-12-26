@@ -12,8 +12,9 @@ from openai import OpenAI
 from utils import *
 import argparse
 import google.generativeai as genai # type: ignore
-import streamlit as st
+import streamlit as st # type: ignore
 from constants import *
+import requests
 st.set_page_config(layout="wide")
 logger = setup_logger()
         
@@ -90,15 +91,17 @@ def get_answer(answers, question_number = '1.'):
         if answer.startswith(question_number):
             return re.sub(r'(\d+)\.', '', answer).strip()
 
-def get_metadata(paper_text, model_name):
-  prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
-  message = client.messages.create(
+def get_metadata(paper_text = "", model_name = "claude-3-5-sonnet-latest", readme = "", metadata = {}):
+    if paper_text:
+        prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
+    else:
+        prompt = f"You are given the following readme: {readme}, and metadata {metadata} you are requested to answer the following questions about the dataset {questions}"
+    
+    message = client.messages.create(
       model=model_name,
       max_tokens=1000,
       temperature=0,
-      system="You are a profressional research paper reader. You will be provided 33 questions. \
-      If a question has choices which are separated by ',' , only provide an answer from the choices. \
-      If the question has no choices and the answer is not found in the paper, then answer only N/A.",
+      system=system_prompt,
       messages=[
           {
               "role": "user",
@@ -110,31 +113,33 @@ def get_metadata(paper_text, model_name):
               ]
           }
       ]
-  )
-  predictions = {}
-  response = message.content[0].text
+    )
+    
+    predictions = read_json(message.content[0].text)    
+    return message, predictions
 
-  for i in range(1, 34):
-      predictions[columns[i-1]] = get_answer(response.split('\n'), question_number=f'{i}.')
-  return message, predictions
+def read_json(text_json):
+    text_json = text_json.replace('```json', '').replace('```', '')
+    # st.write(text_json)
+    return json.loads(text_json)
 
-def get_metadata_gemini(paper_text, model_name):
-  prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
-  
-  model = genai.GenerativeModel(model_name,system_instruction ="You are a profressional research paper reader. You will be provided 33 questions. \
-      If a question has choices which are separated by ',' , only provide an answer from the choices. \
-      If the question has no choices and the answer is not found in the paper, then answer only N/A." )  
-  
-  message = model.generate_content(prompt, 
+def get_metadata_gemini(paper_text = '', model_name = 'gemini-1.5-flash', readme = "", metadata = {}):
+    if paper_text:
+        prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
+    else:
+        prompt = f"You are given the following readme: {readme}, and metadata {metadata} you are requested to answer the following questions about the dataset {questions}"
+
+
+    model = genai.GenerativeModel(model_name,system_instruction = system_prompt)  
+          
+    message = model.generate_content(prompt, 
         generation_config = genai.GenerationConfig(
         max_output_tokens=1000,
         temperature=0.0,
     ))
-  predictions = {}
-  response = message.text
-  for i in range(1, 34):
-      predictions[columns[i-1]] = get_answer(response.split('\n'), question_number=f'{i}.')
-  return message, predictions
+    
+    predictions = read_json(message.text.strip())    
+    return message, predictions
 
 def get_metadata_chatgpt(paper_text, model_name):
     prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset. \
@@ -146,12 +151,7 @@ def get_metadata_chatgpt(paper_text, model_name):
             messages=[{"role": "system", "content": "You are a profressional research paper reader"},
                 {"role": "user", "content":prompt}]
             )
-    response = message.choices[0].message.content
-    predictions = {}
-
-    for i in range(1, 34):
-      predictions[columns[i-1]] = get_answer(response.split('\n'), question_number=f'{i}.')
-    
+    predictions = read_json(message.choices[0].message.content.strip())    
     return message, predictions
 
 @spinner_decorator
@@ -172,7 +172,7 @@ def get_search_results(keywords, month, year):
 def run(args):
     # Example search for machine learning papers from March 2024
     submitted = None
-    model_names = ["gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-2.0-flash-exp", "gemini-1.5-pro", "claude-3-5-sonnet-latest", "claude-3-5-haiku-latest", "gpt-4o", "judge", "human"]
+    model_names = ["gemini-1.5-flash", "gemini-1.5-flash-8b", "gemini-2.0-flash-exp", "gemini-1.5-pro", "claude-3-5-sonnet-latest", "claude-3-5-haiku-latest", "judge", "human"]
     if args:
         year = args.year
         month = args.month
@@ -181,6 +181,7 @@ def run(args):
         check_abstract = args.check_abstract
         model_names = args.model_name.split(',')
         overwrite = args.overwrite
+        browse_web = False
     else:
         verbose = True
         with st.form(key='search_form'):
@@ -189,7 +190,7 @@ def run(args):
 
             # Create columns for arranging elements in a single row
             col1, col2, col3, col4, col5 = st.columns([2, 1, 1, 4, 1])
-
+            browse_web  = st.toggle("Browse the web")
             with col1:
                 keywords = st.text_input("Keywords/Title", "CIDAR")
             with col2:
@@ -256,7 +257,10 @@ def run(args):
                     path = f'{path}_arXiv'
 
                 for model_name in model_names:
-                    save_path = f'{path}/{model_name}-results.json'
+                    if browse_web:
+                        save_path = f'{path}/{model_name}-browsing-results.json'
+                    else:
+                        save_path = f'{path}/{model_name}-results.json'
 
                     if os.path.exists(save_path) and not overwrite and model_name != 'judge':
                         with st.spinner('📂 Loading saved results ...'):
@@ -290,10 +294,24 @@ def run(args):
                                 logger.info(f'🧠 {model_name} is extracting Metadata ...')
                             if 'claude' in model_name.lower(): 
                                 message, metadata = get_metadata(paper_text, model_name)
+                                # st.write(metadata)
+                                api_url = f"{metadata['HF Link']}/raw/main/README.md"
+                                if browse_web:
+                                    with st.spinner(f'Browsing {api_url}'):
+                                        response = requests.get(api_url)
+                                        readme = response.text
+                                        message, metadata = get_metadata(model_name = model_name, readme = readme, metadata = metadata)
                             elif 'gpt' in model_name.lower():
                                 message , metadata = get_metadata_chatgpt(paper_text, model_name)
                             elif 'gem' in model_name.lower():
                                 message, metadata = get_metadata_gemini(paper_text, model_name)
+                                if browse_web:
+                                    if metadata['HF Link'] != '':
+                                        api_url = f"{metadata['HF Link']}/raw/main/README.md"
+                                        with st.spinner(f'Browsing {api_url}'):
+                                            response = requests.get(api_url)
+                                            readme = response.text
+                                            message, metadata = get_metadata_gemini(model_name = model_name, readme = readme, metadata = metadata)
                             elif 'judge' in model_name.lower():
                                 all_results = []
                                 for file in glob(f'{path}/**.json'):
@@ -333,6 +351,8 @@ def run(args):
                         results ['metadata'] = metadata
                         results ['cost'] = cost
                         results ['validation'] = validation_results
+                        if browse_web:
+                            model_name = f"{model_name}-browsing"
                         results ['config'] = {
                             'model_name': model_name,
                             'month': month,
