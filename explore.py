@@ -4,6 +4,7 @@ import json
 from glob import glob
 import pandas as pd
 from utils import *
+import numpy as np
 
 st.set_page_config(layout="wide")
 def load_json_files(foulder_path = 'static/results'):
@@ -24,10 +25,35 @@ def load_json_files(foulder_path = 'static/results'):
     return json_files
 
 def main():
-    col1, col2 = st.columns([1, 2])
-
     folder_path = 'static/results'
     all_jsons = load_json_files(folder_path)
+
+    len_datasets = len(all_jsons)
+    model_results = {}
+    for arxiv_id in all_jsons:
+        scores = {}
+        for result in all_jsons[arxiv_id]:
+            scores[result['config']['model_name']] = result['validation']
+        
+        for model_name in scores:
+            if model_name == 'human':
+                continue
+            if model_name not in model_results:
+                model_results[model_name] = []
+            model_results[model_name].append([v for k,v  in scores[model_name].items()])
+    results = {}
+    for model_name in model_results:
+        if len(model_results[model_name]) == len_datasets:
+            results[model_name] = np.mean(model_results[model_name], axis = 0)
+            
+    df = pd.DataFrame(results).transpose()
+    df.columns = ['CONTENT', 'ACCESSABILITY', 'DIVERSITY', 'EVALUATION', 'AVERAGE']
+    df = df.map(lambda x: x * 100)
+    df = df.sort_values('AVERAGE')
+    df = df.map("{0:.2f}".format)
+    st.write(df)
+
+    col1, col2 = st.columns([1, 2])
 
     if 'output' not in st.session_state:
         st.session_state['output'] = ''
@@ -58,9 +84,10 @@ def main():
                         scores[result['config']['model_name']] = result['validation']
                     df = pd.DataFrame(scores)
                     df = df.map(lambda x: x * 100)
+                    df = df.transpose().sort_values('AVERAGE')
                     df = df.map("{0:.2f}".format)
+                    st.session_state['output']  = df
 
-                    st.session_state['output'] = df.transpose().sort_values('AVERAGE')
     with col2:
         st.write(st.session_state['output'])
             

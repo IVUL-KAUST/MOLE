@@ -7,26 +7,15 @@ import pandas as pd
 from datasets import load_dataset
 from constants import *
 import difflib
+from glob import glob
 
 def get_masader_test():
-    sheet_id = "1-07izL_VBZfdKT0fBllZHW8E1psOU-VM"
-    sheet_name = "Sheet1"
-    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
-
-    df = pd.read_csv(url, usecols=range(35))
-    df.columns.values[0] = "No."
-    df.columns.values[1] = "Name"
-    return df
+    data = load_dataset('json', data_files = glob('testset/**.json'))
+    return data['train']
 
 def get_masader_valid():
-    sheet_id = "1awxq3QkWBQVRZnEVhx7ClKuw1JFM8k4gf-jh2GFPJwc"
-    sheet_name = "Sheet1"
-    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
-
-    df = pd.read_csv(url, usecols=range(35))
-    df.columns.values[0] = "No."
-    df.columns.values[1] = "Name"
-    return df
+    data = load_dataset('json', data_files = glob('validset/**.json'))
+    return data['train']
 
 def spinner_decorator(func):
     @wraps(func)
@@ -134,7 +123,8 @@ def validate(metadata):
             elif column in evaluation_columns:
                 results['EVALUATION'] += 1/3
         else:
-            print(pred_answer, gold_answer)
+            pass
+            # print(pred_answer, gold_answer)
     return results
 
 from collections import Counter
