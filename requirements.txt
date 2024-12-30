@@ -11,3 +11,4 @@ google-generativeai
 grpcio==1.60.1
 tabulate
 streamlit
+fastapi[standard]

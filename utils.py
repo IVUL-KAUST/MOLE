@@ -74,7 +74,6 @@ def match_titles(title, masader_title):
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
 def validate(metadata):
-    dataset = load_dataset('arbml/masader', trust_remote_code=True)
     results = {
         'CONTENT':0,
         'ACCESSABILITY':0,

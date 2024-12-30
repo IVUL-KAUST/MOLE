@@ -172,10 +172,11 @@ def show_info(text, st_context = False):
         st.write(text)
     logger.info(text)
 
-def run(args):
+def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link = '',
+        check_abstract = False, models = ['gemini-1.5-flash'], overwrite = False, browse_web = False):
     submitted = False
     st_context = False
-    if args:
+    if mode == 'cmd':
         year = args.year
         month = args.month
         keywords = args.keywords
@@ -183,7 +184,8 @@ def run(args):
         models = args.models.split(',')
         overwrite = args.overwrite
         browse_web = args.browse_web
-    else:
+        link = args.link
+    elif mode == 'st':
         st_context = True
         with st.form(key='search_form'):
             col1, col2, col3 = st.columns(3)
@@ -191,14 +193,16 @@ def run(args):
             overwrite = st.toggle("Overwrite")
             browse_web  = st.toggle("Browse the web")
 
-            col1, col2, col3, col4 = st.columns([2, 1, 1, 3])
+            col1, col2, col3, col4, col5 = st.columns([2, 2, 1, 1, 3])
             with col1:
                 keywords = st.text_input("Keywords/Title", "CIDAR")
             with col2:
-                year = st.number_input("Year", min_value=2000, max_value=datetime.now().year, value=2024, step=1)
+                link  = st.text_input("Link", "")
             with col3:
-                month = st.number_input("Month", min_value=1, max_value=12, value=2, step=1)
+                year = st.number_input("Year", min_value=2000, max_value=datetime.now().year, value=2024, step=1)
             with col4:
+                month = st.number_input("Month", min_value=1, max_value=12, value=2, step=1)
+            with col5:
                 models = st.multiselect("Model", ['all']+MODEL_NAMES)
             _,_,_,col,_,_,_ = st.columns(7)
             with col:
@@ -214,18 +218,14 @@ def run(args):
         models = models + ['judge'] # judge is last to be computed
     model_results = {}
 
-    if submitted or args:
-
-        show_info('🔍 Searching arXiv ...', st_context = st_context)
-        # search_results = get_search_results(keywords, month, year)
-        print(keywords)
-        if 'CIDAR' in keywords:
-            search_results = [{'summary':'', 'article_url':'http://arxiv.org/abs/2402.03177v1', 'title':'', 'published':''}]
-        elif 'ArabicMMLU' in keywords:
-            search_results = [{'summary':'', 'article_url':'https://arxiv.org/abs/2402.12840', 'title':'', 'published':''}]
-        elif '101' in keywords:
-            search_results = [{'summary':'', 'article_url':'https://arxiv.org/abs/2405.01590v1', 'title':'', 'published':''}]
-
+    if submitted or mode in ['api', 'cmd']:
+        if link != '':
+            show_info('🔍 Using arXiv link ...', st_context = st_context)
+            search_results = [{'summary':'', 'article_url':link, 'title':'', 'published':''}]
+        else:
+            show_info('🔍 Searching arXiv ...', st_context = st_context)
+            search_results = get_search_results(keywords, month, year)
+        
         for r in search_results:
             abstract = r['summary']
             article_url = r['article_url']
@@ -389,6 +389,12 @@ def create_args():
                         default = 'CIDAR',
                         help='space separated keywords')
     
+    parser.add_argument('-l', '--link', 
+                        type=str, 
+                        required=False,
+                        default = '',
+                        help='arxiv link')
+    
     parser.add_argument('-m', '--month', 
                         type=int, 
                         required= False,
@@ -404,7 +410,7 @@ def create_args():
     parser.add_argument('-n', '--models', 
                         type=str, 
                         required=False,
-                        default = 'claude-3-5-sonnet-latest',
+                        default = 'gemini-1.5-flash',
                         help='Name of the models to use')
     
     parser.add_argument('-c', '--check_abstract', 
@@ -431,5 +437,10 @@ def create_args():
     args = parser.parse_args()
     return args
 
+def run_by_link(link):
+    metadata = run(link = link)
+    return metadata
+
 if __name__ == "__main__":
-    run(None)
+    args = create_args()
+    run(args, mode= "st")

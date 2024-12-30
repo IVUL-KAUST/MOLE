@@ -31,7 +31,7 @@ if __name__ == "__main__":
         else:
             args.keywords = data_name
         
-        model_results = run(args)
+        model_results = run(mode = 'api', keywords = args.keywords, year = None, month = None, models = args.models.split(','))
         for model_name in model_results:
             results = model_results[model_name]
 
