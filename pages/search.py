@@ -173,7 +173,7 @@ def show_info(text, st_context = False):
     logger.info(text)
 
 def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link = '',
-        check_abstract = False, models = ['gemini-1.5-pro'], overwrite = False, browse_web = False):
+        check_abstract = False, models = ['gemini-1.5-flash'], overwrite = False, browse_web = False):
     submitted = False
     st_context = False
     if mode == 'cmd':

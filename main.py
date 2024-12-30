@@ -7,5 +7,5 @@ app = FastAPI()
 async def run(link):
     results = run_by_link(link = link)
     print(results)
-    return results['gemini-1.5-pro']['metadata']
+    return results['gemini-1.5-flash']['metadata']
     
