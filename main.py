@@ -6,5 +6,5 @@ app = FastAPI()
 @app.get("/run")
 async def run(link):
     results = run_by_link(link = link)
-    return results['claude-3-5-sonnet-latest']['metadata']
+    return results['gemini-1.5-flash']['metadata']
     
