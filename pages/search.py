@@ -87,6 +87,12 @@ def postprocess(metadata):
 
     return metadata
 
+def fill_missing(metadata):
+    for c in columns:
+        if c not in metadata:
+            metadata[c] = ''
+    return metadata
+
 def get_answer(answers, question_number = '1.'):
     for answer in answers:
         if answer.startswith(question_number):
@@ -347,6 +353,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
 
                                 metadata = fix_options(metadata)
                                 metadata = postprocess(metadata)
+                                metadata = fill_missing(metadata)
 
                         show_info('🔍 Validating Metadata ...', st_context = st_context)
                         validation_results = validate(metadata)
