@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.up.railway.app/railway.schema.json",
     "deploy": {
-        "startCommand": "fastapi run main"
+        "startCommand": "fastapi run main.py"
     }
 }
