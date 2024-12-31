@@ -178,10 +178,34 @@ def show_info(text, st_context = False):
         st.write(text)
     logger.info(text)
 
+import hashlib
+def generate_pdf_hash(paper_pdf, hash_algorithm='sha1'):
+    # Select the hashing algorithm
+    hash_object = hashlib.new(hash_algorithm)
+    
+    # Read and hash the file in chunks
+    while True:
+        chunk = paper_pdf.read(8192)  # Adjust chunk size as needed
+        if not chunk:
+            break
+        hash_object.update(chunk)
+
+    # Reset the pointer
+    paper_pdf.seek(0)
+    
+    # Return the hash digest in hexadecimal format
+    return hash_object.hexdigest()[:5]
+    
+def generate_fake_arxiv_pdf(paper_pdf):
+    year = datetime.now().year
+    month = datetime.now().month
+    return f'{year}{month}.{generate_pdf_hash(paper_pdf)}'
+
 def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link = '',
-        check_abstract = False, models = ['gemini-1.5-flash'], overwrite = False, browse_web = False):
+        check_abstract = False, models = ['gemini-1.5-flash'], overwrite = False, browse_web = False, paper_pdf = None):
     submitted = False
     st_context = False
+
     if mode == 'cmd':
         year = args.year
         month = args.month
@@ -228,36 +252,53 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
         if link != '':
             show_info('🔍 Using arXiv link ...', st_context = st_context)
             search_results = [{'summary':'', 'article_url':link, 'title':'', 'published':''}]
+        elif paper_pdf != None:
+            show_info('🔍 Using uploaded PDF ...', st_context = st_context)
+            search_results = [{'summary':'', 'article_url':'', 'title':'', 'published':'', 'pdf': paper_pdf}]
         else:
             show_info('🔍 Searching arXiv ...', st_context = st_context)
             search_results = get_search_results(keywords, month, year)
+        
         
         for r in search_results:
             abstract = r['summary']
             article_url = r['article_url']
             title = r['title']
             year = r['published'].split('-')[0]
-
-            paper_id = article_url.split('/')[-1]
-            paper_id_no_version = paper_id.replace('v1', '').replace('v2', '').replace('v3', '')
-
-            logger.info(f'🎧 Reading {title} ...')
+            arxiv_resource = not ('pdf' in r)
+            
+            if arxiv_resource:
+                paper_id = article_url.split('/')[-1]
+                paper_id_no_version = paper_id.replace('v1', '').replace('v2', '').replace('v3', '')
+            else:
+                paper_id_no_version = generate_fake_arxiv_pdf(paper_pdf)
+                os.makedirs(f'static/results/{paper_id_no_version}', exist_ok=True)
             
             re_check = not os.path.isdir(f'static/results/{paper_id_no_version}')
             _is_resource = True
-            if check_abstract:
-                if re_check:
-                    show_info('🚧 Checking Abstract ...', st_context= st_context)
-                    _is_resource = is_resource(abstract)
+
+            if arxiv_resource:
+                if check_abstract:
+                    if re_check:
+                        show_info('🚧 Checking Abstract ...', st_context= st_context)
+                        _is_resource = is_resource(abstract)
+            else:
+                _is_resource = True
 
             if _is_resource:
-                if re_check:
+                if re_check and arxiv_resource:
                     downloader = ArxivSourceDownloader(download_path="static/results")
         
                     # Download and extract source files
                     success, path = downloader.download_paper(paper_id, verbose=True)
                     show_info('✨ Cleaning Latex ...', st_context=st_context)
                     clean_latex(path)
+                elif not arxiv_resource:
+                    import shutil
+                    path = f'static/results/{paper_id_no_version}'
+                    with open(f'{path}/paper.pdf', "wb") as temp_file:
+                        shutil.copyfileobj(paper_pdf, temp_file)
+                    success = True
                 else:
                     success = True
                     path = f'static/results/{paper_id_no_version}'
@@ -293,6 +334,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                                 for page in pdf.pages:
                                     text_pages.append(page.extract_text())
                                 paper_text = ' '.join(text_pages)
+                                open('tmp.txt', 'w').write(paper_text)
                         elif source_file.endswith('.tex'):
                             paper_text = open(source_file, 'r').read() # maybe clean comments
                         else:
@@ -336,6 +378,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                                 metadata[k] = v
 
                         if model_name != 'human':
+                            metadata = fill_missing(metadata)
                             if 'N/A' in metadata['Venue Title']:
                                 metadata['Venue Title'] = 'arXiv'
                             if 'N/A' in metadata['Venue Type']:
@@ -353,7 +396,6 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
 
                                 metadata = fix_options(metadata)
                                 metadata = postprocess(metadata)
-                                metadata = fill_missing(metadata)
 
                         show_info('🔍 Validating Metadata ...', st_context = st_context)
                         validation_results = validate(metadata)
@@ -443,10 +485,6 @@ def create_args():
     # Parse arguments
     args = parser.parse_args()
     return args
-
-def run_by_link(link):
-    metadata = run(link = link)
-    return metadata
 
 if __name__ == "__main__":
     args = create_args()
