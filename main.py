@@ -5,7 +5,7 @@ from pages.search import run
 app = FastAPI()
 
 @app.post("/run")
-async def func(link: str =  Form(None), file: UploadFile = File(None)):
+async def func(link: str =  Form(''), file: UploadFile = File(None)):
     if file != None:
         pdf_content = file.file
     else:
