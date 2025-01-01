@@ -45,9 +45,9 @@ if __name__ == "__main__":
         
         if paper_link != '':
             link = fix_arxiv_link(paper_link)
-            model_results = run(mode = 'api', link = link, year = None, month = None, models = args.models.split(','))
+            model_results = run(mode = 'api', link = link, year = None, month = None, models = args.models.split(','), browse_web=args.browse_web)
         else:
-            model_results = run(mode = 'api', keywords = args.keywords, year = None, month = None, models = args.models.split(','))
+            model_results = run(mode = 'api', keywords = args.keywords, year = None, month = None, models = args.models.split(','), browse_web=args.browse_web)
 
         for model_name in model_results:
             results = model_results[model_name]
@@ -55,7 +55,6 @@ if __name__ == "__main__":
             if model_name not in metric_results:
                metric_results[model_name] = []
             metric_results[model_name].append([results['validation'][m] for m in results['validation']])
-    print(len(metric_results['gemini-1.5-flash']))
     results = []
     for model_name in metric_results:
         if len(metric_results[model_name]) == len_data:

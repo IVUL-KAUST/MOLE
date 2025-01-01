@@ -353,7 +353,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                             message, metadata = get_metadata(paper_text, model_name)
                             api_url = f"{metadata['HF Link']}/raw/main/README.md"
                             if browse_web:
-                                show_info(f'Browsing {api_url}', st_context = st_context)
+                                show_info(f'🌐 Browsing {api_url}', st_context = st_context)
                                 response = requests.get(api_url)
                                 readme = response.text
                                 message, metadata = get_metadata(model_name = model_name, readme = readme, metadata = metadata)
@@ -362,9 +362,9 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                         elif 'gem' in model_name.lower():
                             message, metadata = get_metadata_gemini(paper_text, model_name)
                             if browse_web:
-                                if metadata['HF Link'] != '':
+                                if metadata['HF Link'] is not None and ('hf' in metadata['HF Link'] or 'huggingface' in metadata['HF Link']):
                                     api_url = f"{metadata['HF Link']}/raw/main/README.md"
-                                    show_info(f'Browsing {api_url}', st_context = st_context)
+                                    show_info(f'🌐 Browsing {api_url}', st_context = st_context)
                                     response = requests.get(api_url)
                                     readme = response.text
                                     message, metadata = get_metadata_gemini(model_name = model_name, readme = readme, metadata = metadata)
