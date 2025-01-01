@@ -104,67 +104,46 @@ def get_answer(answers, question_number = '1.'):
         if answer.startswith(question_number):
             return re.sub(r'(\d+)\.', '', answer).strip()
 
-def get_metadata(paper_text = "", model_name = "claude-3-5-sonnet-latest", readme = "", metadata = {}):
-    if paper_text:
-        prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
-    else:
-        prompt = f"You are given the following readme: {readme}, and metadata {metadata} you are requested to answer the following questions about the dataset {questions}"
-    
-    message = client.messages.create(
-      model=model_name,
-      max_tokens=1000,
-      temperature=0,
-      system=system_prompt,
-      messages=[
-          {
-              "role": "user",
-              "content": [
-                  {
-                      "type": "text",
-                      "text": prompt
-                  }
-              ]
-          }
-      ]
-    )
-    
-    predictions = read_json(message.content[0].text)    
-    return message, predictions
-
 def read_json(text_json):
     text_json = text_json.replace('```json', '').replace('```', '')
     text_json = text_json.replace("\\", "\\\\")
     return json.loads(text_json)
 
-def get_metadata_gemini(paper_text = '', model_name = 'gemini-1.5-flash', readme = "", metadata = {}):
+def get_metadata(paper_text = '', model_name = 'gemini-1.5-flash', readme = "", metadata = {}):
     if paper_text:
         prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
     else:
         prompt = f"You are given the following readme: {readme}, and metadata {metadata} you are requested to answer the following questions about the dataset {questions}"
 
-
-    model = genai.GenerativeModel(model_name,system_instruction = system_prompt)  
-          
-    message = model.generate_content(prompt, 
-        generation_config = genai.GenerationConfig(
-        max_output_tokens=1000,
-        temperature=0.0,
-    ))
-    
-    predictions = read_json(message.text.strip())    
-    return message, predictions
-
-def get_metadata_chatgpt(paper_text, model_name):
-    prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset. \
-    {questions}\
-    For each question, output a short and concise answer responding to the exact question without any extra text. If the answer is not provided, then answer only N/A.\
-    "
-    message = chatgpt_client.chat.completions.create(
+    if 'gemini' in model_name:
+        model = genai.GenerativeModel(model_name,system_instruction = system_prompt)  
+            
+        message = model.generate_content(prompt, 
+            generation_config = genai.GenerationConfig(
+            max_output_tokens=1000,
+            temperature=0.0,
+        ))
+        response = message.text.strip()
+    elif 'claude' in model_name:
+        message = client.messages.create(
+        model=model_name,
+        max_tokens=1000,
+        temperature=0,
+        system=system_prompt,
+        messages=[{"role": "user", "content": [ { "type": "text", "text": prompt}] } ])
+        response = message.content[0].text
+    elif 'gpt' in model_name:
+        message = chatgpt_client.chat.completions.create(
             model= model_name,
-            messages=[{"role": "system", "content": "You are a profressional research paper reader"},
-                {"role": "user", "content":prompt}]
+            messages=[{"role": "system", "content": system_prompt},
+                      {"role": "user", "content":prompt}],
+            temperature= 0 ,
             )
-    predictions = read_json(message.choices[0].message.content.strip())    
+        response = message.choices[0].message.content.strip()
+    else:
+        raise(f'Unrecognized model name {model_name}')
+    
+    predictions = read_json(response)    
     return message, predictions
 
 def clean_latex(path):
@@ -349,33 +328,26 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                             continue
 
                         show_info(f'🧠 {model_name} is extracting Metadata ...', st_context = st_context)
-                        if 'claude' in model_name.lower(): 
-                            message, metadata = get_metadata(paper_text, model_name)
-                            api_url = f"{metadata['HF Link']}/raw/main/README.md"
-                            if browse_web:
-                                show_info(f'🌐 Browsing {api_url}', st_context = st_context)
-                                response = requests.get(api_url)
-                                readme = response.text
-                                message, metadata = get_metadata(model_name = model_name, readme = readme, metadata = metadata)
-                        elif 'gpt' in model_name.lower():
-                            message , metadata = get_metadata_chatgpt(paper_text, model_name)
-                        elif 'gem' in model_name.lower():
-                            message, metadata = get_metadata_gemini(paper_text, model_name)
-                            if browse_web:
-                                if metadata['HF Link'] is not None and ('hf' in metadata['HF Link'] or 'huggingface' in metadata['HF Link']):
-                                    api_url = f"{metadata['HF Link']}/raw/main/README.md"
-                                    show_info(f'🌐 Browsing {api_url}', st_context = st_context)
-                                    response = requests.get(api_url)
-                                    readme = response.text
-                                    message, metadata = get_metadata_gemini(model_name = model_name, readme = readme, metadata = metadata)
-                        elif 'judge' in model_name.lower():
+                        if 'judge' in model_name.lower():
                             all_results = []
                             for file in glob(f'{path}/**.json'):
                                 if 'judge' not in file and 'human' not in file:
                                     all_results.append(json.load(open(file)))
                             message, metadata = get_metadata_judge(all_results)
                         elif 'human' in model_name.lower():
-                            message, metadata = get_metadata_human(title)
+                            if title == '':
+                                message, metadata = get_metadata_human(link, use_link = True)
+                            else:
+                                message, metadata = get_metadata_human(title)
+                        else:
+                            message, metadata = get_metadata(paper_text, model_name.lower())
+                            if metadata['HF Link'] is not None and ('hf' in metadata['HF Link'] or 'huggingface' in metadata['HF Link']):
+                                api_url = f"{metadata['HF Link']}/raw/main/README.md"
+                                if browse_web:
+                                    show_info(f'🌐 Browsing {api_url}', st_context = st_context)
+                                    response = requests.get(api_url)
+                                    readme = response.text
+                                    message, metadata = get_metadata(model_name = model_name, readme = readme, metadata = metadata)
 
                         cost = compute_cost(message)
                         for k, v in metadata.items():
@@ -392,8 +364,8 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                                 metadata['Venue Title'] = 'Preprint'
                             if metadata['Paper Link'] == '':
                                 metadata['Paper Link'] = article_url
-                            
-                            metadata['Year'] = str(year)
+                            if str(year) != '':
+                                metadata['Year'] = str(year)
                             metadata = postprocess(metadata)
                             metadata = fix_options(metadata)
                             

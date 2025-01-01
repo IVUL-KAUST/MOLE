@@ -161,11 +161,19 @@ def get_metadata_judge(dicts):
     all_metadata = {d['config']['model_name']:d['metadata'] for d in dicts}
     return '', majority_vote(all_metadata)
 
-def get_metadata_human(paper_title):
+def get_paper_id(link):
+    return link.split('/')[-1]
+
+def get_metadata_human(paper_title, use_link = False):
+
     dataset = load_dataset('arbml/masader', trust_remote_code=True)
     for row in dataset['train']:
-        if match_titles(str(paper_title), row['Paper Title']) > 0.8:
-            return '', row
+        if use_link:
+            if match_titles(get_paper_id(paper_title), get_paper_id(row['Paper Link'])) > 0.8:
+                return '', row
+        else:
+            if match_titles(str(paper_title), row['Paper Title']) > 0.8:
+                return '', row
 
 def compare_results(rs, show_diff = False):
     results = {}

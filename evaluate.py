@@ -34,7 +34,7 @@ if __name__ == "__main__":
         titles = ['' for _ in data_names]
         paper_links = ['' for _ in data_names]
     len_data = len(data_names)
-    print(len_data)
+    
     for data_name,title,paper_link in zip(data_names, titles, paper_links):
         if title != '':
             title = title.replace('\r\n', ' ')
@@ -45,9 +45,9 @@ if __name__ == "__main__":
         
         if paper_link != '':
             link = fix_arxiv_link(paper_link)
-            model_results = run(mode = 'api', link = link, year = None, month = None, models = args.models.split(','), browse_web=args.browse_web)
+            model_results = run(mode = 'api', link = link, year = None, month = None, models = args.models.split(','), browse_web=args.browse_web, overwrite=args.overwrite)
         else:
-            model_results = run(mode = 'api', keywords = args.keywords, year = None, month = None, models = args.models.split(','), browse_web=args.browse_web)
+            model_results = run(mode = 'api', keywords = args.keywords, year = None, month = None, models = args.models.split(','), browse_web=args.browse_web, overwrite= args.overwrite)
 
         for model_name in model_results:
             results = model_results[model_name]
