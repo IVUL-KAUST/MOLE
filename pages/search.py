@@ -82,6 +82,9 @@ def process_url(url):
     return url
 
 def postprocess(metadata):
+    for c in metadata:
+        if metadata[c] is None or metadata[c] == 'None':
+            metadata[c] = ''
     metadata['Link'] = process_url(metadata['Link'])
     metadata['HF Link'] = process_url(metadata['HF Link'])
 
@@ -90,7 +93,10 @@ def postprocess(metadata):
 def fill_missing(metadata):
     for c in columns:
         if c not in metadata:
-            metadata[c] = ''
+            if c == 'Subsets':
+                metadata[c] = []
+            else:
+                metadata[c] = ''
     return metadata
 
 def get_answer(answers, question_number = '1.'):
@@ -127,6 +133,7 @@ def get_metadata(paper_text = "", model_name = "claude-3-5-sonnet-latest", readm
 
 def read_json(text_json):
     text_json = text_json.replace('```json', '').replace('```', '')
+    text_json = text_json.replace("\\", "\\\\")
     return json.loads(text_json)
 
 def get_metadata_gemini(paper_text = '', model_name = 'gemini-1.5-flash', readme = "", metadata = {}):
@@ -250,7 +257,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
 
     if submitted or mode in ['api', 'cmd']:
         if link != '':
-            show_info('🔍 Using arXiv link ...', st_context = st_context)
+            show_info(f'🔍 Using arXiv link {link} ...', st_context = st_context)
             search_results = [{'summary':'', 'article_url':link, 'title':'', 'published':''}]
         elif paper_pdf != None:
             show_info('🔍 Using uploaded PDF ...', st_context = st_context)
@@ -306,7 +313,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                 if not success:
                     continue
                 
-                if len(glob(f'{path}/*.tex')) > 0:
+                if len(glob(f'{path}_arXiv/*.tex')) > 0:
                     path = f'{path}_arXiv'
 
                 for model_name in models:
@@ -379,23 +386,17 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
 
                         if model_name != 'human':
                             metadata = fill_missing(metadata)
-                            if 'N/A' in metadata['Venue Title']:
+                            if metadata['Venue Title'] == '':
                                 metadata['Venue Title'] = 'arXiv'
-                            if 'N/A' in metadata['Venue Type']:
+                            if metadata['Venue Type'] == '':
                                 metadata['Venue Title'] = 'Preprint'
-                            if 'N/A' in metadata['Paper Link']:
+                            if metadata['Paper Link'] == '':
                                 metadata['Paper Link'] = article_url
                             
                             metadata['Year'] = str(year)
+                            metadata = postprocess(metadata)
+                            metadata = fix_options(metadata)
                             
-                            for c in metadata:
-                                if 'N/A' in metadata[c]:
-                                    metadata[c] = ''
-                                if metadata[c] is None:
-                                    metadata[c] = ''
-
-                                metadata = fix_options(metadata)
-                                metadata = postprocess(metadata)
 
                         show_info('🔍 Validating Metadata ...', st_context = st_context)
                         validation_results = validate(metadata)

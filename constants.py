@@ -66,7 +66,7 @@ questions = f"Name: What is the name of the dataset? Only use a short name of th
 
 system_prompt = "You are a profressional research paper reader. You will be provided 33 questions. \
             If a question has choices which are separated by ',' , only provide an answer from the choices. \
-            If the question has no choices and the answer is not found in the paper, then answer only N/A. \
+            If the question has no choices and the answer is not found in the paper, then answer empty string. \
             Each question is in the format Key:question, please use Key as a json key for each question and return the answer in json"
 
 dataset = load_dataset('arbml/masader', trust_remote_code=True)

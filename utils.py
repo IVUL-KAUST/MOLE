@@ -96,8 +96,12 @@ def validate(metadata):
             gold_answer = ''
         pred_answer = metadata[column]
         if column == 'Subsets':
-            if len(pred_answer) != len(gold_answer):
-                continue
+            try:
+                if len(pred_answer) != len(gold_answer):
+                    continue
+            except:
+                print(metadata)
+                raise
             for subset in gold_answer:
                 for key in subset:
                     if key not in pred_answer:

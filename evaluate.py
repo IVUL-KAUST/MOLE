@@ -3,6 +3,15 @@ from tabulate import tabulate # type: ignore
 from utils import get_masader_test, get_masader_valid
 import numpy as np
 
+def fix_arxiv_link(link):
+    if link.endswith('.pdf'):
+        link = link.replace('.pdf', '')
+        _id = link.split('/')[-1]
+        return f'https://arxiv.org/abs/{_id}'
+    else:
+        _id = link.split('/')[-1]
+        return f'https://arxiv.org/abs/{_id}'
+
 if __name__ == "__main__":
     args = create_args()
     metric_results = {}
@@ -13,17 +22,20 @@ if __name__ == "__main__":
         masader_data = get_masader_valid()
         titles = [str(x['Paper Title']) for x in masader_data]
         data_names = [str(x['Name']) for x in masader_data]
+        paper_links = [str(x['Paper Link']) for x in masader_data]
 
     elif args.masader_test:
         masader_data = get_masader_test()
         titles = [str(x['Paper Title']) for x in masader_data]
-        data_names = [str(x['Name']) for x in masader_data]             
+        data_names = [str(x['Name']) for x in masader_data]
+        paper_links = [str(x['Paper Link']) for x in masader_data]             
     else:
         data_names = args.keywords.split(',')
         titles = ['' for _ in data_names]
+        paper_links = ['' for _ in data_names]
     len_data = len(data_names)
-    
-    for data_name,title in zip(data_names, titles):
+    print(len_data)
+    for data_name,title,paper_link in zip(data_names, titles, paper_links):
         if title != '':
             title = title.replace('\r\n', ' ')
             title = title.replace(':', '')
@@ -31,14 +43,19 @@ if __name__ == "__main__":
         else:
             args.keywords = data_name
         
-        model_results = run(mode = 'api', keywords = args.keywords, year = None, month = None, models = args.models.split(','))
+        if paper_link != '':
+            link = fix_arxiv_link(paper_link)
+            model_results = run(mode = 'api', link = link, year = None, month = None, models = args.models.split(','))
+        else:
+            model_results = run(mode = 'api', keywords = args.keywords, year = None, month = None, models = args.models.split(','))
+
         for model_name in model_results:
             results = model_results[model_name]
 
             if model_name not in metric_results:
                metric_results[model_name] = []
             metric_results[model_name].append([results['validation'][m] for m in results['validation']])
-    
+    print(len(metric_results['gemini-1.5-flash']))
     results = []
     for model_name in metric_results:
         if len(metric_results[model_name]) == len_data:
