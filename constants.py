@@ -6,7 +6,7 @@ column_options = {
     'License': ',Apache-2.0,Non Commercial Use - ELRA END USER,BSD,CC BY 2.0,CC BY 3.0,CC BY 4.0,CC BY-NC 2.0,CC BY-NC-ND 4.0,CC BY-SA,CC BY-SA 3.0,CC BY-NC 4.0,CC BY-NC-SA 4.0,CC BY-SA 3.0,CC BY-SA 4.0,CC0,CDLA-Permissive-1.0,GPL-2.0,LDC User Agreement,LGPL-3.0,MIT License,ODbl-1.0,MPL-2.0,unknown,custom',
     'Dialect': ','.join(list(dialect_remapped.keys())),
     'Language': 'ar,multilingual',
-    'Collection Style': 'crawling,machine translation,human translation,manual curation,LLM generated,other',
+    'Collection Style': 'crawling,annotation,machine translation,human translation,manual curation,LLM generated,other',
     'Domain': 'social media,news articles,reviews,commentary,books,wikipedia,web pages,handwriting,LLM,other',
     'Form': 'text,spoken,images',
     'Unit': 'tokens,sentences,documents,hours,images',
