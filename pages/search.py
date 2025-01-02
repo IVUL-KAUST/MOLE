@@ -64,9 +64,8 @@ def fix_options(metadata):
             if pred_option in options:
                 fixed_metadata[column] = pred_option
             elif pred_option == '':
-                fixed_metadata[column] = ''
+                fixed_metadata[column] = options[-1] # choose the last option, prefer other
             else:
-                # also consider multiple outputs like ','
                 fixed_metadata[column] = ','.join(find_best_match(option, options) for option in pred_option.split(','))
         else:
             fixed_metadata[column] = metadata[column]
@@ -90,13 +89,23 @@ def postprocess(metadata):
 
     return metadata
 
-def fill_missing(metadata):
+def fill_missing(metadata, year = '', article_url = ''):
     for c in columns:
         if c not in metadata:
             if c == 'Subsets':
                 metadata[c] = []
             else:
                 metadata[c] = ''
+    
+    if 'arxiv' in article_url.lower():
+        if metadata['Venue Title'] == '':
+            metadata['Venue Title'] = 'arXiv'
+        if metadata['Venue Type'] == '':
+            metadata['Venue Type'] = 'Preprint'
+        if metadata['Paper Link'] == '':
+            metadata['Paper Link'] = article_url
+    if str(year) != '':
+        metadata['Year'] = str(year)
     return metadata
 
 def get_answer(answers, question_number = '1.'):
@@ -320,7 +329,6 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                                 for page in pdf.pages:
                                     text_pages.append(page.extract_text())
                                 paper_text = ' '.join(text_pages)
-                                open('tmp.txt', 'w').write(paper_text)
                         elif source_file.endswith('.tex'):
                             paper_text = open(source_file, 'r').read() # maybe clean comments
                         else:
@@ -357,15 +365,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                                 metadata[k] = v
 
                         if model_name != 'human':
-                            metadata = fill_missing(metadata)
-                            if metadata['Venue Title'] == '':
-                                metadata['Venue Title'] = 'arXiv'
-                            if metadata['Venue Type'] == '':
-                                metadata['Venue Title'] = 'Preprint'
-                            if metadata['Paper Link'] == '':
-                                metadata['Paper Link'] = article_url
-                            if str(year) != '':
-                                metadata['Year'] = str(year)
+                            metadata = fill_missing(metadata, year, article_url)
                             metadata = postprocess(metadata)
                             metadata = fix_options(metadata)
                             
