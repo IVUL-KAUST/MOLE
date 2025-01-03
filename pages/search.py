@@ -305,7 +305,11 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                     path = f'{path}_arXiv'
 
                 for model_name in models:
-                    if browse_web:
+
+                    if browse_web and (model_name == 'human' or model_name == 'judge'):
+                        show_info("Can't browse the web as a human")
+
+                    if browse_web and not(model_name == 'human' or model_name == 'judge'):
                         save_path = f'{path}/{model_name}-browsing-results.json'
                     else:
                         save_path = f'{path}/{model_name}-results.json'
@@ -315,6 +319,8 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                         results = json.load(open(save_path))
                         if st_context:
                             st.link_button(f"{model_name} => Masader Form", f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}")
+                        if browse_web and not(model_name == 'human' or model_name == 'judge'):
+                            model_name += '-browsing'
                         model_results[model_name] = results
                         continue
 
@@ -349,12 +355,10 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                                 message, metadata = get_metadata_human(title)
                         else:
                             message, metadata = get_metadata(paper_text, model_name.lower())
-                            if metadata['HF Link'] is not None and ('hf' in metadata['HF Link'] or 'huggingface' in metadata['HF Link']):
-                                api_url = f"{metadata['HF Link']}/raw/main/README.md"
-                                if browse_web:
-                                    show_info(f'🌐 Browsing {api_url}', st_context = st_context)
-                                    response = requests.get(api_url)
-                                    readme = response.text
+                            if browse_web:
+                                readme, link = fetch_repository_metadata(metadata)
+                                if readme != "":
+                                    show_info(f'🌐 Browsing {link}', st_context = st_context)
                                     message, metadata = get_metadata(model_name = model_name, readme = readme, metadata = metadata)
 
                         cost = compute_cost(message)
@@ -377,7 +381,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                         results ['metadata'] = metadata
                         results ['cost'] = cost
                         results ['validation'] = validation_results
-                        if browse_web:
+                        if browse_web and not(model_name == 'human' or model_name == 'judge'):
                             model_name = f"{model_name}-browsing"
                         results ['config'] = {
                             'model_name': model_name,
