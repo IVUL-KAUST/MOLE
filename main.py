@@ -11,6 +11,7 @@ async def func(link: str =  Form(''), file: UploadFile = File(None)):
     else:
         pdf_content = None
 
+    browse_web = False
     model_name = 'gpt-4o-mini'
     # Call your processing function with the file content and link
     results = run(link = link, paper_pdf=pdf_content, models = model_name.split(','))
