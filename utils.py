@@ -8,6 +8,8 @@ from datasets import load_dataset
 from constants import *
 import difflib
 from glob import glob
+import requests
+from base64 import b64decode
 
 def get_masader_test():
     data = load_dataset('json', data_files = glob('testset/**.json'))
@@ -83,7 +85,7 @@ def validate(metadata):
     }
 
     matched_row = None
-    for row in dataset['train']:
+    for row in masader_dataset:
         if match_titles(str(metadata['Paper Title']), row['Paper Title']) > 0.8:
             matched_row = row
     if not matched_row:
@@ -165,9 +167,7 @@ def get_paper_id(link):
     return link.split('/')[-1]
 
 def get_metadata_human(paper_title, use_link = False):
-
-    dataset = load_dataset('arbml/masader', trust_remote_code=True)
-    for row in dataset['train']:
+    for row in masader_dataset:
         if use_link:
             if match_titles(get_paper_id(paper_title), get_paper_id(row['Paper Link'])) > 0.8:
                 return '', row
@@ -220,3 +220,35 @@ def find_best_match(text, options):
             best_ratio = ratio
     
     return best_match
+
+def fetch_repository_metadata(metadata):
+    link = metadata['Link']
+    if metadata['HF Link'] != '':
+        link = metadata['Link']
+
+    if 'hf' in link or 'huggingface' in link:
+        api_url = f"{link}/raw/main/README.md"
+            
+        response = requests.get(api_url)
+        readme = response.text
+        return readme, link
+    
+    elif 'github' in link:
+        parts = link.rstrip('/').split('/')
+        owner = parts[-2]
+        repo = parts[-1]
+        base_url = f"https://api.github.com/repos/{owner}/{repo}"
+        
+        # Fetch repository information
+        repo_info = requests.get(base_url).json()
+        # Fetch README
+        readme_url = f"{base_url}/readme"
+        readme_response = requests.get(readme_url).json()
+        readme_content = b64decode(readme_response['content']).decode('utf-8') if 'content' in readme_response else None
+        
+        # Fetch license
+        license_info = repo_info.get('license', {}).get('name', 'No license found')
+        
+        return f"License: {license_info}\nReadme: {readme_content}".strip(), link
+    else:
+        return ''
