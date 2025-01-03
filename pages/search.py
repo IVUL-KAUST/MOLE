@@ -149,6 +149,12 @@ def get_metadata(paper_text = '', model_name = 'gemini-1.5-flash', readme = "", 
             temperature= 0 ,
             )
         response = message.choices[0].message.content.strip()
+    if 'o1' in model_name:
+        message = chatgpt_client.chat.completions.create(
+            model= model_name,
+            messages=[{"role": "user", "content":system_prompt+prompt}],
+            )
+        response = message.choices[0].message.content.strip()
     else:
         raise(f'Unrecognized model name {model_name}')
     
