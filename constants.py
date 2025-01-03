@@ -69,4 +69,4 @@ system_prompt = "You are a profressional research paper reader. You will be prov
             If the question has no choices and the answer is not found in the paper, then answer empty string. \
             Each question is in the format Key:question, please use Key as a json key for each question and return the answer in json"
 
-masader_dataset = load_dataset('arbml/masader', trust_remote_code=True, download_mode='force_redownload')['train']
+masader_dataset = load_dataset('arbml/masader')['train']

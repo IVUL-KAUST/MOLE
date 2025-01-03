@@ -2,7 +2,7 @@ python-dateutil
 arxiv
 anthropic
 pypdf
-datasets
+datasets==2.3.2
 pdfplumber
 python-dotenv
 arxiv-latex-cleaner
