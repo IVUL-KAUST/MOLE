@@ -14,7 +14,7 @@ column_options = {
     'Script': 'Arab,Latin,Arab-Latin',
     'Tokenized': 'Yes,No',
     'Host': 'CAMeL Resources,CodaLab,data.world,Dropbox,Gdrive,GitHub,GitLab,kaggle,LDC,MPDI,Mendeley Data,Mozilla,OneDrive,QCRI Resources,ResearchGate,sourceforge,zenodo,HuggingFace,ELRA,other',
-    'Access': 'Free,Upon-request,Paid',
+    'Access': 'Free,Upon-Request,Paid',
     'Test Split': 'Yes,No',
     'Tasks': 'machine translation,speech recognition,sentiment analysis,language modeling,topic classification,dialect identification,text generation,cross-lingual information retrieval,named entity recognition,question answering,information retrieval,part of speech tagging,language identification,summarization,speaker identification,transliteration,morphological analysis,offensive language detection,review classification,gender identification,fake news detection,dependency parsing,irony detection,meter classification,natural language inference,instruction tuning,other',
     'Venue Type': 'conference,workshop,journal,preprint'
