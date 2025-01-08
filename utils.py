@@ -247,8 +247,11 @@ def fetch_repository_metadata(metadata):
         readme_content = b64decode(readme_response['content']).decode('utf-8') if 'content' in readme_response else None
         
         # Fetch license
-        license_info = repo_info.get('license', {}).get('name', 'No license found')
+        try:
+            license_info = repo_info.get('license', {}).get('name', 'No license found')
+        except:
+            license_info = 'unknown'
         
         return f"License: {license_info}\nReadme: {readme_content}".strip(), link
     else:
-        return ''
+        return '', ''
