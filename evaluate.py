@@ -1,34 +1,32 @@
 from pages.search import run, create_args
 from tabulate import tabulate # type: ignore
-from utils import get_masader_test, get_masader_valid
+from utils import fix_arxiv_link
 import numpy as np
-
-def fix_arxiv_link(link):
-    if link.endswith('.pdf'):
-        link = link.replace('.pdf', '')
-        _id = link.split('/')[-1]
-        return f'https://arxiv.org/abs/{_id}'
-    else:
-        _id = link.split('/')[-1]
-        return f'https://arxiv.org/abs/{_id}'
+from constants import *
 
 if __name__ == "__main__":
     args = create_args()
     metric_results = {}
     data_names = []
     len_data = 0
+    use_split = None
 
-    if args.masader_validate:
-        masader_data = get_masader_valid()
-        titles = [str(x['Paper Title']) for x in masader_data]
-        data_names = [str(x['Name']) for x in masader_data]
-        paper_links = [str(x['Paper Link']) for x in masader_data]
+    if args.masader_validate or args.masader_test:
+        titles = []
+        data_names = []
+        paper_links = []
 
-    elif args.masader_test:
-        masader_data = get_masader_test()
-        titles = [str(x['Paper Title']) for x in masader_data]
-        data_names = [str(x['Name']) for x in masader_data]
-        paper_links = [str(x['Paper Link']) for x in masader_data]             
+        if args.masader_validate:
+            dataset = masader_valid_dataset
+            use_split = 'valid'
+        else:
+            use_split = 'test'
+            dataset = masader_test_dataset
+
+        for x in dataset:
+            titles.append(str(x['Paper Title']))
+            data_names.append(str(x['Name']))
+            paper_links.append(str(x['Paper Link']))      
     else:
         data_names = args.keywords.split(',')
         titles = ['' for _ in data_names]
@@ -45,9 +43,9 @@ if __name__ == "__main__":
         
         if paper_link != '':
             link = fix_arxiv_link(paper_link)
-            model_results = run(mode = 'api', link = link, year = None, month = None, models = args.models.split(','), browse_web=args.browse_web, overwrite=args.overwrite)
+            model_results = run(mode = 'api', link = link, year = None, month = None, models = args.models.split(','), browse_web=args.browse_web, overwrite=args.overwrite, use_split = use_split)
         else:
-            model_results = run(mode = 'api', keywords = args.keywords, year = None, month = None, models = args.models.split(','), browse_web=args.browse_web, overwrite= args.overwrite)
+            model_results = run(mode = 'api', keywords = args.keywords, year = None, month = None, models = args.models.split(','), browse_web=args.browse_web, overwrite= args.overwrite, use_split = use_split)
 
         for model_name in model_results:
             results = model_results[model_name]
