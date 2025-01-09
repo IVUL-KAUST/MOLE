@@ -84,6 +84,10 @@ def postprocess(metadata):
     for c in metadata:
         if metadata[c] is None or metadata[c] == 'None':
             metadata[c] = ''
+    try:
+        metadata['Year'] = int(metadata['Year'])
+    except:
+        pass
     metadata['Link'] = process_url(metadata['Link'])
     metadata['HF Link'] = process_url(metadata['HF Link'])
 
