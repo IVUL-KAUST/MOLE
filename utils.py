@@ -4,20 +4,10 @@ import time
 import threading
 from functools import wraps
 import pandas as pd
-from datasets import load_dataset
 from constants import *
 import difflib
-from glob import glob
 import requests
 from base64 import b64decode
-
-def get_masader_test():
-    data = load_dataset('json', data_files = glob('testset/**.json'))
-    return data['train']
-
-def get_masader_valid():
-    data = load_dataset('json', data_files = glob('validset/**.json'))
-    return data['train']
 
 def spinner_decorator(func):
     @wraps(func)
@@ -75,7 +65,7 @@ def match_titles(title, masader_title):
         return 0
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
-def validate(metadata):
+def validate(metadata, use_split = None, title = '', link = ''):
     results = {
         'CONTENT':0,
         'ACCESSABILITY':0,
@@ -85,10 +75,30 @@ def validate(metadata):
     }
 
     matched_row = None
-    for row in masader_dataset:
-        if match_titles(str(metadata['Paper Title']), row['Paper Title']) > 0.8:
-            matched_row = row
-    if not matched_row:
+    if use_split is not None:
+        if use_split == 'test':
+            dataset = masader_test_dataset
+        elif use_split == 'valid':
+            dataset = masader_valid_dataset
+    else:
+        dataset = masader_dataset    
+
+    for row in dataset:
+        
+        if title != '':
+            if title == row['Paper Title']:
+                matched_row = row
+        elif link != '':
+            if link == fix_arxiv_link(row['Paper Link']):
+                matched_row = row
+        else:
+            if match_titles(str(metadata['Paper Title']), row['Paper Title']) > 0.8:
+                matched_row = row
+    
+    if matched_row is None and use_split is not None:
+        raise()
+    
+    if matched_row is None:
         return results
     
     for column in validation_columns:
@@ -221,11 +231,29 @@ def find_best_match(text, options):
     
     return best_match
 
+def fix_arxiv_link(link):
+    for version in range(1, 5):
+        link = link.replace(f'v{version}', '')
+    if link.endswith('.pdf'):
+        link = link.replace('.pdf', '')
+        _id = link.split('/')[-1]
+        return f'https://arxiv.org/abs/{_id}'
+    else:
+        _id = link.split('/')[-1]
+        return f'https://arxiv.org/abs/{_id}'
+    
+def get_arxiv_id(arxiv_link):
+    arxiv_link = fix_arxiv_link(arxiv_link)
+    return arxiv_link.split('/')[-1]
+
 def fetch_repository_metadata(metadata):
     link = metadata['Link']
     if metadata['HF Link'] != '':
         link = metadata['Link']
 
+    if link is None:
+        return '', ''
+    
     if 'hf' in link or 'huggingface' in link:
         api_url = f"{link}/raw/main/README.md"
             
