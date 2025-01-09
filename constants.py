@@ -24,13 +24,15 @@ column_options = {
 
 columns = ['Name', 'Subsets', 'Link', 'HF Link', 'License', 'Year', 'Language', 'Dialect', 'Domain', 'Form', 'Collection Style', 'Description', 'Volume', 'Unit', 'Ethical Risks', 'Provider', 'Derived From', 'Paper Title', 'Paper Link', 'Script', 'Tokenized', 'Host', 'Access', 'Cost', 'Test Split', 'Tasks',  'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
 extra_columns = ['Subsets', 'Year', 'Description', 'Paper Link', 'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract','Year']
+validation_columns = {
+    # 'publication': ['Paper Title', 'Paper Link', 'Year', 'Venue Title', 'Venue Type', 'Venue Name'],
+    'CONTENT': ['Volume', 'Unit', 'Tokenized', 'Script', 'Form', 'Collection Style', 'Domain', 'Ethical Risks'],
+    'ACCESSABILITY': ['Provider', 'Host', 'Link', 'HF Link', 'License', 'Access', 'Cost'],
+    'DIVERSITY': ['Language', 'Subsets', 'Dialect'],
+    'EVALUATION': ['Test Split', 'Tasks', 'Derived From']
+}
 
-publication_columns = ['Paper Title', 'Paper Link', 'Year', 'Venue Title', 'Venue Type', 'Venue Name']
-content_columns = ['Volume', 'Unit', 'Tokenized', 'Script', 'Form', 'Collection Style', 'Domain', 'Ethical Risks']
-accessability_columns = ['Provider', 'Host', 'Link', 'License', 'Cost']
-diversity_columns = ['Language', 'Subsets', 'Dialect']
-evaluation_columns = ['Test Split', 'Tasks', 'Derived From']
-validation_columns = content_columns+accessability_columns+diversity_columns+evaluation_columns
+NUM_VALIDATION_COLUMNS  = sum([len(validation_columns[m]) for m in validation_columns])
 
 questions = f"Name: What is the name of the dataset? Only use a short name of the dataset. \n\
   Subsets: What are the subsets of this dataset? \n\
