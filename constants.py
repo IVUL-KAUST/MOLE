@@ -52,7 +52,7 @@ questions = f"Name: What is the name of the dataset? Only use a short name of th
   Description: Write a brief description of the dataset. \n\
   Volume: What is the size of the dataset? Output numbers only with , seperated each thousand\n\
   Unit: What kind of examples does the dataset include? Options: {column_options['Unit']} \n\
-  Ethical Risks: What is the level of the ethical risks of the dataset? Options: {column_options['Ethical Risks']}\n\
+  Ethical Risks: What is the level of the ethical risks of the dataset? Use Medium for social media datasets and High for hate/offensive datasets from social media. Options: {column_options['Ethical Risks']}\n\
   Provider: What entity is the provider of the dataset? \n\
   Derived From: What datasets were used to create the dataset? separate them by comma. \n\
   Paper Title: What is the paper title? \n\
