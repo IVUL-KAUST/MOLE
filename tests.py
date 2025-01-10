@@ -1,0 +1,80 @@
+import json
+from utils import validate, fix_options, postprocess, fill_missing
+from constants import *
+
+
+# no mistakes
+with open('testfiles/test1.json', 'r') as f:
+    metadata = json.load(f)
+
+results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/2402.03177')
+
+for m in results:
+    assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
+print('✅ passed test1')
+
+# one mistake in the volume column
+with open('testfiles/test2.json', 'r') as f:
+    metadata = json.load(f)
+
+results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/2402.03177')
+
+for m in results:
+    if m == 'CONTENT':
+        assert results[m] == 1- (1/len(validation_columns['CONTENT'])), f'❌ {m} value should be {1- (1/len(validation_columns["CONTENT"]))} but got {results[m]}'
+    elif m == 'AVERAGE':
+        assert results[m] == 1- (1/NUM_VALIDATION_COLUMNS), f'❌ {m} value should be {1- (1/NUM_VALIDATION_COLUMNS)} but got {results[m]}'
+    else:
+        assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
+print('✅ passed test2')
+
+# overlapping tasks
+with open('testfiles/test3.json', 'r') as f:
+    metadata = json.load(f)
+
+results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/2402.03177')
+
+for m in results:
+    assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
+print('✅ passed test3')
+
+with open('testfiles/test4.json', 'r') as f:
+    metadata = json.load(f)
+
+new_metadata = fix_options(metadata)
+
+for c in metadata:
+    if c == 'Dialect':
+        assert new_metadata['Dialect'] == 'Modern Standard Arabic', '❌ Modern Standard Arabic != ' + new_metadata['Dialect']
+    elif c == 'Collection Style':
+        assert new_metadata['Collection Style'] == 'crawling,annotation', '❌ crawling,annotation != ' + new_metadata['Collection Style']
+    else:
+        assert new_metadata[c] == metadata[c], f'❌ {c} should be {metadata[c]} but got {new_metadata[c]}'
+print('✅ passed test4')
+
+with open('testfiles/test5.json', 'r') as f:
+    metadata = json.load(f)
+
+new_metadata = postprocess(metadata)
+
+for c in metadata:
+    if c == 'Ethical Risks':
+        assert new_metadata['Ethical Risks'] == '', "❌ '' != " + new_metadata['Ethical Risks']
+    elif c == 'Year':
+        assert new_metadata['Year'] == 2021, "❌ 2021 != " + new_metadata['Year']
+    elif c == 'Link':
+        assert new_metadata['Link'] == 'https://hf.co/datasets/arbml/CIDAR', "❌ https://hf.co/datasets/arbml/CIDAR != " + new_metadata['Link']
+    else:
+        assert new_metadata[c] == metadata[c], f'❌ {c} should be {metadata[c]} but got {new_metadata[c]}'
+
+print('✅ passed test5')
+
+with open('testfiles/test6.json', 'r') as f:
+    metadata = json.load(f)
+
+new_metadata = fill_missing(metadata)
+
+for c in columns:
+    assert c in new_metadata, f'❌ {c} should be in the metadata but it is not'
+
+print('✅ passed test6')
