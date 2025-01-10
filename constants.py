@@ -39,7 +39,7 @@ for c in evaluation_subsets:
 NUM_VALIDATION_COLUMNS  = len(validation_columns)
 
 questions = f"Name: What is the name of the dataset? Only use a short name of the dataset. \n\
-  Subsets: What are the subsets of this dataset? \n\
+  Subsets: What are the subsets of this dataset? If there are subsets, it should be returned as a list of jsons where each json shows the Name, Volume, Unit and Dialect of each subset.\n\
   Link: What is the link to access the dataset? The link most contain the dataset. \n\
   HF Link: What is the Huggingface link of the dataset? \n\
   License: What is the License of the dataset? Options: {column_options['License']} \n\
@@ -73,8 +73,8 @@ questions = f"Name: What is the name of the dataset? Only use a short name of th
   Abstract: What is the abstract of the dataset?"
 
 system_prompt = "You are a profressional research paper reader. You will be provided 33 questions. \
-            If a question has choices which are separated by ',' , only provide an answer from the choices. \
-            If the question has no choices and the answer is not found in the paper, then answer empty string. \
+            If a question has options which are separated by ',' , only provide an answer from the options. \
+            If the question has no options and the answer is not found in the paper, then answer ''. \
             Each question is in the format Key:question, please use Key as a json key for each question and return the answer in json"
 
 masader_dataset = load_dataset('arbml/masader', keep_in_memory=True)['train']

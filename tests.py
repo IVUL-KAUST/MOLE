@@ -1,5 +1,5 @@
 import json
-from utils import validate, fix_options, cast, fill_missing, evaluate_metadata
+from utils import validate, fix_options, cast, fill_missing, evaluate_metadata, postprocess
 from constants import *
 from pages.search import get_metadata
 
@@ -84,6 +84,7 @@ with open('testfiles/example.tex', 'r') as f:
     paper_text = f.read()
 
 msg,pred_metadata =  get_metadata(paper_text, model_name = 'gemini-1.5-flash')
+pred_metadata = postprocess(pred_metadata)
 
 with open('testfiles/test7.json', 'r') as f:
     gold_metadata = json.load(f)

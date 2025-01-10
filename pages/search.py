@@ -317,16 +317,10 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                                     message, metadata = get_metadata(model_name = model_name, readme = readme, metadata = metadata)
 
                         cost = compute_cost(message)
-                        for k, v in metadata.items():
-                            if k!= 'Subsets':
-                                metadata[k] = str(v)
-                            else:
-                                metadata[k] = v
 
                         if model_name != 'human':
                             metadata = postprocess(metadata, year, article_url)
                             
-
                         show_info('🔍 Validating Metadata ...', st_context = st_context)
 
                         validation_results = validate(metadata, use_split = use_split, link = link, title = title)
@@ -335,6 +329,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                         results ['metadata'] = metadata
                         results ['cost'] = cost
                         results ['validation'] = validation_results
+                        
                         if browse_web and not(model_name == 'human' or model_name == 'judge'):
                             model_name = f"{model_name}-browsing"
                         results ['config'] = {

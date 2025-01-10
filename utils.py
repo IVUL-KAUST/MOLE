@@ -104,15 +104,16 @@ def evaluate_metadata(gold_metadata, pred_metadata):
             except:
                 print(pred_metadata)
                 raise
-            for subset in gold_answer:
+            matched = True
+            for i,subset in enumerate(gold_answer):
                 for key in subset:
-                    if key not in pred_answer:
-                        continue
-                    if subset[key] != pred_answer[key]:
-                        continue
-            
-            results['DIVERSITY']+= 1
-            results['AVERAGE'] += 1
+                    if key not in pred_answer[i]:
+                        matched = False
+                    if subset[key] != pred_answer[i][key]:
+                        matched = False
+            if matched:
+                results['DIVERSITY']+= 1
+                results['AVERAGE'] += 1
             continue
         elif column in ["Derived From", "Tasks"]:
             if has_common(gold_answer,pred_answer):

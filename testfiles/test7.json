@@ -18,8 +18,12 @@
     "Access": "Free",
 
     "Language": "ar",
-    "Subsets": [],
-    "Dialect": "Modern Standard Arabic",
+    "Subsets": [
+        {"Name": "Syrian", "Volume": "4000", "Unit": "sentences", "Dialect": "Syrian"},
+        {"Name": "Iraqi",  "Volume": "4000", "Unit": "sentences", "Dialect": "Iraqi"}, 
+        {"Name": "Lebanese", "Volume": "2000", "Unit": "sentences", "Dialect": "Lebanese"}
+    ],
+    "Dialect": "mixed",
 
     "Test Split": "No",
     "Tasks": "instruction tuning",
