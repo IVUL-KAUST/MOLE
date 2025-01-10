@@ -324,9 +324,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                                 metadata[k] = v
 
                         if model_name != 'human':
-                            metadata = fill_missing(metadata, year, article_url)
-                            metadata = postprocess(metadata)
-                            metadata = fix_options(metadata)
+                            metadata = postprocess(metadata, year, article_url)
                             
 
                         show_info('🔍 Validating Metadata ...', st_context = st_context)

@@ -24,7 +24,7 @@ column_options = {
 
 columns = ['Name', 'Subsets', 'Link', 'HF Link', 'License', 'Year', 'Language', 'Dialect', 'Domain', 'Form', 'Collection Style', 'Description', 'Volume', 'Unit', 'Ethical Risks', 'Provider', 'Derived From', 'Paper Title', 'Paper Link', 'Script', 'Tokenized', 'Host', 'Access', 'Cost', 'Test Split', 'Tasks',  'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract']
 extra_columns = ['Subsets', 'Year', 'Description', 'Paper Link', 'Venue Title', 'Citations', 'Venue Type', 'Venue Name', 'Authors', 'Affiliations', 'Abstract','Year']
-validation_columns = {
+evaluation_subsets = {
     # 'publication': ['Paper Title', 'Paper Link', 'Year', 'Venue Title', 'Venue Type', 'Venue Name'],
     'CONTENT': ['Volume', 'Unit', 'Tokenized', 'Script', 'Form', 'Collection Style', 'Domain', 'Ethical Risks'],
     'ACCESSABILITY': ['Provider', 'Host', 'Link', 'HF Link', 'License', 'Access', 'Cost'],
@@ -32,7 +32,11 @@ validation_columns = {
     'EVALUATION': ['Test Split', 'Tasks', 'Derived From']
 }
 
-NUM_VALIDATION_COLUMNS  = sum([len(validation_columns[m]) for m in validation_columns])
+validation_columns = []
+for c in evaluation_subsets:
+    validation_columns += evaluation_subsets[c]
+
+NUM_VALIDATION_COLUMNS  = len(validation_columns)
 
 questions = f"Name: What is the name of the dataset? Only use a short name of the dataset. \n\
   Subsets: What are the subsets of this dataset? \n\
@@ -50,7 +54,7 @@ questions = f"Name: What is the name of the dataset? Only use a short name of th
   Unit: What kind of examples does the dataset include? Options: {column_options['Unit']} \n\
   Ethical Risks: What is the level of the ethical risks of the dataset? Options: {column_options['Ethical Risks']}\n\
   Provider: What entity is the provider of the dataset? \n\
-  Derived From: What dataset is this dataset derived from? \n\
+  Derived From: What datasets were used to create the dataset? separate them by comma. \n\
   Paper Title: What is the paper title? \n\
   Paper Link: What is the paper link? \n\
   Script: What is the script of this dataset? Options: {column_options['Script']} \n\

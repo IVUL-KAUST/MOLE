@@ -84,14 +84,61 @@ def match_titles(title, masader_title):
         return 0
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
+def evaluate_metadata(gold_metadata, pred_metadata):
+    results = {c:0 for c in evaluation_subsets}
+    results['AVERAGE'] = 0
+
+    if gold_metadata is None:
+        return results
+    
+    for column in validation_columns:
+
+        gold_answer = gold_metadata[column]
+        if str(gold_answer) == 'nan':
+            gold_answer = ''
+        pred_answer = pred_metadata[column]
+        if column == 'Subsets':
+            try:
+                if len(pred_answer) != len(gold_answer):
+                    continue
+            except:
+                print(pred_metadata)
+                raise
+            for subset in gold_answer:
+                for key in subset:
+                    if key not in pred_answer:
+                        continue
+                    if subset[key] != pred_answer[key]:
+                        continue
+            
+            results['DIVERSITY']+= 1
+            results['AVERAGE'] += 1
+            continue
+        elif column in ["Derived From", "Tasks"]:
+            if has_common(gold_answer,pred_answer):
+                results['EVALUATION'] += 1
+                results['AVERAGE'] += 1
+                continue
+        elif column in ['Collection Style', 'Domain']:
+            if has_common(gold_answer,pred_answer):
+                results['CONTENT'] +=1
+                results['AVERAGE'] += 1
+                continue
+        if pred_answer.strip().lower() == gold_answer.strip().lower():
+            results['AVERAGE'] += 1
+            for m in evaluation_subsets:
+                if column in evaluation_subsets[m]:
+                    results[m] += 1
+        else:
+            pass
+            # print(pred_answer, gold_answer)
+    for m in results:
+        if m in evaluation_subsets:
+            results[m] = results[m]/len(evaluation_subsets[m])
+    results['AVERAGE'] = results['AVERAGE'] / NUM_VALIDATION_COLUMNS
+    return results
+
 def validate(metadata, use_split = None, title = '', link = ''):
-    results = {
-        'CONTENT':0,
-        'ACCESSABILITY':0,
-        'DIVERSITY':0,
-        'EVALUATION':0,
-        'AVERAGE':0,
-    }
 
     matched_row = None
     if use_split is not None:
@@ -117,52 +164,7 @@ def validate(metadata, use_split = None, title = '', link = ''):
     if matched_row is None and use_split is not None:
         raise()
     
-    if matched_row is None:
-        return results
-    all_columns = []
-    for m in validation_columns:
-        all_columns += validation_columns[m]
-    for column in all_columns:
-
-        gold_answer = matched_row[column]
-        if str(gold_answer) == 'nan':
-            gold_answer = ''
-        pred_answer = metadata[column]
-        if column == 'Subsets':
-            try:
-                if len(pred_answer) != len(gold_answer):
-                    continue
-            except:
-                print(metadata)
-                raise
-            for subset in gold_answer:
-                for key in subset:
-                    if key not in pred_answer:
-                        continue
-                    if subset[key] != pred_answer[key]:
-                        continue
-            
-            results['AVERAGE'] += 1
-            results['DIVERSITY']+= 1
-            continue
-        elif column in ["Derived From", "Tasks"]:
-            if has_common(gold_answer,pred_answer):
-                results['AVERAGE'] += 1
-                results['EVALUATION'] += 1
-                continue
-        if pred_answer.strip().lower() == gold_answer.strip().lower():
-            results['AVERAGE'] += 1
-            for m in validation_columns:
-                if column in validation_columns[m]:
-                    results[m] += 1
-        else:
-            pass
-            # print(pred_answer, gold_answer)
-    for m in results:
-        if m in validation_columns:
-            results[m] = results[m]/len(validation_columns[m])
-    results['AVERAGE'] = results['AVERAGE'] / NUM_VALIDATION_COLUMNS
-    return results
+    return evaluate_metadata(matched_row, metadata)
 
 from collections import Counter
 
@@ -293,7 +295,7 @@ def process_url(url):
     url = re.sub('huggingface', 'hf', url)
     return url
 
-def postprocess(metadata):
+def cast(metadata):
     for c in metadata:
         if metadata[c] is None or metadata[c] == 'None':
             metadata[c] = ''
@@ -323,6 +325,12 @@ def fill_missing(metadata, year = '', article_url = ''):
             metadata['Paper Link'] = article_url
     if str(year) != '':
         metadata['Year'] = str(year)
+    return metadata
+
+def postprocess(metadata, year = '', article_url = ''):
+    metadata = fill_missing(metadata, year, article_url)
+    metadata = cast(metadata)
+    metadata = fix_options(metadata)
     return metadata
 
 def read_json(text_json):
