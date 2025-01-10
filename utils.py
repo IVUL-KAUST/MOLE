@@ -8,6 +8,17 @@ from constants import *
 import difflib
 import requests
 from base64 import b64decode
+from firecrawl import FirecrawlApp # type: ignore
+import os
+import re
+import json
+
+def scrape_website_fc(url):
+    app = FirecrawlApp(api_key=os.getenv('fc_key'))
+
+    # Scrape a website:
+    scrape_status = app.scrape_url('url', params={'formats': ['markdown']})
+    return scrape_status['markdown']
 
 def spinner_decorator(func):
     @wraps(func)
@@ -46,6 +57,14 @@ def clear_line():
     """Clear the current line in the terminal."""
     sys.stdout.write('\r\033[K')  # Move to the start of the line and clear it
     sys.stdout.flush()
+
+def has_common(d1, d2):
+    d1 = [d.lower().strip() for d in d1.split(',')]
+    d2 = [d.lower().strip() for d in d2.split(',')]
+    if len(set(d1).intersection(d2)):
+        return True
+    else:
+        return False
 
 def setup_logger() -> logging.Logger:
         """Set up logging configuration."""
@@ -100,8 +119,10 @@ def validate(metadata, use_split = None, title = '', link = ''):
     
     if matched_row is None:
         return results
-    
-    for column in validation_columns:
+    all_columns = []
+    for m in validation_columns:
+        all_columns += validation_columns[m]
+    for column in all_columns:
 
         gold_answer = matched_row[column]
         if str(gold_answer) == 'nan':
@@ -121,25 +142,26 @@ def validate(metadata, use_split = None, title = '', link = ''):
                     if subset[key] != pred_answer[key]:
                         continue
             
-            results['AVERAGE'] += 1/len(validation_columns) 
-            results['DIVERSITY']+= 1/3
+            results['AVERAGE'] += 1
+            results['DIVERSITY']+= 1
             continue
-
+        elif column in ["Derived From", "Tasks"]:
+            if has_common(gold_answer,pred_answer):
+                results['AVERAGE'] += 1
+                results['EVALUATION'] += 1
+                continue
         if pred_answer.strip().lower() == gold_answer.strip().lower():
-            results['AVERAGE'] += 1/len(validation_columns)
-            if column in publication_columns:
-                results['PUBLICATION'] += 1/6
-            elif column in content_columns:
-                results['CONTENT'] += 1/8
-            elif column in accessability_columns:
-                results['ACCESSABILITY']+= 1/5
-            elif column in diversity_columns:
-                results['DIVERSITY']+= 1/3
-            elif column in evaluation_columns:
-                results['EVALUATION'] += 1/3
+            results['AVERAGE'] += 1
+            for m in validation_columns:
+                if column in validation_columns[m]:
+                    results[m] += 1
         else:
             pass
             # print(pred_answer, gold_answer)
+    for m in results:
+        if m in validation_columns:
+            results[m] = results[m]/len(validation_columns[m])
+    results['AVERAGE'] = results['AVERAGE'] / NUM_VALIDATION_COLUMNS
     return results
 
 from collections import Counter
@@ -246,6 +268,76 @@ def get_arxiv_id(arxiv_link):
     arxiv_link = fix_arxiv_link(arxiv_link)
     return arxiv_link.split('/')[-1]
 
+def fix_options(metadata):
+    fixed_metadata = {}
+    for column in metadata:
+        if column in column_options:
+            options = [c.strip() for c in column_options[column].split(',')]
+            pred_option = metadata[column]
+            if pred_option in options:
+                fixed_metadata[column] = pred_option
+            elif pred_option == '':
+                fixed_metadata[column] = options[-1] # choose the last option, prefer other
+            else:
+                fixed_metadata[column] = ','.join(find_best_match(option, options) for option in pred_option.split(','))
+        else:
+            fixed_metadata[column] = metadata[column]
+
+
+    return fixed_metadata
+
+import re
+
+def process_url(url):
+    url = re.sub(r'\\url\{(.*?)\}', r'\1', url).strip()
+    url = re.sub('huggingface', 'hf', url)
+    return url
+
+def postprocess(metadata):
+    for c in metadata:
+        if metadata[c] is None or metadata[c] == 'None':
+            metadata[c] = ''
+    try:
+        metadata['Year'] = int(metadata['Year'])
+    except:
+        pass
+    metadata['Link'] = process_url(metadata['Link'])
+    metadata['HF Link'] = process_url(metadata['HF Link'])
+
+    return metadata
+
+def fill_missing(metadata, year = '', article_url = ''):
+    for c in columns:
+        if c not in metadata:
+            if c == 'Subsets': # not implemented
+                metadata[c] = []
+            else:
+                metadata[c] = ''
+    
+    if 'arxiv' in article_url.lower():
+        if metadata['Venue Title'] == '':
+            metadata['Venue Title'] = 'arXiv'
+        if metadata['Venue Type'] == '':
+            metadata['Venue Type'] = 'Preprint'
+        if metadata['Paper Link'] == '':
+            metadata['Paper Link'] = article_url
+    if str(year) != '':
+        metadata['Year'] = str(year)
+    return metadata
+
+def read_json(text_json):
+    results = {}
+    try:
+        text_json = text_json.replace('```json', '').replace('```', '')
+        text_json = text_json.replace("\\", "\\\\")
+        if '\\"' in text_json:
+            text_json = text_json.replace('\\"', '\"')
+        results = json.loads(text_json)
+    except:
+        print(text_json)
+        raise()
+    return results
+
 def fetch_repository_metadata(metadata):
     link = metadata['Link']
     if metadata['HF Link'] != '':
@@ -282,4 +374,7 @@ def fetch_repository_metadata(metadata):
         
         return f"License: {license_info}\nReadme: {readme_content}".strip(), link
     else:
-        return '', ''
+        try:
+            return scrape_website_fc(link), link
+        except:
+            return '', link
