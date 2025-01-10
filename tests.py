@@ -88,9 +88,7 @@ msg,pred_metadata =  get_metadata(paper_text, model_name = 'gemini-1.5-flash')
 with open('testfiles/test7.json', 'r') as f:
     gold_metadata = json.load(f)
 
-for c in validation_columns:
-    print(c, gold_metadata[c], pred_metadata[c])
-
 results = evaluate_metadata(pred_metadata, gold_metadata)
 
 assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
+print('✅ passed test7')
