@@ -1,6 +1,7 @@
 import json
-from utils import validate, fix_options, postprocess, fill_missing
+from utils import validate, fix_options, cast, fill_missing, evaluate_metadata
 from constants import *
+from pages.search import get_metadata
 
 
 # no mistakes
@@ -21,7 +22,7 @@ results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/24
 
 for m in results:
     if m == 'CONTENT':
-        assert results[m] == 1- (1/len(validation_columns['CONTENT'])), f'❌ {m} value should be {1- (1/len(validation_columns["CONTENT"]))} but got {results[m]}'
+        assert results[m] == 1- (1/len(evaluation_subsets['CONTENT'])), f'❌ {m} value should be {1- (1/len(evaluation_subsets["CONTENT"]))} but got {results[m]}'
     elif m == 'AVERAGE':
         assert results[m] == 1- (1/NUM_VALIDATION_COLUMNS), f'❌ {m} value should be {1- (1/NUM_VALIDATION_COLUMNS)} but got {results[m]}'
     else:
@@ -55,7 +56,7 @@ print('✅ passed test4')
 with open('testfiles/test5.json', 'r') as f:
     metadata = json.load(f)
 
-new_metadata = postprocess(metadata)
+new_metadata = cast(metadata)
 
 for c in metadata:
     if c == 'Ethical Risks':
@@ -78,3 +79,18 @@ for c in columns:
     assert c in new_metadata, f'❌ {c} should be in the metadata but it is not'
 
 print('✅ passed test6')
+
+with open('testfiles/example.tex', 'r') as f:
+    paper_text = f.read()
+
+msg,pred_metadata =  get_metadata(paper_text, model_name = 'gemini-1.5-flash')
+
+with open('testfiles/test7.json', 'r') as f:
+    gold_metadata = json.load(f)
+
+for c in validation_columns:
+    print(c, gold_metadata[c], pred_metadata[c])
+
+results = evaluate_metadata(pred_metadata, gold_metadata)
+
+assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
