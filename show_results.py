@@ -4,7 +4,6 @@ import json
 import numpy as np
 import argparse
 from constants import *
-from utils import get_arxiv_id
 
 args = argparse.ArgumentParser()
 args.add_argument('--eval', type=str, default='valid')
