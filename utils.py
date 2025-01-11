@@ -109,7 +109,7 @@ def evaluate_metadata(gold_metadata, pred_metadata):
                 for key in subset:
                     if key not in pred_answer[i]:
                         matched = False
-                    if subset[key] != pred_answer[i][key]:
+                    if str(subset[key]) != str(pred_answer[i][key]):
                         matched = False
             if matched:
                 results['DIVERSITY']+= 1
