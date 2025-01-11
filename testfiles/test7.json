@@ -19,9 +19,9 @@
 
     "Language": "ar",
     "Subsets": [
-        {"Name": "Syrian", "Volume": "4000", "Unit": "sentences", "Dialect": "Syrian"},
-        {"Name": "Iraqi",  "Volume": "4000", "Unit": "sentences", "Dialect": "Iraqi"}, 
-        {"Name": "Lebanese", "Volume": "2000", "Unit": "sentences", "Dialect": "Lebanese"}
+        {"Name": "Syrian", "Volume": "4000", "Unit": "sentences", "Dialect": "Syria"},
+        {"Name": "Iraqi",  "Volume": "4000", "Unit": "sentences", "Dialect": "Iraq"}, 
+        {"Name": "Lebanese", "Volume": "2000", "Unit": "sentences", "Dialect": "Lebanon"}
     ],
     "Dialect": "mixed",
 
