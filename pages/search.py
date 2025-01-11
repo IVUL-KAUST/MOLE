@@ -52,12 +52,12 @@ def is_resource(abstract):
   
   return True if 'yes' in message.text.lower() else False
 
-def get_metadata(paper_text = '', model_name = 'gemini-1.5-flash', readme = "", metadata = {}):
-    if paper_text:
-        prompt = f"You are given a dataset paper {paper_text}, you are requested to answer the following questions about the dataset {questions}"
+def get_metadata(paper_text = "", model_name = "gemini-1.5-flash", readme = "", metadata = {}):
+    if paper_text != "":
+        prompt = f"You are given a dataset paper '{paper_text}', you are requested to answer the following questions about the dataset {questions}"
     else:
-        prompt = f"You are given the following readme: {readme}, and metadata {metadata} you are requested to answer the following questions about the dataset {questions}"
-
+        prompt = f"You are given the following metadata: '{metadata}', and readme: '{readme}'. Please prioritze the answers from the readme. You are requested to answer the following questions about the dataset {questions}"
+    
     if 'gemini' in model_name:
         model = genai.GenerativeModel(model_name,system_instruction = system_prompt)  
             

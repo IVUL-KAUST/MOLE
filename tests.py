@@ -1,5 +1,5 @@
 import json
-from utils import validate, fix_options, cast, fill_missing, evaluate_metadata, postprocess
+from utils import validate, fix_options, cast, fill_missing, evaluate_metadata, postprocess, fetch_repository_metadata
 from constants import *
 from pages.search import get_metadata
 
@@ -93,3 +93,18 @@ results = evaluate_metadata(pred_metadata, gold_metadata)
 
 assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
 print('✅ passed test7')
+
+with open('testfiles/example2.tex', 'r') as f:
+    paper_text = f.read()
+
+_,pred_metadata =  get_metadata(paper_text, model_name = 'gemini-1.5-flash')
+readme, _ = fetch_repository_metadata(pred_metadata)
+_,pred_metadata =  get_metadata(metadata = pred_metadata,  model_name = 'gemini-1.5-flash', readme = readme)
+pred_metadata = postprocess(pred_metadata)
+
+with open('testfiles/test8.json', 'r') as f:
+    gold_metadata = json.load(f)
+
+results = evaluate_metadata(pred_metadata, gold_metadata)
+assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
+print('✅ passed test8')
