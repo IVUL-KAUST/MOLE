@@ -1,12 +1,10 @@
 import anthropic
 from glob import glob
 import os
-import re
 import arxiv
 from search_arxiv import ArxivSearcher, ArxivSourceDownloader
 import json
 import pdfplumber
-import numpy as np
 from dotenv import load_dotenv
 from openai import OpenAI
 from utils import *
@@ -15,7 +13,6 @@ import google.generativeai as genai # type: ignore
 import streamlit as st # type: ignore
 from constants import *
 from datetime import datetime
-import requests
 import time
 logger = setup_logger()
         
