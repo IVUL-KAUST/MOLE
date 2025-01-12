@@ -343,14 +343,18 @@ def read_json(text_json):
             text_json = text_json.replace('\\"', '\"')
         results = json.loads(text_json)
     except:
-        print(text_json)
-        raise()
+        print('warning: can not read the josn')
+        return {}
     return results
 
 def fetch_repository_metadata(metadata):
-    link = metadata['Link']
-    if metadata['HF Link'] != '':
+    if 'Link' in metadata:
         link = metadata['Link']
+    elif 'HF Link' in metadata:
+        if metadata['HF Link'] != '':
+            link = metadata['Link']
+    else:
+        return '', ''
 
     if link is None:
         return '', ''
