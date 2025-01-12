@@ -12,7 +12,7 @@ results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/24
 
 for m in results:
     assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
-print('✅ passed test1')
+print('✅ passed test1 [validation 1]')
 
 # one mistake in the volume column
 with open('testfiles/test2.json', 'r') as f:
@@ -27,7 +27,7 @@ for m in results:
         assert results[m] == 1- (1/NUM_VALIDATION_COLUMNS), f'❌ {m} value should be {1- (1/NUM_VALIDATION_COLUMNS)} but got {results[m]}'
     else:
         assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
-print('✅ passed test2')
+print('✅ passed test2 [validation 2]')
 
 # overlapping tasks
 with open('testfiles/test3.json', 'r') as f:
@@ -37,7 +37,7 @@ results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/24
 
 for m in results:
     assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
-print('✅ passed test3')
+print('✅ passed test3 [validation 3]')
 
 with open('testfiles/test4.json', 'r') as f:
     metadata = json.load(f)
@@ -51,7 +51,7 @@ for c in metadata:
         assert new_metadata['Collection Style'] == 'crawling,annotation', '❌ crawling,annotation != ' + new_metadata['Collection Style']
     else:
         assert new_metadata[c] == metadata[c], f'❌ {c} should be {metadata[c]} but got {new_metadata[c]}'
-print('✅ passed test4')
+print('✅ passed test4 [fix options]')
 
 with open('testfiles/test5.json', 'r') as f:
     metadata = json.load(f)
@@ -68,7 +68,7 @@ for c in metadata:
     else:
         assert new_metadata[c] == metadata[c], f'❌ {c} should be {metadata[c]} but got {new_metadata[c]}'
 
-print('✅ passed test5')
+print('✅ passed test5 [casting]')
 
 with open('testfiles/test6.json', 'r') as f:
     metadata = json.load(f)
@@ -78,7 +78,7 @@ new_metadata = fill_missing(metadata)
 for c in columns:
     assert c in new_metadata, f'❌ {c} should be in the metadata but it is not'
 
-print('✅ passed test6')
+print('✅ passed test6 [fill missing]')
 
 with open('testfiles/example.tex', 'r') as f:
     paper_text = f.read()
@@ -92,7 +92,7 @@ with open('testfiles/test7.json', 'r') as f:
 results = evaluate_metadata(pred_metadata, gold_metadata)
 
 assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
-print('✅ passed test7')
+print('✅ passed test7 [extract metadata]')
 
 with open('testfiles/example2.tex', 'r') as f:
     paper_text = f.read()
@@ -107,4 +107,14 @@ with open('testfiles/test8.json', 'r') as f:
 
 results = evaluate_metadata(pred_metadata, gold_metadata)
 assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
-print('✅ passed test8')
+print('✅ passed test8 [browsing]')
+
+pred_metadata = postprocess({})
+
+with open('testfiles/test9.json', 'r') as f:
+    gold_metadata = json.load(f)
+
+results = evaluate_metadata(pred_metadata, gold_metadata)
+
+assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
+print('✅ passed test9 [empty metadata]')

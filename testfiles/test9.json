@@ -1,0 +1,27 @@
+{
+    "Name": "",
+    "Volume": "",
+    "Unit": "images",
+    "Tokenized": "No",
+    "Script": "Arab-Latin",
+    "Form": "images",
+    "Collection Style": "other",
+    "Domain": "other",
+    "Ethical Risks": "High",
+
+    "Provider": "",
+    "Host": "other",
+    "Link": "",
+    "HF Link": "",
+    "License": "custom",
+    "Cost": "",
+    "Access": "With-Fee",
+
+    "Language": "multilingual",
+    "Subsets": [],
+    "Dialect": "mixed",
+
+    "Test Split": "No",
+    "Tasks": "other",
+    "Derived From": ""   
+}
