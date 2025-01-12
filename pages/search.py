@@ -63,7 +63,6 @@ def get_metadata(paper_text = "", model_name = "gemini-1.5-flash", readme = "", 
             
         message = model.generate_content(prompt, 
             generation_config = genai.GenerationConfig(
-            max_output_tokens=1000,
             temperature=0.0,
         ))
         response = message.text.strip()
@@ -135,6 +134,31 @@ def generate_fake_arxiv_pdf(paper_pdf):
     year = datetime.now().year
     month = datetime.now().month
     return f'{year}{month}.{generate_pdf_hash(paper_pdf)}'
+
+def extract_paper_text(source_files):
+    paper_text = ''
+    if len(source_file) == 0:
+        return paper_text
+    
+    if any([file.endswith('.tex') for file in source_files]):
+        source_files = [file for file in source_files if file.endswith('.tex')]
+    else:
+        source_files = [file for file in source_files if file.endswith('.pdf')]
+
+    paper_text = ''
+    for source_file in source_files:
+        if source_file.endswith('.tex'):
+            paper_text += open(source_file, 'r').read()
+        elif source_file.endswith('.pdf'):
+            with pdfplumber.open(source_file) as pdf:
+                text_pages = []
+                for page in pdf.pages:
+                    text_pages.append(page.extract_text())
+                paper_text += ' '.join(text_pages)
+        else:
+            logger.error('Not acceptable source file')
+            continue
+    return paper_text
 
 def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link = '',
         check_abstract = False, models = ['gemini-1.5-flash'], overwrite = False, browse_web = False, paper_pdf = None, use_split = None):
@@ -246,10 +270,10 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
 
                 for model_name in models:
 
-                    if browse_web and (model_name == 'human' or model_name == 'judge'):
+                    if browse_web and (model_name in non_browsing_models):
                         show_info("Can't browse the web as a human")
 
-                    if browse_web and not(model_name == 'human' or model_name == 'judge'):
+                    if browse_web and not(model_name in non_browsing_models):
                         save_path = f'{path}/{model_name}-browsing-results.json'
                     else:
                         save_path = f'{path}/{model_name}-results.json'
@@ -259,94 +283,75 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                         results = json.load(open(save_path))
                         if st_context:
                             st.link_button(f"{model_name} => Masader Form", f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}")
-                        if browse_web and not(model_name == 'human' or model_name == 'judge'):
+                        if browse_web and not(model_name in non_browsing_models):
                             model_name += '-browsing'
                         model_results[model_name] = results
                         continue
-
-                    source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
                     
-                    if len(source_files):
-                        
-                        if any([file.endswith('.tex') for file in source_files]):
-                            source_files = [file for file in source_files if file.endswith('.tex')]
-                        else:
-                            source_files = [file for file in source_files if file.endswith('.pdf')]
-
+                    if model_name not in non_browsing_models:
+                        source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
                         show_info(f'📖 Reading source files {source_files[0]}, ...', st_context = st_context)
-
-                        paper_text = ''
-                        for source_file in source_files:
-                            if source_file.endswith('.tex'):
-                                paper_text += open(source_file, 'r').read()
-                            elif source_file.endswith('.pdf'):
-                                with pdfplumber.open(source_file) as pdf:
-                                    text_pages = []
-                                    for page in pdf.pages:
-                                        text_pages.append(page.extract_text())
-                                    paper_text += ' '.join(text_pages)
-                            else:
-                                logger.error('Not acceptable source file')
-                                continue
-                        if paper_text == '':
-                            raise('error')
-                        
-                        show_info(f'🧠 {model_name} is extracting Metadata ...', st_context = st_context)
-                        if 'judge' in model_name.lower():
-                            all_results = []
-                            for file in glob(f'{path}/**.json'):
-                                if 'judge' not in file and 'human' not in file:
-                                    all_results.append(json.load(open(file)))
-                            message, metadata = get_metadata_judge(all_results)
-                        elif 'human' in model_name.lower():
-                            if title == '':
-                                message, metadata = get_metadata_human(link, use_link = True)
-                            else:
-                                message, metadata = get_metadata_human(title)
+                        paper_text = extract_paper_text(source_files)
+                    
+                    show_info(f'🧠 {model_name} is extracting Metadata ...', st_context = st_context)
+                    if 'judge' in model_name.lower():
+                        all_results = []
+                        for file in glob(f'{path}/**.json'):
+                            if 'judge' not in file and 'human' not in file:
+                                all_results.append(json.load(open(file)))
+                        message, metadata = get_metadata_judge(all_results)
+                    elif 'human' in model_name.lower():
+                        if title == '':
+                            message, metadata = get_metadata_human(link, use_link = True)
                         else:
-                            if 'gemini-1.5-pro' in model_name:
-                                time.sleep(60)
-                            message, metadata = get_metadata(paper_text, model_name.lower())
-                            if browse_web:
-                                readme, repo_link = fetch_repository_metadata(metadata)
-                                if readme != "":
-                                    show_info(f'🌐 Browsing {repo_link}', st_context = st_context)
-                                    message, metadata = get_metadata(model_name = model_name, readme = readme, metadata = metadata)
+                            message, metadata = get_metadata_human(title)
+                    elif 'baseline' in model_name.lower():
+                        message, metadata = '', {}
+                    else:
+                        if 'gemini-1.5-pro' in model_name:
+                            time.sleep(60)
+                        message, metadata = get_metadata(paper_text, model_name.lower())
+                        if browse_web:
+                            readme, repo_link = fetch_repository_metadata(metadata)
+                            if readme != "":
+                                show_info(f'🌐 Browsing {repo_link}', st_context = st_context)
+                                message, metadata = get_metadata(model_name = model_name, readme = readme, metadata = metadata)
 
-                        cost = compute_cost(message)
+                    cost = compute_cost(message)
 
-                        if model_name != 'human':
+                    if model_name != 'human':
+                        if model_name in non_browsing_models:
+                            metadata = postprocess(metadata, year, article_url, method = model_name.split('-')[-1])
+                        else:
                             metadata = postprocess(metadata, year, article_url)
-                            
-                        show_info('🔍 Validating Metadata ...', st_context = st_context)
+                        
+                    show_info('🔍 Validating Metadata ...', st_context = st_context)
 
-                        validation_results = validate(metadata, use_split = use_split, link = link, title = title)
-                        
-                        results = {}
-                        results ['metadata'] = metadata
-                        results ['cost'] = cost
-                        results ['validation'] = validation_results
-                        
-                        if browse_web and not(model_name == 'human' or model_name == 'judge'):
-                            model_name = f"{model_name}-browsing"
-                        results ['config'] = {
-                            'model_name': model_name,
-                            'month': month,
-                            'year': year,
-                            'keywords': keywords
-                        }
-                        results['ratio_filling'] = compute_filling(metadata)
-                        show_info(f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %", st_context = st_context)
+                    validation_results = validate(metadata, use_split = use_split, link = link, title = title)
+                    
+                    results = {}
+                    results ['metadata'] = metadata
+                    results ['cost'] = cost
+                    results ['validation'] = validation_results
+                    
+                    if browse_web and not(model_name in non_browsing_models):
+                        model_name = f"{model_name}-browsing"
+                    results ['config'] = {
+                        'model_name': model_name,
+                        'month': month,
+                        'year': year,
+                        'keywords': keywords
+                    }
+                    results['ratio_filling'] = compute_filling(metadata)
+                    show_info(f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %", st_context = st_context)
 
-                        if model_name != 'human':
-                            results['metadata']['Subsets'] = []
-                        with open(save_path, "w") as outfile:
-                            logger.info(f"📥 Results saved to: {save_path}") 
-                            json.dump(results, outfile, indent=4)
-                        model_results[model_name] = results
-                        
-                        if st_context:
-                            st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}")
+                    with open(save_path, "w") as outfile:
+                        logger.info(f"📥 Results saved to: {save_path}") 
+                        json.dump(results, outfile, indent=4)
+                    model_results[model_name] = results
+                    
+                    if st_context:
+                        st.link_button("Open using Masader Form", f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}")
             else:
                 show_info('Abstract indicates resource: False', st_context = st_context)
     return model_results

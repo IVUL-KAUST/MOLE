@@ -12,6 +12,8 @@ from firecrawl import FirecrawlApp # type: ignore
 import os
 import re
 import json
+import random
+random.seed(0)
 
 def scrape_website_fc(url):
     app = FirecrawlApp(api_key=os.getenv('fc_key'))
@@ -271,7 +273,7 @@ def get_arxiv_id(arxiv_link):
     arxiv_link = fix_arxiv_link(arxiv_link)
     return arxiv_link.split('/')[-1]
 
-def fix_options(metadata):
+def fix_options(metadata, method = 'last'):
     fixed_metadata = {}
     for column in metadata:
         if column in column_options:
@@ -280,7 +282,12 @@ def fix_options(metadata):
             if pred_option in options:
                 fixed_metadata[column] = pred_option
             elif pred_option == '':
-                fixed_metadata[column] = options[-1] # choose the last option, prefer other
+                if method == 'random':
+                    fixed_metadata[column] = random.choice(options)
+                elif method == 'first':
+                    fixed_metadata[column] = options[0]
+                else:
+                    fixed_metadata[column] = options[-1]
             else:
                 fixed_metadata[column] = ','.join(find_best_match(option, options) for option in pred_option.split(','))
         else:
@@ -328,10 +335,10 @@ def fill_missing(metadata, year = '', article_url = ''):
         metadata['Year'] = str(year)
     return metadata
 
-def postprocess(metadata, year = '', article_url = ''):
+def postprocess(metadata, year = '', article_url = '', method = 'last'):
     metadata = fill_missing(metadata, year, article_url)
     metadata = cast(metadata)
-    metadata = fix_options(metadata)
+    metadata = fix_options(metadata, method = method)
     return metadata
 
 def read_json(text_json):
