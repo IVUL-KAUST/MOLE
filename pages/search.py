@@ -137,7 +137,7 @@ def generate_fake_arxiv_pdf(paper_pdf):
 
 def extract_paper_text(source_files):
     paper_text = ''
-    if len(source_file) == 0:
+    if len(source_files) == 0:
         return paper_text
     
     if any([file.endswith('.tex') for file in source_files]):
@@ -287,7 +287,7 @@ def run(args = None, mode = 'api', year = 2024, month = 2, keywords = '', link =
                             model_name += '-browsing'
                         model_results[model_name] = results
                         continue
-                    
+
                     if model_name not in non_browsing_models:
                         source_files = glob(f'{path}/*.tex')+glob(f'{path}/*.pdf')
                         show_info(f'📖 Reading source files {source_files[0]}, ...', st_context = st_context)
