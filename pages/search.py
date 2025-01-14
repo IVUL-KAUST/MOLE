@@ -10,18 +10,24 @@ from openai import OpenAI
 from utils import *
 import argparse
 import google.generativeai as genai  # type: ignore
+
 import streamlit as st  # type: ignore
 from constants import *
 from datetime import datetime
 import time
-
-logger = setup_logger()
+import vertexai # type: ignore
+from vertexai.generative_models import GenerativeModel, GenerationConfig # type: ignore
+import json
 
 load_dotenv()
 client = anthropic.Anthropic(api_key=os.environ["anthropic_key"])
 chatgpt_client = OpenAI(api_key=os.environ["chatgpt_key"])
-genai.configure(api_key=os.environ["gemini_key"])
 
+# google cloud authenticate
+credentials = get_google_credentials()
+vertexai.init(credentials=credentials, project=credentials.project_id, location="us-central1")
+
+logger = setup_logger()
 
 def compute_filling(metadata):
     return len([m for m in metadata if m != ""]) / len(metadata)
@@ -46,14 +52,14 @@ def compute_cost(message):
 
 def is_resource(abstract):
     prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published Arabic dataset or multilingual dataset that contains Arabic? please answer 'yes' or 'no' only"
-    model = genai.GenerativeModel(
+    model = GenerativeModel(
         "gemini-1.5-flash",
         system_instruction="You are a prefoessional research paper reader",
     )
 
     message = model.generate_content(
         prompt,
-        generation_config=genai.GenerationConfig(
+        generation_config=GenerationConfig(
             max_output_tokens=1000,
             temperature=0.0,
         ),
@@ -69,11 +75,11 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
         prompt = f"You are given the following metadata: '{metadata}', and readme: '{readme}'. Please prioritze the answers from the readme. You are requested to answer the following questions about the dataset {questions}"
 
     if "gemini" in model_name:
-        model = genai.GenerativeModel(model_name, system_instruction=system_prompt)
+        model = GenerativeModel(model_name, system_instruction=system_prompt)
 
         message = model.generate_content(
             prompt,
-            generation_config=genai.GenerationConfig(
+            generation_config=GenerationConfig(
                 temperature=0.0,
             ),
         )
@@ -187,8 +193,8 @@ def extract_paper_text(source_files):
 def run(
     args=None,
     mode="api",
-    year=2024,
-    month=2,
+    year=None,
+    month=None,
     keywords="",
     link="",
     check_abstract=False,
@@ -202,7 +208,7 @@ def run(
     st_context = False
 
     if mode == "cmd":
-        year = args.year
+        year = int(args.year)
         month = args.month
         keywords = args.keywords
         check_abstract = args.check_abstract
@@ -255,7 +261,7 @@ def run(
         if link != "":
             show_info(f"🔍 Using arXiv link {link} ...", st_context=st_context)
             search_results = [
-                {"summary": "", "article_url": link, "title": "", "published": ""}
+                {"summary": "", "article_url": link, "title": "", "published": year}
             ]
         elif paper_pdf != None:
             show_info("🔍 Using uploaded PDF ...", st_context=st_context)
@@ -276,7 +282,10 @@ def run(
             abstract = r["summary"]
             article_url = r["article_url"]
             title = r["title"]
-            year = r["published"].split("-")[0]
+            if r["published"] != "":
+                year = int(r["published"].split("-")[0])
+            else:
+                year = None
             arxiv_resource = not ("pdf" in r)
 
             if arxiv_resource:
@@ -327,7 +336,7 @@ def run(
                 for model_name in models:
 
                     if browse_web and (model_name in non_browsing_models):
-                        show_info("Can't browse the web as a human")
+                        show_info(f"Can't browse the web for {model_name}")
 
                     if browse_web and not (model_name in non_browsing_models):
                         save_path = f"{path}/{model_name}-browsing-results.json"
@@ -371,26 +380,43 @@ def run(
                         message, metadata = get_metadata_judge(all_results)
                     elif "human" in model_name.lower():
                         if title == "":
-                            message, metadata = get_metadata_human(link, use_link=True)
+                            message, metadata = get_metadata_human(
+                                article_url, use_link=True
+                            )
                         else:
                             message, metadata = get_metadata_human(title)
                     elif "baseline" in model_name.lower():
                         message, metadata = "", {}
                     else:
                         if "gemini-1.5-pro" in model_name:
-                            time.sleep(60)
-                        message, metadata = get_metadata(paper_text, model_name.lower())
-                        if browse_web:
-                            readme, repo_link = fetch_repository_metadata(metadata)
-                            if readme != "":
-                                show_info(
-                                    f"🌐 Browsing {repo_link}", st_context=st_context
-                                )
+                            show_info(f"⏰ Waiting ...", st_context=st_context)
+                            time.sleep(30) # pro has 2 RPM 50 req/day
+                        max_tries = 5
+                        for i in range(max_tries):
+                            try:
                                 message, metadata = get_metadata(
-                                    model_name=model_name,
-                                    readme=readme,
-                                    metadata=metadata,
+                                    paper_text, model_name.lower()
                                 )
+                                if browse_web:
+                                    readme, repo_link = fetch_repository_metadata(
+                                        metadata
+                                    )
+                                    if readme != "":
+                                        show_info(
+                                            f"🌐 Browsing {repo_link}",
+                                            st_context=st_context,
+                                        )
+                                        message, metadata = get_metadata(
+                                            model_name=model_name,
+                                            readme=readme,
+                                            metadata=metadata,
+                                        )
+                                break
+                            except:
+                                if i == max_tries - 1:
+                                    raise
+                                time.sleep(5)
+                                show_info(f"⏰ Retrying ...", st_context=st_context)
 
                     cost = compute_cost(message)
 
@@ -408,7 +434,7 @@ def run(
                     show_info("🔍 Validating Metadata ...", st_context=st_context)
 
                     validation_results = validate(
-                        metadata, use_split=use_split, link=link, title=title
+                        metadata, use_split=use_split, link=article_url, title=title
                     )
 
                     results = {}
@@ -418,11 +444,13 @@ def run(
 
                     if browse_web and not (model_name in non_browsing_models):
                         model_name = f"{model_name}-browsing"
+
                     results["config"] = {
                         "model_name": model_name,
                         "month": month,
                         "year": year,
                         "keywords": keywords,
+                        "link": article_url,
                     }
                     results["ratio_filling"] = compute_filling(metadata)
                     show_info(
