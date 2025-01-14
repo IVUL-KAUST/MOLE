@@ -15,8 +15,8 @@ import streamlit as st  # type: ignore
 from constants import *
 from datetime import datetime
 import time
-import vertexai # type: ignore
-from vertexai.generative_models import GenerativeModel, GenerationConfig # type: ignore
+import vertexai  # type: ignore
+from vertexai.generative_models import GenerativeModel, GenerationConfig  # type: ignore
 import json
 
 load_dotenv()
@@ -25,9 +25,12 @@ chatgpt_client = OpenAI(api_key=os.environ["chatgpt_key"])
 
 # google cloud authenticate
 credentials = get_google_credentials()
-vertexai.init(credentials=credentials, project=credentials.project_id, location="us-central1")
+vertexai.init(
+    credentials=credentials, project=credentials.project_id, location="us-central1"
+)
 
 logger = setup_logger()
+
 
 def compute_filling(metadata):
     return len([m for m in metadata if m != ""]) / len(metadata)
@@ -74,7 +77,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
     else:
         prompt = f"You are given the following metadata: '{metadata}', and readme: '{readme}'. Please prioritze the answers from the readme. You are requested to answer the following questions about the dataset {questions}"
 
-    if "gemini" in model_name:
+    if "gemini" in model_name.lower():
         model = GenerativeModel(model_name, system_instruction=system_prompt)
 
         message = model.generate_content(
@@ -84,7 +87,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
             ),
         )
         response = message.text.strip()
-    elif "claude" in model_name:
+    elif "claude" in model_name.lower():
         message = client.messages.create(
             model=model_name,
             max_tokens=1000,
@@ -93,7 +96,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
             messages=[{"role": "user", "content": [{"type": "text", "text": prompt}]}],
         )
         response = message.content[0].text
-    elif "gpt" in model_name:
+    elif "gpt" in model_name.lower():
         message = chatgpt_client.chat.completions.create(
             model=model_name,
             messages=[
@@ -103,7 +106,31 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
             temperature=0,
         )
         response = message.choices[0].message.content.strip()
-    elif "o1" in model_name:
+    elif any([m in model_name.lower() for m in ['deepseek','llama', 'q']]):
+        if "deepseek" in model_name.lower():
+            org = "deepseek-ai"
+        elif "q" in model_name.lower():
+            org = 'Qwen'
+        else:
+            org = "meta-llama"
+        url = "https://api.hyperbolic.xyz/v1/chat/completions"
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {os.environ['HYPERBOLIC_API_KEY']}",
+        }
+        data = {
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": prompt},
+            ],
+            "model": f"{org}/{model_name}",
+            "max_tokens": 1024 * 8,
+            "temperature": 0,
+        }
+
+        message = requests.post(url, headers=headers, json=data).json()
+        response = message["choices"][0]["message"]["content"].strip()
+    elif "o1" in model_name.lower():
         message = chatgpt_client.chat.completions.create(
             model=model_name,
             messages=[{"role": "user", "content": system_prompt + prompt}],
@@ -390,12 +417,12 @@ def run(
                     else:
                         if "gemini-1.5-pro" in model_name:
                             show_info(f"⏰ Waiting ...", st_context=st_context)
-                            time.sleep(30) # pro has 2 RPM 50 req/day
+                            time.sleep(30)  # pro has 2 RPM 50 req/day
                         max_tries = 5
                         for i in range(max_tries):
                             try:
                                 message, metadata = get_metadata(
-                                    paper_text, model_name.lower()
+                                    paper_text, model_name
                                 )
                                 if browse_web:
                                     readme, repo_link = fetch_repository_metadata(
