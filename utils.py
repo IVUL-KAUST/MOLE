@@ -13,9 +13,21 @@ import os
 import re
 import json
 import random
+import base64
+import os
+from google.oauth2 import service_account
 
 random.seed(0)
 
+masader_dataset = load_dataset('arbml/masader', download_mode='')['train']
+masader_valid_dataset = load_dataset('json', data_files = glob('validset/**.json'))['train']
+masader_test_dataset = load_dataset('json', data_files = glob('testset/**.json'))['train']
+
+def get_google_credentials():
+    decoded_config = base64.b64decode(os.environ['GOOGLE_APPLICATION_CREDENTIALS']).decode('utf-8')
+    config_data = json.loads(decoded_config)
+    credentials = service_account.Credentials.from_service_account_info(config_data)
+    return credentials
 
 def scrape_website_fc(url):
     app = FirecrawlApp(api_key=os.getenv("fc_key"))
@@ -73,6 +85,14 @@ def has_common(d1, d2):
         return True
     else:
         return False
+    
+def all_same(d1, d2):
+    d1 = [d.lower().strip() for d in d1.split(",")]
+    d2 = [d.lower().strip() for d in d2.split(",")]
+    if len(set(d1).intersection(d2)) == len(d1):
+        return True
+    else:
+        return False
 
 
 def setup_logger() -> logging.Logger:
@@ -127,12 +147,12 @@ def evaluate_metadata(gold_metadata, pred_metadata):
                 results["AVERAGE"] += 1
             continue
         elif column in ["Derived From", "Tasks"]:
-            if has_common(gold_answer, pred_answer):
+            if all_same(gold_answer, pred_answer):
                 results["EVALUATION"] += 1
                 results["AVERAGE"] += 1
                 continue
         elif column in ["Collection Style", "Domain"]:
-            if has_common(gold_answer, pred_answer):
+            if all_same(gold_answer, pred_answer):
                 results["CONTENT"] += 1
                 results["AVERAGE"] += 1
                 continue
