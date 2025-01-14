@@ -1,6 +1,6 @@
 from pages.search import run, create_args
 from tabulate import tabulate  # type: ignore
-from utils import fix_arxiv_link
+from utils import fix_arxiv_link, masader_valid_dataset, masader_test_dataset
 import numpy as np
 from constants import *
 
@@ -15,6 +15,7 @@ if __name__ == "__main__":
         titles = []
         data_names = []
         paper_links = []
+        years = []
 
         if args.masader_validate:
             dataset = masader_valid_dataset
@@ -27,13 +28,16 @@ if __name__ == "__main__":
             titles.append(str(x["Paper Title"]))
             data_names.append(str(x["Name"]))
             paper_links.append(str(x["Paper Link"]))
+            years.append(str(x["Year"]))
     else:
         data_names = args.keywords.split(",")
         titles = ["" for _ in data_names]
         paper_links = ["" for _ in data_names]
+        years = ["" for _ in data_names]
+
     len_data = len(data_names)
 
-    for data_name, title, paper_link in zip(data_names, titles, paper_links):
+    for data_name, title, paper_link, year in zip(data_names, titles, paper_links, years):
         if title != "":
             title = title.replace("\r\n", " ")
             title = title.replace(":", "")
@@ -46,7 +50,7 @@ if __name__ == "__main__":
             model_results = run(
                 mode="api",
                 link=link,
-                year=None,
+                year=year,
                 month=None,
                 models=args.models.split(","),
                 browse_web=args.browse_web,
