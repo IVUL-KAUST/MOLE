@@ -29,6 +29,35 @@ def get_google_credentials():
     credentials = service_account.Credentials.from_service_account_info(config_data)
     return credentials
 
+def compute_cost(message, model):
+    try:
+        if 'gpt' in model:
+            num_inp_tokens = message.usage.input_tokens
+            num_out_tokens = message.usage.output_tokens
+        elif 'DeepSeek-V3' in model:
+            num_inp_tokens = message.usage.prompt_tokens
+            num_out_tokens = message.usage.completion_tokens
+        elif 'claude' in model:
+            num_inp_tokens = message.usage.prompt_tokens
+            num_out_tokens = message.usage.completion_tokens
+        elif 'gemini' in model:
+            num_inp_tokens = message.usage_metadata.prompt_token_count
+            num_out_tokens = message.usage_metadata.candidates_token_count
+        
+        cost = (num_inp_tokens / 1e6) * costs[model]['input'] + (num_out_tokens / 1e6) * costs[model]['output'] 
+
+    except:
+        print('Unrecognized model name')
+        num_inp_tokens = -1
+        num_out_tokens = -1
+        cost = -1
+
+    return {
+        "cost": cost,
+        "input_tokens": num_inp_tokens,
+        "output_tokens": num_out_tokens,
+    }
+
 def scrape_website_fc(url):
     app = FirecrawlApp(api_key=os.getenv("fc_key"))
 
@@ -405,7 +434,8 @@ def read_json(text_json):
             text_json = text_json.replace('\\"', '"')
         results = json.loads(text_json)
     except:
-        print("warning: can not read the josn")
+        print(text_json)
+        print("⚠ warning: can not read the josn, using empty {}")
         return {}
     return results
 
