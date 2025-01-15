@@ -441,7 +441,7 @@ def run(
                                 time.sleep(5)
                                 show_info(f"⏰ Retrying ...", st_context=st_context)
 
-                    cost = compute_cost(message)
+                    cost = compute_cost(message, model_name)
 
                     if model_name != "human":
                         if model_name in non_browsing_models:
