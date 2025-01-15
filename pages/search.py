@@ -20,8 +20,9 @@ from vertexai.generative_models import GenerativeModel, GenerationConfig  # type
 import json
 
 load_dotenv()
-client = anthropic.Anthropic(api_key=os.environ["anthropic_key"])
+claude_client = anthropic.Anthropic(api_key=os.environ["anthropic_key"])
 chatgpt_client = OpenAI(api_key=os.environ["chatgpt_key"])
+deepseek_client = OpenAI(api_key=os.environ['deepseek_key'], base_url="https://api.deepseek.com")
 
 # google cloud authenticate
 credentials = get_google_credentials()
@@ -34,23 +35,6 @@ logger = setup_logger()
 
 def compute_filling(metadata):
     return len([m for m in metadata if m != ""]) / len(metadata)
-
-
-def compute_cost(message):
-    try:
-        num_inp_tokens = message.usage.input_tokens
-        num_out_tokens = message.usage.output_tokens
-        cost = (num_inp_tokens / 1e6) * 3 + (num_out_tokens / 1e6) * 15
-    except:
-        num_inp_tokens = -1
-        num_out_tokens = -1
-        cost = -1
-
-    return {
-        "cost": cost,
-        "input_tokens": num_inp_tokens,
-        "output_tokens": num_out_tokens,
-    }
 
 
 def is_resource(abstract):
@@ -88,7 +72,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
         )
         response = message.text.strip()
     elif "claude" in model_name.lower():
-        message = client.messages.create(
+        message = claude_client.messages.create(
             model=model_name,
             max_tokens=1000,
             temperature=0,
@@ -106,6 +90,18 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
             temperature=0,
         )
         response = message.choices[0].message.content.strip()
+    elif 'deepseek' in model_name.lower():
+        message = deepseek_client.chat.completions.create(
+            model="deepseek-chat",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": prompt},
+            ],
+            max_tokens= 8192,
+            temperature=0.0,
+        )
+
+        response = message.choices[0].message.content
     elif any([m in model_name.lower() for m in ['deepseek','llama', 'q']]):
         if "deepseek" in model_name.lower():
             org = "deepseek-ai"
@@ -124,7 +120,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
                 {"role": "user", "content": prompt},
             ],
             "model": f"{org}/{model_name}",
-            "max_tokens": 1024 * 8,
+            "max_tokens": 8192,
             "temperature": 0,
         }
 
