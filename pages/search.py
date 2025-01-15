@@ -74,7 +74,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
     elif "claude" in model_name.lower():
         message = claude_client.messages.create(
             model=model_name,
-            max_tokens=1000,
+            max_tokens=2084,
             temperature=0,
             system=system_prompt,
             messages=[{"role": "user", "content": [{"type": "text", "text": prompt}]}],
@@ -97,7 +97,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt},
             ],
-            max_tokens= 8192,
+            max_tokens= 2084,
             temperature=0.0,
         )
 
@@ -120,7 +120,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
                 {"role": "user", "content": prompt},
             ],
             "model": f"{org}/{model_name}",
-            "max_tokens": 8192,
+            "max_tokens": 2084,
             "temperature": 0,
         }
 
@@ -453,7 +453,7 @@ def run(
                                 break
                             except:
                                 if i == max_tries - 1:
-                                    raise
+                                    metadata = {}
                                 time.sleep(5)
                                 show_info(f"⏰ Retrying ...", st_context=st_context)
 
