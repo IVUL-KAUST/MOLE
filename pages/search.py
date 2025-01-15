@@ -413,13 +413,21 @@ def run(
                     else:
                         if "gemini-1.5-pro" in model_name:
                             show_info(f"⏰ Waiting ...", st_context=st_context)
-                            time.sleep(30)  # pro has 2 RPM 50 req/day
+                            time.sleep(5)  # pro has 2 RPM 50 req/day
                         max_tries = 5
                         for i in range(max_tries):
                             try:
-                                message, metadata = get_metadata(
-                                    paper_text, model_name
-                                )
+                                base_model_path = save_path.replace('-browsing','')
+                                if browse_web and os.path.exists(base_model_path):
+                                    show_info("📂 Loading saved results ...", st_context=st_context)
+                                    results = json.load(open(base_model_path))
+                                    metadata = results['metadata']
+                                    cost = results['cost']
+                                else:
+                                    message, metadata = get_metadata(
+                                        paper_text, model_name
+                                    )
+                                    cost = compute_cost(message, model_name)
                                 if browse_web:
                                     readme, repo_link = fetch_repository_metadata(
                                         metadata
@@ -434,14 +442,20 @@ def run(
                                             readme=readme,
                                             metadata=metadata,
                                         )
+                                        browsing_cost = compute_cost(message, model_name)
+                                        cost = {
+                                            "cost": browsing_cost["cost"]+cost["cost"],
+                                            "input_tokens": cost["input_tokens"] + browsing_cost["input_tokens"],
+                                            "output_tokens": cost["output_tokens"] + browsing_cost["output_tokens"],
+                                        }
+                                    else:
+                                        message = None
                                 break
                             except:
                                 if i == max_tries - 1:
                                     raise
                                 time.sleep(5)
                                 show_info(f"⏰ Retrying ...", st_context=st_context)
-
-                    cost = compute_cost(message, model_name)
 
                     if model_name != "human":
                         if model_name in non_browsing_models:
@@ -462,7 +476,14 @@ def run(
 
                     results = {}
                     results["metadata"] = metadata
-                    results["cost"] = cost
+                    try:
+                        results["cost"] = cost
+                    except:
+                        results["cost"] = {
+                            "cost": 0,
+                            "input_tokens": 0,
+                            "output_tokens": 0,
+                        }
                     results["validation"] = validation_results
 
                     if browse_web and not (model_name in non_browsing_models):

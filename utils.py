@@ -36,6 +36,14 @@ def get_google_credentials():
 
 
 def compute_cost(message, model):
+    default = {
+        "cost": -1,
+        "input_tokens": -1,
+        "output_tokens": -1,
+    }
+    if message is None:
+        return default
+    
     try:
         if "gpt" in model:
             num_inp_tokens = message.usage.input_tokens
@@ -56,9 +64,7 @@ def compute_cost(message, model):
 
     except:
         print("Unrecognized model name")
-        num_inp_tokens = -1
-        num_out_tokens = -1
-        cost = -1
+        return default
 
     return {
         "cost": cost,
