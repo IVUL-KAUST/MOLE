@@ -235,12 +235,12 @@ def evaluate_metadata(gold_metadata, pred_metadata):
                 results["AVERAGE"] += 1
             continue
         elif column in ["Derived From", "Tasks"]:
-            if all_same(gold_answer, pred_answer):
+            if has_common(gold_answer, pred_answer):
                 results["EVALUATION"] += 1
                 results["AVERAGE"] += 1
                 continue
         elif column in ["Collection Style", "Domain"]:
-            if all_same(gold_answer, pred_answer):
+            if has_common(gold_answer, pred_answer):
                 results["CONTENT"] += 1
                 results["AVERAGE"] += 1
                 continue
