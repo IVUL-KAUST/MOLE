@@ -455,25 +455,26 @@ def read_json(text_json):
         return {}
     return results
 
+def get_repo_link(metadata, repo_link = ""):
+    link = ""
 
-def fetch_repository_metadata(metadata):
-    if "Link" in metadata:
+    if repo_link != "":
+        link = repo_link
+    elif "Link" in metadata:
         link = metadata["Link"]
     elif "HF Link" in metadata:
         if metadata["HF Link"] != "":
             link = metadata["Link"]
-    else:
-        return "", ""
+    return link
 
-    if link is None:
-        return "", ""
 
+def fetch_repository_metadata(link):
     if "hf" in link or "huggingface" in link:
         api_url = f"{link}/raw/main/README.md"
 
         response = requests.get(api_url)
         readme = response.text
-        return readme, link
+        return readme
 
     elif "github" in link:
         parts = link.rstrip("/").split("/")
@@ -498,9 +499,9 @@ def fetch_repository_metadata(metadata):
         except:
             license_info = "unknown"
 
-        return f"License: {license_info}\nReadme: {readme_content}".strip(), link
+        return f"License: {license_info}\nReadme: {readme_content}".strip()
     else:
         try:
-            return scrape_website_fc(link), link
+            return scrape_website_fc(link)
         except:
-            return "", link
+            return ""

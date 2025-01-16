@@ -10,7 +10,7 @@ from openai import OpenAI
 from utils import *
 import argparse
 import google.generativeai as genai  # type: ignore
-
+from bs4 import BeautifulSoup
 import streamlit as st  # type: ignore
 from constants import *
 from datetime import datetime
@@ -22,7 +22,9 @@ import json
 load_dotenv()
 claude_client = anthropic.Anthropic(api_key=os.environ["anthropic_key"])
 chatgpt_client = OpenAI(api_key=os.environ["chatgpt_key"])
-deepseek_client = OpenAI(api_key=os.environ['deepseek_key'], base_url="https://api.deepseek.com")
+deepseek_client = OpenAI(
+    api_key=os.environ["deepseek_key"], base_url="https://api.deepseek.com"
+)
 
 # google cloud authenticate
 credentials = get_google_credentials()
@@ -35,6 +37,48 @@ logger = setup_logger()
 
 def compute_filling(metadata):
     return len([m for m in metadata if m != ""]) / len(metadata)
+
+
+def extract_and_generate_readme(url):
+    """
+    Extracts a web page from a URL and uses Gemini-1.5-Flash to convert it into a structured README.
+
+    Args:
+        url (str): The URL of the web page to extract.
+
+    Returns:
+        str: Generated README text.
+    """
+    # Step 1: Extract Web Page Content
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+
+        # Extract the main content (you can customize this for better results)
+        title = soup.title.string if soup.title else "Untitled Page"
+        body = " ".join([p.get_text() for p in soup.find_all("p")])
+        content = f"Title: {title}\n\n{body}"
+    except Exception as e:
+        return f"Failed to fetch or parse the URL: {e}"
+
+    try:
+        model = GenerativeModel(
+            "gemini-1.5-flash",
+            system_instruction="Generate a structured README summarizing this content.",
+        )
+
+        message = model.generate_content(
+            content,
+            generation_config=GenerationConfig(
+                max_output_tokens=1000,
+                temperature=0.0,
+            ),
+        )
+
+        return message.text
+    except Exception as e:
+        return f"Failed to generate README: {e}"
 
 
 def is_resource(abstract):
@@ -90,23 +134,23 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
             temperature=0,
         )
         response = message.choices[0].message.content.strip()
-    elif 'deepseek' in model_name.lower():
+    elif "deepseek" in model_name.lower():
         message = deepseek_client.chat.completions.create(
             model="deepseek-chat",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt},
             ],
-            max_tokens= 2084,
+            max_tokens=2084,
             temperature=0.0,
         )
 
         response = message.choices[0].message.content
-    elif any([m in model_name.lower() for m in ['deepseek','llama', 'q']]):
+    elif any([m in model_name.lower() for m in ["deepseek", "llama", "q"]]):
         if "deepseek" in model_name.lower():
             org = "deepseek-ai"
         elif "q" in model_name.lower():
-            org = 'Qwen'
+            org = "Qwen"
         else:
             org = "meta-llama"
         url = "https://api.hyperbolic.xyz/v1/chat/completions"
@@ -220,6 +264,7 @@ def run(
     month=None,
     keywords="",
     link="",
+    repo_link="",
     check_abstract=False,
     models=["gemini-1.5-flash"],
     overwrite=False,
@@ -417,24 +462,34 @@ def run(
                         max_tries = 5
                         for i in range(max_tries):
                             try:
-                                base_model_path = save_path.replace('-browsing','')
+                                base_model_path = save_path.replace("-browsing", "")
                                 if browse_web and os.path.exists(base_model_path):
-                                    show_info("📂 Loading saved results ...", st_context=st_context)
+                                    show_info(
+                                        "📂 Loading saved results ...",
+                                        st_context=st_context,
+                                    )
                                     results = json.load(open(base_model_path))
-                                    metadata = results['metadata']
-                                    cost = results['cost']
+                                    metadata = results["metadata"]
+                                    cost = results["cost"]
                                 else:
                                     message, metadata = get_metadata(
                                         paper_text, model_name
                                     )
                                     cost = compute_cost(message, model_name)
                                 if browse_web:
-                                    readme, repo_link = fetch_repository_metadata(
-                                        metadata
+                                    browsing_link = get_repo_link(
+                                        metadata, repo_link=repo_link
                                     )
+                                    show_info(
+                                        f"📖 Extracting readme from {browsing_link}",
+                                        st_context=st_context,
+                                    )
+                                    readme = fetch_repository_metadata(browsing_link)
+                                    if readme == "":
+                                        readme = extract_and_generate_readme(browsing_link)
                                     if readme != "":
                                         show_info(
-                                            f"🌐 Browsing {repo_link}",
+                                            f"🌐 Browsing {browsing_link}",
                                             st_context=st_context,
                                         )
                                         message, metadata = get_metadata(
@@ -442,11 +497,16 @@ def run(
                                             readme=readme,
                                             metadata=metadata,
                                         )
-                                        browsing_cost = compute_cost(message, model_name)
+                                        browsing_cost = compute_cost(
+                                            message, model_name
+                                        )
                                         cost = {
-                                            "cost": browsing_cost["cost"]+cost["cost"],
-                                            "input_tokens": cost["input_tokens"] + browsing_cost["input_tokens"],
-                                            "output_tokens": cost["output_tokens"] + browsing_cost["output_tokens"],
+                                            "cost": browsing_cost["cost"]
+                                            + cost["cost"],
+                                            "input_tokens": cost["input_tokens"]
+                                            + browsing_cost["input_tokens"],
+                                            "output_tokens": cost["output_tokens"]
+                                            + browsing_cost["output_tokens"],
                                         }
                                     else:
                                         message = None
