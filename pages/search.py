@@ -61,7 +61,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
     if paper_text != "":
         prompt = f"You are given a dataset paper '{paper_text}', you are requested to answer the following questions about the dataset {questions}"
     else:
-        prompt = f"You are given the following metadata: '{metadata}', and readme: '{readme}'. Please prioritze the answers from the readme. You are requested to answer the following questions about the dataset {questions}"
+        prompt = f"You are given the following metadata: '{metadata}', and readme: '{readme}'. Create an answer that combines both results from the readme and the metadata. You are requested to answer the following questions about the dataset {questions}"
 
     if "gemini" in model_name.lower():
         model = GenerativeModel(model_name, system_instruction=system_prompt)
