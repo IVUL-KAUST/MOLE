@@ -16,6 +16,7 @@ if __name__ == "__main__":
         data_names = []
         paper_links = []
         years = []
+        links = []
 
         if args.masader_validate:
             dataset = masader_valid_dataset
@@ -29,15 +30,17 @@ if __name__ == "__main__":
             data_names.append(str(x["Name"]))
             paper_links.append(str(x["Paper Link"]))
             years.append(str(x["Year"]))
+            links.append(x["Link"])
     else:
         data_names = args.keywords.split(",")
         titles = ["" for _ in data_names]
         paper_links = ["" for _ in data_names]
         years = ["" for _ in data_names]
+        links = ["" for _ in data_names]
 
     len_data = len(data_names)
 
-    for data_name, title, paper_link, year in zip(data_names, titles, paper_links, years):
+    for data_name, title, paper_link, year, link in zip(data_names, titles, paper_links, years, links):
         if title != "":
             title = title.replace("\r\n", " ")
             title = title.replace(":", "")
@@ -46,16 +49,17 @@ if __name__ == "__main__":
             args.keywords = data_name
 
         if paper_link != "":
-            link = fix_arxiv_link(paper_link)
+            paper_link = fix_arxiv_link(paper_link)
             model_results = run(
                 mode="api",
-                link=link,
+                link=paper_link,
                 year=year,
                 month=None,
                 models=args.models.split(","),
                 browse_web=args.browse_web,
                 overwrite=args.overwrite,
                 use_split=use_split,
+                repo_link=link,
             )
         else:
             model_results = run(
@@ -67,6 +71,7 @@ if __name__ == "__main__":
                 browse_web=args.browse_web,
                 overwrite=args.overwrite,
                 use_split=use_split,
+                repo_link=link,
             )
 
         for model_name in model_results:
