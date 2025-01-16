@@ -39,48 +39,6 @@ def compute_filling(metadata):
     return len([m for m in metadata if m != ""]) / len(metadata)
 
 
-def extract_and_generate_readme(url):
-    """
-    Extracts a web page from a URL and uses Gemini-1.5-Flash to convert it into a structured README.
-
-    Args:
-        url (str): The URL of the web page to extract.
-
-    Returns:
-        str: Generated README text.
-    """
-    # Step 1: Extract Web Page Content
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
-
-        # Extract the main content (you can customize this for better results)
-        title = soup.title.string if soup.title else "Untitled Page"
-        body = " ".join([p.get_text() for p in soup.find_all("p")])
-        content = f"Title: {title}\n\n{body}"
-    except Exception as e:
-        return f"Failed to fetch or parse the URL: {e}"
-
-    try:
-        model = GenerativeModel(
-            "gemini-1.5-flash",
-            system_instruction="Generate a structured README summarizing this content.",
-        )
-
-        message = model.generate_content(
-            content,
-            generation_config=GenerationConfig(
-                max_output_tokens=1000,
-                temperature=0.0,
-            ),
-        )
-
-        return message.text
-    except Exception as e:
-        return f"Failed to generate README: {e}"
-
-
 def is_resource(abstract):
     prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published Arabic dataset or multilingual dataset that contains Arabic? please answer 'yes' or 'no' only"
     model = GenerativeModel(
@@ -447,12 +405,10 @@ def run(
                                 all_results.append(json.load(open(file)))
                         message, metadata = get_metadata_judge(all_results)
                     elif "human" in model_name.lower():
-                        if title == "":
-                            message, metadata = get_metadata_human(
-                                article_url, use_link=True
-                            )
-                        else:
-                            message, metadata = get_metadata_human(title)
+                        assert use_split is not None
+                        metadata = get_metadata_human(
+                            use_split=use_split, link=article_url, title=title
+                        )
                     elif "baseline" in model_name.lower():
                         message, metadata = "", {}
                     else:
@@ -485,11 +441,10 @@ def run(
                                         st_context=st_context,
                                     )
                                     readme = fetch_repository_metadata(browsing_link)
-                                    if readme == "":
-                                        readme = extract_and_generate_readme(browsing_link)
+
                                     if readme != "":
                                         show_info(
-                                            f"🌐 Browsing {browsing_link}",
+                                            f"🧠🌐 {model_name} is extracting data using metadata and web ...",
                                             st_context=st_context,
                                         )
                                         message, metadata = get_metadata(
