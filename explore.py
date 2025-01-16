@@ -60,52 +60,51 @@ def main():
 
     if "output" not in st.session_state:
         st.session_state["output"] = ""
-    with col1:
-        for arxiv_id in all_jsons:
-            metadata = all_jsons[arxiv_id][0]["metadata"]
-            title = metadata["Paper Title"]
-            with st.expander(title):
-                models = st.multiselect(
-                    "Select a model:",
-                    [r["config"]["model_name"] for r in all_jsons[arxiv_id]],
-                    key=f"{arxiv_id}_model",
-                )
-                compare = st.button("Compare", key=f"{arxiv_id}_compare_btn")
-                show_diff = st.toggle("show diff", key=f"{arxiv_id}_show_diff")
-                eval_all = st.button("Eval Table", key=f"{arxiv_id}_compare_all_btn")
-                if compare:
-                    if len(models) >= 1:
-                        results = [
-                            r
-                            for r in all_jsons[arxiv_id]
-                            if r["config"]["model_name"] in models
-                        ]
-                        st.session_state["output"] = compare_results(
-                            results, show_diff=show_diff
-                        )
-                    elif len(models) == 1:
-                        for model in models:
-                            for result in all_jsons[arxiv_id]:
-                                if result["config"]["model_name"] == model:
-                                    st.link_button(
-                                        "Open using Masader Form",
-                                        f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{result['relative_path']}",
-                                    )
-                                    st.session_state["output"] = result["metadata"]
-                    else:
-                        raise ()
-                if eval_all:
-                    scores = {}
-                    for result in all_jsons[arxiv_id]:
-                        scores[result["config"]["model_name"]] = result["validation"]
-                    df = pd.DataFrame(scores)
-                    df = df.map(lambda x: x * 100)
-                    df = df.transpose().sort_values("AVERAGE")
-                    df = df.map("{0:.2f}".format)
-                    st.session_state["output"] = df
-
-    with col2:
-        st.write(st.session_state["output"])
+    for arxiv_id in all_jsons:
+        metadata = all_jsons[arxiv_id][0]["metadata"]
+        title = metadata["Paper Title"]
+        with st.expander(title):
+            models = st.multiselect(
+                "Select a model:",
+                [r["config"]["model_name"] for r in all_jsons[arxiv_id]],
+                key=f"{arxiv_id}_model",
+            )
+            compare = st.button("Compare", key=f"{arxiv_id}_compare_btn")
+            show_diff = st.toggle("show diff", key=f"{arxiv_id}_show_diff")
+            eval_all = st.button("Eval Table", key=f"{arxiv_id}_compare_all_btn")
+            if compare:
+                if len(models) >= 1:
+                    results = [
+                        r
+                        for r in all_jsons[arxiv_id]
+                        if r["config"]["model_name"] in models
+                    ]
+                    st.session_state["output"] = compare_results(
+                        results, show_diff=show_diff
+                    )
+                    st.write(st.session_state["output"])
+                elif len(models) == 1:
+                    for model in models:
+                        for result in all_jsons[arxiv_id]:
+                            if result["config"]["model_name"] == model:
+                                st.link_button(
+                                    "Open using Masader Form",
+                                    f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{result['relative_path']}",
+                                )
+                                st.session_state["output"] = result["metadata"]
+                                st.write(st.session_state["output"])
+                else:
+                    raise ()
+            if eval_all:
+                scores = {}
+                for result in all_jsons[arxiv_id]:
+                    scores[result["config"]["model_name"]] = result["validation"]
+                df = pd.DataFrame(scores)
+                df = df.map(lambda x: x * 100)
+                df = df.transpose().sort_values("AVERAGE")
+                df = df.map("{0:.2f}".format)
+                st.session_state["output"] = df
+                st.write(df)
 
 
 if __name__ == "__main__":
