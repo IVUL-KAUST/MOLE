@@ -15,15 +15,58 @@ import json
 import random
 import base64
 import os
+from bs4 import BeautifulSoup
 from google.oauth2 import service_account
+from vertexai.generative_models import GenerativeModel, GenerationConfig  # type: ignore
 
 random.seed(0)
 
-masader_dataset = load_dataset("arbml/masader", download_mode="")["train"]
+# masader_dataset = load_dataset("arbml/masader", download_mode="")["train"]
 masader_valid_dataset = load_dataset("json", data_files=glob("validset/**.json"))[
     "train"
 ]
 masader_test_dataset = load_dataset("json", data_files=glob("testset/**.json"))["train"]
+
+def extract_and_generate_readme(url):
+    """
+    Extracts a web page from a URL and uses Gemini-1.5-Flash to convert it into a structured README.
+
+    Args:
+        url (str): The URL of the web page to extract.
+
+    Returns:
+        str: Generated README text.
+    """
+    # Step 1: Extract Web Page Content
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+
+        # Extract the main content (you can customize this for better results)
+        title = soup.title.string if soup.title else "Untitled Page"
+        body = " ".join([p.get_text() for p in soup.find_all("p")])
+        content = f"Title: {title}\n\n{body}"
+    except Exception as e:
+        return f"Failed to fetch or parse the URL: {e}"
+
+    try:
+        model = GenerativeModel(
+            "gemini-1.5-flash",
+            system_instruction="Generate a structured README summarizing this content.",
+        )
+
+        message = model.generate_content(
+            content,
+            generation_config=GenerationConfig(
+                max_output_tokens=1000,
+                temperature=0.0,
+            ),
+        )
+
+        return message.text
+    except Exception as e:
+        return f"Failed to generate README: {e}"
 
 
 def get_google_credentials():
@@ -225,7 +268,8 @@ def validate(metadata, use_split=None, title="", link=""):
         elif use_split == "valid":
             dataset = masader_valid_dataset
     else:
-        dataset = masader_dataset
+        pass
+        # dataset = masader_dataset
 
     for row in dataset:
 
@@ -287,17 +331,20 @@ def get_paper_id(link):
     return link.split("/")[-1]
 
 
-def get_metadata_human(paper_title, use_link=False):
-    for row in masader_dataset:
-        if use_link:
-            if (
-                match_titles(get_paper_id(paper_title), get_paper_id(row["Paper Link"]))
-                > 0.8
-            ):
-                return "", row
+def get_metadata_human(title = "", link = "", use_split = 'test'):
+    dataset = masader_test_dataset
+    if use_split == 'valid':
+        dataset = masader_valid_dataset
+
+    for row in dataset:
+        if title != "":
+            if title == row["Paper Title"]:
+                return row
+        elif link != "":
+            if link == fix_arxiv_link(row["Paper Link"]):
+                return row
         else:
-            if match_titles(str(paper_title), row["Paper Title"]) > 0.8:
-                return "", row
+            raise()
 
 
 def compare_results(rs, show_diff=False):
@@ -501,7 +548,4 @@ def fetch_repository_metadata(link):
 
         return f"License: {license_info}\nReadme: {readme_content}".strip()
     else:
-        try:
-            return scrape_website_fc(link)
-        except:
-            return ""
+        return extract_and_generate_readme(link)
