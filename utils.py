@@ -1,25 +1,29 @@
-import logging
-import sys
-import time
-import threading
-from functools import wraps
-import pandas as pd
-from constants import *
-import difflib
-import requests
-from base64 import b64decode
-from firecrawl import FirecrawlApp  # type: ignore
-import os
-import re
-import json
-import random
+# Standard library imports
 import base64
+import difflib
+import json
+import logging
 import os
+import random
+import re
+import sys
+import threading
+import time
+from base64 import b64decode
+from functools import wraps
+from glob import glob
+
+# Third-party imports
+import pandas as pd
+import requests
 from bs4 import BeautifulSoup
+from datasets import load_dataset
 from google.oauth2 import service_account
 from vertexai.generative_models import GenerativeModel, GenerationConfig  # type: ignore
-from datasets import load_dataset
-from glob import glob
+
+# Local imports
+from constants import *
+from firecrawl import FirecrawlApp  # type: ignore
 
 random.seed(0)
 
@@ -28,6 +32,7 @@ masader_valid_dataset = load_dataset("json", data_files=glob("validset/**.json")
     "train"
 ]
 masader_test_dataset = load_dataset("json", data_files=glob("testset/**.json"))["train"]
+
 
 def extract_and_generate_readme(url):
     """
@@ -88,7 +93,7 @@ def compute_cost(message, model):
     }
     if message is None:
         return default
-    
+
     try:
         if "gpt" in model:
             num_inp_tokens = message.usage.input_tokens
@@ -333,9 +338,9 @@ def get_paper_id(link):
     return link.split("/")[-1]
 
 
-def get_metadata_human(title = "", link = "", use_split = 'test'):
+def get_metadata_human(title="", link="", use_split="test"):
     dataset = masader_test_dataset
-    if use_split == 'valid':
+    if use_split == "valid":
         dataset = masader_valid_dataset
 
     for row in dataset:
@@ -346,7 +351,7 @@ def get_metadata_human(title = "", link = "", use_split = 'test'):
             if link == fix_arxiv_link(row["Paper Link"]):
                 return row
         else:
-            raise()
+            raise ()
 
 
 def compare_results(rs, show_diff=False):
@@ -504,7 +509,8 @@ def read_json(text_json):
         return {}
     return results
 
-def get_repo_link(metadata, repo_link = ""):
+
+def get_repo_link(metadata, repo_link=""):
     link = ""
 
     if repo_link != "":
