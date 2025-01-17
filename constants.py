@@ -1,6 +1,8 @@
-from datasets import load_dataset
-from glob import glob
-
+from vertexai.generative_models import (
+    HarmCategory,
+    HarmBlockThreshold,
+    SafetySetting,
+)
 MODEL_NAMES = ["gemini-1.5-flash", "gemini-1.5-pro", "claude-3-5-sonnet-latest", "claude-3-5-haiku-latest", "judge"]
 
 dialect_remapped = {'Classical Arabic': 'ar-CLS: (Arabic (Classic))','Modern Standard Arabic': 'ar-MSA: (Arabic (Modern Standard Arabic))','United Arab Emirates': 'ar-AE: (Arabic (United Arab Emirates))','Bahrain': 'ar-BH: (Arabic (Bahrain))','Djibouti': 'ar-DJ: (Arabic (Djibouti))','Algeria': 'ar-DZ: (Arabic (Algeria))','Egypt': 'ar-EG: (Arabic (Egypt))','Iraq': 'ar-IQ: (Arabic (Iraq))','Jordan': 'ar-JO: (Arabic (Jordan))','Comoros': 'ar-KM: (Arabic (Comoros))','Kuwait': 'ar-KW: (Arabic (Kuwait))','Lebanon': 'ar-LB: (Arabic (Lebanon))','Libya': 'ar-LY: (Arabic (Libya))','Morocco': 'ar-MA: (Arabic (Morocco))','Mauritania': 'ar-MR: (Arabic (Mauritania))','Oman': 'ar-OM: (Arabic (Oman))','Palestine': 'ar-PS: (Arabic (Palestine))','Qatar': 'ar-QA: (Arabic (Qatar))','Saudi Arabia': 'ar-SA: (Arabic (Saudi Arabia))','Sudan': 'ar-SD: (Arabic (Sudan))','Somalia': 'ar-SO: (Arabic (Somalia))','South Sudan': 'ar-SS: (Arabic (South Sudan))','Syria': 'ar-SY: (Arabic (Syria))','Tunisia': 'ar-TN: (Arabic (Tunisia))','Yemen': 'ar-YE: (Arabic (Yemen))','Levant': 'ar-LEV: (Arabic (Levant))','North Africa': 'ar-NOR: (Arabic (North Africa))','Gulf': 'ar-GLF: (Arabic (Gulf))','mixed': 'mixed'}
@@ -8,7 +10,7 @@ column_options = {
     'License': 'Apache-2.0,Non Commercial Use - ELRA END USER,BSD,CC BY 2.0,CC BY 3.0,CC BY 4.0,CC BY-NC 2.0,CC BY-NC-ND 4.0,CC BY-SA,CC BY-SA 3.0,CC BY-NC 4.0,CC BY-NC-SA 4.0,CC BY-SA 3.0,CC BY-SA 4.0,CC0,CDLA-Permissive-1.0,GPL-2.0,LDC User Agreement,LGPL-3.0,MIT License,ODbl-1.0,MPL-2.0,ODC-By,unknown,custom',
     'Dialect': ','.join(list(dialect_remapped.keys())),
     'Language': 'ar,multilingual',
-    'Collection Style': 'crawling,annotation,machine translation,human translation,manual curation,LLM generated,other',
+    'Collection Style': 'crawling,human annotation,machine annotation,manual curation,LLM generated,other',
     'Domain': 'social media,news articles,reviews,commentary,books,wikipedia,web pages,public datasets,TV Channels,captions,LLM,other',
     'Form': 'text,spoken,images',
     'Unit': 'tokens,sentences,documents,hours,images',
@@ -51,14 +53,14 @@ questions = f"Name: What is the name of the dataset? Only use a short name of th
   Collection Style: How was this dataset collected? Options: {column_options['Collection Style']} \n\
   Description: Write a brief description of the dataset. \n\
   Volume: What is the size of the dataset? Output numbers only with , seperated each thousand\n\
-  Unit: What kind of examples does the dataset include? Options: {column_options['Unit']} \n\
+  Unit: What kind of examples does the dataset include? Options: {column_options['Unit']}. Only use documents for web pages or datasets that contain long context. \n\
   Ethical Risks: What is the level of the ethical risks of the dataset? Use Medium for social media datasets and High for hate/offensive datasets from social media, else use Low. Options: {column_options['Ethical Risks']}\n\
-  Provider: What entity is the provider of the dataset? \n\
+  Provider: What entity is the provider of the dataset? Don't use Team.\n\
   Derived From: What datasets were used to create the dataset? separate them by comma. \n\
   Paper Title: What is the paper title? \n\
   Paper Link: What is the paper link? \n\
-  Script: What is the script of this dataset? Options: {column_options['Script']} \n\
-  Tokenized: Is the dataset tokenized? Options: {column_options['Tokenized']} \n\
+  Script: What is the script of this dataset? Options: {column_options['Script']}. Latin means it has samples written in Latin like Arabizi or transliteration.\n\
+  Tokenized: Is the dataset tokenized? Options: {column_options['Tokenized']}. Tokenized means the words are split using a morphological analyzer. \n\
   Host: Who is the host of the dataset? Options: {column_options['Host']} \n\
   Access: What is the accessability of the dataset? Options: {column_options['Access']} \n\
   Cost: What is the cost of the dataset? If the dataset is free don't output anything. \n\
@@ -77,11 +79,74 @@ system_prompt = "You are a profressional research paper reader. You will be prov
             If the question has no options and the answer is not found in the paper, then answer ''. \
             Each question is in the format Key:question, please use Key as a json key for each question and return the answer in json"
 
-masader_dataset = load_dataset('arbml/masader', keep_in_memory=True)['train']
-masader_valid_dataset = load_dataset('json', data_files = glob('validset/**.json'), keep_in_memory=True)['train']
-masader_test_dataset = load_dataset('json', data_files = glob('testset/**.json'), keep_in_memory=True)['train']
-
 TEST_DATASETS_IDS = ['1709.07276', '1610.00572', '2404.00565', '2201.06723', '2402.07448', '2210.12985', '2106.10745', '1812.10464', '1910.07475', '2004.06465', '2103.09687', '2004.14303', '2005.06608', '1808.07674', '2106.03193', '1612.08989', '1610.09565', '1809.03891', '1402.0578', '1410.3791', '1910.10683', '1907.03110', '2407.19835', '2010.11856', '1809.05053']
 VALID_DATASETS_IDS = ['1609.05625', '2402.03177', '2405.01590', '2402.12840', '1906.00591']
 
 non_browsing_models = ['human', 'judge' ,'baseline-first', 'baseline-last', 'baseline-random']
+
+costs = {
+    "gpt-4o":{
+        "input": 2.5,
+        "output": 10
+    }
+    ,
+    "gpt-4o-mini":{
+        "input": 0.150,
+        "output": 0.60
+    }
+    ,
+    "o1":{
+        "input": 15,
+        "output": 60
+    }
+    ,
+    "o1-preview":{
+        "input": 15,
+        "output": 60
+    },
+    "o1-mini":{
+        "input": 3,
+        "output": 12
+    }
+    ,
+    "DeepSeek-V3":{
+        "input": 0.014,
+        "output": 0.14
+    },
+    "cloude-3-5-sonnet-latest":{
+        "input": 3,
+        "output": 15
+    }
+    ,
+    "cloude-3-5-haiku-latest":{
+        "input": 0.8,
+        "output": 4
+    },
+    "gemini-1.5-flash":{
+        "input": 0.075,
+        "output": 0.30
+    },
+    "gemini-1.5-flash-8b":{
+        "input": 0.0375,
+        "output": 0.15
+    },
+    "gemini-1.5-pro":{
+        "input": 1.25,
+        "output": 5
+    }
+}
+
+SAFETY_CONFIG_GEMINI = [
+    SafetySetting(
+        category=HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+        threshold=HarmBlockThreshold.BLOCK_NONE,
+    ),
+    SafetySetting(
+        category=HarmCategory.HARM_CATEGORY_HARASSMENT,
+        threshold=HarmBlockThreshold.BLOCK_NONE,
+    ),
+    SafetySetting(
+        category=HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+        threshold=HarmBlockThreshold.BLOCK_NONE,
+    ),
+]

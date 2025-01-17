@@ -88,6 +88,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
             generation_config=GenerationConfig(
                 temperature=0.0,
             ),
+            safety_settings=SAFETY_CONFIG_GEMINI
         )
         response = message.text.strip()
     elif "claude" in model_name.lower():
@@ -493,6 +494,7 @@ def run(
                                 if i == max_tries - 1:
                                     metadata = {}
                                 time.sleep(5)
+                                print(message)
                                 show_info(f"⏰ Retrying ...", st_context=st_context)
 
                     if model_name != "human":
