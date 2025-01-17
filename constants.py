@@ -40,44 +40,63 @@ for c in evaluation_subsets:
 
 NUM_VALIDATION_COLUMNS  = len(validation_columns)
 column_options['Dialect_no_mixed'] = ','.join(list(dialect_remapped.keys())[:-1])
-questions = f"Name: What is the name of the dataset? Only use a short name of the dataset. \n\
-  Subsets: What are the dialect subsets of this dataset? Each subset must corrspond to a dialect from {column_options['Dialect_no_mixed']}. If there are no subsets output []. If there are subsets, it should be returned as a list of jsons where each json shows the Name, Volume, Unit and Dialect of each subset. The Unit must be from {column_options['Unit']}\n\
-  Link: What is the link to access the dataset? The link most contain the dataset. \n\
-  HF Link: What is the Huggingface link of the dataset? \n\
-  License: What is the License of the dataset? Options: {column_options['License']} \n\
-  Year: What year was the dataset published? \n\
-  Language: Is the dataset {column_options['Language']}? \n\
-  Dialect: Choose a dialect for the dataset from the following options: {column_options['Dialect']}. If the type of the dialect is not clear output mixed. \n\
-  Domain What is the domain of the dataset? Options: {column_options['Domain']} \n\
-  Form: What is the form of the dataset? Options {column_options['Form']} \n\
-  Collection Style: How was this dataset collected? Options: {column_options['Collection Style']} \n\
-  Description: Write a brief description of the dataset. \n\
-  Volume: What is the size of the dataset? Output numbers only with , seperated each thousand\n\
-  Unit: What kind of examples does the dataset include? Options: {column_options['Unit']}. Only use documents for web pages or datasets that contain long context. \n\
-  Ethical Risks: What is the level of the ethical risks of the dataset? Use Medium for social media datasets and High for hate/offensive datasets from social media, else use Low. Options: {column_options['Ethical Risks']}\n\
-  Provider: What entity is the provider of the dataset? Don't use Team.\n\
-  Derived From: What datasets were used to create the dataset? separate them by comma. \n\
-  Paper Title: What is the paper title? \n\
-  Paper Link: What is the paper link? \n\
-  Script: What is the script of this dataset? Options: {column_options['Script']}. Latin means it has samples written in Latin like Arabizi or transliteration.\n\
-  Tokenized: Is the dataset tokenized? Options: {column_options['Tokenized']}. Tokenized means the words are split using a morphological analyzer. \n\
-  Host: Who is the host of the dataset? Options: {column_options['Host']} \n\
-  Access: What is the accessability of the dataset? Options: {column_options['Access']} \n\
-  Cost: What is the cost of the dataset? If the dataset is free don't output anything. \n\
-  Test Split: Does the dataset contain a test split? Options: {column_options['Test Split']} \n\
-  Tasks: What are the tasks of the dataset. Separate them by ','. Options: {column_options['Tasks']} \n\
-  Venue Title: What is the Venue title this paper was published in? \n\
-  Citations: How many citations this paper got? \n\
-  Venue Type: What is the venue the dataset is published in? Options: {column_options['Venue Type']} \n\
-  Venue Name: What is the Venue full name this paper was published in? \n\
-  Authors: Who are the authors of the paper, list them separated by comma. \n\
-  Affiliations: What are the affiliations of the authors, separate by comma. \n\
-  Abstract: What is the abstract of the dataset?"
+questions = f"""Name: What is the name of the dataset? Only use a short name of the dataset. 
+  Subsets: What are the dialect subsets of this dataset? Each subset must corrspond to a dialect from {column_options['Dialect_no_mixed']}. If there are no subsets output []. If there are subsets, it should be returned as a list of jsons where each json shows the Name, Volume, Unit and Dialect of each subset. The Unit must be from {column_options['Unit']}
+  Link: What is the link to access the dataset? The link most contain the dataset. 
+  HF Link: What is the Huggingface link of the dataset? 
+  License: What is the License of the dataset? Options: {column_options['License']} 
+  Year: What year was the dataset published? 
+  Language: Is the dataset {column_options['Language']}?
+  ar-> the dataset is purly in Arabic, there are no other language envolved.
+  multilingual-> the dataset contains samples in other languages. 
+  Dialect: Choose a dialect for the dataset from the following options: {column_options['Dialect']}. If the type of the dialect is not clear output mixed. 
+  Domain What is the domain of the dataset? Options: {column_options['Domain']} 
+  Form: What is the form of the dataset? Options {column_options['Form']} 
+  Collection Style: How was this dataset collected? Options: {column_options['Collection Style']} 
+  Volume: What is the size of the dataset? Output numbers only with , seperated each thousand
+  Unit: What kind of examples does the dataset include? Options: {column_options['Unit']}.
+  tokens-> the dataset is purly in Arabic, there are no other language envolved.
+  sentences-> the samples are sentences or short paragraphs.
+  documents-> the samples are long documents i.e. web pages or books. 
+  hours-> the samples are audio files.
+  images-> the samples are images.
+  Ethical Risks: What is the level of the ethical risks of the dataset? Options: {column_options['Ethical Risks']}
+  Low-> most likely no ethical risks associated with this dataset
+  Medium-> usually social media datasets
+  High-> hate/offensive datasets from social media, or web pages. 
+  Provider: What entity is the provider of the dataset? Don't use Team.
+  Derived From: What datasets were used to create the dataset? separate them by comma. 
+  Paper Title: What is the paper title? 
+  Paper Link: What is the paper link? 
+  Script: What is the script of this dataset? Options: {column_options['Script']}.
+  Arab-> the script used is only in Arabic. 
+  Latin-> the script used is only in Latin i.e. it has samples written in Latin like Arabizi or transliteration.
+  Arab-Latin-> the script used is a mix of Arabic and Latin. 
+  Tokenized: Is the dataset tokenized? Options: {column_options['Tokenized']}.
+  Yes-> the dataset is tokenized. Tokenized means the words are split using a morphological analyzer. 
+  No-> the dataset is not tokenized. 
+  Host: Who is the host of the dataset? Options: {column_options['Host']} 
+  Access: What is the accessability of the dataset? Options: {column_options['Access']} 
+  Free-> the dataset is free to access.
+  Upon-Request-> the dataset is free to access but requires a agreeing to a license or sending a form.
+  With-Fee-> the dataset is not free to access.
+  Cost: What is the cost of the dataset? If the dataset is free don't output anything. 
+  Test Split: Does the dataset contain a test split? Options: {column_options['Test Split']} 
+  Tasks: What are the tasks of the dataset. Separate them by ','. Options: {column_options['Tasks']} 
+  Venue Title: What is the Venue title this paper was published in? 
+  Citations: How many citations this paper got? 
+  Venue Type: What is the venue the dataset is published in? Options: {column_options['Venue Type']} 
+  Venue Name: What is the Venue full name this paper was published in? 
+  Authors: Who are the authors of the paper, list them separated by comma. 
+  Affiliations: What are the affiliations of the authors, separate by comma. 
+  Abstract: What is the abstract of the dataset?"""
 
 system_prompt = "You are a profressional research paper reader. You will be provided 33 questions. \
             If a question has options which are separated by ',' , only provide an answer from the options. \
             If the question has no options and the answer is not found in the paper, then answer ''. \
-            Each question is in the format Key:question, please use Key as a json key for each question and return the answer in json"
+            Each question is in the format Key:question, please use Key as a json key for each question and return the answer in json\
+            A question might be followed by a description of the options in the form option->description. Please read it carefully. \
+            "
 
 TEST_DATASETS_IDS = ['1709.07276', '1610.00572', '2404.00565', '2201.06723', '2402.07448', '2210.12985', '2106.10745', '1812.10464', '1910.07475', '2004.06465', '2103.09687', '2004.14303', '2005.06608', '1808.07674', '2106.03193', '1612.08989', '1610.09565', '1809.03891', '1402.0578', '1410.3791', '1910.10683', '1907.03110', '2407.19835', '2010.11856', '1809.05053']
 VALID_DATASETS_IDS = ['1609.05625', '2402.03177', '2405.01590', '2402.12840', '1906.00591']
