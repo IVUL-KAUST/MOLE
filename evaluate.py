@@ -60,6 +60,7 @@ if __name__ == "__main__":
                 overwrite=args.overwrite,
                 use_split=use_split,
                 repo_link=link,
+                summarize = args.summarize
             )
         else:
             model_results = run(
@@ -72,6 +73,7 @@ if __name__ == "__main__":
                 overwrite=args.overwrite,
                 use_split=use_split,
                 repo_link=link,
+                summarize = args.summarize
             )
 
         for model_name in model_results:

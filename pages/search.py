@@ -57,10 +57,27 @@ def is_resource(abstract):
     return True if "yes" in message.text.lower() else False
 
 
+def summarize_paper(paper_text):
+    model_name = "gemini-1.5-flash"
+    prompt = f"""Given the following paper: '{paper_text}'. Create a summary that contains the follwoing information:
+    Title,Authors,Affiliations,Abstract,Link,HuggingFace link,License,Dialects,Languages,Collection Style,Domain,Form,Size,Ethical Risks,Script,Tokenization,Host of the dataset,Accessability,Test Split,Tasks,Venue Type,
+    """
+    model = GenerativeModel(model_name)
+
+    message = model.generate_content(
+        prompt,
+        generation_config=GenerationConfig(
+            temperature=0.0,
+        ),
+    )
+    response = message.text.strip()
+    return message, response
+
+
 def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metadata={}):
     if paper_text != "":
         prompt = f"You are given a dataset paper '{paper_text}', you are requested to answer the following questions about the dataset {questions}"
-    else:
+    elif readme != "":
         prompt = f"You are given the following metadata: '{metadata}', and readme: '{readme}'. Create an answer that combines both results from the readme and the metadata. You are requested to answer the following questions about the dataset {questions}"
 
     if "gemini" in model_name.lower():
@@ -229,6 +246,7 @@ def run(
     browse_web=False,
     paper_pdf=None,
     use_split=None,
+    summarize=False,
 ):
     submitted = False
     st_context = False
@@ -394,6 +412,10 @@ def run(
                         )
                         paper_text = extract_paper_text(source_files)
 
+                        if summarize:
+                            show_info(f"🗒️  Summarizing the paper ...")
+                            message, paper_text = summarize_paper(paper_text)
+
                     show_info(
                         f"🧠 {model_name} is extracting Metadata ...",
                         st_context=st_context,
@@ -415,6 +437,7 @@ def run(
                         if "gemini-1.5-pro" in model_name:
                             show_info(f"⏰ Waiting ...", st_context=st_context)
                             time.sleep(5)  # pro has 2 RPM 50 req/day
+
                         max_tries = 5
                         for i in range(max_tries):
                             try:
@@ -600,6 +623,13 @@ def create_args():
 
     parser.add_argument(
         "-mt", "--masader_test", action="store_true", help="test on masader datasets"
+    )
+
+    parser.add_argument(
+        "-s",
+        "--summarize",
+        action="store_true",
+        help="summarize the paper before extracting metadata",
     )
 
     # Parse arguments
