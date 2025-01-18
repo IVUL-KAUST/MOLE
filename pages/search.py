@@ -297,9 +297,12 @@ def run(
     if "all" in models:
         models = MODEL_NAMES.copy()
 
-    if "judge" in models:
-        models.remove("judge")
-        models = models + ["judge"]  # judge is last to be computed
+    if "jury" in models:
+        models.remove("jury")
+        models = models + ["jury"]  # judge is last to be computed
+    elif "composer" in models:
+        models.remove("composer")
+        models = models + ["composer"]  # composer is last to be computed
     model_results = {}
 
     if submitted or mode in ["api", "cmd"]:
@@ -391,7 +394,7 @@ def run(
                     if (
                         os.path.exists(save_path)
                         and not overwrite
-                        and model_name != "judge"
+                        and model_name not in ["jury", "composer"]
                     ):
                         show_info("📂 Loading saved results ...", st_context=st_context)
                         results = json.load(open(save_path))
@@ -421,12 +424,12 @@ def run(
                         f"🧠 {model_name} is extracting Metadata ...",
                         st_context=st_context,
                     )
-                    if "judge" in model_name.lower():
+                    if "jury" in model_name.lower() or "composer" in model_name.lower():
                         all_results = []
                         for file in glob(f"{path}/**.json"):
-                            if "judge" not in file and "human" not in file:
+                            if not any([m in file for m in non_browsing_models]):
                                 all_results.append(json.load(open(file)))
-                        message, metadata = get_metadata_judge(all_results)
+                        message, metadata = get_metadata_judge(all_results, type = model_name)
                     elif "human" in model_name.lower():
                         assert use_split is not None
                         metadata = get_metadata_human(

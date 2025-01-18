@@ -209,10 +209,8 @@ def match_titles(title, masader_title):
         return 0
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
-
-def evaluate_metadata(gold_metadata, pred_metadata):
-    results = {c: 0 for c in evaluation_subsets}
-    results["AVERAGE"] = 0
+def get_predictions(gold_metadata, pred_metadata):
+    results = {c: 0 for c in validation_columns}
 
     if gold_metadata is None:
         return results
@@ -238,31 +236,28 @@ def evaluate_metadata(gold_metadata, pred_metadata):
                     if str(subset[key]) != str(pred_answer[i][key]):
                         matched = False
             if matched:
-                results["DIVERSITY"] += 1
-                results["AVERAGE"] += 1
+                results[column] = 1
             continue
-        elif column in ["Derived From", "Tasks"]:
+        elif column in ["Derived From", "Tasks", "Collection Style", "Domain"]:
             if has_common(gold_answer, pred_answer):
-                results["EVALUATION"] += 1
-                results["AVERAGE"] += 1
-                continue
-        elif column in ["Collection Style", "Domain"]:
-            if has_common(gold_answer, pred_answer):
-                results["CONTENT"] += 1
-                results["AVERAGE"] += 1
+                results[column] = 1
                 continue
         if pred_answer.strip().lower() == gold_answer.strip().lower():
-            results["AVERAGE"] += 1
-            for m in evaluation_subsets:
-                if column in evaluation_subsets[m]:
-                    results[m] += 1
+            results[column] = 1
         else:
             pass
             # print(pred_answer, gold_answer)
-    for m in results:
-        if m in evaluation_subsets:
-            results[m] = results[m] / len(evaluation_subsets[m])
-    results["AVERAGE"] = results["AVERAGE"] / NUM_VALIDATION_COLUMNS
+    return results
+
+def evaluate_metadata(gold_metadata, pred_metadata):
+    results = {c: 0 for c in evaluation_subsets}
+
+    predictions = get_predictions(gold_metadata, pred_metadata)
+    for subset in evaluation_subsets:
+        for column in evaluation_subsets[subset]:
+            results[subset] += predictions[column]
+        results[subset] = results[subset]/len(evaluation_subsets[subset])
+    results["AVERAGE"] = sum(predictions.values())/len(predictions)
     return results
 
 
@@ -311,7 +306,7 @@ def majority_vote(dicts):
         values = [
             dicts[model_name][key]
             for model_name in dicts
-            if any([m in model_name for m in ["gemini-1.5-flash", "pro", "sonnet"]])
+            if any([m in model_name for m in ["pro", "DeepSeek-V3"]])
         ]
 
         # Count the occurrences of each value
@@ -328,11 +323,37 @@ def majority_vote(dicts):
 
     return result
 
+def compose(dicts):
+    result = {}
+    for key in columns:
+        if key == "Subsets":
+            result[key] = []
+            continue
 
-def get_metadata_judge(dicts):
+        # only use smarter models as a judge
+
+        if key in evaluation_subsets["ACCESSABILITY"]:
+            models_to_use = ["gemini-1.5-flash-browsing"]
+        else:
+            models_to_use = ["gemini-1.5-pro-browsing"]
+        values = [
+            dicts[model_name][key]
+            for model_name in dicts
+            if any([m in model_name for m in models_to_use])
+        ]
+
+        # Count the occurrences of each value
+        value_counts = Counter(values)
+        # Find the value with the highest count (majority vote)
+        majority_value, score = value_counts.most_common(1)[0]
+        result[key] = majority_value
+
+    return result
+
+
+def get_metadata_judge(dicts, type = "jury"):
     all_metadata = {d["config"]["model_name"]: d["metadata"] for d in dicts}
-    return "", majority_vote(all_metadata)
-
+    return "", majority_vote(all_metadata) if type == "jury" else compose(all_metadata)
 
 def get_paper_id(link):
     return link.split("/")[-1]
