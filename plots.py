@@ -12,9 +12,33 @@ args.add_argument("--eval", type=str, default="valid")
 args.add_argument("--subsets", action="store_true")
 args.add_argument("--year", action="store_true")
 args.add_argument("--models", type=str, default="all")
+args.add_argument("--cost", action="store_true")
 
 args = args.parse_args()
 
+def plot_by_cost():
+    metric_results = {}
+    for json_file in json_files:
+        results = json.load(open(json_file))
+        arxiv_id = json_file.split('/')[-2].replace('_arXiv', '')
+        if arxiv_id not in ids:
+            continue
+        model_name = results['config']['model_name']
+        if model_name not in metric_results:
+            metric_results[model_name] = []
+        metric_results[model_name].append([results['cost']['input_tokens'], results['cost']['output_tokens'], results['cost']['input_tokens'] + results['cost']['output_tokens'], results['cost']['cost']])
+
+    final_results = {}
+    for model_name in metric_results:
+        if len(metric_results[model_name]) == len(ids):
+            final_results[model_name] = metric_results[model_name]
+
+    results = []
+    for model_name in final_results:
+        results.append([model_name]+(np.sum(final_results[model_name], axis = 0)).tolist())
+
+    headers = ['MODEL', 'INPUT TOKENS', 'OUTPUT TOKENS', 'TOTAL TOKENS','COST (USD)']
+    print_table(results, headers)
 
 def plot_by_year():
     metric_results = {}
@@ -165,6 +189,8 @@ if __name__ == "__main__":
 
     if args.year:
         plot_by_year()
+    elif args.cost:
+        plot_by_cost()
     else:
         if args.subsets:
             plot_subsets()

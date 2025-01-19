@@ -16,11 +16,11 @@ def print_table(results, headers, title = ""):
             max_val = max(column_values)
             second_max = sorted(column_values)[-2]
             if abs(value - max_val) < 1e-10:  # Using small epsilon for float comparison
-                formatted_row.append(f"{RED}{value:.2f}{END}")
+                formatted_row.append(f"{RED}{value}{END}")
             elif abs(value - second_max) < 1e-10:
-                formatted_row.append(f"{UNDERLINE}{value:.2f}{END}")
+                formatted_row.append(f"{UNDERLINE}{value}{END}")
             else:
-                formatted_row.append(f"{value:.2f}")
+                formatted_row.append(f"{value}")
         formatted_results.append(formatted_row)
     # Show table title if provided
     if title:
