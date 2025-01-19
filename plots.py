@@ -108,6 +108,8 @@ def process_subsets(metric_results, subset):
     results = []
     for model_name in metric_results:
         predictions = metric_results[model_name]
+        if len(predictions) != len(ids):
+            continue
         for prediction in predictions:
             if model_name not in results_per_model:
                 results_per_model[model_name] = []
