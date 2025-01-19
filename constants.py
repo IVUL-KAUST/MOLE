@@ -3,7 +3,7 @@ from vertexai.generative_models import (
     HarmBlockThreshold,
     SafetySetting,
 )
-MODEL_NAMES = ["gemini-1.5-flash", "gemini-1.5-pro", "claude-3-5-sonnet-latest", "claude-3-5-haiku-latest", "jury", "composer"]
+MODEL_NAMES = ["gemini-1.5-flash", "gemini-1.5-pro", "claude-3-5-sonnet-latest", "claude-3-5-haiku-latest", "jury", "composer", "gemini-2.0-flash-exp", "gemini-exp-1206"]
 
 dialect_remapped = {'Classical Arabic': 'ar-CLS: (Arabic (Classic))','Modern Standard Arabic': 'ar-MSA: (Arabic (Modern Standard Arabic))','United Arab Emirates': 'ar-AE: (Arabic (United Arab Emirates))','Bahrain': 'ar-BH: (Arabic (Bahrain))','Djibouti': 'ar-DJ: (Arabic (Djibouti))','Algeria': 'ar-DZ: (Arabic (Algeria))','Egypt': 'ar-EG: (Arabic (Egypt))','Iraq': 'ar-IQ: (Arabic (Iraq))','Jordan': 'ar-JO: (Arabic (Jordan))','Comoros': 'ar-KM: (Arabic (Comoros))','Kuwait': 'ar-KW: (Arabic (Kuwait))','Lebanon': 'ar-LB: (Arabic (Lebanon))','Libya': 'ar-LY: (Arabic (Libya))','Morocco': 'ar-MA: (Arabic (Morocco))','Mauritania': 'ar-MR: (Arabic (Mauritania))','Oman': 'ar-OM: (Arabic (Oman))','Palestine': 'ar-PS: (Arabic (Palestine))','Qatar': 'ar-QA: (Arabic (Qatar))','Saudi Arabia': 'ar-SA: (Arabic (Saudi Arabia))','Sudan': 'ar-SD: (Arabic (Sudan))','Somalia': 'ar-SO: (Arabic (Somalia))','South Sudan': 'ar-SS: (Arabic (South Sudan))','Syria': 'ar-SY: (Arabic (Syria))','Tunisia': 'ar-TN: (Arabic (Tunisia))','Yemen': 'ar-YE: (Arabic (Yemen))','Levant': 'ar-LEV: (Arabic (Levant))','North Africa': 'ar-NOR: (Arabic (North Africa))','Gulf': 'ar-GLF: (Arabic (Gulf))','mixed': 'mixed'}
 column_options = {
@@ -102,6 +102,7 @@ system_prompt = """You are a profressional research paper reader. You will be pr
             If the question has no options and the answer is not found in the paper, then answer ''. 
             Each question is in the format Key:question, please use Key as a json key for each question and return the answer in json
             A question might be followed by a description of the options in the form option->description. This is an important TEST, Please answer carefully.
+            The fields Domain, Collection Style, Tasks, and Derived From can have multiple answers separated by ','.
             """
 
 TEST_DATASETS_IDS = ['1709.07276', '1610.00572', '2404.00565', '2201.06723', '2402.07448', '2210.12985', '2106.10745', '1812.10464', '1910.07475', '2004.06465', '2103.09687', '2004.14303', '2005.06608', '1808.07674', '2106.03193', '1612.08989', '1610.09565', '1809.03891', '1402.0578', '1410.3791', '1910.10683', '1907.03110', '2407.19835', '2010.11856', '1809.05053']
@@ -158,6 +159,14 @@ costs = {
     "gemini-1.5-pro":{
         "input": 1.25,
         "output": 5
+    },
+    "gemini-2.0-flash-exp":{
+        "input": 0,
+        "output": 0
+    },
+    "gemini-exp-1206":{
+        "input": 0,
+        "output": 0
     }
 }
 

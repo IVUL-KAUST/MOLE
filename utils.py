@@ -113,7 +113,7 @@ def compute_cost(message, model):
         ) * costs[model]["output"]
 
     except:
-        print("Unrecognized model name")
+        print("Cannot compute the cost ...")
         return default
 
     return {
