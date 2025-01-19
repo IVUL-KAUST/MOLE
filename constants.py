@@ -167,6 +167,10 @@ costs = {
     "gemini-exp-1206":{
         "input": 0,
         "output": 0
+    },
+    "gemini-2.0-flash-thinking-exp-1219":{
+        "input": 0,
+        "output": 0
     }
 }
 
@@ -181,6 +185,10 @@ SAFETY_CONFIG_GEMINI = [
     ),
     SafetySetting(
         category=HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+        threshold=HarmBlockThreshold.BLOCK_NONE,
+    ),
+    SafetySetting(
+        category=HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
         threshold=HarmBlockThreshold.BLOCK_NONE,
     ),
 ]
