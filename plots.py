@@ -9,9 +9,9 @@ from utils import get_predictions
 
 args = argparse.ArgumentParser()
 args.add_argument('--eval', type=str, default='valid')
-args.add_argument('--table', action='store_false')
-args.add_argument('--subset', action='store_true')
+args.add_argument('--subsets', action='store_true')
 args.add_argument('--year', action='store_true')
+args.add_argument('--models', type=str, default='all')
 
 args = args.parse_args()
 
@@ -141,11 +141,13 @@ if __name__ == "__main__":
         ids = VALID_DATASETS_IDS
 
     json_files = glob('static/results/**/*.json', recursive=True)
+    if args.models != 'all':
+        json_files = [file for file in json_files if any(model.lower() in file.lower() for model in args.models.split(','))]
 
     if args.year:
         plot_by_year()
     else:
-        if args.subset:
+        if args.subsets:
             plot_subsets()
         else:
             plot_table()
