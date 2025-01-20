@@ -74,9 +74,29 @@ def summarize_paper(paper_text):
     return message, response
 
 
-def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metadata={}, use_search = False):
+def get_metadata(
+    paper_text="",
+    model_name="gemini-1.5-flash",
+    readme="",
+    metadata={},
+    use_search=False,
+    use_examples=False,
+):
     if paper_text != "":
-        prompt = f"You are given a dataset paper '{paper_text}', you are requested to answer the following questions about the dataset {questions}"
+        if use_examples:
+            prompt = f"""
+                    {questions}
+                    Here are some examples:
+                    {examples}
+                    Now, predict for the following paper:
+                    Paper: {paper_text}
+                    Metadata:
+                    """            
+        else:
+            prompt = f"""
+                    You are given the following paper: {paper_text}.
+                    Answer the following questions about the dataset: {questions}
+                    """  
     elif readme != "":
         prompt = f"You are given the following metadata: '{metadata}', and readme: '{readme}'. Create an answer that combines both results from the readme and the metadata. You are requested to answer the following questions about the dataset {questions}"
 
@@ -89,7 +109,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
 
         message = model.generate_content(
             contents=prompt,
-            tools = tools,
+            tools=tools,
             generation_config=GenerationConfig(
                 temperature=0.0,
             ),
@@ -116,15 +136,27 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
         )
         response = message.choices[0].message.content.strip()
     elif "deepseek" in model_name.lower():
-        message = deepseek_client.chat.completions.create(
-            model="deepseek-chat",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": prompt},
-            ],
-            max_tokens=2084,  # reduce the max tokens to 1024
-            temperature=0.0,
-        )
+        if 'deepseek-v3' in model_name.lower():
+            message = deepseek_client.chat.completions.create(
+                model="deepseek-chat",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": prompt},
+                ],
+                max_tokens=2084,  # reduce the max tokens to 1024
+                temperature=0.0,
+            )
+        elif 'deepseek-r1' in model_name.lower():
+            message = deepseek_client.chat.completions.create(
+                model="deepseek-reasoner",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": prompt},
+                ],
+                max_tokens=2084,  # reduce the max tokens to 1024
+            )
+        else:
+            raise (f"Unrecognized deepseek name {model_name}")
 
         response = message.choices[0].message.content
     elif any([m in model_name.lower() for m in ["deepseek", "llama", "q"]]):
