@@ -328,7 +328,6 @@ def majority_vote(dicts):
 
 def compose(dicts):
     result = {}
-    print(dicts)
     for key in columns:
         if key == "Subsets":
             result[key] = []
