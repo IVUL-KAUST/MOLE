@@ -48,7 +48,7 @@ for c in metadata:
     if c == 'Dialect':
         assert new_metadata['Dialect'] == 'Modern Standard Arabic', '❌ Modern Standard Arabic != ' + new_metadata['Dialect']
     elif c == 'Collection Style':
-        assert new_metadata['Collection Style'] == 'crawling,annotation', '❌ crawling,annotation != ' + new_metadata['Collection Style']
+        assert new_metadata['Collection Style'] == 'crawling,LLM generated,manual curation', '❌ crawling,LLM generated,manual curation != ' + new_metadata['Collection Style']
     else:
         assert new_metadata[c] == metadata[c], f'❌ {c} should be {metadata[c]} but got {new_metadata[c]}'
 print('✅ passed test4 [fix options]')
@@ -98,7 +98,7 @@ with open('testfiles/example2.tex', 'r') as f:
     paper_text = f.read()
 
 _,pred_metadata =  get_metadata(paper_text, model_name = 'gemini-1.5-flash')
-readme, _ = fetch_repository_metadata(pred_metadata)
+readme = fetch_repository_metadata(pred_metadata['Link'])
 _,pred_metadata =  get_metadata(metadata = pred_metadata,  model_name = 'gemini-1.5-flash', readme = readme)
 pred_metadata = postprocess(pred_metadata)
 

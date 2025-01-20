@@ -5,7 +5,7 @@
     "Tokenized": "No",
     "Script": "Arab",
     "Form": "text",
-    "Collection Style": "crawling,annotation",
+    "Collection Style": "crawling",
     "Domain": "other",
     "Ethical Risks": "Low",
 
@@ -19,9 +19,9 @@
 
     "Language": "ar",
     "Subsets": [
-        {"Name": "Syrian", "Volume": "4000", "Unit": "sentences", "Dialect": "Syria"},
-        {"Name": "Iraqi",  "Volume": "4000", "Unit": "sentences", "Dialect": "Iraq"}, 
-        {"Name": "Lebanese", "Volume": "2000", "Unit": "sentences", "Dialect": "Lebanon"}
+        {"Name": "Syrian", "Volume": "4,000", "Unit": "sentences", "Dialect": "Syria"},
+        {"Name": "Iraqi",  "Volume": "4,000", "Unit": "sentences", "Dialect": "Iraq"}, 
+        {"Name": "Lebanese", "Volume": "2,000", "Unit": "sentences", "Dialect": "Lebanon"}
     ],
     "Dialect": "mixed",
 

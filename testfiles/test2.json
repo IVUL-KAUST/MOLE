@@ -5,8 +5,8 @@
     "Tokenized": "No",
     "Script": "Arab",
     "Form": "text",
-    "Collection Style": "crawling,annotation",
-    "Domain": "other",
+    "Collection Style": "crawling,LLM generated,manual curation",
+    "Domain": "commentary,LLM",
     "Ethical Risks": "Low",
 
     "Provider": "ARBML",
@@ -22,6 +22,6 @@
     "Dialect": "Modern Standard Arabic",
 
     "Test Split": "No",
-    "Tasks": "instruction tuning",
+    "Tasks": "instruction tuning,question answering",
     "Derived From": "AlpaGasus"   
 }
