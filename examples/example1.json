@@ -1,0 +1,54 @@
+{
+    "Name": "SentDialects",
+    "Subsets": [
+        {
+            "Name": "Syrian",
+            "Volume": "4,000",
+            "Unit": "sentences",
+            "Dialect": "Syria"
+        },
+        {
+            "Name": "Iraqi",
+            "Volume": "4,000",
+            "Unit": "sentences",
+            "Dialect": "Iraq"
+        },
+        {
+            "Name": "Lebanese",
+            "Volume": "2,000",
+            "Unit": "sentences",
+            "Dialect": "Lebanon"
+        }
+    ],
+    "Link": "https://github.com/ahmedali/SentDialects",
+    "HF Link": "https://hf.co/datasets/ABCD/SentDialects",
+    "License": "CC BY-NC 4.0",
+    "Year": 2019,
+    "Language": "ar",
+    "Dialect": "mixed",
+    "Domain": "other",
+    "Form": "text",
+    "Collection Style": "crawling",
+    "Description": "A sentiment analysis dataset that contains 10,000 sentences in multiple dialects.",
+    "Volume": "10,000",
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": "ABCD",
+    "Derived From": "AAA",
+    "Paper Title": "",
+    "Paper Link": "",
+    "Script": "Arab",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": "sentiment analysis",
+    "Venue Title": "arXiv",
+    "Citations": "",
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": "Ahmed Ali,Peter Bell",
+    "Affiliations": "QCRI,HBKU",
+    "Abstract": ""
+}
