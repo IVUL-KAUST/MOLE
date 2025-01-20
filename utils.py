@@ -101,6 +101,9 @@ def compute_cost(message, model):
         elif "DeepSeek-V3" in model:
             num_inp_tokens = message.usage.prompt_tokens
             num_out_tokens = message.usage.completion_tokens
+        elif "DeepSeek-R1" in model:
+            num_inp_tokens = message.usage.prompt_tokens
+            num_out_tokens = message.usage.completion_tokens
         elif "claude" in model:
             num_inp_tokens = message.usage.prompt_tokens
             num_out_tokens = message.usage.completion_tokens
@@ -325,6 +328,7 @@ def majority_vote(dicts):
 
 def compose(dicts):
     result = {}
+    print(dicts)
     for key in columns:
         if key == "Subsets":
             result[key] = []
@@ -353,7 +357,12 @@ def compose(dicts):
 
 def get_metadata_judge(dicts, type = "jury"):
     all_metadata = {d["config"]["model_name"]: d["metadata"] for d in dicts}
-    return "", majority_vote(all_metadata) if type == "jury" else compose(all_metadata)
+    if type == "jury":
+        return "", majority_vote(all_metadata)
+    elif type == "composer":
+        return "", compose(all_metadata)
+    else:
+        raise (f"Unrecognized judge type {type}")
 
 def get_paper_id(link):
     return link.split("/")[-1]
