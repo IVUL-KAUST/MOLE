@@ -16,7 +16,7 @@ from constants import *
 from datetime import datetime
 import time
 import vertexai  # type: ignore
-from vertexai.generative_models import GenerativeModel, GenerationConfig  # type: ignore
+from vertexai.generative_models import GenerativeModel, GenerationConfig, Tool, grounding  # type: ignore
 import json
 
 load_dotenv()
@@ -74,7 +74,7 @@ def summarize_paper(paper_text):
     return message, response
 
 
-def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metadata={}):
+def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metadata={}, use_search = False):
     if paper_text != "":
         prompt = f"You are given a dataset paper '{paper_text}', you are requested to answer the following questions about the dataset {questions}"
     elif readme != "":
@@ -82,13 +82,18 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
 
     if "gemini" in model_name.lower():
         model = GenerativeModel(model_name, system_instruction=system_prompt)
+        tools = []
+        if use_search:
+            tool = Tool.from_google_search_retrieval(grounding.GoogleSearchRetrieval())
+            tools = [tool]
 
         message = model.generate_content(
-            prompt,
+            contents=prompt,
+            tools = tools,
             generation_config=GenerationConfig(
                 temperature=0.0,
             ),
-            safety_settings=SAFETY_CONFIG_GEMINI
+            safety_settings=SAFETY_CONFIG_GEMINI,
         )
         response = message.text.strip()
     elif "claude" in model_name.lower():
@@ -117,7 +122,7 @@ def get_metadata(paper_text="", model_name="gemini-1.5-flash", readme="", metada
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt},
             ],
-            max_tokens=2084,
+            max_tokens=2084,  # reduce the max tokens to 1024
             temperature=0.0,
         )
 
@@ -429,7 +434,9 @@ def run(
                         for file in glob(f"{path}/**.json"):
                             if not any([m in file for m in non_browsing_models]):
                                 all_results.append(json.load(open(file)))
-                        message, metadata = get_metadata_judge(all_results, type = model_name)
+                        message, metadata = get_metadata_judge(
+                            all_results, type=model_name
+                        )
                     elif "human" in model_name.lower():
                         assert use_split is not None
                         metadata = get_metadata_human(
