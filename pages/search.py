@@ -290,6 +290,7 @@ def run(
     paper_pdf=None,
     use_split=None,
     summarize=False,
+    curr_idx = [0,0],
 ):
     submitted = False
     st_context = False
@@ -424,7 +425,8 @@ def run(
                     path = f"{path}_arXiv"
 
                 for model_name in models:
-
+                    curr_idx[0] += 1
+                    show_info(f'{curr_idx[0]}/{curr_idx[1]}. paper is being processed')
                     if browse_web and (model_name in non_browsing_models):
                         show_info(f"Can't browse the web for {model_name}")
 
@@ -458,7 +460,7 @@ def run(
                         )
                         paper_text = extract_paper_text(source_files)
                         approximate_token_size = len(paper_text.split(' ')) * 1.6
-                        
+
                         if approximate_token_size > 30_000:
                             show_warning(f"⚠️ The paper text is too long, trimming some content")
                             paper_text = paper_text[:150_000]

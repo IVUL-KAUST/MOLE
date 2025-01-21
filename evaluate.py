@@ -37,9 +37,9 @@ if __name__ == "__main__":
         paper_links = ["" for _ in data_names]
         years = ["" for _ in data_names]
         links = ["" for _ in data_names]
-
+    models = args.models.split(",")
     len_data = len(data_names)
-
+    curr_idx = [0,len(data_names) * len(models)]
     for data_name, title, paper_link, year, link in zip(data_names, titles, paper_links, years, links):
         if title != "":
             title = title.replace("\r\n", " ")
@@ -60,7 +60,8 @@ if __name__ == "__main__":
                 overwrite=args.overwrite,
                 use_split=use_split,
                 repo_link=link,
-                summarize = args.summarize
+                summarize = args.summarize,
+                curr_idx= curr_idx
             )
         else:
             model_results = run(
@@ -73,7 +74,8 @@ if __name__ == "__main__":
                 overwrite=args.overwrite,
                 use_split=use_split,
                 repo_link=link,
-                summarize = args.summarize
+                summarize = args.summarize,
+                curr_idx = curr_idx
             )
 
         for model_name in model_results:
