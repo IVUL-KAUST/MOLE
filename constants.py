@@ -102,7 +102,6 @@ columns = [
 ]
 extra_columns = [
     "Subsets",
-    "Year",
     "Description",
     "Paper Link",
     "Venue Title",
@@ -187,7 +186,23 @@ with open("questions.txt", "w") as f:
 
 assert len(questions) == 33
 prompting_styles = [
-    "Think step by step",
+    """ THINK STEP BY STEP
+    1.  Read the full paper
+    2.  Extract the title, authors, affiliations and abstract
+    3.  Extract the Year, Venue Title, Venue Type, and Venue Name from the paper metadata
+    4.  Create a short description using the abstract
+    5.  Extract the link, Huggingface links, and license using hyperlinks if they exist 
+    6.  Answer whether the dataset is ar (monolignual) or multilingual, dialects and the subsets
+    7.  Guess the provider using the affiliations.
+    8.  Guess the accessability depending on the link of the dataset
+    9.  Extract the dataset voluem(size) and unit(what types of samples). 
+    10. If there are samples use them to guess if the dataset is morphologically tokenized or not.
+    11. Using the dataset collection pargraph, extract how was the dataset collected and the domain it was created from.
+    12. Guess the ethical risks of the dataset based on the domain and contents of the dataset
+    13. Does the dataset contain test split based on the metrics evaluated? 
+    14. Is the dataset derived from another dataset
+    15. Extract what Tasks the dataset can be used for.  
+    """,
     "Before answering, think about the question and the options",
     "Take your time to think about the question and the options",
     "Take a deep breath before answering every question",
@@ -201,7 +216,7 @@ system_prompt = (
             A question might be followed by a description of the options in the form option->description.
             The fields Domain, Collection Style, Tasks, and Derived From can have multiple answers separated by ','.
             """
-    + prompting_styles[4]
+    + prompting_styles[0]
 )
 
 examplers = []
@@ -278,6 +293,7 @@ costs = {
     "cloude-3-5-sonnet-latest": {"input": 3, "output": 15},
     "cloude-3-5-haiku-latest": {"input": 0.8, "output": 4},
     "gemini-1.5-flash": {"input": 0.075, "output": 0.30},
+    "gemini-1.5-flash-002": {"input": 0.075, "output": 0.30},
     "gemini-1.5-flash-8b": {"input": 0.0375, "output": 0.15},
     "gemini-1.5-pro": {"input": 1.25, "output": 5},
     "gemini-1.5-pro-002": {"input": 1.25, "output": 5},
