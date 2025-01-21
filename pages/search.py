@@ -216,6 +216,11 @@ def show_info(text, st_context=False):
         st.write(text)
     logger.info(text)
 
+def show_warning(text, st_context=False):
+    if st_context:
+        st.warning(text)
+    logger.warning(text)
+
 
 import hashlib
 
@@ -452,7 +457,11 @@ def run(
                             st_context=st_context,
                         )
                         paper_text = extract_paper_text(source_files)
-
+                        approximate_token_size = len(paper_text.split(' ')) * 1.6
+                        
+                        if approximate_token_size > 30_000:
+                            show_warning(f"⚠️ The paper text is too long, trimming some content")
+                            paper_text = paper_text[:150_000]
                         if summarize:
                             show_info(f"🗒️  Summarizing the paper ...")
                             message, paper_text = summarize_paper(paper_text)
