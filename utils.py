@@ -212,7 +212,7 @@ def match_titles(title, masader_title):
         return 0
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
-def get_predictions(gold_metadata, pred_metadata):
+def get_predictions(gold_metadata, pred_metadata, use_annotations_paper = False):
     results = {c: 0 for c in validation_columns}
 
     if gold_metadata is None:
@@ -224,6 +224,10 @@ def get_predictions(gold_metadata, pred_metadata):
         if str(gold_answer) == "nan":
             gold_answer = ""
         pred_answer = pred_metadata[column]
+        if use_annotations_paper:
+            if gold_metadata['annotation_from_paper'][column] == 0:
+                results[column] = 1
+                continue
         if column == "Subsets":
             try:
                 if len(pred_answer) != len(gold_answer):
@@ -252,10 +256,10 @@ def get_predictions(gold_metadata, pred_metadata):
             # print(pred_answer, gold_answer)
     return results
 
-def evaluate_metadata(gold_metadata, pred_metadata):
+def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper = False):
     results = {c: 0 for c in evaluation_subsets}
 
-    predictions = get_predictions(gold_metadata, pred_metadata)
+    predictions = get_predictions(gold_metadata, pred_metadata, use_annotations_paper = use_annotations_paper)
     for subset in evaluation_subsets:
         for column in evaluation_subsets[subset]:
             results[subset] += predictions[column]

@@ -5,7 +5,7 @@ import argparse
 from constants import TEST_DATASETS_IDS, VALID_DATASETS_IDS, evaluation_subsets
 import numpy as np
 from plot_utils import print_table
-from utils import get_predictions
+from utils import get_predictions, evaluate_metadata
 
 args = argparse.ArgumentParser()
 args.add_argument("--eval", type=str, default="valid")
@@ -13,20 +13,27 @@ args.add_argument("--subsets", action="store_true")
 args.add_argument("--year", action="store_true")
 args.add_argument("--models", type=str, default="all")
 args.add_argument("--cost", action="store_true")
-
+args.add_argument("--use_annotations_paper", action="store_true")
 args = args.parse_args()
 
 def plot_by_cost():
     metric_results = {}
     for json_file in json_files:
         results = json.load(open(json_file))
-        arxiv_id = json_file.split('/')[-2].replace('_arXiv', '')
+        arxiv_id = json_file.split("/")[-2].replace("_arXiv", "")
         if arxiv_id not in ids:
             continue
-        model_name = results['config']['model_name']
+        model_name = results["config"]["model_name"]
         if model_name not in metric_results:
             metric_results[model_name] = []
-        metric_results[model_name].append([results['cost']['input_tokens'], results['cost']['output_tokens'], results['cost']['input_tokens'] + results['cost']['output_tokens'], results['cost']['cost']])
+        metric_results[model_name].append(
+            [
+                results["cost"]["input_tokens"],
+                results["cost"]["output_tokens"],
+                results["cost"]["input_tokens"] + results["cost"]["output_tokens"],
+                results["cost"]["cost"],
+            ]
+        )
 
     final_results = {}
     for model_name in metric_results:
@@ -35,10 +42,13 @@ def plot_by_cost():
 
     results = []
     for model_name in final_results:
-        results.append([model_name]+(np.sum(final_results[model_name], axis = 0)).tolist())
+        results.append(
+            [model_name] + (np.sum(final_results[model_name], axis=0)).tolist()
+        )
 
-    headers = ['MODEL', 'INPUT TOKENS', 'OUTPUT TOKENS', 'TOTAL TOKENS','COST (USD)']
+    headers = ["MODEL", "INPUT TOKENS", "OUTPUT TOKENS", "TOTAL TOKENS", "COST (USD)"]
     print_table(results, headers)
+
 
 def plot_by_year():
     metric_results = {}
@@ -97,17 +107,31 @@ def plot_table():
         "AVERAGE",
     ]
     metric_results = {}
+    use_annotations_paper = args.use_annotations_paper
     for json_file in json_files:
         results = json.load(open(json_file))
         arxiv_id = json_file.split("/")[-2].replace("_arXiv", "")
         if arxiv_id not in ids:
             continue
         model_name = results["config"]["model_name"]
+        pred_metadata = results["metadata"]
         if model_name not in metric_results:
             metric_results[model_name] = []
-        metric_results[model_name].append(
-            [results["validation"][m] for m in results["validation"]]
+        human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
+        gold_metadata = json.load(open(human_json_path))["metadata"]
+        scores = {c: 0 for c in evaluation_subsets}
+
+        scores = evaluate_metadata(
+            gold_metadata, pred_metadata
         )
+        scores = [scores[c] for c in evaluation_subsets] + [scores["AVERAGE"]]
+        if use_annotations_paper:
+            average_ignore_mistakes = evaluate_metadata(
+                gold_metadata, pred_metadata, use_annotations_paper=True
+            )["AVERAGE"]
+            scores += [average_ignore_mistakes]
+            headers += ["AVERAGE^*"]
+        metric_results[model_name].append(scores)
 
     final_results = {}
     for model_name in metric_results:
@@ -123,25 +147,40 @@ def plot_table():
         )
 
     print_table(results, headers)
+    if use_annotations_paper:
+        print(
+            "* Computed average by considering metadata exctracted from outside the paper."
+        )
 
 
-def process_subsets(metric_results, subset):
+def process_subsets(metric_results, subset, use_annotations_paper):
     headers = evaluation_subsets[subset]
 
     results_per_model = {}
+    results_per_model_with_annotations = {}
     results = []
     for model_name in metric_results:
-        predictions = metric_results[model_name]
+        predictions, predictions_with_annotations = metric_results[model_name]
         if len(predictions) != len(ids):
             continue
-        for prediction in predictions:
+        for prediction, prediction_with_annotations in zip(predictions, predictions_with_annotations):
             if model_name not in results_per_model:
                 results_per_model[model_name] = []
+            if model_name not in results_per_model_with_annotations:
+                results_per_model_with_annotations[model_name] = []
             results_per_model[model_name].append(
                 [prediction[column] for column in headers]
             )
+            if use_annotations_paper:
+                results_per_model_with_annotations[model_name].append(
+                    [prediction_with_annotations[column] for column in headers]
+                )
         scores = np.mean(results_per_model[model_name], axis=0).tolist()
-        row = [model_name] + scores + [np.mean(scores)]
+        if use_annotations_paper:
+            scores_with_annotations = np.mean(results_per_model_with_annotations[model_name], axis=0).tolist()
+            row = [model_name] + scores + [np.mean(scores)] + [np.mean(scores_with_annotations)]
+        else:
+            row = [model_name] + scores + [np.mean(scores)]
         results.append(row)
     return results
 
@@ -155,19 +194,31 @@ def plot_subsets():
             continue
         model_name = results["config"]["model_name"]
         if model_name not in metric_results:
-            metric_results[model_name] = []
+            metric_results[model_name] = [[], []]
         human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
-        gold_results = json.load(open(human_json_path))
-        metric_results[model_name].append(
-            get_predictions(gold_results["metadata"], results["metadata"])
+        gold_metadata = json.load(open(human_json_path))["metadata"]
+        pred_metadata = results["metadata"]
+        scores = get_predictions(
+            gold_metadata, pred_metadata
         )
+        if args.use_annotations_paper:
+            scores_with_annotations = get_predictions(
+                gold_metadata, pred_metadata, use_annotations_paper=True
+            )
+            metric_results[model_name][0].append(scores)
+            metric_results[model_name][1].append(scores_with_annotations)
+        else:
+            metric_results[model_name][0].append(scores)
+            metric_results[model_name][1].append([])
 
     for subset in evaluation_subsets:
         headers = evaluation_subsets[subset]
         headers = (
             ["MODEL"] + [h.capitalize() for h in headers] + ["AVERAGE"]
-        )  # capitalize each letter in header name
-        results = process_subsets(metric_results, subset)
+        )
+        if args.use_annotations_paper:
+            headers += ["AVERAGE^*"]  # capitalize each letter in header name
+        results = process_subsets(metric_results, subset, args.use_annotations_paper)
         print_table(results, headers, title=f"Graph for {subset}")
 
 
