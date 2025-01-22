@@ -222,7 +222,7 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper = False)
             gold_answer = ""
         pred_answer = pred_metadata[column]
         if use_annotations_paper:
-            if gold_metadata['annotation_from_paper'][column] == 0:
+            if gold_metadata['annotations_from_paper'][column] == 0:
                 results[column] = 1
                 continue
         if column == "Subsets":
