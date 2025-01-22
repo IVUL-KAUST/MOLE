@@ -17,7 +17,6 @@ from glob import glob
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from datasets import load_dataset
 from google.oauth2 import service_account
 from vertexai.generative_models import GenerativeModel, GenerationConfig  # type: ignore
 
@@ -28,10 +27,8 @@ from firecrawl import FirecrawlApp  # type: ignore
 random.seed(0)
 
 # masader_dataset = load_dataset("arbml/masader", download_mode="")["train"]
-masader_valid_dataset = load_dataset("json", data_files=glob("validset/**.json"))[
-    "train"
-]
-masader_test_dataset = load_dataset("json", data_files=glob("testset/**.json"))["train"]
+masader_valid_dataset = [json.load(open(f)) for f in glob("validset/**.json")]
+masader_test_dataset = [json.load(open(f)) for f in glob("testset/**.json")]
 
 
 def extract_and_generate_readme(url):
