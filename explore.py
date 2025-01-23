@@ -5,6 +5,7 @@ from glob import glob
 import pandas as pd
 from utils import *
 import numpy as np
+from constants import TEST_DATASETS_IDS, VALID_DATASETS_IDS
 
 st.set_page_config(layout="wide")
 
@@ -31,11 +32,23 @@ def main():
     folder_path = "static/results"
     all_jsons = load_json_files(folder_path)
 
-    len_datasets = len(all_jsons)
-    model_results = {}
+    activate = st.toggle('Show test')
+    ids = VALID_DATASETS_IDS
+    if activate:
+        ids = TEST_DATASETS_IDS
+    
+    json_files = {}
+    
     for arxiv_id in all_jsons:
+        if arxiv_id not in ids:
+            continue
+        else:
+            json_files[arxiv_id] = all_jsons[arxiv_id]
+    model_results = {}
+    len_datasets = len(json_files)
+    for arxiv_id in json_files:
         scores = {}
-        for result in all_jsons[arxiv_id]:
+        for result in json_files[arxiv_id]:
             scores[result["config"]["model_name"]] = result["validation"]
 
         for model_name in scores:
@@ -60,13 +73,13 @@ def main():
 
     if "output" not in st.session_state:
         st.session_state["output"] = ""
-    for arxiv_id in all_jsons:
-        metadata = all_jsons[arxiv_id][0]["metadata"]
+    for arxiv_id in json_files:
+        metadata = json_files[arxiv_id][0]["metadata"]
         title = metadata["Paper Title"]
         with st.expander(title):
             models = st.multiselect(
                 "Select a model:",
-                [r["config"]["model_name"] for r in all_jsons[arxiv_id]],
+                [r["config"]["model_name"] for r in json_files[arxiv_id]],
                 key=f"{arxiv_id}_model",
             )
             compare = st.button("Compare", key=f"{arxiv_id}_compare_btn")
@@ -85,7 +98,7 @@ def main():
                     st.write(st.session_state["output"])
                 elif len(models) == 1:
                     for model in models:
-                        for result in all_jsons[arxiv_id]:
+                        for result in json_files[arxiv_id]:
                             if result["config"]["model_name"] == model:
                                 st.link_button(
                                     "Open using Masader Form",
@@ -97,7 +110,7 @@ def main():
                     raise ()
             if eval_all:
                 scores = {}
-                for result in all_jsons[arxiv_id]:
+                for result in json_files[arxiv_id]:
                     scores[result["config"]["model_name"]] = result["validation"]
                 df = pd.DataFrame(scores)
                 df = df.map(lambda x: x * 100)
