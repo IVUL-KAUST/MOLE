@@ -58,10 +58,23 @@ def plot_by_year():
         if arxiv_id not in ids:
             continue
         model_name = results["config"]["model_name"]
+        pred_metadata = results["metadata"]
         if model_name not in metric_results:
             metric_results[model_name] = []
+        
+        human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
+        gold_metadata = json.load(open(human_json_path))["metadata"]
+        
+        if args.use_annotations_paper:
+            scores = evaluate_metadata(
+                gold_metadata, pred_metadata, use_annotations_paper=True
+            )
+        else:
+            scores = evaluate_metadata(
+                gold_metadata, pred_metadata
+            )
         metric_results[model_name].append(
-            [results["config"]["year"], results["validation"]["AVERAGE"]]
+            [gold_metadata["Year"], scores["AVERAGE"]]
         )
 
     final_results = {}
