@@ -310,7 +310,7 @@ def majority_vote(dicts):
         values = [
             dicts[model_name][key]
             for model_name in dicts
-            if any([m in model_name for m in ["pro", "DeepSeek-V3"]])
+            if any([m.lower() in model_name.lower() for m in ["pro", "deepseek"]])
         ]
 
         # Count the occurrences of each value
@@ -343,7 +343,7 @@ def compose(dicts):
         values = [
             dicts[model_name][key]
             for model_name in dicts
-            if any([m in model_name for m in models_to_use])
+            if any([m.lower() in model_name.lower() for m in models_to_use])
         ]
 
         # Count the occurrences of each value
