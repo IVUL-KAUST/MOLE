@@ -5,11 +5,11 @@
     "Tokenized": "No",
     "Script": "Arab-Latin",
     "Form": "images",
-    "Collection Style": "other",
-    "Domain": "other",
+    "Collection Style": ["other"],
+    "Domain": ["other"],
     "Ethical Risks": "High",
 
-    "Provider": "",
+    "Provider": [],
     "Host": "other",
     "Link": "",
     "HF Link": "",
@@ -22,6 +22,6 @@
     "Dialect": "mixed",
 
     "Test Split": "No",
-    "Tasks": "other",
-    "Derived From": ""   
+    "Tasks": ["other"],
+    "Derived From": []  
 }

@@ -5,11 +5,11 @@
     "Tokenized": "No",
     "Script": "Arab",
     "Form": "text",
-    "Collection Style": "crawling,annotation",
-    "Domain": "wikipedia",
+    "Collection Style": ["crawling", "annotation"],
+    "Domain": ["wikipedia"],
     "Ethical Risks": "Low",
 
-    "Provider": "ABCD",
+    "Provider": ["ABCD"],
     "Host": "GitHub",
     "Link": "https://github.com/zaidalyafeai/example-dataset",
     "HF Link": "",
@@ -22,6 +22,6 @@
     "Dialect": "Modern Standard Arabic",
 
     "Test Split": "No",
-    "Tasks": "sentiment analysis",
-    "Derived From": ""   
+    "Tasks": ["sentiment analysis"],
+    "Derived From": []   
 }

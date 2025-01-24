@@ -173,8 +173,10 @@ def clear_line():
 
 
 def has_common(d1, d2):
-    d1 = [d.lower().strip() for d in d1.split(",")]
-    d2 = [d.lower().strip() for d in d2.split(",")]
+    if d1 == [] and d2 == []:
+        return True
+    d1 = [d.lower().strip() for d in d1]
+    d2 = [d.lower().strip() for d in d2]
     if len(set(d1).intersection(d2)):
         return True
     else:
@@ -209,7 +211,8 @@ def match_titles(title, masader_title):
         return 0
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
-def get_predictions(gold_metadata, pred_metadata, use_annotations_paper = False):
+
+def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False):
     results = {c: 0 for c in validation_columns}
 
     if gold_metadata is None:
@@ -222,7 +225,7 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper = False)
             gold_answer = ""
         pred_answer = pred_metadata[column]
         if use_annotations_paper:
-            if gold_metadata['annotations_from_paper'][column] == 0:
+            if gold_metadata["annotations_from_paper"][column] == 0:
                 results[column] = 1
                 continue
         if column == "Subsets":
@@ -242,26 +245,31 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper = False)
             if matched:
                 results[column] = 1
             continue
-        elif column in ["Derived From", "Tasks", "Collection Style", "Domain"]:
+        elif column in columns_with_lists:
+            assert isinstance(
+                pred_answer, list
+            ), f"pred_answer is not a list: {pred_answer}"
             if has_common(gold_answer, pred_answer):
                 results[column] = 1
-                continue
-        if pred_answer.strip().lower() == gold_answer.strip().lower():
+        elif pred_answer.strip().lower() == gold_answer.strip().lower():
             results[column] = 1
         else:
             pass
             # print(pred_answer, gold_answer)
     return results
 
-def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper = False):
+
+def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper=False):
     results = {c: 0 for c in evaluation_subsets}
 
-    predictions = get_predictions(gold_metadata, pred_metadata, use_annotations_paper = use_annotations_paper)
+    predictions = get_predictions(
+        gold_metadata, pred_metadata, use_annotations_paper=use_annotations_paper
+    )
     for subset in evaluation_subsets:
         for column in evaluation_subsets[subset]:
             results[subset] += predictions[column]
-        results[subset] = results[subset]/len(evaluation_subsets[subset])
-    results["AVERAGE"] = sum(predictions.values())/len(predictions)
+        results[subset] = results[subset] / len(evaluation_subsets[subset])
+    results["AVERAGE"] = sum(predictions.values()) / len(predictions)
     return results
 
 
@@ -327,6 +335,7 @@ def majority_vote(dicts):
 
     return result
 
+
 def compose(dicts):
     result = {}
     for key in columns:
@@ -355,7 +364,7 @@ def compose(dicts):
     return result
 
 
-def get_metadata_judge(dicts, type = "jury"):
+def get_metadata_judge(dicts, type="jury"):
     all_metadata = {d["config"]["model_name"]: d["metadata"] for d in dicts}
     if type == "jury":
         return "", majority_vote(all_metadata)
@@ -363,6 +372,7 @@ def get_metadata_judge(dicts, type = "jury"):
         return "", compose(all_metadata)
     else:
         raise (f"Unrecognized judge type {type}")
+
 
 def get_paper_id(link):
     return link.split("/")[-1]
@@ -448,27 +458,39 @@ def get_arxiv_id(arxiv_link):
     arxiv_link = fix_arxiv_link(arxiv_link)
     return arxiv_link.split("/")[-1]
 
+def pick_choice(options, method="last"):
+    if method == "random":
+        return random.choice(options)
+    elif method == "first":
+        return options[0]
+    else:
+        return options[-1]
 
 def fix_options(metadata, method="last"):
     fixed_metadata = {}
+    columns_with_options = [c for c in input_json if "options" in input_json[c]]
     for column in metadata:
-        if column in column_options:
-            options = [c.strip() for c in column_options[column].split(",")]
+        if column in columns_with_options:
+            options = [o for o in input_json[column]["options"]]
             pred_option = metadata[column]
-            if pred_option in options:
+            if isinstance(pred_option, list):
+                new_pred_option = []
+                for option in pred_option:
+                    if option in options:
+                        new_pred_option.append(option)
+                    else:
+                        new_pred_option.append(find_best_match(option, options))
+                if new_pred_option == []:
+                    fixed_metadata[column] = [pick_choice(options, method=method)]
+                else:
+                    fixed_metadata[column] = new_pred_option
+            elif pred_option in options:
                 fixed_metadata[column] = pred_option
             elif pred_option == "":
-                if method == "random":
-                    fixed_metadata[column] = random.choice(options)
-                elif method == "first":
-                    fixed_metadata[column] = options[0]
-                else:
-                    fixed_metadata[column] = options[-1]
+                fixed_metadata[column] = pick_choice(options, method=method)
             else:
-                fixed_metadata[column] = ",".join(
-                    find_best_match(option, options)
-                    for option in pred_option.split(",")
-                )
+                fixed_metadata[column] = find_best_match(pred_option, options)
+
         else:
             fixed_metadata[column] = metadata[column]
 
@@ -501,7 +523,7 @@ def cast(metadata):
 def fill_missing(metadata, year="", article_url=""):
     for c in columns:
         if c not in metadata:
-            if c == "Subsets":  # not implemented
+            if c in columns_with_lists:
                 metadata[c] = []
             else:
                 metadata[c] = ""
@@ -525,19 +547,42 @@ def postprocess(metadata, year="", article_url="", method="last"):
     return metadata
 
 
-def read_json(text_json):
-    results = {}
+def fix_json(broken_json: str) -> str:
+    """
+    Attempts to fix common issues in a malformed JSON string.
+
+    Args:
+        broken_json (str): The malformed JSON string.
+
+    Returns:
+        str: The corrected JSON string if fixable, or an error message.
+    """
     try:
-        text_json = text_json.replace("```json", "").replace("```", "")
-        text_json = text_json.replace("\\", "\\\\")
-        if '\\"' in text_json:
-            text_json = text_json.replace('\\"', '"')
-        results = json.loads(text_json)
-    except:
-        print(text_json)
+        # Attempt to parse the JSON directly
+        return json.loads(broken_json)
+    except json.JSONDecodeError:
+        pass  # Proceed with fixing the JSON
+    
+    
+    # Step 2: Remove trailing commas
+    fixed_json = re.sub(r",\s*([\]}])", r"\1", broken_json)
+
+    # step 3: remove the backslashes
+    fixed_json = fixed_json.replace("\\", "")
+
+    try:
+        # Check if the fixed JSON is now valid
+        return json.loads(fixed_json)
+    except json.JSONDecodeError as e:
+        print(broken_json)
+        print(fixed_json)
+        print(e)
         print("⚠ warning: can not read the josn, using empty {}")
         return {}
-    return results
+    
+def read_json(text_json):
+    text_json = text_json.replace("```json", "").replace("```", "")
+    return fix_json(text_json)
 
 
 def get_repo_link(metadata, repo_link=""):

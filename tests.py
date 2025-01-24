@@ -39,20 +39,20 @@ for m in results:
     assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
 print('✅ passed test3 [validation 3]')
 
+# fix options
 with open('testfiles/test4.json', 'r') as f:
     metadata = json.load(f)
-
 new_metadata = fix_options(metadata)
-
 for c in metadata:
     if c == 'Dialect':
         assert new_metadata['Dialect'] == 'Modern Standard Arabic', '❌ Modern Standard Arabic != ' + new_metadata['Dialect']
     elif c == 'Collection Style':
-        assert new_metadata['Collection Style'] == 'crawling,LLM generated,manual curation', '❌ crawling,LLM generated,manual curation != ' + new_metadata['Collection Style']
+        assert new_metadata['Collection Style'] == ['crawling', 'LLM generated', 'manual curation'], f"❌ ['crawling', 'LLM generated', 'manual curation'] != {new_metadata['Collection Style']}"
     else:
         assert new_metadata[c] == metadata[c], f'❌ {c} should be {metadata[c]} but got {new_metadata[c]}'
 print('✅ passed test4 [fix options]')
 
+# cast
 with open('testfiles/test5.json', 'r') as f:
     metadata = json.load(f)
 
@@ -70,6 +70,7 @@ for c in metadata:
 
 print('✅ passed test5 [casting]')
 
+# fill missing
 with open('testfiles/test6.json', 'r') as f:
     metadata = json.load(f)
 
@@ -90,7 +91,6 @@ with open('testfiles/test7.json', 'r') as f:
     gold_metadata = json.load(f)
 
 results = evaluate_metadata(pred_metadata, gold_metadata)
-
 assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
 print('✅ passed test7 [extract metadata]')
 
@@ -104,7 +104,6 @@ pred_metadata = postprocess(pred_metadata)
 
 with open('testfiles/test8.json', 'r') as f:
     gold_metadata = json.load(f)
-
 results = evaluate_metadata(pred_metadata, gold_metadata)
 assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
 print('✅ passed test8 [browsing]')
@@ -113,7 +112,6 @@ pred_metadata = postprocess({})
 
 with open('testfiles/test9.json', 'r') as f:
     gold_metadata = json.load(f)
-
 results = evaluate_metadata(pred_metadata, gold_metadata)
 
 assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'

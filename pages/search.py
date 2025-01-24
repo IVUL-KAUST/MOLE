@@ -85,23 +85,29 @@ def get_metadata(
     if paper_text != "":
         if use_examples:
             prompt = f"""
-                    {questions}
+                    {input_json}
                     Here are some examples:
                     {examples}
                     Now, predict for the following paper:
-                    Paper: {paper_text}
-                    Metadata:
+                    Paper Text: {paper_text}
+                    Output Json:
                     """            
         else:
             prompt = f"""
-                    You are given the following paper: {paper_text}.
-                    Answer the following questions about the dataset: {questions}
-                    """  
+                    Paper Text: {paper_text},
+                    Input Json: {input_json}
+                    Output Json:
+                    """
+        sys_prompt = system_prompt_with_cot  
     elif readme != "":
-        prompt = f"You are given the following metadata: '{metadata}', and readme: '{readme}'. Create an answer that combines both results from the readme and the metadata. You are requested to answer the following questions about the dataset {questions}"
-
+        prompt = f"""
+                    You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
+                    Given the following Input Json: {input_json}, then update the metadata in the Input Json with the information from the readme.
+                    Output Json:
+                    """
+        sys_prompt = system_prompt
     if "gemini" in model_name.lower():
-        model = GenerativeModel(model_name, system_instruction=system_prompt)
+        model = GenerativeModel(model_name, system_instruction=sys_prompt)
         tools = []
         if use_search:
             tool = Tool.from_google_search_retrieval(grounding.GoogleSearchRetrieval())
@@ -121,7 +127,7 @@ def get_metadata(
             model=model_name,
             max_tokens=2084,
             temperature=0,
-            system=system_prompt,
+            system=sys_prompt,
             messages=[{"role": "user", "content": [{"type": "text", "text": prompt}]}],
         )
         response = message.content[0].text
@@ -129,7 +135,7 @@ def get_metadata(
         message = chatgpt_client.chat.completions.create(
             model=model_name,
             messages=[
-                {"role": "system", "content": system_prompt},
+                {"role": "system", "content": sys_prompt},
                 {"role": "user", "content": prompt},
             ],
             temperature=0,
@@ -140,7 +146,7 @@ def get_metadata(
             message = deepseek_client.chat.completions.create(
                 model="deepseek-chat",
                 messages=[
-                    {"role": "system", "content": system_prompt},
+                    {"role": "system", "content": sys_prompt},
                     {"role": "user", "content": prompt},
                 ],
                 max_tokens=2084,  # reduce the max tokens to 1024
@@ -150,7 +156,7 @@ def get_metadata(
             message = deepseek_client.chat.completions.create(
                 model="deepseek-reasoner",
                 messages=[
-                    {"role": "system", "content": system_prompt},
+                    {"role": "system", "content": sys_prompt},
                     {"role": "user", "content": prompt},
                 ],
                 max_tokens=2084,  # reduce the max tokens to 1024
@@ -173,7 +179,7 @@ def get_metadata(
         }
         data = {
             "messages": [
-                {"role": "system", "content": system_prompt},
+                {"role": "system", "content": sys_prompt},
                 {"role": "user", "content": prompt},
             ],
             "model": f"{org}/{model_name}",
@@ -186,7 +192,7 @@ def get_metadata(
     elif "o1" in model_name.lower():
         message = chatgpt_client.chat.completions.create(
             model=model_name,
-            messages=[{"role": "user", "content": system_prompt + prompt}],
+            messages=[{"role": "user", "content": sys_prompt + prompt}],
         )
         response = message.choices[0].message.content.strip()
     else:

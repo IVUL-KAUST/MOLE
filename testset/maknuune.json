@@ -7,15 +7,27 @@
     "Year": 2022,
     "Language": "multilingual",
     "Dialect": "Palestine",
-    "Domain": "captions,public datasets,other",
+    "Domain": [
+        "captions",
+        "public datasets",
+        "other"
+    ],
     "Form": "text",
-    "Collection Style": "manual curation",
+    "Collection Style": [
+        "manual curation"
+    ],
     "Description": "A large open lexicon for the Palestinian Arabic dialect. Maknuune has over 36K entries from 17K lemmas,and 3.7K roots. All entries include diacritized Arabic orthography, phonological transcription and English glosses.",
     "Volume": "36,302",
     "Unit": "tokens",
     "Ethical Risks": "Low",
-    "Provider": "New York University Abu Dhabi, University of Oxford, UNRWA",
-    "Derived From": "Curras",
+    "Provider": [
+        "New York University Abu Dhabi",
+        "University of Oxford",
+        "UNRWA"
+    ],
+    "Derived From": [
+        "Curras"
+    ],
     "Paper Title": "Maknuune: A Large Open Palestinian Arabic Lexicon",
     "Paper Link": "https://arxiv.org/pdf/2210.12985",
     "Script": "Arab-Latin",
@@ -24,13 +36,28 @@
     "Access": "Free",
     "Cost": "",
     "Test Split": "No",
-    "Tasks": "morphological analysis,lexicon analysis",
+    "Tasks": [
+        "morphological analysis",
+        "lexicon analysis"
+    ],
     "Venue Title": "arXiv",
     "Citations": "",
     "Venue Type": "preprint",
     "Venue Name": "",
-    "Authors": "Shahd Dibas, Christian Khairallah, Nizar Habash, Omar Fayez Sadi, Tariq Sairafy, Karmel Sarabta, Abrar Ardah",
-    "Affiliations": "NYUAD, University of Oxford, UNRWA",
+    "Authors": [
+        "Shahd Dibas",
+        "Christian Khairallah",
+        "Nizar Habash",
+        "Omar Fayez Sadi",
+        "Tariq Sairafy",
+        "Karmel Sarabta",
+        "Abrar Ardah"
+    ],
+    "Affiliations": [
+        "NYUAD",
+        "University of Oxford",
+        "UNRWA"
+    ],
     "Abstract": "We present Maknuune, a large open lexicon for the Palestinian Arabic dialect. Maknuune has over 36K entries from 17K lemmas, and 3.7K roots. All entries include diacritized Arabic orthography, phonological transcription and English glosses. Some entries are enriched with additional information such as broken plurals and templatic feminine forms, associated phrases and collocations, Standard Arabic glosses, and examples or notes on grammar, usage, or location of collected entry.",
     "Added By": "Christian Khairallah",
     "annotations_from_paper": {

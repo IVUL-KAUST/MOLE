@@ -7,15 +7,25 @@
     "Year": 2016,
     "Language": "multilingual",
     "Dialect": "Modern Standard Arabic",
-    "Domain": "captions,public datasets",
+    "Domain": [
+        "captions",
+        "public datasets"
+    ],
     "Form": "text",
-    "Collection Style": "machine annotation",
+    "Collection Style": [
+        "machine annotation"
+    ],
     "Description": "This dataset consists of 2023 TED talks with aligned Arabic and Hebrew subtitles. Sentences were rebuilt and aligned using English as a pivot to improve accuracy, offering a valuable resource for Arabic-Hebrew machine translation tasks.",
     "Volume": "225,000",
     "Unit": "sentences",
     "Ethical Risks": "Low",
-    "Provider": "FBK",
-    "Derived From": "TED talks, WIT3 corpus",
+    "Provider": [
+        "FBK"
+    ],
+    "Derived From": [
+        "TED talks",
+        "WIT3 corpus"
+    ],
     "Paper Title": "An Arabic-Hebrew parallel corpus of TED talks",
     "Paper Link": "https://arxiv.org/pdf/1610.00572.pdf",
     "Script": "Arab",
@@ -24,16 +34,22 @@
     "Access": "Free",
     "Cost": "",
     "Test Split": "Yes",
-    "Tasks": "machine translation",
+    "Tasks": [
+        "machine translation"
+    ],
     "Venue Title": "arXiv",
     "Citations": "",
     "Venue Type": "preprint",
     "Venue Name": "",
-    "Authors": "Mauro Cettolo",
-    "Affiliations": "Fondazione Bruno Kessler (FBK)",
+    "Authors": [
+        "Mauro Cettolo"
+    ],
+    "Affiliations": [
+        "Fondazione Bruno Kessler (FBK)"
+    ],
     "Abstract": "The paper describes the creation of an Arabic-Hebrew parallel corpus from TED talks, aligned using English as a pivot. The benchmark contains around 225,000 sentences and 3.5 million tokens in each language. It was prepared to assist machine translation tasks for Arabic-Hebrew and has been partitioned into train, development, and test sets similar to the IWSLT 2016 evaluation campaign.",
     "Added By": "Maryam Al Emadi",
-    "annotations_from_paper":{
+    "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
         "HF Link": 0,

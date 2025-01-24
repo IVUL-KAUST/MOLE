@@ -7,15 +7,22 @@
     "Year": 2024,
     "Language": "multilingual",
     "Dialect": "Classical Arabic",
-    "Domain": "books",
+    "Domain": [
+        "books"
+    ],
     "Form": "text",
-    "Collection Style": "crawling,human annotation",
+    "Collection Style": [
+        "crawling",
+        "human annotation"
+    ],
     "Description": "The ATHAR dataset comprises 66,000 translation pairs from Classical Arabic to English. It spans a wide array of subjects, aiming to enhance the development of NLP models specialized in Classical Arabic. This dataset addresses the gap in translation resources for Classical Arabic and is useful for fine-tuning large language models (LLMs) to improve their performance in handling ancient texts.",
     "Volume": "66,000",
     "Unit": "sentences",
     "Ethical Risks": "Low",
-    "Provider": "ADAPT/DCU",
-    "Derived From": "",
+    "Provider": [
+        "ADAPT/DCU"
+    ],
+    "Derived From": [],
     "Paper Title": "ATHAR: A High-Quality and Diverse Dataset for Classical Arabic to English Translation",
     "Paper Link": "https://arxiv.org/pdf/2407.19835",
     "Script": "Arab",
@@ -24,13 +31,21 @@
     "Access": "Free",
     "Cost": "",
     "Test Split": "Yes",
-    "Tasks": "machine translation",
+    "Tasks": [
+        "machine translation"
+    ],
     "Venue Title": "arXiv",
     "Citations": "",
     "Venue Type": "preprint",
     "Venue Name": "",
-    "Authors": "Mohammed Khalil, Mohammed Sabry",
-    "Affiliations": "Independent Researcher, ADAPT/DCU",
+    "Authors": [
+        "Mohammed Khalil",
+        "Mohammed Sabry"
+    ],
+    "Affiliations": [
+        "Independent Researcher",
+        "ADAPT/DCU"
+    ],
     "Abstract": "ATHAR is a dataset comprising 66,000 high-quality translation pairs from Classical Arabic to English, aimed at improving NLP and machine translation systems. The dataset covers a broad range of Classical Arabic texts, including science, philosophy, and history. Evaluations on state-of-the-art language models indicate that fine-tuning with this dataset significantly improves translation accuracy.",
     "Added By": "Maryam Al Emadi",
     "annotations_from_paper": {

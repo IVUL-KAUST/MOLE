@@ -111,14 +111,7 @@ def plot_by_year():
 
 
 def plot_table():
-    headers = [
-        "MODEL",
-        "CONTENT",
-        "ACCESSABILITY",
-        "DIVERSITY",
-        "EVALUATION",
-        "AVERAGE",
-    ]
+    headers = [ "MODEL"] + [c for c in evaluation_subsets] + ["AVERAGE"]
     metric_results = {}
     use_annotations_paper = args.use_annotations_paper
     for json_file in json_files:

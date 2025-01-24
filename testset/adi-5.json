@@ -38,15 +38,21 @@
     "Year": 2016,
     "Language": "ar",
     "Dialect": "mixed",
-    "Domain": "TV Channels",
+    "Domain": [
+        "TV Channels"
+    ],
     "Form": "spoken",
-    "Collection Style": "crawling",
+    "Collection Style": [
+        "crawling"
+    ],
     "Description": "This will be divided across the five major Arabic dialects; Egyptian (EGY), Levantine (LAV), Gulf (GLF), North African (NOR), and Modern Standard Arabic (MSA)",
     "Volume": "74.5",
     "Unit": "hours",
     "Ethical Risks": "Low",
-    "Provider": "QCRI",
-    "Derived From": "",
+    "Provider": [
+        "QCRI"
+    ],
+    "Derived From": [],
     "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
     "Paper Link": "https://arxiv.org/pdf/1509.06928",
     "Script": "Arab",
@@ -55,16 +61,27 @@
     "Access": "Free",
     "Cost": "",
     "Test Split": "Yes",
-    "Tasks": "dialect identification",
+    "Tasks": [
+        "dialect identification"
+    ],
     "Venue Title": "arXiv",
     "Citations": "",
     "Venue Type": "preprint",
     "Venue Name": "",
-    "Authors": "A. Ali,Najim Dehak,P. Cardinal,Sameer Khurana,S. Yella,James R. Glass,P. Bell,S. Renals",
-    "Affiliations": ",,,,,,,",
+    "Authors": [
+        "A. Ali",
+        "Najim Dehak",
+        "P. Cardinal",
+        "Sameer Khurana",
+        "S. Yella",
+        "James R. Glass",
+        "P. Bell",
+        "S. Renals"
+    ],
+    "Affiliations": [],
     "Abstract": "We investigate different approaches for dialect identification in Arabic broadcast speech, using phonetic, lexical features obtained from a speech recognition system, and acoustic features using the i-vector framework. We studied both generative and discriminate classifiers, and we combined these features using a multi-class Support Vector Machine (SVM). We validated our results on an Arabic/English language identification task, with an accuracy of 100%. We used these features in a binary classifier to discriminate between Modern Standard Arabic (MSA) and Dialectal Arabic, with an accuracy of 100%. We further report results using the proposed method to discriminate between the five most widely used dialects of Arabic: namely Egyptian, Gulf, Levantine, North African, and MSA, with an accuracy of 52%. We discuss dialect identification errors in the context of dialect code-switching between Dialectal Arabic and MSA, and compare the error pattern between manually labeled data, and the output from our classifier. We also release the train and test data as standard corpus for dialect identification.",
     "Added By": "Zaid Alyafeai",
-    "annotations_from_paper":{
+    "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
         "HF Link": 0,
@@ -87,7 +104,7 @@
         "Script": 1,
         "Tokenized": 1,
         "Host": 1,
-        "Access":1,
+        "Access": 1,
         "Cost": 1,
         "Test Split": 1,
         "Tasks": 1,
