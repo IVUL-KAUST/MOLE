@@ -2,7 +2,7 @@ import plotext as plt  # type: ignore
 from glob import glob
 import json
 import argparse
-from constants import TEST_DATASETS_IDS, VALID_DATASETS_IDS, evaluation_subsets
+from constants import TEST_DATASETS_IDS, VALID_DATASETS_IDS, evaluation_subsets, non_browsing_models
 import numpy as np
 from plot_utils import print_table
 from utils import get_predictions, evaluate_metadata
@@ -24,6 +24,8 @@ def plot_by_cost():
         if arxiv_id not in ids:
             continue
         model_name = results["config"]["model_name"]
+        if model_name in non_browsing_models:
+            continue
         if model_name not in metric_results:
             metric_results[model_name] = []
         metric_results[model_name].append(
