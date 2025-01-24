@@ -228,7 +228,7 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False):
             if gold_metadata["annotations_from_paper"][column] == 0:
                 results[column] = 1
                 continue
-        if column == "Subsets":
+        if column_types[column] == 'List[Dict]':
             try:
                 if len(pred_answer) != len(gold_answer):
                     continue
@@ -310,27 +310,36 @@ def majority_vote(dicts):
     result = {}
 
     for key in columns:
-        if key == "Subsets":
+        if column_types[key] == 'List[Dict]':
             result[key] = []
             continue
 
         # only use smarter models as a judge
-        values = [
-            dicts[model_name][key]
-            for model_name in dicts
-            if any([m.lower() in model_name.lower() for m in ["pro", "deepseek"]])
-        ]
-
+        values = []
+        for model in dicts:
+            value = dicts[model][key]
+            if isinstance(value, list):
+                values.extend(value)
+            else:
+                values.append(value)
+        
+        if len(values) == 0:
+            result[key] = []
+            continue
+        
         # Count the occurrences of each value
         value_counts = Counter(values)
         # Find the value with the highest count (majority vote)
-        majority_value, score = value_counts.most_common(1)[0]
-        # if score > 3:
-        #     result[key] = majority_value
-        # else:
-        #     for model_name in dicts:
-        #         if 'pro' in model_name: #bias towards sonnet
-        #             result[key] = dicts[model_name][key]
+        value_counts= value_counts.most_common(3)
+        
+        if column_types[key] == 'List[str]':
+            majority_value, max_score = value_counts[0]
+            majority_value = [value for value,score in value_counts if score == max_score]
+        elif column_types[key] == 'str' or column_types[key] == 'int':
+            majority_value, _ = value_counts[0]
+        else:
+            print(column_types[key])
+            raise
         result[key] = majority_value
 
     return result
@@ -339,30 +348,48 @@ def majority_vote(dicts):
 def compose(dicts):
     result = {}
     for key in columns:
-        if key == "Subsets":
+        if column_types[key] == 'List[Dict]':
             result[key] = []
             continue
 
         # only use smarter models as a judge
 
         if key in evaluation_subsets["ACCESSABILITY"]:
-            models_to_use = ["gemini-1.5-flash-browsing"]
+            models_to_use = ["browsing"]
         else:
-            models_to_use = ["gemini-1.5-pro-browsing"]
-        values = [
-            dicts[model_name][key]
-            for model_name in dicts
-            if any([m.lower() in model_name.lower() for m in models_to_use])
-        ]
+            models_to_use = ["pro", "deepseek", "jury"]
 
-        # Count the occurrences of each value
+        # only use smarter models as a judge
+        values = []
+        for model in dicts:
+            if any([m.lower() in model.lower() for m in models_to_use]):
+                value = dicts[model][key]
+                if isinstance(value, list):
+                    values.extend(value)
+                else:
+                    values.append(value)
+        
+        if len(values) == 0:
+            if column_types[key] == 'List[str]':
+                result[key] = []
+            else:
+                result[key] = ""
+            continue
+        
         value_counts = Counter(values)
-        # Find the value with the highest count (majority vote)
-        majority_value, score = value_counts.most_common(1)[0]
+        value_counts= value_counts.most_common(3)
+        
+        if column_types[key] == 'List[str]':
+            majority_value, max_score = value_counts[0]
+            majority_value = [value for value,score in value_counts if score == max_score]
+        elif column_types[key] == 'str' or column_types[key] == 'int':
+            majority_value, _ = value_counts[0]
+        else:
+            print(column_types[key])
+            raise
         result[key] = majority_value
 
     return result
-
 
 def get_metadata_judge(dicts, type="jury"):
     all_metadata = {d["config"]["model_name"]: d["metadata"] for d in dicts}

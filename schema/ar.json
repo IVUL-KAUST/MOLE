@@ -5,7 +5,7 @@
     },
     "Subsets": {
         "question": "What are the dialect subsets of this dataset? The keys are 'Name', 'Volume', 'Unit', 'Dialect'. 'Dialect' must be one of the country name from the dialect options",
-        "output_type": "List[Dict[str, str]]",
+        "output_type": "List[Dict]",
         "validation_group":"DIVERSITY"
     },
     "Link": {

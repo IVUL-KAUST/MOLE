@@ -165,3 +165,8 @@ for c in evaluation_subsets:
     validation_columns += evaluation_subsets[c]
 
 NUM_VALIDATION_COLUMNS = len(validation_columns)
+
+column_types = {}
+for c in input_json:
+    column_types[c] = input_json[c]['output_type']
+
