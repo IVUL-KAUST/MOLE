@@ -160,8 +160,8 @@
         "required": true
     },
     "Volume": {
-        "question": "What is the size of the dataset? Output numbers only with ',' separating each thousand. If the dataset is multilingual only use the size of the Arabic dataset",
-        "output_type": "str",
+        "question": "What is the size of the dataset?. If the dataset is multilingual only use the size of the Arabic dataset",
+        "output_type": "float",
         "validation_group":"CONTENT",
         "required": true
     },
