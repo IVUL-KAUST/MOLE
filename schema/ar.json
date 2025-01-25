@@ -1,6 +1,6 @@
 {
     "Name": {
-        "Question": "What is the name of the dataset?",
+        "question": "What is the name of the dataset?",
         "output_type": "str"
     },
     "Subsets": {
