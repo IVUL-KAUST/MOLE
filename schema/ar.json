@@ -331,7 +331,7 @@
     "Venue Title": {
         "question": "What is the venue title of the published paper?",
         "output_type": "str",
-        "required": true
+        "required": false
     },
     "Citations": {
         "question": "Guess the citations count of the paper",
@@ -342,7 +342,7 @@
         "question": "What is the venue type?",
         "options": ["conference", "workshop", "journal", "preprint"],
         "output_type": "str",
-        "required": true
+        "required": false
     },
     "Venue Name": {
         "question": "What is the full name of the venue that published the paper?",
@@ -352,17 +352,17 @@
     "Authors": {
         "question": "Who are the authors of the paper? The max list of authors should be 5, if there are more use et al.",
         "output_type": "List[str]",
-        "required": true
+        "required": false
     },
     "Affiliations": {
         "question": "What are the affiliations of the authors?",
         "output_type": "List[str]",
-        "required": true
+        "required": false
     },
     "Abstract": {
         "question": " What is the abstract of the paper? Remove any \\ or \" from the abstract.",
         "output_type": "str",
-        "required": true
+        "required": false
     },
     "Added By": {
         "question": "Who added this dataset to the registry?",
