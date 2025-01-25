@@ -592,7 +592,7 @@ def fix_json(broken_json: str) -> str:
     
     
     # Step 2: Remove trailing commas
-    fixed_json = re.sub(r",\s*([\]}])", r"\1", broken_json)
+    # fixed_json = re.sub(r",\s*([\]}])", r"\1", broken_json)
 
     # step 3: remove the backslashes
     fixed_json = fixed_json.replace("\\", "")

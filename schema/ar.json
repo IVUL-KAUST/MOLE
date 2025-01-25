@@ -12,13 +12,13 @@
     },
     "Link": {
         "question": "What is the link to access the dataset? The link must contain the dataset. If the dataset is hosted on HuggingFace, use the HF Link.",
-        "output_type": "str",
+        "output_type": "url",
         "validation_group":"ACCESSABILITY",
         "required": true
     },
     "HF Link": {
         "question": "What is the Huggingface link of the dataset?",
-        "output_type": "str",
+        "output_type": "url",
         "validation_group":"ACCESSABILITY",
         "required": false
     },
@@ -57,7 +57,7 @@
     },
     "Year": {
         "question": "What year was the dataset published?",
-        "output_type": "int",
+        "output_type": "date",
         "required": true
     },
     "Language": {
