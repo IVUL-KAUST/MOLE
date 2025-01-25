@@ -17,7 +17,7 @@
         "human annotation"
     ],
     "Description": "MLQA has over 12K instances in English and 5K in each other language, with each instance parallel between 4 languages on average.",
-    "Volume": "5,852",
+    "Volume": 5852.0,
     "Unit": "documents",
     "Ethical Risks": "Low",
     "Provider": [
@@ -37,7 +37,7 @@
         "question answering"
     ],
     "Venue Title": "arXiv",
-    "Citations": "124.0",
+    "Citations": 124,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

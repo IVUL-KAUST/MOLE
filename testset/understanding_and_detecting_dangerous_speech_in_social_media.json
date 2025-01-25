@@ -16,7 +16,7 @@
         "human annotation"
     ],
     "Description": "Dangerous speech detection",
-    "Volume": "5,011",
+    "Volume": 5011.0,
     "Unit": "sentences",
     "Ethical Risks": "High",
     "Provider": [
@@ -37,7 +37,7 @@
         "hate speech detection"
     ],
     "Venue Title": "arXiv",
-    "Citations": "8.0",
+    "Citations": 8,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

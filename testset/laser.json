@@ -15,7 +15,7 @@
         "crawling"
     ],
     "Description": "Aligned sentences in 112 languages extracted from Tatoeba",
-    "Volume": "1,000",
+    "Volume": 1000.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
@@ -42,7 +42,7 @@
         "Embeddings"
     ],
     "Venue Title": "arXiv",
-    "Citations": "374.0",
+    "Citations": 374,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

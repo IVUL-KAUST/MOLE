@@ -7,14 +7,21 @@
     "Year": 2019,
     "Language": "ar",
     "Dialect": "Modern Standard Arabic",
-    "Domain": ["TV Channels", "captions"],
+    "Domain": [
+        "TV Channels",
+        "captions"
+    ],
     "Form": "spoken",
-    "Collection Style": ["human annotation"],
+    "Collection Style": [
+        "human annotation"
+    ],
     "Description": "from Aljazeera TV programs have been manually captioned with no timing information",
-    "Volume": "1,200",
+    "Volume": 1200,
     "Unit": "hours",
     "Ethical Risks": "Low",
-    "Provider": ["QCRI"],
+    "Provider": [
+        "QCRI"
+    ],
     "Derived From": [],
     "Paper Title": "THE MGB-2 CHALLENGE: ARABIC MULTI-DIALECT BROADCAST MEDIA RECOGNITION",
     "Paper Link": "https://arxiv.org/pdf/1609.05625",
@@ -24,16 +31,26 @@
     "Access": "Upon-Request",
     "Cost": "",
     "Test Split": "No",
-    "Tasks": ["speech recognition"],
+    "Tasks": [
+        "speech recognition"
+    ],
     "Venue Title": "arXiv",
-    "Citations": "64.0",
+    "Citations": 64,
     "Venue Type": "preprint",
     "Venue Name": "",
-    "Authors": ["Ahmed Ali", "Peter Bell", "James Glass", "Yacine Messaoui", "Hamdy Mubarak", "Steve Renals", "Yifan Zhang"],
+    "Authors": [
+        "Ahmed Ali",
+        "Peter Bell",
+        "James Glass",
+        "Yacine Messaoui",
+        "Hamdy Mubarak",
+        "Steve Renals",
+        "Yifan Zhang"
+    ],
     "Affiliations": [],
     "Abstract": "This paper describes the Arabic MGB-3 Challenge \u2014 Arabic Speech Recognition in the Wild. Unlike last year's Arabic MGB-2 Challenge, for which the recognition task was based on more than 1,200 hours broadcast TV news recordings from Aljazeera Arabic TV programs, MGB-3 emphasises dialectal Arabic using a multi-genre collection of Egyptian YouTube videos. Seven genres were used for the data collection: comedy, cooking, family/kids, fashion, drama, sports, and science (TEDx). A total of 16 hours of videos, split evenly across the different genres, were divided into adaptation, development and evaluation data sets. The Arabic MGB-Challenge comprised two tasks: A) Speech transcription, evaluated on the MGB-3 test set, along with the 10 hour MGB-2 test set to report progress on the MGB-2 evaluation; B) Arabic dialect identification, introduced this year in order to distinguish between four major Arabic dialects \u2014 Egyptian, Levantine, North African, Gulf, as well as Modern Standard Arabic. Two hours of audio per dialect were released for development and a further two hours were used for evaluation. For dialect identification, both lexical features and i-vector bottleneck features were shared with participants in addition to the raw audio recordings. Overall, thirteen teams submitted ten systems to the challenge. We outline the approaches adopted in each system, and summarise the evaluation results.",
     "Added By": "Zaid Alyafeai",
-    "annotations_from_paper":{
+    "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
         "HF Link": 1,
@@ -54,7 +71,7 @@
         "Paper Title": 1,
         "Paper Link": 1,
         "Script": 1,
-        "Tokenized":1,
+        "Tokenized": 1,
         "Host": 1,
         "Access": 0,
         "Cost": 1,

@@ -17,7 +17,7 @@
         "manual curation"
     ],
     "Description": "A multi-genre collection of Egyptian YouTube videos. Seven genres were used for the data collection: comedy, cooking, family/kids, fashion, drama, sports, and science (TEDx). A total of 16 hours of videos, split evenly across the different genres",
-    "Volume": "16",
+    "Volume": 16.0,
     "Unit": "hours",
     "Ethical Risks": "Low",
     "Provider": [
@@ -36,7 +36,7 @@
         "speech recognition"
     ],
     "Venue Title": "arXiv",
-    "Citations": "64.0",
+    "Citations": 64,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

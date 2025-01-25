@@ -17,7 +17,7 @@
         "human annotation"
     ],
     "Description": "first Tunisian Arabizi Dataset including 3K sentences, balanced, covering different topics, preprocessed and annotated as positive and negative",
-    "Volume": "9,210",
+    "Volume": 9210.0,
     "Unit": "sentences",
     "Ethical Risks": "Medium",
     "Provider": [
@@ -36,7 +36,7 @@
         "sentiment analysis"
     ],
     "Venue Title": "arXiv",
-    "Citations": "8.0",
+    "Citations": 8,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

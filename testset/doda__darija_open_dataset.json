@@ -15,7 +15,7 @@
         "manual curation"
     ],
     "Description": "DODa presents words under different spellings, offers verb-to-noun and masculine-to-feminine correspondences contains the conjugation of hundreds of verbs in different tenses,",
-    "Volume": "10,000",
+    "Volume": 10000.0,
     "Unit": "tokens",
     "Ethical Risks": "Low",
     "Provider": [],
@@ -34,7 +34,7 @@
         "part of speech tagging"
     ],
     "Venue Title": "arXiv",
-    "Citations": "0.0",
+    "Citations": 0,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

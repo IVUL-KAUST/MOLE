@@ -16,7 +16,7 @@
         "other"
     ],
     "Description": "Combined MLMA and L-HSAB datasets",
-    "Volume": "5,790",
+    "Volume": 5790.0,
     "Unit": "sentences",
     "Ethical Risks": "High",
     "Provider": [
@@ -38,7 +38,7 @@
         "hate speech detection"
     ],
     "Venue Title": "arXiv",
-    "Citations": "",
+    "Citations": 0,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

@@ -16,7 +16,7 @@
         "machine annotation"
     ],
     "Description": "This dataset consists of 2023 TED talks with aligned Arabic and Hebrew subtitles. Sentences were rebuilt and aligned using English as a pivot to improve accuracy, offering a valuable resource for Arabic-Hebrew machine translation tasks.",
-    "Volume": "225,000",
+    "Volume": 225000.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
@@ -38,7 +38,7 @@
         "machine translation"
     ],
     "Venue Title": "arXiv",
-    "Citations": "",
+    "Citations": 0,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

@@ -16,7 +16,7 @@
         "human annotation"
     ],
     "Description": "Calliar is a dataset for Arabic calligraphy. The dataset consists of 2500 json files that contain strokes manually annotated for Arabic calligraphy. This repository contains the dataset for the following paper",
-    "Volume": "2,500",
+    "Volume": 2500.0,
     "Unit": "images",
     "Ethical Risks": "Low",
     "Provider": [
@@ -35,7 +35,7 @@
         "optical character recognition"
     ],
     "Venue Title": "arXiv",
-    "Citations": "",
+    "Citations": 0,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

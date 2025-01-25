@@ -15,7 +15,7 @@
         "human annotation"
     ],
     "Description": "Evaluation set for NLI by extending the development and test sets of the Multi-Genre Natural Language Inference Corpus (MultiNLI) to 15 languages",
-    "Volume": "7,500",
+    "Volume": 7500.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
@@ -36,7 +36,7 @@
         "natural language inference"
     ],
     "Venue Title": "arXiv",
-    "Citations": "354.0",
+    "Citations": 354,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

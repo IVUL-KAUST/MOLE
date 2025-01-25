@@ -16,7 +16,7 @@
         "other"
     ],
     "Description": "A linguistically annotated version of the OpenITI corpus, with annotations for lemmas, POS tags, parse trees, and morphological segmentation",
-    "Volume": "7,144",
+    "Volume": 7144.0,
     "Unit": "documents",
     "Ethical Risks": "Low",
     "Provider": [],
@@ -37,7 +37,7 @@
         "language modeling"
     ],
     "Venue Title": "arXiv",
-    "Citations": "",
+    "Citations": 0,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

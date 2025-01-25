@@ -17,7 +17,7 @@
         "human annotation"
     ],
     "Description": "Fine-Grained Hate Speech Detection on Arabic Twitter",
-    "Volume": "12,698",
+    "Volume": 12698.0,
     "Unit": "sentences",
     "Ethical Risks": "High",
     "Provider": [
@@ -40,7 +40,7 @@
         "hate speech detection"
     ],
     "Venue Title": "arXiv",
-    "Citations": "",
+    "Citations": 0,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

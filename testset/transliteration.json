@@ -15,7 +15,7 @@
         "crawling"
     ],
     "Description": "Arabic-English transliteration dataset mined from Wikipedia.",
-    "Volume": "15,898",
+    "Volume": 15898.0,
     "Unit": "tokens",
     "Ethical Risks": "Low",
     "Provider": [
@@ -35,7 +35,7 @@
         "translation"
     ],
     "Venue Title": "arXiv",
-    "Citations": "",
+    "Citations": 0,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

@@ -16,7 +16,7 @@
         "machine annotation"
     ],
     "Description": "a large-scale, historical corpus of Arabic of about 1 billion\r\nwords from diverse periods of time",
-    "Volume": "6,100",
+    "Volume": 6100.0,
     "Unit": "documents",
     "Ethical Risks": "Low",
     "Provider": [],
@@ -36,7 +36,7 @@
         "morphological analysis"
     ],
     "Venue Title": "arXiv",
-    "Citations": "9.0",
+    "Citations": 9,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

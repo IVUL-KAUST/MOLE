@@ -15,7 +15,7 @@
         "machine annotation"
     ],
     "Description": "English-Arabic named entity transliteration and classification dataset",
-    "Volume": "79,924",
+    "Volume": 79924.0,
     "Unit": "tokens",
     "Ethical Risks": "Low",
     "Provider": [
@@ -42,7 +42,7 @@
         "machine translation"
     ],
     "Venue Title": "arXiv",
-    "Citations": "35.0",
+    "Citations": 35,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [

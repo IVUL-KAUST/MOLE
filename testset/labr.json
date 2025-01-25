@@ -17,7 +17,7 @@
         "human annotation"
     ],
     "Description": "A large Arabic book review dataset for sentiment analysis",
-    "Volume": "63,257",
+    "Volume": 63257.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
@@ -37,7 +37,7 @@
         "sentiment analysis"
     ],
     "Venue Title": "arXiv",
-    "Citations": "",
+    "Citations": 0,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
