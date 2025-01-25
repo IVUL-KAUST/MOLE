@@ -379,10 +379,10 @@ def run(
             abstract = r["summary"]
             article_url = r["article_url"]
             title = r["title"]
-            if r["published"] != "":
-                year = int(r["published"].split("-")[0])
-            else:
-                year = None
+            # if r["published"] != "":
+            #     year = int(r["published"].split("-")[0])
+            # else:
+            #     year = None
             arxiv_resource = not ("pdf" in r)
 
             if arxiv_resource:

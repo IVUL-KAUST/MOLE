@@ -122,7 +122,7 @@ SAFETY_CONFIG_GEMINI = [
 
 input_json = json.load(open("schema/ar.json", "r"))
 columns = list(input_json.keys())
-columns_with_lists = [c for c in columns if 'List' in input_json[c]['output_type']]
+columns_with_lists = [c for c in columns if 'List[str]' == input_json[c]['output_type']]
 
 system_prompt = f"""You are a profressional research paper reader. 
         You will be provided a 'Paper Text' and 'Input Json' that has 'question', 'options'(optional), 'options_description'(optional), and 'output_type'. 

@@ -251,7 +251,7 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False):
             ), f"pred_answer is not a list: {pred_answer}"
             if has_common(gold_answer, pred_answer):
                 results[column] = 1
-        elif pred_answer.strip().lower() == gold_answer.strip().lower():
+        elif pred_answer == gold_answer:
             results[column] = 1
         else:
             pass
@@ -543,7 +543,7 @@ def cast(metadata):
         pass
     metadata["Link"] = process_url(metadata["Link"])
     metadata["HF Link"] = process_url(metadata["HF Link"])
-
+    metadata["Volume"] = float(metadata["Volume"])
     return metadata
 
 
