@@ -363,5 +363,10 @@
         "question": " What is the abstract of the paper? Remove any \\ or \" from the abstract.",
         "output_type": "str",
         "required": true
+    },
+    "Added By": {
+        "question": "Who added this dataset to the registry?",
+        "output_type": "str",
+        "required": true
     }
 }
