@@ -432,7 +432,10 @@ def run(
 
                 for model_name in models:
                     curr_idx[0] += 1
-                    show_info(f'{curr_idx[0]}/{curr_idx[1]}. paper is being processed')
+                    if curr_idx[1]:
+                        show_info(f'{curr_idx[0]}/{curr_idx[1]}. paper is being processed')
+                    else:
+                        show_info(f'Paper is being processed')
                     if browse_web and (model_name in non_browsing_models):
                         show_info(f"Can't browse the web for {model_name}")
 
@@ -565,16 +568,22 @@ def run(
                                 method=model_name.split("-")[-1],
                             )
                         else:
-                            metadata = postprocess(metadata, year, article_url)
+                            metadata = postprocess(metadata)
 
                     show_info("🔍 Validating Metadata ...", st_context=st_context)
-
-                    validation_results = validate(
-                        metadata, use_split=use_split, link=article_url, title=title
-                    )
-
                     results = {}
                     results["metadata"] = metadata
+                    if use_split is not None:
+                        validation_results = validate(
+                            metadata, use_split=use_split, link=article_url, title=title
+                        )
+                        results["validation"] = validation_results
+                        show_info(
+                        f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %",
+                        st_context=st_context,
+                    )
+                    else:
+                        results["validation"] = {}
                     try:
                         results["cost"] = cost
                     except:
@@ -583,7 +592,7 @@ def run(
                             "input_tokens": 0,
                             "output_tokens": 0,
                         }
-                    results["validation"] = validation_results
+                    
 
                     if browse_web and not (model_name in non_browsing_models):
                         model_name = f"{model_name}-browsing"
@@ -596,10 +605,6 @@ def run(
                         "link": article_url,
                     }
                     results["ratio_filling"] = compute_filling(metadata)
-                    show_info(
-                        f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %",
-                        st_context=st_context,
-                    )
 
                     with open(save_path, "w") as outfile:
                         logger.info(f"📥 Results saved to: {save_path}")
