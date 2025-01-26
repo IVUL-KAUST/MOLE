@@ -57,7 +57,7 @@
     },
     "Year": {
         "question": "What year was the dataset published?",
-        "output_type": "date",
+        "output_type": "date[year]",
         "required": true
     },
     "Language": {
