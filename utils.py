@@ -10,6 +10,7 @@ import sys
 import threading
 import time
 from base64 import b64decode
+from datetime import date
 from functools import wraps
 from glob import glob
 
@@ -535,40 +536,48 @@ def process_url(url):
 
 def cast(metadata):
     for c in metadata:
-        if metadata[c] is None or metadata[c] == "None":
-            metadata[c] = ""
-    try:
-        metadata["Year"] = int(metadata["Year"])
-    except:
-        pass
-    metadata["Link"] = process_url(metadata["Link"])
-    metadata["HF Link"] = process_url(metadata["HF Link"])
-    metadata["Volume"] = float(metadata["Volume"])
+        type = column_types[c]
+        if type == 'str':
+            metadata[c] = str(metadata[c])
+        elif type == 'int':
+            metadata[c] = int(metadata[c])
+        elif type == 'float':
+            metadata[c] = float(metadata[c])
+        elif type == 'date[year]':
+            metadata[c] = int(metadata[c])
+        elif type == 'url':
+            metadata[c] = str(metadata[c])
+        elif 'List' in type:
+            if not isinstance(metadata[c], list):
+                raise(f'Error: {metadata[c]} is not a list')
+        else:
+            print(c, type)
+            raise (f"Unrecognized column type {type}")
     return metadata
 
 
-def fill_missing(metadata, year="", article_url=""):
+def fill_missing(metadata):
     for c in columns:
-        if c not in metadata:
-            if c in columns_with_lists:
+        if c not in metadata or metadata[c] is None:
+            if 'List' in column_types[c]:
                 metadata[c] = []
-            else:
+            elif 'str' in column_types[c]:
                 metadata[c] = ""
-
-    if "arxiv" in article_url.lower():
-        if metadata["Venue Title"] == "":
-            metadata["Venue Title"] = "arXiv"
-        if metadata["Venue Type"] == "":
-            metadata["Venue Type"] = "Preprint"
-        if metadata["Paper Link"] == "":
-            metadata["Paper Link"] = article_url
-    if str(year) != "":
-        metadata["Year"] = str(year)
+            elif 'int' in column_types[c]:
+                metadata[c] = 0
+            elif 'float' in column_types[c]:
+                metadata[c] = 0.0
+            elif 'date[year]' in column_types[c]:
+                metadata[c] = date.today().year
+            elif 'url' in column_types[c]:
+                metadata[c] = ""
+            else:
+                raise (f"Unrecognized column type {column_types[c]}")
     return metadata
 
 
-def postprocess(metadata, year="", article_url="", method="last"):
-    metadata = fill_missing(metadata, year, article_url)
+def postprocess(metadata, method="last"):
+    metadata = fill_missing(metadata)
     metadata = cast(metadata)
     metadata = fix_options(metadata, method=method)
     return metadata
@@ -595,7 +604,7 @@ def fix_json(broken_json: str) -> str:
     # fixed_json = re.sub(r",\s*([\]}])", r"\1", broken_json)
 
     # step 3: remove the backslashes
-    fixed_json = fixed_json.replace("\\", "")
+    fixed_json = broken_json.replace("\\", "")
 
     try:
         # Check if the fixed JSON is now valid
