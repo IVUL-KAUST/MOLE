@@ -56,7 +56,7 @@
     },
     "Language": {
         "question": "What languages are in the dataset?",
-        "options": ["ar", "multilingual"],
+        "options": ["en", "multilingual"],
         "option_description": {
             "en": "the dataset is purely in English, there are no other languages involved",
             "multilingual": "the dataset contains samples in other languages"
