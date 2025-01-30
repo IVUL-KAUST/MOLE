@@ -35,7 +35,7 @@ for exampler in examplers:
     Metadata: {output_text}
     """
 
-TEST_DATASETS_IDS = [
+TEST_DATASETS_IDS_AR = [
     "1709.07276",  # MGB-3
     "1610.00572",  # TED Arabic-Hebrew
     "1509.06928",  # adi-5
@@ -62,7 +62,7 @@ TEST_DATASETS_IDS = [
     "2010.11856",  # xor-tydi
     "1809.05053",  # xnli
 ]
-VALID_DATASETS_IDS = [
+VALID_DATASETS_IDS_AR = [
     "1609.05625",  # mgb-2
     "2402.03177",  # cidar
     "2405.01590",  # 101 billion
@@ -70,6 +70,39 @@ VALID_DATASETS_IDS = [
     "1906.00591",  # winomt
     "2308.16884",  # belebele
 ]
+
+TEST_DATASETS_IDS_JP = [
+    "2202.01764",  # jequad
+    "2404.09260",  # JaFIn
+    "1911.10668",  # JParaCrawl
+    "1710.10639",  # JESC
+    "1711.00354",  # JUST
+]
+
+TEST_DATASETS_IDS_EN = [
+    "2501.14249",  # hle
+    "2110.14168",  # gsm8k
+    "2009.03300",  # mmlu
+    "1905.07830",  # hellaswag
+    "1705.03551",  # triviaqa
+]
+
+TEST_DATASETS_IDS_FR = [
+    "2002.06071",  # fquad
+    "2311.16840",  # claire
+    "2108.11792",  # bsard
+    "2007.00968",  # piaf
+    "2304.04280",  # FrenchMedMCQA
+]
+
+TEST_DATASETS_IDS_RU = [
+    "2005.10659",  # rubq
+    "2010.02605",  # DaNetQA
+    "2106.10161",  # golos
+    "2108.13112",  # NEREL
+    "2210.12814",  # rocola
+]
+
 
 non_browsing_models = [
     "human",
@@ -122,14 +155,15 @@ SAFETY_CONFIG_GEMINI = [
 
 input_json = json.load(open("schema/ar.json", "r"))
 columns = list(input_json.keys())
-columns_with_lists = [c for c in columns if 'List[str]' == input_json[c]['output_type']]
+columns_with_lists = [c for c in columns if "List[str]" == input_json[c]["output_type"]]
 
 system_prompt = f"""You are a profressional research paper reader. 
         You will be provided a 'Paper Text' and 'Input Json' that has 'question', 'options'(optional), 'options_description'(optional), and 'output_type'. 
         You are requested to answer the questions in the 'Input Json' using the 'Paper Text'.
         If the question has 'options', only provide an answer from the 'options'. Use the 'options_description' to comperhend the options.
-        If the question has no 'options' and the answer is not found in the paper, then answer '' or [] depending on the 'output_type'. 
-        The 'Output Json' is a json that can be parsed using Python `json.loads()`, use double quotations not single quotations. The json has ONLY the keys: '{columns}'. The value for each key is the answer to the 'question' that prepresents the same key in 'Input Json'. 
+        If the filed 'required' is true, then the answer is required. If the field 'required' is false, then the answer is optional you can answer int:0, float:0.0, str:"", list:[] or date:current year.
+        The 'Output Json' is a json that can be parsed using Python `json.loads()`, use double quotations not single quotations. The json has ONLY the keys: '{columns}'. 
+        The value for each key is the answer to the 'question' that prepresents the same key in 'Input Json'. 
         Each value must have the same 'output_type' as the 'Input Json'.
         """
 cot_style = """ THINK STEP BY STEP
@@ -154,8 +188,8 @@ system_prompt_with_cot = f"{system_prompt}\n{cot_style}"
 
 evaluation_subsets = {}
 for c in input_json:
-    if 'validation_group' in input_json[c]:
-        group = input_json[c]['validation_group']
+    if "validation_group" in input_json[c]:
+        group = input_json[c]["validation_group"]
         if group not in evaluation_subsets:
             evaluation_subsets[group] = []
         evaluation_subsets[group].append(c)
@@ -168,5 +202,4 @@ NUM_VALIDATION_COLUMNS = len(validation_columns)
 
 column_types = {}
 for c in input_json:
-    column_types[c] = input_json[c]['output_type']
-
+    column_types[c] = input_json[c]["output_type"]
