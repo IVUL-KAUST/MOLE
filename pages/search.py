@@ -563,12 +563,16 @@ def run(
                         if model_name in non_browsing_models:
                             metadata = postprocess(
                                 metadata,
-                                year,
-                                article_url,
                                 method=model_name.split("-")[-1],
                             )
                         else:
                             metadata = postprocess(metadata)
+                        
+                        if 'Added By' in metadata:
+                            metadata['Added By'] = model_name
+                        if 'Paper Link' in metadata:
+                            if metadata['Paper Link'] == "":
+                                metadata['Paper Link'] = article_url
 
                     show_info("🔍 Validating Metadata ...", st_context=st_context)
                     results = {}
