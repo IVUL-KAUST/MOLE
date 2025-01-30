@@ -229,7 +229,7 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False):
             if gold_metadata["annotations_from_paper"][column] == 0:
                 results[column] = 1
                 continue
-        if column_types[column] == 'List[Dict]':
+        if 'List[Dict' in column_types[column]:
             try:
                 if len(pred_answer) != len(gold_answer):
                     continue
@@ -311,7 +311,7 @@ def majority_vote(dicts):
     result = {}
 
     for key in columns:
-        if column_types[key] == 'List[Dict]':
+        if 'List[Dict' in column_types[key]:
             result[key] = []
             continue
 
@@ -349,7 +349,7 @@ def majority_vote(dicts):
 def compose(dicts):
     result = {}
     for key in columns:
-        if column_types[key] == 'List[Dict]':
+        if 'List[Dict' in column_types[key]:
             result[key] = []
             continue
 
