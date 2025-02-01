@@ -449,7 +449,7 @@ def run(
                         and not overwrite
                         and model_name not in ["jury", "composer"]
                     ):
-                        show_info("📂 Loading saved results ...", st_context=st_context)
+                        show_info(f"📂 Loading saved results {save_path} ...", st_context=st_context)
                         results = json.load(open(save_path))
                         if st_context:
                             st.link_button(
