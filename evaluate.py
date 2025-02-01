@@ -1,6 +1,6 @@
 from pages.search import run, create_args
 from tabulate import tabulate  # type: ignore
-from utils import fix_arxiv_link, masader_valid_dataset, masader_test_dataset
+from utils import fix_arxiv_link, eval_datasets
 import numpy as np
 from constants import *
 
@@ -19,11 +19,11 @@ if __name__ == "__main__":
         links = []
 
         if args.masader_validate:
-            dataset = masader_valid_dataset
             use_split = "valid"
+            dataset = eval_datasets[args.lang][use_split]
         else:
             use_split = "test"
-            dataset = masader_test_dataset
+            dataset = eval_datasets[args.lang][use_split]
 
         for x in dataset:
             titles.append(str(x["Paper Title"]))
@@ -61,7 +61,8 @@ if __name__ == "__main__":
                 use_split=use_split,
                 repo_link=link,
                 summarize = args.summarize,
-                curr_idx= curr_idx
+                curr_idx= curr_idx,
+                lang = args.lang
             )
         else:
             model_results = run(
@@ -75,7 +76,8 @@ if __name__ == "__main__":
                 use_split=use_split,
                 repo_link=link,
                 summarize = args.summarize,
-                curr_idx = curr_idx
+                curr_idx = curr_idx,
+                lang = args.lang
             )
 
         for model_name in model_results:

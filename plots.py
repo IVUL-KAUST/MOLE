@@ -2,19 +2,23 @@ import plotext as plt  # type: ignore
 from glob import glob
 import json
 import argparse
-from constants import TEST_DATASETS_IDS, VALID_DATASETS_IDS, evaluation_subsets, non_browsing_models
+from constants import eval_datasets_ids, non_browsing_models, schema
 import numpy as np
 from plot_utils import print_table
 from utils import get_predictions, evaluate_metadata
 
 args = argparse.ArgumentParser()
-args.add_argument("--eval", type=str, default="valid")
+args.add_argument("--eval", type=str, default="test")
 args.add_argument("--subsets", action="store_true")
 args.add_argument("--year", action="store_true")
 args.add_argument("--models", type=str, default="all")
 args.add_argument("--cost", action="store_true")
 args.add_argument("--use_annotations_paper", action="store_true")
+args.add_argument("--lang", type = str, default = None)
+
 args = args.parse_args()
+
+# evaluation_subsets = schema[args.lang]['evaluation_subsets']
 
 def plot_by_cost():
     metric_results = {}
@@ -111,6 +115,66 @@ def plot_by_year():
     plt.ylabel("Average Score")
     plt.show()
 
+def plot_langs():
+    langs = list(json_files_by_language.keys())
+    headers = [ "MODEL"] + langs + ["AVERAGE"]
+    metric_results = {}
+    use_annotations_paper = args.use_annotations_paper
+    for lang in langs:
+        for json_file in json_files_by_language[lang]:
+            results = json.load(open(json_file))        
+            model_name = results["config"]["model_name"]
+            pred_metadata = results["metadata"]
+            if model_name not in metric_results:
+                metric_results[model_name] = {}
+            human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
+            gold_metadata = json.load(open(human_json_path))["metadata"]
+
+            scores = evaluate_metadata(
+                gold_metadata, pred_metadata,
+                lang = lang
+            )
+            scores = [scores["AVERAGE"]]
+            if use_annotations_paper:
+                average_ignore_mistakes = evaluate_metadata(
+                    gold_metadata, pred_metadata, use_annotations_paper=True
+                )["AVERAGE"]
+                scores += [average_ignore_mistakes]
+                headers += ["AVERAGE^*"]
+            if lang not in metric_results[model_name]:
+                metric_results[model_name][lang] = []
+            metric_results[model_name][lang].append(scores[0])
+    final_results = {}
+    for model_name in metric_results:
+        if "human" in model_name.lower():
+            continue
+        
+        for lang in metric_results[model_name]:
+            if len(metric_results[model_name][lang]) == len(eval_datasets_ids[lang][args.eval]):
+                if model_name not in final_results:
+                    final_results[model_name] = {}
+                if lang not in final_results[model_name]:
+                    final_results[model_name][lang] = []
+                final_results[model_name][lang] = metric_results[model_name][lang]
+
+    results = []
+    for model_name in final_results:
+        per_model_results = []
+        for lang in langs:
+            if lang in final_results[model_name]:
+                per_model_results.append(100 *sum(final_results[model_name][lang])/len(final_results[model_name][lang]))
+            else:
+                per_model_results.append(0)
+        
+        assert len(per_model_results) == len(langs)
+        results.append([model_name] +per_model_results+ [np.mean(per_model_results, axis=0).tolist()])
+    for r in results:
+        assert(len(r)) == len(langs)+2, r
+    print_table(results, headers, format = False)
+    if use_annotations_paper:
+        print(
+            "* Computed average by considering metadata exctracted from outside the paper."
+        )
 
 def plot_table():
     headers = [ "MODEL"] + [c for c in evaluation_subsets] + ["AVERAGE"]
@@ -130,7 +194,8 @@ def plot_table():
         scores = {c: 0 for c in evaluation_subsets}
 
         scores = evaluate_metadata(
-            gold_metadata, pred_metadata
+            gold_metadata, pred_metadata,
+            lang = args.lang
         )
         scores = [scores[c] for c in evaluation_subsets] + [scores["AVERAGE"]]
         if use_annotations_paper:
@@ -232,24 +297,38 @@ def plot_subsets():
 
 if __name__ == "__main__":
     ids = []
-
-    if args.eval == "test":
-        ids = TEST_DATASETS_IDS
+    if args.lang == 'all':
+        langs = ['ar', 'en', 'jp', 'fr', 'ru']
     else:
-        ids = VALID_DATASETS_IDS
+        langs = [args.lang]
 
     json_files = glob("static/results/**/*.json", recursive=True)
-    if args.models != "all":
-        json_files = [
-            file
-            for file in json_files
-            if any(model.lower() in file.lower() for model in args.models.split(","))
-        ]
+    json_files_by_language = {}
+    for lang in langs:
+        for json_file in json_files:
+            arxiv_id = json_file.split("/")[-2].replace("_arXiv", "")
+            if arxiv_id in eval_datasets_ids[lang][args.eval]:
+                if lang not in json_files_by_language:
+                    json_files_by_language[lang] = []
+                json_files_by_language[lang].append(json_file)
+    for lang in langs:
+        if lang == 'ar':
+            assert len(eval_datasets_ids[lang][args.eval]) == 25
+        else:
+            assert len(eval_datasets_ids[lang][args.eval]) == 5
+    # if args.models != "all":
+    #     json_files = [
+    #         file
+    #         for file in json_files
+    #         if any(model.lower() in file.lower() for model in args.models.split(","))
+    #     ]
 
     if args.year:
         plot_by_year()
     elif args.cost:
         plot_by_cost()
+    elif args.lang:
+        plot_langs()
     else:
         if args.subsets:
             plot_subsets()

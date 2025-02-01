@@ -1,11 +1,25 @@
 from tabulate import tabulate
 
 
-def print_table(results, headers, title = ""):
+def print_table(results, headers, title="", format=False):
     RED = "\033[103m"
     UNDERLINE = "\033[4m"
     END = "\033[0m"
 
+    if not format:
+        print(
+            tabulate(
+                sorted(
+                    results,
+                    key=lambda x: x[-1],
+                    reverse=False,
+                ),
+                headers=headers,
+                tablefmt="grid",
+                floatfmt=".2f",
+            )
+        )
+        return
     # Format the numbers - highlight max in red and underline second max for each column
     formatted_results = []
     numeric_columns = list(zip(*[row[1:] for row in results]))  # Exclude model names
@@ -28,7 +42,7 @@ def print_table(results, headers, title = ""):
     # Show table title if provided
     if title:
         print(f"\n{title}\n")
-        
+
     print(
         tabulate(
             sorted(

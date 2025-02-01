@@ -9,8 +9,6 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from utils import *
 import argparse
-import google.generativeai as genai  # type: ignore
-from bs4 import BeautifulSoup
 import streamlit as st  # type: ignore
 from constants import *
 from datetime import datetime
@@ -81,11 +79,12 @@ def get_metadata(
     metadata={},
     use_search=False,
     use_examples=False,
+    lang = 'ar'
 ):
     if paper_text != "":
         if use_examples:
             prompt = f"""
-                    {input_json}
+                    {schema[lang]['schema']}
                     Here are some examples:
                     {examples}
                     Now, predict for the following paper:
@@ -95,17 +94,17 @@ def get_metadata(
         else:
             prompt = f"""
                     Paper Text: {paper_text},
-                    Input Json: {input_json}
+                    Input Json: {schema[lang]['schema']}
                     Output Json:
                     """
-        sys_prompt = system_prompt_with_cot  
+        sys_prompt = schema[lang]['system_prompt_with_cot']
     elif readme != "":
         prompt = f"""
                     You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
-                    Given the following Input Json: {input_json}, then update the metadata in the Input Json with the information from the readme.
+                    Given the following Input Json: {schema[lang]['schema']}, then update the metadata in the Input Json with the information from the readme.
                     Output Json:
                     """
-        sys_prompt = system_prompt
+        sys_prompt = schema[lang]['system_prompt']
     if "gemini" in model_name.lower():
         model = GenerativeModel(model_name, system_instruction=sys_prompt)
         tools = []
@@ -297,6 +296,7 @@ def run(
     use_split=None,
     summarize=False,
     curr_idx = [0,0],
+    lang = 'ar'
 ):
     submitted = False
     st_context = False
@@ -487,12 +487,12 @@ def run(
                             if not any([m in file for m in non_browsing_models]):
                                 all_results.append(json.load(open(file)))
                         message, metadata = get_metadata_judge(
-                            all_results, type=model_name
+                            all_results, type=model_name, lang = lang
                         )
                     elif "human" in model_name.lower():
                         assert use_split is not None
                         metadata = get_metadata_human(
-                            use_split=use_split, link=article_url, title=title
+                            use_split=use_split, link=article_url, title=title, lang = lang
                         )
                     elif "baseline" in model_name.lower():
                         message, metadata = "", {}
@@ -515,7 +515,7 @@ def run(
                                     cost = results["cost"]
                                 else:
                                     message, metadata = get_metadata(
-                                        paper_text, model_name
+                                        paper_text, model_name, lang = lang
                                     )
                                     cost = compute_cost(message, model_name)
                                 if browse_web:
@@ -537,6 +537,7 @@ def run(
                                             model_name=model_name,
                                             readme=readme,
                                             metadata=metadata,
+                                            lang = lang
                                         )
                                         browsing_cost = compute_cost(
                                             message, model_name
@@ -564,9 +565,10 @@ def run(
                             metadata = postprocess(
                                 metadata,
                                 method=model_name.split("-")[-1],
+                                lang = lang
                             )
                         else:
-                            metadata = postprocess(metadata)
+                            metadata = postprocess(metadata, lang = lang)
                         
                         if 'Added By' in metadata:
                             metadata['Added By'] = model_name
@@ -579,7 +581,7 @@ def run(
                     results["metadata"] = metadata
                     if use_split is not None:
                         validation_results = validate(
-                            metadata, use_split=use_split, link=article_url, title=title
+                            metadata, use_split=use_split, link=article_url, title=title, lang = lang
                         )
                         results["validation"] = validation_results
                         show_info(
@@ -700,6 +702,12 @@ def create_args():
         "--summarize",
         action="store_true",
         help="summarize the paper before extracting metadata",
+    )
+
+    parser.add_argument(
+        "--lang",
+        type = str,
+        default = "ar"
     )
 
     # Parse arguments

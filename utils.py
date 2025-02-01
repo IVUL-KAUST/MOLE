@@ -28,8 +28,25 @@ from firecrawl import FirecrawlApp  # type: ignore
 random.seed(0)
 
 # masader_dataset = load_dataset("arbml/masader", download_mode="")["train"]
-masader_valid_dataset = [json.load(open(f)) for f in glob("validset/**.json")]
-masader_test_dataset = [json.load(open(f)) for f in glob("testset/**.json")]
+
+eval_datasets = {
+    'ar': {
+        'valid': [json.load(open(f)) for f in glob("evals/ar/validset/**.json")],
+        'test' : [json.load(open(f)) for f in glob("evals/ar/testset/**.json")]
+    },
+    'en': {
+        'test' : [json.load(open(f)) for f in glob("evals/en/testset/**.json")]
+    },
+    'ru': {
+        'test' : [json.load(open(f)) for f in glob("evals/ru/testset/**.json")]
+    },
+    'jp': {
+        'test' : [json.load(open(f)) for f in glob("evals/jp/testset/**.json")]
+    },
+    'fr': {
+        'test' : [json.load(open(f)) for f in glob("evals/fr/testset/**.json")]
+    }
+}
 
 
 def extract_and_generate_readme(url):
@@ -213,7 +230,9 @@ def match_titles(title, masader_title):
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
 
-def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False):
+def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False, lang = 'ar'):
+    validation_columns = schema[lang]['validation_columns']
+    column_types = schema[lang]['column_types']
     results = {c: 0 for c in validation_columns}
 
     if gold_metadata is None:
@@ -246,7 +265,7 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False):
             if matched:
                 results[column] = 1
             continue
-        elif column in columns_with_lists:
+        elif column in schema[lang]['columns_with_lists']:
             assert isinstance(
                 pred_answer, list
             ), f"pred_answer is not a list: {pred_answer}"
@@ -260,11 +279,12 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False):
     return results
 
 
-def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper=False):
+def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper=False, lang = 'ar'):
+    evaluation_subsets = schema[lang]['evaluation_subsets']
     results = {c: 0 for c in evaluation_subsets}
-
+    
     predictions = get_predictions(
-        gold_metadata, pred_metadata, use_annotations_paper=use_annotations_paper
+        gold_metadata, pred_metadata, use_annotations_paper=use_annotations_paper, lang = lang
     )
     for subset in evaluation_subsets:
         for column in evaluation_subsets[subset]:
@@ -274,17 +294,13 @@ def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper=False)
     return results
 
 
-def validate(metadata, use_split=None, title="", link=""):
+def validate(metadata, use_split=None, title="", link="", lang = 'ar'):
 
     matched_row = None
     if use_split is not None:
-        if use_split == "test":
-            dataset = masader_test_dataset
-        elif use_split == "valid":
-            dataset = masader_valid_dataset
+        dataset = eval_datasets[lang][use_split]
     else:
         pass
-        # dataset = masader_dataset
 
     for row in dataset:
 
@@ -301,16 +317,17 @@ def validate(metadata, use_split=None, title="", link=""):
     if matched_row is None and use_split is not None:
         raise ()
 
-    return evaluate_metadata(matched_row, metadata)
+    return evaluate_metadata(matched_row, metadata, lang = lang)
 
 
 from collections import Counter
 
 
-def majority_vote(dicts):
+def majority_vote(dicts, lang = 'ar'):
+    column_types = schema[lang]['column_types']
     result = {}
 
-    for key in columns:
+    for key in schema[lang]['columns']:
         if 'List[Dict' in column_types[key]:
             result[key] = []
             continue
@@ -346,16 +363,17 @@ def majority_vote(dicts):
     return result
 
 
-def compose(dicts):
+def compose(dicts, lang = 'ar'):
+    column_types = schema[lang]['column_types']
     result = {}
-    for key in columns:
+    for key in schema[lang]['columns']:
         if 'List[Dict' in column_types[key]:
             result[key] = []
             continue
 
         # only use smarter models as a judge
 
-        if key in evaluation_subsets["ACCESSABILITY"]:
+        if key in schema[lang]['evaluation_subsets']["ACCESSABILITY"]:
             models_to_use = ["browsing"]
         else:
             models_to_use = ["pro", "deepseek", "jury"]
@@ -392,12 +410,12 @@ def compose(dicts):
 
     return result
 
-def get_metadata_judge(dicts, type="jury"):
+def get_metadata_judge(dicts, type="jury", lang = 'ar'):
     all_metadata = {d["config"]["model_name"]: d["metadata"] for d in dicts}
     if type == "jury":
-        return "", majority_vote(all_metadata)
+        return "", majority_vote(all_metadata, lang = lang)
     elif type == "composer":
-        return "", compose(all_metadata)
+        return "", compose(all_metadata, lang = lang)
     else:
         raise (f"Unrecognized judge type {type}")
 
@@ -406,10 +424,8 @@ def get_paper_id(link):
     return link.split("/")[-1]
 
 
-def get_metadata_human(title="", link="", use_split="test"):
-    dataset = masader_test_dataset
-    if use_split == "valid":
-        dataset = masader_valid_dataset
+def get_metadata_human(title="", link="", use_split="test", lang = "ar"):
+    dataset = eval_datasets[lang][use_split]
 
     for row in dataset:
         if title != "":
@@ -422,10 +438,10 @@ def get_metadata_human(title="", link="", use_split="test"):
             raise ()
 
 
-def compare_results(rs, show_diff=False):
+def compare_results(rs, show_diff=False, lang = 'ar'):
     results = {}
 
-    for c in columns:
+    for c in schema[lang]['columns']:
         for r in rs:
             model_name = r["config"]["model_name"]
             value = r["metadata"][c]
@@ -494,12 +510,12 @@ def pick_choice(options, method="last"):
     else:
         return options[-1]
 
-def fix_options(metadata, method="last"):
+def fix_options(metadata, method="last", lang = 'ar'):
     fixed_metadata = {}
-    columns_with_options = [c for c in input_json if "options" in input_json[c]]
+    columns_with_options = [c for c in schema[lang]['schema'] if "options" in schema[lang]['schema'][c]]
     for column in metadata:
         if column in columns_with_options:
-            options = [o for o in input_json[column]["options"]]
+            options = [o for o in schema[lang]['schema'][column]["options"]]
             pred_option = metadata[column]
             if isinstance(pred_option, list):
                 new_pred_option = []
@@ -534,7 +550,8 @@ def process_url(url):
     return url
 
 
-def cast(metadata):
+def cast(metadata, lang = 'ar'):
+    column_types = schema[lang]['column_types']
     for c in metadata:
         type = column_types[c]
         if type == 'str':
@@ -556,8 +573,9 @@ def cast(metadata):
     return metadata
 
 
-def fill_missing(metadata):
-    for c in columns:
+def fill_missing(metadata, lang = 'ar'):
+    column_types = schema[lang]['column_types']
+    for c in schema[lang]['columns']:
         if c not in metadata or metadata[c] is None:
             if 'List' in column_types[c]:
                 metadata[c] = []
@@ -576,10 +594,10 @@ def fill_missing(metadata):
     return metadata
 
 
-def postprocess(metadata, method="last"):
-    metadata = fill_missing(metadata)
-    metadata = cast(metadata)
-    metadata = fix_options(metadata, method=method)
+def postprocess(metadata, method="last", lang = 'ar'):
+    metadata = fill_missing(metadata, lang = lang)
+    metadata = cast(metadata, lang = lang)
+    metadata = fix_options(metadata, method=method, lang = lang)
     return metadata
 
 
@@ -618,8 +636,13 @@ def fix_json(broken_json: str) -> str:
     
 def read_json(text_json):
     text_json = text_json.replace("```json", "").replace("```", "")
-    return fix_json(text_json)
-
+    fixed_json = fix_json(text_json)
+    try:
+        if isinstance(fixed_json, str):  # If still a string, decode again
+            return json.loads(fixed_json)
+        return fixed_json
+    except json.JSONDecodeError:
+        return fixed_json 
 
 def get_repo_link(metadata, repo_link=""):
     link = ""
