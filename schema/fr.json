@@ -7,13 +7,13 @@
     "Link": {
         "question": "What is the link to access the dataset? The link must contain the dataset. If the dataset is hosted on HuggingFace, use the HF Link.",
         "output_type": "url",
-        "validation_group":"ACCESSABILITY",
+        "validation_group": "ACCESSABILITY",
         "required": true
     },
     "HF Link": {
         "question": "What is the Huggingface link of the dataset?",
         "output_type": "url",
-        "validation_group":"ACCESSABILITY",
+        "validation_group": "ACCESSABILITY",
         "required": false
     },
     "License": {
@@ -27,6 +27,7 @@
             "CC BY 4.0",
             "CC BY-NC 2.0",
             "CC BY-NC-ND 4.0",
+            "CC BY-SA 3.0",
             "CC BY-NC 4.0",
             "CC BY-NC-SA 3.0",
             "CC BY-NC-SA 4.0",
@@ -45,7 +46,7 @@
             "custom"
         ],
         "output_type": "str",
-        "validation_group":"ACCESSABILITY",
+        "validation_group": "ACCESSABILITY",
         "required": true
     },
     "Year": {
@@ -55,13 +56,16 @@
     },
     "Language": {
         "question": "What languages are in the dataset?",
-        "options": ["fr", "multilingual"],
+        "options": [
+            "fr",
+            "multilingual"
+        ],
         "option_description": {
-            "fr": "the dataset is purely in French, there are no other languages involved",
-            "multilingual": "the dataset contains samples in other languages"
+            "multilingual": "the dataset contains samples in other languages",
+            "fr": "the dataset is purely in French, there are no other languages involved"
         },
         "output_type": "str",
-        "validation_group":"DIVERSITY",
+        "validation_group": "DIVERSITY",
         "required": true
     },
     "Domain": {
@@ -81,10 +85,20 @@
             "other"
         ],
         "output_type": "List[str]",
-        "validation_group":"CONTENT",
+        "validation_group": "CONTENT",
         "required": true
     },
-    "Form": {"question":"What is the form of the data?", "options": ["text", "spoken", "images"], "output_type": "str", "validation_group":"CONTENT", "required": true},
+    "Form": {
+        "question": "What is the form of the data?",
+        "options": [
+            "text",
+            "spoken",
+            "images"
+        ],
+        "output_type": "str",
+        "validation_group": "CONTENT",
+        "required": true
+    },
     "Collection Style": {
         "question": "How was this dataset collected?",
         "options": [
@@ -104,7 +118,7 @@
             "other": "the dataset was collected in a different way"
         },
         "output_type": "List[str]",
-        "validation_group":"CONTENT",
+        "validation_group": "CONTENT",
         "required": true
     },
     "Description": {
@@ -115,12 +129,18 @@
     "Volume": {
         "question": "What is the size of the dataset?. If the dataset is multilingual only use the size of the French dataset",
         "output_type": "float",
-        "validation_group":"CONTENT",
+        "validation_group": "CONTENT",
         "required": true
     },
     "Unit": {
         "question": "What kind of examples does the dataset include?",
-        "options": ["tokens", "sentences", "documents", "hours", "images"],
+        "options": [
+            "tokens",
+            "sentences",
+            "documents",
+            "hours",
+            "images"
+        ],
         "option_description": {
             "tokens": "the dataset contains individual tokens/words",
             "sentences": "the samples are sentences or short paragraphs",
@@ -129,31 +149,35 @@
             "images": "the samples are images"
         },
         "output_type": "str",
-        "validation_group":"CONTENT",
+        "validation_group": "CONTENT",
         "required": true
     },
     "Ethical Risks": {
         "question": "What is the level of the ethical risks of the dataset?",
-        "options": ["Low", "Medium", "High"],
+        "options": [
+            "Low",
+            "Medium",
+            "High"
+        ],
         "option_description": {
             "Low": "most likely no ethical risks associated with this dataset",
             "Medium": "social media datasets",
             "High": "hate/offensive datasets from social media, or web pages"
         },
         "output_type": "str",
-        "validation_group":"CONTENT",
+        "validation_group": "CONTENT",
         "required": true
     },
     "Provider": {
         "question": "What entity is the provider of the dataset? Don't use Team.",
         "output_type": "List[str]",
-        "validation_group":"ACCESSABILITY",
+        "validation_group": "ACCESSABILITY",
         "required": false
     },
     "Derived From": {
         "question": "What datasets were used to create the dataset?",
         "output_type": "List[str]",
-        "validation_group":"EVALUATION",
+        "validation_group": "EVALUATION",
         "required": false
     },
     "Paper Title": {
@@ -168,13 +192,16 @@
     },
     "Tokenized": {
         "question": "Is the dataset tokenized?",
-        "options": ["Yes", "No"],
+        "options": [
+            "Yes",
+            "No"
+        ],
         "option_description": {
             "Yes": "The dataset is tokenized. Tokenized means the words are split using a morphological analyzer",
             "No": "The dataset is not tokenized"
         },
         "output_type": "str",
-        "validation_group":"CONTENT",
+        "validation_group": "CONTENT",
         "required": true
     },
     "Host": {
@@ -202,36 +229,43 @@
             "other"
         ],
         "output_type": "str",
-        "validation_group":"ACCESSABILITY",
+        "validation_group": "ACCESSABILITY",
         "required": true
     },
     "Access": {
         "question": "What is the accessibility of the dataset?",
-        "options": ["Free", "Upon-Request", "With-Fee"],
+        "options": [
+            "Free",
+            "Upon-Request",
+            "With-Fee"
+        ],
         "option_description": {
             "Free": "the dataset is public and free to access",
             "Upon-Request": "the dataset is free to access but requires a submitting a request or filling out a form",
             "With-Fee": "the dataset is not free to access"
         },
         "output_type": "str",
-        "validation_group":"ACCESSABILITY",
+        "validation_group": "ACCESSABILITY",
         "required": true
     },
     "Cost": {
         "question": "If the dataset is not free, what is the cost?",
         "output_type": "str",
-        "validation_group":"ACCESSABILITY",
+        "validation_group": "ACCESSABILITY",
         "required": false
     },
     "Test Split": {
         "question": "Does the dataset contain a train/valid and test split?",
-        "options": ["Yes", "No"],
+        "options": [
+            "Yes",
+            "No"
+        ],
         "option_description": {
             "Yes": "The dataset contains a train/valid and test split",
             "No": "The dataset does not contain a train/valid or test split"
         },
         "output_type": "str",
-        "validation_group":"EVALUATION",
+        "validation_group": "EVALUATION",
         "required": true
     },
     "Tasks": {
@@ -267,7 +301,7 @@
             "other"
         ],
         "output_type": "List[str]",
-        "validation_group":"EVALUATION",
+        "validation_group": "EVALUATION",
         "required": true
     },
     "Venue Title": {
@@ -282,7 +316,12 @@
     },
     "Venue Type": {
         "question": "What is the venue type?",
-        "options": ["conference", "workshop", "journal", "preprint"],
+        "options": [
+            "conference",
+            "workshop",
+            "journal",
+            "preprint"
+        ],
         "output_type": "str",
         "required": false
     },
