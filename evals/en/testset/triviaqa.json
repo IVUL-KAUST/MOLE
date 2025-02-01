@@ -1,0 +1,84 @@
+{
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "HF Link": 0,
+        "License": 0,
+        "Year": 1,
+        "Language": 1,
+        "Domain": 1,
+        "Form": 1,
+        "Collection Style": 1,
+        "Description": 1,
+        "Volume": 1,
+        "Unit": 1,
+        "Ethical Risks": 1,
+        "Provider": 1,
+        "Derived From": 1,
+        "Paper Title": 1,
+        "Paper Link": 1,
+        "Tokenized": 1,
+        "Host": 1,
+        "Access": 1,
+        "Cost": 1,
+        "Test Split": 1,
+        "Tasks": 1,
+        "Venue Title": 1,
+        "Citations": -1,
+        "Venue Type": 1,
+        "Venue Name": 1,
+        "Authors": 1,
+        "Affiliations": 1,
+        "Abstract": 1,
+        "Added By": -1
+    },
+    "Name": "TriviaQA",
+    "Link": "http://nlp.cs.washington.edu/triviaqa/",
+    "HF Link": "https://huggingface.co/datasets/mandarjoshi/trivia_qa",
+    "License": "unknown",
+    "Year": 2017,
+    "Language": "en",
+    "Domain": [
+        "wikipedia",
+        "web pages"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "crawling"
+    ],
+    "Description": "TriviaQA is a challenging reading comprehension dataset containing over 650K question-answer-evidence triples. TriviaQA includes 95K question-answer pairs authored by trivia enthusiasts and independently gathered evidence documents, six per question on average, that provide high quality distant supervision for answering the questions.",
+    "Volume": 650000,
+    "Unit": "documents",
+    "Ethical Risks": "Low",
+    "Provider": [
+        "University of Washington"
+    ],
+    "Derived From": [],
+    "Paper Title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension",
+    "Paper Link": "https://arxiv.org/pdf/1705.03551",
+    "Tokenized": "No",
+    "Host": "HuggingFace",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "Yes",
+    "Tasks": [
+        "question answering",
+        "information retrieval"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Mandar Joshi",
+        "Eunsol Choi",
+        "Daniel S. Weld",
+        "Luke Zettlemoyer"
+    ],
+    "Affiliations": [
+        "Allen Institute for Artificial Intelligence",
+        "University of Washington"
+    ],
+    "Abstract": "We present TriviaQA, a challenging reading comprehension dataset containing over 650K question-answer-evidence triples. TriviaQA includes 95K question-answer pairs authored by trivia enthusiasts and independently gathered evidence documents, six per question on average, that provide high quality distant supervision for answering the questions. We show that, in comparison to other recently introduced large-scale datasets, TriviaQA (1) has relatively complex, compositional questions, (2) has considerable syntactic and lexical variability between questions and corresponding answer-evidence sentences, and (3) requires more cross sentence reasoning to find answers. We also present two baseline algorithms: a feature-based classifier and a state-of-the-art neural network, that performs well on SQuAD reading comprehension. Neither approach comes close to human performance (23% and 40% vs. 80%), suggesting that TriviaQA is a challenging testbed that deserves significant future study.",
+    "Added By": "gemini-1.5-flash"
+}
