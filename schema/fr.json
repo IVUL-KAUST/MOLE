@@ -124,7 +124,7 @@
     "Description": {
         "question": "Write a brief description about the dataset in less than 50 words",
         "output_type": "str",
-        "output_len": "N>20"
+        "output_len": "N>50"
     },
     "Volume": {
         "question": "What is the size of the dataset?. If the dataset is multilingual only use the size of the French dataset",
@@ -343,7 +343,7 @@
     "Abstract": {
         "question": " What is the abstract of the paper? Remove any \\ or \" from the abstract.",
         "output_type": "str",
-        "output_len": "N>10"
+        "output_len": "N>50"
     },
     "Added By": {
         "question": "Who added this dataset to the registry?",
