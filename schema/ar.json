@@ -131,7 +131,12 @@
         "validation_group":"CONTENT",
         "output_len": "len(options)>N>0"
     },
-    "Form": {"question":"What is the form of the data?", "options": ["text", "spoken", "images"], "output_type": "str", "validation_group":"CONTENT", "required": true},
+    "Form": {
+        "question":"What is the form of the data?", 
+        "options": ["text", "spoken", "images"], 
+        "output_type": "str", 
+        "validation_group":"CONTENT", 
+        "output_len": "N=1"},
     "Collection Style": {
         "question": "How was this dataset collected?",
         "options": [
