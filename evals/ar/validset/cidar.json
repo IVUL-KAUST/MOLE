@@ -28,7 +28,7 @@
         "AlpaGasus"
     ],
     "Paper Title": "CIDAR: Culturally Relevant Instruction Dataset For Arabic",
-    "Paper Link": "https://arxiv.org/pdf/2402.03177.pdf",
+    "Paper Link": "https://arxiv.org/pdf/2402.03177",
     "Script": "Arab",
     "Tokenized": "No",
     "Host": "HuggingFace",

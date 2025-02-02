@@ -28,7 +28,7 @@
         "SemEval-2020 Task 12"
     ],
     "Paper Title": "Overview of OSACT5 Shared Task on Arabic Offensive Language and Hate Speech Detection",
-    "Paper Link": "https://arxiv.org/pdf/2201.06723.pdf",
+    "Paper Link": "https://arxiv.org/pdf/2201.06723",
     "Script": "Arab",
     "Tokenized": "No",
     "Host": "CodaLab",

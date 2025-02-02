@@ -29,7 +29,7 @@
         "IWSLT206"
     ],
     "Paper Title": "ANETAC: Arabic Named Entity Transliteration and Classification Dataset",
-    "Paper Link": "https://arxiv.org/pdf/1907.03110.pdf",
+    "Paper Link": "https://arxiv.org/pdf/1907.03110",
     "Script": "Arab",
     "Tokenized": "No",
     "Host": "GitHub",
