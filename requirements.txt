@@ -14,3 +14,4 @@ streamlit==1.41.1
 fastapi==0.115.6
 google-cloud-aiplatform>=1.64
 uvicorn==0.22.0
+beautifulsoup4==4.12.3
