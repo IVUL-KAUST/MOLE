@@ -297,8 +297,7 @@
             "irony detection",
             "meter classification",
             "natural language inference",
-            "instruction tuning",
-            "other"
+            "instruction tuning"
         ],
         "output_type": "List[str]",
         "validation_group": "EVALUATION",
