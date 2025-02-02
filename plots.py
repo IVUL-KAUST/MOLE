@@ -2,7 +2,7 @@ import plotext as plt  # type: ignore
 from glob import glob
 import json
 import argparse
-from constants import eval_datasets_ids, non_browsing_models, schema
+from constants import eval_datasets_ids, non_browsing_models, schemata
 import numpy as np
 from plot_utils import print_table
 from utils import get_predictions, evaluate_metadata
@@ -14,11 +14,11 @@ args.add_argument("--year", action="store_true")
 args.add_argument("--models", type=str, default="all")
 args.add_argument("--cost", action="store_true")
 args.add_argument("--use_annotations_paper", action="store_true")
-args.add_argument("--lang", type = str, default = None)
+args.add_argument("--schema", type = str, default = 'ar')
 
 args = args.parse_args()
 
-# evaluation_subsets = schema[args.lang]['evaluation_subsets']
+# evaluation_subsets = schema[args.schema]['evaluation_subsets']
 
 def plot_by_cost():
     metric_results = {}
@@ -115,7 +115,24 @@ def plot_by_year():
     plt.ylabel("Average Score")
     plt.show()
 
+def get_jsons_by_lang():
+    json_files_by_language = {}
+    for lang in langs:
+        for json_file in json_files:
+            arxiv_id = json_file.split("/")[-2].replace("_arXiv", "")
+            if arxiv_id in eval_datasets_ids[lang][args.eval]:
+                if lang not in json_files_by_language:
+                    json_files_by_language[lang] = []
+                json_files_by_language[lang].append(json_file)
+    for lang in langs:
+        if lang == 'ar':
+            assert len(eval_datasets_ids[lang][args.eval]) == 25
+        else:
+            assert len(eval_datasets_ids[lang][args.eval]) == 5
+    return json_files_by_language
+
 def plot_langs():
+    json_files_by_language = get_jsons_by_lang()
     langs = list(json_files_by_language.keys())
     headers = [ "MODEL"] + langs + ["AVERAGE"]
     metric_results = {}
@@ -132,7 +149,7 @@ def plot_langs():
 
             scores = evaluate_metadata(
                 gold_metadata, pred_metadata,
-                lang = lang
+                schema = lang
             )
             scores = [scores["AVERAGE"]]
             if use_annotations_paper:
@@ -176,14 +193,15 @@ def plot_langs():
             "* Computed average by considering metadata exctracted from outside the paper."
         )
 
-def plot_table():
+def plot_table(lang = 'ar'):
+    evaluation_subsets = schemata[lang]['evaluation_subsets']
     headers = [ "MODEL"] + [c for c in evaluation_subsets] + ["AVERAGE"]
     metric_results = {}
     use_annotations_paper = args.use_annotations_paper
     for json_file in json_files:
         results = json.load(open(json_file))
-        arxiv_id = json_file.split("/")[-2].replace("_arXiv", "")
-        if arxiv_id not in ids:
+        arxiv_id = json_file.split("/")[-2].replace("_arXiv", "").replace('.pdf', '')
+        if arxiv_id not in eval_datasets_ids[lang][args.eval]:
             continue
         model_name = results["config"]["model_name"]
         pred_metadata = results["metadata"]
@@ -195,7 +213,7 @@ def plot_table():
 
         scores = evaluate_metadata(
             gold_metadata, pred_metadata,
-            lang = args.lang
+            schema = args.schema
         )
         scores = [scores[c] for c in evaluation_subsets] + [scores["AVERAGE"]]
         if use_annotations_paper:
@@ -205,12 +223,11 @@ def plot_table():
             scores += [average_ignore_mistakes]
             headers += ["AVERAGE^*"]
         metric_results[model_name].append(scores)
-
     final_results = {}
     for model_name in metric_results:
         if "human" in model_name.lower():
             continue
-        if len(metric_results[model_name]) == len(ids):
+        if len(metric_results[model_name]) == len(eval_datasets_ids[lang][args.eval]):
             final_results[model_name] = metric_results[model_name]
 
     results = []
@@ -219,14 +236,15 @@ def plot_table():
             [model_name] + (np.mean(final_results[model_name], axis=0) * 100).tolist()
         )
 
-    print_table(results, headers)
+    print_table(results, headers, format = True)
     if use_annotations_paper:
         print(
             "* Computed average by considering metadata exctracted from outside the paper."
         )
 
 
-def process_subsets(metric_results, subset, use_annotations_paper):
+def process_subsets(metric_results, subset, use_annotations_paper, lang = 'ar'):
+    evaluation_subsets = schemata[lang]['evaluation_subsets']
     headers = evaluation_subsets[subset]
 
     results_per_model = {}
@@ -258,7 +276,8 @@ def process_subsets(metric_results, subset, use_annotations_paper):
     return results
 
 
-def plot_subsets():
+def plot_subsets(lang = 'ar'):
+    evaluation_subsets = schemata[lang]['evaluation_subsets']
     metric_results = {}
     for json_file in json_files:
         results = json.load(open(json_file))
@@ -296,26 +315,13 @@ def plot_subsets():
 
 
 if __name__ == "__main__":
+    json_files = glob("static/results/**/*.json", recursive=True)
     ids = []
-    if args.lang == 'all':
+    if args.schema == 'all':
         langs = ['ar', 'en', 'jp', 'fr', 'ru']
     else:
-        langs = [args.lang]
-
-    json_files = glob("static/results/**/*.json", recursive=True)
-    json_files_by_language = {}
-    for lang in langs:
-        for json_file in json_files:
-            arxiv_id = json_file.split("/")[-2].replace("_arXiv", "")
-            if arxiv_id in eval_datasets_ids[lang][args.eval]:
-                if lang not in json_files_by_language:
-                    json_files_by_language[lang] = []
-                json_files_by_language[lang].append(json_file)
-    for lang in langs:
-        if lang == 'ar':
-            assert len(eval_datasets_ids[lang][args.eval]) == 25
-        else:
-            assert len(eval_datasets_ids[lang][args.eval]) == 5
+        langs = [args.schema]
+            
     # if args.models != "all":
     #     json_files = [
     #         file
@@ -327,10 +333,10 @@ if __name__ == "__main__":
         plot_by_year()
     elif args.cost:
         plot_by_cost()
-    elif args.lang:
+    elif args.schema and args.schema == 'all':
         plot_langs()
     else:
         if args.subsets:
             plot_subsets()
         else:
-            plot_table()
+            plot_table(lang = args.schema)
