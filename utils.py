@@ -353,7 +353,7 @@ def majority_vote(dicts, schema = 'ar'):
         if column_types[key] == 'List[str]':
             majority_value, max_score = value_counts[0]
             majority_value = [value for value,score in value_counts if score == max_score]
-        elif column_types[key] == 'str' or column_types[key] == 'int':
+        elif column_types[key] in ['str', 'int', 'float', 'url', 'date[year]']:
             majority_value, _ = value_counts[0]
         else:
             print(column_types[key])
@@ -401,7 +401,7 @@ def compose(dicts, schema = 'ar'):
         if column_types[key] == 'List[str]':
             majority_value, max_score = value_counts[0]
             majority_value = [value for value,score in value_counts if score == max_score]
-        elif column_types[key] == 'str' or column_types[key] == 'int':
+        elif column_types[key] in ['str', 'int', 'float', 'url', 'date[year]']:
             majority_value, _ = value_counts[0]
         else:
             print(column_types[key])
