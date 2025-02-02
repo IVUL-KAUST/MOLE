@@ -20,10 +20,10 @@ if __name__ == "__main__":
 
         if args.masader_validate:
             use_split = "valid"
-            dataset = eval_datasets[args.lang][use_split]
+            dataset = eval_datasets[args.schema][use_split]
         else:
             use_split = "test"
-            dataset = eval_datasets[args.lang][use_split]
+            dataset = eval_datasets[args.schema][use_split]
 
         for x in dataset:
             titles.append(str(x["Paper Title"]))
@@ -62,7 +62,7 @@ if __name__ == "__main__":
                 repo_link=link,
                 summarize = args.summarize,
                 curr_idx= curr_idx,
-                lang = args.lang
+                schema = args.schema
             )
         else:
             model_results = run(
@@ -77,7 +77,7 @@ if __name__ == "__main__":
                 repo_link=link,
                 summarize = args.summarize,
                 curr_idx = curr_idx,
-                lang = args.lang
+                schema = args.schema
             )
 
         for model_name in model_results:

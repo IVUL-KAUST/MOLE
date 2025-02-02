@@ -230,9 +230,9 @@ def match_titles(title, masader_title):
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
 
-def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False, lang = 'ar'):
-    validation_columns = schema[lang]['validation_columns']
-    column_types = schema[lang]['column_types']
+def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False, schema = 'ar'):
+    validation_columns = schemata[schema]['validation_columns']
+    column_types = schemata[schema]['column_types']
     results = {c: 0 for c in validation_columns}
 
     if gold_metadata is None:
@@ -265,7 +265,7 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False, l
             if matched:
                 results[column] = 1
             continue
-        elif column in schema[lang]['columns_with_lists']:
+        elif column in schemata[schema]['columns_with_lists']:
             assert isinstance(
                 pred_answer, list
             ), f"pred_answer is not a list: {pred_answer}"
@@ -279,12 +279,12 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False, l
     return results
 
 
-def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper=False, lang = 'ar'):
-    evaluation_subsets = schema[lang]['evaluation_subsets']
+def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper=False, schema = 'ar'):
+    evaluation_subsets = schemata[schema]['evaluation_subsets']
     results = {c: 0 for c in evaluation_subsets}
     
     predictions = get_predictions(
-        gold_metadata, pred_metadata, use_annotations_paper=use_annotations_paper, lang = lang
+        gold_metadata, pred_metadata, use_annotations_paper=use_annotations_paper, schema = schema
     )
     for subset in evaluation_subsets:
         for column in evaluation_subsets[subset]:
@@ -294,11 +294,11 @@ def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper=False,
     return results
 
 
-def validate(metadata, use_split=None, title="", link="", lang = 'ar'):
+def validate(metadata, use_split=None, title="", link="", schema = 'ar'):
 
     matched_row = None
     if use_split is not None:
-        dataset = eval_datasets[lang][use_split]
+        dataset = eval_datasets[schema][use_split]
     else:
         pass
 
@@ -317,17 +317,17 @@ def validate(metadata, use_split=None, title="", link="", lang = 'ar'):
     if matched_row is None and use_split is not None:
         raise ()
 
-    return evaluate_metadata(matched_row, metadata, lang = lang)
+    return evaluate_metadata(matched_row, metadata, schema = schema)
 
 
 from collections import Counter
 
 
-def majority_vote(dicts, lang = 'ar'):
-    column_types = schema[lang]['column_types']
+def majority_vote(dicts, schema = 'ar'):
+    column_types = schemata[schema]['column_types']
     result = {}
 
-    for key in schema[lang]['columns']:
+    for key in schemata[schema]['columns']:
         if 'List[Dict' in column_types[key]:
             result[key] = []
             continue
@@ -363,17 +363,17 @@ def majority_vote(dicts, lang = 'ar'):
     return result
 
 
-def compose(dicts, lang = 'ar'):
-    column_types = schema[lang]['column_types']
+def compose(dicts, schema = 'ar'):
+    column_types = schemata[schema]['column_types']
     result = {}
-    for key in schema[lang]['columns']:
+    for key in schemata[schema]['columns']:
         if 'List[Dict' in column_types[key]:
             result[key] = []
             continue
 
         # only use smarter models as a judge
 
-        if key in schema[lang]['evaluation_subsets']["ACCESSABILITY"]:
+        if key in schemata[schema]['evaluation_subsets']["ACCESSABILITY"]:
             models_to_use = ["browsing"]
         else:
             models_to_use = ["pro", "deepseek", "jury"]
@@ -410,12 +410,12 @@ def compose(dicts, lang = 'ar'):
 
     return result
 
-def get_metadata_judge(dicts, type="jury", lang = 'ar'):
+def get_metadata_judge(dicts, type="jury", schema = 'ar'):
     all_metadata = {d["config"]["model_name"]: d["metadata"] for d in dicts}
     if type == "jury":
-        return "", majority_vote(all_metadata, lang = lang)
+        return "", majority_vote(all_metadata, schema = schema)
     elif type == "composer":
-        return "", compose(all_metadata, lang = lang)
+        return "", compose(all_metadata, schema = schema)
     else:
         raise (f"Unrecognized judge type {type}")
 
@@ -424,8 +424,8 @@ def get_paper_id(link):
     return link.split("/")[-1]
 
 
-def get_metadata_human(title="", link="", use_split="test", lang = "ar"):
-    dataset = eval_datasets[lang][use_split]
+def get_metadata_human(title="", link="", use_split="test", schema = "ar"):
+    dataset = eval_datasets[schema][use_split]
 
     for row in dataset:
         if title != "":
@@ -438,10 +438,10 @@ def get_metadata_human(title="", link="", use_split="test", lang = "ar"):
             raise ()
 
 
-def compare_results(rs, show_diff=False, lang = 'ar'):
+def compare_results(rs, show_diff=False, schema = 'ar'):
     results = {}
 
-    for c in schema[lang]['columns']:
+    for c in schemata[schema]['columns']:
         for r in rs:
             model_name = r["config"]["model_name"]
             value = r["metadata"][c]
@@ -510,12 +510,12 @@ def pick_choice(options, method="last"):
     else:
         return options[-1]
 
-def fix_options(metadata, method="last", lang = 'ar'):
+def fix_options(metadata, method="last", schema = 'ar'):
     fixed_metadata = {}
-    columns_with_options = [c for c in schema[lang]['schema'] if "options" in schema[lang]['schema'][c]]
+    columns_with_options = [c for c in schemata[schema]['schema'] if "options" in schemata[schema]['schema'][c]]
     for column in metadata:
         if column in columns_with_options:
-            options = [o for o in schema[lang]['schema'][column]["options"]]
+            options = [o for o in schemata[schema]['schema'][column]["options"]]
             pred_option = metadata[column]
             if isinstance(pred_option, list):
                 new_pred_option = []
@@ -550,8 +550,8 @@ def process_url(url):
     return url
 
 
-def cast(metadata, lang = 'ar'):
-    column_types = schema[lang]['column_types']
+def cast(metadata, schema = 'ar'):
+    column_types = schemata[schema]['column_types']
     for c in metadata:
         type = column_types[c]
         if type == 'str':
@@ -573,9 +573,9 @@ def cast(metadata, lang = 'ar'):
     return metadata
 
 
-def fill_missing(metadata, lang = 'ar'):
-    column_types = schema[lang]['column_types']
-    for c in schema[lang]['columns']:
+def fill_missing(metadata, schema = 'ar'):
+    column_types = schemata[schema]['column_types']
+    for c in schemata[schema]['columns']:
         if c not in metadata or metadata[c] is None:
             if 'List' in column_types[c]:
                 metadata[c] = []
@@ -594,10 +594,10 @@ def fill_missing(metadata, lang = 'ar'):
     return metadata
 
 
-def postprocess(metadata, method="last", lang = 'ar'):
-    metadata = fill_missing(metadata, lang = lang)
-    metadata = cast(metadata, lang = lang)
-    metadata = fix_options(metadata, method=method, lang = lang)
+def postprocess(metadata, method="last", schema = 'ar'):
+    metadata = fill_missing(metadata, schema = schema)
+    metadata = cast(metadata, schema = schema)
+    metadata = fix_options(metadata, method=method, schema = schema)
     return metadata
 
 

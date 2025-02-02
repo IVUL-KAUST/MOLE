@@ -2,19 +2,19 @@
     "Name": {
         "question": "What is the name of the dataset?",
         "output_type": "str",
-        "required": true
+        "output_len": "2<N<10"
     },
     "Link": {
         "question": "What is the link to access the dataset? The link must contain the dataset. If the dataset is hosted on HuggingFace, use the HF Link.",
         "output_type": "url",
         "validation_group": "ACCESSABILITY",
-        "required": true
+        "output_len": "N>0"
     },
     "HF Link": {
         "question": "What is the Huggingface link of the dataset?",
         "output_type": "url",
         "validation_group": "ACCESSABILITY",
-        "required": false
+        "output_len": "N>=0"
     },
     "License": {
         "question": "What is the license of the dataset?",
@@ -47,12 +47,12 @@
         ],
         "output_type": "str",
         "validation_group": "ACCESSABILITY",
-        "required": true
+        "output_len": "N=1"
     },
     "Year": {
         "question": "What year was the dataset published?",
         "output_type": "date[year]",
-        "required": true
+        "output_len": "N=4"
     },
     "Language": {
         "question": "What languages are in the dataset?",
@@ -66,7 +66,7 @@
         },
         "output_type": "str",
         "validation_group": "DIVERSITY",
-        "required": true
+        "output_len": "N=1"
     },
     "Domain": {
         "question": "What is the domain of the dataset?",
@@ -86,7 +86,7 @@
         ],
         "output_type": "List[str]",
         "validation_group": "CONTENT",
-        "required": true
+        "output_len": "0<N<len(options)"
     },
     "Form": {
         "question": "What is the form of the data?",
@@ -119,18 +119,18 @@
         },
         "output_type": "List[str]",
         "validation_group": "CONTENT",
-        "required": true
+        "output_len": "0<N<len(options)"
     },
     "Description": {
         "question": "Write a brief description about the dataset in less than 50 words",
         "output_type": "str",
-        "required": true
+        "output_len": "N>20"
     },
     "Volume": {
         "question": "What is the size of the dataset?. If the dataset is multilingual only use the size of the English dataset",
         "output_type": "float",
         "validation_group": "CONTENT",
-        "required": true
+        "output_len": "N>0"
     },
     "Unit": {
         "question": "What kind of examples does the dataset include?",
@@ -150,7 +150,7 @@
         },
         "output_type": "str",
         "validation_group": "CONTENT",
-        "required": true
+        "output_len": "N=1"
     },
     "Ethical Risks": {
         "question": "What is the level of the ethical risks of the dataset?",
@@ -166,29 +166,29 @@
         },
         "output_type": "str",
         "validation_group": "CONTENT",
-        "required": true
+        "output_len": "N=1"
     },
     "Provider": {
         "question": "What entity is the provider of the dataset? Don't use Team.",
         "output_type": "List[str]",
         "validation_group": "ACCESSABILITY",
-        "required": false
+        "output_len": "N>0"
     },
     "Derived From": {
         "question": "What datasets were used to create the dataset?",
         "output_type": "List[str]",
         "validation_group": "EVALUATION",
-        "required": false
+        "output_len": "N>0"
     },
     "Paper Title": {
         "question": "What is the title of the paper?",
         "output_type": "str",
-        "required": true
+        "output_len": "N>10"
     },
     "Paper Link": {
         "question": "What is the link to the paper?",
         "output_type": "str",
-        "required": true
+        "output_len": "N>0"
     },
     "Tokenized": {
         "question": "Is the dataset tokenized?",
@@ -202,7 +202,7 @@
         },
         "output_type": "str",
         "validation_group": "CONTENT",
-        "required": true
+        "output_len": "N=1"
     },
     "Host": {
         "question": "What is name of the repository that hosts the dataset?",
@@ -230,7 +230,7 @@
         ],
         "output_type": "str",
         "validation_group": "ACCESSABILITY",
-        "required": true
+        "output_len": "N=1"
     },
     "Access": {
         "question": "What is the accessibility of the dataset?",
@@ -246,13 +246,13 @@
         },
         "output_type": "str",
         "validation_group": "ACCESSABILITY",
-        "required": true
+        "output_len": "N=1"
     },
     "Cost": {
         "question": "If the dataset is not free, what is the cost?",
         "output_type": "str",
         "validation_group": "ACCESSABILITY",
-        "required": false
+        "output_len": "N>=0"
     },
     "Test Split": {
         "question": "Does the dataset contain a train/valid and test split?",
@@ -266,7 +266,7 @@
         },
         "output_type": "str",
         "validation_group": "EVALUATION",
-        "required": true
+        "output_len": "N=1"
     },
     "Tasks": {
         "question": "What are the tasks that this dataset can be used for?",
@@ -302,17 +302,17 @@
         ],
         "output_type": "List[str]",
         "validation_group": "EVALUATION",
-        "required": true
+        "output_len": "N>0"
     },
     "Venue Title": {
         "question": "What is the venue title of the published paper?",
         "output_type": "str",
-        "required": false
+        "output_len": "N>0"
     },
     "Citations": {
         "question": "Guess the citations count of the paper",
         "output_type": "int",
-        "required": false
+        "output_len": "N=0"
     },
     "Venue Type": {
         "question": "What is the venue type?",
@@ -323,31 +323,31 @@
             "preprint"
         ],
         "output_type": "str",
-        "required": false
+        "output_len": "N=1"
     },
     "Venue Name": {
         "question": "What is the full name of the venue that published the paper?",
         "output_type": "str",
-        "required": false
+        "output_len": "N>=0"
     },
     "Authors": {
         "question": "Who are the authors of the paper? The max list of authors should be 5, if there are more use et al.",
         "output_type": "List[str]",
-        "required": false
+        "output_len": "N>0"
     },
     "Affiliations": {
         "question": "What are the affiliations of the authors?",
         "output_type": "List[str]",
-        "required": false
+        "output_len": "N>0"
     },
     "Abstract": {
         "question": " What is the abstract of the paper? Remove any \\ or \" from the abstract.",
         "output_type": "str",
-        "required": false
+        "output_len": "N>10"
     },
     "Added By": {
         "question": "Who added this dataset to the registry?",
         "output_type": "str",
-        "required": true
+        "output_len": "N>5"
     }
 }

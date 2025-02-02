@@ -170,47 +170,51 @@ SAFETY_CONFIG_GEMINI = [
     ),
 ]
 
-langs = ['ar', 'en', 'jp', 'fr', 'ru']
-schema = {}
+import os
 
-for lang in langs:
-    input_json = json.load(open(f"schema/{lang}.json", "r"))
-    columns = list(input_json.keys())
-    columns_with_lists = [c for c in columns if "List[str]" == input_json[c]["output_type"]]
+schemata = {}
+
+for schema_file in os.listdir('schema'):
+
+    schema = json.load(open(f"schema/{schema_file}", "r"))
+    schema_name = schema_file.split('.')[0]
+    columns = list(schema.keys())
+    columns_with_lists = [c for c in columns if "List[str]" == schema[c]["output_type"]]
 
     system_prompt = f"""You are a profressional research paper reader. 
-            You will be provided a 'Paper Text' and 'Input Json' that has 'question', 'options'(optional), 'options_description'(optional), and 'output_type'. 
-            You are requested to answer the questions in the 'Input Json' using the 'Paper Text'.
+            You will be provided a 'Paper Text' and 'Input schema' that has 'question', 'options'(optional), 'options_description'(optional), 'output_type', and 'output_len'. 
+            You are requested to answer the questions in the 'Input schema' using the 'Paper Text'.
             If the question has 'options', only provide an answer from the 'options'. Use the 'options_description' to comperhend the options.
-            If the filed 'required' is true, then the answer is required. If the field 'required' is false, then the answer is optional you can answer int:0, float:0.0, str:"", list:[] or date:current year.
-            The 'Output Json' is a json that can be parsed using Python `json.loads()`, use double quotations not single quotations. The json has ONLY the keys: '{columns}'. 
-            The value for each key is the answer to the 'question' that prepresents the same key in 'Input Json'. 
-            Each value must have the same 'output_type' as the 'Input Json'.
+            The 'Output schema' is a json that can be parsed using Python `json.loads()`, use double quotations not single quotations. The json has ONLY the keys: '{columns}'. 
+            The value for each key is the answer to the 'question' that prepresents the same key in 'Input schema'. 
+            Each value must have the same 'output_type' as the 'Input schema'. Each field has output length which defines the size of output. If the output_type is List then N represents the number of 
+            list items to include as output. Otherwise [N] represents the number of characters. N=0, means this field is optional. 
             """
-    cot_style = """ THINK STEP BY STEP
-        1.  Read the full paper
-        2.  Extract the title, authors, affiliations and abstract
-        3.  Extract the Year, Venue Title, Venue Type, and Venue Name from the paper metadata
-        4.  Create a short description using the abstract
-        5.  Extract the link, Huggingface links, and license using hyperlinks if they exist 
-        6.  Answer whether the dataset is ar (monolignual) or multilingual, dialects and the subsets
-        7.  Guess the provider using the affiliations.
-        8.  Guess the accessability depending on the link of the dataset
-        9.  Extract the dataset voluem(size) and unit(what types of samples). 
-        10. If there are samples use them to guess if the dataset is morphologically tokenized or not.
-        11. Using the dataset collection pargraph, extract how was the dataset collected and the domain it was created from.
-        12. Guess the ethical risks of the dataset based on the domain and contents of the dataset
-        13. Does the dataset contain test split based on the metrics evaluated? 
-        14. Is the dataset derived from another dataset
-        15. Extract what Tasks the dataset can be used for.  
-        """
+    # cot_style = """ THINK STEP BY STEP
+    #     1.  Read the full paper
+    #     2.  Extract the title, authors, affiliations and abstract
+    #     3.  Extract the Year, Venue Title, Venue Type, and Venue Name from the paper metadata
+    #     4.  Create a short description using the abstract
+    #     5.  Extract the link, Huggingface links, and license using hyperlinks if they exist 
+    #     6.  Answer whether the dataset is ar (monolignual) or multilingual, dialects and the subsets
+    #     7.  Guess the provider using the affiliations.
+    #     8.  Guess the accessability depending on the link of the dataset
+    #     9.  Extract the dataset voluem(size) and unit(what types of samples). 
+    #     10. If there are samples use them to guess if the dataset is morphologically tokenized or not.
+    #     11. Using the dataset collection pargraph, extract how was the dataset collected and the domain it was created from.
+    #     12. Guess the ethical risks of the dataset based on the domain and contents of the dataset
+    #     13. Does the dataset contain test split based on the metrics evaluated? 
+    #     14. Is the dataset derived from another dataset
+    #     15. Extract what Tasks the dataset can be used for.  
+    #     """
+    cot_style = ""
     system_prompt_with_cot = f"{system_prompt}\n{cot_style}"
 
 
     evaluation_subsets = {}
-    for c in input_json:
-        if "validation_group" in input_json[c]:
-            group = input_json[c]["validation_group"]
+    for c in schema:
+        if "validation_group" in schema[c]:
+            group = schema[c]["validation_group"]
             if group not in evaluation_subsets:
                 evaluation_subsets[group] = []
             evaluation_subsets[group].append(c)
@@ -222,14 +226,14 @@ for lang in langs:
     NUM_VALIDATION_COLUMNS = len(validation_columns)
 
     column_types = {}
-    for c in input_json:
-        column_types[c] = input_json[c]["output_type"]
-    schema[lang] = {}
-    schema[lang]['columns'] = columns
-    schema[lang]['column_types'] = column_types
-    schema[lang]['evaluation_subsets'] = evaluation_subsets
-    schema[lang]['columns_with_lists'] = columns_with_lists
-    schema[lang]['schema'] = input_json
-    schema[lang]['system_prompt'] = system_prompt
-    schema[lang]['system_prompt_with_cot'] = system_prompt_with_cot
-    schema[lang]['validation_columns'] = validation_columns
+    for c in schema:
+        column_types[c] = schema[c]["output_type"]
+    schemata[schema_name] = {}
+    schemata[schema_name]['columns'] = columns
+    schemata[schema_name]['column_types'] = column_types
+    schemata[schema_name]['evaluation_subsets'] = evaluation_subsets
+    schemata[schema_name]['columns_with_lists'] = columns_with_lists
+    schemata[schema_name]['schema'] = schema
+    schemata[schema_name]['system_prompt'] = system_prompt
+    schemata[schema_name]['system_prompt_with_cot'] = system_prompt_with_cot
+    schemata[schema_name]['validation_columns'] = validation_columns
