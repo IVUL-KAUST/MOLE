@@ -23,7 +23,6 @@ from vertexai.generative_models import GenerativeModel, GenerationConfig  # type
 
 # Local imports
 from constants import *
-from firecrawl import FirecrawlApp  # type: ignore
 
 random.seed(0)
 
@@ -139,15 +138,6 @@ def compute_cost(message, model):
         "input_tokens": num_inp_tokens,
         "output_tokens": num_out_tokens,
     }
-
-
-def scrape_website_fc(url):
-    app = FirecrawlApp(api_key=os.getenv("fc_key"))
-
-    # Scrape a website:
-    scrape_status = app.scrape_url("url", params={"formats": ["markdown"]})
-    return scrape_status["markdown"]
-
 
 def spinner_decorator(func):
     @wraps(func)
