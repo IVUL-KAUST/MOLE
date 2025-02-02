@@ -2,13 +2,13 @@
     "Name": {
         "question": "What is the name of the dataset?",
         "output_type": "str",
-        "output_len": "2<N<10"
+        "output_len": "10>N>2"
     },
     "Subsets": {
         "question": "What are the dialect subsets of this dataset? The keys are 'Name', 'Volume', 'Unit', 'Dialect'. 'Dialect' must be one of the country name from the dialect options",
         "output_type": "List[Dict[Name, Volume, Unit, Dialect]]",
         "validation_group":"DIVERSITY",
-        "output_len": "0<=N<25"
+        "output_len": "25>N>=0"
     },
     "Link": {
         "question": "What is the link to access the dataset? The link must contain the dataset. If the dataset is hosted on HuggingFace, use the HF Link.",
@@ -129,7 +129,7 @@
         ],
         "output_type": "List[str]",
         "validation_group":"CONTENT",
-        "output_len": "0<N<len(options)"
+        "output_len": "len(options)>N>0"
     },
     "Form": {"question":"What is the form of the data?", "options": ["text", "spoken", "images"], "output_type": "str", "validation_group":"CONTENT", "required": true},
     "Collection Style": {
@@ -152,7 +152,7 @@
         },
         "output_type": "List[str]",
         "validation_group":"CONTENT",
-        "output_len": "0<N<len(options)"
+        "output_len": "len(options)>N>0"
     },
     "Description": {
         "question": "Write a brief description about the dataset in less than 50 words",
