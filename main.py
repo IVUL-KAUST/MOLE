@@ -1,6 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, Form
 from pydantic import BaseModel
 from pages.search import run
+import json
 
 app = FastAPI()
 
@@ -17,4 +18,11 @@ async def func(link: str =  Form(''), file: UploadFile = File(None)):
     results = run(link = link, paper_pdf=pdf_content, models = model_name.split(','), overwrite=True)
     print(results)
     return {'model_name': model_name, 'metadata': results[model_name]['metadata']}
+
+@app.post("/schema")
+async def func(name: str =  Form('')):
+
+    with open(f"schema/{name}.json", "r") as f:
+        data = json.load(f)
+    return data
     
