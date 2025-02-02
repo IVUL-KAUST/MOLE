@@ -89,7 +89,7 @@ TEST_DATASETS_IDS_EN = [
 
 TEST_DATASETS_IDS_FR = [
     "2002.06071",  # fquad
-    "2311.16840",  # claire
+    "2311.16840",  # cfdd
     "2108.11792",  # bsard
     "2007.00968",  # piaf
     "2304.04280",  # FrenchMedMCQA
