@@ -200,13 +200,13 @@
         "question": "What entity is the provider of the dataset? Don't use Team.",
         "output_type": "List[str]",
         "validation_group":"ACCESSABILITY",
-        "output_len": "N>0"
+        "output_len": "N>=0"
     },
     "Derived From": {
         "question": "What datasets were used to create the dataset?",
         "output_type": "List[str]",
         "validation_group":"EVALUATION",
-        "output_len": "N>0"
+        "output_len": "N>=0"
     },
     "Paper Title": {
         "question": "What is the title of the paper?",
