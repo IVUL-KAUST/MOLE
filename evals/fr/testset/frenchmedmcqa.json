@@ -73,7 +73,7 @@
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
-        "Cost": 0,
+        "Cost": 1,
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
@@ -83,6 +83,6 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1,
-        "Added By": 1
+        "Added By": 0
     }
 }

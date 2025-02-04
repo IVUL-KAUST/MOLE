@@ -62,7 +62,7 @@
         "HF Link": 0,
         "Link": 1,
         "License": 0,
-        "Year": 2024,
+        "Year": 1,
         "Language": 1,
         "Dialect": 1,
         "Domain": 1,
@@ -90,6 +90,6 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1,
-        "Added By": -1
+        "Added By": 0
     }
 }

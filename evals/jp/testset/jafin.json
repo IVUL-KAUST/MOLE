@@ -74,12 +74,12 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 1,
+        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1,
-        "Added By": 1
+        "Added By": 0
     }
 }
