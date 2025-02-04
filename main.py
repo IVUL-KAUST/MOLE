@@ -1,5 +1,4 @@
-from fastapi import FastAPI, UploadFile, File, Form
-from pydantic import BaseModel
+from fastapi import FastAPI, UploadFile, File, Form # type: ignore
 from pages.search import run
 import json
 

@@ -1,4 +1,4 @@
-from vertexai.generative_models import (
+from vertexai.generative_models import ( #type: ignore
     HarmCategory,
     HarmBlockThreshold,
     SafetySetting,
