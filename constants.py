@@ -31,8 +31,8 @@ examples = ""
 for exampler in examplers:
     input_text, output_text = exampler
     examples += f"""
-    Paper: {input_text}
-    Metadata: {output_text}
+    Paper Text: {input_text}
+    Output Json: {output_text}
     """
 
 TEST_DATASETS_IDS_AR = [
@@ -184,30 +184,29 @@ for schema_file in os.listdir('schema'):
     system_prompt = f"""You are a profressional research paper reader. 
             You will be provided a 'Paper Text' and 'Input schema' that has 'question', 'options'(optional), 'options_description'(optional), 'output_type', and 'output_len'. 
             You are requested to answer the questions in the 'Input schema' using the 'Paper Text'.
-            If the question has 'options', only provide an answer from the 'options'. Use the 'options_description' to comperhend the options.
+            If the question has 'options', only provide an answer from the 'options'. Use the 'options_description' to understand the options.
             The 'Output schema' is a json that can be parsed using Python `json.loads()`, use double quotations not single quotations. The json has ONLY the keys: '{columns}'. 
             The value for each key is the answer to the 'question' that prepresents the same key in 'Input schema'. 
             Each value must have the same 'output_type' as the 'Input schema'. Each field has output length which defines the size of output. If the output_type is List then N represents the number of 
             list items to include as output. Otherwise [N] represents the number of characters. N=0, means this field is optional. 
             """
-    # cot_style = """ THINK STEP BY STEP
-    #     1.  Read the full paper
-    #     2.  Extract the title, authors, affiliations and abstract
-    #     3.  Extract the Year, Venue Title, Venue Type, and Venue Name from the paper metadata
-    #     4.  Create a short description using the abstract
-    #     5.  Extract the link, Huggingface links, and license using hyperlinks if they exist 
-    #     6.  Answer whether the dataset is ar (monolignual) or multilingual, dialects and the subsets
-    #     7.  Guess the provider using the affiliations.
-    #     8.  Guess the accessability depending on the link of the dataset
-    #     9.  Extract the dataset voluem(size) and unit(what types of samples). 
-    #     10. If there are samples use them to guess if the dataset is morphologically tokenized or not.
-    #     11. Using the dataset collection pargraph, extract how was the dataset collected and the domain it was created from.
-    #     12. Guess the ethical risks of the dataset based on the domain and contents of the dataset
-    #     13. Does the dataset contain test split based on the metrics evaluated? 
-    #     14. Is the dataset derived from another dataset
-    #     15. Extract what Tasks the dataset can be used for.  
-    #     """
-    cot_style = ""
+    cot_style = """ THINK STEP BY STEP
+        1.  Read the full paper
+        2.  Extract the title, authors, affiliations and abstract
+        3.  Extract the Year, Venue Title, Venue Type, and Venue Name from the paper metadata
+        4.  Create a short description using the abstract
+        5.  Extract the link, Huggingface links, and license using hyperlinks if they exist 
+        6.  Answer whether the dataset is ar (monolignual) or multilingual, dialects and the subsets
+        7.  Guess the provider using the affiliations.
+        8.  Guess the accessability depending on the link of the dataset
+        9.  Extract the dataset voluem(size) and unit(what types of samples). 
+        10. If there are samples use them to guess if the dataset is morphologically tokenized or not.
+        11. Using the dataset collection pargraph, extract how was the dataset collected and the domain it was created from.
+        12. Guess the ethical risks of the dataset based on the domain and contents of the dataset
+        13. Does the dataset contain test split based on the metrics evaluated? 
+        14. Is the dataset derived from another dataset
+        15. Extract what Tasks the dataset can be used for.  
+        """
     system_prompt_with_cot = f"{system_prompt}\n{cot_style}"
 
 

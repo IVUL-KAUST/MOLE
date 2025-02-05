@@ -239,7 +239,7 @@ class ArxivSourceDownloader:
         if download_pdf:
             pdf_url = self._get_pdf_url(paper_id)
             if pdf_url:
-                pdf_path = os.path.join(paper_dir, f"{paper_id}.pdf")
+                pdf_path = os.path.join(paper_dir, f"paper.pdf")
                 pdf_success = self._download_file(pdf_url, pdf_path)
                 if pdf_success:
                     if verbose:

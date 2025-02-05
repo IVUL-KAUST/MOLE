@@ -62,7 +62,8 @@ if __name__ == "__main__":
                 repo_link=link,
                 summarize = args.summarize,
                 curr_idx= curr_idx,
-                schema = args.schema
+                schema = args.schema,
+                use_pdf = args.use_pdf
             )
         else:
             model_results = run(
@@ -77,7 +78,8 @@ if __name__ == "__main__":
                 repo_link=link,
                 summarize = args.summarize,
                 curr_idx = curr_idx,
-                schema = args.schema
+                schema = args.schema,
+                use_pdf = args.use_pdf
             )
 
         for model_name in model_results:

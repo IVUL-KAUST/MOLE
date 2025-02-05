@@ -78,8 +78,9 @@ def get_metadata(
     readme="",
     metadata={},
     use_search=False,
-    use_examples=False,
-    schema = 'ar'
+    use_examples=True,
+    schema = 'ar',
+    use_cot = True
 ):
     if paper_text != "":
         if use_examples:
@@ -97,7 +98,7 @@ def get_metadata(
                     Input schema: {schemata[schema]['schema']}
                     Output Json:
                     """
-        sys_prompt = schemata[schema]['system_prompt_with_cot']
+        sys_prompt = schemata[schema]['system_prompt_with_cot'] if use_cot else schemata[schema]['system_prompt']
     elif readme != "":
         prompt = f"""
                     You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
@@ -296,7 +297,8 @@ def run(
     use_split=None,
     summarize=False,
     curr_idx = [0,0],
-    schema = 'ar'
+    schema = 'ar',
+    use_pdf = False
 ):
     submitted = False
     st_context = False
@@ -427,7 +429,7 @@ def run(
                 if not success:
                     continue
 
-                if len(glob(f"{path}_arXiv/*.tex")) > 0:
+                if len(glob(f"{path}_arXiv/*.tex")) > 0 and not use_pdf:
                     path = f"{path}_arXiv"
 
                 for model_name in models:
@@ -462,9 +464,12 @@ def run(
                         continue
 
                     if model_name not in non_browsing_models:
-                        source_files = glob(f"{path}/*.tex") + glob(f"{path}/*.pdf")
+                        if use_pdf:
+                            source_files = glob(f"{path}/paper.pdf")
+                        else:
+                            source_files = glob(f"{path}/**/**.tex", recursive=True)
                         show_info(
-                            f"📖 Reading source files {source_files[0]}, ...",
+                            f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...",
                             st_context=st_context,
                         )
                         paper_text = extract_paper_text(source_files)
@@ -708,6 +713,12 @@ def create_args():
         "--schema",
         type = str,
         default = "ar"
+    )
+
+    parser.add_argument(
+        "--use_pdf",
+        action="store_true",
+        help="use pdf instead of tex",
     )
 
     # Parse arguments
