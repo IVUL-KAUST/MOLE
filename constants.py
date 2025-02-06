@@ -149,6 +149,8 @@ costs = {
     "gemini-exp-1206": {"input": 0, "output": 0},
     "gemini-2.0-flash-thinking-exp-1219": {"input": 0, "output": 0},
     "gemini-2.0-flash-thinking-exp-01-21": {"input": 0, "output": 0},
+    "gemini-2.0-pro-exp-02-05": {"input": 0, "output": 0},
+    "gemini-2.0-flash-001": {"input": 0, "output": 0}
 }
 
 SAFETY_CONFIG_GEMINI = [
@@ -185,8 +187,8 @@ for schema_file in os.listdir('schema'):
             You will be provided a 'Paper Text' and 'Input schema' that has 'question', 'options'(optional), 'options_description'(optional), 'output_type', and 'output_len'. 
             You are requested to answer the questions in the 'Input schema' using the 'Paper Text'.
             If the question has 'options', only provide an answer from the 'options'. Use the 'options_description' to understand the options.
-            The 'Output schema' is a json that can be parsed using Python `json.loads()`, use double quotations not single quotations. The json has ONLY the keys: '{columns}'. 
-            The value for each key is the answer to the 'question' that prepresents the same key in 'Input schema'. 
+            The 'Output schema' is a json that can be parsed using Python `json.loads()`, use double "" not single '' for the keys and values. 
+            The json has ONLY the keys: '{columns}'. The value for each key is the answer to the 'question' that prepresents the same key in 'Input schema'. 
             Each value must have the same 'output_type' as the 'Input schema'. Each field has output length which defines the size of output. If the output_type is List then N represents the number of 
             list items to include as output. Otherwise [N] represents the number of characters. N=0, means this field is optional. 
             """
