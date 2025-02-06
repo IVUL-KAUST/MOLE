@@ -545,15 +545,30 @@ def cast(metadata, schema = 'ar'):
     for c in metadata:
         type = column_types[c]
         if type == 'str':
-            metadata[c] = str(metadata[c])
+            try:
+                metadata[c] = str(metadata[c])
+            except:
+                metadata[c] = ""
         elif type == 'int':
-            metadata[c] = int(metadata[c])
+            try:
+                metadata[c] = int(metadata[c])
+            except:
+                metadata[c] = 0
         elif type == 'float':
-            metadata[c] = float(metadata[c])
+            try:
+                metadata[c] = float(metadata[c])
+            except:
+                metadata[c] = 0.0
         elif type == 'date[year]':
-            metadata[c] = int(metadata[c])
+            try:
+                metadata[c] = int(metadata[c])
+            except:
+                metadata[c] = date.year
         elif type == 'url':
-            metadata[c] = str(metadata[c])
+            try:
+                metadata[c] = str(metadata[c])
+            except:
+                metadata[c] = ""
         elif 'List' in type:
             if not isinstance(metadata[c], list):
                 raise(f'Error: {metadata[c]} is not a list')
@@ -591,7 +606,37 @@ def postprocess(metadata, method="last", schema = 'ar'):
     return metadata
 
 
-def fix_json(broken_json: str) -> str:
+def removeStartAndEndQuotes(json_str):
+    if json_str.startswith('"') and json_str.endswith('"'):
+        print('fixing')
+        return json_str[1:-1]
+    else:
+        return json_str
+def singleQuoteToDoubleQuote(singleQuoted):
+    '''
+    convert a single quoted string to a double quoted one
+    Args:
+        singleQuoted(string): a single quoted string e.g. {'cities': [{'name': "Upper Hell's Gate"}]}
+    Returns:
+        string: the double quoted version of the string e.g. 
+    see
+        - https://stackoverflow.com/questions/55600788/python-replace-single-quotes-with-double-quotes-but-leave-ones-within-double-q 
+    '''
+    cList=list(singleQuoted)
+    inDouble=False;
+    inSingle=False;
+    for i,c in enumerate(cList):
+        #print ("%d:%s %r %r" %(i,c,inSingle,inDouble))
+        if c=="'":
+            if not inDouble:
+                inSingle=not inSingle
+                cList[i]='"'
+        elif c=='"':
+            inDouble=not inDouble
+    doubleQuoted="".join(cList)    
+    return doubleQuoted
+    
+def fix_json(json_str: str) -> str:
     """
     Attempts to fix common issues in a malformed JSON string.
 
@@ -602,24 +647,18 @@ def fix_json(broken_json: str) -> str:
         str: The corrected JSON string if fixable, or an error message.
     """
     try:
-        # Attempt to parse the JSON directly
-        return json.loads(broken_json)
-    except json.JSONDecodeError:
-        pass  # Proceed with fixing the JSON
-    
-    
-    # Step 2: Remove trailing commas
-    # fixed_json = re.sub(r",\s*([\]}])", r"\1", broken_json)
+        # remove \escaping cahracters
+        json_str = json_str.replace("\\", "")
+        # remove start and end quotes
+        json_str = removeStartAndEndQuotes(json_str)
+        # replace single quotes to double quotes
+        json_str = singleQuoteToDoubleQuote(json_str)
+        
+        loaded_json = json.loads(json_str)
 
-    # step 3: remove the backslashes
-    fixed_json = broken_json.replace("\\", "")
-
-    try:
-        # Check if the fixed JSON is now valid
-        return json.loads(fixed_json)
+        return loaded_json
     except json.JSONDecodeError as e:
-        print(broken_json)
-        print(fixed_json)
+        print(json_str)
         print(e)
         print("⚠ warning: can not read the josn, using empty {}")
         return {}
@@ -627,13 +666,11 @@ def fix_json(broken_json: str) -> str:
 def read_json(text_json):
     text_json = text_json.replace("```json", "").replace("```", "")
     fixed_json = fix_json(text_json)
-    try:
-        if isinstance(fixed_json, str):  # If still a string, decode again
-            return json.loads(fixed_json)
-        return fixed_json
-    except json.JSONDecodeError:
-        return fixed_json 
-
+    if isinstance(fixed_json, str):
+        print(fixed_json)
+        raise('Must be json not string')
+    return fixed_json
+ 
 def get_repo_link(metadata, repo_link=""):
     link = ""
 
