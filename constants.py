@@ -123,6 +123,7 @@ eval_datasets_ids = {
 }
 non_browsing_models = [
     "human",
+    "dummy",
     "jury",
     "composer",
     "baseline-first",

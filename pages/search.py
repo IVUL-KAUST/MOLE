@@ -17,6 +17,7 @@ import vertexai  # type: ignore
 from vertexai.generative_models import GenerativeModel, GenerationConfig, Tool, grounding  # type: ignore
 import json
 import shutil
+
 load_dotenv()
 claude_client = anthropic.Anthropic(api_key=os.environ["anthropic_key"])
 chatgpt_client = OpenAI(api_key=os.environ["chatgpt_key"])
@@ -79,8 +80,8 @@ def get_metadata(
     metadata={},
     use_search=False,
     use_examples=True,
-    schema = 'ar',
-    use_cot = True
+    schema="ar",
+    use_cot=True,
 ):
     if paper_text != "":
         if use_examples:
@@ -91,21 +92,25 @@ def get_metadata(
                     Now, predict for the following paper:
                     Paper Text: {paper_text}
                     Output Json:
-                    """            
+                    """
         else:
             prompt = f"""
                     Paper Text: {paper_text},
                     Input schema: {schemata[schema]['schema']}
                     Output Json:
                     """
-        sys_prompt = schemata[schema]['system_prompt_with_cot'] if use_cot else schemata[schema]['system_prompt']
+        sys_prompt = (
+            schemata[schema]["system_prompt_with_cot"]
+            if use_cot
+            else schemata[schema]["system_prompt"]
+        )
     elif readme != "":
         prompt = f"""
                     You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
                     Given the following Input schema: {schemata[schema]['schema']}, then update the metadata in the Input schema with the information from the readme.
                     Output Json:
                     """
-        sys_prompt = schemata[schema]['system_prompt']
+        sys_prompt = schemata[schema]["system_prompt"]
     if "gemini" in model_name.lower():
         model = GenerativeModel(model_name, system_instruction=sys_prompt)
         tools = []
@@ -142,7 +147,7 @@ def get_metadata(
         )
         response = message.choices[0].message.content.strip()
     elif "deepseek" in model_name.lower():
-        if 'deepseek-v3' in model_name.lower():
+        if "deepseek-v3" in model_name.lower():
             message = deepseek_client.chat.completions.create(
                 model="deepseek-chat",
                 messages=[
@@ -152,7 +157,7 @@ def get_metadata(
                 max_tokens=2084,  # reduce the max tokens to 1024
                 temperature=0.0,
             )
-        elif 'deepseek-r1' in model_name.lower():
+        elif "deepseek-r1" in model_name.lower():
             message = deepseek_client.chat.completions.create(
                 model="deepseek-reasoner",
                 messages=[
@@ -222,6 +227,7 @@ def show_info(text, st_context=False):
         st.write(text)
     logger.info(text)
 
+
 def show_warning(text, st_context=False):
     if st_context:
         st.warning(text)
@@ -280,7 +286,6 @@ def extract_paper_text(source_files):
             continue
     return paper_text
 
-
 def run(
     args=None,
     mode="api",
@@ -296,13 +301,15 @@ def run(
     paper_pdf=None,
     use_split=None,
     summarize=False,
-    curr_idx = [0,0],
-    schema = 'ar',
-    use_pdf = False
+    curr_idx=[0, 0],
+    schema="ar",
+    use_pdf=False,
 ):
     submitted = False
     st_context = False
 
+    if 'dummy' in models:
+        return get_dummy_results()
     if mode == "cmd":
         year = int(args.year)
         month = args.month
@@ -434,9 +441,11 @@ def run(
                 for model_name in models:
                     curr_idx[0] += 1
                     if curr_idx[1]:
-                        show_info(f'{curr_idx[0]}/{curr_idx[1]}. paper is being processed')
+                        show_info(
+                            f"{curr_idx[0]}/{curr_idx[1]}. paper is being processed"
+                        )
                     else:
-                        show_info(f'Paper is being processed')
+                        show_info(f"Paper is being processed")
                     if browse_web and (model_name in non_browsing_models):
                         show_info(f"Can't browse the web for {model_name}")
 
@@ -450,7 +459,10 @@ def run(
                         and not overwrite
                         and model_name not in ["jury", "composer"]
                     ):
-                        show_info(f"📂 Loading saved results {save_path} ...", st_context=st_context)
+                        show_info(
+                            f"📂 Loading saved results {save_path} ...",
+                            st_context=st_context,
+                        )
                         results = json.load(open(save_path))
                         if st_context:
                             st.link_button(
@@ -475,10 +487,12 @@ def run(
                             st_context=st_context,
                         )
                         paper_text = extract_paper_text(source_files)
-                        approximate_token_size = len(paper_text.split(' ')) * 1.6
+                        approximate_token_size = len(paper_text.split(" ")) * 1.6
 
                         if approximate_token_size > 30_000:
-                            show_warning(f"⚠️ The paper text is too long, trimming some content")
+                            show_warning(
+                                f"⚠️ The paper text is too long, trimming some content"
+                            )
                             paper_text = paper_text[:150_000]
                         if summarize:
                             show_info(f"🗒️  Summarizing the paper ...")
@@ -494,12 +508,15 @@ def run(
                             if not any([m in file for m in non_browsing_models]):
                                 all_results.append(json.load(open(file)))
                         message, metadata = get_metadata_judge(
-                            all_results, type=model_name, schema = schema
+                            all_results, type=model_name, schema=schema
                         )
                     elif "human" in model_name.lower():
                         assert use_split is not None
                         metadata = get_metadata_human(
-                            use_split=use_split, link=article_url, title=title, schema = schema
+                            use_split=use_split,
+                            link=article_url,
+                            title=title,
+                            schema=schema,
                         )
                     elif "baseline" in model_name.lower():
                         message, metadata = "", {}
@@ -522,7 +539,7 @@ def run(
                                     cost = results["cost"]
                                 else:
                                     message, metadata = get_metadata(
-                                        paper_text, model_name, schema = schema
+                                        paper_text, model_name, schema=schema
                                     )
                                     cost = compute_cost(message, model_name)
                                 if browse_web:
@@ -544,7 +561,7 @@ def run(
                                             model_name=model_name,
                                             readme=readme,
                                             metadata=metadata,
-                                            schema = schema
+                                            schema=schema,
                                         )
                                         browsing_cost = compute_cost(
                                             message, model_name
@@ -572,29 +589,33 @@ def run(
                             metadata = postprocess(
                                 metadata,
                                 method=model_name.split("-")[-1],
-                                schema = schema
+                                schema=schema,
                             )
                         else:
-                            metadata = postprocess(metadata, schema = schema)
-                        
-                        if 'Added By' in metadata:
-                            metadata['Added By'] = model_name
-                        if 'Paper Link' in metadata:
-                            if metadata['Paper Link'] == "":
-                                metadata['Paper Link'] = article_url
+                            metadata = postprocess(metadata, schema=schema)
+
+                        if "Added By" in metadata:
+                            metadata["Added By"] = model_name
+                        if "Paper Link" in metadata:
+                            if metadata["Paper Link"] == "":
+                                metadata["Paper Link"] = article_url
 
                     show_info("🔍 Validating Metadata ...", st_context=st_context)
                     results = {}
                     results["metadata"] = metadata
                     if use_split is not None:
                         validation_results = validate(
-                            metadata, use_split=use_split, link=article_url, title=title, schema = schema
+                            metadata,
+                            use_split=use_split,
+                            link=article_url,
+                            title=title,
+                            schema=schema,
                         )
                         results["validation"] = validation_results
                         show_info(
-                        f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %",
-                        st_context=st_context,
-                    )
+                            f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %",
+                            st_context=st_context,
+                        )
                     else:
                         results["validation"] = {}
                     try:
@@ -605,7 +626,6 @@ def run(
                             "input_tokens": 0,
                             "output_tokens": 0,
                         }
-                    
 
                     if browse_web and not (model_name in non_browsing_models):
                         model_name = f"{model_name}-browsing"
@@ -711,11 +731,7 @@ def create_args():
         help="summarize the paper before extracting metadata",
     )
 
-    parser.add_argument(
-        "--schema",
-        type = str,
-        default = "ar"
-    )
+    parser.add_argument("--schema", type=str, default="ar")
 
     parser.add_argument(
         "--use_pdf",

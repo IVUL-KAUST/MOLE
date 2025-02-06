@@ -29,22 +29,14 @@ random.seed(0)
 # masader_dataset = load_dataset("arbml/masader", download_mode="")["train"]
 
 eval_datasets = {
-    'ar': {
-        'valid': [json.load(open(f)) for f in glob("evals/ar/validset/**.json")],
-        'test' : [json.load(open(f)) for f in glob("evals/ar/testset/**.json")]
+    "ar": {
+        "valid": [json.load(open(f)) for f in glob("evals/ar/validset/**.json")],
+        "test": [json.load(open(f)) for f in glob("evals/ar/testset/**.json")],
     },
-    'en': {
-        'test' : [json.load(open(f)) for f in glob("evals/en/testset/**.json")]
-    },
-    'ru': {
-        'test' : [json.load(open(f)) for f in glob("evals/ru/testset/**.json")]
-    },
-    'jp': {
-        'test' : [json.load(open(f)) for f in glob("evals/jp/testset/**.json")]
-    },
-    'fr': {
-        'test' : [json.load(open(f)) for f in glob("evals/fr/testset/**.json")]
-    }
+    "en": {"test": [json.load(open(f)) for f in glob("evals/en/testset/**.json")]},
+    "ru": {"test": [json.load(open(f)) for f in glob("evals/ru/testset/**.json")]},
+    "jp": {"test": [json.load(open(f)) for f in glob("evals/jp/testset/**.json")]},
+    "fr": {"test": [json.load(open(f)) for f in glob("evals/fr/testset/**.json")]},
 }
 
 
@@ -139,6 +131,7 @@ def compute_cost(message, model):
         "output_tokens": num_out_tokens,
     }
 
+
 def spinner_decorator(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
@@ -220,9 +213,11 @@ def match_titles(title, masader_title):
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
 
-def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False, schema = 'ar'):
-    validation_columns = schemata[schema]['validation_columns']
-    column_types = schemata[schema]['column_types']
+def get_predictions(
+    gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar"
+):
+    validation_columns = schemata[schema]["validation_columns"]
+    column_types = schemata[schema]["column_types"]
     results = {c: 0 for c in validation_columns}
 
     if gold_metadata is None:
@@ -238,7 +233,7 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False, s
             if gold_metadata["annotations_from_paper"][column] == 0:
                 results[column] = 1
                 continue
-        if 'List[Dict' in column_types[column]:
+        if "List[Dict" in column_types[column]:
             try:
                 if len(pred_answer) != len(gold_answer):
                     continue
@@ -255,7 +250,7 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False, s
             if matched:
                 results[column] = 1
             continue
-        elif column in schemata[schema]['columns_with_lists']:
+        elif column in schemata[schema]["columns_with_lists"]:
             assert isinstance(
                 pred_answer, list
             ), f"pred_answer is not a list: {pred_answer}"
@@ -269,12 +264,17 @@ def get_predictions(gold_metadata, pred_metadata, use_annotations_paper=False, s
     return results
 
 
-def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper=False, schema = 'ar'):
-    evaluation_subsets = schemata[schema]['evaluation_subsets']
+def evaluate_metadata(
+    gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar"
+):
+    evaluation_subsets = schemata[schema]["evaluation_subsets"]
     results = {c: 0 for c in evaluation_subsets}
-    
+
     predictions = get_predictions(
-        gold_metadata, pred_metadata, use_annotations_paper=use_annotations_paper, schema = schema
+        gold_metadata,
+        pred_metadata,
+        use_annotations_paper=use_annotations_paper,
+        schema=schema,
     )
     for subset in evaluation_subsets:
         for column in evaluation_subsets[subset]:
@@ -284,7 +284,7 @@ def evaluate_metadata(gold_metadata, pred_metadata, use_annotations_paper=False,
     return results
 
 
-def validate(metadata, use_split=None, title="", link="", schema = 'ar'):
+def validate(metadata, use_split=None, title="", link="", schema="ar"):
 
     matched_row = None
     if use_split is not None:
@@ -307,18 +307,18 @@ def validate(metadata, use_split=None, title="", link="", schema = 'ar'):
     if matched_row is None and use_split is not None:
         raise ()
 
-    return evaluate_metadata(matched_row, metadata, schema = schema)
+    return evaluate_metadata(matched_row, metadata, schema=schema)
 
 
 from collections import Counter
 
 
-def majority_vote(dicts, schema = 'ar'):
-    column_types = schemata[schema]['column_types']
+def majority_vote(dicts, schema="ar"):
+    column_types = schemata[schema]["column_types"]
     result = {}
 
-    for key in schemata[schema]['columns']:
-        if 'List[Dict' in column_types[key]:
+    for key in schemata[schema]["columns"]:
+        if "List[Dict" in column_types[key]:
             result[key] = []
             continue
 
@@ -330,20 +330,22 @@ def majority_vote(dicts, schema = 'ar'):
                 values.extend(value)
             else:
                 values.append(value)
-        
+
         if len(values) == 0:
             result[key] = []
             continue
-        
+
         # Count the occurrences of each value
         value_counts = Counter(values)
         # Find the value with the highest count (majority vote)
-        value_counts= value_counts.most_common(3)
-        
-        if column_types[key] == 'List[str]':
+        value_counts = value_counts.most_common(3)
+
+        if column_types[key] == "List[str]":
             majority_value, max_score = value_counts[0]
-            majority_value = [value for value,score in value_counts if score == max_score]
-        elif column_types[key] in ['str', 'int', 'float', 'url', 'date[year]']:
+            majority_value = [
+                value for value, score in value_counts if score == max_score
+            ]
+        elif column_types[key] in ["str", "int", "float", "url", "date[year]"]:
             majority_value, _ = value_counts[0]
         else:
             print(column_types[key])
@@ -353,17 +355,17 @@ def majority_vote(dicts, schema = 'ar'):
     return result
 
 
-def compose(dicts, schema = 'ar'):
-    column_types = schemata[schema]['column_types']
+def compose(dicts, schema="ar"):
+    column_types = schemata[schema]["column_types"]
     result = {}
-    for key in schemata[schema]['columns']:
-        if 'List[Dict' in column_types[key]:
+    for key in schemata[schema]["columns"]:
+        if "List[Dict" in column_types[key]:
             result[key] = []
             continue
 
         # only use smarter models as a judge
 
-        if key in schemata[schema]['evaluation_subsets']["ACCESSABILITY"]:
+        if key in schemata[schema]["evaluation_subsets"]["ACCESSABILITY"]:
             models_to_use = ["browsing"]
         else:
             models_to_use = ["pro", "deepseek", "jury"]
@@ -377,21 +379,23 @@ def compose(dicts, schema = 'ar'):
                     values.extend(value)
                 else:
                     values.append(value)
-        
+
         if len(values) == 0:
-            if column_types[key] == 'List[str]':
+            if column_types[key] == "List[str]":
                 result[key] = []
             else:
                 result[key] = ""
             continue
-        
+
         value_counts = Counter(values)
-        value_counts= value_counts.most_common(3)
-        
-        if column_types[key] == 'List[str]':
+        value_counts = value_counts.most_common(3)
+
+        if column_types[key] == "List[str]":
             majority_value, max_score = value_counts[0]
-            majority_value = [value for value,score in value_counts if score == max_score]
-        elif column_types[key] in ['str', 'int', 'float', 'url', 'date[year]']:
+            majority_value = [
+                value for value, score in value_counts if score == max_score
+            ]
+        elif column_types[key] in ["str", "int", "float", "url", "date[year]"]:
             majority_value, _ = value_counts[0]
         else:
             print(column_types[key])
@@ -400,12 +404,13 @@ def compose(dicts, schema = 'ar'):
 
     return result
 
-def get_metadata_judge(dicts, type="jury", schema = 'ar'):
+
+def get_metadata_judge(dicts, type="jury", schema="ar"):
     all_metadata = {d["config"]["model_name"]: d["metadata"] for d in dicts}
     if type == "jury":
-        return "", majority_vote(all_metadata, schema = schema)
+        return "", majority_vote(all_metadata, schema=schema)
     elif type == "composer":
-        return "", compose(all_metadata, schema = schema)
+        return "", compose(all_metadata, schema=schema)
     else:
         raise (f"Unrecognized judge type {type}")
 
@@ -414,7 +419,28 @@ def get_paper_id(link):
     return link.split("/")[-1]
 
 
-def get_metadata_human(title="", link="", use_split="test", schema = "ar"):
+def get_dummy_results():
+    results = {}
+    results["metadata"] = json.load(open("dummy.json", "r"))
+    results["cost"] = {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+    }
+
+    results["config"] = {
+        "model_name": "dummy",
+        "month": 0,
+        "year": 0,
+        "keywords": [],
+        "link": "",
+    }
+    results["ratio_filling"] = 1
+    results['dummy'] = results
+    return results
+
+
+def get_metadata_human(title="", link="", use_split="test", schema="ar"):
     dataset = eval_datasets[schema][use_split]
 
     for row in dataset:
@@ -428,10 +454,10 @@ def get_metadata_human(title="", link="", use_split="test", schema = "ar"):
             raise ()
 
 
-def compare_results(rs, show_diff=False, schema = 'ar'):
+def compare_results(rs, show_diff=False, schema="ar"):
     results = {}
 
-    for c in schemata[schema]['columns']:
+    for c in schemata[schema]["columns"]:
         for r in rs:
             model_name = r["config"]["model_name"]
             value = r["metadata"][c]
@@ -492,6 +518,7 @@ def get_arxiv_id(arxiv_link):
     arxiv_link = fix_arxiv_link(arxiv_link)
     return arxiv_link.split("/")[-1]
 
+
 def pick_choice(options, method="last"):
     if method == "random":
         return random.choice(options)
@@ -500,12 +527,17 @@ def pick_choice(options, method="last"):
     else:
         return options[-1]
 
-def fix_options(metadata, method="last", schema = 'ar'):
+
+def fix_options(metadata, method="last", schema="ar"):
     fixed_metadata = {}
-    columns_with_options = [c for c in schemata[schema]['schema'] if "options" in schemata[schema]['schema'][c]]
+    columns_with_options = [
+        c
+        for c in schemata[schema]["schema"]
+        if "options" in schemata[schema]["schema"][c]
+    ]
     for column in metadata:
         if column in columns_with_options:
-            options = [o for o in schemata[schema]['schema'][column]["options"]]
+            options = [o for o in schemata[schema]["schema"][column]["options"]]
             pred_option = metadata[column]
             if isinstance(pred_option, list):
                 new_pred_option = []
@@ -540,102 +572,105 @@ def process_url(url):
     return url
 
 
-def cast(metadata, schema = 'ar'):
-    column_types = schemata[schema]['column_types']
+def cast(metadata, schema="ar"):
+    column_types = schemata[schema]["column_types"]
     for c in metadata:
         type = column_types[c]
-        if type == 'str':
+        if type == "str":
             try:
                 metadata[c] = str(metadata[c])
             except:
                 metadata[c] = ""
-        elif type == 'int':
+        elif type == "int":
             try:
                 metadata[c] = int(metadata[c])
             except:
                 metadata[c] = 0
-        elif type == 'float':
+        elif type == "float":
             try:
                 metadata[c] = float(metadata[c])
             except:
                 metadata[c] = 0.0
-        elif type == 'date[year]':
+        elif type == "date[year]":
             try:
                 metadata[c] = int(metadata[c])
             except:
                 metadata[c] = date.year
-        elif type == 'url':
+        elif type == "url":
             try:
                 metadata[c] = str(metadata[c])
             except:
                 metadata[c] = ""
-        elif 'List' in type:
+        elif "List" in type:
             if not isinstance(metadata[c], list):
-                raise(f'Error: {metadata[c]} is not a list')
+                raise (f"Error: {metadata[c]} is not a list")
         else:
             print(c, type)
             raise (f"Unrecognized column type {type}")
     return metadata
 
 
-def fill_missing(metadata, schema = 'ar'):
-    column_types = schemata[schema]['column_types']
-    for c in schemata[schema]['columns']:
+def fill_missing(metadata, schema="ar"):
+    column_types = schemata[schema]["column_types"]
+    for c in schemata[schema]["columns"]:
         if c not in metadata or metadata[c] is None:
-            if 'List' in column_types[c]:
+            if "List" in column_types[c]:
                 metadata[c] = []
-            elif 'str' in column_types[c]:
+            elif "str" in column_types[c]:
                 metadata[c] = ""
-            elif 'int' in column_types[c]:
+            elif "int" in column_types[c]:
                 metadata[c] = 0
-            elif 'float' in column_types[c]:
+            elif "float" in column_types[c]:
                 metadata[c] = 0.0
-            elif 'date[year]' in column_types[c]:
+            elif "date[year]" in column_types[c]:
                 metadata[c] = date.today().year
-            elif 'url' in column_types[c]:
+            elif "url" in column_types[c]:
                 metadata[c] = ""
             else:
                 raise (f"Unrecognized column type {column_types[c]}")
     return metadata
 
 
-def postprocess(metadata, method="last", schema = 'ar'):
-    metadata = fill_missing(metadata, schema = schema)
-    metadata = cast(metadata, schema = schema)
-    metadata = fix_options(metadata, method=method, schema = schema)
+def postprocess(metadata, method="last", schema="ar"):
+    metadata = fill_missing(metadata, schema=schema)
+    metadata = cast(metadata, schema=schema)
+    metadata = fix_options(metadata, method=method, schema=schema)
     return metadata
 
 
 def removeStartAndEndQuotes(json_str):
     if json_str.startswith('"') and json_str.endswith('"'):
-        print('fixing')
+        print("fixing")
         return json_str[1:-1]
     else:
         return json_str
+
+
 def singleQuoteToDoubleQuote(singleQuoted):
-    '''
+    """
     convert a single quoted string to a double quoted one
     Args:
         singleQuoted(string): a single quoted string e.g. {'cities': [{'name': "Upper Hell's Gate"}]}
     Returns:
-        string: the double quoted version of the string e.g. 
+        string: the double quoted version of the string e.g.
     see
-        - https://stackoverflow.com/questions/55600788/python-replace-single-quotes-with-double-quotes-but-leave-ones-within-double-q 
-    '''
-    cList=list(singleQuoted)
-    inDouble=False;
-    inSingle=False;
-    for i,c in enumerate(cList):
-        #print ("%d:%s %r %r" %(i,c,inSingle,inDouble))
-        if c=="'":
+        - https://stackoverflow.com/questions/55600788/python-replace-single-quotes-with-double-quotes-but-leave-ones-within-double-q
+    """
+    cList = list(singleQuoted)
+    inDouble = False
+    inSingle = False
+    for i, c in enumerate(cList):
+        # print ("%d:%s %r %r" %(i,c,inSingle,inDouble))
+        if c == "'":
             if not inDouble:
-                inSingle=not inSingle
-                cList[i]='"'
-        elif c=='"':
-            inDouble=not inDouble
-    doubleQuoted="".join(cList)    
+                inSingle = not inSingle
+                cList[i] = '"'
+        elif c == '"':
+            inDouble = not inDouble
+    doubleQuoted = "".join(cList)
     return doubleQuoted
-    
+
+
 def fix_json(json_str: str) -> str:
     """
     Attempts to fix common issues in a malformed JSON string.
@@ -653,7 +688,7 @@ def fix_json(json_str: str) -> str:
         json_str = removeStartAndEndQuotes(json_str)
         # replace single quotes to double quotes
         json_str = singleQuoteToDoubleQuote(json_str)
-        
+
         loaded_json = json.loads(json_str)
 
         return loaded_json
@@ -662,15 +697,17 @@ def fix_json(json_str: str) -> str:
         print(e)
         print("⚠ warning: can not read the josn, using empty {}")
         return {}
-    
+
+
 def read_json(text_json):
     text_json = text_json.replace("```json", "").replace("```", "")
     fixed_json = fix_json(text_json)
     if isinstance(fixed_json, str):
         print(fixed_json)
-        raise('Must be json not string')
+        raise ("Must be json not string")
     return fixed_json
- 
+
+
 def get_repo_link(metadata, repo_link=""):
     link = ""
 
