@@ -16,7 +16,7 @@ import time
 import vertexai  # type: ignore
 from vertexai.generative_models import GenerativeModel, GenerationConfig, Tool, grounding  # type: ignore
 import json
-
+import shutil
 load_dotenv()
 claude_client = anthropic.Anthropic(api_key=os.environ["anthropic_key"])
 chatgpt_client = OpenAI(api_key=os.environ["chatgpt_key"])
@@ -415,9 +415,8 @@ def run(
                     success, path = downloader.download_paper(paper_id, verbose=True)
                     show_info("✨ Cleaning Latex ...", st_context=st_context)
                     clean_latex(path)
+                    shutil.copy(f"{path}/paper.pdf", f"{path}_arXiv/paper.pdf")
                 elif not arxiv_resource:
-                    import shutil
-
                     path = f"static/results/{paper_id_no_version}"
                     with open(f"{path}/paper.pdf", "wb") as temp_file:
                         shutil.copyfileobj(paper_pdf, temp_file)
@@ -468,6 +467,9 @@ def run(
                             source_files = glob(f"{path}/paper.pdf")
                         else:
                             source_files = glob(f"{path}/**/**.tex", recursive=True)
+
+                        if len(source_files) == 0:
+                            source_files = glob(f"{path}/paper.pdf")
                         show_info(
                             f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...",
                             st_context=st_context,
