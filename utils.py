@@ -37,6 +37,7 @@ eval_datasets = {
     "ru": {"test": [json.load(open(f)) for f in glob("evals/ru/testset/**.json")]},
     "jp": {"test": [json.load(open(f)) for f in glob("evals/jp/testset/**.json")]},
     "fr": {"test": [json.load(open(f)) for f in glob("evals/fr/testset/**.json")]},
+    "multi": {"test": [json.load(open(f)) for f in glob("evals/multi/testset/**.json")]}
 }
 
 
