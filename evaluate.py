@@ -63,7 +63,8 @@ if __name__ == "__main__":
                 summarize = args.summarize,
                 curr_idx= curr_idx,
                 schema = args.schema,
-                use_pdf = args.use_pdf
+                use_pdf = args.use_pdf,
+                few_shot = args.few_shot
             )
         else:
             model_results = run(
@@ -79,7 +80,8 @@ if __name__ == "__main__":
                 summarize = args.summarize,
                 curr_idx = curr_idx,
                 schema = args.schema,
-                use_pdf = args.use_pdf
+                use_pdf = args.use_pdf,
+                few_shot = args.few_shot
             )
 
         for model_name in model_results:

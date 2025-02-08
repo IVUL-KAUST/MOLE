@@ -79,14 +79,18 @@ def get_metadata(
     readme="",
     metadata={},
     use_search=False,
-    use_examples=True,
     schema="ar",
     use_cot=True,
+    few_shot = 0,
 ):
     if paper_text != "":
-        if use_examples:
+        if few_shot > 0 :
+            examples  = ""
+            
+            for example in schemata[schema]['examples'][:few_shot]:
+                examples += example
             prompt = f"""
-                    {schemata[schema]['schema']}
+                    Input schema: {schemata[schema]['schema']}
                     Here are some examples:
                     {examples}
                     Now, predict for the following paper:
@@ -95,8 +99,8 @@ def get_metadata(
                     """
         else:
             prompt = f"""
-                    Paper Text: {paper_text},
                     Input schema: {schemata[schema]['schema']}
+                    Paper Text: {paper_text},
                     Output Json:
                     """
         sys_prompt = (
@@ -304,6 +308,7 @@ def run(
     curr_idx=[0, 0],
     schema="ar",
     use_pdf=False,
+    few_shot = 0
 ):
     submitted = False
     st_context = False
@@ -539,7 +544,7 @@ def run(
                                     cost = results["cost"]
                                 else:
                                     message, metadata = get_metadata(
-                                        paper_text, model_name, schema=schema
+                                        paper_text, model_name, schema=schema, few_shot = few_shot
                                     )
                                     cost = compute_cost(message, model_name)
                                 if browse_web:
@@ -632,6 +637,7 @@ def run(
 
                     results["config"] = {
                         "model_name": model_name,
+                        "few_shot": few_shot,
                         "month": month,
                         "year": year,
                         "keywords": keywords,
@@ -737,6 +743,13 @@ def create_args():
         "--use_pdf",
         action="store_true",
         help="use pdf instead of tex",
+    )
+    parser.add_argument(
+        "--few_shot",
+        type=int,
+        required=False,
+        default=0,
+        help="number of few shot examples to use",
     )
 
     # Parse arguments
