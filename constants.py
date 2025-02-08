@@ -44,8 +44,6 @@ TEST_DATASETS_IDS_AR = [
     "2210.12985",  # maknuune
     "2106.10745",  # calliar
     "1812.10464",  # laser
-    "1910.07475",  # mlqa
-    "2004.06465",  # DE-LIMIT
     "2103.09687",  # doda
     "2004.14303",  # tunizi
     "2005.06608",  # AraDangspeech
@@ -54,13 +52,11 @@ TEST_DATASETS_IDS_AR = [
     "1612.08989",  # shamela
     "1610.09565",  # transliteration
     "1809.03891",  # OpenITI-proc
-    "1411.6718",  # labr
-    "1410.3791",  # polygot-ner
+    "1411.6718",   # labr
+    "1410.3791",   # polygot-ner
     "2309.12053",  # acva
     "1907.03110",  # anetac
     "2407.19835",  # athar
-    "2010.11856",  # xor-tydi
-    "1809.05053",  # xnli
 ]
 VALID_DATASETS_IDS_AR = [
     "1609.05625",  # mgb-2
@@ -100,9 +96,16 @@ TEST_DATASETS_IDS_RU = [
     "2010.02605",  # DaNetQA
     "2106.10161",  # golos
     "2108.13112",  # NEREL
-    "2210.12814",  # rocola
+    "2210.12814",  # rucola
 ]
 
+TEST_DATASETS_IDS_MULTI =[
+    "2010.11856",  # xor-tydi
+    "1809.05053",  # xnli
+    "1910.07475",  # mlqa
+    "2004.06465",  # DE-LIMIT
+    "1710.10639",  # jesc
+]
 eval_datasets_ids = {
     'ar': {
         'valid': VALID_DATASETS_IDS_AR,
@@ -119,6 +122,9 @@ eval_datasets_ids = {
     },
     'fr': {
         'test': TEST_DATASETS_IDS_FR
+    },
+    'multi':{
+        'test': TEST_DATASETS_IDS_MULTI
     }
 }
 non_browsing_models = [
@@ -184,16 +190,16 @@ for schema_file in os.listdir('schema'):
     columns = list(schema.keys())
     columns_with_lists = [c for c in columns if "List[str]" == schema[c]["output_type"]]
 
-    system_prompt = f"""You are a profressional research paper reader. 
-            You will be provided a 'Paper Text' and 'Input schema' that has 'question', 'options'(optional), 'options_description'(optional), 'output_type', and 'output_len'. 
-            You are requested to answer the questions in the 'Input schema' using the 'Paper Text'.
+    system_prompt = f"""You are a profressional research paper reader. You will be provided a 'Paper Text' and 'Input schema' that has 'question',
+            'options'(optional), 'options_description'(optional), 'output_type', and 'output_len'. You are requested to answer the questions in the 'Input schema' using the 'Paper Text'.
             If the question has 'options', only provide an answer from the 'options'. Use the 'options_description' to understand the options.
-            The 'Output schema' is a json that can be parsed using Python `json.loads()`, use double "" not single '' for the keys and values. 
+            The 'Output schema' is a json that can be parsed using Python `json.load()`, use double "" not single '' for the keys and values. 
             The json has ONLY the keys: '{columns}'. The value for each key is the answer to the 'question' that prepresents the same key in 'Input schema'. 
-            Each value must have the same 'output_type' as the 'Input schema'. Each field has output length which defines the size of output. If the output_type is List then N represents the number of 
-            list items to include as output. Otherwise [N] represents the number of characters. N=0, means this field is optional. 
+            Each value must have the same 'output_type' as the 'Input schema'. Each field has output length which defines the size of output. 
+            If the output_type is List then N represents the number of list items to include as output. Otherwise [N] represents the number of characters. N=0,N>=0 means this field is optional. 
             """
-    cot_style = """ THINK STEP BY STEP
+    cot_style = """ 
+        THINK STEP BY STEP
         1.  Read the full paper
         2.  Extract the title, authors, affiliations and abstract
         3.  Extract the Year, Venue Title, Venue Type, and Venue Name from the paper metadata
@@ -202,7 +208,7 @@ for schema_file in os.listdir('schema'):
         6.  Answer whether the dataset is ar (monolignual) or multilingual, dialects and the subsets
         7.  Guess the provider using the affiliations.
         8.  Guess the accessability depending on the link of the dataset
-        9.  Extract the dataset voluem(size) and unit(what types of samples). 
+        9.  Extract the dataset volume(size) and unit(what types of samples). 
         10. If there are samples use them to guess if the dataset is morphologically tokenized or not.
         11. Using the dataset collection pargraph, extract how was the dataset collected and the domain it was created from.
         12. Guess the ethical risks of the dataset based on the domain and contents of the dataset

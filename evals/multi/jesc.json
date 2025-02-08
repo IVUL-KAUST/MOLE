@@ -1,0 +1,91 @@
+{
+    "Name": "JESC",
+    "Subsets": [
+        {"Name":"Japanese", "Volume":3240661.0, "Unit":"sentences", "Language":"Japanese"},
+        {"Name":"English", "Volume":3240661.0, "Unit":"sentences", "Language":"English"}
+    ],
+    "Link": "https://nlp.stanford.edu/projects/jesc",
+    "HF Link": "https://huggingface.co/datasets/Hoshikuzu/JESC",
+    "License": "CC BY-SA 4.0",
+    "Year": 2018,
+    "Language": ["Japanese", "English"],
+    "Domain": [
+        "captions",
+        "TV Channels"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "crawling",
+        "machine annotation"
+    ],
+    "Description": "JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind.",
+    "Volume": 6481322.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        "Stanford University",
+        "Rakuten Institute of Technology",
+        "Google Brain"
+    ],
+    "Derived From": [],
+    "Paper Title": "JESC: Japanese-English Subtitle Corpus",
+    "Paper Link": "https://arxiv.org/pdf/1710.10639",
+    "Tokenized": "No",
+    "Host": "other",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "Yes",
+    "Tasks": [
+        "machine translation"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Reid Pryzant",
+        "Youngjoo Chung",
+        "Dan Jurafsky",
+        "Denny Britz"
+    ],
+    "Affiliations": [
+        "Stanford University",
+        "Rakuten Institute of Technology",
+        "Google Brain"
+    ],
+    "Abstract": "In this paper we describe the Japanese-English Subtitle Corpus (JESC). JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind. The corpus was assembled by crawling and aligning subtitles found on the web. The assembly process incorporates a number of novel preprocessing elements to ensure high monolingual fluency and accurate bilingual alignments. We summarize its contents and evaluate its quality using human experts and baseline machine translation (MT) systems.",
+    "Added By": "Zaid Alyafeai",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "HF Link": 0,
+        "License": 0,
+        "Year": 1,
+        "Language": 1,
+        "Domain": 1,
+        "Form": 1,
+        "Collection Style": 1,
+        "Description": 1,
+        "Volume": 1,
+        "Unit": 1,
+        "Ethical Risks": 1,
+        "Provider": 1,
+        "Derived From": 1,
+        "Paper Title": 1,
+        "Paper Link": 1,
+        "Tokenized": 1,
+        "Host": 1,
+        "Access": 1,
+        "Cost": 1,
+        "Test Split": 1,
+        "Tasks": 1,
+        "Venue Title": 1,
+        "Citations": 0,
+        "Venue Type": 1,
+        "Venue Name": 1,
+        "Authors": 1,
+        "Affiliations": 1,
+        "Abstract": 1,
+        "Added By": 0
+    }
+}
