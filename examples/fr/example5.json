@@ -1,0 +1,47 @@
+{
+    "Name": "frQuestionAnswering",
+    "Link": "https://github.com/camillelaurent/frQuestionAnswering",
+    "HF Link": "",
+    "License": "CC BY-NC 4.0",
+    "Year": 2014,
+    "Language": "fr",
+    "Domain": [
+        "commentary"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "crawling"
+    ],
+    "Description": "frQuestionAnswering is a question answering dataset, that contains 3513.0 sentences",
+    "Volume": 3513.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        "WDFP"
+    ],
+    "Derived From": [],
+    "Paper Title": "frQuestionAnswering: A question answering dataset for fr",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "question answering"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Camille Laurent",
+        "Sophie Dubois"
+    ],
+    "Affiliations": [
+        "Sorbonne University",
+        "Universit\u00e9 de Bordeaux"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

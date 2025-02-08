@@ -1,0 +1,47 @@
+{
+    "Name": "enOffensiveLanguageDetection",
+    "Link": "https://github.com/oliviabennett/enOffensiveLanguageDetection",
+    "HF Link": "",
+    "License": "BSD",
+    "Year": 2021,
+    "Language": "en",
+    "Domain": [
+        "TV Channels"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "machine annotation"
+    ],
+    "Description": "enOffensiveLanguageDetection is a offensive language detection dataset, that contains 3992.0 sentences",
+    "Volume": 3992.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "enOffensiveLanguageDetection: A offensive language detection dataset for en",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "offensive language detection"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Olivia Bennett",
+        "Emily Carter"
+    ],
+    "Affiliations": [
+        "Harvard University",
+        "University of Cambridge"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

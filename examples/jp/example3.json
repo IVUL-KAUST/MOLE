@@ -1,0 +1,47 @@
+{
+    "Name": "jpDialectIdentification",
+    "Link": "https://github.com/hinatanaka/jpDialectIdentification",
+    "HF Link": "https://huggingface.co/datasets/JOFB/jpDialectIdentification",
+    "License": "LDC User Agreement",
+    "Year": 2017,
+    "Language": "jp",
+    "Domain": [
+        "TV Channels"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "human annotation"
+    ],
+    "Description": "jpDialectIdentification is a dialect identification dataset, that contains 228.0 sentences",
+    "Volume": 228.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        "JOFB"
+    ],
+    "Derived From": [],
+    "Paper Title": "jpDialectIdentification: A dialect identification dataset for jp",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "dialect identification"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Hina Tanaka",
+        "Rina Fujimoto"
+    ],
+    "Affiliations": [
+        "Kyoto University",
+        "Osaka University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

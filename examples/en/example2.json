@@ -1,0 +1,47 @@
+{
+    "Name": "enDialectIdentification",
+    "Link": "https://github.com/oliviabennett/enDialectIdentification",
+    "HF Link": "",
+    "License": "BSD",
+    "Year": 2020,
+    "Language": "en",
+    "Domain": [
+        "commentary"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "LLM generated"
+    ],
+    "Description": "enDialectIdentification is a dialect identification dataset, that contains 7973.0 sentences",
+    "Volume": 7973.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "enDialectIdentification: A dialect identification dataset for en",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "dialect identification"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Olivia Bennett",
+        "James Richardson"
+    ],
+    "Affiliations": [
+        "University of Oxford",
+        "University of Cambridge"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

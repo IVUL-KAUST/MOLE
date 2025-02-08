@@ -1,0 +1,47 @@
+{
+    "Name": "jpDependencyParsing",
+    "Link": "https://github.com/hinatanaka/jpDependencyParsing",
+    "HF Link": "",
+    "License": "CC BY-NC 2.0",
+    "Year": 2010,
+    "Language": "jp",
+    "Domain": [
+        "captions"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "crawling"
+    ],
+    "Description": "jpDependencyParsing is a dependency parsing dataset, that contains 5680.0 sentences",
+    "Volume": 5680.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "jpDependencyParsing: A dependency parsing dataset for jp",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "dependency parsing"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Hina Tanaka",
+        "Rina Fujimoto"
+    ],
+    "Affiliations": [
+        "Nagoya University",
+        "Osaka University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

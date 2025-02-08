@@ -1,0 +1,47 @@
+{
+    "Name": "ruSentimentAnalysis",
+    "Link": "https://github.com/olgasokolova/ruSentimentAnalysis",
+    "HF Link": "",
+    "License": "CC BY-NC 2.0",
+    "Year": 2025,
+    "Language": "ru",
+    "Domain": [
+        "web pages"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "human annotation"
+    ],
+    "Description": "ruSentimentAnalysis is a sentiment analysis dataset, that contains 2236.0 sentences",
+    "Volume": 2236.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "ruSentimentAnalysis: A sentiment analysis dataset for ru",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "sentiment analysis"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Olga Sokolova",
+        "Sergey Volkov"
+    ],
+    "Affiliations": [
+        "Moscow State University",
+        "Saint Petersburg Polytechnic University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

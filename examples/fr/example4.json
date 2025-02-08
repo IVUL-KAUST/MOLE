@@ -1,0 +1,47 @@
+{
+    "Name": "frMachineTranslation",
+    "Link": "https://github.com/louisdupont/frMachineTranslation",
+    "HF Link": "",
+    "License": "ODbl-1.0",
+    "Year": 2020,
+    "Language": "fr",
+    "Domain": [
+        "web pages"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "crawling"
+    ],
+    "Description": "frMachineTranslation is a machine translation dataset, that contains 7175.0 sentences",
+    "Volume": 7175.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "frMachineTranslation: A machine translation dataset for fr",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "machine translation"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Louis Dupont",
+        "\u00c9mile Moreau"
+    ],
+    "Affiliations": [
+        "\u00c9cole Polytechnique",
+        "Universit\u00e9 de Lyon"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

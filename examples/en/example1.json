@@ -1,0 +1,47 @@
+{
+    "Name": "enDependencyParsing",
+    "Link": "https://github.com/oliviabennett/enDependencyParsing",
+    "HF Link": "",
+    "License": "CC0",
+    "Year": 2012,
+    "Language": "en",
+    "Domain": [
+        "commentary"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "manual curation"
+    ],
+    "Description": "enDependencyParsing is a dependency parsing dataset, that contains 9336.0 sentences",
+    "Volume": 9336.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        "XAWG"
+    ],
+    "Derived From": [],
+    "Paper Title": "enDependencyParsing: A dependency parsing dataset for en",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "dependency parsing"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Olivia Bennett",
+        "Emily Carter"
+    ],
+    "Affiliations": [
+        "University of Cambridge",
+        "Stanford University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

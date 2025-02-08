@@ -1,0 +1,47 @@
+{
+    "Name": "jpNamedEntityRecognition",
+    "Link": "https://github.com/rinafujimoto/jpNamedEntityRecognition",
+    "HF Link": "https://huggingface.co/datasets/WOQY/jpNamedEntityRecognition",
+    "License": "ODC-By",
+    "Year": 2017,
+    "Language": "jp",
+    "Domain": [
+        "TV Channels"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "LLM generated"
+    ],
+    "Description": "jpNamedEntityRecognition is a named entity recognition dataset, that contains 3868.0 sentences",
+    "Volume": 3868.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        "WOQY"
+    ],
+    "Derived From": [],
+    "Paper Title": "jpNamedEntityRecognition: A named entity recognition dataset for jp",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "named entity recognition"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Rina Fujimoto",
+        "Yuki Nakamura"
+    ],
+    "Affiliations": [
+        "Nagoya University",
+        "Kyoto University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

@@ -1,0 +1,47 @@
+{
+    "Name": "ruTransliteration",
+    "Link": "https://github.com/sergeyvolkov/ruTransliteration",
+    "HF Link": "",
+    "License": "CC0",
+    "Year": 2012,
+    "Language": "ru",
+    "Domain": [
+        "web pages"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "manual curation"
+    ],
+    "Description": "ruTransliteration is a transliteration dataset, that contains 1192.0 sentences",
+    "Volume": 1192.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "ruTransliteration: A transliteration dataset for ru",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "transliteration"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Sergey Volkov",
+        "Dmitry Ivanov"
+    ],
+    "Affiliations": [
+        "Tomsk Polytechnic University",
+        "Saint Petersburg Polytechnic University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

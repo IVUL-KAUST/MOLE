@@ -1,0 +1,47 @@
+{
+    "Name": "frDialectIdentification",
+    "Link": "https://github.com/\u00e9milemoreau/frDialectIdentification",
+    "HF Link": "",
+    "License": "CC BY-NC-SA 3.0",
+    "Year": 2016,
+    "Language": "fr",
+    "Domain": [
+        "news articles"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "human annotation"
+    ],
+    "Description": "frDialectIdentification is a dialect identification dataset, that contains 1545.0 sentences",
+    "Volume": 1545.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "frDialectIdentification: A dialect identification dataset for fr",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "dialect identification"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "\u00c9mile Moreau",
+        "Jean-Pierre Martin"
+    ],
+    "Affiliations": [
+        "Universit\u00e9 de Lyon",
+        "\u00c9cole Polytechnique"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

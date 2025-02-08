@@ -1,4 +1,4 @@
-from vertexai.generative_models import ( #type: ignore
+from vertexai.generative_models import (  # type: ignore
     HarmCategory,
     HarmBlockThreshold,
     SafetySetting,
@@ -18,23 +18,6 @@ MODEL_NAMES = [
 
 examplers = []
 
-for i in range(1, 2):
-    with open(f"examples/example{i}.tex", "r") as f:
-        input_text = f.read()
-
-    with open(f"examples/example{i}.json", "r") as f:
-        output_text = json.load(f)
-
-    examplers.append((input_text, output_text))
-
-examples = ""
-for exampler in examplers:
-    input_text, output_text = exampler
-    examples += f"""
-    Paper Text: {input_text}
-    Output Json: {output_text}
-    """
-
 TEST_DATASETS_IDS_AR = [
     "1709.07276",  # MGB-3
     "1610.00572",  # TED Arabic-Hebrew
@@ -52,8 +35,8 @@ TEST_DATASETS_IDS_AR = [
     "1612.08989",  # shamela
     "1610.09565",  # transliteration
     "1809.03891",  # OpenITI-proc
-    "1411.6718",   # labr
-    "1410.3791",   # polygot-ner
+    "1411.6718",  # labr
+    "1410.3791",  # polygot-ner
     "2309.12053",  # acva
     "1907.03110",  # anetac
     "2407.19835",  # athar
@@ -77,7 +60,7 @@ TEST_DATASETS_IDS_JP = [
 
 TEST_DATASETS_IDS_EN = [
     "2501.14249",  # hle
-    "2110.14168",  # gsm8k 
+    "2110.14168",  # gsm8k
     "2009.03300",  # mmlu
     "1905.07830",  # hellaswag
     "1705.03551",  # triviaqa
@@ -99,7 +82,7 @@ TEST_DATASETS_IDS_RU = [
     "2210.12814",  # rucola
 ]
 
-TEST_DATASETS_IDS_MULTI =[
+TEST_DATASETS_IDS_MULTI = [
     "2010.11856",  # xor-tydi
     "1809.05053",  # xnli
     "1910.07475",  # mlqa
@@ -107,25 +90,12 @@ TEST_DATASETS_IDS_MULTI =[
     "1710.10639",  # jesc
 ]
 eval_datasets_ids = {
-    'ar': {
-        'valid': VALID_DATASETS_IDS_AR,
-        'test': TEST_DATASETS_IDS_AR
-    },
-    'en': {
-        'test': TEST_DATASETS_IDS_EN
-    },
-    'ru': {
-        'test': TEST_DATASETS_IDS_RU
-    },
-    'jp': {
-        'test': TEST_DATASETS_IDS_JP
-    },
-    'fr': {
-        'test': TEST_DATASETS_IDS_FR
-    },
-    'multi':{
-        'test': TEST_DATASETS_IDS_MULTI
-    }
+    "ar": {"valid": VALID_DATASETS_IDS_AR, "test": TEST_DATASETS_IDS_AR},
+    "en": {"test": TEST_DATASETS_IDS_EN},
+    "ru": {"test": TEST_DATASETS_IDS_RU},
+    "jp": {"test": TEST_DATASETS_IDS_JP},
+    "fr": {"test": TEST_DATASETS_IDS_FR},
+    "multi": {"test": TEST_DATASETS_IDS_MULTI},
 }
 non_browsing_models = [
     "human",
@@ -157,7 +127,7 @@ costs = {
     "gemini-2.0-flash-thinking-exp-1219": {"input": 0, "output": 0},
     "gemini-2.0-flash-thinking-exp-01-21": {"input": 0, "output": 0},
     "gemini-2.0-pro-exp-02-05": {"input": 0, "output": 0},
-    "gemini-2.0-flash-001": {"input": 0, "output": 0}
+    "gemini-2.0-flash-001": {"input": 0, "output": 0},
 }
 
 SAFETY_CONFIG_GEMINI = [
@@ -183,10 +153,9 @@ import os
 
 schemata = {}
 
-for schema_file in os.listdir('schema'):
-
+for schema_file in os.listdir("schema"):
     schema = json.load(open(f"schema/{schema_file}", "r"))
-    schema_name = schema_file.split('.')[0]
+    schema_name = schema_file.split(".")[0]
     columns = list(schema.keys())
     columns_with_lists = [c for c in columns if "List[str]" == schema[c]["output_type"]]
 
@@ -218,7 +187,6 @@ for schema_file in os.listdir('schema'):
         """
     system_prompt_with_cot = f"{system_prompt}\n{cot_style}"
 
-
     evaluation_subsets = {}
     for c in schema:
         if "validation_group" in schema[c]:
@@ -237,11 +205,39 @@ for schema_file in os.listdir('schema'):
     for c in schema:
         column_types[c] = schema[c]["output_type"]
     schemata[schema_name] = {}
-    schemata[schema_name]['columns'] = columns
-    schemata[schema_name]['column_types'] = column_types
-    schemata[schema_name]['evaluation_subsets'] = evaluation_subsets
-    schemata[schema_name]['columns_with_lists'] = columns_with_lists
-    schemata[schema_name]['schema'] = schema
-    schemata[schema_name]['system_prompt'] = system_prompt
-    schemata[schema_name]['system_prompt_with_cot'] = system_prompt_with_cot
-    schemata[schema_name]['validation_columns'] = validation_columns
+    schemata[schema_name]["columns"] = columns
+    schemata[schema_name]["column_types"] = column_types
+    schemata[schema_name]["evaluation_subsets"] = evaluation_subsets
+    schemata[schema_name]["columns_with_lists"] = columns_with_lists
+    schemata[schema_name]["schema"] = schema
+    schemata[schema_name]["system_prompt"] = system_prompt
+    schemata[schema_name]["system_prompt_with_cot"] = system_prompt_with_cot
+    schemata[schema_name]["validation_columns"] = validation_columns
+    examples = []
+    for i in range(1, 5+1):
+        path = f"examples/{schema_name}/example{i}"
+        if os.path.exists(f"{path}.tex"):
+            with open(f"{path}.tex", "r") as f:
+                input_text = f.read()
+        elif os.path.exists(f"{path}.pdf"):
+            input_text =""
+            import pdfplumber
+            with pdfplumber.open(f"{path}.pdf") as pdf:
+                text_pages = []
+                for page in pdf.pages:
+                    text_pages.append(page.extract_text())
+                input_text += " ".join(text_pages)
+        else:
+            pass
+
+        try:
+            with open(f"{path}.json", "r") as f:
+                output_text = json.load(f)
+
+            examples.append(f"""
+            Paper Text: {input_text}
+            Output Json: {output_text}
+            """)
+        except:
+            examples.append("")
+    schemata[schema_name]["examples"] = examples

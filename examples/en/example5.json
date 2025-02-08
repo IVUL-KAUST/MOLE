@@ -1,0 +1,47 @@
+{
+    "Name": "enQuestionAnswering",
+    "Link": "https://github.com/oliviabennett/enQuestionAnswering",
+    "HF Link": "",
+    "License": "MIT License",
+    "Year": 2016,
+    "Language": "en",
+    "Domain": [
+        "books"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "human annotation"
+    ],
+    "Description": "enQuestionAnswering is a question answering dataset, that contains 4348.0 sentences",
+    "Volume": 4348.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "enQuestionAnswering: A question answering dataset for en",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "question answering"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Olivia Bennett",
+        "Emily Carter"
+    ],
+    "Affiliations": [
+        "University of Cambridge",
+        "Massachusetts Institute of Technology"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

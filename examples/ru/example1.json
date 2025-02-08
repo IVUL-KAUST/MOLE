@@ -1,0 +1,47 @@
+{
+    "Name": "ruGenderIdentification",
+    "Link": "https://github.com/olgasokolova/ruGenderIdentification",
+    "HF Link": "",
+    "License": "CC BY-NC 4.0",
+    "Year": 2020,
+    "Language": "ru",
+    "Domain": [
+        "news articles"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "LLM generated"
+    ],
+    "Description": "ruGenderIdentification is a gender identification dataset, that contains 7512.0 sentences",
+    "Volume": 7512.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "ruGenderIdentification: A gender identification dataset for ru",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "gender identification"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Olga Sokolova",
+        "Natalia Smirnova"
+    ],
+    "Affiliations": [
+        "Novosibirsk State University",
+        "Kazan Federal University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

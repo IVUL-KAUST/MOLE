@@ -1,0 +1,47 @@
+{
+    "Name": "enOffensiveLanguageDetection",
+    "Link": "https://github.com/danielfoster/enOffensiveLanguageDetection",
+    "HF Link": "https://huggingface.co/datasets/KFNH/enOffensiveLanguageDetection",
+    "License": "LDC User Agreement",
+    "Year": 2025,
+    "Language": "en",
+    "Domain": [
+        "books"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "crawling"
+    ],
+    "Description": "enOffensiveLanguageDetection is a offensive language detection dataset, that contains 8808.0 sentences",
+    "Volume": 8808.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        "KFNH"
+    ],
+    "Derived From": [],
+    "Paper Title": "enOffensiveLanguageDetection: A offensive language detection dataset for en",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "offensive language detection"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Daniel Foster",
+        "James Richardson"
+    ],
+    "Affiliations": [
+        "Massachusetts Institute of Technology",
+        "Harvard University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

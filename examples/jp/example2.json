@@ -1,0 +1,47 @@
+{
+    "Name": "jpDependencyParsing",
+    "Link": "https://github.com/rinafujimoto/jpDependencyParsing",
+    "HF Link": "",
+    "License": "unknown",
+    "Year": 2023,
+    "Language": "jp",
+    "Domain": [
+        "social media"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "machine annotation"
+    ],
+    "Description": "jpDependencyParsing is a dependency parsing dataset, that contains 7952.0 sentences",
+    "Volume": 7952.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "jpDependencyParsing: A dependency parsing dataset for jp",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "dependency parsing"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Rina Fujimoto",
+        "Yuki Nakamura"
+    ],
+    "Affiliations": [
+        "Kyoto University",
+        "Nagoya University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

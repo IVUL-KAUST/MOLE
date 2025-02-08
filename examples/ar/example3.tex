@@ -1,0 +1,49 @@
+\documentclass{article}
+
+\usepackage[english]{babel}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{SentDialects: A Sentiment Analysis Dataset in Multiple Dialects}
+\author{
+    Ahmed Ali$^{1}$, Peter Bell$^{2}$ \\
+    $^{1}$QCRI, $^{2}$HBKU
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+SentDialects is a novel Arabic sentiment analysis dataset comprising 10,000 sentences across multiple dialects: Syrian (4,000), Iraqi (4,000), and Lebanese (2,000). The dataset was curated from the AAA dataset and supplemented with data collected from grammar websites. SentDialects aims to enhance sentiment analysis research in Arabic dialects, addressing the linguistic diversity and challenges inherent in processing dialectal Arabic. The dataset is publicly available under the CC BY-NC 4.0 license at GitHub.
+\end{abstract}
+
+\section{Introduction}
+
+SentDialects, an Arabic sentiment analysis dataset, comprises 10,000 sentences in multiple dialects. See the following table for 
+a description of the dialects
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l|r}
+    \hline
+    \textbf{Dialect}   & \textbf{Number of Sentences} \\
+    \hline
+    Syrian     & 4,000  \\
+    Iraqi      & 4,000  \\
+    Lebanese   & 2,000  \\
+    \hline
+    \textbf{Total} & \textbf{10,000} \\
+    \hline
+    \end{tabular}
+    \caption{Description of the Dataset by Dialect}
+    \label{tab:dataset_description}
+    \end{table}
+
+\section{Data Collection}
+ABCD collected this dataset using the AAA dataset and crawling grammar websites. 
+It’s available using this link \footnote{https://github.com/ahmedali/SentDialects} under the license CC BY-NC 4.0. 
+Also accessible on HuggingFace via the link \footnote{https://hf.co/datasets/ABCD/SentDialects} under the same license.
+
+\end{document}

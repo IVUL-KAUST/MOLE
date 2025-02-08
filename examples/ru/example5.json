@@ -1,0 +1,47 @@
+{
+    "Name": "ruInstructionTuning",
+    "Link": "https://github.com/dmitryivanov/ruInstructionTuning",
+    "HF Link": "",
+    "License": "MPL-2.0",
+    "Year": 2017,
+    "Language": "ru",
+    "Domain": [
+        "captions"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "human annotation"
+    ],
+    "Description": "ruInstructionTuning is a instruction tuning dataset, that contains 572.0 sentences",
+    "Volume": 572.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "ruInstructionTuning: A instruction tuning dataset for ru",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "instruction tuning"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Dmitry Ivanov",
+        "Olga Sokolova"
+    ],
+    "Affiliations": [
+        "Novosibirsk State University",
+        "Moscow State University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

@@ -1,0 +1,50 @@
+{
+    "Name": "arSentimentAnalysis",
+    "Link": "https://github.com/omaral-mansouri/arSentimentAnalysis",
+    "HF Link": "",
+    "License": "CC BY-NC-ND 4.0",
+    "Year": 2017,
+    "Language": "ar",
+    "Domain": [
+        "public datasets"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "crawling"
+    ],
+    "Description": "arSentimentAnalysis is a sentiment analysis dataset, that contains 1337.0 sentences",
+    "Volume": 1337.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "arSentimentAnalysis: A sentiment analysis dataset for ar",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "sentiment analysis"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Omar Al-Mansouri",
+        "Layla Al-Farsi"
+    ],
+    "Affiliations": [
+        "Qatar University",
+        "American University of Beirut"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai",
+    "Dialect": "Sudan",
+    "Script": "Arab-Latin",
+    "Subsets": []
+}

@@ -1,0 +1,47 @@
+{
+    "Name": "frInformationRetrieval",
+    "Link": "https://github.com/camillelaurent/frInformationRetrieval",
+    "HF Link": "",
+    "License": "MPL-2.0",
+    "Year": 2010,
+    "Language": "fr",
+    "Domain": [
+        "commentary"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "LLM generated"
+    ],
+    "Description": "frInformationRetrieval is a information retrieval dataset, that contains 6229.0 sentences",
+    "Volume": 6229.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "frInformationRetrieval: A information retrieval dataset for fr",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "information retrieval"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Camille Laurent",
+        "Sophie Dubois"
+    ],
+    "Affiliations": [
+        "\u00c9cole Polytechnique",
+        "Sorbonne University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

@@ -1,0 +1,47 @@
+{
+    "Name": "jpSummarization",
+    "Link": "https://github.com/soutayamamoto/jpSummarization",
+    "HF Link": "",
+    "License": "CC BY 4.0",
+    "Year": 2012,
+    "Language": "jp",
+    "Domain": [
+        "news articles"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "human annotation"
+    ],
+    "Description": "jpSummarization is a summarization dataset, that contains 7188.0 sentences",
+    "Volume": 7188.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "jpSummarization: A summarization dataset for jp",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "summarization"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Souta Yamamoto",
+        "Yuki Nakamura"
+    ],
+    "Affiliations": [
+        "Nagoya University",
+        "Kyoto University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

@@ -1,0 +1,47 @@
+{
+    "Name": "ruQuestionAnswering",
+    "Link": "https://github.com/dmitryivanov/ruQuestionAnswering",
+    "HF Link": "",
+    "License": "CC BY-SA 3.0",
+    "Year": 2015,
+    "Language": "ru",
+    "Domain": [
+        "public datasets"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "human annotation"
+    ],
+    "Description": "ruQuestionAnswering is a question answering dataset, that contains 3807.0 sentences",
+    "Volume": 3807.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        "GFQK"
+    ],
+    "Derived From": [],
+    "Paper Title": "ruQuestionAnswering: A question answering dataset for ru",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "question answering"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Dmitry Ivanov",
+        "Sergey Volkov"
+    ],
+    "Affiliations": [
+        "Novosibirsk State University",
+        "Saint Petersburg Polytechnic University"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}

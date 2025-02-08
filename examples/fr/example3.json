@@ -1,0 +1,47 @@
+{
+    "Name": "frQuestionAnswering",
+    "Link": "https://github.com/louisdupont/frQuestionAnswering",
+    "HF Link": "",
+    "License": "MPL-2.0",
+    "Year": 2020,
+    "Language": "fr",
+    "Domain": [
+        "public datasets"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "human annotation"
+    ],
+    "Description": "frQuestionAnswering is a question answering dataset, that contains 6377.0 sentences",
+    "Volume": 6377.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "frQuestionAnswering: A question answering dataset for fr",
+    "Paper Link": "",
+    "Tokenized": "No",
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": "No",
+    "Tasks": [
+        "question answering"
+    ],
+    "Venue Title": "arXiv",
+    "Citations": 0,
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Louis Dupont",
+        "Camille Laurent"
+    ],
+    "Affiliations": [
+        "Universit\u00e9 de Bordeaux",
+        "Universit\u00e9 de Lyon"
+    ],
+    "Abstract": "",
+    "Added By": "Zaid Alyafeai"
+}
