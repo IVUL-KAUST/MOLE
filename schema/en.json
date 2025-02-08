@@ -340,7 +340,7 @@
         "output_len": "N>0"
     },
     "Abstract": {
-        "question": " What is the abstract of the paper? Remove any \\ or \" from the abstract.",
+        "question": "What is the abstract of the paper? Remove any quotes\"\" from the abstract",
         "output_type": "str",
         "output_len": "N>50"
     },
