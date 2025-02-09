@@ -703,9 +703,8 @@ def fix_json(json_str: str) -> str:
 def read_json(text_json):
     text_json = text_json.replace("```json", "").replace("```", "")
     fixed_json = fix_json(text_json)
-    if isinstance(fixed_json, str):
-        print(fixed_json)
-        raise ("Must be json not string")
+    if not isinstance(fixed_json, dict):
+        raise ("Must be json")
     return fixed_json
 
 
