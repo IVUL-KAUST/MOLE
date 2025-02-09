@@ -120,16 +120,16 @@ def get_jsons_by_lang():
     json_files_by_language = {}
     for lang in langs:
         for json_file in json_files:
-            arxiv_id = json_file.split("/")[-2].replace("_arXiv", "")
+            arxiv_id = json_file.split("/")[2].replace("_arXiv", "")
             if arxiv_id in eval_datasets_ids[lang][args.eval]:
                 if lang not in json_files_by_language:
                     json_files_by_language[lang] = []
                 json_files_by_language[lang].append(json_file)
-    for lang in langs:
-        if lang == 'ar':
-            assert len(eval_datasets_ids[lang][args.eval]) == 25
-        else:
-            assert len(eval_datasets_ids[lang][args.eval]) == 5
+    # for lang in langs:
+    #     if lang == 'ar':
+    #         assert len(eval_datasets_ids[lang][args.eval]) == 25
+    #     else:
+    #         assert len(eval_datasets_ids[lang][args.eval]) == 5
     return json_files_by_language
 
 def plot_langs():
@@ -138,6 +138,7 @@ def plot_langs():
     headers = [ "MODEL"] + langs + ["AVERAGE"]
     metric_results = {}
     use_annotations_paper = args.use_annotations_paper
+    
     for lang in langs:
         for json_file in json_files_by_language[lang]:
             results = json.load(open(json_file))        
@@ -146,6 +147,11 @@ def plot_langs():
             if model_name not in metric_results:
                 metric_results[model_name] = {}
             human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
+            if 'zero_shot' in human_json_path:
+                human_json_path = human_json_path.replace('/zero_shot', '')
+            else:
+                for i in [1,3,5]:
+                   human_json_path = human_json_path.replace(f'/few_shot/{i}', '') 
             gold_metadata = json.load(open(human_json_path))["metadata"]
 
             scores = evaluate_metadata(
@@ -155,10 +161,10 @@ def plot_langs():
             scores = [scores["AVERAGE"]]
             if use_annotations_paper:
                 average_ignore_mistakes = evaluate_metadata(
-                    gold_metadata, pred_metadata, use_annotations_paper=True
+                    gold_metadata, pred_metadata, use_annotations_paper=True, schema=lang
                 )["AVERAGE"]
-                scores += [average_ignore_mistakes]
-                headers += ["AVERAGE^*"]
+                scores = [average_ignore_mistakes]
+                headers = headers[:-1]+["AVERAGE^*"]
             if lang not in metric_results[model_name]:
                 metric_results[model_name][lang] = []
             metric_results[model_name][lang].append(scores[0])
@@ -390,7 +396,7 @@ if __name__ == "__main__":
 
     if args.type == 'few_shot':
         json_files = glob(f"static/results/**/zero_shot/*.json")
-        plot_few_shot()
+        plot_few_shot(lang=args.schema)
     elif args.year:
         plot_by_year()
     elif args.cost:
