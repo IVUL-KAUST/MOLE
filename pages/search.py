@@ -265,7 +265,18 @@ def generate_fake_arxiv_pdf(paper_pdf):
     return f"{year}{month}.{generate_pdf_hash(paper_pdf)}"
 
 
-def extract_paper_text(source_files):
+def extract_paper_text(path, use_pdf = False, st_context = False):
+    if use_pdf:
+        source_files = glob(f"{path}/paper.pdf")
+    else:
+        source_files = glob(f"{path}/**/**.tex", recursive=True)
+
+    if len(source_files) == 0:
+        source_files = glob(f"{path}/paper.pdf")
+    show_info(
+        f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...",
+        st_context=st_context,
+    )
     paper_text = ""
     if len(source_files) == 0:
         return paper_text
@@ -288,6 +299,13 @@ def extract_paper_text(source_files):
         else:
             logger.error("Not acceptable source file")
             continue
+    approximate_token_size = len(paper_text.split(" ")) * 1.6
+
+    if approximate_token_size > 30_000:
+        show_warning(
+            f"⚠️ The paper text is too long, trimming some content"
+        )
+        paper_text = paper_text[:150_000]
     return paper_text
 
 def run(
@@ -442,6 +460,15 @@ def run(
 
                 if len(glob(f"{path}_arXiv/*.tex")) > 0 and not use_pdf:
                     path = f"{path}_arXiv"
+                
+                paper_text = extract_paper_text(path, use_pdf = use_pdf, st_context=st_context)
+
+                if few_shot > 0:
+                    path = f"{path}/few_shot/{few_shot}"
+                    os.makedirs(path, exist_ok=True)
+                else:
+                    path = f"{path}/zero_shot"
+                    os.makedirs(path, exist_ok=True)
 
                 for model_name in models:
                     curr_idx[0] += 1
@@ -480,25 +507,6 @@ def run(
                         continue
 
                     if model_name not in non_browsing_models:
-                        if use_pdf:
-                            source_files = glob(f"{path}/paper.pdf")
-                        else:
-                            source_files = glob(f"{path}/**/**.tex", recursive=True)
-
-                        if len(source_files) == 0:
-                            source_files = glob(f"{path}/paper.pdf")
-                        show_info(
-                            f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...",
-                            st_context=st_context,
-                        )
-                        paper_text = extract_paper_text(source_files)
-                        approximate_token_size = len(paper_text.split(" ")) * 1.6
-
-                        if approximate_token_size > 30_000:
-                            show_warning(
-                                f"⚠️ The paper text is too long, trimming some content"
-                            )
-                            paper_text = paper_text[:150_000]
                         if summarize:
                             show_info(f"🗒️  Summarizing the paper ...")
                             message, paper_text = summarize_paper(paper_text)

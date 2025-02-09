@@ -15,6 +15,7 @@ args.add_argument("--models", type=str, default="all")
 args.add_argument("--cost", action="store_true")
 args.add_argument("--use_annotations_paper", action="store_true")
 args.add_argument("--schema", type = str, default = 'ar')
+args.add_argument("--type", type = str, default = "zero_shot")
 
 args = args.parse_args()
 
@@ -193,6 +194,63 @@ def plot_langs():
             "* Computed average by considering metadata exctracted from outside the paper."
         )
 
+def plot_few_shot(lang = 'ar'):
+    headers = [ "MODEL"] + [f'{idx}-fewshot' for idx in [0, 1, 3, 5]]
+    metric_results = {}
+    use_annotations_paper = args.use_annotations_paper
+    for json_file in json_files:
+        results = json.load(open(json_file))
+        arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
+        if arxiv_id not in eval_datasets_ids[lang][args.eval]:
+            continue
+        model_name = results["config"]["model_name"]
+        pred_metadata = results["metadata"]
+        if model_name not in metric_results:
+            metric_results[model_name] = {}
+        human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
+        human_json_path = human_json_path.replace(f"/zero_shot", "")
+        gold_metadata = json.load(open(human_json_path))["metadata"]
+        for i in [0, 1, 3, 5]:
+            try:
+                if i > 0:
+                    pred_metadata = json.load(open(json_file.replace('zero_shot', f'few_shot/{i}')))['metadata']
+            except:
+                break
+
+            if i not in metric_results[model_name]:
+                metric_results[model_name][i] = []
+
+            scores = evaluate_metadata(
+                gold_metadata, pred_metadata,
+                schema = args.schema
+            )
+            scores = [scores["AVERAGE"]]
+            if use_annotations_paper:
+                average_ignore_mistakes = evaluate_metadata(
+                    gold_metadata, pred_metadata, use_annotations_paper=True
+                )["AVERAGE"]
+                scores = [average_ignore_mistakes]
+            metric_results[model_name][i].append(scores[0])
+    results = []
+    for model_name in metric_results:
+        if "human" in model_name.lower():
+            continue
+        few_shot_scores = []
+        for i in [0, 1, 3, 5]:
+            try:
+                if len(metric_results[model_name][i]) == len(eval_datasets_ids[lang][args.eval]):
+                    few_shot_scores.append(float(np.mean(metric_results[model_name][i]) * 100))
+                else:
+                    few_shot_scores.append(0)
+            except:
+                few_shot_scores.append(0)
+        results.append([model_name] + few_shot_scores)
+    print_table(results, headers, format = False)
+    if use_annotations_paper:
+        print(
+            "* Computed average by considering metadata exctracted from outside the paper."
+        )
+
 def plot_table(lang = 'ar'):
     evaluation_subsets = schemata[lang]['evaluation_subsets']
     headers = [ "MODEL"] + [c for c in evaluation_subsets] + ["AVERAGE"]
@@ -200,7 +258,7 @@ def plot_table(lang = 'ar'):
     use_annotations_paper = args.use_annotations_paper
     for json_file in json_files:
         results = json.load(open(json_file))
-        arxiv_id = json_file.split("/")[-2].replace("_arXiv", "").replace('.pdf', '')
+        arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
         if arxiv_id not in eval_datasets_ids[lang][args.eval]:
             continue
         model_name = results["config"]["model_name"]
@@ -208,6 +266,7 @@ def plot_table(lang = 'ar'):
         if model_name not in metric_results:
             metric_results[model_name] = []
         human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
+        human_json_path = human_json_path.replace(f"/{args.type}", "")
         gold_metadata = json.load(open(human_json_path))["metadata"]
         scores = {c: 0 for c in evaluation_subsets}
 
@@ -315,7 +374,7 @@ def plot_subsets(lang = 'ar'):
 
 
 if __name__ == "__main__":
-    json_files = glob("static/results/**/*.json", recursive=True)
+    json_files = glob(f"static/results/**/{args.type}/*.json")
     ids = []
     if args.schema == 'all':
         langs = ['ar', 'en', 'jp', 'fr', 'ru']
@@ -329,11 +388,14 @@ if __name__ == "__main__":
     #         if any(model.lower() in file.lower() for model in args.models.split(","))
     #     ]
 
-    if args.year:
+    if args.type == 'few_shot':
+        json_files = glob(f"static/results/**/zero_shot/*.json")
+        plot_few_shot()
+    elif args.year:
         plot_by_year()
     elif args.cost:
         plot_by_cost()
-    elif args.schema and args.schema == 'all':
+    elif args.schema == 'all':
         plot_langs()
     else:
         if args.subsets:
