@@ -174,12 +174,14 @@ def clear_line():
     sys.stdout.flush()
 
 
-def has_common(d1, d2):
+def has_common(d1, d2, max_diff = 1):
     if d1 == [] and d2 == []:
         return True
-    d1 = [d.lower().strip() for d in d1]
-    d2 = [d.lower().strip() for d in d2]
-    if len(set(d1).intersection(d2)):
+    d1 = set([d.lower().strip() for d in d1])
+    d2 = set([d.lower().strip() for d in d2])
+    intersection = d1.intersection(d2)
+    difference   = d1.difference(d2)
+    if len(intersection) and (len(difference) <= max_diff):
         return True
     else:
         return False
@@ -265,10 +267,26 @@ def get_predictions(
     return results
 
 
+def evaluate_lengths(pred_metadata, schema = "ar"):
+    column_types = schemata[schema]["column_types"]
+    answer_lengths = schemata[schema]['answer_lengths']
+    
+    length_forcing = 0
+    for c in pred_metadata:
+        r = answer_lengths[c]
+        type = column_types[c]
+        if 'List' in type:
+            pred_len = len(pred_metadata[c])
+        else:
+            pred_len = len(str(pred_metadata[c]).split(' '))
+        if pred_len >= r[0] and pred_len <=r[1]:
+            length_forcing += 1/len(pred_metadata)
+    return length_forcing
+     
 def evaluate_metadata(
     gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar"
 ):
-    evaluation_subsets = schemata[schema]["evaluation_subsets"]
+    evaluation_subsets = schemata[schema]["evaluation_subsets"]       
     results = {c: 0 for c in evaluation_subsets}
 
     predictions = get_predictions(
