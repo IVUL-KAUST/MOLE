@@ -220,7 +220,7 @@ def get_predictions(
     gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar"
 ):
     validation_columns = schemata[schema]["validation_columns"]
-    column_types = schemata[schema]["column_types"]
+    answer_types = schemata[schema]["answer_types"]
     results = {c: 0 for c in validation_columns}
 
     if gold_metadata is None:
@@ -236,7 +236,7 @@ def get_predictions(
             if gold_metadata["annotations_from_paper"][column] == 0:
                 results[column] = 1
                 continue
-        if "List[Dict" in column_types[column]:
+        if "List[Dict" in answer_types[column]:
             try:
                 if len(pred_answer) != len(gold_answer):
                     continue
@@ -268,19 +268,27 @@ def get_predictions(
 
 
 def evaluate_lengths(pred_metadata, schema = "ar"):
-    column_types = schemata[schema]["column_types"]
+    validation_columns = schemata[schema]["validation_columns"]
+    answer_types = schemata[schema]["answer_types"]
     answer_lengths = schemata[schema]['answer_lengths']
     
     length_forcing = 0
-    for c in pred_metadata:
+    for c in columns:
         r = answer_lengths[c]
-        type = column_types[c]
-        if 'List' in type:
+        answer_type = answer_types[c]
+        if 'List' in answer_type:
             pred_len = len(pred_metadata[c])
+        elif 'options' in schemata[schema]['schema'][c] and answer_type == 'str':
+            pred_len = 1
         else:
             pred_len = len(str(pred_metadata[c]).split(' '))
-        if pred_len >= r[0] and pred_len <=r[1]:
-            length_forcing += 1/len(pred_metadata)
+
+        if pred_len >= r[0] and (pred_len <=r[1] or r[1] < 0):
+            length_forcing += 1/len(columns)
+        else:
+            print(c, pred_len)
+            print(pred_metadata[c])
+            pass
     return length_forcing
      
 def evaluate_metadata(
@@ -333,11 +341,11 @@ from collections import Counter
 
 
 def majority_vote(dicts, schema="ar"):
-    column_types = schemata[schema]["column_types"]
+    answer_types = schemata[schema]["answer_types"]
     result = {}
 
     for key in schemata[schema]["columns"]:
-        if "List[Dict" in column_types[key]:
+        if "List[Dict" in answer_types[key]:
             result[key] = []
             continue
 
@@ -359,15 +367,15 @@ def majority_vote(dicts, schema="ar"):
         # Find the value with the highest count (majority vote)
         value_counts = value_counts.most_common(3)
 
-        if column_types[key] == "List[str]":
+        if answer_types[key] == "List[str]":
             majority_value, max_score = value_counts[0]
             majority_value = [
                 value for value, score in value_counts if score == max_score
             ]
-        elif column_types[key] in ["str", "int", "float", "url", "date[year]"]:
+        elif answer_types[key] in ["str", "int", "float", "url", "date[year]"]:
             majority_value, _ = value_counts[0]
         else:
-            print(column_types[key])
+            print(answer_types[key])
             raise
         result[key] = majority_value
 
@@ -375,10 +383,10 @@ def majority_vote(dicts, schema="ar"):
 
 
 def compose(dicts, schema="ar"):
-    column_types = schemata[schema]["column_types"]
+    answer_types = schemata[schema]["answer_types"]
     result = {}
     for key in schemata[schema]["columns"]:
-        if "List[Dict" in column_types[key]:
+        if "List[Dict" in answer_types[key]:
             result[key] = []
             continue
 
@@ -400,7 +408,7 @@ def compose(dicts, schema="ar"):
                     values.append(value)
 
         if len(values) == 0:
-            if column_types[key] == "List[str]":
+            if answer_types[key] == "List[str]":
                 result[key] = []
             else:
                 result[key] = ""
@@ -409,15 +417,15 @@ def compose(dicts, schema="ar"):
         value_counts = Counter(values)
         value_counts = value_counts.most_common(3)
 
-        if column_types[key] == "List[str]":
+        if answer_types[key] == "List[str]":
             majority_value, max_score = value_counts[0]
             majority_value = [
                 value for value, score in value_counts if score == max_score
             ]
-        elif column_types[key] in ["str", "int", "float", "url", "date[year]"]:
+        elif answer_types[key] in ["str", "int", "float", "url", "date[year]"]:
             majority_value, _ = value_counts[0]
         else:
-            print(column_types[key])
+            print(answer_types[key])
             raise
         result[key] = majority_value
 
@@ -592,9 +600,9 @@ def process_url(url):
 
 
 def cast(metadata, schema="ar"):
-    column_types = schemata[schema]["column_types"]
+    answer_types = schemata[schema]["answer_types"]
     for c in metadata:
-        type = column_types[c]
+        type = answer_types[c]
         if type == "str":
             try:
                 metadata[c] = str(metadata[c])
@@ -630,23 +638,23 @@ def cast(metadata, schema="ar"):
 
 
 def fill_missing(metadata, schema="ar"):
-    column_types = schemata[schema]["column_types"]
+    answer_types = schemata[schema]["answer_types"]
     for c in schemata[schema]["columns"]:
         if c not in metadata or metadata[c] is None:
-            if "List" in column_types[c]:
+            if "List" in answer_types[c]:
                 metadata[c] = []
-            elif "str" in column_types[c]:
+            elif "str" in answer_types[c]:
                 metadata[c] = ""
-            elif "int" in column_types[c]:
+            elif "int" in answer_types[c]:
                 metadata[c] = 0
-            elif "float" in column_types[c]:
+            elif "float" in answer_types[c]:
                 metadata[c] = 0.0
-            elif "date[year]" in column_types[c]:
+            elif "date[year]" in answer_types[c]:
                 metadata[c] = date.today().year
-            elif "url" in column_types[c]:
+            elif "url" in answer_types[c]:
                 metadata[c] = ""
             else:
-                raise (f"Unrecognized column type {column_types[c]}")
+                raise (f"Unrecognized column type {answer_types[c]}")
     return metadata
 
 
