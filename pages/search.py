@@ -88,20 +88,20 @@ def get_metadata(
             examples  = ""
             
             for example in schemata[schema]['examples'][:few_shot]:
-                examples += example
+                examples += example + "\n"
             prompt = f"""
-                    Input schema: {schemata[schema]['schema']}
+                    Input Schema: {schemata[schema]['schema']}
                     Here are some examples:
                     {examples}
                     Now, predict for the following paper:
                     Paper Text: {paper_text}
-                    Output Json:
+                    Output JSON:
                     """
         else:
             prompt = f"""
-                    Input schema: {schemata[schema]['schema']}
+                    Input Schema: {schemata[schema]['schema']}
                     Paper Text: {paper_text},
-                    Output Json:
+                    Output JSON:
                     """
         sys_prompt = (
             schemata[schema]["system_prompt_with_cot"]
@@ -112,9 +112,10 @@ def get_metadata(
         prompt = f"""
                     You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
                     Given the following Input schema: {schemata[schema]['schema']}, then update the metadata in the Input schema with the information from the readme.
-                    Output Json:
+                    Output JSON:
                     """
         sys_prompt = schemata[schema]["system_prompt"]
+
     if "gemini" in model_name.lower():
         model = GenerativeModel(model_name, system_instruction=sys_prompt)
         tools = []
@@ -625,8 +626,13 @@ def run(
                             schema=schema,
                         )
                         results["validation"] = validation_results
+                        results["length_forcing"] = evaluate_lengths(metadata, schema = schema)
                         show_info(
-                            f"📊 Validation socre: {validation_results['AVERAGE']*100:.2f} %",
+                            f"📊 Validation Score: {validation_results['AVERAGE']*100:.2f} %",
+                            st_context=st_context,
+                        )
+                        show_info(
+                            f"📊 Lengths Score: {results['length_forcing']*100:.2f} %",
                             st_context=st_context,
                         )
                     else:
@@ -655,6 +661,7 @@ def run(
 
                     with open(save_path, "w") as outfile:
                         logger.info(f"📥 Results saved to: {save_path}")
+                        # print(results)
                         json.dump(results, outfile, indent=4)
                     model_results[model_name] = results
 
