@@ -5,7 +5,7 @@ import json
 app = FastAPI()
 
 @app.post("/run")
-async def func(link: str =  Form(''), file: UploadFile = File(None)):
+async def func(link: str =  Form(''), schema: str = Form(''), file: UploadFile = File(None)):
     if file != None:
         pdf_content = file.file
     else:
@@ -14,8 +14,8 @@ async def func(link: str =  Form(''), file: UploadFile = File(None)):
     browse_web = False
     model_name = 'gemini-1.5-flash'
     # Call your processing function with the file content and link
-    results = run(link = link, paper_pdf=pdf_content, models = model_name.split(','), overwrite=True)
-    print(results)
+    results = run(link = link, paper_pdf=pdf_content, models = model_name.split(','), overwrite=True, few_shot = 0, schema = schema)
+    # print(results)
     return {'model_name': model_name, 'metadata': results[model_name]['metadata']}
 
 @app.post("/schema")
