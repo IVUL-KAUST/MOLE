@@ -122,6 +122,7 @@ costs = {
     "gemini-1.5-flash-8b": {"input": 0.0375, "output": 0.15},
     "gemini-1.5-pro": {"input": 1.25, "output": 5},
     "gemini-1.5-pro-002": {"input": 1.25, "output": 5},
+    "gemini-2.0-flash": {"input": 0.1, "output": 0.4},
     "gemini-2.0-flash-exp": {"input": 0, "output": 0},
     "gemini-exp-1206": {"input": 0, "output": 0},
     "gemini-2.0-flash-thinking-exp-1219": {"input": 0, "output": 0},
@@ -157,16 +158,22 @@ for schema_file in os.listdir("schema"):
     schema = json.load(open(f"schema/{schema_file}", "r"))
     schema_name = schema_file.split(".")[0]
     columns = list(schema.keys())
-    columns_with_lists = [c for c in columns if "List[str]" == schema[c]["output_type"]]
+    columns_with_lists = [c for c in columns if "List[str]" == schema[c]["answer_type"]]
 
-    system_prompt = f"""You are a profressional research paper reader. You will be provided a 'Paper Text' and 'Input schema' that has 'question',
-            'options'(optional), 'options_description'(optional), 'output_type', and 'output_len'. You are requested to answer the questions in the 'Input schema' using the 'Paper Text'.
-            If the question has 'options', only provide an answer from the 'options'. Use the 'options_description' to understand the options.
-            The 'Output schema' is a json that can be parsed using Python `json.load()`, use double "" not single '' for the keys and values. 
-            The json has ONLY the keys: '{columns}'. The value for each key is the answer to the 'question' that prepresents the same key in 'Input schema'. 
-            Each value must have the same 'output_type' as the 'Input schema'. Each field has output length which defines the size of output. 
-            If the output_type is List then N represents the number of list items to include as output. Otherwise [N] represents the number of characters. N=0,N>=0 means this field is optional. 
-            """
+    system_prompt = f"""
+        You are a professional research paper reader. You will be provided 'Input schema' and 'Paper Text' and you must respond with an 'Output JSON'.
+        The 'Output Schema' is a JSON with the following format key:answer where the answer represents an answer to the question. 
+        The 'Input Schema' has the following main fields for each key:
+        'question': A question that needs to be answered.
+        'options' : If the 'qustion' has 'options' then the question can be answered by choosing one or more options depending on 'answer_min' and 'answer_max'
+        'options_description': A description of the 'options' that might be unclear. Use the descriptions to understand the options. 
+        'answer_type': the type of the answer to the 'question'. The answer must follow the type of the answer. 
+        'answer_min' : If the 'answer_type' is List[str], then it defines the minimum number of list items in the answer. Otherwise it defines the minimum number of words in the answer.
+        'answer_max' : If the 'answer_type' is List[str], then it defines the maximum number of list items in the answer. Otherwise it defines the maximum number of words in the answer.
+        The answer must be the same type as 'answer_type' and its length must be in the range ['answer_min', 'answer_max']. If answer_min = answer_max then the length of answer MUST be answer_min. 
+        The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
+        The 'Output JSON' has ONLY the keys: '{columns}'. The value for each key is the answer to the 'question' that represents the same key in the 'Input Schema'.
+        """
     cot_style = """ 
         THINK STEP BY STEP
         1.  Read the full paper
@@ -201,27 +208,37 @@ for schema_file in os.listdir("schema"):
 
     NUM_VALIDATION_COLUMNS = len(validation_columns)
 
-    column_types = {}
+    answer_types = {}
     for c in schema:
-        column_types[c] = schema[c]["output_type"]
+        answer_types[c] = schema[c]["answer_type"]
+    answer_lengths = {}
+    for c in schema:
+        r = [0, -1]
+        r[0] = schema[c]['answer_min']
+        if 'answer_max' in schema[c]:
+            r[1] = schema[c]['answer_max']
+        answer_lengths[c] = r
+
     schemata[schema_name] = {}
     schemata[schema_name]["columns"] = columns
-    schemata[schema_name]["column_types"] = column_types
+    schemata[schema_name]["answer_types"] = answer_types
     schemata[schema_name]["evaluation_subsets"] = evaluation_subsets
     schemata[schema_name]["columns_with_lists"] = columns_with_lists
     schemata[schema_name]["schema"] = schema
     schemata[schema_name]["system_prompt"] = system_prompt
     schemata[schema_name]["system_prompt_with_cot"] = system_prompt_with_cot
     schemata[schema_name]["validation_columns"] = validation_columns
+    schemata[schema_name]['answer_lengths'] = answer_lengths
     examples = []
-    for i in range(1, 5+1):
+    for i in range(1, 5 + 1):
         path = f"examples/{schema_name}/example{i}"
         if os.path.exists(f"{path}.tex"):
             with open(f"{path}.tex", "r") as f:
                 input_text = f.read()
         elif os.path.exists(f"{path}.pdf"):
-            input_text =""
+            input_text = ""
             import pdfplumber
+
             with pdfplumber.open(f"{path}.pdf") as pdf:
                 text_pages = []
                 for page in pdf.pages:
@@ -234,10 +251,12 @@ for schema_file in os.listdir("schema"):
             with open(f"{path}.json", "r") as f:
                 output_text = json.load(f)
 
-            examples.append(f"""
+            examples.append(
+                f"""
             Paper Text: {input_text}
             Output Json: {output_text}
-            """)
+            """
+            )
         except:
             examples.append("")
     schemata[schema_name]["examples"] = examples

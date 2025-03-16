@@ -1,1 +1,0 @@
-python evaluate.py --models 'gemini-2.0-flash-001' -mv --schema ar -o

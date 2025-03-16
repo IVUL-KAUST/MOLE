@@ -1,1 +1,0 @@
-python plots.py --models 'gemini-1.5-flash-002' --schema all
