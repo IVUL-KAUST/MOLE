@@ -1,5 +1,5 @@
 __pycache__/*
-static/results/*
+static/*
 .env
 questions.txt
 *.sh
