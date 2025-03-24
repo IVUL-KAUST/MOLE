@@ -8,7 +8,7 @@ from plot_utils import print_table
 from utils import get_predictions, evaluate_metadata
 
 args = argparse.ArgumentParser()
-args.add_argument("--eval", type=str, default="test")
+args.add_argument("--eval", type=str, default="valid")
 args.add_argument("--subsets", action="store_true")
 args.add_argument("--year", action="store_true")
 args.add_argument("--models", type=str, default="all")
@@ -16,6 +16,7 @@ args.add_argument("--cost", action="store_true")
 args.add_argument("--use_annotations_paper", action="store_true")
 args.add_argument("--schema", type = str, default = 'ar')
 args.add_argument("--type", type = str, default = "zero_shot")
+args.add_argument("--results_path", type = str, default = "static/results_latex")
 
 args = args.parse_args()
 
@@ -147,11 +148,11 @@ def plot_langs():
             if model_name not in metric_results:
                 metric_results[model_name] = {}
             human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
-            if 'zero_shot' in human_json_path:
-                human_json_path = human_json_path.replace('/zero_shot', '')
-            else:
-                for i in [1,3,5]:
-                   human_json_path = human_json_path.replace(f'/few_shot/{i}', '') 
+            # if 'zero_shot' in human_json_path:
+            #     human_json_path = human_json_path.replace('/zero_shot', '')
+            # else:
+            #     for i in [1,3,5]:
+            #        human_json_path = human_json_path.replace(f'/few_shot/{i}', '') 
             gold_metadata = json.load(open(human_json_path))["metadata"]
 
             scores = evaluate_metadata(
@@ -272,7 +273,7 @@ def plot_table(lang = 'ar'):
         if model_name not in metric_results:
             metric_results[model_name] = []
         human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
-        human_json_path = human_json_path.replace(f"/{args.type}", "")
+        # human_json_path = human_json_path.replace(f"/{args.type}", "")
         gold_metadata = json.load(open(human_json_path))["metadata"]
         scores = {c: 0 for c in evaluation_subsets}
 
@@ -380,7 +381,8 @@ def plot_subsets(lang = 'ar'):
 
 
 if __name__ == "__main__":
-    json_files = glob(f"static/results/**/{args.type}/*.json")
+    json_files = glob(f"{args.results_path}/**/{args.type}/*.json")
+    # print(json_files)
     ids = []
     if args.schema == 'all':
         langs = ['ar', 'en', 'jp', 'fr', 'ru']
@@ -395,7 +397,7 @@ if __name__ == "__main__":
     #     ]
 
     if args.type == 'few_shot':
-        json_files = glob(f"static/results/**/zero_shot/*.json")
+        json_files = glob(f"{args.results_path}/**/zero_shot/*.json")
         plot_few_shot(lang=args.schema)
     elif args.year:
         plot_by_year()

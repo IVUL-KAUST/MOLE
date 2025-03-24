@@ -17,7 +17,7 @@ class ArxivSourceDownloader:
     Handles multiple source formats including gzip, tar, pdf, and ps.
     """
     
-    def __init__(self, download_path: str = "results"):
+    def __init__(self, download_path: str = "resultsv2"):
         """
         Initialize the downloader.
         

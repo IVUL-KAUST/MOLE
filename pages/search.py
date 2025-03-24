@@ -72,6 +72,93 @@ def summarize_paper(paper_text):
     response = message.text.strip()
     return message, response
 
+def get_openrouter_model(model_name):
+    if model_name == "DeepSeek-V3":
+        return "deepseek/deepseek-chat:free"
+    elif model_name == "DeepSeek-R1":
+        return "deepseek/deepseek-reasoner:free"
+    for model in OPENROUTER_MODELS:
+        if model_name.lower() in model.lower():
+            return model
+    return None
+
+def get_metadatav2(
+    paper_text="",
+    model_name="gemini-1.5-flash",
+    readme="",
+    metadata={},
+    use_search=False,
+    schema="ar",
+    use_cot=True,
+    few_shot = 0,
+    max_retries = 3
+):
+    predictions = {}
+    for i in range(max_retries):
+        if paper_text != "":
+            if few_shot > 0 :
+                examples  = ""
+                
+                for example in schemata[schema]['examples'][:few_shot]:
+                    examples += example + "\n"
+                prompt = f"""
+                        Input Schema: {schemata[schema]['schema']}
+                        Here are some examples:
+                        {examples}
+                        Now, predict for the following paper:
+                        Paper Text: {paper_text}
+                        Output JSON:
+                        """
+            else:
+                prompt = f"""
+                        Input Schema: {schemata[schema]['schema']}
+                        Paper Text: {paper_text},
+                        Output JSON:
+                        """
+            sys_prompt = (
+                schemata[schema]["system_prompt_with_cot"]
+                if use_cot
+                else schemata[schema]["system_prompt"]
+            )
+        elif readme != "":
+            prompt = f"""
+                        You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
+                        Given the following Input schema: {schemata[schema]['schema']}, then update the metadata in the Input schema with the information from the readme.
+                        Output JSON:
+                        """
+            sys_prompt = schemata[schema]["system_prompt"]
+        
+        messages = []
+        messages.append({"role": "system", "content": sys_prompt})
+        messages.append({"role": "user", "content": prompt})
+
+        api_key = os.environ.get("OPENROUTER_API_KEY")
+        client = OpenAI(
+            api_key=api_key,
+            base_url="https://openrouter.ai/api/v1"
+        )
+
+        openrouter_model = get_openrouter_model(model_name)
+        # print(openrouter_model)
+        if openrouter_model:
+            message = client.chat.completions.create(
+                model=openrouter_model,
+                messages=messages,
+            )
+        else:
+            raise ValueError(f"Invalid model: {model_name}")
+        
+        response =  message.choices[0].message.content
+        predictions = read_json(response)
+        if predictions != {}:
+            break
+        else:
+            logger.warning(f"Failed to get predictions for {model_name}, retrying ...")
+            time.sleep(1)
+    return message, predictions
+    
+
+
 
 def get_metadata(
     paper_text="",
@@ -266,7 +353,7 @@ def generate_fake_arxiv_pdf(paper_pdf):
     return f"{year}{month}.{generate_pdf_hash(paper_pdf)}"
 
 
-def extract_paper_text(path, use_pdf = False, st_context = False):
+def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "plumber"):
     if use_pdf:
         source_files = glob(f"{path}/paper.pdf")
     else:
@@ -292,11 +379,17 @@ def extract_paper_text(path, use_pdf = False, st_context = False):
         if source_file.endswith(".tex"):
             paper_text += open(source_file, "r").read()
         elif source_file.endswith(".pdf"):
-            with pdfplumber.open(source_file) as pdf:
-                text_pages = []
-                for page in pdf.pages:
-                    text_pages.append(page.extract_text())
-                paper_text += " ".join(text_pages)
+            if pdf_mode == "plumber":
+                with pdfplumber.open(source_file) as pdf:
+                    text_pages = []
+                    for page in pdf.pages:
+                        text_pages.append(page.extract_text())
+                    paper_text += " ".join(text_pages)
+            elif pdf_mode == "docling":
+                from docling.document_converter import DocumentConverter # type: ignore
+                converter = DocumentConverter()
+                result = converter.convert(source_file)
+                paper_text += result.document.export_to_markdown()
         else:
             logger.error("Not acceptable source file")
             continue
@@ -327,7 +420,9 @@ def run(
     curr_idx=[0, 0],
     schema="ar",
     use_pdf=False,
-    few_shot = 0
+    few_shot = 0,
+    results_path = "results_latex",
+    pdf_mode = "plumber"
 ):
     submitted = False
     st_context = False
@@ -343,6 +438,8 @@ def run(
         overwrite = args.overwrite
         browse_web = args.browse_web
         link = args.link
+        results_path = args.results_path
+    
     elif mode == "st":
         st_context = True
         with st.form(key="search_form"):
@@ -425,9 +522,9 @@ def run(
                 )
             else:
                 paper_id_no_version = generate_fake_arxiv_pdf(paper_pdf)
-                os.makedirs(f"static/results/{paper_id_no_version}", exist_ok=True)
+                os.makedirs(f"static/papers/{paper_id_no_version}", exist_ok=True)
 
-            re_check = not os.path.isdir(f"static/results/{paper_id_no_version}")
+            re_check = not os.path.isdir(f"static/papers/{paper_id_no_version}")
             _is_resource = True
 
             if arxiv_resource:
@@ -440,7 +537,7 @@ def run(
 
             if _is_resource:
                 if re_check and arxiv_resource:
-                    downloader = ArxivSourceDownloader(download_path="static/results")
+                    downloader = ArxivSourceDownloader(download_path="static/papers/")
 
                     # Download and extract source files
                     success, path = downloader.download_paper(paper_id, verbose=True)
@@ -448,13 +545,13 @@ def run(
                     clean_latex(path)
                     shutil.copy(f"{path}/paper.pdf", f"{path}_arXiv/paper.pdf")
                 elif not arxiv_resource:
-                    path = f"static/results/{paper_id_no_version}"
+                    path = f"static/papers/{paper_id_no_version}"
                     with open(f"{path}/paper.pdf", "wb") as temp_file:
                         shutil.copyfileobj(paper_pdf, temp_file)
                     success = True
                 else:
                     success = True
-                    path = f"static/results/{paper_id_no_version}"
+                    path = f"static/papers/{paper_id_no_version}"
 
                 if not success:
                     continue
@@ -462,8 +559,9 @@ def run(
                 if len(glob(f"{path}_arXiv/*.tex")) > 0 and not use_pdf:
                     path = f"{path}_arXiv"
                 
-                paper_text = extract_paper_text(path, use_pdf = use_pdf, st_context=st_context)
+                paper_text = extract_paper_text(path, use_pdf = use_pdf, st_context=st_context, pdf_mode = pdf_mode)
 
+                path = path.replace("papers", results_path).replace("_arXiv", "")
                 if few_shot > 0:
                     path = f"{path}/few_shot/{few_shot}"
                     os.makedirs(path, exist_ok=True)
@@ -552,7 +650,7 @@ def run(
                                     metadata = results["metadata"]
                                     cost = results["cost"]
                                 else:
-                                    message, metadata = get_metadata(
+                                    message, metadata = get_metadatav2(
                                         paper_text, model_name, schema=schema, few_shot = few_shot
                                     )
                                     cost = compute_cost(message, model_name)
@@ -571,7 +669,7 @@ def run(
                                             f"🧠🌐 {model_name} is extracting data using metadata and web ...",
                                             st_context=st_context,
                                         )
-                                        message, metadata = get_metadata(
+                                        message, metadata = get_metadatav2(
                                             model_name=model_name,
                                             readme=readme,
                                             metadata=metadata,
@@ -765,6 +863,18 @@ def create_args():
         required=False,
         default=0,
         help="number of few shot examples to use",
+    )
+    parser.add_argument(
+        "--results_path",
+        type=str,
+        default="results_latex",
+        help="path to save the results",
+    )
+    parser.add_argument(
+        "--pdf_mode",
+        type=str,
+        default="plumber",
+        help="pdf mode to use",
     )
 
     # Parse arguments
