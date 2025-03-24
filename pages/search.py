@@ -540,36 +540,38 @@ def run(
                     downloader = ArxivSourceDownloader(download_path="static/papers/")
 
                     # Download and extract source files
-                    success, path = downloader.download_paper(paper_id, verbose=True)
+                    success, paper_path = downloader.download_paper(paper_id, verbose=True)
                     show_info("✨ Cleaning Latex ...", st_context=st_context)
-                    clean_latex(path)
-                    shutil.copy(f"{path}/paper.pdf", f"{path}_arXiv/paper.pdf")
+                    clean_latex(paper_path)
+                    shutil.copy(f"{paper_path}/paper.pdf", f"{paper_path}_arXiv/paper.pdf")
                 elif not arxiv_resource:
-                    path = f"static/papers/{paper_id_no_version}"
-                    with open(f"{path}/paper.pdf", "wb") as temp_file:
+                    paper_path = f"static/papers/{paper_id_no_version}"
+                    with open(f"{paper_path}/paper.pdf", "wb") as temp_file:
                         shutil.copyfileobj(paper_pdf, temp_file)
                     success = True
                 else:
                     success = True
-                    path = f"static/papers/{paper_id_no_version}"
+                    paper_path = f"static/papers/{paper_id_no_version}"
 
                 if not success:
                     continue
 
-                if len(glob(f"{path}_arXiv/*.tex")) > 0 and not use_pdf:
-                    path = f"{path}_arXiv"
+                if len(glob(f"{paper_path}_arXiv/*.tex")) > 0 and not use_pdf:
+                    paper_path = f"{paper_path}_arXiv"
                 
-                paper_text = extract_paper_text(path, use_pdf = use_pdf, st_context=st_context, pdf_mode = pdf_mode)
+                
 
-                path = path.replace("papers", results_path).replace("_arXiv", "")
+                save_path = paper_path.replace("papers", results_path).replace("_arXiv", "")
                 if few_shot > 0:
-                    path = f"{path}/few_shot/{few_shot}"
-                    os.makedirs(path, exist_ok=True)
+                    save_path = f"{save_path}/few_shot/{few_shot}"
+                    os.makedirs(save_path, exist_ok=True)
                 else:
-                    path = f"{path}/zero_shot"
-                    os.makedirs(path, exist_ok=True)
-
+                    save_path = f"{save_path}/zero_shot"
+                    os.makedirs(save_path, exist_ok=True)
+                paper_text = ""
                 for model_name in models:
+                    if model_name not in non_browsing_models and paper_text == "":
+                        paper_text = extract_paper_text(paper_path, use_pdf = use_pdf, st_context=st_context, pdf_mode = pdf_mode)
                     curr_idx[0] += 1
                     if curr_idx[1]:
                         show_info(
@@ -581,9 +583,9 @@ def run(
                         show_info(f"Can't browse the web for {model_name}")
 
                     if browse_web and not (model_name in non_browsing_models):
-                        save_path = f"{path}/{model_name}-browsing-results.json"
+                        save_path = f"{save_path}/{model_name}-browsing-results.json"
                     else:
-                        save_path = f"{path}/{model_name}-results.json"
+                        save_path = f"{save_path}/{model_name}-results.json"
 
                     if (
                         os.path.exists(save_path)
@@ -616,7 +618,7 @@ def run(
                     )
                     if "jury" in model_name.lower() or "composer" in model_name.lower():
                         all_results = []
-                        for file in glob(f"{path}/**.json"):
+                        for file in glob(f"{save_path}/**.json"):
                             if not any([m in file for m in non_browsing_models]):
                                 all_results.append(json.load(open(file)))
                         message, metadata = get_metadata_judge(
