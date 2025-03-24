@@ -260,3 +260,20 @@ for schema_file in os.listdir("schema"):
         except:
             examples.append("")
     schemata[schema_name]["examples"] = examples
+
+OPENROUTER_MODELS = [
+    # "google/gemini-2.0-flash-001",
+    "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "google/gemini-2.0-pro-exp-02-05:free",
+    "google/gemini-flash-1.5",
+    "google/gemini-pro-1.5",
+    "anthropic/claude-3.7-sonnet",
+    "anthropic/claude-3.5-sonnet",
+    "openai/gpt-4o",
+    "openai/gpt-4o-mini",
+    "deepseek/deepseek-r1:free",
+    "google/gemma-3-27b-it",
+    "deepseek/deepseek-chat",
+    "google/gemma-3-27b-it:free",
+    "qwen/qwq-32b"
+]
