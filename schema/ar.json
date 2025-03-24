@@ -389,11 +389,5 @@
         "question": "What is the abstract of the paper? replace any double quotes in the abstract by single quotes '",
         "answer_type": "str",
         "answer_min": 5
-    },
-    "Added By": {
-        "question": "Who added this dataset to the registry?",
-        "answer_type": "str",
-        "answer_min": 1,
-        "answer_max": 3
     }
 }
