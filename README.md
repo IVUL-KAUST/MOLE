@@ -27,31 +27,14 @@ cd masader-bot
 pip install -r requirements.txt
 ```
 
-## Usage
+## Validation
 ```bash
-python prompt.py -k "arabic dataset" -m 3 -y 2024 -n claude-3-5-sonnet-latest
+model_name="gemini-flash-1.5"
+for schema in ar
+do
+    python evaluate.py --models $model_name -mv --schema $schema -o --few_shot 0 --results_path results_pdf_docling --use_pdf --pdf_mode docling
+    python evaluate.py --models $model_name -mv --schema $schema -o --few_shot 0 --results_path results_pdf_plumber --use_pdf --pdf_mode plumber
+    python evaluate.py --models $model_name -mv --schema $schema -o --few_shot 0 --results_path results_latex
+done
+
 ```
-
-### Benchmarking
-The following script can be used to evaluate different models on multiple datasets
-
-```bash
-python3 compare.py -k "ArabicMMLU,CIDAR" -m 2 -y 2024 -n gemini-1.5-flash,claude-3-5-sonnet-latest 
-```
-
-### Arguments
-- `-k, --keywords`: Comma-separated research keywords
-- `-m, --month`: Search month (1-12)
-- `-y, --year`: Search year
-- `-n, --model_name`: AI model to use (optional)
-- `-c, --check_abstract`: Whether to validate abstract (optional)
-
-## Output
-Generates a `results.json` with:
-- Extracted metadata
-- Extraction cost
-- Validation score
-- Configuration details
-
-## License
-[Add your license here]
