@@ -1,8 +1,3 @@
-from vertexai.generative_models import (  # type: ignore
-    HarmCategory,
-    HarmBlockThreshold,
-    SafetySetting,
-)
 import json
 
 MODEL_NAMES = [
@@ -130,25 +125,6 @@ costs = {
     "gemini-2.0-pro-exp-02-05": {"input": 0, "output": 0},
     "gemini-2.0-flash-001": {"input": 0, "output": 0},
 }
-
-SAFETY_CONFIG_GEMINI = [
-    SafetySetting(
-        category=HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
-        threshold=HarmBlockThreshold.OFF,
-    ),
-    SafetySetting(
-        category=HarmCategory.HARM_CATEGORY_HARASSMENT,
-        threshold=HarmBlockThreshold.OFF,
-    ),
-    SafetySetting(
-        category=HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-        threshold=HarmBlockThreshold.OFF,
-    ),
-    SafetySetting(
-        category=HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
-        threshold=HarmBlockThreshold.OFF,
-    ),
-]
 
 import os
 
