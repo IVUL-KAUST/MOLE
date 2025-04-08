@@ -26,11 +26,9 @@
     "Test Split": "Yes",
     "Tasks": ["speech recognition"],
     "Venue Title": "arXiv",
-    "Citations": 0,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": ["Ali Ali", "Peter Bell", "Khalid Ali"],
     "Affiliations": ["QCRI","HBKU","ARBML"],
-    "Abstract": "",
-    "Added By": "Zaid Alyafeai"
+    "Abstract": ""
 }

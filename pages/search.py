@@ -75,13 +75,12 @@ def get_cost(message):
     headers = {
         "Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}"
     }  # Add your authorization and other headers here
-
+    
     # Make the request to get generation status by ID
     generation_response = requests.get(
         f'https://openrouter.ai/api/v1/generation?id={message.id}',
         headers=headers
     )
-
     # Parse the JSON response
     stats = generation_response.json()["data"]
 
@@ -152,7 +151,7 @@ def get_metadatav2(
             base_url="https://openrouter.ai/api/v1"
         )
 
-        # print(openrouter_model)
+        model_name = model_name.replace("_", "/")   
         message = client.chat.completions.create(
             model=model_name,
             messages=messages,
@@ -440,6 +439,7 @@ def run(
                     os.makedirs(save_path, exist_ok=True)
                 paper_text = ""
                 for model_name in models:
+                    model_name = model_name.replace("/", "_")
                     if model_name not in non_browsing_models and paper_text == "":
                         paper_text = extract_paper_text(paper_path, use_pdf = use_pdf, st_context=st_context, pdf_mode = pdf_mode)
                     curr_idx[0] += 1
