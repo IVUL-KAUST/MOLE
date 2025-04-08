@@ -1,4 +1,3 @@
-import anthropic
 from glob import glob
 import os
 import arxiv
@@ -6,30 +5,17 @@ from search_arxiv import ArxivSearcher, ArxivSourceDownloader
 import json
 import pdfplumber
 from dotenv import load_dotenv
-from openai import OpenAI
 from utils import *
 import argparse
 import streamlit as st  # type: ignore
 from constants import *
 from datetime import datetime
 import time
-import vertexai  # type: ignore
-from vertexai.generative_models import GenerativeModel, GenerationConfig, Tool, grounding  # type: ignore
 import json
 import shutil
-
+from litellm import completion
+from openai import OpenAI
 load_dotenv()
-claude_client = anthropic.Anthropic(api_key=os.environ["anthropic_key"])
-chatgpt_client = OpenAI(api_key=os.environ["chatgpt_key"])
-deepseek_client = OpenAI(
-    api_key=os.environ["deepseek_key"], base_url="https://api.deepseek.com"
-)
-
-# google cloud authenticate
-credentials = get_google_credentials()
-vertexai.init(
-    credentials=credentials, project=credentials.project_id, location="us-central1"
-)
 
 logger = setup_logger()
 
@@ -82,6 +68,29 @@ def get_openrouter_model(model_name):
             return model
     return None
 
+def get_cost(message):
+    import requests
+
+    # Replace with your actual headers dictionary
+    headers = {
+        "Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}"
+    }  # Add your authorization and other headers here
+
+    # Make the request to get generation status by ID
+    generation_response = requests.get(
+        f'https://openrouter.ai/api/v1/generation?id={message.id}',
+        headers=headers
+    )
+
+    # Parse the JSON response
+    stats = generation_response.json()["data"]
+
+    # Now you can work with the stats data
+    return {
+        "cost": stats['total_cost'],
+        "input_tokens": stats['tokens_prompt'],
+        "output_tokens": stats['tokens_completion'],
+    }
 def get_metadatav2(
     paper_text="",
     model_name="gemini-1.5-flash",
@@ -94,6 +103,11 @@ def get_metadatav2(
     max_retries = 3
 ):
     predictions = {}
+    cost = {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost": 0,
+    }
     for i in range(max_retries):
         if paper_text != "":
             if few_shot > 0 :
@@ -138,166 +152,22 @@ def get_metadatav2(
             base_url="https://openrouter.ai/api/v1"
         )
 
-        openrouter_model = get_openrouter_model(model_name)
         # print(openrouter_model)
-        if openrouter_model:
-            message = client.chat.completions.create(
-                model=openrouter_model,
-                messages=messages,
-            )
-        else:
-            raise ValueError(f"Invalid model: {model_name}")
-        
+        message = client.chat.completions.create(
+            model=model_name,
+            messages=messages,
+        )
+
         response =  message.choices[0].message.content
+        
         predictions = read_json(response)
         if predictions != {}:
+            cost = get_cost(message)
             break
         else:
             logger.warning(f"Failed to get predictions for {model_name}, retrying ...")
             time.sleep(1)
-    return message, predictions
-    
-
-
-
-def get_metadata(
-    paper_text="",
-    model_name="gemini-1.5-flash",
-    readme="",
-    metadata={},
-    use_search=False,
-    schema="ar",
-    use_cot=True,
-    few_shot = 0,
-):
-    if paper_text != "":
-        if few_shot > 0 :
-            examples  = ""
-            
-            for example in schemata[schema]['examples'][:few_shot]:
-                examples += example + "\n"
-            prompt = f"""
-                    Input Schema: {schemata[schema]['schema']}
-                    Here are some examples:
-                    {examples}
-                    Now, predict for the following paper:
-                    Paper Text: {paper_text}
-                    Output JSON:
-                    """
-        else:
-            prompt = f"""
-                    Input Schema: {schemata[schema]['schema']}
-                    Paper Text: {paper_text},
-                    Output JSON:
-                    """
-        sys_prompt = (
-            schemata[schema]["system_prompt_with_cot"]
-            if use_cot
-            else schemata[schema]["system_prompt"]
-        )
-    elif readme != "":
-        prompt = f"""
-                    You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
-                    Given the following Input schema: {schemata[schema]['schema']}, then update the metadata in the Input schema with the information from the readme.
-                    Output JSON:
-                    """
-        sys_prompt = schemata[schema]["system_prompt"]
-
-    if "gemini" in model_name.lower():
-        model = GenerativeModel(model_name, system_instruction=sys_prompt)
-        tools = []
-        if use_search:
-            tool = Tool.from_google_search_retrieval(grounding.GoogleSearchRetrieval())
-            tools = [tool]
-
-        message = model.generate_content(
-            contents=prompt,
-            tools=tools,
-            generation_config=GenerationConfig(
-                temperature=0.0,
-            ),
-            safety_settings=SAFETY_CONFIG_GEMINI,
-        )
-        response = message.text.strip()
-    elif "claude" in model_name.lower():
-        message = claude_client.messages.create(
-            model=model_name,
-            max_tokens=2084,
-            temperature=0,
-            system=sys_prompt,
-            messages=[{"role": "user", "content": [{"type": "text", "text": prompt}]}],
-        )
-        response = message.content[0].text
-    elif "gpt" in model_name.lower():
-        message = chatgpt_client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {"role": "system", "content": sys_prompt},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0,
-        )
-        response = message.choices[0].message.content.strip()
-    elif "deepseek" in model_name.lower():
-        if "deepseek-v3" in model_name.lower():
-            message = deepseek_client.chat.completions.create(
-                model="deepseek-chat",
-                messages=[
-                    {"role": "system", "content": sys_prompt},
-                    {"role": "user", "content": prompt},
-                ],
-                max_tokens=2084,  # reduce the max tokens to 1024
-                temperature=0.0,
-            )
-        elif "deepseek-r1" in model_name.lower():
-            message = deepseek_client.chat.completions.create(
-                model="deepseek-reasoner",
-                messages=[
-                    {"role": "system", "content": sys_prompt},
-                    {"role": "user", "content": prompt},
-                ],
-                max_tokens=2084,  # reduce the max tokens to 1024
-            )
-        else:
-            raise (f"Unrecognized deepseek name {model_name}")
-
-        response = message.choices[0].message.content
-    elif any([m in model_name.lower() for m in ["deepseek", "llama", "q"]]):
-        if "deepseek" in model_name.lower():
-            org = "deepseek-ai"
-        elif "q" in model_name.lower():
-            org = "Qwen"
-        else:
-            org = "meta-llama"
-        url = "https://api.hyperbolic.xyz/v1/chat/completions"
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {os.environ['HYPERBOLIC_API_KEY']}",
-        }
-        data = {
-            "messages": [
-                {"role": "system", "content": sys_prompt},
-                {"role": "user", "content": prompt},
-            ],
-            "model": f"{org}/{model_name}",
-            "max_tokens": 2084,
-            "temperature": 0,
-        }
-
-        message = requests.post(url, headers=headers, json=data).json()
-        response = message["choices"][0]["message"]["content"].strip()
-    elif "o1" in model_name.lower():
-        message = chatgpt_client.chat.completions.create(
-            model=model_name,
-            messages=[{"role": "user", "content": sys_prompt + prompt}],
-        )
-        response = message.choices[0].message.content.strip()
-    else:
-        raise (f"Unrecognized model name {model_name}")
-
-    predictions = read_json(response)
-    return message, predictions
-
+    return message, predictions, cost
 
 def clean_latex(path):
     os.system(f"arxiv_latex_cleaner {path}")
@@ -652,10 +522,9 @@ def run(
                                     metadata = results["metadata"]
                                     cost = results["cost"]
                                 else:
-                                    message, metadata = get_metadatav2(
+                                    message, metadata, cost = get_metadatav2(
                                         paper_text, model_name, schema=schema, few_shot = few_shot
                                     )
-                                    cost = compute_cost(message, model_name)
                                 if browse_web:
                                     browsing_link = get_repo_link(
                                         metadata, repo_link=repo_link
@@ -671,14 +540,11 @@ def run(
                                             f"🧠🌐 {model_name} is extracting data using metadata and web ...",
                                             st_context=st_context,
                                         )
-                                        message, metadata = get_metadatav2(
+                                        message, metadata, browsing_cost = get_metadatav2(
                                             model_name=model_name,
                                             readme=readme,
                                             metadata=metadata,
                                             schema=schema,
-                                        )
-                                        browsing_cost = compute_cost(
-                                            message, model_name
                                         )
                                         cost = {
                                             "cost": browsing_cost["cost"]
