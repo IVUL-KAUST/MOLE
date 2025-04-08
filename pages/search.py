@@ -70,26 +70,29 @@ def get_openrouter_model(model_name):
 
 def get_cost(message):
     import requests
+    while True:
+        # Replace with your actual headers dictionary
+        headers = {
+            "Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}"
+        }  # Add your authorization and other headers here
+        
+        # Make the request to get generation status by ID
+        generation_response = requests.get(
+            f'https://openrouter.ai/api/v1/generation?id={message.id}',
+            headers=headers
+        ).json()
+        # Parse the JSON response
+        if "data" not in generation_response:
+            time.sleep(1)
+            continue
+        stats = generation_response["data"]
 
-    # Replace with your actual headers dictionary
-    headers = {
-        "Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}"
-    }  # Add your authorization and other headers here
-    
-    # Make the request to get generation status by ID
-    generation_response = requests.get(
-        f'https://openrouter.ai/api/v1/generation?id={message.id}',
-        headers=headers
-    )
-    # Parse the JSON response
-    stats = generation_response.json()["data"]
-
-    # Now you can work with the stats data
-    return {
-        "cost": stats['total_cost'],
-        "input_tokens": stats['tokens_prompt'],
-        "output_tokens": stats['tokens_completion'],
-    }
+        # Now you can work with the stats data
+        return {
+            "cost": stats['total_cost'],
+            "input_tokens": stats['tokens_prompt'],
+            "output_tokens": stats['tokens_completion'],
+        }
 def get_metadatav2(
     paper_text="",
     model_name="gemini-1.5-flash",
