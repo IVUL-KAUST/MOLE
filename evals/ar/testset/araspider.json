@@ -30,17 +30,17 @@
     "Paper Title": "ARASPIDER: Democratizing Arabic-to-SQL",
     "Paper Link": "https://arxiv.org/pdf/2402.07448",
     "Script": "Arab",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "Yes",
+    "Test Split": true,
     "Tasks": [
         "semantic parsing",
         "text to SQL"
     ],
     "Venue Title": "arXiv",
-    "Citations": 0,
+    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -54,7 +54,7 @@
         "Egypt-Japan University of Science and Technology"
     ],
     "Abstract": "The AraSpider dataset is an Arabic version of the Spider dataset, designed for text-to-SQL tasks in natural language processing. Four multilingual translation models were evaluated for translating the Spider dataset from English to Arabic, and two models were tested for their ability to generate SQL queries from Arabic text. The study highlights the effectiveness of back translation strategies, and proposes methodologies for democratizing NLP resources and enhancing collaboration within the Arabic-speaking research community.",
-    "Added By": "Maryam Al Emadi",
+    
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -83,12 +83,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

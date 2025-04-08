@@ -31,18 +31,17 @@
     "Paper Title": "ANETAC: Arabic Named Entity Transliteration and Classification Dataset",
     "Paper Link": "https://arxiv.org/pdf/1907.03110",
     "Script": "Arab",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "Yes",
+    "Test Split": true,
     "Tasks": [
         "named entity recognition",
         "transliteration",
         "machine translation"
     ],
     "Venue Title": "arXiv",
-    "Citations": 35,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -56,7 +55,7 @@
         "USTHB University"
     ],
     "Abstract": "In this paper, we make freely accessible ANETAC our English-Arabic named entity transliteration and classification dataset that we built from freely available parallel translation corpora. The dataset contains 79,924 instances, each instance is a triplet (e, a, c), where e is the English named entity, a is its Arabic transliteration and c is its class that can be either a Person, a Location, or an Organization. The ANETAC dataset is mainly aimed for the researchers that are working on Arabic named entity transliteration, but it can also be used for named entity classification purposes.",
-    "Added By": "Zaid Alyafeai",
+    
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -85,12 +84,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

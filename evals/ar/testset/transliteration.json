@@ -25,17 +25,17 @@
     "Paper Title": "Sequence-to-sequence neural network models for transliteration",
     "Paper Link": "https://arxiv.org/pdf/1610.09565",
     "Script": "Arab-Latin",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "Yes",
+    "Test Split": true,
     "Tasks": [
         "transliteration",
         "translation"
     ],
     "Venue Title": "arXiv",
-    "Citations": 0,
+    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -46,7 +46,7 @@
         "Google"
     ],
     "Abstract": "Transliteration is a key component of machine\ntranslation systems and software internationalization. This paper demonstrates that neural\nsequence-to-sequence models obtain state of\nthe art or close to state of the art results on existing datasets. In an effort to make machine\ntransliteration accessible, we open source a\nnew Arabic to English transliteration dataset\nand our trained models.",
-    "Added By": "Zaid Alyafeai",
+    
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -75,12 +75,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

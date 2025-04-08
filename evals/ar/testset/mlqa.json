@@ -27,17 +27,16 @@
     "Paper Title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
     "Paper Link": "https://arxiv.org/pdf/1910.07475",
     "Script": "Arab",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "Yes",
+    "Test Split": true,
     "Tasks": [
         "cross-lingual extractive question answering",
         "question answering"
     ],
     "Venue Title": "arXiv",
-    "Citations": 124,
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -51,7 +50,7 @@
         "Facebook AI Research;University College London"
     ],
     "Abstract": "Question answering (QA) models have shown rapid progress enabled by the availability of large, high-quality benchmark datasets. Such annotated datasets are difficult and costly to collect, and rarely exist in languages other than English, making building QA systems that work well in other languages challenging. In order to develop such systems, it is crucial to invest in high quality multilingual evaluation benchmarks to measure progress. We present MLQA, a multi-way aligned extractive QA evaluation benchmark intended to spur research in this area. MLQA contains QA instances in 7 languages, English, Arabic, German, Spanish, Hindi, Vietnamese and Simplified Chinese. MLQA has over 12K instances in English and 5K in each other language, with each instance parallel between 4 languages on average. We evaluate state-of-the-art cross-lingual models and machine-translation-based baselines on MLQA. In all cases, transfer results are shown to be significantly behind training-language performance.",
-    "Added By": "Zaid Alyafeai",
+    
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -80,12 +79,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

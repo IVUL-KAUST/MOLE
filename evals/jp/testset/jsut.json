@@ -27,16 +27,16 @@
     ],
     "Paper Title": "JSUT corpus: free large-scale Japanese speech corpus for end-to-end speech synthesis",
     "Paper Link": "https://arxiv.org/pdf/1711.00354",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "other",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
         "speech recognition"
     ],
     "Venue Title": "arXiv",
-    "Citations": 0,
+    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -48,7 +48,7 @@
         "University of Tokyo"
     ],
     "Abstract": "Thanks to improvements in machine learning techniques including deep learning, a free large-scale speech corpus that\ncan be shared between academic institutions and commercial\ncompanies has an important role. However, such a corpus for\nJapanese speech synthesis does not exist. In this paper, we\ndesigned a novel Japanese speech corpus, named the \u201cJSUT\ncorpus,\u201d that is aimed at achieving end-to-end speech synthesis. The corpus consists of 10 hours of reading-style speech\ndata and its transcription and covers all of the main pronunciations of daily-use Japanese characters. In this paper, we\ndescribe how we designed and analyzed the corpus. The corpus is freely available online",
-    "Added By": "Zaid Alyafeai",
+    
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
@@ -74,12 +74,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

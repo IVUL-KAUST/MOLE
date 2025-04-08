@@ -23,18 +23,18 @@
     "Paper Title": "Moroccan Dialect -Darija- Open Dataset",
     "Paper Link": "https://arxiv.org/pdf/2103.09687",
     "Script": "Arab-Latin",
-    "Tokenized": "Yes",
+    "Tokenized": true,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
         "transliteration",
         "machine translation",
         "part of speech tagging"
     ],
     "Venue Title": "arXiv",
-    "Citations": 0,
+    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -43,7 +43,6 @@
     ],
     "Affiliations": [],
     "Abstract": "Nowadays, we are witnessing an unprecedented growth of IT products and services. Yet, in order for many of these solutions to flourish and be viable in a given society, they need to \u00ab understand \u00bb and be able to communicate to some extent using native languages. However, it turns out that step 0 in any serious engagement with Natural Language Processing (NLP) consists of translating the vocabulary to the widely used and most documented language in this field, namely English.",
-    "Added By": "Mustafa Ghaleb",
     "annotations_from_paper": {
         "Name": "DODa",
         "Subsets": 1,
@@ -72,12 +71,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

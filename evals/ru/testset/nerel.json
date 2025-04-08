@@ -31,17 +31,17 @@
     "Derived From": [],
     "Paper Title": "NEREL: A Russian Dataset with Nested Named Entities, Relations and Events",
     "Paper Link": "https://arxiv.org/pdf/2108.13112",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "Yes",
+    "Test Split": true,
     "Tasks": [
         "named entity recognition",
         "relation extraction"
     ],
     "Venue Title": "arXiv",
-    "Citations": 0,
+    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -67,7 +67,7 @@
         "Wiseyak, United States"
     ],
     "Abstract": "In this paper, we present NEREL, a  Russian dataset for named entity recognition and relation extraction. NEREL is significantly larger than existing Russian datasets: to date it contains 56K annotated named entities and 39K annotated  relations. Its important difference from previous datasets is annotation of nested named entities, as well as relations within nested entities and at the discourse level. NEREL can facilitate development of novel models that can extract relations between nested named entities, as well as relations on both sentence and document levels.   NEREL also contains the annotation of events involving named entities and their roles in the events. The NEREL collection is available via https://github.com/nerel-ds/NEREL.",
-    "Added By": "Zaid Alyafeai",
+    
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
@@ -93,12 +93,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

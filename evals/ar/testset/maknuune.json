@@ -31,17 +31,17 @@
     "Paper Title": "Maknuune: A Large Open Palestinian Arabic Lexicon",
     "Paper Link": "https://arxiv.org/pdf/2210.12985",
     "Script": "Arab-Latin",
-    "Tokenized": "Yes",
+    "Tokenized": true,
     "Host": "Gdrive",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
         "morphological analysis",
         "lexicon analysis"
     ],
     "Venue Title": "arXiv",
-    "Citations": 0,
+    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -59,7 +59,6 @@
         "UNRWA"
     ],
     "Abstract": "We present Maknuune, a large open lexicon for the Palestinian Arabic dialect. Maknuune has over 36K entries from 17K lemmas, and 3.7K roots. All entries include diacritized Arabic orthography, phonological transcription and English glosses. Some entries are enriched with additional information such as broken plurals and templatic feminine forms, associated phrases and collocations, Standard Arabic glosses, and examples or notes on grammar, usage, or location of collected entry.",
-    "Added By": "Christian Khairallah",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -88,12 +87,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

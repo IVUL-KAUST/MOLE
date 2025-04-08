@@ -27,18 +27,18 @@
     "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age, and Language Variety Identification",
     "Paper Link": "https://arxiv.org/pdf/1808.07674",
     "Script": "Arab",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "other",
     "Access": "Upon-Request",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
         "dialect identification",
         "gender identification",
         "age identification"
     ],
     "Venue Title": "arXiv",
-    "Citations": 0,
+    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -50,7 +50,7 @@
         "Carnegie Mellon University Qatar"
     ],
     "Abstract": "This paper presents the Arap-Tweet corpus, a large-scale, multi-dialectal Arabic corpus sourced from Twitter, which has been annotated for age, gender, and dialectal variety. The corpus is intended to provide resources for developing NLP tools and models for Arabic dialects and can be used in tasks such as author profiling, sentiment analysis, and more. The dataset covers 11 major dialect regions and includes over 2.4 million tweets. Annotators identified users based on dialect-specific keywords and verified additional metadata (age and gender) through manual checks and external resources.",
-    "Added By": "Maryam Al Emadi",
+    
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -79,12 +79,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

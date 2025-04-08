@@ -29,16 +29,16 @@
     "Paper Title": "An Arabic-Hebrew parallel corpus of TED talks",
     "Paper Link": "https://arxiv.org/pdf/1610.00572",
     "Script": "Arab",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "Yes",
+    "Test Split": true,
     "Tasks": [
         "machine translation"
     ],
     "Venue Title": "arXiv",
-    "Citations": 0,
+    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -48,7 +48,7 @@
         "Fondazione Bruno Kessler (FBK)"
     ],
     "Abstract": "The paper describes the creation of an Arabic-Hebrew parallel corpus from TED talks, aligned using English as a pivot. The benchmark contains around 225,000 sentences and 3.5 million tokens in each language. It was prepared to assist machine translation tasks for Arabic-Hebrew and has been partitioned into train, development, and test sets similar to the IWSLT 2016 evaluation campaign.",
-    "Added By": "Maryam Al Emadi",
+    
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -77,12 +77,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

@@ -249,12 +249,12 @@
     },
     "Tokenized": {
         "question": "Is the dataset tokenized?",
-        "options": ["Yes", "No"],
+        "options": [true, false],
         "option_description": {
-            "Yes": "The dataset is tokenized. Tokenized means the words are split using a morphological analyzer",
-            "No": "The dataset is not tokenized"
+            "true": "The dataset is tokenized. Tokenized means the words are split using a morphological analyzer",
+            "false": "The dataset is not tokenized"
         },
-        "answer_type": "str",
+        "answer_type": "bool",
         "validation_group":"CONTENT",
         "answer_min": 1,
         "answer_max": 1
@@ -309,12 +309,12 @@
     },
     "Test Split": {
         "question": "Does the dataset contain a train/valid and test split?",
-        "options": ["Yes", "No"],
+        "options": [true, false],
         "option_description": {
-            "Yes": "The dataset contains a train/valid and test split",
-            "No": "The dataset does not contain a train/valid or test split"
+            "true": "The dataset contains a train/valid and test split",
+            "false": "The dataset does not contain a train/valid or test split"
         },
-        "answer_type": "str",
+        "answer_type": "bool",
         "validation_group":"EVALUATION",
         "answer_min": 1,
         "answer_max": 1

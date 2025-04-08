@@ -27,17 +27,17 @@
     "Paper Title": "Studying the History of the Arabic Language: Language Technology and a Large-Scale Historical Corpus",
     "Paper Link": "https://arxiv.org/pdf/1809.03891",
     "Script": "Arab",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "zenodo",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
         "text generation",
         "language modeling"
     ],
     "Venue Title": "arXiv",
-    "Citations": 0,
+    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -49,7 +49,6 @@
     ],
     "Affiliations": [],
     "Abstract": "Arabic is a widely-spoken language with a long and rich history, but existing corpora and language technology focus mostly on modern Arabic and its varieties. Therefore, studying the history of the language has so far been mostly limited to manual analyses on a small scale. In this work, we present a large-scale historical corpus of the written Arabic language, spanning 1400 years. We describe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques. Our findings confirm the established division of written Arabic into Modern Standard and Classical Arabic, and confirm other established periodizations, while suggesting that written Arabic may be divisible into still further periods of development.",
-    "Added By": "Yonatan Belinkov",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -78,12 +77,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }

@@ -26,16 +26,16 @@
     "Paper Title": "ATHAR: A High-Quality and Diverse Dataset for Classical Arabic to English Translation",
     "Paper Link": "https://arxiv.org/pdf/2407.19835",
     "Script": "Arab",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "HuggingFace",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "Yes",
+    "Test Split": true,
     "Tasks": [
         "machine translation"
     ],
     "Venue Title": "arXiv",
-    "Citations": 0,
+    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -47,7 +47,7 @@
         "ADAPT/DCU"
     ],
     "Abstract": "ATHAR is a dataset comprising 66,000 high-quality translation pairs from Classical Arabic to English, aimed at improving NLP and machine translation systems. The dataset covers a broad range of Classical Arabic texts, including science, philosophy, and history. Evaluations on state-of-the-art language models indicate that fine-tuning with this dataset significantly improves translation accuracy.",
-    "Added By": "Maryam Al Emadi",
+    
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -76,12 +76,10 @@
         "Test Split": 1,
         "Tasks": 1,
         "Venue Title": 1,
-        "Citations": 0,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
-        "Abstract": 1,
-        "Added By": 0
-    }
+        "Abstract": 1
+        }
 }
