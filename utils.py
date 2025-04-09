@@ -582,7 +582,12 @@ def fix_options(metadata, method="last", schema="ar"):
             elif pred_option == "":
                 fixed_metadata[column] = pick_choice(options, method=method)
             else:
-                fixed_metadata[column] = find_best_match(pred_option, options)
+                print(type(pred_option))
+                print(pred_option)
+                if type(pred_option) != bool:
+                    fixed_metadata[column] = find_best_match(pred_option, options)
+                else:
+                    fixed_metadata[column] = pred_option
 
         else:
             fixed_metadata[column] = metadata[column]
@@ -602,37 +607,46 @@ def process_url(url):
 def cast(metadata, schema="ar"):
     answer_types = schemata[schema]["answer_types"]
     for c in metadata:
-        type = answer_types[c]
-        if type == "str":
+        column_type = answer_types[c]
+        if column_type == "str":
             try:
                 metadata[c] = str(metadata[c])
             except:
                 metadata[c] = ""
-        elif type == "int":
+        elif column_type == "int":
             try:
                 metadata[c] = int(metadata[c])
             except:
                 metadata[c] = 0
-        elif type == "float":
+        elif column_type == "float":
             try:
                 metadata[c] = float(metadata[c])
             except:
                 metadata[c] = 0.0
-        elif type == "date[year]":
+        elif column_type == "date[year]":
             try:
                 metadata[c] = int(metadata[c])
             except:
                 metadata[c] = date.year
-        elif type == "url":
+        elif column_type == "url":
             try:
                 metadata[c] = str(metadata[c])
             except:
                 metadata[c] = ""
-        elif "List" in type:
+        elif "List" in column_type:
             if not isinstance(metadata[c], list):
                 raise (f"Error: {metadata[c]} is not a list")
+        elif column_type == "bool":
+            if type(metadata[c]) == bool:
+                pass
+            elif metadata[c].lower() == "true":
+                metadata[c] = True
+            elif metadata[c].lower() == "false":
+                metadata[c] = False
+            else:
+                raise (f"Error: {metadata[c]} is not a boolean")
         else:
-            print(c, type)
+            print(c, column_type)
             raise (f"Unrecognized column type {type}")
     return metadata
 

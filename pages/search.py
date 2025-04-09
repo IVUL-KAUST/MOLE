@@ -148,11 +148,11 @@ def get_metadatav2(
         else:
             raise ValueError(f"Invalid model: {model_name}")
         
-        response =  message.choices[0].message.content
-        predictions = read_json(response)
-        if predictions != {}:
-            break
-        else:
+        if message.choices is not None:
+            response =  message.choices[0].message.content
+            predictions = read_json(response)
+        
+        if predictions == {}:
             logger.warning(f"Failed to get predictions for {model_name}, retrying ...")
             time.sleep(1)
     return message, predictions

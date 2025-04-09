@@ -265,6 +265,7 @@ OPENROUTER_MODELS = [
     # "google/gemini-2.0-flash-001",
     "google/gemini-2.0-flash-lite-preview-02-05:free",
     "google/gemini-2.0-pro-exp-02-05:free",
+    "google/gemini-2.5-pro-exp-03-25:free",
     "google/gemini-flash-1.5",
     "google/gemini-pro-1.5",
     "anthropic/claude-3.7-sonnet",
@@ -275,5 +276,7 @@ OPENROUTER_MODELS = [
     "google/gemma-3-27b-it",
     "deepseek/deepseek-chat",
     "google/gemma-3-27b-it:free",
-    "qwen/qwq-32b"
+    "meta-llama/llama-4-maverick:free",
+    "meta-llama/llama-4-scout:free",
+    "qwen/qwq-32b:free"
 ]
