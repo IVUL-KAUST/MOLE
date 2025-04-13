@@ -103,14 +103,7 @@ if __name__ == "__main__":
                 [model_name]
                 + (np.mean(metric_results[model_name], axis=0) * 100).tolist()
             )
-    headers = [
-        "MODEL",
-        "CONTENT",
-        "ACCESSABILITY",
-        "DIVERSITY",
-        "EVALUATION",
-        "AVERAGE",
-    ]
+    headers = ["MODEL"] + list(schemata[args.schema]["evaluation_subsets"].keys()) + ["AVERAGE"]
     print(
         tabulate(
             sorted(results, key=lambda x: x[-1]),
