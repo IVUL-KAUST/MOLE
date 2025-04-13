@@ -200,6 +200,20 @@ def match_titles(title, masader_title):
         return 0
     return difflib.SequenceMatcher(None, title, masader_title).ratio()
 
+# create code to match a two lists of dicts 
+
+def match_lists(list1, list2):
+    if len(list1) != len(list2):
+        return False
+    for subset1 in list1:
+        has_match = False
+        for subset2 in list2:
+            if subset1 == subset2:
+                has_match = True
+                break 
+        if not has_match:
+            return False
+    return True
 
 def get_predictions(
     gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar"
@@ -222,22 +236,10 @@ def get_predictions(
                 results[column] = 1
                 continue
         if "List[Dict" in answer_types[column]:
-            try:
-                if len(pred_answer) != len(gold_answer):
-                    continue
-            except:
-                print(pred_metadata)
-                raise
-            matched = True
-            for i, subset in enumerate(gold_answer):
-                for key in subset:
-                    if key not in pred_answer[i]:
-                        matched = False
-                    if str(subset[key]) != str(pred_answer[i][key]):
-                        matched = False
-            if matched:
+            print(gold_answer, pred_answer)
+            if match_lists(gold_answer, pred_answer):
+                print("match")
                 results[column] = 1
-            continue
         elif column in schemata[schema]["columns_with_lists"]:
             assert isinstance(
                 pred_answer, list
