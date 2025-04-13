@@ -155,6 +155,7 @@ def get_metadatav2(
         if predictions == {}:
             logger.warning(f"Failed to get predictions for {model_name}, retrying ...")
             time.sleep(1)
+    print(predictions)
     return message, predictions
     
 
@@ -635,68 +636,54 @@ def run(
                     elif "baseline" in model_name.lower():
                         message, metadata = "", {}
                     else:
-                        if "gemini-1.5-pro" in model_name:
-                            show_info(f"⏰ Waiting ...", st_context=st_context)
-                            time.sleep(5)  # pro has 2 RPM 50 req/day
+                        base_model_path = save_path.replace("-browsing", "")
+                        if browse_web and os.path.exists(base_model_path):
+                            show_info(
+                                "📂 Loading saved results ...",
+                                st_context=st_context,
+                            )
+                            results = json.load(open(base_model_path))
+                            metadata = results["metadata"]
+                            cost = results["cost"]
+                        else:
+                            message, metadata = get_metadatav2(
+                                paper_text, model_name, schema=schema, few_shot = few_shot
+                            )
+                            cost = compute_cost(message, model_name)
+                        if browse_web:
+                            browsing_link = get_repo_link(
+                                metadata, repo_link=repo_link
+                            )
+                            show_info(
+                                f"📖 Extracting readme from {browsing_link}",
+                                st_context=st_context,
+                            )
+                            readme = fetch_repository_metadata(browsing_link)
 
-                        max_tries = 5
-                        for i in range(max_tries):
-                            try:
-                                base_model_path = save_path.replace("-browsing", "")
-                                if browse_web and os.path.exists(base_model_path):
-                                    show_info(
-                                        "📂 Loading saved results ...",
-                                        st_context=st_context,
-                                    )
-                                    results = json.load(open(base_model_path))
-                                    metadata = results["metadata"]
-                                    cost = results["cost"]
-                                else:
-                                    message, metadata = get_metadatav2(
-                                        paper_text, model_name, schema=schema, few_shot = few_shot
-                                    )
-                                    cost = compute_cost(message, model_name)
-                                if browse_web:
-                                    browsing_link = get_repo_link(
-                                        metadata, repo_link=repo_link
-                                    )
-                                    show_info(
-                                        f"📖 Extracting readme from {browsing_link}",
-                                        st_context=st_context,
-                                    )
-                                    readme = fetch_repository_metadata(browsing_link)
-
-                                    if readme != "":
-                                        show_info(
-                                            f"🧠🌐 {model_name} is extracting data using metadata and web ...",
-                                            st_context=st_context,
-                                        )
-                                        message, metadata = get_metadatav2(
-                                            model_name=model_name,
-                                            readme=readme,
-                                            metadata=metadata,
-                                            schema=schema,
-                                        )
-                                        browsing_cost = compute_cost(
-                                            message, model_name
-                                        )
-                                        cost = {
-                                            "cost": browsing_cost["cost"]
-                                            + cost["cost"],
-                                            "input_tokens": cost["input_tokens"]
-                                            + browsing_cost["input_tokens"],
-                                            "output_tokens": cost["output_tokens"]
-                                            + browsing_cost["output_tokens"],
-                                        }
-                                    else:
-                                        message = None
-                                break
-                            except:
-                                if i == max_tries - 1:
-                                    metadata = {}
-                                time.sleep(5)
-                                print(message)
-                                show_info(f"⏰ Retrying ...", st_context=st_context)
+                            if readme != "":
+                                show_info(
+                                    f"🧠🌐 {model_name} is extracting data using metadata and web ...",
+                                    st_context=st_context,
+                                )
+                                message, metadata = get_metadatav2(
+                                    model_name=model_name,
+                                    readme=readme,
+                                    metadata=metadata,
+                                    schema=schema,
+                                )
+                                browsing_cost = compute_cost(
+                                    message, model_name
+                                )
+                                cost = {
+                                    "cost": browsing_cost["cost"]
+                                    + cost["cost"],
+                                    "input_tokens": cost["input_tokens"]
+                                    + browsing_cost["input_tokens"],
+                                    "output_tokens": cost["output_tokens"]
+                                    + browsing_cost["output_tokens"],
+                                }
+                            else:
+                                message = None
 
                     if model_name != "human":
                         if model_name in non_browsing_models:
