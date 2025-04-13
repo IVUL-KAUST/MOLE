@@ -4,6 +4,7 @@ from vertexai.generative_models import (  # type: ignore
     SafetySetting,
 )
 import json
+from glob import glob
 
 MODEL_NAMES = [
     "gemini-1.5-flash",
@@ -89,6 +90,10 @@ TEST_DATASETS_IDS_MULTI = [
     "2004.06465",  # DE-LIMIT
     "1710.10639",  # jesc
 ]
+
+TEST_DATASETS_IDS_MOD = [
+    "2309.16609",  # qwen
+]
 eval_datasets_ids = {
     "ar": {"valid": VALID_DATASETS_IDS_AR, "test": TEST_DATASETS_IDS_AR},
     "en": {"test": TEST_DATASETS_IDS_EN},
@@ -96,7 +101,16 @@ eval_datasets_ids = {
     "jp": {"test": TEST_DATASETS_IDS_JP},
     "fr": {"test": TEST_DATASETS_IDS_FR},
     "multi": {"test": TEST_DATASETS_IDS_MULTI},
+    "mod": {"test": TEST_DATASETS_IDS_MOD}
 }
+
+eval_datasets = {}
+
+for schema in eval_datasets_ids:
+    for split in eval_datasets_ids[schema]:
+        eval_datasets[schema] = {}
+        eval_datasets[schema][split] = [json.load(open(f)) for f in glob(f"evals/{schema}/{split}/**.json")]
+
 non_browsing_models = [
     "human",
     "dummy",
@@ -159,7 +173,6 @@ for schema_file in os.listdir("schema"):
     schema_name = schema_file.split(".")[0]
     columns = list(schema.keys())
     columns_with_lists = [c for c in columns if "List[str]" == schema[c]["answer_type"]]
-
     system_prompt = f"""
         You are a professional research paper reader. You will be provided 'Input schema' and 'Paper Text' and you must respond with an 'Output JSON'.
         The 'Output Schema' is a JSON with the following format key:answer where the answer represents an answer to the question. 
@@ -260,6 +273,7 @@ for schema_file in os.listdir("schema"):
         except:
             examples.append("")
     schemata[schema_name]["examples"] = examples
+
 
 OPENROUTER_MODELS = [
     # "google/gemini-2.0-flash-001",

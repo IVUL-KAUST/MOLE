@@ -28,19 +28,6 @@ random.seed(0)
 
 # masader_dataset = load_dataset("arbml/masader", download_mode="")["train"]
 
-eval_datasets = {
-    "ar": {
-        "valid": [json.load(open(f)) for f in glob("evals/ar/validset/**.json")],
-        "test": [json.load(open(f)) for f in glob("evals/ar/testset/**.json")],
-    },
-    "en": {"test": [json.load(open(f)) for f in glob("evals/en/testset/**.json")]},
-    "ru": {"test": [json.load(open(f)) for f in glob("evals/ru/testset/**.json")]},
-    "jp": {"test": [json.load(open(f)) for f in glob("evals/jp/testset/**.json")]},
-    "fr": {"test": [json.load(open(f)) for f in glob("evals/fr/testset/**.json")]},
-    "multi": {"test": [json.load(open(f)) for f in glob("evals/multi/testset/**.json")]}
-}
-
-
 def extract_and_generate_readme(url):
     """
     Extracts a web page from a URL and uses Gemini-1.5-Flash to convert it into a structured README.
@@ -271,7 +258,7 @@ def evaluate_lengths(pred_metadata, schema = "ar"):
     validation_columns = schemata[schema]["validation_columns"]
     answer_types = schemata[schema]["answer_types"]
     answer_lengths = schemata[schema]['answer_lengths']
-    
+    columns = schemata[schema]["columns"] 
     length_forcing = 0
     for c in columns:
         r = answer_lengths[c]

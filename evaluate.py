@@ -1,8 +1,8 @@
 from pages.search import run, create_args
 from tabulate import tabulate  # type: ignore
-from utils import fix_arxiv_link, eval_datasets
-import numpy as np
+from utils import fix_arxiv_link
 from constants import *
+import numpy as np
 
 if __name__ == "__main__":
     args = create_args()
@@ -17,14 +17,13 @@ if __name__ == "__main__":
         paper_links = []
         years = []
         links = []
-
         if args.masader_validate:
             use_split = "valid"
             dataset = eval_datasets[args.schema][use_split]
         else:
             use_split = "test"
             dataset = eval_datasets[args.schema][use_split]
-
+        
         for x in dataset:
             titles.append(str(x["Paper Title"]))
             data_names.append(str(x["Name"]))
