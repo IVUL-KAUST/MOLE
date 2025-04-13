@@ -3,7 +3,6 @@
     "Link": "https://github.com/QwenLM/Qwen",
     "Year": 2023,
     "Models": [
-        [
             {"Name": "MPT", "Params": 7},
             {"Name": "MPT", "Params": 30},
             {"Name": "Falcon", "Params": 7},
@@ -25,7 +24,6 @@
             {"Name": "Qwen", "Params": 1.8},
             {"Name": "Qwen", "Params": 7},
             {"Name": "Qwen", "Params": 14}
-        ]
     ],
     "Params": [
         1.8,
