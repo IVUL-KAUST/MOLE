@@ -18,8 +18,6 @@ from glob import glob
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from google.oauth2 import service_account
-from vertexai.generative_models import GenerativeModel, GenerationConfig  # type: ignore
 
 # Local imports
 from constants import *

@@ -327,12 +327,6 @@
         "answer_type": "str",
         "answer_min": 1
     },
-    "Citations": {
-        "question": "Guess the citations count of the paper",
-        "answer_type": "int",
-        "answer_min": 0,
-        "answer_max": 0
-    },
     "Venue Type": {
         "question": "What is the venue type?",
         "options": [
@@ -363,11 +357,6 @@
     },
     "Abstract": {
         "question": "What is the abstract of the paper? replace any double quotes in the abstract by'",
-        "answer_type": "str",
-        "answer_min": 5
-    },
-    "Added By": {
-        "question": "Who added this dataset to the registry?",
         "answer_type": "str",
         "answer_min": 5
     }

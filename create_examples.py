@@ -136,13 +136,12 @@ for lang in ["en", "fr", "jp", "ru"]:
             "Test Split": "No",
             "Tasks": [task],
             "Venue Title": "arXiv",
-            "Citations": 0,
             "Venue Type": "preprint",
             "Venue Name": "",
             "Authors": authors,
             "Affiliations": affs,
-            "Abstract": "",
-            "Added By": "Zaid Alyafeai",
+            "Abstract": ""
+}
         }
 
         if lang == "ar":

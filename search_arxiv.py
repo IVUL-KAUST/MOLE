@@ -2,7 +2,6 @@ import gzip
 import arxiv
 from datetime import datetime, date
 from typing import List, Dict, Optional, Union, Tuple
-from dateutil.relativedelta import relativedelta
 import shutil
 import requests
 import tarfile
