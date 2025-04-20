@@ -165,7 +165,8 @@ def has_common(d1, d2, max_diff = 1):
     d1 = set([d.lower().strip() for d in d1])
     d2 = set([d.lower().strip() for d in d2])
     intersection = d1.intersection(d2)
-    difference   = d1.difference(d2)
+    difference   = d1.union(d2) - intersection  # is this working?
+
     if len(intersection) and (len(difference) <= max_diff):
         return True
     else:
@@ -236,9 +237,9 @@ def get_predictions(
                 results[column] = 1
                 continue
         if "List[Dict" in answer_types[column]:
-            print(gold_answer, pred_answer)
+            # print(gold_answer, pred_answer)
             if match_lists(gold_answer, pred_answer):
-                print("match")
+                # print("match")
                 results[column] = 1
         elif column in schemata[schema]["columns_with_lists"]:
             assert isinstance(
@@ -569,8 +570,6 @@ def fix_options(metadata, method="last", schema="ar"):
             elif pred_option == "":
                 fixed_metadata[column] = pick_choice(options, method=method)
             else:
-                print(type(pred_option))
-                print(pred_option)
                 if type(pred_option) != bool:
                     fixed_metadata[column] = find_best_match(pred_option, options)
                 else:
@@ -654,7 +653,11 @@ def fill_missing(metadata, schema="ar"):
                 metadata[c] = date.today().year
             elif "url" in answer_types[c]:
                 metadata[c] = ""
+            elif "bool" in answer_types[c]:
+                metadata[c] = False
             else:
+                print(c)
+                print(answer_types)
                 raise (f"Unrecognized column type {answer_types[c]}")
     return metadata
 
