@@ -160,8 +160,12 @@ def get_metadatav2(
             messages=messages,
         )
 
-        response =  message.choices[0].message.content
-        
+        try:
+            response =  message.choices[0].message.content
+        except:
+            time.sleep(1)
+            logger.warning(f"Failed to get predictions for {model_name}, retrying ...")
+            continue
         predictions = read_json(response)
         if predictions != {}:
             cost = get_cost(message)
