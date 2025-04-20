@@ -2,16 +2,16 @@
     "Name": "CIDAR",
     "Volume": 10000,
     "Unit": "sentences",
-    "Tokenized": false,  
+    "Tokenized": false,
     "Script": "Arab",
     "Form": "text",
-    "Collection Style": ["crawling", "annotation"],
-    "Domain": ["other"],
-    "Ethical Risks": "",
+    "Collection Style": ["crawling", "LLM generated", "manual curation"],
+    "Domain": ["commentary", "LLM"],
+    "Ethical Risks": "Low",
 
     "Provider": ["ARBML"],
     "Host": "HuggingFace",
-    "Link": "https://huggingface.co/datasets/arbml/CIDAR",
+    "Link": "https://hf.co/datasets/arbml/CIDAR",
     "HF Link": "https://hf.co/datasets/arbml/CIDAR",
     "License": "CC BY-NC 4.0",
     "Cost": "",
@@ -20,8 +20,8 @@
     "Language": "ar",
     "Subsets": [],
     "Dialect": "Modern Standard Arabic",
-    "Year": "2021",
+
     "Test Split": false,
-    "Tasks": ["instruction tuning"],
+    "Tasks": ["instruction tuning", "question answering", "ner"],
     "Derived From": ["AlpaGasus"]   
 }

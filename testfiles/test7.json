@@ -1,12 +1,12 @@
 {
     "Name": "CIDAR",
-    "Volume": "10,000",
+    "Volume": 10000,
     "Unit": "sentences",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Script": "Arab",
     "Form": "text",
     "Collection Style": ["crawling"],
-    "Domain": ["public datasets"],
+    "Domain": ["web pages"],
     "Ethical Risks": "Low",
 
     "Provider": ["ARBML"],
@@ -19,13 +19,13 @@
 
     "Language": "ar",
     "Subsets": [
-        {"Name": "Syrian", "Volume": "4,000", "Unit": "sentences", "Dialect": "Syria"},
-        {"Name": "Iraqi",  "Volume": "4,000", "Unit": "sentences", "Dialect": "Iraq"}, 
-        {"Name": "Lebanese", "Volume": "2,000", "Unit": "sentences", "Dialect": "Lebanon"}
+        {"Name": "Syrian", "Volume": 4000, "Unit": "sentences", "Dialect": "Syria"},
+        {"Name": "Iraqi",  "Volume": 4000, "Unit": "sentences", "Dialect": "Iraq"}, 
+        {"Name": "Lebanese", "Volume": 2000, "Unit": "sentences", "Dialect": "Lebanon"}
     ],
     "Dialect": "mixed",
 
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": ["instruction tuning"],
     "Derived From": ["AlpaGasus"]   
 }

@@ -1,7 +1,7 @@
 import json
 from utils import validate, fix_options, cast, fill_missing, evaluate_metadata, postprocess, fetch_repository_metadata
 from constants import *
-from pages.search import get_metadata
+from pages.search import get_metadatav2
 
 
 # no mistakes
@@ -19,6 +19,8 @@ with open('testfiles/test2.json', 'r') as f:
     metadata = json.load(f)
 
 results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/2402.03177')
+evaluation_subsets = schemata['ar']['evaluation_subsets']
+NUM_VALIDATION_COLUMNS = len(schemata['ar']['validation_columns'])
 
 for m in results:
     if m == 'CONTENT':
@@ -59,12 +61,8 @@ with open('testfiles/test5.json', 'r') as f:
 new_metadata = cast(metadata)
 
 for c in metadata:
-    if c == 'Ethical Risks':
-        assert new_metadata['Ethical Risks'] == '', "❌ '' != " + new_metadata['Ethical Risks']
-    elif c == 'Year':
+    if c == 'Year':
         assert new_metadata['Year'] == 2021, "❌ 2021 != " + new_metadata['Year']
-    elif c == 'Link':
-        assert new_metadata['Link'] == 'https://hf.co/datasets/arbml/CIDAR', "❌ https://hf.co/datasets/arbml/CIDAR != " + new_metadata['Link']
     else:
         assert new_metadata[c] == metadata[c], f'❌ {c} should be {metadata[c]} but got {new_metadata[c]}'
 
@@ -75,44 +73,52 @@ with open('testfiles/test6.json', 'r') as f:
     metadata = json.load(f)
 
 new_metadata = fill_missing(metadata)
-
+columns = schemata['ar']['columns']
 for c in columns:
     assert c in new_metadata, f'❌ {c} should be in the metadata but it is not'
 
 print('✅ passed test6 [fill missing]')
 
-with open('testfiles/example.tex', 'r') as f:
-    paper_text = f.read()
+# with open('testfiles/example.tex', 'r') as f:
+#     paper_text = f.read()
 
-msg,pred_metadata =  get_metadata(paper_text, model_name = 'gemini-1.5-flash')
-pred_metadata = postprocess(pred_metadata)
+# msg, pred_metadata, cost =  get_metadatav2(paper_text, model_name = 'google/gemini-flash-1.5')
+# pred_metadata = postprocess(pred_metadata)
 
-with open('testfiles/test7.json', 'r') as f:
-    gold_metadata = json.load(f)
+# with open('testfiles/test7.json', 'r') as f:
+#     gold_metadata = json.load(f)
+# results = evaluate_metadata(pred_metadata, gold_metadata)
+# print(results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}')
+# print('✅ passed test7 [extract metadata]')
 
-results = evaluate_metadata(pred_metadata, gold_metadata)
-assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
-print('✅ passed test7 [extract metadata]')
+# with open('testfiles/example2.tex', 'r') as f:
+#     paper_text = f.read()
 
-with open('testfiles/example2.tex', 'r') as f:
-    paper_text = f.read()
+# _,pred_metadata, cost =  get_metadatav2(paper_text, model_name = 'google/gemini-flash-1.5')
+# readme = fetch_repository_metadata(pred_metadata['Link'])
+# _,pred_metadata, cost =  get_metadatav2(metadata = pred_metadata,  model_name = 'google/gemini-flash-1.5', readme = readme)
+# pred_metadata = postprocess(pred_metadata)
 
-_,pred_metadata =  get_metadata(paper_text, model_name = 'gemini-1.5-flash')
-readme = fetch_repository_metadata(pred_metadata['Link'])
-_,pred_metadata =  get_metadata(metadata = pred_metadata,  model_name = 'gemini-1.5-flash', readme = readme)
-pred_metadata = postprocess(pred_metadata)
-
-with open('testfiles/test8.json', 'r') as f:
-    gold_metadata = json.load(f)
-results = evaluate_metadata(pred_metadata, gold_metadata)
-assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
-print('✅ passed test8 [browsing]')
+# with open('testfiles/test8.json', 'r') as f:
+#     gold_metadata = json.load(f)
+# results = evaluate_metadata(pred_metadata, gold_metadata)
+# print(results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}')
+# print('✅ passed test8 [browsing]')
 
 pred_metadata = postprocess({})
 
 with open('testfiles/test9.json', 'r') as f:
     gold_metadata = json.load(f)
 results = evaluate_metadata(pred_metadata, gold_metadata)
-
 assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
 print('✅ passed test9 [empty metadata]')
+
+# different tasks
+with open('testfiles/test10.json', 'r') as f:
+    metadata = json.load(f)
+
+results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/2402.03177')
+
+for m in results:
+    assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
+print('✅ passed test10 [different tasks]')

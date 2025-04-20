@@ -1,8 +1,8 @@
 {
     "Name": "CIDAR",
-    "Volume": "10,000",
+    "Volume": 10000,
     "Unit": "sentences",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Script": "Arab",
     "Form": "text",
     "Collection Style": ["crwling", "LLM generated", "manual curation"],
@@ -21,7 +21,7 @@
     "Subsets": [],
     "Dialect": "Modern Stadard Arabic",
 
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": ["instruction tuning", "question answering"],
     "Derived From": ["AlpaGasus"]   
 }

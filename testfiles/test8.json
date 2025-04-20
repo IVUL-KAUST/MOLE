@@ -1,8 +1,8 @@
 {
     "Name": "example-dataset",
-    "Volume": "5,000",
+    "Volume": 5000,
     "Unit": "sentences",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Script": "Arab",
     "Form": "text",
     "Collection Style": ["crawling", "annotation"],
@@ -21,7 +21,7 @@
     "Subsets": [],
     "Dialect": "Modern Standard Arabic",
 
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": ["sentiment analysis"],
     "Derived From": []   
 }
