@@ -160,7 +160,7 @@
         "question": "Write a brief description about the dataset",
         "answer_type": "str",
         "answer_min": 0,
-        "answer_max": 5
+        "answer_max": 15
     },
     "Volume": {
         "question": "What is the size of the dataset?. If the dataset is multilingual only use the size of the Arabic dataset",
@@ -210,8 +210,8 @@
         "question": "What entity is the provider of the dataset? Don't use Team.",
         "answer_type": "List[str]",
         "validation_group": "ACCESSABILITY",
-        "answer_min": 0,
-        "answer_max": 2
+        "answer_min": 1,
+        "answer_max": 3
     },
     "Derived From": {
         "question": "What datasets were used to create the dataset?",
@@ -232,14 +232,14 @@
     "Tokenized": {
         "question": "Is the dataset tokenized?",
         "options": [
-            "Yes",
-            "No"
+            true,
+            false
         ],
         "option_description": {
-            "Yes": "The dataset is tokenized. Tokenized means the words are split using a morphological analyzer",
-            "No": "The dataset is not tokenized"
+            "true": "The dataset is tokenized. Tokenized means the words are split using a morphological analyzer",
+            "false": "The dataset is not tokenized"
         },
-        "answer_type": "str",
+        "answer_type": "bool",
         "validation_group": "CONTENT",
         "answer_min": 1,
         "answer_max": 1
@@ -299,14 +299,14 @@
     "Test Split": {
         "question": "Does the dataset contain a train/valid and test split?",
         "options": [
-            "Yes",
-            "No"
+            true,
+            false
         ],
         "option_description": {
-            "Yes": "The dataset contains a train/valid and test split",
-            "No": "The dataset does not contain a train/valid or test split"
+            "true": "The dataset contains a train/valid and test split",
+            "false": "The dataset does not contain a train/valid or test split"
         },
-        "answer_type": "str",
+        "answer_type": "bool",
         "validation_group": "EVALUATION",
         "answer_min": 1,
         "answer_max": 1
@@ -382,7 +382,7 @@
         "answer_min": 1
     },
     "Abstract": {
-        "question": "What is the abstract of the paper? replace any double quotes in the abstract by'",
+        "question": "What is the abstract of the paper? replace any double quotes in the abstract by single quotes '",
         "answer_type": "str",
         "answer_min": 5
     }
