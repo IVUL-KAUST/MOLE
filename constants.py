@@ -103,7 +103,8 @@ eval_datasets = {}
 
 for schema in eval_datasets_ids:
     for split in eval_datasets_ids[schema]:
-        eval_datasets[schema] = {}
+        if schema not in eval_datasets:
+            eval_datasets[schema] = {}
         eval_datasets[schema][split] = [json.load(open(f)) for f in glob(f"evals/{schema}/{split}/**.json")]
 
 non_browsing_models = [
