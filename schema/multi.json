@@ -341,7 +341,8 @@
             "meter classification",
             "natural language inference",
             "instruction tuning",
-            "Linguistic acceptability"
+            "Linguistic acceptability",
+            "other"
         ],
         "answer_type": "List[str]",
         "validation_group": "EVALUATION",

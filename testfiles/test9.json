@@ -1,8 +1,8 @@
 {
     "Name": "",
-    "Volume": "",
+    "Volume": 0,
     "Unit": "images",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Script": "Arab-Latin",
     "Form": "images",
     "Collection Style": ["other"],
@@ -21,7 +21,7 @@
     "Subsets": [],
     "Dialect": "mixed",
 
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": ["other"],
     "Derived From": []  
 }
