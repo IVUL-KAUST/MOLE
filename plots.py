@@ -17,11 +17,46 @@ args.add_argument("--use_annotations_paper", action="store_true")
 args.add_argument("--schema", type = str, default = 'ar')
 args.add_argument("--type", type = str, default = "zero_shot")
 args.add_argument("--results_path", type = str, default = "static/results_latex")
+args.add_argument("--length", action="store_true")
 
 args = args.parse_args()
 
 # evaluation_subsets = schema[args.schema]['evaluation_subsets']
 
+def plot_by_length():
+    ids = eval_datasets_ids[args.schema][args.eval]
+    metric_results = {}
+    for json_file in json_files:
+        results = json.load(open(json_file))
+        arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
+        if arxiv_id not in ids:
+            continue
+        model_name = results["config"]["model_name"]
+        if model_name in non_browsing_models:
+            continue
+        if model_name not in metric_results:
+            metric_results[model_name] = []
+        metric_results[model_name].append(
+            [
+                results["length_forcing"],
+            ]
+        )
+    
+    final_results = {}
+
+    for model_name in metric_results:
+        if len(metric_results[model_name]) == len(ids):
+            final_results[model_name] = metric_results[model_name]
+    
+    results = []
+    for model_name in final_results:
+        results.append(
+            [model_name] + (np.mean(final_results[model_name], axis=0)).tolist()
+        )
+    print(results)
+    headers = ["MODEL", "LENGTH"]
+    print_table(results, headers)
+    
 def plot_by_cost():
     ids = eval_datasets_ids[args.schema][args.eval]
     metric_results = {}
@@ -395,10 +430,11 @@ if __name__ == "__main__":
     #         for file in json_files
     #         if any(model.lower() in file.lower() for model in args.models.split(","))
     #     ]
-
     if args.type == 'few_shot':
         json_files = glob(f"{args.results_path}/**/zero_shot/*.json")
         plot_few_shot(lang=args.schema)
+    elif args.length:
+        plot_by_length()
     elif args.year:
         plot_by_year()
     elif args.cost:
