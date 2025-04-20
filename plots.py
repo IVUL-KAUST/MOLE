@@ -23,10 +23,11 @@ args = args.parse_args()
 # evaluation_subsets = schema[args.schema]['evaluation_subsets']
 
 def plot_by_cost():
+    ids = eval_datasets_ids[args.schema][args.eval]
     metric_results = {}
     for json_file in json_files:
         results = json.load(open(json_file))
-        arxiv_id = json_file.split("/")[-2].replace("_arXiv", "")
+        arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
         if arxiv_id not in ids:
             continue
         model_name = results["config"]["model_name"]
@@ -42,7 +43,7 @@ def plot_by_cost():
                 results["cost"]["cost"],
             ]
         )
-
+    
     final_results = {}
     for model_name in metric_results:
         if len(metric_results[model_name]) == len(ids):
@@ -383,7 +384,6 @@ def plot_subsets(lang = 'ar'):
 if __name__ == "__main__":
     json_files = glob(f"{args.results_path}/**/{args.type}/*.json")
     # print(json_files)
-    ids = []
     if args.schema == 'all':
         langs = ['ar', 'en', 'jp', 'fr', 'ru']
     else:
