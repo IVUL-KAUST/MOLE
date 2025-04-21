@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ## Validation
 ```bash
-model_name="gemini-flash-1.5"
+model_name="google/gemini-flash-1.5"
 for schema in ar
 do
     python evaluate.py --models $model_name -mv --schema $schema -o --few_shot 0 --results_path results_pdf_docling --use_pdf --pdf_mode docling
