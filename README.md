@@ -36,5 +36,12 @@ do
     python evaluate.py --models $model_name -mv --schema $schema -o --few_shot 0 --results_path results_pdf_plumber --use_pdf --pdf_mode plumber
     python evaluate.py --models $model_name -mv --schema $schema -o --few_shot 0 --results_path results_latex
 done
+```
 
+## Plots 
+
+```
+python plots.py --schema ar
+python plots.py --cost
+python plots.py --length
 ```
