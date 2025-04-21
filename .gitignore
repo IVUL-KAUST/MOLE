@@ -6,3 +6,4 @@ questions.txt
 scripts/*.sh
 
 venv
+__pycache__
