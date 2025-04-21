@@ -3,7 +3,7 @@
         "question": "What is the name of the dataset?",
         "answer_type": "str",
         "answer_min": 1,
-        "answer_max": 1
+        "answer_max": 5
     },
     "Link": {
         "question": "What is the link to access the dataset? The link must contain the dataset. If the dataset is hosted on HuggingFace, use the HF Link.",
@@ -22,27 +22,46 @@
     "License": {
         "question": "What is the license of the dataset?",
         "options": [
+            "Apache-1.0",
             "Apache-2.0",
             "Non Commercial Use - ELRA END USER",
             "BSD",
+            "CC BY 1.0",
             "CC BY 2.0",
             "CC BY 3.0",
             "CC BY 4.0",
+            "CC BY-NC 1.0",
             "CC BY-NC 2.0",
-            "CC BY-NC-ND 4.0",
-            "CC BY-SA 3.0",
+            "CC BY-NC 3.0",
             "CC BY-NC 4.0",
-            "CC BY-NC-SA 3.0",
-            "CC BY-NC-SA 4.0",
+            "CC BY-NC-ND 1.0",
+            "CC BY-NC-ND 2.0",
+            "CC BY-NC-ND 3.0",
+            "CC BY-NC-ND 4.0",
+            "CC BY-SA 1.0",
+            "CC BY-SA 2.0",
             "CC BY-SA 3.0",
             "CC BY-SA 4.0",
+            "CC BY-NC 1.0",
+            "CC BY-NC 2.0",
+            "CC BY-NC 3.0",
+            "CC BY-NC 4.0",
+            "CC BY-NC-SA 1.0",
+            "CC BY-NC-SA 2.0",
+            "CC BY-NC-SA 3.0",
+            "CC BY-NC-SA 4.0",
             "CC0",
             "CDLA-Permissive-1.0",
+            "CDLA-Permissive-2.0",
+            "GPL-1.0",
             "GPL-2.0",
+            "GPL-3.0",
             "LDC User Agreement",
+            "LGPL-2.0",
             "LGPL-3.0",
             "MIT License",
             "ODbl-1.0",
+            "MPL-1.0",
             "MPL-2.0",
             "ODC-By",
             "unknown",
@@ -93,7 +112,7 @@
         "answer_type": "List[str]",
         "validation_group": "CONTENT",
         "answer_min": 1,
-        "answer_max": 12
+        "answer_max": 11
     },
     "Form": {
         "question": "What is the form of the data?",
@@ -128,13 +147,13 @@
         "answer_type": "List[str]",
         "validation_group": "CONTENT",
         "answer_min": 1,
-        "answer_max": 6
+        "answer_max": 5
     },
     "Description": {
         "question": "Write a brief description about the dataset",
         "answer_type": "str",
         "answer_min": 0,
-        "answer_max": 15
+        "answer_max": 50
     },
     "Volume": {
         "question": "What is the size of the dataset?. If the dataset is multilingual only use the size of the English dataset",
@@ -185,7 +204,7 @@
         "answer_type": "List[str]",
         "validation_group": "ACCESSABILITY",
         "answer_min": 1,
-        "answer_max": 3
+        "answer_max": 5
     },
     "Derived From": {
         "question": "What datasets were used to create the dataset?",
@@ -266,7 +285,7 @@
     },
     "Cost": {
         "question": "If the dataset is not free, what is the cost?",
-        "answer_type": "str",
+        "answer_type": "float",
         "validation_group": "ACCESSABILITY",
         "answer_min": 0
     },
@@ -321,7 +340,7 @@
         "answer_type": "List[str]",
         "validation_group": "EVALUATION",
         "answer_min": 1,
-        "answer_max": 3
+        "answer_max": 5
     },
     "Venue Title": {
         "question": "What is the venue title of the published paper?",
@@ -354,7 +373,8 @@
     "Affiliations": {
         "question": "What are the affiliations of the authors?",
         "answer_type": "List[str]",
-        "answer_min": 1
+        "answer_min": 1,
+        "answer_max": 5
     },
     "Abstract": {
         "question": "What is the abstract of the paper? replace any double quotes in the abstract by single quotes '",
