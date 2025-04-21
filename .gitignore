@@ -4,3 +4,6 @@ static/*
 questions.txt
 *.sh
 scripts/*.sh
+
+venv
+__pycache__
