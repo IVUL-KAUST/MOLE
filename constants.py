@@ -155,7 +155,7 @@ for schema_file in os.listdir("schema"):
         The 'Output Schema' is a JSON with the following format key:answer where the answer represents an answer to the question. 
         The 'Input Schema' has the following main fields for each key:
         'question': A question that needs to be answered.
-        'options' : If the 'qustion' has 'options' then the question can be answered by choosing one or more options depending on 'answer_min' and 'answer_max'
+        'options' : If the 'question' has 'options' then the question can be answered by choosing one or more options depending on 'answer_min' and 'answer_max'
         'options_description': A description of the 'options' that might be unclear. Use the descriptions to understand the options. 
         'answer_type': the type of the answer to the 'question'. The answer must follow the type of the answer. 
         'answer_min' : If the 'answer_type' is List[str], then it defines the minimum number of list items in the answer. Otherwise it defines the minimum number of words in the answer.
@@ -188,7 +188,7 @@ for schema_file in os.listdir("schema"):
     for c in schema:
         if "validation_group" in schema[c]:
             group = schema[c]["validation_group"]
-            if group not in evaluation_subsets:
+            if group not in evaluation_subsets:differences
                 evaluation_subsets[group] = []
             evaluation_subsets[group].append(c)
 
