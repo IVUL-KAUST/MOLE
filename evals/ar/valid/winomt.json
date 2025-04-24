@@ -80,5 +80,7 @@
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
-        "Affiliations": 1    }
+        "Affiliations": 1,
+        "Abstract": 1
+    }
 }

@@ -57,6 +57,7 @@
     
     "annotations_from_paper": {
         "Name": 1,
+        "Subsets": 1,
         "Link": 1,
         "HF Link": 0,
         "License": 0,

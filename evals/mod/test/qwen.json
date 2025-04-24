@@ -49,6 +49,9 @@
         "Shuai Bai",
         "Yunfei Chu"
     ],
+    "Affiliations": [
+        "QwenLM"
+    ],
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
