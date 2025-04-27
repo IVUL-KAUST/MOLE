@@ -39,7 +39,6 @@ if __name__ == "__main__":
     models = args.models.split(",")
     len_data = len(data_names)
     curr_idx = [0,len(data_names) * len(models)]
-    print(paper_links)
     for data_name, title, paper_link, year, link in zip(data_names, titles, paper_links, years, links):
         if title != "":
             title = title.replace("\r\n", " ")
