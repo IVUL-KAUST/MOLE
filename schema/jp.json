@@ -222,6 +222,14 @@
         "answer_type": "str",
         "answer_min": 1
     },
+    "Script": {
+        "question": "What is the script of this dataset?",
+        "options": ["Hiragana", "Katakana", "Kanji", "mixed"],
+        "answer_type": "str",
+        "validation_group": "CONTENT",
+        "answer_min": 1,
+        "answer_max": 1
+    },
     "Tokenized": {
         "question": "Is the dataset tokenized?",
         "options": [
