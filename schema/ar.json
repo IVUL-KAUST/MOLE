@@ -234,8 +234,8 @@
         "question": "What entity is the provider of the dataset? Don't use Team.",
         "answer_type": "List[str]",
         "validation_group":"ACCESSABILITY",
-        "answer_min": 1,
-        "answer_max": 5
+        "answer_min": 0,
+        "answer_max": 10
     },
     "Derived From": {
         "question": "What datasets were used to create the dataset?",
@@ -398,13 +398,13 @@
         "question": "Who are the authors of the paper?",
         "answer_type": "List[str]",
         "answer_min": 1,
-        "answer_max": 5
+        "answer_max": 20
     },
     "Affiliations": {
         "question": "What are the affiliations of the authors?",
         "answer_type": "List[str]",
-        "answer_min": 1,
-        "answer_max": 5
+        "answer_min": 0,
+        "answer_max": 20
     },
     "Abstract": {
         "question": "What is the abstract of the paper? replace any double quotes in the abstract by single quotes '",
