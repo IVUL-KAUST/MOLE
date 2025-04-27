@@ -24,36 +24,39 @@ args = args.parse_args()
 # evaluation_subsets = schema[args.schema]['evaluation_subsets']
 
 def plot_by_length():
-    ids = eval_datasets_ids[args.schema][args.eval]
+    if args.schema == 'all':
+        ids = []
+        for lang in ['ar', 'en', 'jp', 'fr', 'ru', 'multi']:
+            ids.extend(eval_datasets_ids[lang][args.eval])
+    else:
+        ids = eval_datasets_ids[args.schema][args.eval]
     metric_results = {}
+    found_ids = []
     for json_file in json_files:
         results = json.load(open(json_file))
+        model_name = results["config"]["model_name"]
+
+        if model_name in non_browsing_models:
+            continue
         arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
         if arxiv_id not in ids:
             continue
-        model_name = results["config"]["model_name"]
-        if model_name in non_browsing_models:
-            continue
+        else:
+            found_ids.append(arxiv_id)
         if model_name not in metric_results:
             metric_results[model_name] = []
-        metric_results[model_name].append(
-            [
-                results["length_forcing"],
-            ]
-        )
+        metric_results[model_name].append([results["length_forcing"]])
     
     final_results = {}
 
     for model_name in metric_results:
         if len(metric_results[model_name]) == len(ids):
             final_results[model_name] = metric_results[model_name]
-    
     results = []
     for model_name in final_results:
         results.append(
             [model_name] + (np.mean(final_results[model_name], axis=0)).tolist()
         )
-    print(results)
     headers = ["MODEL", "LENGTH"]
     print_table(results, headers)
     
