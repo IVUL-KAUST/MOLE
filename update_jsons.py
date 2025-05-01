@@ -1,6 +1,6 @@
 import json
 
-def get_base_schema(has_subsets = False):
+def get_base_schema(has_subsets = False, lang = "ar"):
     with open("schema/ar.json", 'r') as f:
         base_schema = json.load(f)
 
@@ -8,7 +8,11 @@ def get_base_schema(has_subsets = False):
     if not has_subsets:
         del base_schema['Subsets']
     del base_schema["Language"]["option_description"]["ar"]
-    del base_schema["Script"]
+    if lang == "jp":
+        base_schema["Script"]["options"] = ["Hiragana", "Katakana", "Kanji", "mixed"]
+        del base_schema["Script"]["option_description"]
+    else:
+        del base_schema["Script"]
     return base_schema
 
 langs = ['en', 'jp', 'ru', 'fr', 'multi']
@@ -19,7 +23,7 @@ full_names = {
     'ru': 'russian'
 }
 for lang in langs:
-    base_schema = get_base_schema(has_subsets= (lang == 'multi'))
+    base_schema = get_base_schema(has_subsets= (lang == 'multi'), lang = lang)
     if lang == 'multi':
         base_schema["Language"]["options"] = ["Arabic", "English", "French", "Spanish", "German", "Greek", "Bulgarian", "Russian", "Turkish", "Vietnamese", "Thai", "Chinese", "Simplified Chinese", "Hindi", "Swahili", "Urdu", "Bengali", "Finnish", "Japanese", "Korean", "Telugu", "Indonesian", "Italian", "Polish", "Portuguese"]
         base_schema["Language"]["answer_type"] = "List[str]"
