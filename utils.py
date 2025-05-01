@@ -274,8 +274,8 @@ def evaluate_lengths(pred_metadata, schema = "ar"):
         if pred_len >= r[0] and (pred_len <=r[1] or r[1] < 0):
             length_forcing += 1/len(columns)
         else:
-            print(c, pred_len)
-            print(pred_metadata[c])
+            # print(c, pred_len)
+            # print(pred_metadata[c])
             pass
     return length_forcing
      
@@ -724,17 +724,12 @@ def fix_json(json_str: str) -> str:
 
         return loaded_json
     except json.JSONDecodeError as e:
-        print(json_str)
-        print(e)
-        print("⚠ warning: can not read the josn, using empty {}")
-        return {}
+        raise e
 
 
 def read_json(text_json):
     text_json = text_json.replace("```json", "").replace("```", "")
     fixed_json = fix_json(text_json)
-    if not isinstance(fixed_json, dict):
-        raise ("Must be json")
     return fixed_json
 
 

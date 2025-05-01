@@ -1,5 +1,5 @@
 import json
-from utils import validate, fix_options, cast, fill_missing, evaluate_metadata, postprocess, fetch_repository_metadata
+from utils import validate, fix_options, cast, fill_missing, evaluate_metadata, postprocess, fetch_repository_metadata, evaluate_lengths
 from constants import *
 from pages.search import get_metadatav2
 
@@ -122,3 +122,12 @@ results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/24
 for m in results:
     assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
 print('✅ passed test10 [different tasks]')
+
+with open('testfiles/test11.json', 'r') as f:
+    metadata = json.load(f)
+
+results = evaluate_lengths(metadata, schema = "ar")
+
+assert results == 0.96875, f'❌ results should be 0.96875 but got {results}'
+print('✅ passed test11 [evaluate lengths]')
+
