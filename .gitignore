@@ -1,5 +1,6 @@
 __pycache__/*
-static/*
+static/papers
+static/results
 .env
 questions.txt
 *.sh
@@ -7,3 +8,4 @@ scripts/*.sh
 
 venv
 __pycache__
+*playground*
