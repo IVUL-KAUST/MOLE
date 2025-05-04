@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "JESC: Japanese-English Subtitle Corpus",
+        "Link": "https://nlp.stanford.edu/projects/jesc/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "multilingual",
+        "Domain": [
+            "social media",
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind.",
+        "Volume": 3240661.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Stanford University",
+            "Rakuten Institute of Technology",
+            "Google Brain"
+        ],
+        "Derived From": [],
+        "Paper Title": "JESC: Japanese-English Subtitle Corpus",
+        "Paper Link": "https://arxiv.org/abs/1710.10639",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Reid Pryzant",
+            "Youngjoo Chung",
+            "Dan Jurafsky",
+            "Denny Britz"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Rakuten Institute of Technology",
+            "Google Brain"
+        ],
+        "Abstract": "In this paper we describe the Japanese-English Subtitle Corpus (JESC). JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind. The corpus was assembled by crawling and aligning subtitles found on the web. The assembly process incorporates a number of novel preprocessing elements to ensure high monolingual fluency and accurate bilingual alignments. We summarize its contents and evaluate its quality using human experts and baseline machine translation (MT) systems."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0009597,
+        "input_tokens": 8184,
+        "output_tokens": 492
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1710.10639"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
