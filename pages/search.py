@@ -634,8 +634,9 @@ def run(
                             # add emoji for time
                             logger.info(f"⏰ Inference finished in {time.time() - start_time:.2f} seconds")
                             model_results[model_name] = results
-                    except:
+                    except Exception as e:
                         logger.info(f"Error saving results to {save_path}")
+                        logger.info(e)
                         if os.path.exists(save_path):
                             os.remove(save_path)
                    
