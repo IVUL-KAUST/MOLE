@@ -637,6 +637,7 @@ def run(
                     except Exception as e:
                         logger.info(f"Error saving results to {save_path}")
                         logger.info(e)
+                        logger.info(results)
                         if os.path.exists(save_path):
                             os.remove(save_path)
                    
