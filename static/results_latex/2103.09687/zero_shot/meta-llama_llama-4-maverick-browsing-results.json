@@ -1,0 +1,108 @@
+{
+    "metadata": {
+        "Name": "DODa",
+        "Subsets": [
+            {
+                "Name": "Verbs",
+                "Volume": 800,
+                "Unit": "verbs",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Nouns",
+                "Volume": 900,
+                "Unit": "nouns",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Adjectives",
+                "Volume": null,
+                "Unit": "adjectives",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Masculine-Feminine-Plural Matching",
+                "Volume": 900,
+                "Unit": "nouns",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Verb-to-Noun",
+                "Volume": 850,
+                "Unit": "verbs",
+                "Dialect": "Morocco"
+            }
+        ],
+        "Link": "https://github.com/darija-open-dataset/dataset",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "Morocco",
+        "Domain": [
+            "captions",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "LLM generated"
+        ],
+        "Description": "Darija Open Dataset (DODa) is an open-source project for the Moroccan dialect. With more than 10,000 entries DODa is arguably the largest open-source collaborative project for Darija-English translation built for Natural Language Processing purposes.",
+        "Volume": 150000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Aissam Outchakoucht",
+            "Hamza Es-Samaali"
+        ],
+        "Derived From": [],
+        "Paper Title": "Moroccan Dialect -Darija- Open Dataset",
+        "Paper Link": "https://arxiv.org/abs/2103.09687",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "language modeling",
+            "named entity recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Aissam Outchakoucht",
+            "Hamza Es-Samaali"
+        ],
+        "Affiliations": [],
+        "Abstract": "Darija Open Dataset (DODa) is an open-source project for the Moroccan dialect. With about 150,000 entries, DODa is arguably the largest open-source collaborative project for Darija <=> English translation built for Natural Language Processing purposes. In fact, besides semantic categorization, DODa also adopts a syntactic one, presents words under different spellings, offers verb-to-noun and masculine-to-feminine correspondences, contains the conjugation of hundreds of verbs in different tenses, as well as more than 86,000 translated sentences. Additionally, DODa takes into account the diversity of Darija spellings used in various contexts, making it a versatile resource for language enthusiasts and NLP practitioners. The dataset includes entries written in both Latin and Arabic alphabets, reflecting the linguistic variations and preferences found in different sources and applications. Our primary goal is to establish DODa as the go-to reference for NLP in Darija. By providing a robust and diverse dataset, we aim to facilitate the development of NLP applications that can cater to the specific linguistic needs of the Moroccan community. While we have made significant progress in compiling and organizing the dataset, it's important to note that parts of the dataset are still either under review or in progress, especially in the *sentences.csv* file. We welcome contributions from the Moroccan IT community to help us refine and expand the dataset further, ensuring its accuracy and completeness. Together, we can build a powerful foundation for future NLP innovations tailored to Moroccan culture and language."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0034484599999999995,
+        "input_tokens": 13080,
+        "output_tokens": 1479
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.09687"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,313 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [
+            {
+                "Name": "ar",
+                "Volume": 183551222,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "bg",
+                "Volume": 190509195,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "ca",
+                "Volume": 143746026,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "cs",
+                "Volume": 156792129,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "da",
+                "Volume": 150551293,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "de",
+                "Volume": 156744752,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "el",
+                "Volume": 195456401,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "en",
+                "Volume": 145491677,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "es",
+                "Volume": 145387551,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "et",
+                "Volume": 21961619,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "fa",
+                "Volume": 180093656,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "fi",
+                "Volume": 95175890,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "fr",
+                "Volume": 147560734,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "he",
+                "Volume": 177231613,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "hi",
+                "Volume": 177698330,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "hr",
+                "Volume": 154151689,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "hu",
+                "Volume": 160702240,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "id",
+                "Volume": 152560050,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "it",
+                "Volume": 147520094,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "ja",
+                "Volume": 193679570,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "ko",
+                "Volume": 174523416,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "lt",
+                "Volume": 165319919,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "lv",
+                "Volume": 76256241,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "ms",
+                "Volume": 155268778,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "nl",
+                "Volume": 150737871,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "no",
+                "Volume": 152431612,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "pl",
+                "Volume": 159684112,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "pt",
+                "Volume": 145627857,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "ro",
+                "Volume": 96369897,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "ru",
+                "Volume": 200717423,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "sk",
+                "Volume": 134174889,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "sl",
+                "Volume": 148140079,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "sr",
+                "Volume": 183437513,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "sv",
+                "Volume": 157058369,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "th",
+                "Volume": 360409343,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "tl",
+                "Volume": 47104871,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "tr",
+                "Volume": 164456506,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "uk",
+                "Volume": 198251631,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "vi",
+                "Volume": 141062258,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "zh",
+                "Volume": 165056969,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A dataset for massive multilingual named entity recognition.",
+        "Volume": 183551222.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/1410.3791",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Vivek Kulkarni",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 0.9375,
+    "cost": {
+        "cost": 0.0063872,
+        "input_tokens": 14475,
+        "output_tokens": 2009
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "RuCoLA",
+        "Link": "https://github.com/RussianNLP/RuCoLA",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "news articles",
+            "wikipedia",
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "RuCoLA is a Russian Corpus of Linguistic Acceptability containing 13.4k sentences labeled as acceptable or not.",
+        "Volume": 13400.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SberDevices",
+            "ABBYY",
+            "HSE University",
+            "Yandex",
+            "Huawei Noah's Ark Lab",
+            "Center for Information and Language Processing (CIS), MaiNLP lab, LMU Munich"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuCoLA: Russian Corpus of Linguistic Acceptability",
+        "Paper Link": "https://arxiv.org/abs/2210.12814",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "Linguistic acceptability"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "2022 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Vladislav Mikhailov",
+            "Tatiana Shamardina",
+            "Max Ryabinin",
+            "Alena Pestova",
+            "Ivan Smurov",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "SberDevices",
+            "ABBYY",
+            "HSE University",
+            "Yandex",
+            "Huawei Noah's Ark Lab",
+            "Center for Information and Language Processing (CIS), MaiNLP lab, LMU Munich"
+        ],
+        "Abstract": "This paper introduces RuCoLA, a novel benchmark of 13.4k sentences labeled as acceptable or not, created to assess the linguistic competence of language models for Russian."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0055942299999999995,
+        "input_tokens": 28549,
+        "output_tokens": 886
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12814"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

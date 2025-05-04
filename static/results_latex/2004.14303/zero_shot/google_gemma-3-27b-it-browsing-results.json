@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "TUNIZI",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "TUNIZI is the first Tunisian Arabizi Dataset including 3K sentences, balanced, covering different topics, preprocessed and annotated as positive and negative.",
+        "Volume": 3000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "iCompass team"
+        ],
+        "Derived From": [],
+        "Paper Title": "TUNIZI: a Tunisian Arabizi sentiment analysis Dataset",
+        "Paper Link": "https://arxiv.org/abs/2004.14303",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "AfricaNLP Workshop, Putting Africa on the NLP Map",
+        "Venue Type": "workshop",
+        "Venue Name": "ICLR 2020",
+        "Authors": [
+            "Fourati, Chayma",
+            "Messaoudi, Abir",
+            "Haddad, Hatem"
+        ],
+        "Affiliations": [],
+        "Abstract": "TUNIZI is the first Tunisian Arabizi Dataset including 3K sentences, balanced, covering different topics, preprocessed and annotated as positive and negative."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0004997,
+        "input_tokens": 3944,
+        "output_tokens": 396
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14303"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

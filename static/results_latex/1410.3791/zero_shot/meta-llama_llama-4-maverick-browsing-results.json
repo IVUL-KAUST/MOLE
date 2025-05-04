@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/polyglot_ner",
+        "HF Link": "https://huggingface.co/datasets/polyglot_ner",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A training dataset for named entity recognition",
+        "Volume": 12.54,
+        "Unit": "documents",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/1410.3791",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Al-Rfou, Rami",
+            "Kulkarni, Vivek",
+            "Perozzi, Bryan",
+            "Skiena, Steven"
+        ],
+        "Affiliations": [],
+        "Abstract": "We present a high-quality named entity recognition (NER) system for the Arabic language"
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0021168,
+        "input_tokens": 10746,
+        "output_tokens": 342
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

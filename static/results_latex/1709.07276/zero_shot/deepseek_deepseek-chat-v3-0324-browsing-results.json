@@ -1,0 +1,87 @@
+{
+    "metadata": {
+        "Name": "MGB-3",
+        "Subsets": [
+            {
+                "Name": "Egyptian",
+                "Volume": 16,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            }
+        ],
+        "Link": "http://www.mgb-challenge.org/workshop.html",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "Egypt",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "The MGB-3 dataset focuses on Egyptian dialectal Arabic from YouTube videos across seven genres.",
+        "Volume": 16.0,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "University of Edinburgh"
+        ],
+        "Derived From": [
+            "MGB-2"
+        ],
+        "Paper Title": "Speech Recognition Challenge in the Wild: Arabic MGB-3",
+        "Paper Link": "https://arxiv.org/abs/1709.07276",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "dialect identification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Ahmed Ali",
+            "Stephan Vogel",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU",
+            "University of Edinburgh"
+        ],
+        "Abstract": "This paper describes the Arabic MGB-3 Challenge -- Arabic Speech Recognition in the Wild. Unlike last year's Arabic MGB-2 Challenge, for which the recognition task was based on more than 1,200 hours broadcast TV news recordings from Aljazeera Arabic TV programs, MGB-3 emphasises dialectal Arabic using a multi-genre collection of Egyptian YouTube videos. Seven genres were used for the data collection: comedy, cooking, family/kids, fashion, drama, sports, and science (TEDx). A total of 16 hours of videos, split evenly across the different genres, were divided into adaptation, development and evaluation data sets. The Arabic MGB-Challenge comprised two tasks: A) Speech transcription, evaluated on the MGB-3 test set, along with the 10 hour MGB-2 test set to report progress on the MGB-2 evaluation; B) Arabic dialect identification, introduced this year in order to distinguish between four major Arabic dialects -- Egyptian, Levantine, North African, Gulf, as well as Modern Standard Arabic. Two hours of audio per dialect were released for development and a further two hours were used for evaluation. For dialect identification, both lexical features and i-vector bottleneck features were shared with participants in addition to the raw audio recordings. Overall, thirteen teams submitted ten systems to the challenge. We outline the approaches adopted in each system, and summarise the evaluation results."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.013864379999999999,
+        "input_tokens": 17093,
+        "output_tokens": 1302
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

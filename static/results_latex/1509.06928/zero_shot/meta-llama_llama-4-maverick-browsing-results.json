@@ -1,0 +1,119 @@
+{
+    "metadata": {
+        "Name": "Arabic Dialect ID Corpus",
+        "Subsets": [
+            {
+                "Name": "Egyptian",
+                "Volume": 13,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 9.5,
+                "Unit": "hours",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "Levantine",
+                "Volume": 11,
+                "Unit": "hours",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "North African",
+                "Volume": 9,
+                "Unit": "hours",
+                "Dialect": "Tunisia"
+            },
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 10,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "http://alt.qcri.org/resources/ArabicDialectIDCorpus/",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles",
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A corpus for Arabic dialect identification collected from broadcast news.",
+        "Volume": 52.5,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "QCRI",
+            "MIT",
+            "JHU"
+        ],
+        "Derived From": [],
+        "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
+        "Paper Link": "https://www.isca-speech.org/archive/interspeech_2016/ali16_interspeech.pdf",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "QCRI Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "language identification"
+        ],
+        "Venue Title": "Interspeech",
+        "Venue Type": "conference",
+        "Venue Name": "Interspeech 2016",
+        "Authors": [
+            "Ahmed Ali",
+            "Najim Dehak",
+            "Patrick Cardinal",
+            "Sameer Khurana",
+            "Sree Harsha Yella",
+            "James Glass",
+            "Peter Bell",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "QCRI",
+            "MIT",
+            "JHU",
+            "ETS",
+            "University of Edinburgh"
+        ],
+        "Abstract": "This paper presents a study on automatic dialect detection in Arabic broadcast speech. The authors collected a corpus of broadcast news in four Arabic dialects and Modern Standard Arabic. They investigated different approaches for dialect identification using phonetic and lexical features obtained from a speech recognition system, and bottleneck features using the i-vector framework. The results showed that the i-vector approach achieved the best performance with an accuracy of 59.2% in identifying the five dialects."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.006716199999999999,
+        "input_tokens": 27765,
+        "output_tokens": 1241
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

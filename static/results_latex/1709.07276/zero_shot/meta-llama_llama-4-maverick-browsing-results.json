@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "Name": "MGB-3 Arabic Dataset",
+        "Subsets": [
+            {
+                "Name": "Egyptian YouTube videos",
+                "Volume": 16,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "MGB-2 training data",
+                "Volume": 1200,
+                "Unit": "hours",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "ADI training data",
+                "Volume": 53.6,
+                "Unit": "hours",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "ADI development data",
+                "Volume": 10,
+                "Unit": "hours",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "ADI testing data",
+                "Volume": 10.1,
+                "Unit": "hours",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "http://www.mgb-challenge.org/workshop.html",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media",
+            "news articles"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "MGB-3 Arabic Challenge dataset for speech recognition and dialect identification",
+        "Volume": 1279.6,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "University of Edinburgh"
+        ],
+        "Derived From": [
+            "MGB-2 dataset"
+        ],
+        "Paper Title": "Speech Recognition Challenge in the Wild: Arabic MGB-3",
+        "Paper Link": "https://arxiv.org/abs/1706.00552",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "dialect identification"
+        ],
+        "Venue Title": "MGB-3 Challenge Workshop",
+        "Venue Type": "workshop",
+        "Venue Name": "MGB-3 Challenge Workshop",
+        "Authors": [
+            "Ahmed Ali",
+            "Stephan Vogel",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "Centre for Speech Technology Research, University of Edinburgh, UK"
+        ],
+        "Abstract": "This paper describes the Arabic MGB-3 Challenge -- Arabic Speech Recognition in the Wild. Unlike last year's Arabic MGB-2 Challenge, for which the recognition task was based on more than 1,200 hours broadcast TV news recordings from Aljazeera Arabic TV programs, MGB-3 emphasises dialectal Arabic using a multi-genre collection of Egyptian YouTube videos."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00406388,
+        "input_tokens": 17027,
+        "output_tokens": 1215
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,69 @@
+{
+    "metadata": {
+        "Name": "TED-Parallel-Corpus",
+        "Subsets": [],
+        "Link": "www.ted.com",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "TED parallel Corpora is a growing collection of Bilingual parallel corpora, Multilingual parallel corpora and Monolingual corpora extracted from TED talks for 109 world languages.",
+        "Volume": 0.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/1610.00572",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Mr. Ajinkya kulkarni"
+        ],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 0.9375,
+    "cost": {
+        "cost": 0.0035716999999999997,
+        "input_tokens": 17037,
+        "output_tokens": 745
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.00572"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
