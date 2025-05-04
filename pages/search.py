@@ -470,10 +470,9 @@ def run(
                         show_info(f"Can't browse the web for {model_name}")
 
 
-                    if not(model_name in non_browsing_models):
-                        if browse_web:
-                            model_name = f"{model_name}-browsing"
-                        save_path = f"{save_path}/{model_name}-results.json"
+                    if browse_web and not(model_name in non_browsing_models):
+                        model_name = f"{model_name}-browsing"
+                    save_path = f"{save_path}/{model_name}-results.json"
                     
                     if (
                         os.path.exists(save_path)
@@ -627,14 +626,19 @@ def run(
                     }
                     results["ratio_filling"] = compute_filling(metadata)
                     results["error"] = error
-                    with open(save_path, "w") as outfile:
-                        logger.info(f"📥 Results saved to: {save_path}")
-                        # print(results)
-                        json.dump(results, outfile, indent=4)
-                    # add emoji for time
-                    logger.info(f"⏰ Inference finished in {time.time() - start_time:.2f} seconds")
-                    model_results[model_name] = results
-
+                    try:
+                        with open(save_path, "w") as outfile:
+                            logger.info(f"📥 Results saved to: {save_path}")
+                            # print(results)
+                            json.dump(results, outfile, indent=4)
+                            # add emoji for time
+                            logger.info(f"⏰ Inference finished in {time.time() - start_time:.2f} seconds")
+                            model_results[model_name] = results
+                    except:
+                        logger.info(f"Error saving results to {save_path}")
+                        if os.path.exists(save_path):
+                            os.remove(save_path)
+                   
                     if st_context:
                         st.link_button(
                             "Open using Masader Form",
