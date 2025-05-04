@@ -307,7 +307,8 @@ def run(
     use_pdf=False,
     few_shot = 0,
     results_path = "results_latex",
-    pdf_mode = "plumber"
+    pdf_mode = "plumber",
+    repeat_on_error = False
 ):
     submitted = False
     st_context = False
@@ -485,13 +486,12 @@ def run(
                         )
                         results = json.load(open(save_path))
                         if results["error"] == None:
-                            if st_context:
-                                st.link_button(
-                                    f"{model_name} => Masader Form",
-                                    f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}",
-                                )
                             model_results[model_name] = results
                             continue
+                        else:
+                            if not repeat_on_error:
+                                model_results[model_name] = results
+                                continue
 
                     if model_name not in non_browsing_models:
                         if summarize:
@@ -752,6 +752,12 @@ def create_args():
         type=str,
         default="plumber",
         help="pdf mode to use",
+    )
+
+    parser.add_argument(
+        "--repeat_on_error",
+        action="store_true",
+        help="repeat on error",
     )
 
     # Parse arguments
