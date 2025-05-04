@@ -104,13 +104,14 @@ def get_metadatav2(
     few_shot = 0,
     max_retries = 3
 ):
-    predictions = {}
     cost = {
         "input_tokens": 0,
         "output_tokens": 0,
         "cost": 0,
     }
     for i in range(max_retries):
+        predictions = {}
+        error = None
         if paper_text != "":
             if few_shot > 0 :
                 examples  = ""
@@ -154,26 +155,34 @@ def get_metadatav2(
             base_url="https://openrouter.ai/api/v1"
         )
 
-        model_name = model_name.replace("_", "/")   
+        model_name = model_name.replace("_", "/")
+        model_name = model_name.replace("-browsing", "")
         message = client.chat.completions.create(
             model=model_name,
             messages=messages,
+            temperature=0.0,
         )
-
+        
         try:
+            
             response =  message.choices[0].message.content
-        except:
-            time.sleep(1)
-            logger.warning(f"Failed to get predictions for {model_name}, retrying ...")
-            continue
-        predictions = read_json(response)
-        if predictions != {}:
+            predictions = read_json(response)
             cost = get_cost(message)
+        except json.JSONDecodeError as e:
+            error = str(e)  
+        except Exception as e:
+            if message.choices is None:
+                error = message.error["message"]
+            else:
+                error = str(e)
+        if predictions != {}:
             break
         else:
+            print(error)
             logger.warning(f"Failed to get predictions for {model_name}, retrying ...")
-            time.sleep(1)
-    return message, predictions, cost
+            time.sleep(3)
+    time.sleep(3) # sleep before next prediction       
+    return message, predictions, cost, error
 
 def clean_latex(path):
     os.system(f"arxiv_latex_cleaner {path}")
@@ -446,6 +455,7 @@ def run(
                     os.makedirs(save_path, exist_ok=True)
                 paper_text = ""
                 for model_name in models:
+                    start_time = time.time()
                     model_name = model_name.replace("/", "_")
                     if model_name not in non_browsing_models and paper_text == "":
                         paper_text = extract_paper_text(paper_path, use_pdf = use_pdf, st_context=st_context, pdf_mode = pdf_mode)
@@ -459,11 +469,11 @@ def run(
                     if browse_web and (model_name in non_browsing_models):
                         show_info(f"Can't browse the web for {model_name}")
 
-                    if browse_web and not (model_name in non_browsing_models):
-                        save_path = f"{save_path}/{model_name}-browsing-results.json"
-                    else:
-                        save_path = f"{save_path}/{model_name}-results.json"
 
+                    if browse_web and not(model_name in non_browsing_models):
+                        model_name = f"{model_name}-browsing"
+                    save_path = f"{save_path}/{model_name}-results.json"
+                    
                     if (
                         os.path.exists(save_path)
                         and not overwrite
@@ -474,15 +484,14 @@ def run(
                             st_context=st_context,
                         )
                         results = json.load(open(save_path))
-                        if st_context:
-                            st.link_button(
-                                f"{model_name} => Masader Form",
-                                f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}",
-                            )
-                        if browse_web and not (model_name in non_browsing_models):
-                            model_name += "-browsing"
-                        model_results[model_name] = results
-                        continue
+                        if results["error"] == None:
+                            if st_context:
+                                st.link_button(
+                                    f"{model_name} => Masader Form",
+                                    f"https://masaderform-production.up.railway.app/?json_url=https://masaderbot-production.up.railway.app/app/{save_path}",
+                                )
+                            model_results[model_name] = results
+                            continue
 
                     if model_name not in non_browsing_models:
                         if summarize:
@@ -493,6 +502,7 @@ def run(
                         f"🧠 {model_name} is extracting Metadata ...",
                         st_context=st_context,
                     )
+                    error = None
                     if "jury" in model_name.lower() or "composer" in model_name.lower():
                         all_results = []
                         for file in glob(f"{save_path}/**.json"):
@@ -512,64 +522,50 @@ def run(
                     elif "baseline" in model_name.lower():
                         message, metadata = "", {}
                     else:
-                        if "gemini-1.5-pro" in model_name:
-                            show_info(f"⏰ Waiting ...", st_context=st_context)
-                            time.sleep(5)  # pro has 2 RPM 50 req/day
+                        base_model_path = save_path.replace("-browsing", "")
+                        if browse_web and os.path.exists(base_model_path):
+                            show_info(
+                                "📂 Loading saved results ...",
+                                st_context=st_context,
+                            )
+                            results = json.load(open(base_model_path))
+                            metadata = results["metadata"]
+                            cost = results["cost"]
+                        else:
+                            message, metadata, cost, error = get_metadatav2(
+                                paper_text, model_name, schema=schema, few_shot = few_shot
+                            )
+                        if browse_web:
+                            browsing_link = get_repo_link(
+                                metadata, repo_link=repo_link
+                            )
+                            show_info(
+                                f"📖 Extracting readme from {browsing_link}",
+                                st_context=st_context,
+                            )
+                            readme = fetch_repository_metadata(browsing_link)
 
-                        max_tries = 5
-                        for i in range(max_tries):
-                            try:
-                                base_model_path = save_path.replace("-browsing", "")
-                                if browse_web and os.path.exists(base_model_path):
-                                    show_info(
-                                        "📂 Loading saved results ...",
-                                        st_context=st_context,
-                                    )
-                                    results = json.load(open(base_model_path))
-                                    metadata = results["metadata"]
-                                    cost = results["cost"]
-                                else:
-                                    message, metadata, cost = get_metadatav2(
-                                        paper_text, model_name, schema=schema, few_shot = few_shot
-                                    )
-                                if browse_web:
-                                    browsing_link = get_repo_link(
-                                        metadata, repo_link=repo_link
-                                    )
-                                    show_info(
-                                        f"📖 Extracting readme from {browsing_link}",
-                                        st_context=st_context,
-                                    )
-                                    readme = fetch_repository_metadata(browsing_link)
-
-                                    if readme != "":
-                                        show_info(
-                                            f"🧠🌐 {model_name} is extracting data using metadata and web ...",
-                                            st_context=st_context,
-                                        )
-                                        message, metadata, browsing_cost = get_metadatav2(
-                                            model_name=model_name,
-                                            readme=readme,
-                                            metadata=metadata,
-                                            schema=schema,
-                                        )
-                                        cost = {
-                                            "cost": browsing_cost["cost"]
-                                            + cost["cost"],
-                                            "input_tokens": cost["input_tokens"]
-                                            + browsing_cost["input_tokens"],
-                                            "output_tokens": cost["output_tokens"]
-                                            + browsing_cost["output_tokens"],
-                                        }
-                                    else:
-                                        message = None
-                                break
-                            except:
-                                if i == max_tries - 1:
-                                    metadata = {}
-                                time.sleep(5)
-                                print(message)
-                                show_info(f"⏰ Retrying ...", st_context=st_context)
+                            if readme != "":
+                                show_info(
+                                    f"🧠🌐 {model_name} is extracting data using metadata and web ...",
+                                    st_context=st_context,
+                                )
+                                message, metadata, browsing_cost, error = get_metadatav2(
+                                    model_name=model_name,
+                                    readme=readme,
+                                    metadata=metadata,
+                                    schema=schema,
+                                )
+                                cost = {
+                                    "cost": browsing_cost["cost"]
+                                    + cost["cost"],
+                                    "input_tokens": cost["input_tokens"]
+                                    + browsing_cost["input_tokens"],
+                                    "output_tokens": cost["output_tokens"]
+                                    + browsing_cost["output_tokens"],
+                                }
+                            else:
+                                message = None
 
                     if model_name != "human":
                         if model_name in non_browsing_models:
@@ -619,8 +615,6 @@ def run(
                             "output_tokens": 0,
                         }
 
-                    if browse_web and not (model_name in non_browsing_models):
-                        model_name = f"{model_name}-browsing"
 
                     results["config"] = {
                         "model_name": model_name,
@@ -631,23 +625,21 @@ def run(
                         "link": article_url,
                     }
                     results["ratio_filling"] = compute_filling(metadata)
-
+                    results["error"] = error
                     try:
                         with open(save_path, "w") as outfile:
                             logger.info(f"📥 Results saved to: {save_path}")
                             # print(results)
                             json.dump(results, outfile, indent=4)
-                        model_results[model_name] = results
+                            # add emoji for time
+                            logger.info(f"⏰ Inference finished in {time.time() - start_time:.2f} seconds")
+                            model_results[model_name] = results
                     except Exception as e:
-                        show_warning(
-                            f"⚠️ Failed to save results to {save_path}, {e}",
-                            st_context=st_context,
-                        )
-                        # delete the output file if it exists
+                        logger.info(f"Error saving results to {save_path}")
+                        logger.info(e)
                         if os.path.exists(save_path):
                             os.remove(save_path)
-                        continue
-
+                   
                     if st_context:
                         st.link_button(
                             "Open using Masader Form",

@@ -285,7 +285,7 @@
     },
     "Cost": {
         "question": "If the dataset is not free, what is the cost?",
-        "answer_type": "float",
+        "answer_type": "str",
         "validation_group": "ACCESSABILITY",
         "answer_min": 0
     },

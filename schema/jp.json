@@ -224,7 +224,12 @@
     },
     "Script": {
         "question": "What is the script of this dataset?",
-        "options": ["Hiragana", "Katakana", "Kanji", "mixed"],
+        "options": [
+            "Hiragana",
+            "Katakana",
+            "Kanji",
+            "mixed"
+        ],
         "answer_type": "str",
         "validation_group": "CONTENT",
         "answer_min": 1,
@@ -293,7 +298,7 @@
     },
     "Cost": {
         "question": "If the dataset is not free, what is the cost?",
-        "answer_type": "float",
+        "answer_type": "str",
         "validation_group": "ACCESSABILITY",
         "answer_min": 0
     },
