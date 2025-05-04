@@ -423,7 +423,7 @@ if __name__ == "__main__":
     json_files = glob(f"{args.results_path}/**/{args.type}/*.json")
     # print(json_files)
     if args.schema == 'all':
-        langs = ['ar', 'en', 'jp', 'fr', 'ru']
+        langs = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
     else:
         langs = [args.schema]
             
