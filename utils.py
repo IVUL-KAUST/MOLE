@@ -621,7 +621,7 @@ def cast(metadata, schema="ar"):
                 metadata[c] = ""
         elif "List" in column_type:
             if not isinstance(metadata[c], list):
-                raise (f"Error: {metadata[c]} is not a list")
+                metadata[c] = []
         elif column_type == "bool":
             if type(metadata[c]) == bool:
                 pass
@@ -630,6 +630,7 @@ def cast(metadata, schema="ar"):
             elif metadata[c].lower() == "false":
                 metadata[c] = False
             else:
+                print(metadata[c])
                 raise (f"Error: {metadata[c]} is not a boolean")
         else:
             print(c, column_type)
