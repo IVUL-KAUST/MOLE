@@ -9,3 +9,4 @@ scripts/*.sh
 venv
 __pycache__
 *playground*
+pages/__pycache__/*.pyc
