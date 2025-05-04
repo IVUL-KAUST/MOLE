@@ -613,7 +613,7 @@ def cast(metadata, schema="ar"):
             try:
                 metadata[c] = int(metadata[c])
             except:
-                metadata[c] = date.year
+                metadata[c] = int(date.today().year)
         elif column_type == "url":
             try:
                 metadata[c] = str(metadata[c])
