@@ -1,0 +1,95 @@
+{
+    "metadata": {
+        "Name": "Arabic-Hebrew TED Talks Parallel Corpus",
+        "Subsets": [
+            {
+                "Name": "Train Set",
+                "Volume": 3.43,
+                "Unit": "M tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Development Set",
+                "Volume": 15.5,
+                "Unit": "k tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Test Set",
+                "Volume": 24.6,
+                "Unit": "k tokens",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "wit3.fbk.eu/mt.php?release=2016-01-more",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2016,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A parallel corpus of TED talks in Arabic and Hebrew, created using the WIT3 inventory.",
+        "Volume": 3.5,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "FBK"
+        ],
+        "Derived From": [
+            "WIT3"
+        ],
+        "Paper Title": "An Arabic-Hebrew parallel corpus of TED talks",
+        "Paper Link": "https://arxiv.org/abs/1610.00572",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2016",
+        "Authors": [
+            "Mauro Cettolo"
+        ],
+        "Affiliations": [
+            "FBK, Trento, Italy"
+        ],
+        "Abstract": "This paper describes the creation of an Arabic-Hebrew parallel corpus of TED talks using the WIT3 inventory. The corpus consists of around 2,000 talks, with subtitles in Arabic and Hebrew aligned and rearranged into sentences."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0023915,
+        "input_tokens": 10972,
+        "output_tokens": 480
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.00572"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Golos",
+        "Link": "https://github.com/sberdevices/golos",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A large Russian speech dataset with 1240 hours of manually annotated audio.",
+        "Volume": 1240.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber"
+        ],
+        "Derived From": [
+            "Common Crawl"
+        ],
+        "Paper Title": "Golos: Russian Dataset for Speech Research",
+        "Paper Link": "https://arxiv.org/abs/2106.10161",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition"
+        ],
+        "Venue Title": "INTERSPEECH",
+        "Venue Type": "conference",
+        "Venue Name": "INTERSPEECH 2021",
+        "Authors": [
+            "Nikolay Karpov",
+            "Alexander Denisenko",
+            "Fedor Minkin"
+        ],
+        "Affiliations": [
+            "Sber, Russia"
+        ],
+        "Abstract": "This paper introduces a novel Russian speech dataset called Golos, a large corpus suitable for speech research. The dataset mainly consists of recorded audio files manually annotated on the crowd-sourcing platform. The total duration of the audio is about 1240 hours. We have made the corpus freely available to download, along with the acoustic model with CTC loss prepared on this corpus. Additionally, transfer learning was applied to improve the performance of the acoustic model. In order to evaluate the quality of the dataset with the beam-search algorithm, we have built a 3-gram language model on the open Common Crawl dataset. The total word error rate (WER) metrics turned out to be about 3.3% and 11.5%."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0018768,
+        "input_tokens": 9267,
+        "output_tokens": 430
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

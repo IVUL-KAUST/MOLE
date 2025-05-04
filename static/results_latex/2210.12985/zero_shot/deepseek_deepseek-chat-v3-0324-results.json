@@ -1,0 +1,100 @@
+{
+    "metadata": {
+        "Name": "Maknuune",
+        "Subsets": [],
+        "Link": "www.palestine-lexicon.org",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "ar",
+        "Dialect": "Palestine",
+        "Domain": [
+            "social media",
+            "news articles",
+            "reviews",
+            "commentary",
+            "books",
+            "wikipedia",
+            "web pages",
+            "public datasets",
+            "TV Channels",
+            "captions",
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "Maknuune is a large open lexicon for the Palestinian Arabic dialect with over 36K entries from 17K lemmas, and 3.7K roots. It includes diacritized Arabic orthography, phonological transcription, and English glosses.",
+        "Volume": 36.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oxford",
+            "New York University Abu Dhabi",
+            "University College of Educational Sciences - UNRWA"
+        ],
+        "Derived From": [
+            "Curras Corpus"
+        ],
+        "Paper Title": "Maknuune: A Large Open Palestinian Arabic Lexicon",
+        "Paper Link": "https://arxiv.org/abs/2210.12985",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "dialect identification",
+            "morphological analysis",
+            "part of speech tagging",
+            "language identification"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Shahd Dibas",
+            "Christian Khairallah",
+            "Nizar Habash",
+            "Omar Fayez Sadi",
+            "Tariq Sairafy",
+            "Karmel Sarabta",
+            "Abrar Ardah"
+        ],
+        "Affiliations": [
+            "University of Oxford",
+            "New York University Abu Dhabi",
+            "University College of Educational Sciences - UNRWA"
+        ],
+        "Abstract": "We present Maknuune~\u0645\u0643\u0646\u0648\u0646\u0629, a large open lexicon for the Palestinian Arabic dialect. Maknuune has over 36K entries from 17K lemmas, and 3.7K roots. All entries include diacritized Arabic orthography, phonological transcription and English glosses. Some entries are enriched with additional information such as broken plurals and templatic feminine forms, associated phrases and collocations, Standard Arabic glosses, and examples or notes on grammar, usage, or location of collected entry."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.38095238095238093
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00502896,
+        "input_tokens": 15442,
+        "output_tokens": 579
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12985"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

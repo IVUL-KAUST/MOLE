@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Understanding and Detecting Dangerous Speech in Social Media",
+        "Subsets": [],
+        "Link": "https://github.com/UBC-NLP/ara_dangspeech",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "This dataset is a collection of Arabic tweets annotated for dangerous speech. It includes tweets with threatening language and is intended for training machine learning models to detect such content.",
+        "Volume": 110.3,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "SUNY at Buffalo",
+            "The University of British Columbia"
+        ],
+        "Derived From": [],
+        "Paper Title": "Understanding and Detecting Dangerous Speech in Social Media",
+        "Paper Link": "https://arxiv.org/abs/2005.06608",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ali Alshehri",
+            "El Moatez Billah Nagoudi",
+            "Muhammad Abdul-Mageed"
+        ],
+        "Affiliations": [
+            "SUNY at Buffalo",
+            "Natural Language Processing Lab, The University of British Columbia"
+        ],
+        "Abstract": "Social media communication has become a significant part of daily activity in modern societies. Ensuring safety in social media platforms is a necessity. Use of dangerous language such as physical threats in online environments is a somewhat rare, yet remains highly important. Although several works have been performed on the related issue of detecting offensive and hateful language, dangerous speech has not previously been treated in any significant way. Motivated by these observations, we report our efforts to build a labeled dataset for dangerous speech. We also exploit our dataset to develop highly effective models to detect dangerous content. Our best model performs at 59.60% macro F1, significantly outperforming a competitive baseline."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.00304752,
+        "input_tokens": 16098,
+        "output_tokens": 477
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.06608"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

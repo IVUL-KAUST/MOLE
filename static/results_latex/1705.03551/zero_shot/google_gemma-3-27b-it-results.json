@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "TriviaQA",
+        "Link": "http://nlp.cs.washington.edu/triviaqa/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "en",
+        "Domain": [
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "TriviaQA is a large-scale reading comprehension dataset with over 650K question-answer-evidence triples, designed to test complex reasoning abilities. Questions are authored by trivia enthusiasts, and evidence is gathered from web search results and Wikipedia.",
+        "Volume": 650000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Derived From": [],
+        "Paper Title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension",
+        "Paper Link": "https://arxiv.org/abs/1705.03551",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "question answering"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Mandar Joshi",
+            "Eunsol Choi",
+            "Daniel S. Weld",
+            "Luke Zettlemoyer"
+        ],
+        "Affiliations": [
+            "Paul G. Allen School of Computer Science & Engineering, Univ. of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Abstract": "We present TriviaQA, a new dataset of 650K question-document-evidence triples. To our knowledge, TriviaQA is the first dataset where questions are authored by trivia enthusiasts, independently of the evidence documents. The evidence documents come from two domains -- Web search results and Wikipedia pages -- with highly differing levels of information redundancy. Results from current state-of-the-art baselines indicate that TriviaQA is a challenging testbed that deserves significant future study."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.001842792,
+        "input_tokens": 14273,
+        "output_tokens": 485
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.03551"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
