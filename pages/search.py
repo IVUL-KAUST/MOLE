@@ -632,11 +632,21 @@ def run(
                     }
                     results["ratio_filling"] = compute_filling(metadata)
 
-                    with open(save_path, "w") as outfile:
-                        logger.info(f"📥 Results saved to: {save_path}")
-                        # print(results)
-                        json.dump(results, outfile, indent=4)
-                    model_results[model_name] = results
+                    try:
+                        with open(save_path, "w") as outfile:
+                            logger.info(f"📥 Results saved to: {save_path}")
+                            # print(results)
+                            json.dump(results, outfile, indent=4)
+                        model_results[model_name] = results
+                    except Exception as e:
+                        show_warning(
+                            f"⚠️ Failed to save results to {save_path}, {e}",
+                            st_context=st_context,
+                        )
+                        # delete the output file if it exists
+                        if os.path.exists(save_path):
+                            os.remove(save_path)
+                        continue
 
                     if st_context:
                         st.link_button(
