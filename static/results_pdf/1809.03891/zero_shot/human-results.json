@@ -1,0 +1,112 @@
+{
+    "metadata": {
+        "Name": "OpenITI-proc",
+        "Subsets": [],
+        "HF Link": "",
+        "Link": "https://zenodo.org/record/2535593#.YWh7FS8RozU",
+        "License": "CC BY 4.0",
+        "Year": 2018,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "public datasets",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "A linguistically annotated version of the OpenITI corpus, with annotations for lemmas, POS tags, parse trees, and morphological segmentation",
+        "Volume": 7144.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [
+            "OpenITI",
+            "Shamela"
+        ],
+        "Paper Title": "Studying the History of the Arabic Language: Language Technology and a Large-Scale Historical Corpus",
+        "Paper Link": "https://arxiv.org/pdf/1809.03891",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "text generation",
+            "language modeling"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Yonatan Belinkov",
+            "Alexander Magidow",
+            "Alberto Barr\u00f3n-Cede\u00f1o",
+            "Avi Shmidman",
+            "Maxim Romanov"
+        ],
+        "Affiliations": [],
+        "Abstract": "Arabic is a widely-spoken language with a long and rich history, but existing corpora and language technology focus mostly on modern Arabic and its varieties. Therefore, studying the history of the language has so far been mostly limited to manual analyses on a small scale. In this work, we present a large-scale historical corpus of the written Arabic language, spanning 1400 years. We describe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques. Our findings confirm the established division of written Arabic into Modern Standard and Classical Arabic, and confirm other established periodizations, while suggesting that written Arabic may be divisible into still further periods of development.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "HF Link": 0,
+            "Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Dialect": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 0,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Script": 1,
+            "Tokenized": 1,
+            "Host": 0,
+            "Access": 0,
+            "Cost": 0,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.03891"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
