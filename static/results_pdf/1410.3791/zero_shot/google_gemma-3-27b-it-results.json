@@ -1,62 +1,69 @@
 {
     "metadata": {
-        "Name": "Polyglot-NER",
+        "Name": "POLYGLOT-NER",
         "Subsets": [],
         "Link": "https://bit.ly/polyglot-ner",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2023,
+        "Year": 2013,
         "Language": "multilingual",
         "Dialect": "mixed",
         "Domain": [
-            "other"
+            "wikipedia"
         ],
         "Form": "text",
         "Collection Style": [
-            "other"
+            "crawling",
+            "machine annotation"
         ],
-        "Description": "This paper introduces Polyglot-NER, a massive multilingual named entity recognition dataset. The dataset supports 159 languages and is designed to advance research in cross-lingual entity extraction.",
-        "Volume": 0.0,
-        "Unit": "sentences",
-        "Ethical Risks": "Medium",
+        "Description": "This paper demonstrates how to build massive multilingual Named Entity Recognition (NER) systems using Wikipedia and Freebase, without relying on human-annotated datasets or language-specific resources.",
+        "Volume": 40.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
         "Provider": [
-            "Google"
+            "Stony Brook University"
         ],
-        "Derived From": [],
-        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Derived From": [
+            "Wikipedia",
+            "Freebase"
+        ],
+        "Paper Title": "POLYGLOT-NER: Massive Multilingual Named Entity Recognition",
         "Paper Link": "https://arxiv.org/abs/1410.3791",
-        "Script": "Latin",
+        "Script": "Arab-Latin",
         "Tokenized": false,
-        "Host": "other",
+        "Host": "HuggingFace",
         "Access": "Free",
         "Cost": "",
         "Test Split": false,
         "Tasks": [
             "named entity recognition"
         ],
-        "Venue Title": "SDM",
-        "Venue Type": "conference",
+        "Venue Title": "",
+        "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
-            "Rami Al-Rfou"
+            "Rami Al-Rfou",
+            "Vivek Kulkarni",
+            "Bryan Perozzi",
+            "Steven Skiena"
         ],
         "Affiliations": [
-            "Google"
+            "Department of Computer Science, Stony Brook University"
         ],
-        "Abstract": "This paper introduces Polyglot-NER, a massive multilingual named entity recognition dataset. We provide annotations in 159 languages, covering a broad spectrum of linguistic diversity. Polyglot-NER is designed to advance research in cross-lingual entity extraction, offering a valuable resource for developing and evaluating NER systems across multiple languages. The dataset is made publicly available to promote further research in this area."
+        "Abstract": "The increasing diversity of languages used on the web introduces a new level of complexity to Information Retrieval (IR) systems. We can no longer assume that textual content is written in one language or even the same language family. In this paper, we demonstrate how to build massive multilingual Named Entity Recognition (NER) systems with minimal human expertise and intervention. We describe a system that builds Named Entity Recognition (NER) annotators for 40 major languages using Wikipedia and Freebase. Our approach does not require NER human annotated datasets or language specific resources like treebanks, parallel corpora, and orthographic rules. The novelty of approach lies therein-using only language agnostic techniques, while achieving competitive performance. Our work addresses these drawbacks by relying on language-independent techniques. We use neural word embeddings, Wikipedia link structure, and Freebase attributes to automatically construct NER annotators for 40 major languages. First, we learn neural word embeddings which encode semantic and syntactic features of words in each language. Second, we use the internal links embedded in Wikipedia articles to detect named entity mentions. When a link points to an article identified by Freebase as an entity article, we include the anchor text as a positive training example. However, not all entity mentions are linked in Wikipedia because of style guidelines. To address this problem, we propose oversampling and surface word matching to solve this positive-only label learning problem [10, 16\u201318] while avoiding any language-specific dependencies. Lack of human annotated datasets not only limits quality of training but also system evaluation. We evaluate on standard NER datasets if they are available. For the remaining languages, we propose a distant evaluation based on statistical machine translation (SMT) to generate testing datasets that provide insightful analysis of the system performance."
     },
     "validation": {
         "DIVERSITY": 0.6666666666666666,
-        "ACCESSABILITY": 0.42857142857142855,
-        "CONTENT": 0.25,
-        "EVALUATION": 1.0,
-        "AVERAGE": 0.47619047619047616
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.0015064,
-        "input_tokens": 3696,
-        "output_tokens": 408
+        "cost": 0.0043576,
+        "input_tokens": 15996,
+        "output_tokens": 734
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

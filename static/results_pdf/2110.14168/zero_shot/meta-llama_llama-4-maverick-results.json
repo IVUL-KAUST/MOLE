@@ -8,7 +8,7 @@
         "Language": "en",
         "Domain": [
             "books",
-            "other"
+            "captions"
         ],
         "Form": "text",
         "Collection Style": [
@@ -19,8 +19,7 @@
         "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
-            "OpenAI",
-            "Surge AI"
+            "OpenAI"
         ],
         "Derived From": [],
         "Paper Title": "Training Verifiers to Solve Math Word Problems",
@@ -31,19 +30,18 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "question answering",
-            "text generation"
+            "multiple choice question answering"
         ],
-        "Venue Title": "",
-        "Venue Type": "preprint",
-        "Venue Name": "",
+        "Venue Title": "NeurIPS",
+        "Venue Type": "conference",
+        "Venue Name": "Neural Information Processing Systems",
         "Authors": [
             "Karl Cobbe",
             "Vineet Kosaraju",
             "Mohammad Bavarian",
             "Mark Chen",
             "Heewoo Jun",
-            "u0141ukasz Kaiser",
+            "Lukasz Kaiser",
             "Matthias Plappert",
             "Jerry Tworek",
             "Jacob Hilton",
@@ -59,15 +57,15 @@
     "validation": {
         "ACCESSABILITY": 0.8571428571428571,
         "DIVERSITY": 1.0,
-        "CONTENT": 1.0,
+        "CONTENT": 0.8571428571428571,
         "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.8888888888888888
+        "AVERAGE": 0.8333333333333334
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.0027768,
-        "input_tokens": 12514,
-        "output_tokens": 489
+        "cost": 0.00289554,
+        "input_tokens": 14614,
+        "output_tokens": 505
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

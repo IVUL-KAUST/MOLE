@@ -7,17 +7,17 @@
         "Year": 2020,
         "Language": "ru",
         "Domain": [
-            "other"
+            "books"
         ],
         "Form": "text",
         "Collection Style": [
             "crawling",
             "manual curation"
         ],
-        "Description": "The paper presents RuBQ, the first Russian knowledge base question answering (KBQA) dataset. The high-quality dataset consists of 1,500 Russian questions of varying complexity, their English machine translations, SPARQL queries to Wikidata, reference answers, as well as a Wikidata sample of triples containing entities with Russian labels.",
+        "Description": "RuBQ is the first Russian knowledge base question answering (KBQA) dataset, consisting of 1,500 Russian questions, English translations, SPARQL queries, and reference answers.",
         "Volume": 1500.0,
         "Unit": "sentences",
-        "Ethical Risks": "Medium",
+        "Ethical Risks": "Low",
         "Provider": [
             "ITMO University",
             "JetBrains Research",
@@ -25,16 +25,16 @@
         ],
         "Derived From": [],
         "Paper Title": "RuBQ: A Russian Dataset for Question Answering over Wikidata",
-        "Paper Link": "https://arxiv.org/abs/2005.10659",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.492/",
         "Tokenized": false,
-        "Host": "zenodo",
+        "Host": "GitHub",
         "Access": "Free",
         "Cost": "",
         "Test Split": true,
         "Tasks": [
             "question answering"
         ],
-        "Venue Title": "LLNCS",
+        "Venue Title": "EMNLP",
         "Venue Type": "conference",
         "Venue Name": "",
         "Authors": [
@@ -46,20 +46,20 @@
             "JetBrains Research",
             "Ural Federal University"
         ],
-        "Abstract": "The paper presents textbf{RuBQ}, the first Russian knowledge base question answering (KBQA) dataset. The high-quality dataset consists of 1,500 Russian questions of varying complexity, their English machine translations, SPARQL queries to Wikidata, reference answers, as well as a Wikidata sample of triples containing entities with Russian labels. The dataset creation started with a large collection of question-answer pairs from online quizzes. The data underwent automatic filtering, crowd-assisted entity linking, automatic generation of SPARQL queries, and their subsequent in-house verification. nThe freely available dataset will be of interest for a wide community of researchers and practitioners in the areas of Semantic Web, NLP, and IR, especially for those working on multilingual question answering. The proposed dataset generation pipeline proved to be efficient and can be employed in other data annotation projects."
+        "Abstract": "The paper presents RuBQ, the first Russian knowledge base question answering (KBQA) dataset. The high-quality dataset consists of 1,500 Russian questions of varying complexity, their English machine translations, SPARQL queries to Wikidata, reference answers, as well as a Wikidata sample of triples containing entities with Russian labels. The dataset creation started with a large collection of question-answer pairs from online quizzes. The data underwent automatic filtering, crowd-assisted entity linking, automatic generation of SPARQL queries, and their subsequent in-house verification. The freely available dataset will be of interest for a wide community of researchers and practitioners in the areas of Semantic Web, NLP, and IR, especially for those working on multilingual question answering. The proposed dataset generation pipeline proved to be efficient and can be employed in other data annotation projects."
     },
     "validation": {
-        "ACCESSABILITY": 0.8571428571428571,
+        "ACCESSABILITY": 0.7142857142857143,
         "DIVERSITY": 0.0,
-        "CONTENT": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
         "EVALUATION": 0.6666666666666666,
         "AVERAGE": 0.6666666666666666
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.001556947,
-        "input_tokens": 11602,
-        "output_tokens": 578
+        "cost": 0.0014835,
+        "input_tokens": 12642,
+        "output_tokens": 557
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

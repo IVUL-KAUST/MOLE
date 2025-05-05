@@ -7,15 +7,16 @@
         "Year": 2019,
         "Language": "en",
         "Domain": [
-            "web pages"
+            "web pages",
+            "public datasets"
         ],
         "Form": "text",
         "Collection Style": [
             "machine annotation",
             "human annotation"
         ],
-        "Description": "HellaSwag is a dataset for commonsense natural language inference, designed to be challenging for state-of-the-art models while being easy for humans.",
-        "Volume": 70.0,
+        "Description": "HellaSwag is a dataset for commonsense natural language inference, designed to challenge state-of-the-art models with adversarial filtering.",
+        "Volume": 70000.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
@@ -23,6 +24,7 @@
             "Allen Institute for Artificial Intelligence"
         ],
         "Derived From": [
+            "SWAG",
             "ActivityNet Captions",
             "WikiHow"
         ],
@@ -37,9 +39,9 @@
             "natural language inference",
             "question answering"
         ],
-        "Venue Title": "ACL",
+        "Venue Title": "Conference on Empirical Methods in Natural Language Processing",
         "Venue Type": "conference",
-        "Venue Name": "Association for Computational Linguistics",
+        "Venue Name": "EMNLP",
         "Authors": [
             "Rowan Zellers",
             "Ari Holtzman",
@@ -51,20 +53,20 @@
             "Paul G. Allen School of Computer Science & Engineering, University of Washington",
             "Allen Institute for Artificial Intelligence"
         ],
-        "Abstract": "HellaSwag is a new dataset for commonsense natural language inference, designed to be challenging for state-of-the-art models while being easy for humans. The dataset is constructed using Adversarial Filtering, a data-collection paradigm in which a series of discriminators is used to select a challenging set of generated wrong answers. The resulting dataset of 70k problems is easy for humans (95.6% accuracy), yet challenging for machines (<50%). This result holds even when models are given a significant number of training examples, and even when the test data comes from the exact same distribution as the training data. Machine performance slips an additional 5% when evaluated on examples that cover novel concepts from the same domain."
+        "Abstract": "A woman is outside with a bucket and a dog. The dog is running around trying to avoid a bath. She... Recent work by Zellers et al. (2018) introduced a new task of commonsense natural language inference: given an event description such as 'A woman sits at a piano,' a machine must select the most likely followup: 'She sets her fingers on the keys.' With the introduction of BERT (Devlin et al., 2018), near human-level performance was reached. Does this mean that machines can perform human-level commonsense inference? In this paper, we show that commonsense inference still proves difficult for even state-of-the-art models, by presenting HellaSwag, a new challenge dataset. Though its questions are trivial for humans (\u010595% accuracy), state-of-the-art models struggle (\u010348%). We achieve this via Adversarial Filtering (AF), a data collection paradigm wherein a series of discriminators iteratively select an adversarial set of machine-generated wrong answers. AF proves to be surprisingly robust. The key insight is to scale up the length and complexity of the dataset examples towards a critical 'Goldilocks' zone wherein generated text is ridiculous to humans, yet often misclassified by state-of-the-art models."
     },
     "validation": {
         "ACCESSABILITY": 0.5714285714285714,
         "DIVERSITY": 1.0,
-        "CONTENT": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
         "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.5555555555555556
+        "AVERAGE": 0.6111111111111112
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00562798,
-        "input_tokens": 17644,
-        "output_tokens": 505
+        "cost": 0.00586618,
+        "input_tokens": 17483,
+        "output_tokens": 627
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",

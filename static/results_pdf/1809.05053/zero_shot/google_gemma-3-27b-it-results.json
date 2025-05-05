@@ -119,18 +119,19 @@
         ],
         "Form": "text",
         "Collection Style": [
-            "human annotation"
+            "human annotation",
+            "machine annotation"
         ],
-        "Description": "XNLI is a benchmark for cross-lingual natural language inference, extending the Multi-Genre NLI corpus to 15 languages. It consists of 7500 human-annotated examples per language in a three-way classification format.",
+        "Description": "A dataset for evaluating cross-lingual sentence understanding by extending the Multi-Genre Natural Language Inference Corpus to 15 languages.",
         "Volume": 112500.0,
         "Unit": "sentences",
         "Ethical Risks": "Medium",
         "Provider": [
-            "Facebook AI",
+            "FacebookAI",
             "New York University"
         ],
         "Derived From": [
-            "MultiNLI"
+            "Multi-Genre Natural Language Inference Corpus"
         ],
         "Paper Title": "XNLI: Evaluating Cross-lingual Sentence Representations",
         "Paper Link": "https://arxiv.org/abs/1809.05053",
@@ -143,8 +144,8 @@
             "natural language inference",
             "cross-lingual information retrieval"
         ],
-        "Venue Title": "EMNLP",
-        "Venue Type": "conference",
+        "Venue Title": "",
+        "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
             "Alexis Conneau",
@@ -156,23 +157,23 @@
             "Samuel R. Bowman"
         ],
         "Affiliations": [
-            "Facebook AI",
+            "FacebookAI",
             "New York University"
         ],
-        "Abstract": "State-of-the-art natural language processing systems rely on supervision in the form of annotated data to learn competent models. These models are generally trained on data in a single language (usually English), and cannot be directly used beyond that language. Since collecting data in every language is not realistic, there has been a growing interest in cross-lingual language understanding (XLU) and low-resource cross-language transfer. In this work, we construct an evaluation set for XLU by extending the development and test sets of the Multi-Genre Natural Language Inference Corpus (MultiNLI) to 15 languages, including low-resource languages such as Swahili and Urdu. We hope that our dataset, dubbed XNLI, will catalyze research in cross-lingual sentence understanding by providing an informative standard evaluation task. In addition, we provide several baselines for multilingual sentence understanding, including two based on machine translation systems, and two that use parallel data to train aligned multilingual bag-of-words and LSTM encoders. We find that XNLI represents a practical and challenging evaluation suite, and that directly translating the test data yields the best performance among available baselines."
+        "Abstract": "A scalable way to build multilingual systems is through cross-lingual language understanding State-of-the-art natural language processing (XLU), in which a system is trained primarily on data in one language and evaluated on data in others. While XLU shows promising results for taskssuchascross-lingualdocumentclassification (Klementiev et al., 2012; Schwenk and Li, 2018), there are very few, if any, XLU benchmarks for more difficult language understanding tasks like natural language inference. Large-scale natural language inference (NLI), also known as recognizingtextualentailment(RTE),hasemergedasa practicaltestbedforworkonsentenceunderstand- ing. In NLI, a system is tasked with reading two sentencesanddeterminingwhetheroneentailsthe other, contradicts it, or neither (neutral). Recentcrowdsourcedannotationeffortshaveyielded datasetsforNLIinEnglish(Bowmanetal.,2015; Williamsetal.,2017)withnearlyamillionexam- ples, and these have been widely used to evaluate neural network architectures and training strate- gies (Rockt\u00e4schel et al., 2016; Gong et al., 2018; Petersetal.,2018;Wangetal.,2018),aswellasto train effective, reusable sentence representations (Conneau et al., 2017; Subramanian et al., 2018; Ceretal.,2018;Conneauetal.,2018a). In this work, we introduce a benchmark that we call the Cross-lingual Natural Language In- ference corpus, or XNLI, by extending these NLI corpora to 15 languages. XNLI consists of 7500 human-annotated development and test examples inNLIthree-wayclassificationformatinEnglish, French,Spanish,German,Greek,Bulgarian,Rus- sian, Turkish, Arabic, Vietnamese, Thai, Chi- nese, Hindi, Swahili and Urdu, making a total of 112,500 annotated pairs. These languages span several language families, and with the inclusion of Swahili and Urdu, include two lower-resource languagesaswell."
     },
     "validation": {
         "DIVERSITY": 0.5,
         "ACCESSABILITY": 0.2857142857142857,
         "CONTENT": 0.7142857142857143,
-        "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.5263157894736842
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.0019724,
-        "input_tokens": 16366,
-        "output_tokens": 1233
+        "cost": 0.002063,
+        "input_tokens": 16421,
+        "output_tokens": 1436
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

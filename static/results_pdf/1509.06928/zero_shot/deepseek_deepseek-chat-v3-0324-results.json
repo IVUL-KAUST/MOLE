@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "Name": "Arabic Dialect ID Corpus",
+        "Name": "Arabic Dialect Identification Corpus",
         "Subsets": [
             {
                 "Name": "Egyptian",
@@ -46,27 +46,32 @@
         "Collection Style": [
             "human annotation"
         ],
-        "Description": "A dataset for dialect identification in Arabic broadcast speech, collected from Aljazeera TV channels, including Egyptian, Gulf, Levantine, North African, and Modern Standard Arabic dialects.",
-        "Volume": 55.5,
+        "Description": "A corpus for dialect identification in Arabic broadcast speech, covering Egyptian, Gulf, Levantine, North African, and Modern Standard Arabic dialects.",
+        "Volume": 53.5,
         "Unit": "hours",
         "Ethical Risks": "Low",
         "Provider": [
-            "Qatar Computing Research Institute"
+            "Qatar Computing Research Institute",
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "JHU Center for Language and Speech Processing",
+            "\u00c9cole de technologie sup\u00e9rieure",
+            "University of Edinburgh"
         ],
         "Derived From": [],
         "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
         "Paper Link": "https://arxiv.org/abs/1509.06928",
         "Script": "Arab",
         "Tokenized": false,
-        "Host": "QCRI Resources",
+        "Host": "other",
         "Access": "Free",
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "dialect identification"
+            "dialect identification",
+            "speech recognition"
         ],
-        "Venue Title": "",
-        "Venue Type": "conference",
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
             "Ahmed Ali",
@@ -74,12 +79,16 @@
             "Patrick Cardinal",
             "Sameer Khurana",
             "Sree Harsha Yella",
+            "James Glass",
             "Peter Bell",
             "Steve Renals"
         ],
         "Affiliations": [
-            "Qatar Computing Research Institute, HBKU",
-            "Centre for Speech Technology Research, University of Edinburgh"
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL), Cambridge, MA, USA",
+            "JHU Center for Language and Speech Processing (CLSP), Baltimore, MD, USA",
+            "\u00c9cole de technologie sup\u00e9rieure, D\u00e9partement de G\u00e9nie Logiciel et des TI, Montr\u00e9al, Canada",
+            "Centre for Speech Technology Research, University of Edinburgh, UK"
         ],
         "Abstract": "In this paper, we investigate different approaches for dialect identification in Arabic broadcast speech. These methods are based on phonetic and lexical features obtained from a speech recognition system, and bottleneck features using the i-vector framework. We studied both generative and discriminative classifiers, and we combined these features using a multi-class Support Vector Machine (SVM). We validated our results on an Arabic/English language identification task, with an accuracy of 100%. We also evaluated these features in a binary classifier to discriminate between Modern Standard Arabic (MSA) and Dialectal Arabic, with an accuracy of 100%. We further reported results using the proposed methods to discriminate between the five most widely used dialects of Arabic: namely Egyptian, Gulf, Levantine, North African, and MSA, with an accuracy of 59.2%. We discuss dialect identification errors in the context of dialect code-switching between Dialectal Arabic and MSA, and compare the error pattern between manually labeled data, and the output from our classifier. All the data used on our experiments have been released to the public as a language identification corpus."
     },
@@ -92,9 +101,9 @@
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00837301,
-        "input_tokens": 23185,
-        "output_tokens": 751
+        "cost": 0.00419478,
+        "input_tokens": 11190,
+        "output_tokens": 863
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",

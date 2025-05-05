@@ -1,19 +1,26 @@
 {
     "metadata": {
         "Name": "Arabic-English Transliteration Dataset",
-        "Subsets": [],
+        "Subsets": [
+            {
+                "Name": "Arabic-English",
+                "Volume": 15898,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            }
+        ],
         "Link": "https://github.com/googlei18n/transliteration",
         "HF Link": "",
-        "License": "unknown",
+        "License": "Apache-2.0",
         "Year": 2016,
         "Language": "ar",
-        "Dialect": "Modern Standard Arabic",
+        "Dialect": "mixed",
         "Domain": [
             "wikipedia"
         ],
         "Form": "text",
         "Collection Style": [
-            "human annotation"
+            "crawling"
         ],
         "Description": "A new Arabic to English transliteration dataset extracted from Wikipedia.",
         "Volume": 15898.0,
@@ -24,7 +31,7 @@
         ],
         "Derived From": [],
         "Paper Title": "Sequence-to-sequence neural network models for transliteration",
-        "Paper Link": "https://arxiv.org/abs/1610.06522",
+        "Paper Link": "https://arxiv.org/abs/1610.09565",
         "Script": "Arab",
         "Tokenized": false,
         "Host": "GitHub",
@@ -34,9 +41,9 @@
         "Tasks": [
             "transliteration"
         ],
-        "Venue Title": "EMNLP",
-        "Venue Type": "conference",
-        "Venue Name": "2016 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
         "Authors": [
             "Mihaela Rosca",
             "Thomas Breuel"
@@ -48,17 +55,17 @@
         "Abstract": "Transliteration is a key component of machine translation systems and software internationalization. This paper demonstrates that neural sequence-to-sequence models obtain state of the art or close to state of the art results on existing datasets. In an effort to make machine transliteration accessible, we open source a new Arabic to English transliteration dataset and our trained models."
     },
     "validation": {
-        "DIVERSITY": 0.6666666666666666,
-        "ACCESSABILITY": 0.5714285714285714,
-        "CONTENT": 0.625,
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.75,
         "EVALUATION": 1.0,
         "AVERAGE": 0.6666666666666666
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00159505,
-        "input_tokens": 8448,
-        "output_tokens": 382
+        "cost": 0.0019288,
+        "input_tokens": 8824,
+        "output_tokens": 397
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

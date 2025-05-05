@@ -101,7 +101,7 @@
         ],
         "Link": "http://arap.qatar.cmu.edu",
         "HF Link": "",
-        "License": "CC BY 4.0",
+        "License": "unknown",
         "Year": 2018,
         "Language": "ar",
         "Dialect": "mixed",
@@ -113,7 +113,7 @@
             "crawling",
             "human annotation"
         ],
-        "Description": "Arap-Tweet is a large-scale and multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world, annotated for age, gender, and dialectal variety.",
+        "Description": "Arap-Tweet is a large-scale multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world, annotated for age, gender, and dialectal variety.",
         "Volume": 2400000.0,
         "Unit": "sentences",
         "Ethical Risks": "Medium",
@@ -123,14 +123,15 @@
         ],
         "Derived From": [],
         "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age and Language Variety Identification",
-        "Paper Link": "http://arap.qatar.cmu.edu",
+        "Paper Link": "https://arxiv.org/abs/1808.07674",
         "Script": "Arab",
         "Tokenized": false,
         "Host": "other",
         "Access": "Free",
         "Cost": "",
-        "Test Split": true,
+        "Test Split": false,
         "Tasks": [
+            "language modeling",
             "dialect identification",
             "gender identification",
             "language identification"
@@ -150,16 +151,16 @@
     },
     "validation": {
         "DIVERSITY": 0.6666666666666666,
-        "ACCESSABILITY": 0.5714285714285714,
+        "ACCESSABILITY": 0.7142857142857143,
         "CONTENT": 1.0,
-        "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.7142857142857143
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8095238095238095
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00479054,
-        "input_tokens": 11117,
-        "output_tokens": 1024
+        "cost": 0.00524105,
+        "input_tokens": 11131,
+        "output_tokens": 1129
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",

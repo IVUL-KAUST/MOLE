@@ -1,12 +1,12 @@
 {
     "metadata": {
-        "Name": "OpenITI",
+        "Name": "OpenITI Historical Arabic Corpus",
         "Subsets": [
             {
                 "Name": "Classical Arabic",
-                "Volume": "725000000",
+                "Volume": "Approximately 1.5 G words",
                 "Unit": "words",
-                "Dialect": "Classical Arabic"
+                "Dialect": "Modern Standard Arabic"
             }
         ],
         "Link": "https://github.com/OpenITI",
@@ -14,26 +14,29 @@
         "License": "unknown",
         "Year": 2016,
         "Language": "ar",
-        "Dialect": "Classical Arabic",
+        "Dialect": "Modern Standard Arabic",
         "Domain": [
             "books",
             "news articles"
         ],
         "Form": "text",
         "Collection Style": [
+            "crawling",
             "manual curation"
         ],
-        "Description": "A large-scale diachronic corpus of Arabic texts spanning 1400 years, collected from various sources including Al-Maktaba Al-Shamela, JK, and the Shia online library.",
-        "Volume": 1500000000.0,
+        "Description": "A large-scale historical corpus of the written Arabic language, spanning 1400 years. It includes texts from various sources, including Shamela, and aims to facilitate research on the history of the language.",
+        "Volume": 1.5,
         "Unit": "hours",
         "Ethical Risks": "Medium",
         "Provider": [
-            "Open Islamicate Texts Initiative"
+            "Qatar Computing Research Institute",
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "University of Rhode Island",
+            "Bar-Ilan University",
+            "University of Vienna"
         ],
         "Derived From": [
-            "Al-Maktaba Al-Shamela",
-            "Al-Jami' Al-Kabir",
-            "Shia online library"
+            "Shamela"
         ],
         "Paper Title": "Studying the History of the Arabic Language: Language Technology and a Large-Scale Historical Corpus",
         "Paper Link": "https://arxiv.org/abs/1809.03891",
@@ -45,6 +48,8 @@
         "Test Split": false,
         "Tasks": [
             "language modeling",
+            "speaker identification",
+            "text generation",
             "natural language inference"
         ],
         "Venue Title": "",
@@ -53,7 +58,7 @@
         "Authors": [
             "Yonatan Belinkov",
             "Alexander Magidow",
-            "Alberto Barr\u00f3n-Cede\u00f1o",
+            "Alberto Barro\u00b4n-Ceden\u02dco",
             "Avi Shmidman",
             "Maxim Romanov"
         ],
@@ -64,20 +69,20 @@
             "Bar-Ilan University",
             "University of Vienna"
         ],
-        "Abstract": "In this work, we present a large-scale historical corpus of the written Arabic language, spanning 1400 years. We describe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques. Our findings confirm the established division of written Arabic into Modern Standard and Classical Arabic, and confirm other established periodizations, while suggesting that written Arabic may be divisible into still further periods of development."
+        "Abstract": "Arabic is a widely-spoken language with a long and rich history, but existing corpora and language technology focus mostly on modern Arabic and its varieties. Therefore, studying the history of the language has so far been mostly limited to manual analyses on a small scale. In this work, we present a large-scale historical corpus of the written Arabic language, spanning 1400 years. We describe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques. Our findings confirm the established division of written Arabic into Modern Standard and Classical Arabic, and confirm other established periodizations, while suggesting that written Arabic may be divisible into still further periods of development."
     },
     "validation": {
-        "DIVERSITY": 0.6666666666666666,
+        "DIVERSITY": 0.3333333333333333,
         "ACCESSABILITY": 0.42857142857142855,
         "CONTENT": 0.375,
-        "EVALUATION": 0.3333333333333333,
+        "EVALUATION": 0.6666666666666666,
         "AVERAGE": 0.42857142857142855
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.0028569,
-        "input_tokens": 25996,
-        "output_tokens": 589
+        "cost": 0.0030065,
+        "input_tokens": 26448,
+        "output_tokens": 676
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

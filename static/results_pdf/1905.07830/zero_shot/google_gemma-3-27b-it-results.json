@@ -7,24 +7,28 @@
         "Year": 2019,
         "Language": "en",
         "Domain": [
-            "social media",
-            "captions"
+            "wikipedia",
+            "books",
+            "web pages"
         ],
         "Form": "text",
         "Collection Style": [
-            "machine annotation",
-            "crawling"
+            "crawling",
+            "machine annotation"
         ],
-        "Description": "A dataset for physically situated commonsense reasoning, constructed through adversarial filtering with state-of-the-art models.",
+        "Description": "A new challenge dataset for commonsense natural language inference. Though its questions are trivial for humans, state-of-the-art models struggle.",
         "Volume": 70000.0,
         "Unit": "sentences",
         "Ethical Risks": "Medium",
         "Provider": [
+            "Paul G. Allen School of Computer Science & Engineering",
             "University of Washington",
             "Allen Institute for Artificial Intelligence"
         ],
         "Derived From": [
+            "SWAG",
             "ActivityNet Captions",
+            "LSMDC",
             "WikiHow"
         ],
         "Paper Title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
@@ -35,11 +39,11 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "question answering",
+            "natural language inference",
             "natural language inference"
         ],
-        "Venue Title": "ACL",
-        "Venue Type": "conference",
+        "Venue Title": "",
+        "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
             "Rowan Zellers",
@@ -52,20 +56,20 @@
             "Paul G. Allen School of Computer Science & Engineering, University of Washington",
             "Allen Institute for Artificial Intelligence"
         ],
-        "Abstract": "We present HellaSwag, a new dataset for physically situated commonsense reasoning. By constructing the dataset through adversarial filtering, combined with state-of-the-art models for language generation and discrimination, we produced a dataset that is adversarial to the most robust models available -- even when models are evaluated on items from the training distribution. In turn, we provided insight into the inner workings of pretrained models, and suggest a path for NLP progress going forward: towards benchmarks that adversarially co-evolve with evolving state-of-the-art models."
+        "Abstract": "A woman is outside with a bucket and a dog. The dog is running around trying to avoid a bath. She\u2026 A.rinses the bucket off with soap and blow dry the dog\u2019s head. Recent work by Zellers et al. (2018) intro- B.uses a hose to keep it from getting soapy. + ducedanewtaskofcommonsensenaturallan- Adversarial C.gets the dog wet, then it runs away again. guage inference: given an event description Filtering D.gets into a bath tub with the dog."
     },
     "validation": {
         "ACCESSABILITY": 0.42857142857142855,
         "DIVERSITY": 1.0,
         "CONTENT": 0.7142857142857143,
-        "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.5555555555555556
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.0019438,
-        "input_tokens": 17644,
-        "output_tokens": 492
+        "cost": 0.0020232,
+        "input_tokens": 17483,
+        "output_tokens": 533
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

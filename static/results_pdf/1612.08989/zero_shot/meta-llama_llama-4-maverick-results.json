@@ -1,29 +1,17 @@
 {
     "metadata": {
-        "Name": "Shamela",
+        "Name": "Shamela Corpus",
         "Subsets": [
             {
-                "Name": "Hadith Collections",
-                "Volume": 179,
-                "Unit": "documents",
-                "Dialect": "Modern Standard Arabic"
+                "Name": "Classical Arabic subset",
+                "Volume": 800000000,
+                "Unit": "words",
+                "Dialect": "Classical Arabic"
             },
             {
-                "Name": "Biographies",
-                "Volume": 377,
-                "Unit": "documents",
-                "Dialect": "Modern Standard Arabic"
-            },
-            {
-                "Name": "Jurisprudence",
-                "Volume": 157,
-                "Unit": "documents",
-                "Dialect": "Modern Standard Arabic"
-            },
-            {
-                "Name": "Popular religious writing",
-                "Volume": 298,
-                "Unit": "documents",
+                "Name": "Modern Standard Arabic subset",
+                "Volume": 200000000,
+                "Unit": "words",
                 "Dialect": "Modern Standard Arabic"
             }
         ],
@@ -32,27 +20,28 @@
         "License": "CC BY 4.0",
         "Year": 2018,
         "Language": "ar",
-        "Dialect": "Modern Standard Arabic",
+        "Dialect": "mixed",
         "Domain": [
-            "books",
+            "news articles",
             "news articles"
         ],
         "Form": "text",
         "Collection Style": [
-            "manual curation",
-            "machine annotation"
+            "crawling",
+            "manual curation"
         ],
-        "Description": "A large-scale historical Arabic corpus containing over 6,000 texts and 1 billion words, covering 14 centuries of Arabic literature and Islamic texts.",
+        "Description": "A large-scale historical Arabic corpus containing 1 billion words from diverse periods of time.",
         "Volume": 1000000000.0,
         "Unit": "hours",
         "Ethical Risks": "Low",
         "Provider": [
-            "Al-Maktaba Al-Shamela",
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "University of Rhode Island",
             "Leipzig University",
             "Bar-Ilan University"
         ],
         "Derived From": [
-            "Al-Maktaba Al-Shamela"
+            "Al-Maktaba Al-Shamela website"
         ],
         "Paper Title": "Shamela: A Large-Scale Historical Arabic Corpus",
         "Paper Link": "https://arxiv.org/abs/1612.08989",
@@ -61,15 +50,15 @@
         "Host": "GitHub",
         "Access": "Free",
         "Cost": "",
-        "Test Split": false,
+        "Test Split": true,
         "Tasks": [
             "language modeling",
             "text generation",
             "named entity recognition"
         ],
-        "Venue Title": "COLING 2016",
-        "Venue Type": "conference",
-        "Venue Name": "International Conference on Computational Linguistics",
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
         "Authors": [
             "Yonatan Belinkov",
             "Alexander Magidow",
@@ -78,26 +67,26 @@
             "Moshe Koppel"
         ],
         "Affiliations": [
-            "MIT",
+            "MIT Computer Science and Artificial Intelligence Laboratory",
             "University of Rhode Island",
             "Leipzig University",
             "Bar-Ilan University",
             "Dicta: The Israel Center for Text Analysis"
         ],
-        "Abstract": "This paper presents the creation of a large-scale historical Arabic corpus, Shamela, which contains over 1 billion words from diverse periods of time. The corpus is cleaned, processed with a morphological analyzer, and enhanced with parallel passage detection and automatic text dating."
+        "Abstract": "This paper presents the development of a large-scale historical Arabic corpus, comprising 1 billion words from a 14-century time span. The corpus is cleaned, processed with a morphological analyzer, and enhanced by detecting parallel passages and automatically dating undated texts."
     },
     "validation": {
         "DIVERSITY": 0.3333333333333333,
         "ACCESSABILITY": 0.5714285714285714,
-        "CONTENT": 0.625,
-        "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.5238095238095238
+        "CONTENT": 0.5,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.42857142857142855
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00255883,
-        "input_tokens": 11087,
-        "output_tokens": 600
+        "cost": 0.0025544,
+        "input_tokens": 12341,
+        "output_tokens": 524
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

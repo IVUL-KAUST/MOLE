@@ -4,7 +4,7 @@
         "Link": "https://github.com/SkelterLabsInc/JaQuAD",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2023,
+        "Year": 2022,
         "Language": "jp",
         "Domain": [
             "wikipedia"
@@ -18,15 +18,15 @@
         "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
-            "Skelter Labs"
+            "Skelter Labs Inc."
         ],
         "Derived From": [
             "Japanese Wikipedia"
         ],
         "Paper Title": "JaQuAD: Japanese Question Answering Dataset for Machine Reading Comprehension",
-        "Paper Link": "https://arxiv.org/abs/2202.01764",
+        "Paper Link": "https://arxiv.org/abs/2202.06709",
         "Script": "mixed",
-        "Tokenized": false,
+        "Tokenized": true,
         "Host": "GitHub",
         "Access": "Free",
         "Cost": "",
@@ -34,7 +34,7 @@
         "Tasks": [
             "question answering"
         ],
-        "Venue Title": "",
+        "Venue Title": "ArXiv",
         "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
@@ -44,22 +44,22 @@
             "Seongjin Cho"
         ],
         "Affiliations": [
-            "Skelter Labs"
+            "Skelter Labs Inc."
         ],
-        "Abstract": "Question Answering (QA) is a task in which a machine understands a given document and a question to find an answer. Despite impressive progress in the NLP area, QA is still a challenging problem, especially for non-English languages due to the lack of annotated datasets. In this paper, we present the JaQuAD dataset, which is annotated by humans. JaQuAD consists of 39,696 extractive question-answer pairs on Japanese Wikipedia articles. We finetuned a baseline model which achieves 78.92% for F1 score and 63.38% for EM on test set."
+        "Abstract": "Question Answering (QA) is a task in which a machine understands a given document and a question to find an answer. Despite impressive progress in the NLP area, QA is still a challenging problem, especially for non-English languages due to the lack of annotated datasets. In this paper, we present the Japanese Question Answering Dataset, JaQuAD, which is annotated by humans. JaQuAD consists of 39,696 extractive question-answer pairs on Japanese Wikipedia articles. We fine-tuned a baseline model which achieves 78.92% for F1 score and 63.38% for EM on test set. The dataset and our experiments are available at https://github.com/SkelterLabsInc/JaQuAD."
     },
     "validation": {
-        "ACCESSABILITY": 0.7142857142857143,
+        "ACCESSABILITY": 0.5714285714285714,
         "DIVERSITY": 1.0,
-        "CONTENT": 1.0,
+        "CONTENT": 0.875,
         "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.8421052631578947
+        "AVERAGE": 0.7368421052631579
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00374729,
-        "input_tokens": 13463,
-        "output_tokens": 406
+        "cost": 0.0027548,
+        "input_tokens": 12279,
+        "output_tokens": 463
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

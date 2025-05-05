@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "Name": "Humanity's Last Exam",
+        "Name": "HUMANITY\u2019S LAST EXAM",
         "Link": "https://lastexam.ai",
         "HF Link": "",
         "License": "unknown",
@@ -12,7 +12,7 @@
         "Form": "text",
         "Collection Style": [
             "human annotation",
-            "manual curation"
+            "machine annotation"
         ],
         "Description": "A multi-modal benchmark at the frontier of human knowledge, designed to be the final closed-ended academic benchmark of its kind with broad subject coverage.",
         "Volume": 2500.0,
@@ -20,10 +20,10 @@
         "Ethical Risks": "Low",
         "Provider": [
             "Center for AI Safety",
-            "Scale AI"
+            "ScaleAI"
         ],
         "Derived From": [],
-        "Paper Title": "Humanity's Last Exam",
+        "Paper Title": "Humanity\u2019s Last Exam",
         "Paper Link": "https://arxiv.org/abs/2501.14249",
         "Tokenized": false,
         "Host": "other",
@@ -31,12 +31,13 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
+            "language modeling",
             "question answering",
-            "multiple choice question answering"
+            "information retrieval"
         ],
-        "Venue Title": "NeurIPS",
-        "Venue Type": "conference",
-        "Venue Name": "Conference on Neural Information Processing Systems",
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
         "Authors": [
             "Long Phan",
             "Alice Gatti",
@@ -63,22 +64,22 @@
         ],
         "Affiliations": [
             "Center for AI Safety",
-            "Scale AI"
+            "ScaleAI"
         ],
-        "Abstract": "Benchmarks are important tools for tracking the rapid advancements in large language model (LLM) capabilities. However, benchmarks are not keeping pace in difficulty: LLMs now achieve over 90% accuracy on popular benchmarks like MMLU, limiting informed measurement of state-of-the-art LLM capabilities. In response, we introduce Humanity's Last Exam (HLE), a multi-modal benchmark at the frontier of human knowledge, designed to be the final closed-ended academic benchmark of its kind with broad subject coverage. HLE consists of 2,500 questions across dozens of subjects, including mathematics, humanities, and the natural sciences. HLE is developed globally by subject-matter experts and consists of multiple-choice and short-answer questions suitable for automated grading. Each question has a known solution that is unambiguous and easily verifiable, but cannot be quickly answered via internet retrieval. State-of-the-art LLMs demonstrate low accuracy and calibration on HLE, highlighting a significant gap between current LLM capabilities and the expert human frontier on closed-ended academic questions. To inform research and policymaking upon a clear understanding of model capabilities, we publicly release HLE at https://lastexam.ai."
+        "Abstract": "Benchmarks are important tools for tracking the rapid advancements in large language model (LLM) capabilities. However, benchmarks are not keeping pace in difficulty: LLMs now achieve over 90% accuracy on popular benchmarks like MMLU, limiting informed measurement of state-of-the-art LLM capabilities. In response, we introduce HUMANITY\u2019S LAST EXAM (HLE), a multi-modal benchmark at the frontier of human knowledge, designed to be the final closed-ended academic benchmark of its kind with broad subject coverage. HLE consists of 2,500 questions across dozens of subjects, including mathematics, humanities, and the natural sciences. HLE is developed globally by subject-matter experts and consists of multiple-choice and short-answer questions suitable for automated grading. Each question has a known solution that is unambiguous and easily verifiable, but cannot be quickly answered via internet retrieval. State-of-the-art LLMs demonstrate low accuracy and calibration on HLE, highlighting a significant gap between current LLM capabilities and the expert human frontier on closed-ended academic questions. To inform research and policymaking upon a clear understanding of model capabilities, we publicly release HLE at https://lastexam.ai."
     },
     "validation": {
-        "ACCESSABILITY": 0.7142857142857143,
+        "ACCESSABILITY": 0.5714285714285714,
         "DIVERSITY": 1.0,
-        "CONTENT": 0.7142857142857143,
-        "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.7222222222222222
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
     },
     "length_forcing": 0.9655172413793099,
     "cost": {
-        "cost": 0.01003044,
-        "input_tokens": 32909,
-        "output_tokens": 632
+        "cost": 0.0128759,
+        "input_tokens": 35934,
+        "output_tokens": 628
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",

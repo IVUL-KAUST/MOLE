@@ -48,7 +48,7 @@
         "Link": "https://nlp.cs.washington.edu/xorqa/",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2021,
+        "Year": 2020,
         "Language": [
             "Arabic",
             "Bengali",
@@ -66,8 +66,8 @@
             "human annotation",
             "machine annotation"
         ],
-        "Description": "A large-scale dataset for cross-lingual open-retrieval question answering, featuring questions in 7 languages with answers from multilingual Wikipedia.",
-        "Volume": 40000.0,
+        "Description": "A large-scale dataset for cross-lingual open-retrieval question answering, enabling questions from one language to be answered via answer content from another language.",
+        "Volume": 40.0,
         "Unit": "tokens",
         "Ethical Risks": "Low",
         "Provider": [
@@ -77,7 +77,7 @@
             "Allen Institute for AI"
         ],
         "Derived From": [
-            "TyDi QA"
+            "TYDI QA"
         ],
         "Paper Title": "XOR QA: Cross-lingual Open-Retrieval Question Answering",
         "Paper Link": "https://nlp.cs.washington.edu/xorqa/",
@@ -87,12 +87,12 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "cross-lingual information retrieval",
-            "question answering"
+            "question answering",
+            "cross-lingual information retrieval"
         ],
-        "Venue Title": "NAACL-HLT 2021",
+        "Venue Title": "ACL",
         "Venue Type": "conference",
-        "Venue Name": "North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Venue Name": "Association for Computational Linguistics",
         "Authors": [
             "Akari Asai",
             "Jungo Kasai",
@@ -107,7 +107,7 @@
             "The University of Texas at Austin",
             "Allen Institute for AI"
         ],
-        "Abstract": "Multilingual question answering tasks typically assume that answers exist in the same language as the question. Yet in practice, many languages face both information scarcity---where languages have few reference articles---and information asymmetry---where questions reference concepts from other cultures. This work extends open-retrieval question answering to a cross-lingual setting enabling questions from one language to be answered via answer content from another language. We construct a large-scale dataset built on 40K information-seeking questions across 7 diverse non-English languages that TyDi could not find same-language answers for. Based on this dataset, we introduce a task framework, called Cross-lingual Open-Retrieval Question Answering (XOR QA), that consists of three new tasks involving cross-lingual document retrieval from multilingual and English resources. We establish baselines with state-of-the-art machine translation systems and cross-lingual pretrained models. Experimental results suggest that XOR QA is a challenging task that will facilitate the development of novel techniques for multilingual question answering. Our data and code are available at https://nlp.cs.washington.edu/xorqa/."
+        "Abstract": "Multilingual question answering tasks typically assume that answers exist in the same language as the question. Yet in practice, many languages face both information scarcity\u2014where languages have few reference articles\u2014and information asymmetry\u2014where questions reference concepts from other cultures. This work extends open-retrieval question answering to a cross-lingual setting enabling questions from one language to be answered via answer content from another language. We construct a large-scale dataset built on 40K information-seeking questions across 7 diverse non-English languages that TYDI QA could not find same-language answers for. Based on this dataset, we introduce a task framework, called Cross-lingual Open-Retrieval Question Answering (XOR QA), that consists of three new tasks involving cross-lingual document retrieval from multilingual and English resources. We establish baselines with state-of-the-art machine translation systems and cross-lingual pretrained models. Experimental results suggest that XOR QA is a challenging task that will facilitate the development of novel techniques for multilingual question answering."
     },
     "validation": {
         "DIVERSITY": 0.5,
@@ -118,9 +118,9 @@
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00983901,
-        "input_tokens": 26973,
-        "output_tokens": 891
+        "cost": 0.01939184,
+        "input_tokens": 23960,
+        "output_tokens": 856
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",

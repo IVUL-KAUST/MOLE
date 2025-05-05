@@ -4,18 +4,19 @@
         "Link": "",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2024,
+        "Year": 2023,
         "Language": "jp",
         "Domain": [
             "TV Channels"
         ],
         "Form": "text",
         "Collection Style": [
-            "manual curation"
+            "manual curation",
+            "crawling"
         ],
-        "Description": "An instruction dataset for large language models in the Japanese finance domain, constructed from Japanese government websites and Wikipedia.",
+        "Description": "An instruction dataset for large language models in the Japanese financial domain, constructed from multiple data sources including Japanese government websites.",
         "Volume": 1490.0,
-        "Unit": "sentences",
+        "Unit": "images",
         "Ethical Risks": "Medium",
         "Provider": [
             "Hokkaido University",
@@ -27,15 +28,16 @@
         "Script": "mixed",
         "Tokenized": false,
         "Host": "other",
-        "Access": "Free",
+        "Access": "Upon-Request",
         "Cost": "",
         "Test Split": false,
         "Tasks": [
             "language modeling",
-            "instruction tuning"
+            "sentiment analysis",
+            "topic classification"
         ],
-        "Venue Title": "IEEE",
-        "Venue Type": "conference",
+        "Venue Title": "",
+        "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
             "Kota Tanabe",
@@ -44,23 +46,24 @@
             "Itsuki Noda"
         ],
         "Affiliations": [
-            "Faculty of Information Science and Technology, Hokkaido University",
-            "School of Engineering, The University of Tokyo"
+            "Faculty of Information Science and Technology School of Engineering Hokkaido University",
+            "Faculty of Information Science and Technology The University of Tokyo",
+            "Faculty of Information Science and Technology Hokkaido University"
         ],
-        "Abstract": "We construct an instruction dataset for the large language model (LLM) in the Japanese finance domain. Domain adaptation of language models, including LLMs, is receiving more attention as language models become more popular. This study demonstrates the effectiveness of domain adaptation through instruction tuning. To achieve this, we propose an instruction tuning data in Japanese called JaFIn, the Japanese Financial Instruction Dataset. JaFIn is manually constructed based on multiple data sources, including Japanese government websites, which provide extensive financial knowledge. We then utilize JaFIn to apply instruction tuning for several LLMs, demonstrating that our models specialized in finance have better domain adaptability than the original models. The financial-specialized LLMs created were evaluated using a quantitative Japanese financial benchmark and qualitative response comparisons, showing improved performance over the originals."
+        "Abstract": "We construct an instruction dataset for the large language model(LLM)intheJapanesefinancedomain.Domain adaptation of language models, including LLMs, is receiving more attention as language models become more popular. This study demonstrates the effectiveness of domain adaptation through instruction tuning. To achieve this, we propose an instruction tuning data in Japanese called JaFIn, the Japanese Financial Instruction Dataset. JaFIn is manually constructed based on multiple data sources, including Japanese government websites, which provide extensive financial knowledge. We then utilize JaFIn to apply instruction tuning for several LLMs, demonstrating that our models specialized in finance have better domain adaptability than the original models. The financial-specialized LLMs created were evaluated using a quantitative Japanese financial benchmark and qualitative response comparisons, showing improved performance over the originals."
     },
     "validation": {
-        "ACCESSABILITY": 0.2857142857142857,
+        "ACCESSABILITY": 0.14285714285714285,
         "DIVERSITY": 1.0,
-        "CONTENT": 0.75,
+        "CONTENT": 0.625,
         "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.5789473684210527
+        "AVERAGE": 0.47368421052631576
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.001771,
-        "input_tokens": 16549,
-        "output_tokens": 500
+        "cost": 0.0019043,
+        "input_tokens": 16570,
+        "output_tokens": 531
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

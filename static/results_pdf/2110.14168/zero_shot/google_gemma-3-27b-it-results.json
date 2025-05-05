@@ -4,17 +4,17 @@
         "Link": "https://github.com/openai/grade-school-math",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2023,
+        "Year": 2021,
         "Language": "en",
         "Domain": [
-            "books"
+            "captions"
         ],
         "Form": "text",
         "Collection Style": [
             "human annotation",
             "manual curation"
         ],
-        "Description": "GSM8K is a dataset of 8.5K high quality grade school math word problems designed to test the informal reasoning ability of large language models.",
+        "Description": "A dataset of 8.5K high quality linguistically diverse grade school math word problems.",
         "Volume": 8500.0,
         "Unit": "documents",
         "Ethical Risks": "Low",
@@ -31,11 +31,8 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "machine translation",
-            "language modeling",
-            "topic classification",
-            "dialect identification",
-            "text generation"
+            "morphological analysis",
+            "question answering"
         ],
         "Venue Title": "",
         "Venue Type": "preprint",
@@ -46,7 +43,7 @@
             "Mohammad Bavarian",
             "Mark Chen",
             "Heewoo Jun",
-            "\u0141ukasz Kaiser",
+            "Lukas Kaiser",
             "Matthias Plappert",
             "Jerry Tworek",
             "Jacob Hilton",
@@ -68,9 +65,9 @@
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.0014165,
-        "input_tokens": 12514,
-        "output_tokens": 564
+        "cost": 0.001741,
+        "input_tokens": 14614,
+        "output_tokens": 536
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

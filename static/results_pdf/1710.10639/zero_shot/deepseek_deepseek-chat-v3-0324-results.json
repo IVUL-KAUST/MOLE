@@ -4,17 +4,18 @@
         "Link": "https://nlp.stanford.edu/projects/jesc/",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2018,
+        "Year": 2017,
         "Language": "jp",
         "Domain": [
-            "TV Channels"
+            "TV Channels",
+            "captions"
         ],
         "Form": "text",
         "Collection Style": [
             "crawling",
             "machine annotation"
         ],
-        "Description": "JESC is a large Japanese-English parallel corpus covering the domain of conversational dialogue, consisting of more than 3.2 million examples.",
+        "Description": "JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind.",
         "Volume": 3.2,
         "Unit": "sentences",
         "Ethical Risks": "Low",
@@ -23,11 +24,16 @@
             "Rakuten Institute of Technology",
             "Google Brain"
         ],
-        "Derived From": [],
+        "Derived From": [
+            "kitsunekko.net",
+            "d-addicts.com",
+            "opensubtitles.org",
+            "subscene.com"
+        ],
         "Paper Title": "JESC: Japanese-English Subtitle Corpus",
         "Paper Link": "https://arxiv.org/abs/1710.10639",
         "Script": "mixed",
-        "Tokenized": true,
+        "Tokenized": false,
         "Host": "other",
         "Access": "Free",
         "Cost": "",
@@ -35,9 +41,9 @@
         "Tasks": [
             "machine translation"
         ],
-        "Venue Title": "LREC",
+        "Venue Title": "",
         "Venue Type": "conference",
-        "Venue Name": "Language Resources and Evaluation Conference",
+        "Venue Name": "",
         "Authors": [
             "Reid Pryzant",
             "Youngjoo Chung",
@@ -54,15 +60,15 @@
     "validation": {
         "ACCESSABILITY": 0.5714285714285714,
         "DIVERSITY": 0.0,
-        "CONTENT": 0.75,
-        "EVALUATION": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
         "AVERAGE": 0.6842105263157895
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.004743,
-        "input_tokens": 8184,
-        "output_tokens": 437
+        "cost": 0.00371018,
+        "input_tokens": 9189,
+        "output_tokens": 468
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",

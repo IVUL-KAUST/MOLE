@@ -62,8 +62,8 @@
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.0024864,
-        "input_tokens": 7337,
+        "cost": 0.0008935,
+        "input_tokens": 7325,
         "output_tokens": 582
     },
     "config": {

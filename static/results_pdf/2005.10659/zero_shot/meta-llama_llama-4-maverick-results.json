@@ -1,23 +1,23 @@
 {
     "metadata": {
         "Name": "RuBQ",
-        "Link": "http://doi.org/10.5281/zenodo.3835913",
-        "HF Link": "https://github.com/vladislavneon/RuBQ",
-        "License": "CC BY-SA 4.0",
+        "Link": "https://github.com/vladislavneon/RuBQ",
+        "HF Link": "",
+        "License": "CC BY-SA 1.0",
         "Year": 2020,
         "Language": "ru",
         "Domain": [
             "captions",
-            "wikipedia"
+            "web pages"
         ],
         "Form": "text",
         "Collection Style": [
-            "manual curation",
-            "crawling"
+            "crawling",
+            "LLM generated"
         ],
-        "Description": "RuBQ is a Russian dataset for question answering over Wikidata, consisting of 1,500 questions, their English machine translations, SPARQL queries, and reference answers.",
+        "Description": "RuBQ is a Russian dataset for question answering over Wikidata, consisting of 1,500 questions, their machine translations into English, and annotated SPARQL queries.",
         "Volume": 1500.0,
-        "Unit": "sentences",
+        "Unit": "tokens",
         "Ethical Risks": "Low",
         "Provider": [
             "ITMO University",
@@ -25,13 +25,12 @@
             "Ural Federal University"
         ],
         "Derived From": [
-            "Wikidata",
-            "quiz questions"
+            "quiz questions from online sources"
         ],
         "Paper Title": "RuBQ: A Russian Dataset for Question Answering over Wikidata",
-        "Paper Link": "https://link.springer.com/chapter/10.1007/978-3-030-77385-4_14",
+        "Paper Link": "http://doi.org/10.5281/zenodo.3835913",
         "Tokenized": false,
-        "Host": "zenodo",
+        "Host": "GitHub",
         "Access": "Free",
         "Cost": "",
         "Test Split": true,
@@ -39,9 +38,9 @@
             "question answering",
             "dependency parsing"
         ],
-        "Venue Title": "Russian Conference on Artificial Intelligence",
+        "Venue Title": "ISWC",
         "Venue Type": "conference",
-        "Venue Name": "RCAI 2020",
+        "Venue Name": "International Semantic Web Conference",
         "Authors": [
             "Vladislav Korablinov",
             "Pavel Braslavski"
@@ -54,17 +53,17 @@
         "Abstract": "The paper presents RuBQ, the first Russian knowledge base question answering (KBQA) dataset. The high-quality dataset consists of 1,500 Russian questions of varying complexity, their English machine translations, SPARQL queries to Wikidata, reference answers, as well as a Wikidata sample of triples containing entities with Russian labels."
     },
     "validation": {
-        "ACCESSABILITY": 0.8571428571428571,
+        "ACCESSABILITY": 0.42857142857142855,
         "DIVERSITY": 0.0,
-        "CONTENT": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
         "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.6666666666666666
+        "AVERAGE": 0.4444444444444444
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00250552,
-        "input_tokens": 11590,
-        "output_tokens": 462
+        "cost": 0.0026748,
+        "input_tokens": 12642,
+        "output_tokens": 420
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

@@ -4,7 +4,7 @@
         "Link": "https://github.com/nerel-ds/NEREL",
         "HF Link": "",
         "License": "CC BY 2.0",
-        "Year": 2021,
+        "Year": 2023,
         "Language": "ru",
         "Domain": [
             "news articles",
@@ -12,27 +12,18 @@
         ],
         "Form": "text",
         "Collection Style": [
-            "human annotation",
-            "manual curation"
+            "crawling",
+            "human annotation"
         ],
-        "Description": "A Russian dataset for named entity recognition and relation extraction with nested named entities, relations, and events.",
-        "Volume": 56.0,
-        "Unit": "documents",
+        "Description": "A Russian dataset with nested named entities, relations, and events",
+        "Volume": 56000.0,
+        "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
             "Lomonosov Moscow State University",
-            "HSE University",
-            "Huawei Noah's Ark lab",
-            "Novosibirsk State University",
-            "Ural Federal University",
-            "Innopolis University",
-            "Kazan Federal University",
-            "Sber AI",
-            "Wiseyak"
+            "HSE University"
         ],
-        "Derived From": [
-            "RURED"
-        ],
+        "Derived From": [],
         "Paper Title": "NEREL: A Russian Dataset with Nested Named Entities, Relations and Events",
         "Paper Link": "https://arxiv.org/abs/2108.13112",
         "Tokenized": false,
@@ -45,8 +36,8 @@
             "irony detection"
         ],
         "Venue Title": "",
-        "Venue Type": "conference",
-        "Venue Name": "RANLP",
+        "Venue Type": "preprint",
+        "Venue Name": "",
         "Authors": [
             "Natalia Loukachevitch",
             "Ekaterina Artemova",
@@ -59,30 +50,30 @@
             "Elena Tutubalina"
         ],
         "Affiliations": [
-            "Lomonosov Moscow State University, Russia",
-            "HSE University, Russia",
-            "Huawei Noah's Ark lab, Russia",
-            "Novosibirsk State University, Russia",
-            "Ural Federal University, Russia",
-            "Innopolis University, Russia",
-            "Kazan Federal University, Russia",
-            "Sber AI, Russia",
-            "Wiseyak, United States"
+            "Lomonosov Moscow State University",
+            "HSE University",
+            "Huawei Noah\u2019s Ark lab",
+            "Novosibirsk State University",
+            "Ural Federal University",
+            "Innopolis University",
+            "Kazan Federal University",
+            "SberAI",
+            "Wiseyak"
         ],
-        "Abstract": "In this paper, we present NEREL, a Russian dataset for named entity recognition and relation extraction. NEREL is significantly larger than existing Russian datasets: to date it contains 56K annotated named entities and 39K annotated relations. Its important difference from previous datasets is annotation of nested named entities, as well as relations within nested entities and at the discourse level. NEREL can facilitate development of novel models that can extract relations between nested named entities, as well as relations on both sentence and document levels. NEREL also contains the annotation of events involving named entities and their roles in the events."
+        "Abstract": "In this paper, we present NEREL, a Russian dataset for named entity recognition and relation extraction. NEREL is significantly larger than existing Russian datasets: to date it contains 56K annotated named entities and 39K annotated relations."
     },
     "validation": {
         "ACCESSABILITY": 0.5714285714285714,
         "DIVERSITY": 1.0,
-        "CONTENT": 0.5714285714285714,
-        "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.5555555555555556
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00245119,
-        "input_tokens": 12882,
-        "output_tokens": 591
+        "cost": 0.00292874,
+        "input_tokens": 13687,
+        "output_tokens": 444
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

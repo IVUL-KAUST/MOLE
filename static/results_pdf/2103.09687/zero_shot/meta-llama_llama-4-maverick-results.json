@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "Name": "DODa",
+        "Name": "Darija Open Dataset",
         "Subsets": [
             {
                 "Name": "Verbs",
@@ -48,7 +48,7 @@
             "human annotation",
             "LLM generated"
         ],
-        "Description": "Darija Open Dataset (DODa) is an open-source project for the Moroccan dialect. With more than 10,000 entries DODa is arguably the largest open-source collaborative project for Darija English translation built for Natural Language Processing purposes.",
+        "Description": "A large open-source collaborative project for Darija-English translation with over 10,000 entries.",
         "Volume": 10000.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
@@ -77,7 +77,7 @@
             "Hamza Es-Samaali"
         ],
         "Affiliations": [],
-        "Abstract": "Darija Open Dataset (DODa) is an open-source project for the Moroccan dialect. With more than 10,000 entries DODa is arguably the largest open-source collaborative project for Darija English translation built for Natural Language Processing purposes. In fact, besides semantic categorization, DODa also adopts a syntactic one, presents words under different spellings, offers verb-to-noun and masculine-to-feminine correspondences, contains the conjugation of hundreds of verbs in different tenses, and many other subsets to help researchers better understand and study Moroccan dialect."
+        "Abstract": "Darija Open Dataset (DODa) is an open-source project for the Moroccan dialect. With more than 10,000 entries DODa is arguably the largest open-source collaborative project for Darija-English translation built for Natural Language Processing purposes."
     },
     "validation": {
         "DIVERSITY": 0.3333333333333333,
@@ -88,9 +88,9 @@
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.0019764,
+        "cost": 0.0018467,
         "input_tokens": 7325,
-        "output_tokens": 643
+        "output_tokens": 546
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

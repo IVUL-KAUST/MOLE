@@ -7,14 +7,14 @@
         "Year": 2021,
         "Language": "ru",
         "Domain": [
-            "other"
+            "public datasets"
         ],
         "Form": "spoken",
         "Collection Style": [
             "human annotation",
-            "manual curation"
+            "crawling"
         ],
-        "Description": "Golos is a large Russian speech dataset with 1240 hours of manually annotated audio, suitable for speech recognition research.",
+        "Description": "Golos is a large Russian speech dataset with manually annotated audio files, suitable for speech research.",
         "Volume": 1240.0,
         "Unit": "hours",
         "Ethical Risks": "Low",
@@ -30,12 +30,11 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "speech recognition",
-            "language modeling"
+            "speech recognition"
         ],
-        "Venue Title": "INTERSPEECH",
-        "Venue Type": "conference",
-        "Venue Name": "INTERSPEECH",
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
         "Authors": [
             "Nikolay Karpov",
             "Alexander Denisenko",
@@ -49,15 +48,15 @@
     "validation": {
         "ACCESSABILITY": 0.7142857142857143,
         "DIVERSITY": 1.0,
-        "CONTENT": 1.0,
+        "CONTENT": 0.7142857142857143,
         "EVALUATION": 1.0,
-        "AVERAGE": 0.8888888888888888
+        "AVERAGE": 0.7777777777777778
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.0035362,
-        "input_tokens": 9253,
-        "output_tokens": 435
+        "cost": 0.00359739,
+        "input_tokens": 9066,
+        "output_tokens": 420
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",

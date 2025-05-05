@@ -8,15 +8,14 @@
         "Language": "multilingual",
         "Domain": [
             "social media",
-            "TV Channels",
-            "captions"
+            "news articles",
+            "news articles"
         ],
         "Form": "text",
         "Collection Style": [
-            "crawling",
-            "machine annotation"
+            "crawling"
         ],
-        "Description": "A large Japanese-English parallel corpus covering conversational dialogue, consisting of more than 3.2 million examples.",
+        "Description": "A large Japanese-English parallel corpus covering conversational dialogue",
         "Volume": 3.2,
         "Unit": "sentences",
         "Ethical Risks": "Low",
@@ -31,7 +30,7 @@
         "Paper Title": "JESC: Japanese-English Subtitle Corpus",
         "Paper Link": "https://arxiv.org/abs/1710.10639",
         "Script": "mixed",
-        "Tokenized": true,
+        "Tokenized": false,
         "Host": "other",
         "Access": "Free",
         "Cost": "",
@@ -64,9 +63,9 @@
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.0019318,
-        "input_tokens": 8184,
-        "output_tokens": 429
+        "cost": 0.00180593,
+        "input_tokens": 9189,
+        "output_tokens": 423
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

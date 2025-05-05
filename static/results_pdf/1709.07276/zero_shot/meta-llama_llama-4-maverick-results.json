@@ -1,34 +1,16 @@
 {
     "metadata": {
-        "Name": "MGB-3 Arabic Dataset",
+        "Name": "MGB-3 Arabic Speech Recognition Dataset",
         "Subsets": [
             {
-                "Name": "Egyptian YouTube videos",
+                "Name": "Egyptian Arabic",
                 "Volume": 16,
                 "Unit": "hours",
                 "Dialect": "Egypt"
             },
             {
-                "Name": "MGB-2 training data",
-                "Volume": 1200,
-                "Unit": "hours",
-                "Dialect": "mixed"
-            },
-            {
-                "Name": "ADI training data",
-                "Volume": 53.6,
-                "Unit": "hours",
-                "Dialect": "mixed"
-            },
-            {
-                "Name": "ADI development data",
-                "Volume": 10,
-                "Unit": "hours",
-                "Dialect": "mixed"
-            },
-            {
-                "Name": "ADI testing data",
-                "Volume": 10.1,
+                "Name": "Dialect Identification",
+                "Volume": 50,
                 "Unit": "hours",
                 "Dialect": "mixed"
             }
@@ -48,7 +30,7 @@
             "crawling",
             "human annotation"
         ],
-        "Description": "The MGB-3 Arabic Challenge dataset is a multi-genre collection of Egyptian YouTube videos and MGB-2 training data. It includes 16 hours of Egyptian Arabic speech extracted from 80 YouTube videos across seven genres.",
+        "Description": "The MGB-3 Arabic Challenge dataset is a multi-genre broadcast dataset for Arabic speech recognition and dialect identification.",
         "Volume": 16.0,
         "Unit": "hours",
         "Ethical Risks": "Medium",
@@ -57,13 +39,13 @@
             "University of Edinburgh"
         ],
         "Derived From": [
-            "MGB-2 dataset"
+            "MGB-2"
         ],
-        "Paper Title": "Speech Recognition Challenge in the Wild: Arabic MGB-3",
-        "Paper Link": "https://arxiv.org/abs/1709.07276",
+        "Paper Title": "SPEECH RECOGNITION CHALLENGE IN THE WILD: ARABIC MGB-3",
+        "Paper Link": "http://www.mgb-challenge.org/workshop.html",
         "Script": "Arab",
         "Tokenized": false,
-        "Host": "other",
+        "Host": "GitHub",
         "Access": "Free",
         "Cost": "",
         "Test Split": true,
@@ -71,9 +53,9 @@
             "speech recognition",
             "dialect identification"
         ],
-        "Venue Title": "MGB-3 Challenge Workshop",
-        "Venue Type": "workshop",
-        "Venue Name": "MGB-3 Challenge Workshop",
+        "Venue Title": "ASRU 2017",
+        "Venue Type": "conference",
+        "Venue Name": "Automatic Speech Recognition and Understanding Workshop",
         "Authors": [
             "Ahmed Ali",
             "Stephan Vogel",
@@ -83,20 +65,20 @@
             "Qatar Computing Research Institute, HBKU, Doha, Qatar",
             "Centre for Speech Technology Research, University of Edinburgh, UK"
         ],
-        "Abstract": "This paper describes the Arabic MGB-3 Challenge -- Arabic Speech Recognition in the Wild. The challenge comprised two tasks: A) Speech transcription, evaluated on the MGB-3 test set, along with the 10 hour MGB-2 test set to report progress on the MGB-2 evaluation; B) Arabic dialect identification, introduced this year in order to distinguish between four major Arabic dialects -- Egyptian, Levantine, North African, Gulf, as well as Modern Standard Arabic."
+        "Abstract": "This paper describes the Arabic MGB-3 Challenge \u2013 Arabic Speech Recognition in the Wild. The challenge used YouTube recordings for two reasons: it is a platform that enables dialectal recordings to be harvested easily, and it also allows the collection of videos across different genres."
     },
     "validation": {
         "DIVERSITY": 0.3333333333333333,
-        "ACCESSABILITY": 0.42857142857142855,
+        "ACCESSABILITY": 0.5714285714285714,
         "CONTENT": 0.625,
         "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.47619047619047616
+        "AVERAGE": 0.5238095238095238
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00293168,
-        "input_tokens": 13133,
-        "output_tokens": 663
+        "cost": 0.0027154,
+        "input_tokens": 12664,
+        "output_tokens": 502
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

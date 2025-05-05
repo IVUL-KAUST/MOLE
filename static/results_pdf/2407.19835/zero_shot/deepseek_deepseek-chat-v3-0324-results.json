@@ -4,7 +4,7 @@
         "Subsets": [],
         "Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
         "HF Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
-        "License": "CC BY 4.0",
+        "License": "unknown",
         "Year": 2024,
         "Language": "ar",
         "Dialect": "Classical Arabic",
@@ -15,7 +15,7 @@
         "Collection Style": [
             "manual curation"
         ],
-        "Description": "The ATHAR dataset comprises 66,000 high-quality Classical Arabic to English translation samples covering science, culture, and philosophy.",
+        "Description": "The ATHAR dataset is a high-quality and diverse dataset for Classical Arabic to English translation, comprising 66,000 translation samples covering science, culture, and philosophy.",
         "Volume": 66000.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
@@ -39,8 +39,7 @@
         "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
-            "Mohammed Khalil",
-            "Mohammed Sabry"
+            "Mohammed Khalil Mohammed Sabry"
         ],
         "Affiliations": [
             "Independent Researcher",
@@ -57,8 +56,8 @@
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00381356,
-        "input_tokens": 11183,
+        "cost": 0.00602306,
+        "input_tokens": 18084,
         "output_tokens": 563
     },
     "config": {

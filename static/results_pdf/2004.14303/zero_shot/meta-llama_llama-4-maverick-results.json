@@ -1,14 +1,7 @@
 {
     "metadata": {
         "Name": "TUNIZI",
-        "Subsets": [
-            {
-                "Name": "Tunisian Arabizi",
-                "Volume": 9210,
-                "Unit": "sentences",
-                "Dialect": "Tunisia"
-            }
-        ],
+        "Subsets": [],
         "Link": "https://github.com/chaymafourati/TUNIZI-Sentiment-Analysis-Tunisian-Arabizi-Dataset",
         "HF Link": "",
         "License": "unknown",
@@ -23,26 +16,26 @@
             "crawling",
             "human annotation"
         ],
-        "Description": "TUNIZI is a Tunisian Arabizi dataset for sentiment analysis collected from YouTube comments.",
+        "Description": "TUNIZI is a Tunisian Arabizi sentiment analysis dataset collected from YouTube comments.",
         "Volume": 9210.0,
         "Unit": "sentences",
-        "Ethical Risks": "Low",
+        "Ethical Risks": "Medium",
         "Provider": [
             "iCompass"
         ],
         "Derived From": [],
-        "Paper Title": "TUNIZI: a Tunisian Arabizi sentiment analysis Dataset",
+        "Paper Title": "TUNIZI: A TUNISIAN ARABIZI SENTIMENT ANALYSIS DATASET",
         "Paper Link": "https://arxiv.org/abs/2004.14303",
         "Script": "Latin",
         "Tokenized": false,
         "Host": "GitHub",
         "Access": "Free",
         "Cost": "",
-        "Test Split": true,
+        "Test Split": false,
         "Tasks": [
             "sentiment analysis"
         ],
-        "Venue Title": "ICLR 2020",
+        "Venue Title": "ICLR",
         "Venue Type": "conference",
         "Venue Name": "International Conference on Learning Representations",
         "Authors": [
@@ -53,20 +46,20 @@
         "Affiliations": [
             "iCompass"
         ],
-        "Abstract": "On social media, Arabic people tend to express themselves in their own local dialects. More particularly, Tunisians use the informal way called 'Tunisian Arabizi'. Analytical studies seek to explore and recognize online opinions aiming to exploit them for planning and prediction purposes such as measuring the customer satisfaction and establishing sales and marketing strategies. However, analytical studies based on Deep Learning are data hungry. On the other hand, African languages and dialects are considered low resource languages. For instance, to the best of our knowledge, no annotated Tunisian Arabizi dataset exists. In this paper, we introduce TUNIZI a sentiment analysis Tunisian Arabizi Dataset, collected from social networks, preprocessed for analytical studies and annotated manually by Tunisian native speakers."
+        "Abstract": "On social media, Arabic people tend to express themselves in their own local dialects. More particularly, Tunisians use the informal way called 'Tunisian Arabizi'. Analytical studies seek to explore and recognize online opinions aiming to exploit them for planning and prediction purposes such as measuring customer satisfaction and establishing sales and marketing strategies. However, analytical studies based on Deep Learning are data hungry. On the other hand, African languages and dialects are considered low resource languages. For instance, to the best of our knowledge, no annotated Tunisian Arabizi dataset exists. In this paper, we introduce TUNIZI a sentiment analysis Tunisian Arabizi Dataset, collected from social networks, preprocessed for analytical studies and annotated manually by Tunisian native speakers."
     },
     "validation": {
-        "DIVERSITY": 0.6666666666666666,
+        "DIVERSITY": 1.0,
         "ACCESSABILITY": 0.8571428571428571,
-        "CONTENT": 0.875,
-        "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.8095238095238095
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.9523809523809523
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00195942,
-        "input_tokens": 10611,
-        "output_tokens": 524
+        "cost": 0.00180128,
+        "input_tokens": 5182,
+        "output_tokens": 485
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

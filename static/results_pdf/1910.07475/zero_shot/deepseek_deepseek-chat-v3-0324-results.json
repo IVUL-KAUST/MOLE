@@ -4,56 +4,56 @@
         "Subsets": [
             {
                 "Name": "English",
-                "Volume": 12738.0,
-                "Unit": "tokens",
+                "Volume": 12738,
+                "Unit": "instances",
                 "Language": "English"
             },
             {
-                "Name": "Arabic",
-                "Volume": 5852.0,
-                "Unit": "tokens",
-                "Language": "Arabic"
-            },
-            {
-                "Name": "German",
-                "Volume": 5029.0,
-                "Unit": "tokens",
-                "Language": "German"
-            },
-            {
                 "Name": "Spanish",
-                "Volume": 5753.0,
-                "Unit": "tokens",
+                "Volume": 5753,
+                "Unit": "instances",
                 "Language": "Spanish"
             },
             {
+                "Name": "German",
+                "Volume": 5029,
+                "Unit": "instances",
+                "Language": "German"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 5852,
+                "Unit": "instances",
+                "Language": "Arabic"
+            },
+            {
                 "Name": "Hindi",
-                "Volume": 5425.0,
-                "Unit": "tokens",
+                "Volume": 5425,
+                "Unit": "instances",
                 "Language": "Hindi"
             },
             {
                 "Name": "Vietnamese",
-                "Volume": 6006.0,
-                "Unit": "tokens",
+                "Volume": 6006,
+                "Unit": "instances",
                 "Language": "Vietnamese"
             },
             {
                 "Name": "Simplified Chinese",
-                "Volume": 5641.0,
-                "Unit": "tokens",
+                "Volume": 5641,
+                "Unit": "instances",
                 "Language": "Simplified Chinese"
             }
         ],
         "Link": "https://github.com/facebookresearch/mlqa",
         "HF Link": "",
-        "License": "MIT License",
-        "Year": 2020,
+        "License": "unknown",
+        "Year": 2019,
         "Language": [
             "English",
-            "Arabic",
-            "German",
             "Spanish",
+            "German",
+            "Arabic",
             "Hindi",
             "Vietnamese",
             "Simplified Chinese"
@@ -64,11 +64,12 @@
         "Form": "text",
         "Collection Style": [
             "crawling",
-            "human annotation"
+            "human annotation",
+            "machine annotation"
         ],
-        "Description": "MLQA is a multi-way aligned extractive QA evaluation benchmark in seven languages: English, Arabic, German, Spanish, Hindi, Vietnamese and Simplified Chinese, designed to spur research in multilingual question answering.",
-        "Volume": 5852.0,
-        "Unit": "tokens",
+        "Description": "MLQA is a multi-way aligned extractive QA evaluation benchmark intended to spur research in cross-lingual question answering. It contains QA instances in 7 languages, with each instance parallel between 4 languages on average.",
+        "Volume": 12738.0,
+        "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
             "Facebook AI Research",
@@ -86,12 +87,12 @@
             "question answering",
             "cross-lingual information retrieval"
         ],
-        "Venue Title": "",
+        "Venue Title": "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
         "Venue Type": "conference",
-        "Venue Name": "",
+        "Venue Name": "ACL",
         "Authors": [
             "Patrick Lewis",
-            "Barlas Ou011fuz",
+            "Barlas Oguz",
             "Ruty Rinott",
             "Sebastian Riedel",
             "Holger Schwenk"
@@ -111,9 +112,9 @@
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00720982,
-        "input_tokens": 19371,
-        "output_tokens": 708
+        "cost": 0.00753652,
+        "input_tokens": 22396,
+        "output_tokens": 821
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",

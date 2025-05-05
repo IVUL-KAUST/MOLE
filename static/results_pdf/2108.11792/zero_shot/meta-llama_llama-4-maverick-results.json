@@ -1,7 +1,7 @@
 {
     "metadata": {
-        "Name": "Belgian Statutory Article Retrieval Dataset (BSARD)",
-        "Link": "https://github.com/maastrichtlawtech/bsard",
+        "Name": "Belgian Statutory Article Retrieval Dataset",
+        "Link": "https://huggingface.co/datasets/antoiloui/bsard",
         "HF Link": "https://huggingface.co/datasets/antoiloui/bsard",
         "License": "CC BY-NC-SA 4.0",
         "Year": 2021,
@@ -11,10 +11,9 @@
         ],
         "Form": "text",
         "Collection Style": [
-            "human annotation",
-            "manual curation"
+            "human annotation"
         ],
-        "Description": "A dataset for statutory article retrieval in French, containing 1,100+ legal questions and 22,600+ law articles.",
+        "Description": "A dataset of French native legal questions posed by Belgian citizens and law articles from the Belgian legislation.",
         "Volume": 22633.0,
         "Unit": "documents",
         "Ethical Risks": "Low",
@@ -31,7 +30,6 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "information retrieval",
             "information retrieval"
         ],
         "Venue Title": "",
@@ -42,9 +40,9 @@
             "Gerasimos Spanakis"
         ],
         "Affiliations": [
-            "Law & Tech Lab, Maastricht University"
+            "Law&TechLab,MaastrichtUniversity"
         ],
-        "Abstract": "Statutory article retrieval is the task of automatically retrieving law articles relevant to a legal question. This paper presents BSARD, a novel French native expert-annotated statutory article retrieval dataset. BSARD consists of 1,100+ French native legal questions labeled by experienced jurists with relevant articles from a corpus of 22,600+ Belgian law articles. Using BSARD, we benchmark several state-of-the-art retrieval approaches, including lexical and dense architectures, both in zero-shot and supervised setups."
+        "Abstract": "This paper presents a novel French native expert-annotated statutory article retrieval dataset as its main contribution. Our Belgian Statutory Article Retrieval Dataset (BSARD) consists of more than 1,100 legal questions posed by Belgian citizens and labeled by legal experts with references to relevant articles from a corpus of around 22,600 Belgian law articles."
     },
     "validation": {
         "ACCESSABILITY": 0.5714285714285714,
@@ -53,11 +51,11 @@
         "EVALUATION": 1.0,
         "AVERAGE": 0.6666666666666666
     },
-    "length_forcing": 0.9655172413793099,
+    "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00354,
-        "input_tokens": 17267,
-        "output_tokens": 439
+        "cost": 0.0044594,
+        "input_tokens": 19132,
+        "output_tokens": 385
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

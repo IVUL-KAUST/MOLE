@@ -9,52 +9,10 @@
                 "Language": "Arabic"
             },
             {
-                "Name": "Arabic",
-                "Volume": 1670,
-                "Unit": "sentences",
-                "Language": "Arabic"
-            },
-            {
                 "Name": "English",
                 "Volume": 5593,
                 "Unit": "sentences",
                 "Language": "English"
-            },
-            {
-                "Name": "English",
-                "Volume": 10944,
-                "Unit": "sentences",
-                "Language": "English"
-            },
-            {
-                "Name": "English",
-                "Volume": 6304,
-                "Unit": "sentences",
-                "Language": "English"
-            },
-            {
-                "Name": "English",
-                "Volume": 12805,
-                "Unit": "sentences",
-                "Language": "English"
-            },
-            {
-                "Name": "English",
-                "Volume": 1939,
-                "Unit": "sentences",
-                "Language": "English"
-            },
-            {
-                "Name": "English",
-                "Volume": 58738,
-                "Unit": "sentences",
-                "Language": "English"
-            },
-            {
-                "Name": "German",
-                "Volume": 369,
-                "Unit": "sentences",
-                "Language": "German"
             },
             {
                 "Name": "German",
@@ -69,20 +27,8 @@
                 "Language": "Indonesian"
             },
             {
-                "Name": "Indonesian",
-                "Volume": 713,
-                "Unit": "sentences",
-                "Language": "Indonesian"
-            },
-            {
                 "Name": "Italian",
                 "Volume": 1560,
-                "Unit": "sentences",
-                "Language": "Italian"
-            },
-            {
-                "Name": "Italian",
-                "Volume": 8000,
                 "Unit": "sentences",
                 "Language": "Italian"
             },
@@ -101,12 +47,6 @@
             {
                 "Name": "Spanish",
                 "Volume": 5365,
-                "Unit": "sentences",
-                "Language": "Spanish"
-            },
-            {
-                "Name": "Spanish",
-                "Volume": 6000,
                 "Unit": "sentences",
                 "Language": "Spanish"
             },
@@ -139,7 +79,7 @@
         "Collection Style": [
             "crawling"
         ],
-        "Description": "This paper presents a large scale analysis of multilingual hate speech in 9 languages from 16 different sources. It explores the performance of deep learning models in low and high resource settings, and provides a catalogue of effective models for different languages.",
+        "Description": "This paper presents a large-scale analysis of multilingual hate speech in 9 languages from 16 different sources, using deep learning models.",
         "Volume": 159753.0,
         "Unit": "sentences",
         "Ethical Risks": "Medium",
@@ -167,9 +107,9 @@
             "Animesh Mukherjee"
         ],
         "Affiliations": [
-            "Indian Institute of Technology Kharagpur, India"
+            "Indian Institute of Technology Kharagpur"
         ],
-        "Abstract": "Hate speech detection is a challenging problem with most of the datasets available in only one language: English. In this paper, we conduct a large scale analysis of multilingual hate speech in 9 languages from 16 different sources. We observe that in low resource setting, simple models such as LASER embedding with logistic regression performs the best, while in high resource setting BERT based models perform better. In case of zero-shot classification, languages such as Italian and Portuguese achieve good results. Our proposed framework could be used as an efficient solution for low-resource languages. These models could also act as good baselines for future multilingual hate speech detection tasks. We have made our code and experimental settings public for other researchers."
+        "Abstract": "Hatespeechdetectionisachallengingproblemwithmostofthedatasetsavailableinonlyonelanguage:English.Inthispaper,weconductalargescaleanalysisofmultilingualhatespeechin9languagesfrom16differentsources.Weobservethatinlowresourcesetting,simplemodelsuchasLASERembeddingwithlogisticregressionperformsthebest,whileinhighresourcesettingBERTbasedmodelsperformbetter.Incaseofzero-shotclassification,languagesuchasItalianandPortugueseachievegoodresults.Ourproposedframeworkcouldbeusedasanefficientsolutionforlow-resourcelanguages.Thesemodelscouldalsoactasgoodbaselinesforfuturemultilingualhatespeechdetectiontasks.Wehavemadeourcodeandexperimentalsettingspublicforotherresearchers."
     },
     "validation": {
         "DIVERSITY": 0.5,
@@ -178,11 +118,11 @@
         "EVALUATION": 0.3333333333333333,
         "AVERAGE": 0.631578947368421
     },
-    "length_forcing": 0.9666666666666666,
+    "length_forcing": 0.9333333333333332,
     "cost": {
-        "cost": 0.002526439,
-        "input_tokens": 18529,
-        "output_tokens": 1212
+        "cost": 0.002262949,
+        "input_tokens": 15690,
+        "output_tokens": 864
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

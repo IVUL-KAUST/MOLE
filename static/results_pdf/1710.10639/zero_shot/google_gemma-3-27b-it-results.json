@@ -4,7 +4,7 @@
         "Link": "https://nlp.stanford.edu/projects/jesc/",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2019,
+        "Year": 2017,
         "Language": "multilingual",
         "Domain": [
             "TV Channels",
@@ -14,56 +14,55 @@
         "Collection Style": [
             "crawling"
         ],
-        "Description": "JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind.",
+        "Description": "JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples.",
         "Volume": 3240661.0,
         "Unit": "sentences",
         "Ethical Risks": "Medium",
         "Provider": [
-            "Stanford University",
-            "Rakuten Institute of Technology",
-            "Google Brain"
+            "StanfordUniversity",
+            "RakutenInstituteofTechnology",
+            "GoogleBrain"
         ],
         "Derived From": [],
         "Paper Title": "JESC: Japanese-English Subtitle Corpus",
         "Paper Link": "https://arxiv.org/abs/1710.10639",
         "Script": "mixed",
         "Tokenized": false,
-        "Host": "other",
+        "Host": "HuggingFace",
         "Access": "Free",
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "machine translation",
-            "language modeling"
+            "machine translation"
         ],
         "Venue Title": "",
-        "Venue Type": "conference",
+        "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
-            "Reid Pryzant",
-            "Youngjoo Chung",
-            "Dan Jurafsky",
-            "Denny Britz"
+            "ReidPryzant",
+            "YoungjooChung",
+            "DanJurafsky",
+            "DennyBritz"
         ],
         "Affiliations": [
-            "Stanford University",
-            "Rakuten Institute of Technology",
-            "Google Brain"
+            "StanfordUniversity",
+            "RakutenInstituteofTechnology",
+            "GoogleBrain"
         ],
         "Abstract": "In this paper we describe the Japanese-English Subtitle Corpus (JESC). JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind. The corpus was assembled by crawling and aligning subtitles found on the web. The assembly process incorporates a number of novel preprocessing elements to ensure high monolingual fluency and accurate bilingual alignments. We summarize its contents and evaluate its quality using human experts and baseline machine translation (MT) systems."
     },
     "validation": {
-        "ACCESSABILITY": 0.5714285714285714,
+        "ACCESSABILITY": 0.2857142857142857,
         "DIVERSITY": 1.0,
         "CONTENT": 0.75,
         "EVALUATION": 1.0,
-        "AVERAGE": 0.7368421052631579
+        "AVERAGE": 0.631578947368421
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.001119353,
-        "input_tokens": 8196,
-        "output_tokens": 486
+        "cost": 0.0010817,
+        "input_tokens": 9189,
+        "output_tokens": 476
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

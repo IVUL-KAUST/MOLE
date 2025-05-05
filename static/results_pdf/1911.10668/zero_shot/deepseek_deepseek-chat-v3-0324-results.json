@@ -3,7 +3,7 @@
         "Name": "JParaCrawl",
         "Link": "http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/",
         "HF Link": "",
-        "License": "Apache-2.0",
+        "License": "unknown",
         "Year": 2019,
         "Language": "multilingual",
         "Domain": [
@@ -14,14 +14,16 @@
             "crawling",
             "machine annotation"
         ],
-        "Description": "A large web-based English-Japanese parallel corpus constructed by crawling the web and automatically aligning parallel sentences. It contains over 8.7 million sentence pairs.",
+        "Description": "JParaCrawl is a large-scale English-Japanese parallel corpus constructed by crawling the web and automatically aligning parallel sentences. It contains over 8.7 million sentence pairs and covers a broad range of domains.",
         "Volume": 8.7,
         "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
-            "NTT Communication Science Laboratories"
+            "NTT Communication Science Laboratories, NTT Corporation"
         ],
-        "Derived From": [],
+        "Derived From": [
+            "Common Crawl"
+        ],
         "Paper Title": "JParaCrawl: A Large Scale Web-Based English-Japanese Parallel Corpus",
         "Paper Link": "https://arxiv.org/abs/1911.10668",
         "Script": "mixed",
@@ -29,13 +31,13 @@
         "Host": "other",
         "Access": "Free",
         "Cost": "",
-        "Test Split": true,
+        "Test Split": false,
         "Tasks": [
             "machine translation"
         ],
-        "Venue Title": "LREC",
-        "Venue Type": "journal",
-        "Venue Name": "Proceedings of the 12th International Conference on Language Resources and Evaluation",
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
         "Authors": [
             "Makoto Morishita",
             "Jun Suzuki",
@@ -50,14 +52,14 @@
         "ACCESSABILITY": 0.42857142857142855,
         "DIVERSITY": 1.0,
         "CONTENT": 0.875,
-        "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.631578947368421
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7368421052631579
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00453404,
-        "input_tokens": 11926,
-        "output_tokens": 536
+        "cost": 0.00489731,
+        "input_tokens": 12537,
+        "output_tokens": 532
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",

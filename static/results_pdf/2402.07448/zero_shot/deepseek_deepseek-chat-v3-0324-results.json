@@ -4,7 +4,7 @@
         "Subsets": [],
         "Link": "github.com/ahmedheakl/AraSpider",
         "HF Link": "",
-        "License": "MIT License",
+        "License": "unknown",
         "Year": 2023,
         "Language": "ar",
         "Dialect": "Modern Standard Arabic",
@@ -13,11 +13,11 @@
         ],
         "Form": "text",
         "Collection Style": [
-            "manual curation",
-            "human annotation"
+            "human annotation",
+            "machine annotation"
         ],
-        "Description": "AraSpider is the first Arabic version of the Spider dataset, designed to improve NLP in the Arabic-speaking community. It includes translations of English questions to Arabic and evaluations of translation and text-to-SQL models.",
-        "Volume": 10181.0,
+        "Description": "AraSpider is the first Arabic version of the Spider dataset, aimed at improving NLP in the Arabic-speaking community. It includes translations of English questions to Arabic and evaluations of multilingual translation models.",
+        "Volume": 200.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
@@ -26,7 +26,7 @@
         "Derived From": [
             "Spider dataset"
         ],
-        "Paper Title": "AraSpider: Democratizing Arabic Text-to-SQL",
+        "Paper Title": "AraSpider Democratizing Arabic Text-to-SQL",
         "Paper Link": "https://arxiv.org/abs/2402.07448",
         "Script": "Arab",
         "Tokenized": false,
@@ -35,7 +35,8 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "text generation"
+            "text generation",
+            "dependency parsing"
         ],
         "Venue Title": "",
         "Venue Type": "preprint",
@@ -52,15 +53,15 @@
     },
     "validation": {
         "DIVERSITY": 1.0,
-        "ACCESSABILITY": 0.8571428571428571,
+        "ACCESSABILITY": 0.7142857142857143,
         "CONTENT": 0.875,
         "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.8095238095238095
+        "AVERAGE": 0.7619047619047619
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.004548,
-        "input_tokens": 11629,
+        "cost": 0.00455971,
+        "input_tokens": 11643,
         "output_tokens": 543
     },
     "config": {

@@ -3,27 +3,31 @@
         "Name": "Claire French Dialogue Dataset",
         "Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
         "HF Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
-        "License": "CC BY-NC-SA 4.0",
+        "License": "CC BY-NC-SA 1.0",
         "Year": 2023,
         "Language": "fr",
         "Domain": [
+            "news articles",
             "books",
-            "other"
+            "wikipedia",
+            "web pages"
         ],
         "Form": "text",
         "Collection Style": [
-            "other"
+            "crawling",
+            "human annotation",
+            "manual curation"
         ],
-        "Description": "A dataset containing French dialogues from various sources",
-        "Volume": 160.0,
-        "Unit": "sentences",
+        "Description": "A dataset containing roughly 160 million words from transcripts and stage plays in French",
+        "Volume": 160000000.0,
+        "Unit": "tokens",
         "Ethical Risks": "Low",
         "Provider": [
-            "LINAGORA Labs"
+            "LINAGORA"
         ],
         "Derived From": [],
         "Paper Title": "The Claire French Dialogue Dataset",
-        "Paper Link": "https://arxiv.org/abs/2311.16840",
+        "Paper Link": "https://arxiv.org/abs/2307.09288",
         "Tokenized": false,
         "Host": "HuggingFace",
         "Access": "Free",
@@ -31,9 +35,10 @@
         "Test Split": true,
         "Tasks": [
             "language modeling",
-            "text generation"
+            "text generation",
+            "summarization"
         ],
-        "Venue Title": "",
+        "Venue Title": "The Claire French Dialogue Dataset",
         "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
@@ -48,20 +53,20 @@
             "LINAGORA",
             "Ecole Polytechnique"
         ],
-        "Abstract": "We present the Claire French Dialogue Dataset (CFDD), a resource created by members of LINAGORA Labs in the context of the OpenLLM France initiative. CFDD is a corpus containing roughly 160 million words from transcripts and stage plays in French that we have assembled and publicly released in an effort to further the development of multilingual, open source language models."
+        "Abstract": "We present the Claire French Dialogue Dataset (CFDD), a resource created by members of LINAGORA Labs in the context of the OpenLLM France initiative. CFDD is a corpus containing roughly 160 million words from transcripts and stage plays in French that we have assembled and publicly released in an effort to further the development of multilingual, open-source language models."
     },
     "validation": {
-        "ACCESSABILITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
         "DIVERSITY": 1.0,
-        "CONTENT": 0.42857142857142855,
-        "EVALUATION": 0.6666666666666666,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
         "AVERAGE": 0.7222222222222222
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.0042052,
-        "input_tokens": 19989,
-        "output_tokens": 409
+        "cost": 0.00294149,
+        "input_tokens": 15851,
+        "output_tokens": 455
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

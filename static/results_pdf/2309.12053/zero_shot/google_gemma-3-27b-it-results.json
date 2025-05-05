@@ -5,24 +5,27 @@
             {
                 "Name": "Modern Standard Arabic",
                 "Volume": "Unknown",
-                "Unit": "sentences",
+                "Unit": "tokens",
                 "Dialect": "Modern Standard Arabic"
             }
         ],
         "Link": "https://github.com/FreedomIntelligence/AceGPT",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2024,
+        "Year": 2023,
         "Language": "ar",
         "Dialect": "Modern Standard Arabic",
         "Domain": [
-            "other"
+            "books",
+            "social media"
         ],
         "Form": "text",
         "Collection Style": [
-            "other"
+            "crawling",
+            "human annotation",
+            "machine annotation"
         ],
-        "Description": "A localized Large Language Model (LLM) specifically for Arabic, aiming to address cultural sensitivity and local values.",
+        "Description": "AceGPT is a localized Large Language Model (LLM) specifically for Arabic, addressing cultural sensitivity and values.",
         "Volume": 0.0,
         "Unit": "tokens",
         "Ethical Risks": "Medium",
@@ -40,17 +43,19 @@
         "Host": "GitHub",
         "Access": "Free",
         "Cost": "",
-        "Test Split": true,
+        "Test Split": false,
         "Tasks": [
             "machine translation",
+            "sentiment analysis",
             "language modeling",
-            "text generation"
+            "text generation",
+            "dialect identification"
         ],
         "Venue Title": "",
         "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
-            "Huang Huang",
+            "HuangHuang",
             "Fei Yu",
             "Jianqing Zhu",
             "Xuening Sun",
@@ -77,20 +82,20 @@
             "King Abdullah University of Science and Technology",
             "Shenzhen Research Institute of Big Data"
         ],
-        "Abstract": "This paper is devoted to the development of a localized Large Language Model (LLM) specifically for Arabic, a language imbued with unique cultural characteristics inadequately addressed by current mainstream models. Significant concerns emerge when addressing cultural sensitivity and local values. To address this, the paper proposes a comprehensive solution that includes further pre-training with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and GPT-4 responses in Arabic, alongside Reinforcement Learning with AI Feedback (RLAIF) employing a reward model attuned to local culture and values. The goal is to cultivate culturally cognizant and value-aligned Arabic LLMs capable of accommodating the diverse, application-specific needs of Arabic-speaking communities. Comprehensive evaluations reveal that the resulting model, dubbed `AceGPT', sets the state-of-the-art standard for open Arabic LLMs across various benchmarks."
+        "Abstract": "This paper is devoted to the development of a localized Large Language Model (LLM) specifically for Arabic, a language imbued with unique cultural characteristics inadequately addressed by current mainstream models. Significant concerns emerge when addressing cultural sensitivity and local values. To address this, the paper proposes a comprehensive solution that includes further pre-training with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and GPT-4 responses in Arabic, alongside Reinforcement Learning with AI Feedback (RLAIF) employing a reward model attuned to local culture and values. The goal is to cultivate culturally cognizant and value-aligned Arabic LLMs capable of accommodating the diverse, application-specific needs of Arabic-speaking communities."
     },
     "validation": {
         "DIVERSITY": 0.6666666666666666,
         "ACCESSABILITY": 0.5714285714285714,
         "CONTENT": 0.375,
-        "EVALUATION": 0.0,
-        "AVERAGE": 0.42857142857142855
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47619047619047616
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.0037666,
-        "input_tokens": 34478,
-        "output_tokens": 713
+        "cost": 0.0092532,
+        "input_tokens": 73915,
+        "output_tokens": 716
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

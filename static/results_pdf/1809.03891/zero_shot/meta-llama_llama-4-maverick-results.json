@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "Name": "OpenITI",
+        "Name": "OpenITI Corpus",
         "Subsets": [
             {
                 "Name": "Classical Arabic",
@@ -12,7 +12,7 @@
         "Link": "https://github.com/OpenITI",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2017,
+        "Year": 2016,
         "Language": "ar",
         "Dialect": "mixed",
         "Domain": [
@@ -22,22 +22,23 @@
         ],
         "Form": "text",
         "Collection Style": [
+            "crawling",
             "manual curation"
         ],
-        "Description": "A large-scale historical corpus of the written Arabic language, spanning 1400 years",
+        "Description": "A large-scale historical corpus of written Arabic language, spanning 1400 years.",
         "Volume": 1.5,
         "Unit": "hours",
         "Ethical Risks": "Low",
         "Provider": [
-            "MIT",
-            "University of Rhode Island",
-            "Qatar Computing Research Institute",
-            "Bar-Ilan University",
-            "University of Vienna"
+            "OpenITI"
         ],
-        "Derived From": [],
-        "Paper Title": "Studying the History of the Arabic Language: Language Technology and a Large-Scale Historical Corpus",
-        "Paper Link": "https://arxiv.org/abs/1809.03891",
+        "Derived From": [
+            "Shamela",
+            "Shia online library",
+            "Al-Jami\u2019 Al-Kabir"
+        ],
+        "Paper Title": "Studying the History of the Arabic Language",
+        "Paper Link": "https://arxiv.org/abs/2005.03871",
         "Script": "Arab",
         "Tokenized": true,
         "Host": "GitHub",
@@ -48,24 +49,24 @@
             "language modeling",
             "text generation"
         ],
-        "Venue Title": "Studying the History of the Arabic Language",
+        "Venue Title": "Language Resources and Evaluation",
         "Venue Type": "journal",
-        "Venue Name": "",
+        "Venue Name": "Language Resources and Evaluation",
         "Authors": [
             "Yonatan Belinkov",
             "Alexander Magidow",
-            "Alberto Barr\u00f3n-Cede\u00f1o",
+            "Alberto Barro\u0301n-Ceden\u0303o",
             "Avi Shmidman",
             "Maxim Romanov"
         ],
         "Affiliations": [
-            "MIT Computer Science and Artificial Intelligence Laboratory",
-            "Department of Modern and Classical Languages and Literatures, University of Rhode Island",
-            "Qatar Computing Research Institute, HBKU",
-            "Department of Hebrew Literature, Bar-Ilan University",
-            "Department of History, University of Vienna"
+            "MIT",
+            "University of Rhode Island",
+            "Qatar Computing Research Institute",
+            "Bar-Ilan University",
+            "University of Vienna"
         ],
-        "Abstract": "Arabic is a widely-spoken language with a long and rich history, but existing corpora and language technology focus mostly on modern Arabic and its varieties. Therefore, studying the history of the language has so far been mostly limited to manual analyses on a small scale. In this work, we present a large-scale historical corpus of the written Arabic language, spanning 1400 years. We describe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques. Our findings confirm the established division of written Arabic into Modern Standard and Classical Arabic, and confirm other established periodizations, while suggesting that written Arabic may be divisible into still further periods of development."
+        "Abstract": "This paper presents a large-scale historical corpus of written Arabic language, spanning 1400 years. We describe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques."
     },
     "validation": {
         "DIVERSITY": 0.3333333333333333,
@@ -76,9 +77,9 @@
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00465091,
-        "input_tokens": 25996,
-        "output_tokens": 638
+        "cost": 0.005336,
+        "input_tokens": 26448,
+        "output_tokens": 481
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

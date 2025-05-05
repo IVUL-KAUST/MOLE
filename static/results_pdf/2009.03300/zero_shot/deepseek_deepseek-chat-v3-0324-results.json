@@ -1,23 +1,21 @@
 {
     "metadata": {
-        "Name": "Measuring Massive Multitask Language Understanding",
+        "Name": "Massive Multitask Language Understanding",
         "Link": "https://github.com/hendrycks/test",
         "HF Link": "",
-        "License": "unknown",
+        "License": "MIT License",
         "Year": 2021,
         "Language": "en",
         "Domain": [
-            "public datasets",
-            "other"
+            "public datasets"
         ],
         "Form": "text",
         "Collection Style": [
-            "human annotation",
             "manual curation"
         ],
-        "Description": "A benchmark for assessing models across 57 subjects at varying levels of difficulty, measuring language understanding in breadth and depth.",
+        "Description": "A benchmark dataset designed to measure a text model\u2019s multitask accuracy across 57 tasks including elementary mathematics, US history, computer science, law, and more.",
         "Volume": 15908.0,
-        "Unit": "tokens",
+        "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
             "UC Berkeley",
@@ -26,8 +24,8 @@
             "UIUC"
         ],
         "Derived From": [],
-        "Paper Title": "Measuring Massive Multitask Language Understanding",
-        "Paper Link": "https://github.com/hendrycks/test",
+        "Paper Title": "MEASURING MASSIVE MULTITASK LANGUAGE UNDERSTANDING",
+        "Paper Link": "https://arxiv.org/abs/2009.03300",
         "Tokenized": false,
         "Host": "GitHub",
         "Access": "Free",
@@ -36,8 +34,7 @@
         "Tasks": [
             "language modeling",
             "question answering",
-            "natural language inference",
-            "other"
+            "multiple choice question answering"
         ],
         "Venue Title": "ICLR",
         "Venue Type": "conference",
@@ -57,20 +54,20 @@
             "UChicago",
             "UIUC"
         ],
-        "Abstract": "We propose a new test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model's academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings."
+        "Abstract": "We propose a new test to measure a text model\u2019s multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model\u2019s academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings."
     },
     "validation": {
-        "ACCESSABILITY": 0.7142857142857143,
+        "ACCESSABILITY": 0.8571428571428571,
         "DIVERSITY": 1.0,
-        "CONTENT": 0.7142857142857143,
+        "CONTENT": 0.8571428571428571,
         "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.6666666666666666
+        "AVERAGE": 0.7777777777777778
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00989514,
-        "input_tokens": 29575,
-        "output_tokens": 544
+        "cost": 0.0178087,
+        "input_tokens": 24171,
+        "output_tokens": 554
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",

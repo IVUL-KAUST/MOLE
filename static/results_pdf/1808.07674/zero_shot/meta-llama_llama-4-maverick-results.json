@@ -83,7 +83,7 @@
             "crawling",
             "human annotation"
         ],
-        "Description": "A large-scale multi-dialectal Twitter corpus for gender, age, and language variety identification",
+        "Description": "A large-scale multi-dialectal Twitter corpus for gender, age, and language variety identification from 11 regions and 16 countries in the Arab world.",
         "Volume": 2.4,
         "Unit": "sentences",
         "Ethical Risks": "Medium",
@@ -93,7 +93,7 @@
         ],
         "Derived From": [],
         "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age and Language Variety Identification",
-        "Paper Link": "https://www.aclweb.org/anthology/papers/",
+        "Paper Link": "https://doi.org/10.1111/lnc3.12275",
         "Script": "Arab",
         "Tokenized": false,
         "Host": "other",
@@ -106,9 +106,9 @@
             "gender identification",
             "language identification"
         ],
-        "Venue Title": "LREC",
-        "Venue Type": "conference",
-        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Venue Title": "Language and Linguistics Compass",
+        "Venue Type": "journal",
+        "Venue Name": "Language and Linguistics Compass",
         "Authors": [
             "Wajdi Zaghouani",
             "Anis Charfi"
@@ -117,7 +117,7 @@
             "Hamad Bin Khalifa University",
             "Carnegie Mellon University Qatar"
         ],
-        "Abstract": "This paper presents Arap-Tweet, a large-scale multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world. The corpus was collected from Twitter and annotated for age categories, gender, and dialectal variety."
+        "Abstract": "In this paper, we present Arap-Tweet, a large-scale and multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world representing the major Arabic dialectal varieties. To build this corpus, we collected data from Twitter and provided a team of experienced annotators with annotation guidelines that they used to annotate the corpus for age categories, gender, and dialectal variety."
     },
     "validation": {
         "DIVERSITY": 0.6666666666666666,
@@ -128,9 +128,9 @@
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00314446,
+        "cost": 0.00239293,
         "input_tokens": 11131,
-        "output_tokens": 797
+        "output_tokens": 845
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

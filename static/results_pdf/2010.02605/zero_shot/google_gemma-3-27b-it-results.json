@@ -4,7 +4,7 @@
         "Link": "https://github.com/PragmaticsLab/DaNetQA",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2025,
+        "Year": 2019,
         "Language": "ru",
         "Domain": [
             "wikipedia"
@@ -14,7 +14,7 @@
             "crawling",
             "human annotation"
         ],
-        "Description": "DaNetQA is a new question-answering corpus with yes/no questions paired with paragraphs from Wikipedia. The task is to determine a binary output based on the question and paragraph.",
+        "Description": "DaNetQA is a question-answering corpus for the Russian language, following the BoolQ design. It comprises yes/no questions paired with paragraphs from Wikipedia and answers derived from the paragraphs.",
         "Volume": 2691.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
@@ -33,8 +33,8 @@
         "Tasks": [
             "question answering"
         ],
-        "Venue Title": "LLNCS",
-        "Venue Type": "conference",
+        "Venue Title": "",
+        "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
             "Taisia Glushkova",
@@ -48,7 +48,7 @@
             "National Research University Higher School of Economics",
             "Sberbank"
         ],
-        "Abstract": "DaNetQA, a new  question-answering corpus, follows BoolQ design: it comprises natural yes/no questions. Each question is paired with a paragraph from Wikipedia and an answer, derived from the paragraph. The task is to take both the question  and a paragraph as input and come up with a yes/no answer, i.e. to produce a binary output. In this paper, we present a reproducible approach to DaNetQA creation and investigate transfer learning methods for task and language transferring. For task transferring we leverage three similar sentence modelling tasks: 1) a corpus of paraphrases, Paraphraser, 2) an NLI task, for which we use the Russian part of XNLI, 3) another question answering task, SberQUAD. For language transferring we use English to Russian translation together with multilingual language fine-tuning."
+        "Abstract": "DaNetQA,anewquestion-answeringcorpus,followsBoolQ[2] design: it comprises natural yes/no questions. Each question is paired withaparagraphfromWikipediaandananswer,derivedfromthepara- graph. The task is to take both the question and a paragraph as input and come up with a yes/no answer, i.e. to produce a binary output. Inthispaper,wepresentareproducibleapproachtoDaNetQAcreation andinvestigatetransferlearningmethodsfortaskandlanguagetransfer- ring. For task transferring we leverage three similar sentence modelling tasks:1)acorpusofparaphrases,Paraphraser,2)anNLItask,forwhich we use the Russian part of XNLI, 3) another question answering task, SberQUAD. For language transferring we use English to Russian trans- lation together with multilingual language fine-tuning."
     },
     "validation": {
         "ACCESSABILITY": 0.7142857142857143,
@@ -59,9 +59,9 @@
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00147761,
-        "input_tokens": 11059,
-        "output_tokens": 559
+        "cost": 0.001287,
+        "input_tokens": 10843,
+        "output_tokens": 576
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",

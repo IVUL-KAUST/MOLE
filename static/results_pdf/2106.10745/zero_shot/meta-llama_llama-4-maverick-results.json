@@ -1,21 +1,48 @@
 {
     "metadata": {
         "Name": "Calliar",
-        "Subsets": [],
+        "Subsets": [
+            {
+                "Name": "Diwani",
+                "Volume": 625,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Thuluth",
+                "Volume": 625,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Kufi",
+                "Volume": 625,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Farisi",
+                "Volume": 625,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            }
+        ],
         "Link": "https://github.com/ARBML/Calliar",
         "HF Link": "",
-        "License": "unknown",
-        "Year": 2023,
+        "License": "MIT License",
+        "Year": 2021,
         "Language": "ar",
-        "Dialect": "Modern Standard Arabic",
+        "Dialect": "mixed",
         "Domain": [
-            "other"
+            "social media",
+            "captions"
         ],
-        "Form": "text",
+        "Form": "images",
         "Collection Style": [
-            "human annotation"
+            "human annotation",
+            "manual curation"
         ],
-        "Description": "Calliar is an online dataset for Arabic calligraphy containing 2,500 sentences with stroke, character, word, and sentence level annotations.",
+        "Description": "An online dataset for Arabic calligraphy containing 2,500 sentences with stroke, character, word, and sentence level annotations.",
         "Volume": 2500.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
@@ -23,8 +50,8 @@
             "King Fahd University of Petroleum and Minerals"
         ],
         "Derived From": [],
-        "Paper Title": "Calliar: An Online Handwritten Dataset for Arabic Calligraphy",
-        "Paper Link": "https://arxiv.org/abs/2106.10745",
+        "Paper Title": "CALLIAR: AN ONLINE HANDWRITTEN DATASET FOR ARABIC CALLIGRAPHY",
+        "Paper Link": "https://arxiv.org/abs/2106.06331",
         "Script": "Arab",
         "Tokenized": false,
         "Host": "GitHub",
@@ -32,11 +59,11 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "text generation",
             "named entity recognition",
-            "language modeling"
+            "meter classification",
+            "text generation"
         ],
-        "Venue Title": "",
+        "Venue Title": "arXiv preprint",
         "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
@@ -48,20 +75,20 @@
         "Affiliations": [
             "King Fahd University of Petroleum and Minerals"
         ],
-        "Abstract": "Calligraphy is an essential part of Arabic heritage and culture. This paper introduces Calliar, an online dataset for Arabic calligraphy, consisting of 2,500 sentences annotated for stroke, character, word, and sentence level prediction."
+        "Abstract": "Calligraphy is an essential part of the Arabic heritage and culture. This paper introduces Calliar, an online dataset for Arabic calligraphy that consists of 2,500 sentences annotated for stroke, character, word, and sentence level prediction."
     },
     "validation": {
-        "DIVERSITY": 1.0,
-        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.7142857142857143,
         "CONTENT": 0.625,
         "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.6666666666666666
+        "AVERAGE": 0.6190476190476191
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.0021483,
-        "input_tokens": 11112,
-        "output_tokens": 384
+        "cost": 0.0024816,
+        "input_tokens": 11945,
+        "output_tokens": 560
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

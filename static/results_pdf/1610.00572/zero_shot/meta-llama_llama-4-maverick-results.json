@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "Name": "Arabic-Hebrew TED Talks Parallel Corpus",
+        "Name": "Arabic-Hebrew Parallel Corpus of TED Talks",
         "Subsets": [],
         "Link": "wit3.fbk.eu/mt.php?release=2016-01-more",
         "HF Link": "",
@@ -13,14 +13,15 @@
         ],
         "Form": "text",
         "Collection Style": [
-            "human annotation"
+            "crawling"
         ],
-        "Description": "A parallel corpus of TED talks in Arabic and Hebrew, created using the WIT3 inventory.",
+        "Description": "An Arabic-Hebrew parallel corpus of TED talks built upon WIT3, the Web inventory that repurposes the original content of the TED website in a way which is more convenient for MT researchers.",
         "Volume": 3.5,
         "Unit": "tokens",
         "Ethical Risks": "Low",
         "Provider": [
-            "FBK"
+            "FBK",
+            "IWSLT"
         ],
         "Derived From": [
             "WIT3"
@@ -28,7 +29,7 @@
         "Paper Title": "An Arabic-Hebrew parallel corpus of TED talks",
         "Paper Link": "https://arxiv.org/abs/1610.00572",
         "Script": "Arab",
-        "Tokenized": true,
+        "Tokenized": false,
         "Host": "GitHub",
         "Access": "Free",
         "Cost": "",
@@ -36,29 +37,29 @@
         "Tasks": [
             "machine translation"
         ],
-        "Venue Title": "EMNLP",
-        "Venue Type": "conference",
-        "Venue Name": "EMNLP 2016",
+        "Venue Title": "",
+        "Venue Type": "workshop",
+        "Venue Name": "IWSLT",
         "Authors": [
             "Mauro Cettolo"
         ],
         "Affiliations": [
             "FBK, Trento, Italy"
         ],
-        "Abstract": "This paper describes the creation of an Arabic-Hebrew parallel corpus of TED talks using the WIT3 inventory. The corpus consists of around 2,000 talks, with subtitles in Arabic and Hebrew accurately aligned and rearranged in sentences."
+        "Abstract": "We describe an Arabic-Hebrew parallel corpus of TED talks built upon WIT3, the Web inventory that repurposes the original content of the TED website in a way which is more convenient for MT researchers."
     },
     "validation": {
         "DIVERSITY": 1.0,
         "ACCESSABILITY": 0.7142857142857143,
-        "CONTENT": 0.375,
+        "CONTENT": 0.5,
         "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.6190476190476191
+        "AVERAGE": 0.6666666666666666
     },
-    "length_forcing": 1.0,
+    "length_forcing": 0.96875,
     "cost": {
-        "cost": 0.002158,
-        "input_tokens": 10972,
-        "output_tokens": 359
+        "cost": 0.0018802,
+        "input_tokens": 9235,
+        "output_tokens": 377
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

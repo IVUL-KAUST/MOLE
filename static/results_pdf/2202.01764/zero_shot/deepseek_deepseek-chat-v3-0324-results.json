@@ -11,10 +11,9 @@
         ],
         "Form": "text",
         "Collection Style": [
-            "human annotation",
-            "manual curation"
+            "human annotation"
         ],
-        "Description": "JaQuAD is a Japanese Question Answering Dataset with 39,696 human-annotated question-answer pairs on Japanese Wikipedia articles.",
+        "Description": "JaQuAD is a Japanese Question Answering Dataset annotated by humans, consisting of 39,696 extractive question-answer pairs on Japanese Wikipedia articles.",
         "Volume": 39696.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
@@ -23,7 +22,7 @@
         ],
         "Derived From": [],
         "Paper Title": "JaQuAD: Japanese Question Answering Dataset for Machine Reading Comprehension",
-        "Paper Link": "https://arxiv.org/abs/2202.01764",
+        "Paper Link": "https://github.com/SkelterLabsInc/JaQuAD",
         "Script": "mixed",
         "Tokenized": false,
         "Host": "GitHub",
@@ -31,17 +30,16 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "question answering",
-            "machine translation"
+            "question answering"
         ],
-        "Venue Title": "",
+        "Venue Title": "viXra",
         "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
-            "ByungHoon So",
-            "Kyuhong Byun",
-            "Kyungwon Kang",
-            "Seongjin Cho"
+            "ByungHoonSo",
+            "KyuhongByun",
+            "KyungwonKang",
+            "SeongjinCho"
         ],
         "Affiliations": [
             "SkelterLabsInc"
@@ -57,9 +55,9 @@
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00432112,
-        "input_tokens": 13463,
-        "output_tokens": 465
+        "cost": 0.00471299,
+        "input_tokens": 12279,
+        "output_tokens": 478
     },
     "config": {
         "model_name": "deepseek_deepseek-chat-v3-0324",
