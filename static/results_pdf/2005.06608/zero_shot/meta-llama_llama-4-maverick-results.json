@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "Dangerous Speech Dataset",
+        "Subsets": [
+            {
+                "Name": "Egyptian",
+                "Volume": 0.2,
+                "Unit": "sentences",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 0.3,
+                "Unit": "sentences",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "Levantine",
+                "Volume": 0.2,
+                "Unit": "sentences",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "Maghrebi",
+                "Volume": 0.1,
+                "Unit": "sentences",
+                "Dialect": "Maghrebi"
+            },
+            {
+                "Name": "MSA",
+                "Volume": 0.2,
+                "Unit": "sentences",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://github.com/UBC-NLP/ara_dangspeech",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset for detecting dangerous speech in Arabic social media",
+        "Volume": 110.3,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "SUNY at Buffalo",
+            "University of British Columbia"
+        ],
+        "Derived From": [],
+        "Paper Title": "Understanding and Detecting Dangerous Speech in Social Media",
+        "Paper Link": "https://arxiv.org/abs/2005.06608",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "offensive language detection"
+        ],
+        "Venue Title": "",
+        "Venue Type": "workshop",
+        "Venue Name": "LREC",
+        "Authors": [
+            "Ali Alshehri",
+            "El Moatez Billah Nagoudi",
+            "Muhammad Abdul-Mageed"
+        ],
+        "Affiliations": [
+            "SUNY at Buffalo",
+            "Natural Language Processing Lab, The University of British Columbia"
+        ],
+        "Abstract": "This paper presents a dataset for detecting dangerous speech in Arabic social media. The dataset is collected from Twitter and annotated for dangerous speech. The authors also propose a deep learning model for detecting dangerous speech and achieve a macro F1 score of 59.60%."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00309808,
+        "input_tokens": 16098,
+        "output_tokens": 572
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.06608"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
