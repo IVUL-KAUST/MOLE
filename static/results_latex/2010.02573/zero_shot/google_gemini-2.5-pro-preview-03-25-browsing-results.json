@@ -1,0 +1,122 @@
+{
+    "metadata": {
+        "Name": "Multilingual Amazon Reviews Corpus",
+        "Subsets": [
+            {
+                "Name": "English Reviews",
+                "Volume": 210000,
+                "Unit": "reviews",
+                "Language": "English"
+            },
+            {
+                "Name": "Japanese Reviews",
+                "Volume": 210000,
+                "Unit": "reviews",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "German Reviews",
+                "Volume": 210000,
+                "Unit": "reviews",
+                "Language": "German"
+            },
+            {
+                "Name": "French Reviews",
+                "Volume": 210000,
+                "Unit": "reviews",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish Reviews",
+                "Volume": 210000,
+                "Unit": "reviews",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Chinese Reviews",
+                "Volume": 210000,
+                "Unit": "reviews",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://registry.opendata.aws/amazon-reviews-ml/",
+        "HF Link": "",
+        "License": "CC BY-NC-ND 4.0",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Japanese",
+            "German",
+            "French",
+            "Spanish",
+            "Chinese"
+        ],
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A large-scale collection of Amazon reviews in 6 languages (English, Japanese, German, French, Spanish, Chinese) for multilingual text classification. Contains review text, title, star rating, anonymized IDs, and product category. Balanced across 5 star ratings.",
+        "Volume": 210000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Amazon"
+        ],
+        "Derived From": [],
+        "Paper Title": "The Multilingual Amazon Reviews Corpus",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.67/",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "review classification",
+            "sentiment analysis"
+        ],
+        "Venue Title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Phillip Keung",
+            "Yichao Lu",
+            "Gy\u00f6rgy Szarvas",
+            "Noah A. Smith"
+        ],
+        "Affiliations": [
+            "Amazon",
+            "University of Washington",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "We present the Multilingual Amazon Reviews Corpus (MARC), a large-scale collection of Amazon reviews for multilingual text classification. The corpus contains reviews in English, Japanese, German, French, Spanish, and Chinese, which were collected between 2015 and 2019. Each record in the dataset contains the review text, the review title, the star rating, an anonymized reviewer ID, an anonymized product ID, and the coarse-grained product category (e.g., 'books', 'appliances', etc.) The corpus is balanced across the 5 possible star ratings, so each rating constitutes 20% of the reviews in each language. For each language, there are 200,000, 5,000, and 5,000 reviews in the training, development, and test sets, respectively. We report baseline results for supervised text classification and zero-shot cross-lingual transfer learning by fine-tuning a multilingual BERT model on reviews data. We propose the use of mean absolute error (MAE) instead of classification accuracy for this task, since MAE accounts for the ordinal nature of the ratings."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.09079999999999999,
+        "input_tokens": 13605,
+        "output_tokens": 1764
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02573"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

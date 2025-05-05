@@ -1,0 +1,137 @@
+{
+    "metadata": {
+        "Name": "XOR QA",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2574,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 2582,
+                "Unit": "sentences",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 2088,
+                "Unit": "sentences",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 2288,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 2469,
+                "Unit": "sentences",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 1941,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 1308,
+                "Unit": "sentences",
+                "Language": "Telugu"
+            }
+        ],
+        "Link": "https://nlp.cs.washington.edu/xorqa/",
+        "HF Link": "https://huggingface.co/datasets/xorqa",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale cross-lingual open-retrieval QA dataset with 40k annotated questions and answers across 7 typologically diverse languages.",
+        "Volume": 2574.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Google Research",
+            "Allen Institute for AI",
+            "The University of Texas at Austin"
+        ],
+        "Derived From": [
+            "TyDi QA"
+        ],
+        "Paper Title": "XOR QA: Cross-lingual Open-retrieval Question Answering",
+        "Paper Link": "https://nlp.cs.washington.edu/xorqa/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "cross-lingual information retrieval",
+            "question answering"
+        ],
+        "Venue Title": "NAACL-HLT 2021",
+        "Venue Type": "conference",
+        "Venue Name": "NAACL-HLT 2021",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "We introduce XOR QA, a task and dataset for cross-lingual open-retrieval question answering. The dataset consists of 40k information-seeking questions across 7 typologically diverse languages, annotated with answers from multilingual Wikipedia. We establish baselines using state-of-the-art machine translation and cross-lingual pretrained models, showing that XOR QA is a challenging task that will facilitate the development of novel techniques for multilingual question answering."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00450442,
+        "input_tokens": 30727,
+        "output_tokens": 1547
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

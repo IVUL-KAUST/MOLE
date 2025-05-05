@@ -1,0 +1,130 @@
+{
+    "metadata": {
+        "Name": "MLQA",
+        "Subsets": [
+            {
+                "Name": "MLQA-en",
+                "Volume": 12738,
+                "Unit": "instances",
+                "Language": "English"
+            },
+            {
+                "Name": "MLQA-de",
+                "Volume": 5029,
+                "Unit": "instances",
+                "Language": "German"
+            },
+            {
+                "Name": "MLQA-es",
+                "Volume": 5753,
+                "Unit": "instances",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "MLQA-ar",
+                "Volume": 5852,
+                "Unit": "instances",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "MLQA-zh",
+                "Volume": 5641,
+                "Unit": "instances",
+                "Language": "Simplified Chinese"
+            },
+            {
+                "Name": "MLQA-vi",
+                "Volume": 6006,
+                "Unit": "instances",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "MLQA-hi",
+                "Volume": 5425,
+                "Unit": "instances",
+                "Language": "Hindi"
+            }
+        ],
+        "Link": "https://github.com/facebookresearch/mlqa",
+        "HF Link": "",
+        "License": "CC BY-SA 3.0",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Arabic",
+            "German",
+            "Spanish",
+            "Hindi",
+            "Vietnamese",
+            "Simplified Chinese"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "MLQA is a multi-way aligned extractive Question Answering evaluation benchmark in 7 languages (English, Arabic, German, Spanish, Hindi, Vietnamese, Simplified Chinese) derived from Wikipedia. It contains over 12K instances in English and 5K in others, parallel across languages.",
+        "Volume": 5852.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research",
+            "University College London"
+        ],
+        "Derived From": [],
+        "Paper Title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
+        "Paper Link": "https://aclanthology.org/2020.acl-main.203/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "ACL",
+        "Authors": [
+            "Patrick Lewis",
+            "Barlas Ou011fuz",
+            "Ruty Rinott",
+            "Sebastian Riedel",
+            "Holger Schwenk"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "University College London"
+        ],
+        "Abstract": "Question answering (QA) models have shown rapid progress enabled by the availability of large, high-quality benchmark datasets. nSuch annotated datasets are difficult and costly to collect, and rarely exist in languages other than English, making building QA systems that work well in other languages challenging. nIn order to develop such systems, it is crucial to invest in high quality multilingual emph{evaluation} benchmarks to measure progress. nWe present MLQA, a multi-way aligned extractive QA evaluation benchmark intended to spur research in this area. MLQA contains QAninstances in 7 languages, emph{English, Arabic, German, Spanish, Hindi, Vietnamese} and emph{Simplified Chinese}.nMLQA has over 12K instances in English and 5K in each other language, with each instance parallel between 4 languages on average.nWe evaluate state-of-the-art cross-lingual models and machine-translation-based baselinesnon MLQA.  In all cases, transfer results are significantly behind training-language performance."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.09236,
+        "input_tokens": 24854,
+        "output_tokens": 1835
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1910.07475"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

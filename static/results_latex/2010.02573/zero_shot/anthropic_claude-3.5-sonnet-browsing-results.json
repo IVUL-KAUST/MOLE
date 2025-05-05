@@ -1,0 +1,122 @@
+{
+    "metadata": {
+        "Name": "MARC",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 200000,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 200000,
+                "Unit": "documents",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "German",
+                "Volume": 200000,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 200000,
+                "Unit": "documents",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 200000,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 200000,
+                "Unit": "documents",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://registry.opendata.aws/amazon-reviews-ml/",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Japanese",
+            "German",
+            "French",
+            "Spanish",
+            "Chinese"
+        ],
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A large-scale collection of Amazon product reviews in 6 languages for multilingual text classification, balanced across 5 star ratings",
+        "Volume": 200000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Amazon",
+            "University of Washington",
+            "Allen Institute for AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "The Multilingual Amazon Reviews Corpus",
+        "Paper Link": "https://arxiv.org/abs/2010.02573",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Phillip Keung",
+            "Yichao Lu",
+            "Gy\u00f6rgy Szarvas",
+            "Noah A. Smith"
+        ],
+        "Affiliations": [
+            "Amazon",
+            "University of Washington",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "We present the Multilingual Amazon Reviews Corpus (MARC), a large-scale collection of Amazon reviews for multilingual text classification. The corpus contains reviews in English, Japanese, German, French, Spanish, and Chinese, which were collected between 2015 and 2019. Each record in the dataset contains the review text, the review title, the star rating, an anonymized reviewer ID, an anonymized product ID, and the coarse-grained product category (e.g., 'books', 'appliances', etc.) The corpus is balanced across the 5 possible star ratings, so each rating constitutes 20% of the reviews in each language. For each language, there are 200,000, 5,000, and 5,000 reviews in the training, development, and test sets, respectively. We report baseline results for supervised text classification and zero-shot cross-lingual transfer learning by fine-tuning a multilingual BERT model on reviews data. We propose the use of mean absolute error (MAE) instead of classification accuracy for this task, since MAE accounts for the ordinal nature of the ratings."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.071685,
+        "input_tokens": 13521,
+        "output_tokens": 1424
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02573"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

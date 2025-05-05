@@ -1,0 +1,219 @@
+{
+    "metadata": {
+        "Name": "Multilingual Hate Speech Collection",
+        "Subsets": [
+            {
+                "Name": "Mulki et al. [19]",
+                "Volume": 4120,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Ousidhoum et al. [22]",
+                "Volume": 1670,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Davidson et al. [7]",
+                "Volume": 5593,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Gibert et al. [8]",
+                "Volume": 10944,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Waseem et al. [34]",
+                "Volume": 6304,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Basile et al. [2]",
+                "Volume": 12805,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Ousidhoum et al. [22]",
+                "Volume": 1939,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Founta et al. [11]",
+                "Volume": 58738,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Ross et al. [27]",
+                "Volume": 369,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Bretschneider et al. [4]",
+                "Volume": 5786,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Ibrohim et al. [15]",
+                "Volume": 13169,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Alfina et al. [1]",
+                "Volume": 713,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Sanguinetti et al. [28]",
+                "Volume": 1560,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Bosco et al. [3]",
+                "Volume": 8000,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Ptaszynski et al. [25]",
+                "Volume": 9788,
+                "Unit": "sentences",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Fortuna et al. [12]",
+                "Volume": 5670,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Basile et al. [2]",
+                "Volume": 5365,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Pereira et al. [23]",
+                "Volume": 6000,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Ousidhoum et al. [22]",
+                "Volume": 1220,
+                "Unit": "sentences",
+                "Language": "French"
+            }
+        ],
+        "Link": "https://github.com/punyajoy/DE-LIMIT",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "English",
+            "German",
+            "Indonesian",
+            "Italian",
+            "Polish",
+            "Portuguese",
+            "Spanish",
+            "French"
+        ],
+        "Domain": [
+            "social media",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale analysis of multilingual hate speech using 16 datasets from 9 languages. The study evaluates deep learning models in monolingual and multilingual settings, providing insights into model performance based on data availability.",
+        "Volume": 5790.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Indian Institute of Technology Kharagpur"
+        ],
+        "Derived From": [
+            "Mulki et al. [19]",
+            "Ousidhoum et al. [22]",
+            "Davidson et al. [7]",
+            "Gibert et al. [8]",
+            "Waseem et al. [34]",
+            "Basile et al. [2]",
+            "Founta et al. [11]",
+            "Ross et al. [27]",
+            "Bretschneider et al. [4]",
+            "Ibrohim et al. [15]",
+            "Alfina et al. [1]",
+            "Sanguinetti et al. [28]",
+            "Bosco et al. [3]",
+            "Ptaszynski et al. [25]",
+            "Fortuna et al. [12]",
+            "Pereira et al. [23]"
+        ],
+        "Paper Title": "Deep Learning Models for Multilingual Hate Speech Detection",
+        "Paper Link": "https://link.springer.com/chapter/10.1007/978-3-030-67671-2_1",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "Free",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "ECML-PKDD 2020",
+        "Venue Type": "conference",
+        "Venue Name": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases",
+        "Authors": [
+            "Sai Saketh Aluru",
+            "Binny Mathew",
+            "Punyajoy Saha",
+            "Animesh Mukherjee"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology Kharagpur, India"
+        ],
+        "Abstract": "Hate speech detection is a challenging problem with most of the datasets available in only one language: English. In this paper, we conduct a large scale analysis of multilingual hate speech in 9 languages from 16 different sources. We observe that in low resource setting, simple models such as LASER embedding with logistic regression performs the best, while in high resource setting BERT based models perform better. In case of zero-shot classification, languages such as Italian and Portuguese achieve good results. Our proposed framework could be used as an efficient solution for low-resource languages. These models could also act as good baselines for future multilingual hate speech detection tasks. We have made our code and experimental settings public for other researchers."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.1131,
+        "input_tokens": 24322,
+        "output_tokens": 3146
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.06465"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
