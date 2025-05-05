@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://sites.google.com/site/rmyeid/projects/polylgot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A multilingual NER dataset automatically generated from Wikipedia and Freebase for 40 languages",
+        "Volume": 339109.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [
+            "Wikipedia",
+            "Freebase"
+        ],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/1410.3791",
+        "Script": "Arab-Latin",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the 2015 SIAM International Conference on Data Mining",
+        "Venue Type": "conference",
+        "Venue Name": "SIAM International Conference on Data Mining",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Vivek Kulkarni",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [],
+        "Abstract": "We present polyglot-NER, a massive multilingual named entity recognition dataset. The dataset contains the basic Wikipedia based training data for 40 languages we have (with coreference resolution) for the task of named entity recognition. The details of the procedure of generating them is outlined in Section 3 of the paper."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.044343,
+        "input_tokens": 10746,
+        "output_tokens": 410
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

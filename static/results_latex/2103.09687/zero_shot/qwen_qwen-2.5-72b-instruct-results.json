@@ -1,0 +1,161 @@
+{
+    "metadata": {
+        "Name": "DODa",
+        "Subsets": [
+            {
+                "Name": "verbs",
+                "Volume": 800,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "nouns",
+                "Volume": 900,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "adjectives",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "animals",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "colors",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "food",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "economy",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "emotions",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "family",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "religion",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "professions",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "idioms",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "proverbs",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "short expressions",
+                "Volume": 10000,
+                "Unit": "tokens",
+                "Dialect": "Morocco"
+            }
+        ],
+        "Link": "https://github.com/darija-open-dataset/dataset",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "Morocco",
+        "Domain": [
+            "social media",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "DODa is a large, open-source, collaborative dataset for Moroccan Darija to English translation, focusing on NLP applications.",
+        "Volume": 10000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "GitHub"
+        ],
+        "Derived From": [],
+        "Paper Title": "Moroccan Dialect -Darija- Open Dataset",
+        "Paper Link": "https://github.com/darija-open-dataset/dataset",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "transliteration",
+            "morphological analysis",
+            "language modeling"
+        ],
+        "Venue Title": "Vietnam Journal of Computer Science",
+        "Venue Type": "journal",
+        "Venue Name": "Vietnam Journal of Computer Science",
+        "Authors": [
+            "Aissam Outchakoucht",
+            "Hamza Es-Samaali"
+        ],
+        "Affiliations": [],
+        "Abstract": "Darija Open Dataset (DODa) is an open-source project for the Moroccan dialect. With more than 10,000 entries DODa is arguably the largest open-source collaborative project for Darija \u21c6 English translation built for Natural Language Processing purposes. In fact, besides semantic categorization, DODa also adopts a syntactic one, presents words under different spellings, offers verb-to-noun and masculine-to-feminine correspondences, contains the conjugation of hundreds of verbs in different tenses, and many other subsets to help researchers better understand and study Moroccan dialect. This data paper presents a description of DODa, its features, how it was collected, as well as a first application in Image Classification using ImageNet labels translated to Darija."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00140435,
+        "input_tokens": 7322,
+        "output_tokens": 978
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.09687"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

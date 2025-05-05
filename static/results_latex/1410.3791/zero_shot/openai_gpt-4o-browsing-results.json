@@ -1,0 +1,102 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [
+            {
+                "Name": "ar",
+                "Volume": 183.55,
+                "Unit": "MB",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "bg",
+                "Volume": 190.51,
+                "Unit": "MB",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "ca",
+                "Volume": 143.75,
+                "Unit": "MB",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "cs",
+                "Volume": 156.79,
+                "Unit": "MB",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "combined",
+                "Volume": 6286.85,
+                "Unit": "MB",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "Polyglot-NER is a massive multilingual named entity recognition dataset.",
+        "Volume": 183.55,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Rami Al-Rfou"
+        ],
+        "Derived From": [],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://bit.ly/polyglot-ner",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Rami Al-Rfou"
+        ],
+        "Affiliations": [],
+        "Abstract": "Polyglot-NER is a massive multilingual named entity recognition dataset."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.375,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0393475,
+        "input_tokens": 14509,
+        "output_tokens": 738
+    },
+    "config": {
+        "model_name": "openai_gpt-4o-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

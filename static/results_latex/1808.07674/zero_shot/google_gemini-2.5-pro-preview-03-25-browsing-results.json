@@ -1,0 +1,147 @@
+{
+    "metadata": {
+        "Name": "Arap-Tweet",
+        "Subsets": [
+            {
+                "Name": "Moroccan",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Algerian",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Algeria"
+            },
+            {
+                "Name": "Tunisian",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Tunisia"
+            },
+            {
+                "Name": "Libyan",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Libya"
+            },
+            {
+                "Name": "Egyptian",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Sudanese",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Sudan"
+            },
+            {
+                "Name": "North Levant",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "South Levant",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "Iraqi",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Iraq"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "Yemeni",
+                "Volume": 218181,
+                "Unit": "Tweets",
+                "Dialect": "Yemen"
+            }
+        ],
+        "Link": "http://arap.qatar.cmu.edu",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "Arap-Tweet is a large-scale, multi-dialectal Twitter corpus from 11 Arab regions (16 countries), annotated for age, gender, and dialectal variety.",
+        "Volume": 2400000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Hamad Bin Khalifa University",
+            "Carnegie Mellon University Qatar"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age and Language Variety Identification",
+        "Paper Link": "https://aclanthology.org/L18-1110/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "gender identification",
+            "dialect identification",
+            "other"
+        ],
+        "Venue Title": "Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)",
+        "Venue Type": "conference",
+        "Venue Name": "Eleventh International Conference on Language Resources and Evaluation (LREC 2018)",
+        "Authors": [
+            "Wajdi Zaghouani",
+            "Anis Charfi"
+        ],
+        "Affiliations": [
+            "College of Humanities and Social Sciences, Hamad Bin Khalifa University, Qatar",
+            "Information Systems Program, Carnegie Mellon University Qatar"
+        ],
+        "Abstract": "In this paper, we present Arap-Tweet, which is a large-scale and multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world representing the major Arabic dialectal varieties. To build this corpus, we collected data from Twitter and we provided a team of experienced annotators with annotation guidelines that they used to annotate the corpus for age categories, gender, and dialectal variety. During the data collection effort, we based our search on distinctive keywords that are specific to the different Arabic dialects and we also validated the location using Twitter API. In this paper, we report on the corpus data collection and annotation efforts. We also present some issues that we encountered during these phases. Then, we present the results of the evaluation performed to ensure the consistency of the annotation. The provided corpus will enrich the limited set of available language resources for Arabic and will be an invaluable enabler for developing author profiling tools and NLP tools for Arabic."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8571428571428571
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.09740125,
+        "input_tokens": 15357,
+        "output_tokens": 2065
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1808.07674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

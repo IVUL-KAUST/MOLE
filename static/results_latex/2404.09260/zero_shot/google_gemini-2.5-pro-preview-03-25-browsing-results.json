@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "JaFIn",
+        "Link": "Not Available",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "web pages",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "An instruction dataset for LLMs in the Japanese finance domain, manually constructed from government websites and Wikipedia, used for instruction tuning.",
+        "Volume": 1490.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Hokkaido University",
+            "The University of Tokyo"
+        ],
+        "Derived From": [],
+        "Paper Title": "JaFIn: Japanese Financial Instruction Dataset",
+        "Paper Link": "https://doi.org/10.48550/arXiv.2404.09260",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "instruction tuning",
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Kota Tanabe",
+            "Masahiro Suzuki",
+            "Hiroki Sakaji",
+            "Itsuki Noda"
+        ],
+        "Affiliations": [
+            "Faculty of Information Science and Technology, Hokkaido University",
+            "School of Engineering, The University of Tokyo"
+        ],
+        "Abstract": "We construct an instruction dataset for the large language model (LLM) in the Japanese finance domain.nDomain adaptation of language models, including LLMs, is receiving more attention as language models become more popular.nThis study demonstrates the effectiveness of domain adaptation through instruction tuning.nTo achieve this, we propose an instruction tuning data in Japanese called JaFIn, the Japanese Financial Instruction Dataset.nJaFIn is manually constructed based on multiple data sources, including Japanese government websites, which provide extensive financial knowledge.nWe then utilize JaFIn to apply instruction tuning for several LLMs, demonstrating that our models specialized in finance have better domain adaptability than the original models.nThe financial-specialized LLMs created were evaluated using a quantitative Japanese financial benchmark and qualitative response comparisons, showing improved performance over the originals."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.07612375,
+        "input_tokens": 20076,
+        "output_tokens": 1064
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.09260"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

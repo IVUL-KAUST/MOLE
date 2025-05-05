@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "GSM8K",
+        "Link": "https://github.com/openai/grade-school-math",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2021,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A dataset of 8.5K high quality linguistically diverse grade school math word problems requiring 2-8 steps to solve using basic arithmetic operations",
+        "Volume": 8500.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "OpenAI"
+        ],
+        "Derived From": [],
+        "Paper Title": "Training Verifiers to Solve Math Word Problems",
+        "Paper Link": "https://arxiv.org/abs/2110.14168",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Karl Cobbe",
+            "Vineet Kosaraju",
+            "Mohammad Bavarian",
+            "Mark Chen",
+            "Heewoo Jun",
+            "\u0141ukasz Kaiser",
+            "Matthias Plappert",
+            "Jerry Tworek",
+            "Jacob Hilton",
+            "Reiichiro Nakano",
+            "Christopher Hesse",
+            "John Schulman"
+        ],
+        "Affiliations": [
+            "OpenAI"
+        ],
+        "Abstract": "State-of-the-art language models can match human performance on many tasks, but they still struggle to robustly perform multi-step mathematical reasoning. To diagnose the failures of current models and support research, we introduce GSM8K, a dataset of 8.5K high quality linguistically diverse grade school math word problems. We find that even the largest transformer models fail to achieve high test performance, despite the conceptual simplicity of this problem distribution. To increase performance, we propose training verifiers to judge the correctness of model completions. At test time, we generate many candidate solutions and select the one ranked highest by the verifier. We demonstrate that verification significantly improves performance on GSM8K, and we provide strong empirical evidence that verification scales more effectively with increased data than a finetuning baseline."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.07794899999999999,
+        "input_tokens": 17315,
+        "output_tokens": 1000
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2110.14168"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

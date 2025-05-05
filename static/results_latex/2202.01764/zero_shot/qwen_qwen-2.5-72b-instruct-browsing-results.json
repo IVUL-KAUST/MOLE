@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "JaQuAD",
+        "Link": "https://huggingface.co/datasets/SkelterLabsInc/JaQuAD",
+        "HF Link": "https://huggingface.co/datasets/SkelterLabsInc/JaQuAD",
+        "License": "CC BY-SA 3.0",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "JaQuAD is a Japanese Question Answering Dataset containing 39,696 question-answer pairs annotated by humans from Japanese Wikipedia articles.",
+        "Volume": 39696.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Skelter Labs Inc."
+        ],
+        "Derived From": [
+            "SQuAD 1.1",
+            "KorQuAD 1.0"
+        ],
+        "Paper Title": "JaQuAD: Japanese Question Answering Dataset for Machine Reading Comprehension",
+        "Paper Link": "https://arxiv.org/abs/2202.01764",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "machine translation"
+        ],
+        "Venue Title": "JaQuAD: Japanese Question Answering Dataset for Machine Reading Comprehension",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "ByungHoon So",
+            "Kyuhong Byun",
+            "Kyungwon Kang",
+            "Seongjin Cho"
+        ],
+        "Affiliations": [
+            "Skelter Labs Inc."
+        ],
+        "Abstract": "Question Answering (QA) is a task in which a machine understands a given document and a question to find an answer. Despite impressive progress in the NLP area, QA is still a challenging problem, especially for non-English languages due to the lack of annotated datasets. In this paper, we present the Japanese Question Answering Dataset, JaQuAD, which is annotated by humans. JaQuAD consists of 39,696 extractive question-answer pairs on Japanese Wikipedia articles."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0027235999999999996,
+        "input_tokens": 17879,
+        "output_tokens": 950
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.01764"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

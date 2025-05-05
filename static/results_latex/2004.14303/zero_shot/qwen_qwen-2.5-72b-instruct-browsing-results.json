@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "TUNIZI",
+        "Subsets": [],
+        "Link": "https://github.com/chaymafourati/TUNIZI-Sentiment-Analysis-Tunisian-Arabizi-Dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "ar",
+        "Dialect": "Tunisia",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "TUNIZI is the first Tunisian Arabizi Dataset including 3K sentences, balanced, covering different topics, preprocessed and annotated as positive and negative.",
+        "Volume": 3000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "iCompass"
+        ],
+        "Derived From": [],
+        "Paper Title": "TUNIZI: a Tunisian Arabizi sentiment analysis Dataset",
+        "Paper Link": "https://arxiv.org/submit/3091079",
+        "Script": "Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "AfricaNLP Workshop, Putting Africa on the NLP Map. ICLR 2020, Virtual Event",
+        "Venue Type": "workshop",
+        "Venue Name": "ICLR 2020",
+        "Authors": [
+            "Chayma Fourati",
+            "Abir Messaoudi",
+            "Hatem Haddad"
+        ],
+        "Affiliations": [
+            "iCompass",
+            "iCompass",
+            "iCompass"
+        ],
+        "Abstract": "On social media, Arabic speakers tend to express themselves in their own local dialect. To do so, Tunisians use 'Tunisian Arabizi', which consists in supplementing numerals to the Latin script rather than the Arabic alphabet. TUNIZI is the first Tunisian Arabizi Dataset including 3K sentences, balanced, covering different topics, preprocessed and annotated as positive and negative. Data was collected by the iCompass team (http://www.icompass.tn)."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8095238095238095
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00225895,
+        "input_tokens": 14838,
+        "output_tokens": 1007
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14303"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

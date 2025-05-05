@@ -1,0 +1,92 @@
+{
+    "metadata": {
+        "Name": "Shamela",
+        "Subsets": [],
+        "Link": "https://github.com/OpenArabic/RAWrabica",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "books",
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "A large-scale historical Arabic corpus of about 1 billion words from diverse periods of time, cleaned and enhanced with lemmatization, parallel passage detection, and text dating.",
+        "Volume": 1000000000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "University of Rhode Island",
+            "Leipzig University",
+            "Bar-Ilan University",
+            "Dicta: The Israel Center for Text Analysis"
+        ],
+        "Derived From": [
+            "Al-Maktaba Al-Shamela website"
+        ],
+        "Paper Title": "Shamela: A Large-Scale Historical Arabic Corpus",
+        "Paper Link": "http://shamela.ws",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "morphological analysis",
+            "text generation",
+            "fake news detection"
+        ],
+        "Venue Title": "Proceedings of COLING 2016",
+        "Venue Type": "conference",
+        "Venue Name": "COLING 2016",
+        "Authors": [
+            "Yonatan Belinkov",
+            "Alexander Magidow",
+            "Maxim Romanov",
+            "Avi Shmidman",
+            "Moshe Koppel"
+        ],
+        "Affiliations": [
+            "MIT Computer Science and Artificial Intelligence Laboratory, Cambridge, MA, USA",
+            "Department of Languages and Literatures, University of Rhode Island, USA",
+            "The Humboldt Chair of Digital Humanities, Leipzig University, Leipzig, Germany",
+            "Department of Hebrew Literature, Bar-Ilan University, Israel",
+            "Department of Computer Science, Bar-Ilan University, Israel",
+            "Dicta: The Israel Center for Text Analysis"
+        ],
+        "Abstract": "Arabic is a widely-spoken language with a rich and long history spanning more than fourteen centuries. Yet existing Arabic corpora largely focus on the modern period or lack sufficient diachronic information. We develop a large-scale, historical corpus of Arabic of about 1 billion words from diverse periods of time. We clean this corpus, process it with a morphological analyzer, and enhance it by detecting parallel passages and automatically dating undated texts. We demonstrate its utility with selected case-studies in which we show its application to the digital humanities."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0025061,
+        "input_tokens": 14991,
+        "output_tokens": 1183
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

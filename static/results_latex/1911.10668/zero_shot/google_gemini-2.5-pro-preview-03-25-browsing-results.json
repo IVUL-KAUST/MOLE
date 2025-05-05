@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "JParaCrawl",
+        "Link": "http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2020,
+        "Language": "multilingual",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "Large-scale (8.7M pairs) English-Japanese parallel corpus collected via web crawling and automatic alignment. Covers broad domains and is useful for pre-training NMT models.",
+        "Volume": 8763995.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "NTT Communication Science Laboratories, NTT Corporation"
+        ],
+        "Derived From": [
+            "Common Crawl",
+            "EDR English-Japanese dictionary"
+        ],
+        "Paper Title": "JParaCrawl: A Large Scale Web-Based English-Japanese Parallel Corpus",
+        "Paper Link": "https://www.aclweb.org/anthology/2020.lrec-1.823/",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 12th Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Makoto Morishita",
+            "Jun Suzuki",
+            "Masaaki Nagata"
+        ],
+        "Affiliations": [
+            "NTT Communication Science Laboratories, NTT Corporation"
+        ],
+        "Abstract": "Recent machine translation algorithms mainly rely on parallel corpora.nHowever, since the availability of parallel corpora remains limited, only some resource-rich language pairs can benefit from them.nWe constructed a parallel corpus for English-Japanese, for which the amount of publicly available parallel corpora is still limited.nWe constructed the parallel corpus by broadly crawling the web and automatically aligning parallel sentences.nOur collected corpus, called JParaCrawl, amassed over 8.7 million sentence pairs.nWe show how it includes a broader range of domains and how a neural machine translation model trained with it works as a good pre-trained model for fine-tuning specific domains.nThe pre-training and fine-tuning approaches achieved or surpassed performance comparable to model training from the initial state and reduced the training time.nAdditionally, we trained the model with an in-domain dataset and JParaCrawl to show how we achieved the best performance with them.nJParaCrawl and the pre-trained models are freely available online for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.07050999999999999,
+        "input_tokens": 15480,
+        "output_tokens": 1221
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1911.10668"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

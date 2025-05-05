@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "Name": "MGB-3",
+        "Subsets": [
+            {
+                "Name": "MGB-3 ADI EGY",
+                "Volume": 4.0,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "MGB-3 ADI GLF",
+                "Volume": 4.1,
+                "Unit": "hours",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "MGB-3 ADI LAV",
+                "Volume": 4.0,
+                "Unit": "hours",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "MGB-3 ADI MSA",
+                "Volume": 3.9,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "MGB-3 ADI NOR",
+                "Volume": 4.1,
+                "Unit": "hours",
+                "Dialect": "North Africa"
+            }
+        ],
+        "Link": "http://www.mgb-challenge.org",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media",
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "Arabic MGB-3 is a multi-genre dataset focusing on Egyptian dialectal Arabic collected from YouTube videos. It includes 16 hours split into adaptation, development, and evaluation sets across seven genres. It was used for speech recognition and dialect identification tasks.",
+        "Volume": 16.0,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Qatar Computing Research Institute, HBKU",
+            "Centre for Speech Technology Research, University of Edinburgh"
+        ],
+        "Derived From": [
+            "Al Jazeera corpus"
+        ],
+        "Paper Title": "Speech Recognition Challenge in the Wild: Arabic MGB-3",
+        "Paper Link": "https://www.mgb-challenge.org/papers/MGB3_overview.pdf",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "dialect identification"
+        ],
+        "Venue Title": "MGB Workshop",
+        "Venue Type": "workshop",
+        "Venue Name": "Multi-Genre Broadcast Challenge Workshop",
+        "Authors": [
+            "Ahmed Ali",
+            "Stephan Vogel",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU",
+            "Centre for Speech Technology Research, University of Edinburgh"
+        ],
+        "Abstract": "This paper describes the Arabic MGB-3 Challenge -- Arabic Speech Recognition in the Wild. Unlike last year's Arabic MGB-2 Challenge, for which the recognition task was based on more than 1,200 hours broadcast TV news recordings from Aljazeera Arabic TV programs, MGB-3 emphasises dialectal Arabic using a multi-genre collection of Egyptian YouTube videos. Seven genres were used for the data collection: comedy, cooking, family/kids, fashion, drama, sports, and science (TEDx). A total of 16 hours of videos, split evenly across the different genres, were divided into adaptation, development and evaluation data sets. The Arabic MGB-Challenge comprised two tasks: A) Speech transcription, evaluated on the MGB-3 test set, along with the 10 hour MGB-2 test set to report progress on the MGB-2 evaluation; B) Arabic dialect identification, introduced this year in order to distinguish between four major Arabic dialects -- Egyptian, Levantine, North African, Gulf, as well as Modern Standard Arabic. Two hours of audio per dialect were released for development and a further two hours were used for evaluation. For dialect identification, both lexical features and i-vector bottleneck features were shared with participants in addition to the raw audio recordings. Overall, thirteen teams submitted ten systems to the challenge. We outline the approaches adopted in each system, and summarise the evaluation results."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.09903875000000001,
+        "input_tokens": 17974,
+        "output_tokens": 1874
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

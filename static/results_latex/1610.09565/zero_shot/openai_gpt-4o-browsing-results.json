@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Arabic to English Transliteration Dataset",
+        "Subsets": [],
+        "Link": "https://github.com/googlei18n/transliteration",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This dataset is a new Arabic to English transliteration corpus extracted from Wikipedia, containing names of various origins.",
+        "Volume": 15898.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google"
+        ],
+        "Derived From": [],
+        "Paper Title": "Sequence-to-sequence neural network models for transliteration",
+        "Paper Link": "https://github.com/googlei18n/transliteration",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "transliteration"
+        ],
+        "Venue Title": "EMNLP 2016",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Mihaela Rosca",
+            "Thomas Breuel"
+        ],
+        "Affiliations": [
+            "Google Zurich",
+            "Google Mountain View, CA"
+        ],
+        "Abstract": "Transliteration is a key component of machine translation systems and software internationalization. This paper demonstrates that neural sequence-to-sequence models obtain state of the art or close to state of the art results on existing datasets. In an effort to make machine transliteration accessible, we open source a new Arabic to English transliteration dataset and our trained models."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8571428571428571
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.035665,
+        "input_tokens": 12700,
+        "output_tokens": 822
+    },
+    "config": {
+        "model_name": "openai_gpt-4o-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.09565"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
