@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "Name": "OpenITI Corpus",
+        "Subsets": [
+            {
+                "Name": "Classical Arabic",
+                "Volume": 1.5,
+                "Unit": "G words",
+                "Dialect": "Classical Arabic"
+            }
+        ],
+        "Link": "https://github.com/OpenITI",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "books",
+            "wikipedia",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A large-scale historical corpus of written Arabic language, spanning 1400 years.",
+        "Volume": 1.5,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "OpenITI"
+        ],
+        "Derived From": [
+            "Shamela",
+            "Shia online library",
+            "Al-Jami\u2019 Al-Kabir"
+        ],
+        "Paper Title": "Studying the History of the Arabic Language",
+        "Paper Link": "https://arxiv.org/abs/2005.03871",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "Language Resources and Evaluation",
+        "Venue Type": "journal",
+        "Venue Name": "Language Resources and Evaluation",
+        "Authors": [
+            "Yonatan Belinkov",
+            "Alexander Magidow",
+            "Alberto Barro\u0301n-Ceden\u0303o",
+            "Avi Shmidman",
+            "Maxim Romanov"
+        ],
+        "Affiliations": [
+            "MIT",
+            "University of Rhode Island",
+            "Qatar Computing Research Institute",
+            "Bar-Ilan University",
+            "University of Vienna"
+        ],
+        "Abstract": "This paper presents a large-scale historical corpus of written Arabic language, spanning 1400 years. We describe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.42857142857142855
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.005336,
+        "input_tokens": 26448,
+        "output_tokens": 481
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.03891"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

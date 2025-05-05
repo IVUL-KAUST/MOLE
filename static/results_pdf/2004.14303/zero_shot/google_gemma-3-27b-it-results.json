@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "TUNIZI",
+        "Subsets": [],
+        "Link": "https://github.com/chaymafourati/TUNIZI-Sentiment-Analysis-Tunisian-Arabizi-Dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "ar",
+        "Dialect": "Tunisia",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "TUNIZI is a sentiment analysis Tunisian Arabizi Dataset, collected from social networks, preprocessed and annotated manually by Tunisian native speakers. It includes more than 9k Tunisian sentences written in Tunisian Arabizi.",
+        "Volume": 9210.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "iCompass"
+        ],
+        "Derived From": [],
+        "Paper Title": "TUNIZI: A TUNISIAN ARABIZI SENTIMENT ANALYSIS DATASET",
+        "Paper Link": "https://arxiv.org/abs/2004.14303",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "ICLR",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Chayma Fourati",
+            "Abir Messaoudi",
+            "Hatem Haddad"
+        ],
+        "Affiliations": [
+            "iCompass"
+        ],
+        "Abstract": "On social media, Arabic people tend to express themselves in their own local dialects. Moreparticularly,Tunisiansusetheinformalwaycalled\u201dTunisianAra-bizi\u201d. Analyticalstudiesseektoexploreandrecognizeonlineopinionsaimingtoexploitthemforplanningandpredictionpurposessuchasmeasuringthecustomer satisfactionandestablishingsalesandmarketingstrategies. However, analytical studies based on Deep Learning are data hungry. On theotherhand,Africanlanguagesanddialectsareconsideredlowresourcelanguages. Forinstance,tothebestofourknowledge,noannotatedTunisianArabizidataset exists. Inthispaper,weintroduceTUNIZIasentimentanalysisTunisianArabizi Dataset, collected from social networks, preprocessed for analytical studies and annotatedmanuallybyTunisiannativespeakers."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8571428571428571
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0006558,
+        "input_tokens": 5182,
+        "output_tokens": 566
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14303"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

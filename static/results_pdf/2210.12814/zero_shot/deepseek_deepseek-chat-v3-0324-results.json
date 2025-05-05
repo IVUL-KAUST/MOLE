@@ -1,0 +1,90 @@
+{
+    "metadata": {
+        "Name": "RuCoLA",
+        "Link": "rucola-benchmark.com",
+        "HF Link": "github.com/RussianNLP/RuCoLA",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "public datasets",
+            "news articles",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "RuCoLA is the first large-scale acceptability classification resource in Russian, consisting of 13.4k sentences labeled as acceptable or not, combining in-domain sentences from linguistic literature and out-of-domain sentences produced by machine translation and paraphrase generation models.",
+        "Volume": 13.4,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SberDevices",
+            "ABBYY",
+            "HSE University",
+            "Yandex",
+            "Huawei Noah's Ark Lab",
+            "Center for Information and Language Processing (CIS), MaiNLP lab, LMU Munich, Germany"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuCoLA: Russian Corpus of Linguistic Acceptability",
+        "Paper Link": "github.com/RussianNLP/RuCoLA",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "Linguistic acceptability",
+            "named entity recognition",
+            "language identification"
+        ],
+        "Venue Title": "Findings of the Association for Computational Linguistics: EMNLP 2021",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Vladislav Mikhailov",
+            "Tatiana Shamardina",
+            "Max Ryabinin",
+            "Alena Pestova",
+            "Ivan Smurov",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "SberDevices",
+            "ABBYY",
+            "HSE University",
+            "Yandex",
+            "Huawei Noah's Ark Lab",
+            "Center for Information and Language Processing (CIS), MaiNLP lab, LMU Munich, Germany"
+        ],
+        "Abstract": "Language Size % Linguistic acceptability (LA) attracts the attention of the research community due to its many uses, such as testing the grammatical knowledge of language models and filtering implausible text with acceptability classifiers. However, the application scope of LA in languages other than English is limited due to the lack of high-quality resources. To this end, we introduce the Russian Corpus of Linguistic Acceptability (RuCoLA), built from the ground up under the well-established binary linguistic acceptability (LA) approach. RuCoLA consists of 9.8k in-domain sentences from linguistic publications and 3.6k out-of-domain sentences produced by generative models. The out-of-domain set is created to facilitate the practical use of acceptability for improving language generation. Our paper describes the data collection protocol and presents a fine-grained analysis of acceptability classification experiments with a range of baseline approaches. In particular, we demonstrate that the most widely used language models still fall behind humans by a large margin, especially when detecting morphological and semantic errors. We release RuCoLA, the code of experiments, and a public leaderboard to assess the linguistic competence of language models for Russian."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00937486,
+        "input_tokens": 25403,
+        "output_tokens": 718
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12814"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

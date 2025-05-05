@@ -1,0 +1,108 @@
+{
+    "metadata": {
+        "Name": "FLORES-101",
+        "Subsets": [
+            {
+                "Name": "United Arab Emirates",
+                "Volume": 1002,
+                "Unit": "sentences",
+                "Dialect": "United Arab Emirates"
+            },
+            {
+                "Name": "Egypt",
+                "Volume": 993,
+                "Unit": "sentences",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Lebanon",
+                "Volume": 1006,
+                "Unit": "sentences",
+                "Dialect": "Lebanon"
+            }
+        ],
+        "Link": "https://github.com/facebookresearch/flores",
+        "HF Link": "https://huggingface.co/datasets/facebook/flores",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles",
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "FLORES-101 is a many-to-many evaluation benchmark for low-resource and multilingual machine translation, consisting of 3001 sentences extracted from English Wikipedia and translated into 101 languages.",
+        "Volume": 3001.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research"
+        ],
+        "Derived From": [
+            "English Wikipedia"
+        ],
+        "Paper Title": "The FLORES-101 Evaluation Benchmark for Low-Resource and Multilingual Machine Translation",
+        "Paper Link": "https://arxiv.org/abs/2106.03193",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "NeurIPS",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Neural Information Processing Systems",
+        "Authors": [
+            "Naman Goyal",
+            "Cynthia Gao",
+            "Vishrav Chaudhary",
+            "Peng-Jen Chen",
+            "Guillaume Wenzek",
+            "Da Ju",
+            "Sanjana Krishnan",
+            "Marc'Aurelio Ranzato",
+            "Francisco Guzm\u00e1n",
+            "Angela Fan"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "LORIA"
+        ],
+        "Abstract": "One of the biggest challenges hindering progress in low-resource and multilingual machine translation is the lack of good evaluation benchmarks. Current evaluation benchmarks either lack good coverage of low-resource languages, consider only restricted domains, or are low quality because they are constructed using semi-automatic procedures. In this work, we introduce the FLORES-101 evaluation benchmark, consisting of 3001 sentences extracted from English Wikipedia and covering a variety of different topics and domains. These sentences have been translated in 101 languages by professional translators through a carefully controlled process."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.01635019,
+        "input_tokens": 83446,
+        "output_tokens": 623
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.03193"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

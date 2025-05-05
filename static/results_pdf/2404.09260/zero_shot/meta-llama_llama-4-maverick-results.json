@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "JaFIn",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "JaFIn is a Japanese financial instruction dataset for large language models.",
+        "Volume": 1490.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Hokkaido University",
+            "The University of Tokyo"
+        ],
+        "Derived From": [],
+        "Paper Title": "JaFIn: Japanese Financial Instruction Dataset",
+        "Paper Link": "https://arxiv.org/abs/2404.09260",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Kota Tanabe",
+            "Masahiro Suzuki",
+            "Hiroki Sakaji",
+            "Itsuki Noda"
+        ],
+        "Affiliations": [
+            "Hokkaido University",
+            "The University of Tokyo"
+        ],
+        "Abstract": "We construct an instruction dataset for the large language model (LLM) in the Japanese finance domain. Domain adaptation of language models, including LLMs, is receiving more attention as language models become more popular. Finance is mentioned as one of the domain adaptations. In the financial domain, various NLP tasks, such as information extraction, summarization, and classification, are used in financial practice and are in high demand."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0032924,
+        "input_tokens": 16570,
+        "output_tokens": 388
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.09260"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

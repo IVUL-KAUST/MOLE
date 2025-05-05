@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "TriviaQA",
+        "Link": "http://nlp.cs.washington.edu/triviaqa/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large scale distantly supervised challenge dataset for reading comprehension",
+        "Volume": 0.65,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Derived From": [],
+        "Paper Title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension",
+        "Paper Link": "https://arxiv.org/abs/1705.03551",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2017",
+        "Authors": [
+            "Mandar Joshi",
+            "Eunsol Choi",
+            "Daniel S. Weld",
+            "Luke Zettlemoyer"
+        ],
+        "Affiliations": [
+            "Paul G. Allen School of Computer Science & Engineering, Univ. of Washington, Seattle, WA",
+            "Allen Institute for Artificial Intelligence, Seattle, WA"
+        ],
+        "Abstract": "We present TriviaQA, a challenging reading comprehension dataset containing over 650K question-answer-evidence triples. TriviaQA includes 95K question-answer pairs authored by trivia enthusiasts and independently gathered evidence documents, six per question on average, that provide high quality distant supervision for answering the questions."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00287725,
+        "input_tokens": 14992,
+        "output_tokens": 421
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.03551"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

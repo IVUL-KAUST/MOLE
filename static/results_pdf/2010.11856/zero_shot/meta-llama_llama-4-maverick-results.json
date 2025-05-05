@@ -1,0 +1,135 @@
+{
+    "metadata": {
+        "Name": "XOR-TYDI QA",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 4500,
+                "Unit": "questions",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 4500,
+                "Unit": "questions",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 4500,
+                "Unit": "questions",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 4500,
+                "Unit": "questions",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 4500,
+                "Unit": "questions",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 4500,
+                "Unit": "questions",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 4500,
+                "Unit": "questions",
+                "Language": "Telugu"
+            }
+        ],
+        "Link": "https://nlp.cs.washington.edu/xorqa/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "XOR-TYDI QA is a dataset for cross-lingual open-retrieval question answering. It consists of 40k annotated questions and answers across 7 typologically diverse languages.",
+        "Volume": 40000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Derived From": [
+            "TYDI QA"
+        ],
+        "Paper Title": "XOR QA: Cross-lingual Open-Retrieval Question Answering",
+        "Paper Link": "https://aclanthology.org/2021.acl-long.46",
+        "Tokenized": false,
+        "Host": "Mendeley Data",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "This paper introduces the task of cross-lingual open-retrieval question answering (XOR QA), which aims at answering multilingual questions from non-English native speakers given multilingual resources. We construct a large-scale dataset built on 40K information-seeking questions across 7 diverse non-English languages that TYDI QA could not find same-language answers for."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0049756,
+        "input_tokens": 23960,
+        "output_tokens": 777
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

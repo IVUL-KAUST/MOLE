@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "DaNetQA",
+        "Link": "https://github.com/PragmaticsLab/DaNetQA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "DaNetQA is a question-answering corpus for the Russian language, following the BoolQ design. It comprises yes/no questions paired with paragraphs from Wikipedia and answers derived from the paragraphs.",
+        "Volume": 2691.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Research University Higher School of Economics",
+            "Sberbank"
+        ],
+        "Derived From": [],
+        "Paper Title": "DaNetQA: a yes/no Question Answering Dataset for the Russian Language",
+        "Paper Link": "https://arxiv.org/abs/2010.02605",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Taisia Glushkova",
+            "Alexey Machnev",
+            "Alena Fenogenova",
+            "Tatiana Shavrina",
+            "Ekaterina Artemova",
+            "Dmitry I. Ignatov"
+        ],
+        "Affiliations": [
+            "National Research University Higher School of Economics",
+            "Sberbank"
+        ],
+        "Abstract": "DaNetQA,anewquestion-answeringcorpus,followsBoolQ[2] design: it comprises natural yes/no questions. Each question is paired withaparagraphfromWikipediaandananswer,derivedfromthepara- graph. The task is to take both the question and a paragraph as input and come up with a yes/no answer, i.e. to produce a binary output. Inthispaper,wepresentareproducibleapproachtoDaNetQAcreation andinvestigatetransferlearningmethodsfortaskandlanguagetransfer- ring. For task transferring we leverage three similar sentence modelling tasks:1)acorpusofparaphrases,Paraphraser,2)anNLItask,forwhich we use the Russian part of XNLI, 3) another question answering task, SberQUAD. For language transferring we use English to Russian trans- lation together with multilingual language fine-tuning."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.001287,
+        "input_tokens": 10843,
+        "output_tokens": 576
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02605"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

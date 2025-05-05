@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "Emojis as Anchors to Detect Arabic Offensive Language and Hate Speech",
+        "Subsets": [
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 12698,
+                "Unit": "tweets",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://aclanthology.org/2019.nleng.1/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This paper introduces a method to collect a large percentage of offensive and hate tweets using emojis as anchors. The dataset contains 12,698 Arabic tweets and is manually annotated for offensive, fine-grained hate speech, vulgar, and violence content.",
+        "Volume": 12698.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "Hamad Bin Khalifa University",
+            "University of Pittsburgh"
+        ],
+        "Derived From": [],
+        "Paper Title": "Emojis as Anchors to Detect Arabic Offensive Language and Hate Speech",
+        "Paper Link": "https://aclanthology.org/2019.nleng.1/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection",
+            "fake news detection"
+        ],
+        "Venue Title": "Natural Language Engineering",
+        "Venue Type": "journal",
+        "Venue Name": "",
+        "Authors": [
+            "Hamdy Mubarak",
+            "Sabit Hassan",
+            "Shammur Absar Chowdhury"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, Hamad Bin Khalifa University, Doha, Qatar",
+            "School of Computing and Information, University of Pittsburgh, PA, USA"
+        ],
+        "Abstract": "We introduce a generic, language-independent method to collect a large percentage of offensive and hate tweets regardless of their topics or genres. We harness the extralinguistic information embedded in the emojis to collect a large number of offensive tweets. We apply the proposed method on Arabic tweets and compare it with English tweets \u2013 analysing key cultural differences. We observed a constant usage of these emojis to represent offensiveness throughout different time spans on Twitter. We manually annotate and publicly release the largest Arabic dataset for offensive, fine-grained hate speech, vulgar and violence content. Furthermore, we benchmark the dataset for detecting offensiveness and hate speech using different transformer architectures and perform in-depth linguistic analysis. We evaluate our models on external datasets \u2013 a Twitter dataset collected using a completely different method, and a multi-platform dataset containing comments from Twitter, YouTube and Facebook, for assessing generalization capability. Competitive results on these datasets suggest that the data collected using our method captures universal characteristics of offensive language. Our findings also highlight the common words used in offensive communications, common targets for hate speech, specific patterns in violence tweets; and pinpoint common classification errors that can be attributed to limitations of NLP models. We observe that even state-of-the-art transformer models may fail to take into account culture, background and context or understand nuances present in real-world data such as sarcasm."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0034544,
+        "input_tokens": 28357,
+        "output_tokens": 751
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

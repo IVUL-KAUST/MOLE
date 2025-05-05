@@ -1,0 +1,190 @@
+{
+    "metadata": {
+        "Name": "XNLI",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "German",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Greek",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Greek"
+            },
+            {
+                "Name": "Bulgarian",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Bulgarian"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Urdu",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Urdu"
+            }
+        ],
+        "Link": "https://s3.amazonaws.com/xnli/XNLI-1.0.zip",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": [
+            "English",
+            "French",
+            "Spanish",
+            "German",
+            "Greek",
+            "Bulgarian",
+            "Russian",
+            "Turkish",
+            "Arabic",
+            "Vietnamese",
+            "Thai",
+            "Chinese",
+            "Hindi",
+            "Swahili",
+            "Urdu"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A dataset for evaluating cross-lingual sentence understanding by extending the Multi-Genre Natural Language Inference Corpus to 15 languages.",
+        "Volume": 112500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "FacebookAI",
+            "New York University"
+        ],
+        "Derived From": [
+            "Multi-Genre Natural Language Inference Corpus"
+        ],
+        "Paper Title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+        "Paper Link": "https://arxiv.org/abs/1809.05053",
+        "Tokenized": false,
+        "Host": "CAMeL Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Alexis Conneau",
+            "Guillaume Lample",
+            "Ruty Rinott",
+            "Holger Schwenk",
+            "Ves Stoyanov",
+            "Adina Williams",
+            "Samuel R. Bowman"
+        ],
+        "Affiliations": [
+            "FacebookAI",
+            "New York University"
+        ],
+        "Abstract": "A scalable way to build multilingual systems is through cross-lingual language understanding State-of-the-art natural language processing (XLU), in which a system is trained primarily on data in one language and evaluated on data in others. While XLU shows promising results for taskssuchascross-lingualdocumentclassification (Klementiev et al., 2012; Schwenk and Li, 2018), there are very few, if any, XLU benchmarks for more difficult language understanding tasks like natural language inference. Large-scale natural language inference (NLI), also known as recognizingtextualentailment(RTE),hasemergedasa practicaltestbedforworkonsentenceunderstand- ing. In NLI, a system is tasked with reading two sentencesanddeterminingwhetheroneentailsthe other, contradicts it, or neither (neutral). Recentcrowdsourcedannotationeffortshaveyielded datasetsforNLIinEnglish(Bowmanetal.,2015; Williamsetal.,2017)withnearlyamillionexam- ples, and these have been widely used to evaluate neural network architectures and training strate- gies (Rockt\u00e4schel et al., 2016; Gong et al., 2018; Petersetal.,2018;Wangetal.,2018),aswellasto train effective, reusable sentence representations (Conneau et al., 2017; Subramanian et al., 2018; Ceretal.,2018;Conneauetal.,2018a). In this work, we introduce a benchmark that we call the Cross-lingual Natural Language In- ference corpus, or XNLI, by extending these NLI corpora to 15 languages. XNLI consists of 7500 human-annotated development and test examples inNLIthree-wayclassificationformatinEnglish, French,Spanish,German,Greek,Bulgarian,Rus- sian, Turkish, Arabic, Vietnamese, Thai, Chi- nese, Hindi, Swahili and Urdu, making a total of 112,500 annotated pairs. These languages span several language families, and with the inclusion of Swahili and Urdu, include two lower-resource languagesaswell."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.002063,
+        "input_tokens": 16421,
+        "output_tokens": 1436
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.05053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

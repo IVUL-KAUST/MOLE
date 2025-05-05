@@ -1,0 +1,119 @@
+{
+    "metadata": {
+        "Name": "Arabic Dialect Detection Dataset",
+        "Subsets": [
+            {
+                "Name": "Egyptian",
+                "Volume": 13,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 9.5,
+                "Unit": "hours",
+                "Dialect": "Saudi Arabia"
+            },
+            {
+                "Name": "Levantine",
+                "Volume": 11,
+                "Unit": "hours",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "North African",
+                "Volume": 9,
+                "Unit": "hours",
+                "Dialect": "Algeria"
+            },
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 10,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "http://alt.qcri.org/resources/ArabicDialectIDCorpus/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2014,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles",
+            "public datasets"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset for Arabic dialect detection in broadcast speech",
+        "Volume": 52.5,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "MIT Computer Science and Artificial Intelligence Laboratory"
+        ],
+        "Derived From": [],
+        "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
+        "Paper Link": "https://arxiv.org/abs/1509.06928",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "QCRI Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "language identification"
+        ],
+        "Venue Title": "INTERSPEECH",
+        "Venue Type": "conference",
+        "Venue Name": "INTERSPEECH 2015",
+        "Authors": [
+            "Ahmed Ali",
+            "Najim Dehak",
+            "Patrick Cardinal",
+            "Sameer Khurana",
+            "Sree Harsha Yella",
+            "James Glass",
+            "Peter Bell",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL), Cambridge, MA, USA",
+            "JHU Center for Language and Speech Processing (CLSP), Baltimore, MD, USA",
+            "E\u00b4cole de technologie supe\u00b4rieure, De\u00b4partement de Ge\u00b4nie Logiciel et des TI, Montre\u00b4al, Canada",
+            "Centre for Speech Technology Research, University of Edinburgh, UK"
+        ],
+        "Abstract": "This paper investigates different approaches for dialect identification in Arabic broadcast speech. The task of Dialect Identification (DID) is a special case of the more general problem of Language Identification (LID). LID refers to the process of automatically identifying the language class for a given speech segment or text document. DID is arguably a more challenging problem than LID, since it consists of identifying the different dialects within the same language class."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.002349,
+        "input_tokens": 11190,
+        "output_tokens": 715
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

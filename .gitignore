@@ -10,3 +10,4 @@ venv
 __pycache__
 *playground*
 pages/__pycache__/*.pyc
+static/**/**/**/paper_text.txt

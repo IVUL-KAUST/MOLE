@@ -1,0 +1,87 @@
+{
+    "metadata": {
+        "Name": "Shamela",
+        "Subsets": [],
+        "Link": "http://shamela.ws",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2019,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A large-scale historical Arabic corpus of about 1 billion words from diverse periods of time, cleaned and processed with a morphological analyzer.",
+        "Volume": 1000000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "University of Rhode Island",
+            "Leipzig University",
+            "Bar-Ilan University",
+            "Dicta: The Israel Center for Text Analysis"
+        ],
+        "Derived From": [],
+        "Paper Title": "Shamela: A Large-Scale Historical Arabic Corpus",
+        "Paper Link": "https://arxiv.org/abs/1612.08989",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "morphological analysis",
+            "Linguistic acceptability"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Yonatan Belinkov",
+            "Alexander Magidow",
+            "Maxim Romanov",
+            "Avi Shmidman",
+            "Moshe Koppel"
+        ],
+        "Affiliations": [
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "University of Rhode Island",
+            "Leipzig University",
+            "Bar-Ilan University",
+            "Dicta: The Israel Center for Text Analysis"
+        ],
+        "Abstract": "Arabic is a widely-spoken language with a rich and long history spanning more than fourteen centuries. Yet existing Arabic corpora largely focus on the modern period or lack sufficient diachronic information. We develop a large-scale, historical corpus of Arabic of about 1 billion words from diverse periods of time. We clean this corpus, process it with a morphological analyzer, and enhance it by detecting parallel passages and automatically dating undated texts. We demonstrate its utility with selected case-studies in which we show its application to the digital humanities."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00472706,
+        "input_tokens": 12327,
+        "output_tokens": 493
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

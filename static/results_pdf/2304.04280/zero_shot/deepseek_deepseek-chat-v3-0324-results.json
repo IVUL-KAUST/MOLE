@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "FrenchMedMCQA",
+        "Link": "https://huggingface.co/qanastek/FrenchMedMCQA-BioBERT-V1.1-Wikipedia-BM25/tree/main",
+        "HF Link": "https://huggingface.co/qanastek/FrenchMedMCQA-BioBERT-V1.1-Wikipedia-BM25/tree/main",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "FrenchMedMCQA is the first publicly available Multiple-Choice Question Answering dataset in French for the medical domain, containing questions from real French pharmacy exams.",
+        "Volume": 3105.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Zenidoc",
+            "LIA-Avignon University",
+            "LS2N-Nantes University",
+            "CHU de Nantes-Laclinique des donn\u00e9es-Nantes University"
+        ],
+        "Derived From": [],
+        "Paper Title": "FrenchMedMCQA: A French Multiple-Choice Question Answering Dataset for Medical domain",
+        "Paper Link": "https://arxiv.org/abs/2208.03214",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yanis Labrak",
+            "Adrien Bazoge",
+            "Richard Dufour",
+            "B\u00e9atrice Daille",
+            "Pierre-Antoine Gourraud",
+            "Emmanuel Morin",
+            "Mickael Rouvier"
+        ],
+        "Affiliations": [
+            "LIA-Avignon University",
+            "LS2N-Nantes University",
+            "CHU de Nantes-Laclinique des donn\u00e9es-Nantes University",
+            "Zenidoc"
+        ],
+        "Abstract": "This paper introduces FrenchMedMCQA, the first publicly available Multiple-Choice Question Answering (MCQA) dataset in French for biomedical domain. It is composed of 3,105 questions taken from real exams of the French medical specialization diploma in pharmacy, mixing single and multiple answers. Each instance of the dataset contains an identifier, a question, five possible answers and their manual correction(s). We also propose first baseline models to automatically process this MCQA task in order to report on the current performances and to highlight the difficulty of the task. A detailed analysis of the results showed that it is necessary to have representations adapted to the medical domain or to the MCQA task: in our case, English specialized models yielded better results than generic French ones, even though FrenchMedMCQA is in French. Corpus, models and tools are available online."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.009117,
+        "input_tokens": 9400,
+        "output_tokens": 630
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2304.04280"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

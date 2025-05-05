@@ -264,7 +264,7 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
         if source_file.endswith(".tex"):
             paper_text += open(source_file, "r").read()
         elif source_file.endswith(".pdf"):
-            if pdf_mode == "plumber":
+            if pdf_mode == "plumber" or pdf_mode is None:
                 with pdfplumber.open(source_file) as pdf:
                     text_pages = []
                     for page in pdf.pages:
@@ -275,6 +275,8 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
                 converter = DocumentConverter()
                 result = converter.convert(source_file)
                 paper_text += result.document.export_to_markdown()
+            else:
+                raise ValueError(f"Invalid pdf_mode: {pdf_mode}")
         else:
             logger.error("Not acceptable source file")
             continue
@@ -304,12 +306,12 @@ def run(
     summarize=False,
     curr_idx=[0, 0],
     schema="ar",
-    use_pdf=False,
     few_shot = 0,
     results_path = "results_latex",
     pdf_mode = "plumber",
     repeat_on_error = False
 ):
+    use_pdf = False if pdf_mode is None else True
     submitted = False
     st_context = False
 
@@ -460,6 +462,7 @@ def run(
                     model_name = model_name.replace("/", "_")
                     if model_name not in non_browsing_models and paper_text == "":
                         paper_text = extract_paper_text(paper_path, use_pdf = use_pdf, st_context=st_context, pdf_mode = pdf_mode)
+                        open(f"{save_path}/paper_text.txt", "w").write(paper_text)
                     curr_idx[0] += 1
                     if curr_idx[1]:
                         show_info(
@@ -731,11 +734,6 @@ def create_args():
     parser.add_argument("--schema", type=str, default="ar")
 
     parser.add_argument(
-        "--use_pdf",
-        action="store_true",
-        help="use pdf instead of tex",
-    )
-    parser.add_argument(
         "--few_shot",
         type=int,
         required=False,
@@ -751,7 +749,7 @@ def create_args():
     parser.add_argument(
         "--pdf_mode",
         type=str,
-        default="plumber",
+        default=None,
         help="pdf mode to use",
     )
 

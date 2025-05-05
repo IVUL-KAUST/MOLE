@@ -1,0 +1,171 @@
+{
+    "metadata": {
+        "Name": "ATHAR",
+        "Subsets": [
+            {
+                "Name": "History of al-Tabari",
+                "Volume": 22000,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Travels of Ibn Battuta",
+                "Volume": 8000,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Muqaddimah of Ibn Khaldun",
+                "Volume": 10000,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Book of Revenue",
+                "Volume": 5000,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Unique Necklace",
+                "Volume": 6000,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Optics",
+                "Volume": 4000,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Anecdotes of the Session and Stories of Recollection",
+                "Volume": 3000,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Canon of Medicine",
+                "Volume": 7000,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Book of Reflection",
+                "Volume": 2000,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Epistle",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Book of Misers",
+                "Volume": 1500,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Path of Eloquence",
+                "Volume": 2500,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Fattouh Al-Sham",
+                "Volume": 1800,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Hayy ibn Yaqdhan",
+                "Volume": 1200,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "The Book of Idols",
+                "Volume": 800,
+                "Unit": "sentences",
+                "Dialect": "Classical Arabic"
+            }
+        ],
+        "Link": "https://rasaif.com/",
+        "HF Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
+        "License": "CC BY 4.0",
+        "Year": 2024,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books",
+            "commentary",
+            "social media",
+            "commentary",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A high-quality and diverse dataset for Classical Arabic to English translation",
+        "Volume": 66000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Mohammed Khalil",
+            "Mohammed Sabry"
+        ],
+        "Derived From": [],
+        "Paper Title": "ATHAR: A High-Quality and Diverse Dataset for Classical Arabic to English Translation",
+        "Paper Link": "https://arxiv.org/abs/2405.09234",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "LREC 2024",
+        "Venue Type": "conference",
+        "Venue Name": "The 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation",
+        "Authors": [
+            "Mohammed Khalil",
+            "Mohammed Sabry"
+        ],
+        "Affiliations": [
+            "Independent Researcher",
+            "ADAPT/DCU, Dublin, Ireland"
+        ],
+        "Abstract": "This work introduces the ATHAR dataset, a translation resource from Classical Arabic to English. The dataset comprises 66,000 high-quality Classical Arabic to English translation samples covering various subjects like science, culture, and philosophy. We assess the performance of current state-of-the-art LLMs under different settings and find that there is a need for such datasets in current systems. Our findings highlight how models can benefit from fine-tuning or incorporating this dataset into their pre-training pipelines."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0043505,
+        "input_tokens": 18084,
+        "output_tokens": 1075
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.19835"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

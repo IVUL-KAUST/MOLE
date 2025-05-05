@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "Measuring Massive Multitask Language Understanding",
+        "Link": "https://github.com/hendrycks/test",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "en",
+        "Domain": [
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A new test to measure a text model\u2019s multitask accuracy across 57 tasks",
+        "Volume": 15908.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "UC Berkeley",
+            "Columbia University",
+            "University of Chicago"
+        ],
+        "Derived From": [],
+        "Paper Title": "Measuring Massive Multitask Language Understanding",
+        "Paper Link": "https://arxiv.org/abs/2009.03300",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "ICLR",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [
+            "Dan Hendrycks",
+            "Collin Burns",
+            "Steven Basart",
+            "Andy Zou",
+            "Mantas Mazeika",
+            "Dawn Song",
+            "Jacob Steinhardt"
+        ],
+        "Affiliations": [
+            "UC Berkeley",
+            "Columbia University",
+            "University of Chicago",
+            "UIUC"
+        ],
+        "Abstract": "We propose a new test to measure a text model\u2019s multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0050011,
+        "input_tokens": 24171,
+        "output_tokens": 408
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2009.03300"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

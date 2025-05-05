@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Arabic-Hebrew TED Talks",
+        "Subsets": [],
+        "Link": "http://wit3.fbk.eu/mt.php?release=2016-01-more",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2016,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "An Arabic-Hebrew parallel corpus of TED talks built upon WIT3, consisting of about 2,000 talks and 3.5M tokens per language.",
+        "Volume": 3500000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "FBK"
+        ],
+        "Derived From": [
+            "WIT3"
+        ],
+        "Paper Title": "An Arabic-Hebrew parallel corpus of TED talks",
+        "Paper Link": "https://arxiv.org/abs/1610.00572",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "IWSLT",
+        "Authors": [
+            "Mauro Cettolo"
+        ],
+        "Affiliations": [
+            "FBK, Trento, Italy"
+        ],
+        "Abstract": "We describe an Arabic-Hebrew parallel corpus of TED talks built upon WIT3, the Web inventory that repurposes the original content of the TED website in a way which is more convenient for MT researchers. Despite almost all English subtitles of TED talks have been translated into both Arabic and Hebrew, no IWSLT evaluation campaign proposed Arabic-Hebrew as an MT task. Actually, early releases of WIT3 distributed train data for hundreds of pairs, including Arabic-Hebrew. Nevertheless, those linguistic resources were prepared by means of a totally automatic procedure, with only rough sanity checks, and include talks available at that time. Given the increasing interest in the Arabic-Hebrew task and the many more TED talks translated into the two languages available to date, we decided to prepare a benchmark for Arabic-Hebrew. We exploited WIT3 for collecting raw data; moreover, for making the dissemination of results easier to users, we borrowed the partition of TED talks into train, development and test sets adopted in the IWSLT 2016 evaluation campaign."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0011223,
+        "input_tokens": 9235,
+        "output_tokens": 570
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.00572"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

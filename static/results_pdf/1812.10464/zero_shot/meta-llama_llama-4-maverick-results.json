@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "LASER",
+        "Subsets": [],
+        "Link": "https://github.com/facebookresearch/LASER",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2019,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles",
+            "web pages",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "Multilingual sentence embeddings for 93 languages",
+        "Volume": 223000000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research",
+            "University of the Basque Country"
+        ],
+        "Derived From": [
+            "Europarl",
+            "United Nations",
+            "OpenSubtitles2018",
+            "Global Voices",
+            "Tanzil",
+            "Tatoeba"
+        ],
+        "Paper Title": "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond",
+        "Paper Link": "https://arxiv.org/abs/1812.10464",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference",
+            "language identification",
+            "instruction tuning"
+        ],
+        "Venue Title": "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2019",
+        "Authors": [
+            "Mikel Artetxe",
+            "Holger Schwenk"
+        ],
+        "Affiliations": [
+            "University of the Basque Country",
+            "Facebook AI Research"
+        ],
+        "Abstract": "This paper introduces an architecture to learn joint multilingual sentence representations for 93 languages. The system uses a single BiLSTM encoder with a shared BPE vocabulary for all languages, coupled with an auxiliary decoder and trained on publicly available parallel corpora."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0040148,
+        "input_tokens": 20259,
+        "output_tokens": 454
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1812.10464"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

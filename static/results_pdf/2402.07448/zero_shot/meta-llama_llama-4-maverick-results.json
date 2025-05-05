@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "AraSpider",
+        "Subsets": [],
+        "Link": "github.com/ahmedheakl/AraSpider",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "AraSpider is the first Arabic version of the Spider dataset, aimed at improving natural language processing in the Arabic-speaking community.",
+        "Volume": 10181.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Egypt-Japan University of Science and Technology"
+        ],
+        "Derived From": [
+            "Spider dataset"
+        ],
+        "Paper Title": "AraSpider: Democratizing Arabic Text-to-SQL",
+        "Paper Link": "https://arxiv.org/abs/2402.07448",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ahmed Heakl",
+            "Youssef Mohamed",
+            "Ahmed B. Zaky"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, Egypt-Japan University of Science and Technology"
+        ],
+        "Abstract": "This study presents AraSpider, the first Arabic version of the Spider dataset, aimed at improving natural language processing (NLP) in the Arabic-speaking community. Four multilingual translation models were tested for their effectiveness in translating English to Arabic. Additionally, two models were assessed for their ability to generate SQL queries from Arabic text. The results showed that using back translation significantly improved the performance of both ChatGPT 3.5 and SQLCoder models, which are considered top performers on the Spider dataset. Notably, ChatGPT 3.5 demonstrated high-quality translation, while SQLCoder excelled in text-to-SQL tasks. The study underscores the importance of incorporating contextual schema and employing back translation strategies to enhance model performance in Arabic NLP tasks. Moreover, the provision of detailed methodologies for reproducibility and translation of the dataset into other languages highlights the research's commitment to promoting transparency and collaborative knowledge sharing in the field. Overall, these contributions advance NLP research, empower Arabic-speaking researchers, and enrich the global discourse on language comprehension and database interrogation."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.002407,
+        "input_tokens": 11643,
+        "output_tokens": 523
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2402.07448"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "Dangerous Speech Dataset",
+        "Subsets": [
+            {
+                "Name": "Multi-Dialectal",
+                "Volume": 2.8,
+                "Unit": "million tweets",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "https://github.com/UBC-NLP/ara_dangspeech",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset for detecting dangerous speech in Arabic social media, covering various dialects and containing annotated tweets.",
+        "Volume": 2.8,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "SUNY at Buffalo",
+            "The University of British Columbia"
+        ],
+        "Derived From": [],
+        "Paper Title": "Understanding and Detecting Dangerous Speech in Social Media",
+        "Paper Link": "https://github.com/UBC-NLP/ara_dangspeech/blob/main/paper.pdf",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "offensive language detection"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Ali Alshehri",
+            "El Moatez Billah Nagoudi",
+            "Muhammad Abdul-Mageed"
+        ],
+        "Affiliations": [
+            "SUNY at Buffalo",
+            "Natural Language Processing Lab, The University of British Columbia"
+        ],
+        "Abstract": "This paper presents a new dataset for detecting dangerous speech in Arabic social media. The dataset is collected from Twitter and annotated for dangerous content. The authors also develop models to detect such content."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00480612,
+        "input_tokens": 20162,
+        "output_tokens": 445
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.06608"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

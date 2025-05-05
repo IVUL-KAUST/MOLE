@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "ATHAR",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
+        "HF Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A high-quality and diverse dataset for Classical Arabic to English translation, comprising 66,000 samples from seminal Classical Arabic texts.",
+        "Volume": 66000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "ADAPT/DCU",
+            "IndependentResearcher"
+        ],
+        "Derived From": [],
+        "Paper Title": "ATHAR: A High-Quality and Diverse Dataset for Classical Arabic to English Translation",
+        "Paper Link": "https://arxiv.org/abs/2407.19835",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Mohammed Khalil MohammedSabry"
+        ],
+        "Affiliations": [
+            "IndependentResearcher",
+            "ADAPT/DCU,Dublin,Ireland"
+        ],
+        "Abstract": "This work introduces the ATHAR dataset, a translation resource from Classical Arabic to English. The dataset comprises 66,000 high-quality Classical Arabic to English translation samples that cover a wide array of subjects including science, culture, and philosophy."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0021959,
+        "input_tokens": 18084,
+        "output_tokens": 417
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.19835"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

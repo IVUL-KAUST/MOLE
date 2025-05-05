@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "Belgian Statutory Article Retrieval Dataset (BSARD)",
+        "Link": "https://doi.org/10.5281/zenodo.5217310",
+        "HF Link": "https://huggingface.co/datasets/antoiloui/bsard",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2021,
+        "Language": "fr",
+        "Domain": [
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A collection of French native legal questions posed by Belgian citizens and law articles from the Belgian legislation. Each question is labeled by one or several relevant articles from the corpus.",
+        "Volume": 1108.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Droits Quotidiens",
+            "Maastricht University"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Statutory Article Retrieval Dataset in French",
+        "Paper Link": "https://arxiv.org/abs/2202.00801",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "information retrieval"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Antoine Louis",
+            "Gerasimos Spanakis"
+        ],
+        "Affiliations": [
+            "Law & Tech Lab, Maastricht University"
+        ],
+        "Abstract": "Statutory article retrieval is the task of automatically retrieving law articles relevant to a legal question. To address the scarcity of large-scale and high-quality annotated datasets, we introduce the Belgian Statutory Article Retrieval Dataset (BSARD), which consists of 1,100+ French native legal questions labeled by experienced jurists with relevant articles from a corpus of 22,600+ Belgian law articles."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0021421,
+        "input_tokens": 19132,
+        "output_tokens": 461
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.11792"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

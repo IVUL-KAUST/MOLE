@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "PIAF",
+        "Link": "https://github.com/etalab/piaf",
+        "HF Link": "https://huggingface.co/datasets/piaf",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A native French Question Answering Dataset",
+        "Volume": 3835.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Etalab",
+            "Recital"
+        ],
+        "Derived From": [
+            "French Wikipedia"
+        ],
+        "Paper Title": "Project PIAF: Building a Native French Question-Answering Dataset",
+        "Paper Link": "https://arxiv.org/abs/2002.06071",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Rachel Keraron",
+            "Guillaume Lancrenon",
+            "Mathilde Bras",
+            "Fr\u00e9d\u00e9ric Allary",
+            "Gilles Moyse",
+            "Thomas Scialom",
+            "Edmundo-Pavel Soriano-Morales",
+            "Jacopo Staiano"
+        ],
+        "Affiliations": [
+            "Recital",
+            "Etalab",
+            "Sorbonne Universit\u00e9"
+        ],
+        "Abstract": "Motivated by the lack of data for non-English languages, in particular for the evaluation of downstream tasks such as Question Answering, we present a participatory effort to collect a native French Question Answering Dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00269752,
+        "input_tokens": 14645,
+        "output_tokens": 406
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2007.00968"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
