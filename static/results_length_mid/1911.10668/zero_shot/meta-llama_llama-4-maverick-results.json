@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "JParaCrawl",
+        "Link": "http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A large-scale English-Japanese parallel corpus created by crawling the web and aligning parallel sentences.",
+        "Volume": 8.7,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "NTT Corporation"
+        ],
+        "Derived From": [],
+        "Paper Title": "JParaCrawl: A Large Scale Web-Based English-Japanese Parallel Corpus",
+        "Paper Link": "https://arxiv.org/abs/1911.10668",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Makoto Morishita",
+            "Jun Suzuki",
+            "Masaaki Nagata"
+        ],
+        "Affiliations": [
+            "NTT Communication Science Laboratories, NTT Corporation"
+        ],
+        "Abstract": "Recent machine translation algorithms mainly rely on parallel corpora. However, since the availability of parallel corpora remains limited, only some resource-rich language pairs can benefit from them. We constructed a parallel corpus for English-Japanese, for which the amount of publicly available parallel corpora is still limited. We constructed the parallel corpus by broadly crawling the web and automatically aligning parallel sentences. Our collected corpus, called JParaCrawl, amassed over 8.7 million sentence pairs. We show how it includes a broader range of domains and how a neural machine translation model trained with it works as a good pre-trained model for fine-tuning specific domains. The pre-training and fine-tuning approaches achieved or surpassed performance comparable to model training from the initial state and reduced the training time. Additionally, we trained the model with an in-domain dataset and JParaCrawl to show how we achieved the best performance with them. JParaCrawl and the pre-trained models are freely available online for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0025032,
+        "input_tokens": 11940,
+        "output_tokens": 492
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1911.10668"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

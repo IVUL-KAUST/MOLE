@@ -1,0 +1,108 @@
+{
+    "metadata": {
+        "Name": "OpenITI",
+        "Subsets": [
+            {
+                "Name": "OpenITI core",
+                "Volume": 725000000,
+                "Unit": "words",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "OpenITI full",
+                "Volume": 1537000000,
+                "Unit": "words",
+                "Dialect": "Classical Arabic"
+            }
+        ],
+        "Link": "https://github.com/OpenITI",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books",
+            "news articles",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "A large-scale diachronic corpus of Arabic texts spanning 1400 years, with preprocessing including morphological segmentation, part-of-speech tagging, and lemmatization.",
+        "Volume": 1537000000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "University of Vienna",
+            "Bar-Ilan University",
+            "MIT",
+            "University of Rhode Island"
+        ],
+        "Derived From": [
+            "Shamela",
+            "Al-Jami' Al-Kabir",
+            "Shia online library"
+        ],
+        "Paper Title": "Studying the History of the Arabic Language",
+        "Paper Link": "http://iti-corpus.github.io",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "text generation",
+            "natural language inference"
+        ],
+        "Venue Title": "Workshop on Language Technology Resources and Tools for Digital Humanities (LT4DH)",
+        "Venue Type": "workshop",
+        "Venue Name": "LT4DH 2016",
+        "Authors": [
+            "Yonatan Belinkov",
+            "Alexander Magidow",
+            "Alberto Barr\u00f3n-Cedeno",
+            "Avi Shmidman",
+            "Maxim Romanov"
+        ],
+        "Affiliations": [
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "Department of Modern and Classical Languages and Literatures, University of Rhode Island",
+            "Qatar Computing Research Institute, HBKU",
+            "Department of Hebrew Literature, Bar-Ilan University",
+            "Dicta: The Israel Center for Text Analysis",
+            "Department of History, University of Vienna"
+        ],
+        "Abstract": "Arabic is a widely-spoken language with a long and rich history, but existing corpora and language technology focus mostly on modern Arabic and its varieties. Therefore, studying the history of the language has so far been mostly limited to manual analyses on a small scale. In this work, we present a large-scale historical corpus of the written Arabic language, spanning 1400 years. We describe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques. Our findings confirm the established division of written Arabic into Modern Standard and Classical Arabic, and confirm other established periodizations, while suggesting that written Arabic may be divisible into still further periods of development."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00383253,
+        "input_tokens": 25993,
+        "output_tokens": 711
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.03891"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

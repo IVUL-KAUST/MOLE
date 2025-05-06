@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "Polyglot-NER is a massive multilingual named entity recognition dataset created by crawling public datasets.",
+        "Volume": 1000000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Rami Al-Rfou"
+        ],
+        "Derived From": [],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://bit.ly/polyglot-ner",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Rami Al-Rfou"
+        ],
+        "Affiliations": [],
+        "Abstract": "This paper introduces Polyglot-NER, a large-scale multilingual named entity recognition dataset. The dataset is created by crawling public datasets and is intended for training and evaluating named entity recognition models across multiple languages."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.375,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.00058983,
+        "input_tokens": 3693,
+        "output_tokens": 352
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

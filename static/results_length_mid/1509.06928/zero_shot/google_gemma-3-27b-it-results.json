@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "Arabic Dialect Identification",
+        "Subsets": [],
+        "Link": "http://alt.qcri.org/resources/ArabicDialectIDCorpus/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "This paper presents efforts on automatic dialect identification for Arabic broadcast speech. The dataset includes speech recordings from four Arabic dialects (EGY, LAV, GLF, and NOR) as well as MSA, collected from broadcast news.",
+        "Volume": 1720.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "MIT",
+            "JHU",
+            "University of Edinburgh"
+        ],
+        "Derived From": [],
+        "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
+        "Paper Link": "https://arxiv.org/abs/1509.06928",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "QCRI Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ahmed Ali",
+            "Najim Dehak",
+            "Patrick Cardinal",
+            "Sameer Khurana",
+            "Sree Harsha Yella",
+            "James Glass",
+            "Peter Bell",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL), Cambridge, MA, USA",
+            "JHU Center for Language and Speech Processing (CLSP), Baltimore, MD, USA",
+            "\u00c9cole de technologie sup\u00e9rieure, D\u00e9parement de G\u00e9nie Logiciel et des TI, Montr\u00e9al, Canada",
+            "Centre for Speech Technology Research, University of Edinburgh, UK"
+        ],
+        "Abstract": "In this paper, we investigate different approaches for dialect identification in Arabic broadcast speech. These methods are based on phonetic and lexical features obtained from a speech recognition system, and bottleneck features using the i-vector framework. We studied both generative and discriminative classifiers, and we combined these features using a multi-class Support Vector Machine (SVM). We validated our results on an Arabic/English language identification task, with an accuracy of 100%. We also evaluated these features in a binary classifier to discriminate between Modern Standard Arabic (MSA) and Dialectal Arabic, with an accuracy of 100%.  We further reported results using the proposed methods to discriminate between the five most widely used dialects of Arabic: namely Egyptian, Gulf, Levantine, North African, and MSA, with an accuracy of 59.2%. We discuss dialect identification errors in the context of dialect code-switching between Dialectal Arabic and MSA, and compare the error pattern between manually labeled data, and the output from our classifier. All the data used on our experiments have been released to the public as a language identification corpus."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.375,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.002953057,
+        "input_tokens": 23197,
+        "output_tokens": 720
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

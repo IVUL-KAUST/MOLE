@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "Claire French Dialogue Dataset",
+        "Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "HF Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "License": "CC BY-NC-SA 1.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "books",
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "crawling"
+        ],
+        "Description": "The Claire French Dialogue Dataset is a corpus containing roughly 160 million words from transcripts and stage plays in French.",
+        "Volume": 160.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LINAGORA Labs"
+        ],
+        "Derived From": [],
+        "Paper Title": "The Claire French Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2307.09288",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "The Claire French Dialogue Dataset",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Julie Hunter",
+            "J\u00e9r\u00f4me Louradour",
+            "Virgile Rennard",
+            "Isma\u00efl Harrando",
+            "Guokan Shang",
+            "Jean-Pierre Lorr\u00e9"
+        ],
+        "Affiliations": [
+            "LINAGORA",
+            "Ecole Polytechnique"
+        ],
+        "Abstract": "The abstract of the paper 'The Claire French Dialogue Dataset'."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0039672,
+        "input_tokens": 19989,
+        "output_tokens": 384
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2311.16840"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

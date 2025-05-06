@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "Name": "MGB-3 Arabic Challenge",
+        "Subsets": [
+            {
+                "Name": "Comedy",
+                "Volume": 5,
+                "Unit": "hours",
+                "Dialect": "Egyptian"
+            },
+            {
+                "Name": "Cooking",
+                "Volume": 4,
+                "Unit": "hours",
+                "Dialect": "Egyptian"
+            },
+            {
+                "Name": "FamilyKids",
+                "Volume": 5,
+                "Unit": "hours",
+                "Dialect": "Egyptian"
+            },
+            {
+                "Name": "Fashion",
+                "Volume": 4,
+                "Unit": "hours",
+                "Dialect": "Egyptian"
+            },
+            {
+                "Name": "Drama",
+                "Volume": 4,
+                "Unit": "hours",
+                "Dialect": "Egyptian"
+            },
+            {
+                "Name": "Science",
+                "Volume": 5,
+                "Unit": "hours",
+                "Dialect": "Egyptian"
+            },
+            {
+                "Name": "Sports",
+                "Volume": 4,
+                "Unit": "hours",
+                "Dialect": "Egyptian"
+            }
+        ],
+        "Link": "http://www.mgb-challenge.org/workshop.html",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "Egypt",
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "MGB-3 Arabic Challenge focuses on dialectal Arabic using a multi-genre collection of Egyptian YouTube videos.",
+        "Volume": 16.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "University of Edinburgh"
+        ],
+        "Derived From": [
+            "MGB-2"
+        ],
+        "Paper Title": "Speech Recognition Challenge in the Wild: Arabic MGB-3",
+        "Paper Link": "http://www.mgb-challenge.org/workshop.html",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "dialect identification"
+        ],
+        "Venue Title": "Speech Recognition Challenge in the Wild: Arabic MGB-3",
+        "Venue Type": "workshop",
+        "Venue Name": "MGB-3 Workshop",
+        "Authors": [
+            "Ahmed Ali",
+            "Stephan Vogel",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "Centre for Speech Technology Research, University of Edinburgh, UK"
+        ],
+        "Abstract": "This paper describes the Arabic MGB-3 Challenge -- Arabic Speech Recognition in the Wild. Unlike last year's Arabic MGB-2 Challenge, for which the recognition task was based on more than 1,200 hours broadcast TV news recordings from Aljazeera Arabic TV programs, MGB-3 emphasises dialectal Arabic using a multi-genre collection of Egyptian YouTube videos. Seven genres were used for the data collection: comedy, cooking, family/kids, fashion, drama, sports, and science (TEDx). A total of 16 hours of videos, split evenly across the different genres, were divided into adaptation, development and evaluation data sets. The Arabic MGB-Challenge comprised two tasks: A) Speech transcription, evaluated on the MGB-3 test set, along with the 10 hour MGB-2 test set to report progress on the MGB-2 evaluation; B) Arabic dialect identification, introduced this year in order to distinguish between four major Arabic dialects -- Egyptian, Levantine, North African, Gulf, as well as Modern Standard Arabic."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.90625,
+    "cost": {
+        "cost": 0.00209777,
+        "input_tokens": 13130,
+        "output_tokens": 821
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

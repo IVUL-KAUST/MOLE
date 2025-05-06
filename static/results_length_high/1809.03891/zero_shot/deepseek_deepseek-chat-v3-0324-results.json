@@ -1,0 +1,94 @@
+{
+    "metadata": {
+        "Name": "OpenITI",
+        "Subsets": [],
+        "Link": "https://github.com/OpenITI",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books",
+            "news articles",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "A large-scale historical corpus of the written Arabic language, spanning 1400 years, with preprocessing including morphological segmentation, part-of-speech tags, lemmatization, and syntactic parse trees.",
+        "Volume": 1500000000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "University of Rhode Island",
+            "Qatar Computing Research Institute",
+            "Bar-Ilan University",
+            "University of Vienna"
+        ],
+        "Derived From": [
+            "Al-Maktaba Al-Shamela",
+            "Shia online library",
+            "Al-Jami' Al-Kabir"
+        ],
+        "Paper Title": "Studying the History of the Arabic Language: Language Technology and a Large-Scale Historical Corpus",
+        "Paper Link": "https://arxiv.org/abs/1809.03891",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "natural language inference",
+            "gender identification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "workshop",
+        "Venue Name": "Workshop on Language Technology Resources and Tools for Digital Humanities (LT4DH)",
+        "Authors": [
+            "Yonatan Belinkov",
+            "Alexander Magidow",
+            "Alberto Barr\u00f3n-Cede\u00f1o",
+            "Avi Shmidman",
+            "Maxim Romanov"
+        ],
+        "Affiliations": [
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "University of Rhode Island",
+            "Qatar Computing Research Institute",
+            "Bar-Ilan University",
+            "University of Vienna"
+        ],
+        "Abstract": "Arabic is a widely-spoken language with a long and rich history, but existing corpora and language technology focus mostly on modern Arabic and its varieties. Therefore, studying the history of the language has so far been mostly limited to manual analyses on a small scale. In this work, we present a large-scale historical corpus of the written Arabic language, spanning 1400 years. We describe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques. Our findings confirm the established division of written Arabic into Modern Standard and Classical Arabic, and confirm other established periodizations, while suggesting that written Arabic may be divisible into still further periods of development."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 0.90625,
+    "cost": {
+        "cost": 0.01255515,
+        "input_tokens": 25996,
+        "output_tokens": 612
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.03891"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

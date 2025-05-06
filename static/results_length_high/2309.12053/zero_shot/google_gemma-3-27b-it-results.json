@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "AceGPT",
+        "Subsets": [
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": "Unknown",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://github.com/FreedomIntelligence/AceGPT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media",
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A localized Large Language Model (LLM) specifically for Arabic, developed to address cultural sensitivity and local values. It was trained with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and GPT-4 responses in Arabic, alongside Reinforcement Learning with AI Feedback (RLAIF).",
+        "Volume": 0.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "King Abdullah University of Science and Technology",
+            "The Chinese University of Hong Kong, Shenzhen"
+        ],
+        "Derived From": [
+            "LLaMA2"
+        ],
+        "Paper Title": "AceGPT, Localizing Large Language Models in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2309.12053",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Huang Huang",
+            "Fei Yu",
+            "Jianqing Zhu",
+            "Xuening Sun",
+            "Hao Cheng",
+            "Dingjie Song",
+            "Zhihong Chen",
+            "Abdulmohsen Alharthi",
+            "Bang An",
+            "Juncai He",
+            "Ziche Liu",
+            "Zhiyi Zhang",
+            "Junying Chen",
+            "Jianquan Li",
+            "Benyou Wang",
+            "Lian Zhang",
+            "Ruoyu Sun",
+            "Xiang Wan",
+            "Haizhou Li",
+            "Jinchao Xu"
+        ],
+        "Affiliations": [
+            "Shenzhen International Center for Industrial and Applied Mathematics, Shenzhen Research Institute of Big Data",
+            "The Chinese University of Hong Kong, Shenzhen, China",
+            "King Abdullah University of Science and Technology, Thuwal, Saudi Arabia",
+            "Shenzhen Research Institute of Big Data, Shenzhen, China"
+        ],
+        "Abstract": "This paper is devoted to the development of a localized Large Language Model (LLM) specifically for Arabic, a language imbued with unique cultural characteristics inadequately addressed by current mainstream models. Significant concerns emerge when addressing cultural sensitivity and local values. To address this, the paper proposes a comprehensive solution that includes further pre-training with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and GPT-4 responses in Arabic, alongside Reinforcement Learning with AI Feedback (RLAIF) employing a reward model attuned to local culture and values. The goal is to cultivate culturally cognizant and value-aligned Arabic LLMs capable of accommodating the diverse, application-specific needs of Arabic-speaking communities. Comprehensive evaluations reveal that the resulting model, dubbed `AceGPT', sets the state-of-the-art standard for open Arabic LLMs across various benchmarks."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42857142857142855
+    },
+    "length_forcing": 0.9375,
+    "cost": {
+        "cost": 0.0037934,
+        "input_tokens": 34478,
+        "output_tokens": 797
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

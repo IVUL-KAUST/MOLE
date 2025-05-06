@@ -1,0 +1,69 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A dataset for multilingual named entity recognition.",
+        "Volume": 0.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/1410.3791",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Rami Al-Rfou"
+        ],
+        "Affiliations": [],
+        "Abstract": "The paper discusses Polyglot-NER, a dataset for massive multilingual named entity recognition."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00160666,
+        "input_tokens": 3696,
+        "output_tokens": 281
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

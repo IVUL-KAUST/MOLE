@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "FQuAD: French Question Answering Dataset",
+        "Link": "https://illuin-tech.github.io/FQuAD-explorer/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "FQuAD is a French Native Reading Comprehension dataset of questions and answers on a set of Wikipedia articles.",
+        "Volume": 60000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology",
+            "CentraleSup\u00e9lec"
+        ],
+        "Derived From": [],
+        "Paper Title": "FQuAD: French Question Answering Dataset",
+        "Paper Link": "https://arxiv.org/abs/2002.06071",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Martin d'Hoffschmidt",
+            "Wacim Belblidia",
+            "Tom Brendl\u00e9",
+            "Quentin Heinrich",
+            "Maxime Vidal"
+        ],
+        "Affiliations": [
+            "Illuin Technology",
+            "ETH Zurich"
+        ],
+        "Abstract": "This paper introduces FQuAD, a French Question Answering Dataset. The dataset consists of questions and answers on a set of Wikipedia articles. The paper describes the dataset collection process, the evaluation metrics, and the results of various experiments carried out to evaluate the performances of fine-tuned monolingual and multilingual language models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00554048,
+        "input_tokens": 25023,
+        "output_tokens": 367
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.06071"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

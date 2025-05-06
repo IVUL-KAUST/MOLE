@@ -1,0 +1,118 @@
+{
+    "metadata": {
+        "Name": "Arabic Dialect Identification Corpus",
+        "Subsets": [
+            {
+                "Name": "EGY",
+                "Volume": 1720,
+                "Unit": "utterances",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "GLF",
+                "Volume": 1907,
+                "Unit": "utterances",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "LAV",
+                "Volume": 1059,
+                "Unit": "utterances",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "NOR",
+                "Volume": 1934,
+                "Unit": "utterances",
+                "Dialect": "North Africa"
+            },
+            {
+                "Name": "MSA",
+                "Volume": 1820,
+                "Unit": "utterances",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "http://alt.qcri.org/resources/ArabicDialectIDCorpus/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "TV Channels",
+            "news articles"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A dataset for Arabic dialect identification from broadcast news. It includes five dialects: Egyptian, Gulf, Levantine, North African, and Modern Standard Arabic.",
+        "Volume": 8440.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "University of Edinburgh"
+        ],
+        "Derived From": [],
+        "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
+        "Paper Link": "https://www.interspeech2016.org/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "QCRI Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification"
+        ],
+        "Venue Title": "Interspeech 2016",
+        "Venue Type": "conference",
+        "Venue Name": "Interspeech 2016",
+        "Authors": [
+            "Ahmed Ali",
+            "Najim Dehak",
+            "Patrick Cardinal",
+            "Sameer Khurana",
+            "Sree Harsha Yella",
+            "James Glass",
+            "Peter Bell",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL), Cambridge, MA, USA",
+            "JHU Center for Language and Speech Processing (CLSP), Baltimore, MD, USA",
+            "\u00c9cole de technologie sup\u00e9rieure, D\u00e9partement de G\u00e9nie Logiciel et des TI, Montr\u00e9al, Canada",
+            "Centre for Speech Technology Research, University of Edinburgh, UK"
+        ],
+        "Abstract": "This paper presents our efforts on automatic dialect identification for Arabic broadcast speech. We have demonstrated a dialect classifier with an accuracy of 60.2% using system combination. We also achieved 100% accuracy on two binary classification tasks; MSA vs Dialectal Arabic and English vs Arabic. We studied the potential code-switching pattern in our classifier and its correlation with the manual annotation. Further work for this research is to study the code-switch between MSA and dialectal Arabic without considering speaker diarization or silence between speech segments in what can be called dialect diarization."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9375,
+    "cost": {
+        "cost": 0.00317868,
+        "input_tokens": 23182,
+        "output_tokens": 747
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

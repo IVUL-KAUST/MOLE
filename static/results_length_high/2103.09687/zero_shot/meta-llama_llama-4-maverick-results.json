@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "Name": "Darija Open Dataset (DODa)",
+        "Subsets": [
+            {
+                "Name": "Verbs",
+                "Volume": null,
+                "Unit": "entries",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Nouns",
+                "Volume": null,
+                "Unit": "entries",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Adjectives",
+                "Volume": null,
+                "Unit": "entries",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Conjugations",
+                "Volume": 800,
+                "Unit": "verbs",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Masculine-Feminine-Plural matching",
+                "Volume": 900,
+                "Unit": "nouns",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Verb-to-Noun correspondences",
+                "Volume": 850,
+                "Unit": "verbs",
+                "Dialect": "Morocco"
+            }
+        ],
+        "Link": "https://github.com/darija-open-dataset/dataset",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "Morocco",
+        "Domain": [
+            "captions",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "LLM generated"
+        ],
+        "Description": "A large open-source collaborative project for Darija-English translation with over 10,000 entries.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Aissam Outchakoucht",
+            "Hamza Es-Samaali"
+        ],
+        "Derived From": [],
+        "Paper Title": "Moroccan Dialect -Darija- Open Dataset",
+        "Paper Link": "https://arxiv.org/abs/2103.09687",
+        "Script": "Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Aissam Outchakoucht",
+            "Hamza Es-Samaali"
+        ],
+        "Affiliations": [],
+        "Abstract": "Darija Open Dataset (DODa) is an open-source project for the Moroccan dialect. With more than 10,000 entries DODa is arguably the largest open-source collaborative project for Darija-English translation built for Natural Language Processing purposes."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 0.9375,
+    "cost": {
+        "cost": 0.0019316,
+        "input_tokens": 7325,
+        "output_tokens": 582
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.09687"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

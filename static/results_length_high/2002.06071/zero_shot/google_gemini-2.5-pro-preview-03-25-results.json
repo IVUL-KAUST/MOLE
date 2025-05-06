@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "FQuAD",
+        "Link": "https://illuin-tech.github.io/FQuAD-explorer/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "French native reading comprehension dataset from Wikipedia, similar to SQuAD (60k+ Q&A).",
+        "Volume": 62003.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology",
+            "ETH Zurich"
+        ],
+        "Derived From": [],
+        "Paper Title": "FQuAD: French Question Answering Dataset",
+        "Paper Link": "https://aclanthology.org/2020.repl4nlp-1.20/",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 4th Workshop on Representation Learning for NLP",
+        "Venue Type": "workshop",
+        "Venue Name": "The 4th Workshop on Representation Learning for NLP (RepL4NLP-2020)",
+        "Authors": [
+            "Martin d'Hoffschmidt",
+            "Wacim Belblidia",
+            "Tom Brendl\u00e9",
+            "Quentin Heinrich",
+            "Maxime Vidal"
+        ],
+        "Affiliations": [
+            "Illuin Technology",
+            "ETH Zurich"
+        ],
+        "Abstract": "Recent advances in the field of language modeling have improved state-of-the-art results on many Natural Language Processing tasks. Among them, Reading Comprehension has made significant progress over the past few years. However, most results are reported in English since labeled resources available in other languages, such as French, remain scarce. In the present work, we introduce the French Question Answering Dataset (FQuAD). FQuAD is a French Native Reading Comprehension dataset of questions and answers on a set of Wikipedia articles that consists of 25,000+ samples for the 1.0 version and 60,000+ samples for the 1.1 version. We train a baseline model which achieves an F1 score of 92.2 and an exact match ratio of 82.1 on the test set. In order to track the progress of French Question Answering models we propose a leader-board and we have made the 1.0 version of our dataset freely available at https://illuin-tech.github.io/FQuAD-explorer/. The release of a native French Reading Comprehension dataset is motivated by the release of recent French monolingual models (cite{camembert}, cite{flaubert}) and by industrial opportunities."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.06858875,
+        "input_tokens": 25023,
+        "output_tokens": 641
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.06071"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

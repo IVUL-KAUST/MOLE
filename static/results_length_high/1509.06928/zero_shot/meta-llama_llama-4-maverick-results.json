@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "Name": "Arabic Dialect Identification Corpus",
+        "Subsets": [
+            {
+                "Name": "Egyptian",
+                "Volume": 13,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 9.5,
+                "Unit": "hours",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "Levantine",
+                "Volume": 11,
+                "Unit": "hours",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "North African",
+                "Volume": 9,
+                "Unit": "hours",
+                "Dialect": "Libya"
+            },
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 10,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "http://alt.qcri.org/resources/ArabicDialectIDCorpus/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles",
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A corpus for Arabic dialect identification collected from broadcast news.",
+        "Volume": 52.5,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "QCRI",
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
+        "Paper Link": "https://www.isca-speech.org/archive/interspeech_2015/papers/i15_0356.pdf",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "QCRI Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification"
+        ],
+        "Venue Title": "INTERSPEECH",
+        "Venue Type": "conference",
+        "Venue Name": "16th Annual Conference of the International Speech Communication Association",
+        "Authors": [
+            "Ahmed Ali",
+            "Najim Dehak",
+            "Patrick Cardinal",
+            "Sameer Khurana",
+            "Sree Harsha Yella",
+            "Peter Bell",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "Centre for Speech Technology Research,School of Informatics, University of Edinburgh, Edinburgh EH8 9AB, UK"
+        ],
+        "Abstract": "This paper presents our efforts on automatic dialect identification for Arabic broadcast speech. We have demonstrated a dialect classifier with an accuracy of 60.2% using system combination. We also achieved 100% accuracy on two binary classification tasks; MSA vs Dialectal Arabic and English vs Arabic. We studied the potential code-switching pattern in our classifier and its correlation with the manual annotation. Further work for this research is to study the code-switch between MSA and dialectal Arabic without considering speaker diarization or silence between speech segments in what can be called dialect diarization. We shall also study deep neural network approaches of classification to learn a more complex non-linear decision boundary."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7619047619047619
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.00427822,
+        "input_tokens": 23185,
+        "output_tokens": 702
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

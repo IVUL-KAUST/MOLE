@@ -1,0 +1,219 @@
+{
+    "metadata": {
+        "Name": "XNLI",
+        "Subsets": [
+            {
+                "Name": "en",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "fr",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "es",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "de",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "el",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Greek"
+            },
+            {
+                "Name": "bg",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Bulgarian"
+            },
+            {
+                "Name": "ru",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "tr",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "ar",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "vi",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "th",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "zh",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "hi",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "sw",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "ur",
+                "Volume": 7500.0,
+                "Unit": "sentences",
+                "Language": "Urdu"
+            }
+        ],
+        "HF Link": "https://hf.co/datasets/facebook/xnli",
+        "Link": "https://github.com/facebookresearch/XNLI",
+        "License": "CC BY-NC 4.0",
+        "Year": 2018,
+        "Language": [
+            "English",
+            "French",
+            "Spanish",
+            "German",
+            "Greek",
+            "Bulgarian",
+            "Russian",
+            "Turkish",
+            "Arabic",
+            "Vietnamese",
+            "Thai",
+            "Chinese",
+            "Hindi",
+            "Swahili",
+            "Urdu"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "Evaluation set for NLI by extending the development and test sets of the Multi-Genre Natural Language Inference Corpus (MultiNLI) to 15 languages",
+        "Volume": 112500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook"
+        ],
+        "Derived From": [
+            "MultiNLI"
+        ],
+        "Paper Title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+        "Paper Link": "https://arxiv.org/pdf/1809.05053",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "natural language inference"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Alexis Conneau",
+            "Guillaume Lample",
+            "Ruty Rinott",
+            "Adina Williams",
+            "Samuel R. Bowman",
+            "Holger Schwenk",
+            "Veselin Stoyanov"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "New York University"
+        ],
+        "Abstract": "State-of-the-art natural language processing systems rely on supervision in the form of annotated data to learn competent models. These models are generally trained on data in a single language (usually English), and cannot be directly used beyond that language. Since collecting data in every language is not realistic, there has been a growing interest in cross-lingual language understanding (XLU) and low-resource cross-language transfer. In this work, we construct an evaluation set for XLU by extending the development and test sets of the Multi-Genre Natural Language Inference Corpus (MultiNLI) to 14 languages, including low-resource languages such as Swahili and Urdu. We hope that our dataset, dubbed XNLI, will catalyze research in cross-lingual sentence understanding by providing an informative standard evaluation task. In addition, we provide several baselines for multilingual sentence understanding, including two based on machine translation systems, and two that use parallel data to train aligned multilingual bag-of-words and LSTM encoders. We find that XNLI represents a practical and challenging evaluation suite, and that directly translating the test data yields the best performance among available baselines.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "HF Link": 0,
+            "Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 0,
+            "Access": 0,
+            "Cost": 0,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.05053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

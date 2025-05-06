@@ -1,0 +1,141 @@
+{
+    "metadata": {
+        "Name": "Multilingual Hate Speech",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 5790,
+                "Unit": "documents",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "English",
+                "Volume": 15943,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "German",
+                "Volume": 6151,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 13169,
+                "Unit": "documents",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 9560,
+                "Unit": "documents",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 9788,
+                "Unit": "documents",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 5670,
+                "Unit": "documents",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 11365,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "French",
+                "Volume": 1220,
+                "Unit": "documents",
+                "Language": "French"
+            }
+        ],
+        "Link": "https://github.com/punyajoy/DE-LIMIT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "English",
+            "German",
+            "Indonesian",
+            "Italian",
+            "Polish",
+            "Portuguese",
+            "Spanish",
+            "French"
+        ],
+        "Domain": [
+            "social media",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A large-scale multilingual hate speech dataset collected from various sources including social media and news articles. The dataset is used for training and evaluating hate speech detection models in multiple languages.",
+        "Volume": 159753.0,
+        "Unit": "documents",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Indian Institute of Technology Kharagpur"
+        ],
+        "Derived From": [],
+        "Paper Title": "Deep Learning Models for Multilingual Hate Speech Detection",
+        "Paper Link": "https://github.com/punyajoy/DE-LIMIT",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fake news detection"
+        ],
+        "Venue Title": "ECML-PKDD 2020",
+        "Venue Type": "conference",
+        "Venue Name": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases",
+        "Authors": [
+            "Sai Saketh Aluru",
+            "Binny Mathew",
+            "Punyajoy Saha",
+            "Animesh Mukherjee"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology Kharagpur, India"
+        ],
+        "Abstract": "Hate speech detection is a challenging problem with most of the datasets available in only one language: English. In this paper, we conduct a large scale analysis of multilingual hate speech in 9 languages from 16 different sources. We observe that in low resource setting, simple models such as LASER embedding with logistic regression performs the best, while in high resource setting BERT based models perform better. In case of zero-shot classification, languages such as Italian and Portuguese achieve good results. Our proposed framework could be used as an efficient solution for low-resource languages. These models could also act as good baselines for future multilingual hate speech detection tasks. We have made our code and experimental settings public for other researchers."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.00270102,
+        "input_tokens": 18514,
+        "output_tokens": 838
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.06465"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "HellaSwag",
+        "Link": "https://rowanzellers.com/hellaswag",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "captions",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A benchmark for commonsense Natural Language Inference, created using Adversarial Filtering to be challenging for models but easy for humans. Contains context and multiple-choice endings.",
+        "Volume": 70000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Derived From": [
+            "ActivityNet Captions",
+            "WikiHow"
+        ],
+        "Paper Title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "Paper Link": "https://arxiv.org/abs/1905.07830",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "natural language inference"
+        ],
+        "Venue Title": "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Rowan Zellers",
+            "Ari Holtzman",
+            "Yonatan Bisk",
+            "Ali Farhadi",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Paul G. Allen School of Computer Science & Engineering, University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Abstract": "Recent work introduced a new task of commonsense natural language inference: given an event description such as 'A woman sits at a piano,' a machine must select the most likely followup: 'She sets her fingers on the keys.' With the introduction of BERT, near human-level performance was reached. Does this mean that machines can perform human level commonsense inference? In this paper, we show that commonsense inference still proves difficult for even state-of-the-art models, by presenting HellaSwag, a new challenge dataset. Though its questions are trivial for humans (>95% accuracy), state-of-the-art models struggle (<48%). We achieve this via Adversarial Filtering (AF), a data collection paradigm wherein a series of discriminators iteratively select an adversarial set of machine-generated wrong answers. AF proves to be surprisingly robust. The key insight is to scale up the length and complexity of the dataset examples towards a critical 'Goldilocks' zone wherein generated text is ridiculous to humans, yet often misclassified by state-of-the-art models. Our construction of HellaSwag, and its resulting difficulty, sheds light on the inner workings of deep pretrained models. More broadly, it suggests a new path forward for NLP research, in which benchmarks co-evolve with the evolving state-of-the-art in an adversarial way, so as to present ever-harder challenges."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0580775,
+        "input_tokens": 17644,
+        "output_tokens": 704
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1905.07830"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

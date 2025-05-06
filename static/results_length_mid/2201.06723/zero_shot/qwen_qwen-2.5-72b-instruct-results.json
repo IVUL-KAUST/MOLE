@@ -1,0 +1,115 @@
+{
+    "metadata": {
+        "Name": "Arabic Offensive Language and Hate Speech",
+        "Subsets": [
+            {
+                "Name": "Gender",
+                "Volume": 641,
+                "Unit": "tweets",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Race",
+                "Volume": 366,
+                "Unit": "tweets",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Ideology",
+                "Volume": 190,
+                "Unit": "tweets",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Social Class",
+                "Volume": 101,
+                "Unit": "tweets",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Religion",
+                "Volume": 38,
+                "Unit": "tweets",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Disability",
+                "Volume": 3,
+                "Unit": "tweets",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "https://example.com/dataset",
+        "HF Link": "https://huggingface.co/datasets/Arabic_Offensive_Language_and_Hate_Speech",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "The largest Arabic dataset for offensive, fine-grained hate speech, vulgar, and violence content, collected using emojis as anchors.",
+        "Volume": 12698.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "University of Pittsburgh"
+        ],
+        "Derived From": [],
+        "Paper Title": "Emojis as Anchors to Detect Arabic Offensive Language and Hate Speech",
+        "Paper Link": "https://example.com/paper",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection",
+            "fake news detection"
+        ],
+        "Venue Title": "Conference on Natural Language Engineering",
+        "Venue Type": "conference",
+        "Venue Name": "Natural Language Engineering",
+        "Authors": [
+            "Hamdy Mubarak",
+            "Sabit Hassan",
+            "Shammur Absar Chowdhury"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, Hamad Bin Khalifa University, Doha, Qatar",
+            "School of Computing and Information, University of Pittsburgh, PA, USA"
+        ],
+        "Abstract": "We introduce a generic, language-independent method to collect a large percentage of offensive and hate tweets regardless of their topics or genres. We harness the extralinguistic information embedded in the emojis to collect a large number of offensive tweets. We apply the proposed method on Arabic tweets and compare it with English tweets -- analysing key cultural differences. We observed a constant usage of these emojis to represent offensiveness throughout different timespans on Twitter. We manually annotate and publicly release the largest Arabic dataset for offensive, fine-grained hate speech, vulgar and violence content. Furthermore, we benchmark the dataset for detecting offensiveness and hate speech using different transformer architectures and perform in-depth linguistic analysis. We evaluate our models on external datasets -- a Twitter dataset collected using a completely different method, and a multi-platform dataset containing comments from Twitter, YouTube and Facebook, for assessing generalization capability. Competitive results on these datasets suggest that the data collected using our method captures universal characteristics of offensive language."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.00285219,
+        "input_tokens": 20508,
+        "output_tokens": 776
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

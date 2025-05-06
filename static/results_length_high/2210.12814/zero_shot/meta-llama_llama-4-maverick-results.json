@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "RuCoLA",
+        "Link": "https://github.com/RussianNLP/RuCoLA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "news articles",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "Russian Corpus of Linguistic Acceptability for testing grammatical knowledge of language models",
+        "Volume": 13445.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SberDevices",
+            "ABBYY",
+            "HSE University",
+            "Yandex",
+            "Huawei Noah's Ark Lab",
+            "Center for Information and Language Processing (CIS)",
+            "LMU Munich"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuCoLA: Russian Corpus of Linguistic Acceptability",
+        "Paper Link": "https://arxiv.org/abs/2210.12814",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "Linguistic acceptability"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "EMNLP 2022",
+        "Authors": [
+            "Vladislav Mikhailov",
+            "Tatiana Shamardina",
+            "Max Ryabinin",
+            "Alena Pestova",
+            "Ivan Smurov",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "SberDevices",
+            "ABBYY",
+            "HSE University",
+            "Yandex",
+            "Huawei Noah's Ark Lab",
+            "Center for Information and Language Processing (CIS), LMU Munich"
+        ],
+        "Abstract": "This paper introduces RuCoLA, a novel benchmark for linguistic acceptability classification in Russian. RuCoLA combines in-domain sentences manually collected from linguistic literature and out-of-domain sentences produced by nine machine translation and paraphrase generation models. The paper describes the data collection protocol and presents a fine-grained analysis of acceptability classification experiments with a range of baseline approaches."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0050816,
+        "input_tokens": 25183,
+        "output_tokens": 454
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12814"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

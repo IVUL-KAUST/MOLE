@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Massively Multilingual Sentence Embeddings",
+        "Subsets": [],
+        "Link": "https://github.com/facebookresearch/LASER",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles",
+            "web pages",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "Multilingual sentence embeddings for 93 languages",
+        "Volume": 223.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research",
+            "University of the Basque Country"
+        ],
+        "Derived From": [],
+        "Paper Title": "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond",
+        "Paper Link": "https://arxiv.org/abs/1812.10464",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference",
+            "language identification",
+            "instruction tuning"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Mikel Artetxe",
+            "Holger Schwenk"
+        ],
+        "Affiliations": [
+            "University of the Basque Country (UPV/EHU)",
+            "Facebook AI Research"
+        ],
+        "Abstract": "We introduce an architecture to learn joint multilingual sentence representations for 93 languages, belonging to more than 30 different families and written in 28 different scripts. Our system uses a single BiLSTM encoder with a shared BPE vocabulary for all languages, which is coupled with an auxiliary decoder and trained on publicly available parallel corpora. This enables us to learn a classifier on top of the resulting embeddings using English annotated data only, and transfer it to any of the 93 languages without any modification."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 0.9375,
+    "cost": {
+        "cost": 0.0039018,
+        "input_tokens": 19752,
+        "output_tokens": 443
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1812.10464"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

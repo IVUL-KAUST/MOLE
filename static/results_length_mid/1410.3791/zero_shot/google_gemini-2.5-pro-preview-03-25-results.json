@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://sites.google.com/site/rmyeid/projects/polyglot-ner",
+        "HF Link": "",
+        "License": "CC BY-SA 3.0",
+        "Year": 2015,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A multilingual Named Entity Recognition dataset for 40 languages, including Arabic, derived from Wikipedia and Freebase using machine annotation.",
+        "Volume": 108900000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Inc.",
+            "Stony Brook University"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Freebase"
+        ],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "http://www.kdd.org/kdd2015/papers/files/p1247-al-rfou.pdf",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "Gdrive",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+        "Venue Type": "conference",
+        "Venue Name": "ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Google Inc.",
+            "Stony Brook University"
+        ],
+        "Abstract": "We present a method for named entity recognition in resource-lean languages, that is, languages with no annotated training data for this task. Our system, Polyglot-NER, learns to recognize named entities in any language with a Wikipedia. The process starts by projecting English entities from Freebase to other languages using Wikipedia's inter-language links. Then, we train language-specific sequence models using the projected entities as noisy labels. Finally, we use these models to recognize entities in the full Wikipedia text, and use the new entities to refine the models. We demonstrate its effectiveness by training models for 40 diverse languages. We evaluate our models on standard CoNLL-2002 and CoNLL-2003 shared task datasets for Dutch, Spanish, and English. For these languages, our system performs comparably to fully supervised methods. For the remaining 37 languages, we provide manually annotated test sets for evaluation. Our system substantially outperforms a baseline dictionary-lookup method. The models and data are released under Creative Commons Attribution-ShareAlike 3.0 Unported License."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0775975,
+        "input_tokens": 3696,
+        "output_tokens": 647
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

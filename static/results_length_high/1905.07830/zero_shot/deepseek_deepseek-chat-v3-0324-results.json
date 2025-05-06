@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "HellaSwag",
+        "Link": "https://rowanzellers.com/hellaswag",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "HellaSwag is a dataset for commonsense natural language inference, designed to be challenging for state-of-the-art models.",
+        "Volume": 70.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Derived From": [
+            "ActivityNet Captions",
+            "WikiHow"
+        ],
+        "Paper Title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "Paper Link": "https://rowanzellers.com/hellaswag",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Rowan Zellers",
+            "Ari Holtzman",
+            "Yonatan Bisk",
+            "Ali Farhadi",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Paul G. Allen School of Computer Science & Engineering, University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Abstract": "HellaSwag is a new dataset for commonsense natural language inference, designed to be challenging for state-of-the-art models. The dataset is constructed using Adversarial Filtering, which selects machine-generated wrong answers that are difficult for models to distinguish from human-written correct answers. The dataset is easy for humans (95.6% accuracy) but challenging for machines (<50% accuracy), even when models are trained on the same distribution as the test set. The dataset is derived from ActivityNet captions and WikiHow articles, and is intended for tasks such as natural language inference."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00559894,
+        "input_tokens": 17644,
+        "output_tokens": 470
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1905.07830"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

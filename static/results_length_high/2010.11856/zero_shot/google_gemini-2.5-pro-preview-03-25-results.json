@@ -1,0 +1,136 @@
+{
+    "metadata": {
+        "Name": "XOR-TyDi QA",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 20379,
+                "Unit": "questions",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 5704,
+                "Unit": "questions",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 12110,
+                "Unit": "questions",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 9564,
+                "Unit": "questions",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 5847,
+                "Unit": "questions",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 11218,
+                "Unit": "questions",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 8196,
+                "Unit": "questions",
+                "Language": "Telugu"
+            }
+        ],
+        "Link": "https://nlp.cs.washington.edu/xorqa/",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu",
+            "English"
+        ],
+        "Domain": [
+            "wikipedia",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "Cross-lingual open-retrieval QA dataset, 40k new annotations, 7 languages.",
+        "Volume": 20379.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Google Research"
+        ],
+        "Derived From": [
+            "TyDi QA"
+        ],
+        "Paper Title": "XOR: Cross-lingual Open-Retrieval Question Answering",
+        "Paper Link": "https://aclanthology.org/2021.naacl-main.131.pdf",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Venue Type": "conference",
+        "Venue Name": "2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "Multilingual question answering tasks typically assume that answers exist in the same language as the question. Yet in practice, many languages face both textit{information scarcity}---where languages have few reference articles---and textit{information asymmetry}---where questions reference concepts from other cultures.nThis work extends open-retrieval question answering to a cross-lingual setting enabling questions from one language to be answered via answer content from another language.nWe construct a large-scale dataset built on 40K information-seeking questions across 7 diverse non-English languages that TyDi QA could not find same-language answers for.nBased on this dataset, we introduce a task framework, called textbf{Cross}-lingual textbf{O}pen-textbf{R}etrieval textbf{Q}uestion textbf{A}nswering (textbf{XOR QA}), that consists of three new tasks involving cross-lingual document retrieval from multilingual and English resources.nWe establish baselines with state-of-the-art machine translation systems and cross-lingual pretrained models. Experimental results suggest that XOR QA is a challenging task that will facilitate the development of novel techniques for multilingual question answering.nOur data and code are available at https://nlp.cs.washington.edu/xorqa/."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.127305,
+        "input_tokens": 26973,
+        "output_tokens": 1005
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

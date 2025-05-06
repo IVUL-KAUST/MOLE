@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "HellaSwag",
+        "Link": "https://rowanzellers.com/hellaswag",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "captions",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A dataset for commonsense natural language inference, containing 70k examples.",
+        "Volume": 70.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Derived From": [
+            "ActivityNet Captions",
+            "WikiHow"
+        ],
+        "Paper Title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "Paper Link": "https://arxiv.org/abs/1905.07830",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Rowan Zellers",
+            "Ari Holtzman",
+            "Yonatan Bisk",
+            "Ali Farhadi",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Paul G. Allen School of Computer Science & Engineering, University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Abstract": "This paper presents HellaSwag, a new dataset for commonsense natural language inference. The dataset is constructed using Adversarial Filtering, a data collection paradigm that iteratively selects a challenging set of machine-generated wrong answers. The resulting dataset is easy for humans but challenging for machines."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00306625,
+        "input_tokens": 17644,
+        "output_tokens": 406
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1905.07830"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

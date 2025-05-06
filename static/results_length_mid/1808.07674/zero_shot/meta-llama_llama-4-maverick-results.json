@@ -1,0 +1,147 @@
+{
+    "metadata": {
+        "Name": "Arap-Tweet",
+        "Subsets": [
+            {
+                "Name": "Tunisian",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "Tunisia"
+            },
+            {
+                "Name": "Moroccan",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Algerian",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "Algeria"
+            },
+            {
+                "Name": "Libyan",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "Libya"
+            },
+            {
+                "Name": "Egyptian",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Sudanese",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "Sudan"
+            },
+            {
+                "Name": "Lebanese",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "Syrian",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "Syria"
+            },
+            {
+                "Name": "Jordanian",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "Jordan"
+            },
+            {
+                "Name": "Iraqi",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "Iraq"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 200000,
+                "Unit": "Tweets",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "http://arap.qatar.cmu.edu",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale multi-dialectal Twitter corpus for gender, age, and language variety identification",
+        "Volume": 2.4,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Hamad Bin Khalifa University",
+            "Carnegie Mellon University Qatar"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age and Language Variety Identification",
+        "Paper Link": "https://www.aclweb.org/anthology/L18-1471.pdf",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "dialect identification",
+            "gender identification",
+            "language identification"
+        ],
+        "Venue Title": "Proceedings of the 11th edition of the Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "LREC 2018",
+        "Authors": [
+            "Wajdi Zaghouani",
+            "Anis Charfi"
+        ],
+        "Affiliations": [
+            "Hamad Bin Khalifa University",
+            "Carnegie Mellon University Qatar"
+        ],
+        "Abstract": "This paper presents Arap-Tweet, a large-scale multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world representing the major Arabic dialectal varieties."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0023756,
+        "input_tokens": 11131,
+        "output_tokens": 800
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1808.07674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

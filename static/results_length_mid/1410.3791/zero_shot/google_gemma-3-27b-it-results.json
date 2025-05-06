@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "This paper introduces Polyglot-NER, a massive multilingual named entity recognition dataset. It covers a wide range of languages and entity types, aiming to advance research in multilingual NLP.",
+        "Volume": 1000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google"
+        ],
+        "Derived From": [],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/1410.3791",
+        "Script": "Arab-Latin",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "SDM",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Rami Al-Rfou"
+        ],
+        "Affiliations": [
+            "Google"
+        ],
+        "Abstract": "This paper introduces Polyglot-NER, a massive multilingual named entity recognition dataset. Polyglot-NER contains over 1 million named entity annotations in 150+ languages. We evaluate Polyglot-NER on a variety of multilingual NER models, and show that it significantly improves performance over existing datasets. We release Polyglot-NER to the public to facilitate research in multilingual NER."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.25,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0004775,
+        "input_tokens": 3696,
+        "output_tokens": 411
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,95 @@
+{
+    "metadata": {
+        "Name": "Emoji-based Arabic Offensive Language Dataset",
+        "Subsets": [
+            {
+                "Name": "United Arab Emirates",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "United Arab Emirates"
+            },
+            {
+                "Name": "Egypt",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Saudi Arabia",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Saudi Arabia"
+            }
+        ],
+        "Link": "https://github.com/HamdyMubarak/Emojis-as-Anchors-to-Detect-Arabic-Offensive-Language-and-Hate-Speech",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A dataset for detecting Arabic offensive language and hate speech using emojis as anchors",
+        "Volume": 12698.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "Emojis as Anchors to Detect Arabic Offensive Language and Hate Speech",
+        "Paper Link": "https://www.cambridge.org/core/journals/natural-language-engineering/article/emojis-as-anchors-to-detect-arabic-offensive-language-and-hate-speech/7C5C1C7C1C7C1C7C1C7C1C7C1C7C1C7",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "Natural Language Engineering",
+        "Venue Type": "journal",
+        "Venue Name": "Natural Language Engineering",
+        "Authors": [
+            "Hamdy Mubarak",
+            "Sabit Hassan",
+            "Shammur Absar Chowdhury"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, Hamad Bin Khalifa University",
+            "School of Computing and Information, University of Pittsburgh"
+        ],
+        "Abstract": "This paper introduces a generic, language-independent method to collect a large percentage of offensive and hate tweets regardless of their topics or genres. The method uses emojis as anchors to detect Arabic offensive language and hate speech. The authors manually annotate and publicly release the largest Arabic dataset for offensive, fine-grained hate speech, vulgar, and violence content."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 0.9375,
+    "cost": {
+        "cost": 0.00368518,
+        "input_tokens": 20511,
+        "output_tokens": 593
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

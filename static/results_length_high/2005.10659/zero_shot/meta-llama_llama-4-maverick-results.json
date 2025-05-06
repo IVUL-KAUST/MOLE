@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "RuBQ",
+        "Link": "https://github.com/vladislavneon/RuBQ",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "captions",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "RuBQ is a Russian dataset for question answering over Wikidata, containing 1,500 questions with their English machine translations, SPARQL queries, and reference answers.",
+        "Volume": 1500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "ITMO University",
+            "JetBrains Research",
+            "Ural Federal University"
+        ],
+        "Derived From": [
+            "Wikidata"
+        ],
+        "Paper Title": "RuBQ: A Russian Dataset for Question Answering over Wikidata",
+        "Paper Link": "https://arxiv.org/abs/2005.10659",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Vladislav Korablinov",
+            "Pavel Braslavski"
+        ],
+        "Affiliations": [
+            "ITMO University",
+            "JetBrains Research",
+            "Ural Federal University"
+        ],
+        "Abstract": "The paper presents RuBQ, the first Russian knowledge base question answering (KBQA) dataset. The high-quality dataset consists of 1,500 Russian questions of varying complexity, their English machine translations, SPARQL queries to Wikidata, reference answers, as well as a Wikidata sample of triples containing entities with Russian labels."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9310344827586203,
+    "cost": {
+        "cost": 0.00212592,
+        "input_tokens": 11590,
+        "output_tokens": 392
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.10659"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
