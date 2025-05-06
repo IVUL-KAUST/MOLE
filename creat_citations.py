@@ -52,6 +52,7 @@ def get_bibtex(url, name):
   author = {{{' and '.join(authors)}}},
   year = {{{year}}},
   archivePrefix = {{arXiv}},
+  journal={{arXiv preprint arXiv: {arxiv_id}}},
   primaryClass = {{cs.AI}},
   eprint = {{{arxiv_id}}},
   url = {{{url}}}
@@ -65,8 +66,9 @@ for file in glob("evals/*/*/*.json"):
         data = json.load(f)
     link = data["Paper Link"]
     name = data["Name"]
+    name = name.replace(" ", "_")
     bibtex = get_bibtex(link, name)
-    write_up += f"{name} \cite{{{name}}}, "
+    write_up += f"{name.replace('_', ' ')} \cite{{{name}}}, "
     with open(f"custom.bib", "a") as f:
         f.write(bibtex)
 
