@@ -18,7 +18,8 @@ args.add_argument("--schema", type = str, default = 'ar')
 args.add_argument("--type", type = str, default = "zero_shot")
 args.add_argument("--results_path", type = str, default = "static/results_latex")
 args.add_argument("--length", action="store_true")
-
+args.add_argument("--non_browsing", action="store_true")
+args.add_argument("--browsing", action="store_true")
 args = args.parse_args()
 
 # evaluation_subsets = schema[args.schema]['evaluation_subsets']
@@ -61,7 +62,12 @@ def plot_by_length():
     print_table(results, headers)
     
 def plot_by_cost():
-    ids = eval_datasets_ids[args.schema][args.eval]
+    ids = []
+    if args.schema == 'all':
+        for lang in ['ar', 'en', 'jp', 'fr', 'ru', 'multi']:
+            ids.extend(eval_datasets_ids[lang][args.eval])
+    else:
+        ids = eval_datasets_ids[args.schema][args.eval]
     metric_results = {}
     for json_file in json_files:
         results = json.load(open(json_file))
@@ -81,7 +87,6 @@ def plot_by_cost():
                 results["cost"]["cost"],
             ]
         )
-    
     final_results = {}
     for model_name in metric_results:
         if len(metric_results[model_name]) == len(ids):
@@ -160,6 +165,12 @@ def get_jsons_by_lang():
     json_files_by_language = {}
     for lang in langs:
         for json_file in json_files:
+            if args.non_browsing:
+                if "-browsing" in json_file:
+                    continue
+            if args.browsing:
+                if "-browsing" not in json_file:
+                    continue
             arxiv_id = json_file.split("/")[2].replace("_arXiv", "")
             if arxiv_id in eval_datasets_ids[lang][args.eval]:
                 if lang not in json_files_by_language:
@@ -420,19 +431,17 @@ def plot_subsets(lang = 'ar'):
 
 
 if __name__ == "__main__":
+    print(f"{args.results_path}/{args.type}/**/*.json")
     json_files = glob(f"{args.results_path}/**/{args.type}/*.json")
-    # print(json_files)
+
+    if args.non_browsing:
+        json_files = [file for file in json_files if "-browsing" not in file]
+
     if args.schema == 'all':
         langs = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
     else:
         langs = [args.schema]
-            
-    # if args.models != "all":
-    #     json_files = [
-    #         file
-    #         for file in json_files
-    #         if any(model.lower() in file.lower() for model in args.models.split(","))
-    #     ]
+
     if args.type == 'few_shot':
         json_files = glob(f"{args.results_path}/**/zero_shot/*.json")
         plot_few_shot(lang=args.schema)
