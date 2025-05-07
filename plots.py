@@ -182,11 +182,31 @@ def get_jsons_by_lang():
     #     else:
     #         assert len(eval_datasets_ids[lang][args.eval]) == 5
     return json_files_by_language
-
+def remap_names(model_name):
+    if "-browsing" in model_name:
+        browsing = " Browsing"
+    else:
+        browsing = ""
+    model_name = model_name.replace("-browsing", "")
+    if model_name == "google_gemini-2.5-pro-preview-03-25":
+        model_name = "Gemini 2.5 Pro" 
+    elif model_name == "qwen_qwen-2.5-72b-instruct":
+        model_name = "Qwen 2.5 72B"
+    elif model_name == "deepseek_deepseek-chat-v3-0324":
+        model_name = "DeepSeek V3"
+    elif model_name == "meta-llama_llama-4-maverick":
+        model_name = "Llama 4 Maverick"
+    elif model_name == "openai_gpt-4o":
+        model_name = "GPT 4o"
+    elif model_name == "anthropic_claude-3.5-sonnet":
+        model_name = "Claude 3.5 Sonnet"
+    elif "google_gemma-3-27b-it" in model_name:
+        model_name = "Gemma 3 27B"
+    return model_name + browsing
 def plot_langs():
     json_files_by_language = get_jsons_by_lang()
     langs = list(json_files_by_language.keys())
-    headers = [ "MODEL"] + langs + ["AVERAGE"]
+    headers = [ "Model"] + langs  + ["Average"] + ["Weighted Average"]
     metric_results = {}
     use_annotations_paper = args.use_annotations_paper
     
@@ -235,16 +255,22 @@ def plot_langs():
     results = []
     for model_name in final_results:
         per_model_results = []
+        weighted_average = 0
+        total_length = 0
         for lang in langs:
             if lang in final_results[model_name]:
                 per_model_results.append(100 *sum(final_results[model_name][lang])/len(final_results[model_name][lang]))
+                weighted_average += 100 * sum(final_results[model_name][lang])
+                total_length += len(final_results[model_name][lang])
             else:
                 per_model_results.append(0)
+        weighted_average /= total_length
+        final_results[model_name]["Weighted Average"] = weighted_average
         
         assert len(per_model_results) == len(langs)
-        results.append([model_name] +per_model_results+ [np.mean(per_model_results, axis=0).tolist()])
-    for r in results:
-        assert(len(r)) == len(langs)+2, r
+        results.append([remap_names(model_name)] +per_model_results+ [np.mean(per_model_results, axis=0).tolist()] + [final_results[model_name]["Weighted Average"]])
+    # for r in results:
+    #     assert(len(r)) == len(langs)+2, r
     print_table(results, headers, format = False)
     if use_annotations_paper:
         print(
