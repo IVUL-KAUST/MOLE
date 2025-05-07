@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "FQuAD",
+        "Link": "https://huggingface.co/datasets/fquad",
+        "HF Link": "https://huggingface.co/datasets/fquad",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "FQuAD is a native French Question Answering dataset, with over 60,000 question-answer pairs derived from Wikipedia articles and the SQuAD dataset, created by professional translators.",
+        "Volume": 66041.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "SQuAD"
+        ],
+        "Paper Title": "FQuAD: French Question Answering Dataset",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.182/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Authors": [
+            "Martin d'Hoffschmidt",
+            "Wacim Belblidia",
+            "Tom Brendl\u00e9",
+            "Quentin Heinrich",
+            "Maxime Vidal"
+        ],
+        "Affiliations": [
+            "Illuin Technology",
+            "ETH Zurich"
+        ],
+        "Abstract": "We present FQuAD, a native French Question Answering dataset. The dataset consists of 25k question-answer pairs on a set of 1k Wikipedia articles. The questions and answers were written by native French speakers. The dataset was created by professional translators, who were asked to translate the original SQuAD dataset and then to create new question-answer pairs based on the translated context. We also present a French Question Answering model based on CamemBERT that achieves state-of-the-art results on FQuAD. The dataset is publicly available at https://fquad.illuin.tech/"
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.098655,
+        "input_tokens": 9210,
+        "output_tokens": 542
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.06071"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

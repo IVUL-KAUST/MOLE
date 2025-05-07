@@ -1,0 +1,176 @@
+{
+    "metadata": {
+        "Name": "Arap-Tweet",
+        "Subsets": [
+            {
+                "Name": "Moroccan Arabic Tweets",
+                "Volume": 218182.0,
+                "Unit": "documents",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Algerian Arabic Tweets",
+                "Volume": 218182.0,
+                "Unit": "documents",
+                "Dialect": "Algeria"
+            },
+            {
+                "Name": "Tunisian Arabic Tweets",
+                "Volume": 218182.0,
+                "Unit": "documents",
+                "Dialect": "Tunisia"
+            },
+            {
+                "Name": "Libyan Arabic Tweets",
+                "Volume": 218182.0,
+                "Unit": "documents",
+                "Dialect": "Libya"
+            },
+            {
+                "Name": "Egyptian Arabic Tweets",
+                "Volume": 218182.0,
+                "Unit": "documents",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Sudanese Arabic Tweets",
+                "Volume": 218182.0,
+                "Unit": "documents",
+                "Dialect": "Sudan"
+            },
+            {
+                "Name": "Lebanese Arabic Tweets",
+                "Volume": 109091.0,
+                "Unit": "documents",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "Syrian Arabic Tweets",
+                "Volume": 109091.0,
+                "Unit": "documents",
+                "Dialect": "Syria"
+            },
+            {
+                "Name": "Jordanian Arabic Tweets",
+                "Volume": 109091.0,
+                "Unit": "documents",
+                "Dialect": "Jordan"
+            },
+            {
+                "Name": "Palestinian Arabic Tweets",
+                "Volume": 109091.0,
+                "Unit": "documents",
+                "Dialect": "Palestine"
+            },
+            {
+                "Name": "Iraqi Arabic Tweets",
+                "Volume": 218182.0,
+                "Unit": "documents",
+                "Dialect": "Iraq"
+            },
+            {
+                "Name": "Qatari Arabic Tweets",
+                "Volume": 54545.0,
+                "Unit": "documents",
+                "Dialect": "Qatar"
+            },
+            {
+                "Name": "Kuwaiti Arabic Tweets",
+                "Volume": 54545.0,
+                "Unit": "documents",
+                "Dialect": "Kuwait"
+            },
+            {
+                "Name": "Emirati Arabic Tweets",
+                "Volume": 54545.0,
+                "Unit": "documents",
+                "Dialect": "United Arab Emirates"
+            },
+            {
+                "Name": "Saudi Arabic Tweets",
+                "Volume": 54546.0,
+                "Unit": "documents",
+                "Dialect": "Saudi Arabia"
+            },
+            {
+                "Name": "Yemeni Arabic Tweets",
+                "Volume": 218182.0,
+                "Unit": "documents",
+                "Dialect": "Yemen"
+            }
+        ],
+        "Link": "http://arap.qatar.cmu.edu",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "Arap-Tweet is a large-scale, multi-dialectal Twitter corpus from 11 Arab regions (16 countries), annotated for age categories, gender, and dialectal variety. It was collected using dialect-specific keywords and location validation via Twitter API, intended for author profiling and NLP tool development for Arabic.",
+        "Volume": 2400000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Hamad Bin Khalifa University",
+            "Carnegie Mellon University Qatar"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age and Language Variety Identification",
+        "Paper Link": "Not specified in the provided text.",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "language identification",
+            "gender identification"
+        ],
+        "Venue Title": "Not specified in the provided text.",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Wajdi Zaghouani",
+            "Anis Charfi"
+        ],
+        "Affiliations": [
+            "College of Humanities and Social Sciences, Hamad Bin Khalifa University, Qatar",
+            "Information Systems Program, Carnegie Mellon University Qatar"
+        ],
+        "Abstract": "In this paper, we present Arap-Tweet, which is a large-scale and multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world representing the major Arabic dialectal varieties. To build this corpus, we collected data from Twitter and we provided a team of experienced annotators with annotation guidelines that they used to annotate the corpus for age categories, gender, and dialectal variety. During the data collection effort, we based our search on distinctive keywords that are specific to the different Arabic dialects and we also validated the location using Twitter API. In this paper, we report on the corpus data collection and annotation efforts. We also present some issues that we encountered during these phases. Then, we present the results of the evaluation performed to ensure the consistency of the annotation. The provided corpus will enrich the limited set of available language resources for Arabic and will be an invaluable enabler for developing author profiling tools and NLP tools for Arabic."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8095238095238095
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.09819625,
+        "input_tokens": 7179,
+        "output_tokens": 1266
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1808.07674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

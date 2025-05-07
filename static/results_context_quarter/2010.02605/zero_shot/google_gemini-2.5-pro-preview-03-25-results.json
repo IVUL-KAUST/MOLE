@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "DaNetQA",
+        "Link": "https://github.com/PragmaticsLab/DaNetQA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "DaNetQA is a Russian yes/no question answering dataset. Each question is paired with a Wikipedia paragraph and an answer derived from it. The task is to predict a binary (yes/no) answer given the question and paragraph.",
+        "Volume": 12600.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Research University Higher School of Economics",
+            "Sberbank"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "BoolQ"
+        ],
+        "Paper Title": "DaNetQA: a yes/no Question Answering Dataset for the Russian Language",
+        "Paper Link": "https://cs.hse.ru/en/ai/computational-pragmatics/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Lecture Notes in Computer Science",
+        "Venue Type": "conference",
+        "Venue Name": "Springer",
+        "Authors": [
+            "Taisia Glushkova",
+            "Alexey Machnev",
+            "Alena Fenogenova",
+            "Tatiana Shavrina",
+            "Ekaterina Artemova",
+            "Dmitry I. Ignatov"
+        ],
+        "Affiliations": [
+            "National Research University Higher School of Economics, Moscow, Russia",
+            "Sberbank, Moscow, Russia"
+        ],
+        "Abstract": "DaNetQA, a new  question-answering corpus, follows BoolQ~cite{clark2019boolq} design: it comprises natural yes/no questions. Each question is paired with a paragraph from Wikipedia and an answer, derived from the paragraph. The task is to take both the question  and a paragraph as input and come up with a yes/no answer, i.e. to produce a binary output. In this paper, we present a reproducible approach to DaNetQA creation and investigate transfer learning methods for task and language transferring. For task transferring we leverage three similar sentence modelling tasks: 1) a corpus of paraphrases, Paraphraser, 2) an NLI task, for which we use the Russian part of XNLI, 3) another question answering task, SberQUAD. For language transferring we use English to Russian translation together with multilingual language fine-tuning."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.08627375,
+        "input_tokens": 4899,
+        "output_tokens": 611
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02605"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

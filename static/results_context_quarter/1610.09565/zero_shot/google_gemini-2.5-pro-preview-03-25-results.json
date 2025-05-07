@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Ar-En Transliteration Dataset",
+        "Subsets": [],
+        "Link": "https://github.com/google/seq2seq-transliteration",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "An open-source Arabic to English transliteration dataset of 16,500 proper noun pairs. It was released with sequence-to-sequence models for the transliteration task and includes train, development, and test splits.",
+        "Volume": 16500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google"
+        ],
+        "Derived From": [],
+        "Paper Title": "Sequence-to-sequence neural network models for transliteration",
+        "Paper Link": "https://aclanthology.org/D16-1131/",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "transliteration"
+        ],
+        "Venue Title": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Mihaela Rosca",
+            "Thomas Breuel"
+        ],
+        "Affiliations": [
+            "Google Zurich",
+            "Google Mountain View, CA"
+        ],
+        "Abstract": "Transliteration is a key component of machine translation systems and software internationalization. This paper demonstrates that neural sequence-to-sequence models obtain state of the art or close to state of the art results on existing datasets. In an effort to make machine transliteration accessible, we open source a new Arabic to English transliteration dataset and our trained models."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.06286625,
+        "input_tokens": 4624,
+        "output_tokens": 459
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.09565"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

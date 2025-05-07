@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "MGB-3",
+        "Subsets": [
+            {
+                "Name": "MGB-3 Egyptian dialectal training data",
+                "Volume": 5.0,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            }
+        ],
+        "Link": "http://www.mgb-challenge.org/workshop.html",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "Egypt",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "Arabic speech dataset featuring 5 hours of Egyptian dialectal training data from TV shows, used in the MGB-3 speech recognition and dialect identification challenge.",
+        "Volume": 5.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "MGB Challenge"
+        ],
+        "Derived From": [],
+        "Paper Title": "MGB-3 Arabic Challenge: System Descriptions and Overview",
+        "Paper Link": "http://www.mgb-challenge.org/workshop.html",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "dialect identification"
+        ],
+        "Venue Title": "MGB Challenge Workshop",
+        "Venue Type": "workshop",
+        "Venue Name": "MGB Challenge Workshop",
+        "Authors": [
+            "Not specified in provided text"
+        ],
+        "Affiliations": [],
+        "Abstract": "Abstract not available in the provided text."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.07364,
+        "input_tokens": 6089,
+        "output_tokens": 399
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

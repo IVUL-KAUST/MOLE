@@ -1,0 +1,164 @@
+{
+    "metadata": {
+        "Name": "PADIA",
+        "Subsets": [
+            {
+                "Name": "Algerian Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Algeria"
+            },
+            {
+                "Name": "Egyptian Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Emirati Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "United Arab Emirates"
+            },
+            {
+                "Name": "Iraqi Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Iraq"
+            },
+            {
+                "Name": "Jordanian Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Jordan"
+            },
+            {
+                "Name": "Kuwaiti Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Kuwait"
+            },
+            {
+                "Name": "Lebanese Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "Libyan Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Libya"
+            },
+            {
+                "Name": "Moroccan Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Palestinian Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Palestine"
+            },
+            {
+                "Name": "Saudi Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Saudi Arabia"
+            },
+            {
+                "Name": "Syrian Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Syria"
+            },
+            {
+                "Name": "Tunisian Arabic",
+                "Volume": 1000000,
+                "Unit": "sentences",
+                "Dialect": "Tunisia"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/rbhmid/PADIA",
+        "HF Link": "https://huggingface.co/datasets/rbhmid/PADIA",
+        "License": "CC BY 4.0",
+        "Year": 2024,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles",
+            "social media",
+            "captions",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "PADIA is a large-scale, multi-domain, parallel dataset for Dialectal Arabic (DA) machine translation. It covers 13 Arabic dialects, each paired with Modern Standard Arabic (MSA), containing 1 million sentence pairs per dialect. Data was translated and validated by native speakers.",
+        "Volume": 13000000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "SMARTILAB, EMSI"
+        ],
+        "Derived From": [],
+        "Paper Title": "PADIA: A Large-Scale Multi-Domain Parallel Dialectal Arabic Dataset for Machine Translation",
+        "Paper Link": "https://arxiv.org/abs/2402.01001",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "dialect identification",
+            "cross-lingual information retrieval",
+            "sentiment analysis"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Abderrahim El Boukkouri",
+            "Abdelkader El Mahdaouy",
+            "Ismail El Kassmi",
+            "Abdellah El Mekki",
+            "Mohamed El Marraki",
+            "Hassan Satori"
+        ],
+        "Affiliations": [
+            "SMARTILAB, EMSI, Rabat, Morocco"
+        ],
+        "Abstract": "The rapid proliferation of online content has led to an increasing demand for effective machine translation (MT) systems, particularly for low-resource language pairs like Dialectal Arabic (DA) and Modern Standard Arabic (MSA). Despite the growing need, the development of robust DA-MSA MT models has been hampered by the scarcity of large-scale, high-quality parallel corpora. To address this gap, we introduce PADIA, a novel PArallel DIalectal Arabic dataset. PADIA is a large-scale, multi-domain, parallel dataset covering 13 Arabic dialects: Algerian, Egyptian, Emirati, Iraqi, Jordanian, Kuwaiti, Lebanese, Libyan, Moroccan, Palestinian, Saudi, Syrian, and Tunisian. It contains 1 million sentence pairs for each dialect, where each pair consists of a DA sentence and its MSA equivalent. The DA sentences were translated from MSA by native speakers and subsequently validated through a meticulous process to ensure quality and accuracy. We demonstrate the utility of PADIA by training baseline NMT models for all 26 translation directions (DA-MSA and MSA-DA) and evaluating their performance using BLEU and COMET scores. The experimental results highlight the effectiveness of PADIA in building robust MT systems for Arabic dialects. The dataset is publicly available and aims to foster further research in Arabic NLP, particularly in DA machine translation and other related tasks such as dialect identification, cross-lingual information retrieval, and sentiment analysis."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.38095238095238093
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.09254375,
+        "input_tokens": 3614,
+        "output_tokens": 1275
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

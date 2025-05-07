@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "AR-EN Transliteration",
+        "Subsets": [
+            {
+                "Name": "AR-EN",
+                "Volume": 15898.0,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://github.com/googlei18n/transliteration",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2016,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "An open-source Arabic to English transliteration dataset containing 15,898 pairs of proper names extracted from Wikipedia titles, used for developing sequence-to-sequence transliteration models.",
+        "Volume": 15898.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "Sequence-to-sequence neural network models for transliteration",
+        "Paper Link": "https://aclanthology.org/D16-1125/",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "transliteration"
+        ],
+        "Venue Title": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Authors": [
+            "Mihaela Rosca",
+            "Thomas Breuel"
+        ],
+        "Affiliations": [
+            "Google Zurich",
+            "Google Mountain View, CA"
+        ],
+        "Abstract": "Transliteration is a key component of machine translation systems and software internationalization. This paper demonstrates that neural sequence-to-sequence models obtain state of the art or close to state of the art results on existing datasets. In an effort to make machine transliteration accessible, we open source a new Arabic to English transliteration dataset and our trained models."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7619047619047619
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.06999,
+        "input_tokens": 5750,
+        "output_tokens": 515
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.09565"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

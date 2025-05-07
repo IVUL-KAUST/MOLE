@@ -1,0 +1,111 @@
+{
+    "metadata": {
+        "Name": "Arabic MGB-3",
+        "Subsets": [
+            {
+                "Name": "ADI-Egyptian",
+                "Volume": 2.0,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "ADI-Levantine",
+                "Volume": 2.0,
+                "Unit": "hours",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "ADI-NorthAfrican",
+                "Volume": 2.0,
+                "Unit": "hours",
+                "Dialect": "North Africa"
+            },
+            {
+                "Name": "ADI-Gulf",
+                "Volume": 2.0,
+                "Unit": "hours",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "ADI-MSA",
+                "Volume": 2.0,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "http://www.mgb-challenge.org",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "Egypt",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling",
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "Arabic MGB-3 is a dataset for speech recognition in Egyptian Arabic, sourced from YouTube videos across seven genres. It totals 16 hours for ASR. The MGB-3 challenge also included an Arabic Dialect Identification task with 2 hours of audio for Egyptian, Levantine, North African, Gulf, and MSA dialects.",
+        "Volume": 16.0,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Qatar Computing Research Institute, HBKU",
+            "Centre for Speech Technology Research, University of Edinburgh"
+        ],
+        "Derived From": [],
+        "Paper Title": "Speech Recognition Challenge in the Wild: Arabic MGB-3",
+        "Paper Link": "http://www.mgb-challenge.org/workshop.html",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "dialect identification"
+        ],
+        "Venue Title": "Third Arabic Multi-Genre Broadcast (MGB-3) Challenge Workshop",
+        "Venue Type": "workshop",
+        "Venue Name": "IEEE Automatic Speech Recognition and Understanding Workshop (ASRU) 2017",
+        "Authors": [
+            "Ahmed Ali",
+            "Stephan Vogel",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "Centre for Speech Technology Research, University of Edinburgh, UK"
+        ],
+        "Abstract": "This paper describes the Arabic MGB-3 Challenge -- Arabic Speech Recognition in the Wild. Unlike last year's Arabic MGB-2 Challenge, for which the recognition task was based on more than 1,200 hours broadcast TV news recordings from Aljazeera Arabic TV programs, MGB-3 emphasises dialectal Arabic using a multi-genre collection of Egyptian YouTube videos. Seven genres were used for the data collection: comedy, cooking, family/kids, fashion, drama, sports, and science (TEDx). A total of 16 hours of videos, split evenly across the different genres, were divided into adaptation, development and evaluation data sets. The Arabic MGB-Challenge comprised two tasks: A) Speech transcription, evaluated on the MGB-3 test set, along with the 10 hour MGB-2 test set to report progress on the MGB-2 evaluation;  B) Arabic dialect identification, introduced this year in order to distinguish between four major Arabic dialects -- Egyptian, Levantine, North African, Gulf, as well as Modern Standard Arabic. Two hours of audio per dialect were released f"
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.08516,
+        "input_tokens": 8732,
+        "output_tokens": 888
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

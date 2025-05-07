@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "Enhanced Shamela Corpus",
+        "Subsets": [],
+        "Link": "http://kitab-project.org/kitab/index.jsp",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books",
+            "news articles",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "An enhanced version of the Shamela corpus, a large (815 million words) Arabic collection of Islamicate literary texts. Enhancements include text reuse detection and automatic text dating.",
+        "Volume": 815000000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "KITAB Project"
+        ],
+        "Derived From": [
+            "Shamela corpus"
+        ],
+        "Paper Title": "Information not available in the provided snippet.",
+        "Paper Link": "Information not available in the provided snippet.",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fake news detection",
+            "text generation"
+        ],
+        "Venue Title": "Information not available in the provided snippet.",
+        "Venue Type": "preprint",
+        "Venue Name": "Information not available in the provided snippet.",
+        "Authors": [
+            "Information not available in the provided snippet."
+        ],
+        "Affiliations": [
+            "Information not available in the provided snippet."
+        ],
+        "Abstract": "Information not available in the provided snippet."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0861975,
+        "input_tokens": 5561,
+        "output_tokens": 395
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
