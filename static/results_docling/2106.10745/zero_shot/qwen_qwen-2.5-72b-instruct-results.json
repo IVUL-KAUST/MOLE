@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "Calliar",
+        "Subsets": [],
+        "Link": "https://github.com/ARBML/Calliar",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "An online dataset for Arabic calligraphy that consists of 2,500 sentences and more than 40,000 strokes, annotated for stroke, character, word, and sentence level prediction.",
+        "Volume": 2500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "King Fahd University of Petroleum and Minerals"
+        ],
+        "Derived From": [],
+        "Paper Title": "CALLIAR: AN ONLINE HANDWRITTEN DATASET FOR ARABIC CALLIGRAPHY",
+        "Paper Link": "https://arxiv.org/abs/2106.10745",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "meter classification",
+            "text generation"
+        ],
+        "Venue Title": "CALLIAR: AN ONLINE HANDWRITTEN DATASET FOR ARABIC CALLIGRAPHY",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Zaid Alyafeai",
+            "Maged S. Al-shaibani",
+            "Mustafa Ghaleb",
+            "Yousif Ahmed Al-Wajih"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia 31261",
+            "Department of Systems Engineering, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia 31261"
+        ],
+        "Abstract": "Calligraphy is an essential part of the Arabic heritage and culture. It has been used in the past for the decoration of houses and mosques. In this paper, we illustrate our approach for the collection and annotation of an online dataset for Arabic calligraphy called Calliar that consists of 2,500 sentences. Calliar is annotated for stroke, character, word and sentence level prediction."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00167154,
+        "input_tokens": 11559,
+        "output_tokens": 497
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10745"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "POLYGLOT-NER",
+        "Subsets": [],
+        "Link": "http://nlp.stanford.edu/software/CRF-NER.shtml",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2013,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A multilingual NER system built using Wikipedia and Freebase, trained on 40 languages without language-specific resources.",
+        "Volume": 40.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stony Brook University"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Freebase"
+        ],
+        "Paper Title": "POLYGLOT-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "http://nlp.stanford.edu/software/CRF-NER.shtml",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of CoNLL",
+        "Venue Type": "conference",
+        "Venue Name": "ACL",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Bryan Perozzi",
+            "Vivek Kulkarni",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Department of Computer Science Stony Brook University"
+        ],
+        "Abstract": "The increasing diversity of languages used on the web introduces a new level of complexity to Information Retrieval (IR) systems. We can no longer assume that textual content is written in one language or even the same language family. Our method learns distributed word representations (word embeddings) which encode semantic and syntactic features of words in each language. Then, we automatically generate datasets from Wikipedia link structure and Freebase attributes. Finally, we apply two preprocessing stages (oversampling and exact surface form matching) which do not require any linguistic expertise."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00214071,
+        "input_tokens": 15943,
+        "output_tokens": 465
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

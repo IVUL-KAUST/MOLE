@@ -1,0 +1,115 @@
+{
+    "metadata": {
+        "Name": "Humanity's Last Exam (HLE)",
+        "Link": "https://lastexam.ai",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "captions",
+            "TV Channels",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "HUMANITY'S LAST EXAM (HLE) is a multi-modal benchmark consisting of 2,500 extremely challenging questions across various academic subjects, designed to test the limits of large language models.",
+        "Volume": 2500.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Scale AI",
+            "Center for AI Safety"
+        ],
+        "Derived From": [],
+        "Paper Title": "Humanity's Last Exam: A Multi-Modal Benchmark at the Frontier of Human Knowledge",
+        "Paper Link": "https://arxiv.org/abs/2412.04604",
+        "Tokenized": false,
+        "Host": "CodaLab",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "question answering"
+        ],
+        "Venue Title": "Humanity's Last Exam: A Multi-Modal Benchmark at the Frontier of Human Knowledge",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Long Phan",
+            "Alice Gatti",
+            "Ziwen Han",
+            "Nathaniel Li",
+            "Josephina Hu",
+            "Hugh Zhang",
+            "Chen Bo Calvin Zhang",
+            "Mohamed Shaaban",
+            "John Ling",
+            "Sean Shi",
+            "Michael Choi",
+            "Anish Agrawal",
+            "Arnav Chopra",
+            "Adam Khoja",
+            "Ryan Kim",
+            "Richard Ren",
+            "Jason Hausenloy",
+            "Oliver Zhang",
+            "Mantas Mazeika",
+            "Summer Yue",
+            "Alexandr Wang",
+            "Dan Hendrycks"
+        ],
+        "Affiliations": [
+            "Center for AI Safety",
+            "Scale AI",
+            "Stanford University",
+            "University of Cambridge",
+            "University of Oxford",
+            "Princeton University",
+            "Carnegie Mellon University",
+            "University of Illinois Urbana-Champaign",
+            "University of Pennsylvania",
+            "Vrije Universiteit Brussel",
+            "University of Chicago",
+            "University of California, Berkeley",
+            "University of Michigan",
+            "University of Toronto",
+            "University of Washington",
+            "ETH Z\u00fcrich",
+            "Google DeepMind",
+            "Harvard University",
+            "Massachusetts Institute of Technology",
+            "University of Sao Paulo"
+        ],
+        "Abstract": "Benchmarks are important tools for tracking the rapid advancements in large language model (LLM) capabilities. However, benchmarks are not keeping pace in difficulty: LLMs now achieve over 90% accuracy on popular benchmarks like MMLU, limiting informed measurement of state-of-the-art LLM capabilities. In response, we introduce HUMANITY'S LAST EXAM (HLE), a multi-modal benchmark at the frontier of human knowledge, designed to be the final closed-ended academic benchmark of its kind with broad subject coverage. HLE consists of 2,500 questions across dozens of subjects, including mathematics, humanities, and the natural sciences. HLE is developed globally by subject-matter experts and consists of multiple-choice and short-answer questions suitable for automated grading. Each question has a known solution that is unambiguous and easily verifiable, but cannot be quickly answered via internet retrieval."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00544673,
+        "input_tokens": 36148,
+        "output_tokens": 742
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.14249"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

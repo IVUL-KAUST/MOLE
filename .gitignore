@@ -12,3 +12,5 @@ __pycache__
 pages/__pycache__/*.pyc
 static/**/**/**/paper_text.txt
 custom.bib
+
+.vscode

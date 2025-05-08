@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "JaFIn",
+        "Link": "https://github.com/tatsu-lab/stanford_alpaca",
+        "HF Link": "https://huggingface.co/datasets/tatsu-lab/JaFIn",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "JaFIn is a Japanese financial instruction dataset manually constructed from multiple data sources, including Japanese government websites and Wikipedia, to enable instruction tuning for large language models in the financial domain.",
+        "Volume": 1490.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Hokkaido University",
+            "The University of Tokyo"
+        ],
+        "Derived From": [
+            "government websites",
+            "Wikipedia"
+        ],
+        "Paper Title": "JaFIn: Japanese Financial Instruction Dataset",
+        "Paper Link": "https://arxiv.org/abs/2307.09288",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "information retrieval",
+            "question answering"
+        ],
+        "Venue Title": "IEEE International Conference on Big Data",
+        "Venue Type": "conference",
+        "Venue Name": "IEEE BigData 2023",
+        "Authors": [
+            "Kota Tanabe",
+            "Masahiro Suzuki",
+            "Hiroki Sakaji",
+            "Itsuki Noda"
+        ],
+        "Affiliations": [
+            "Faculty of Information Science and Technology Hokkaido University",
+            "School of Engineering The University of Tokyo"
+        ],
+        "Abstract": "We construct an instruction dataset for the large language model (LLM) in the Japanese finance domain. Domain adaptation of language models, including LLMs, is receiving more attention as language models become more popular. This study demonstrates the effectiveness of domain adaptation through instruction tuning. To achieve this, we propose an instruction tuning data in Japanese called JaFIn, the Japanese Financial Instruction Dataset. JaFIn is manually constructed based on multiple data sources, including Japanese government websites, which provide extensive financial knowledge. We then utilize JaFIn to apply instruction tuning for several LLMs, demonstrating that our models specialized in finance have better domain adaptability than the original models. The financial-specialized LLMs created were evaluated using a quantitative Japanese financial benchmark and qualitative response comparisons, showing improved performance over the originals."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00262377,
+        "input_tokens": 18305,
+        "output_tokens": 555
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.09260"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

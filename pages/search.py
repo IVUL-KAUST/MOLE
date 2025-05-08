@@ -15,6 +15,8 @@ import json
 import shutil
 from litellm import completion
 from openai import OpenAI
+from .utils import get_paper_content_from_docling
+
 load_dotenv()
 
 logger = setup_logger()
@@ -277,10 +279,7 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
                         text_pages.append(page.extract_text())
                     paper_text += " ".join(text_pages)
             elif pdf_mode == "docling":
-                from docling.document_converter import DocumentConverter # type: ignore
-                converter = DocumentConverter()
-                result = converter.convert(source_file)
-                paper_text += result.document.export_to_markdown()
+                paper_text = get_paper_content_from_docling(source_file)
             else:
                 raise ValueError(f"Invalid pdf_mode: {pdf_mode}")
         else:
