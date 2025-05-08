@@ -157,21 +157,27 @@ def get_metadatav2(
 
         model_name = model_name.replace("_", "/")
         model_name = model_name.replace("-browsing", "")
-        message = client.chat.completions.create(
-            model=model_name,
-            messages=messages,
-            temperature=0.0,
-        )
+
         
-        try:
-            
+        message = None
+        try: 
+            if "qwen" in model_name and len(paper_text) == 95618:
+                raise Exception("Timeout")
+            else:
+                message = client.chat.completions.create(
+                    model=model_name,
+                    messages=messages,
+                    temperature=0.0,
+                )
             response =  message.choices[0].message.content
             predictions = read_json(response)
             cost = get_cost(message)
         except json.JSONDecodeError as e:
             error = str(e)  
         except Exception as e:
-            if message.choices is None:
+            if message is None:
+                error = "Timeout"
+            elif message.choices is None:
                 error = message.error["message"]
             else:
                 error = str(e)
