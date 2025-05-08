@@ -1,45 +1,45 @@
 {
-    "Name": "frInformationRetrieval",
-    "Link": "https://github.com/camillelaurent/frInformationRetrieval",
-    "HF Link": "",
-    "License": "MPL-2.0",
-    "Year": 2010,
+    "Name": "frSpeechRecognition",
+    "Link": "https://github.com/camillelaurent/frSpeechRecognition",
+    "HF Link": "https://huggingface.co/datasets/NVKU/frSpeechRecognition",
+    "License": "GPL-2.0",
+    "Year": 2019,
     "Language": "fr",
     "Domain": [
-        "commentary"
+        "captions"
     ],
     "Form": "text",
     "Collection Style": [
-        "LLM generated"
+        "human annotation"
     ],
-    "Description": "frInformationRetrieval is a information retrieval dataset, that contains 6229.0 sentences",
-    "Volume": 6229.0,
-    "Unit": "sentences",
+    "Description": "frSpeechRecognition is a speech recognition dataset, that contains 4457.0 hours",
+    "Volume": 4457.0,
+    "Unit": "hours",
     "Ethical Risks": "Low",
     "Provider": [
-        ""
+        "NVKU"
     ],
     "Derived From": [],
-    "Paper Title": "frInformationRetrieval: A information retrieval dataset for fr",
+    "Paper Title": "frSpeechRecognition: A speech recognition dataset for fr",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "information retrieval"
+        "speech recognition"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
         "Camille Laurent",
-        "Sophie Dubois"
+        "Louis Dupont"
     ],
     "Affiliations": [
-        "\u00c9cole Polytechnique",
-        "Sorbonne University"
+        "Universit\u00e9 de Bordeaux",
+        "Universit\u00e9 de Lyon"
     ],
     "Abstract": ""
 }

@@ -1,9 +1,9 @@
 {
-    "Name": "ruGenderIdentification",
-    "Link": "https://github.com/olgasokolova/ruGenderIdentification",
+    "Name": "ruMultipleChoiceQuestionAnswering",
+    "Link": "https://github.com/ivanpetrov/ruMultipleChoiceQuestionAnswering",
     "HF Link": "",
-    "License": "CC BY-NC 4.0",
-    "Year": 2020,
+    "License": "LGPL-3.0",
+    "Year": 2011,
     "Language": "ru",
     "Domain": [
         "news articles"
@@ -12,34 +12,34 @@
     "Collection Style": [
         "LLM generated"
     ],
-    "Description": "ruGenderIdentification is a gender identification dataset, that contains 7512.0 sentences",
-    "Volume": 7512.0,
+    "Description": "ruMultipleChoiceQuestionAnswering is a multiple choice question answering dataset, that contains 3036.0 sentences",
+    "Volume": 3036.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        ""
+        "XVVY"
     ],
     "Derived From": [],
-    "Paper Title": "ruGenderIdentification: A gender identification dataset for ru",
+    "Paper Title": "ruMultipleChoiceQuestionAnswering: A multiple choice question answering dataset for ru",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "gender identification"
+        "multiple choice question answering"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Olga Sokolova",
+        "Ivan Petrov",
         "Natalia Smirnova"
     ],
     "Affiliations": [
         "Novosibirsk State University",
-        "Kazan Federal University"
+        "Saint Petersburg Polytechnic University"
     ],
     "Abstract": ""
 }

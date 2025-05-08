@@ -1,0 +1,85 @@
+{
+    "Name": "multiLanguageIdentification",
+    "Link": "https://github.com/emilycarter/multiLanguageIdentification",
+    "HF Link": "",
+    "License": "CC BY-NC-ND 4.0",
+    "Year": 2022,
+    "Language": [
+        "Bengali",
+        "Indonesian",
+        "Chinese",
+        "Thai",
+        "Polish"
+    ],
+    "Domain": [
+        "captions",
+        "social media",
+        "web pages"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "crawling"
+    ],
+    "Description": "multiLanguageIdentification is a language identification dataset, that contains 26597.0 sentences",
+    "Volume": 26597.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "multiLanguageIdentification: A language identification dataset for multi",
+    "Paper Link": "",
+    "Tokenized": false,
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": false,
+    "Tasks": [
+        "language identification"
+    ],
+    "Venue Title": "arXiv",
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Emily Carter",
+        "Sophia Mitchell"
+    ],
+    "Affiliations": [
+        "University of Cambridge",
+        "Harvard University"
+    ],
+    "Abstract": "",
+    "Subsets": [
+        {
+            "Name": "Bengali",
+            "Volume": 7223,
+            "Unit": "sentences",
+            "Language": "Bengali"
+        },
+        {
+            "Name": "Indonesian",
+            "Volume": 1475,
+            "Unit": "sentences",
+            "Language": "Indonesian"
+        },
+        {
+            "Name": "Chinese",
+            "Volume": 3895,
+            "Unit": "sentences",
+            "Language": "Chinese"
+        },
+        {
+            "Name": "Thai",
+            "Volume": 7321,
+            "Unit": "sentences",
+            "Language": "Thai"
+        },
+        {
+            "Name": "Polish",
+            "Volume": 6683,
+            "Unit": "sentences",
+            "Language": "Polish"
+        }
+    ]
+}

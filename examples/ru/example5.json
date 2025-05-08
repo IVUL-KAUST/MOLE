@@ -1,45 +1,45 @@
 {
-    "Name": "ruInstructionTuning",
-    "Link": "https://github.com/dmitryivanov/ruInstructionTuning",
+    "Name": "ruNaturalLanguageInference",
+    "Link": "https://github.com/olgasokolova/ruNaturalLanguageInference",
     "HF Link": "",
-    "License": "MPL-2.0",
-    "Year": 2017,
+    "License": "CC BY-NC-ND 1.0",
+    "Year": 2013,
     "Language": "ru",
     "Domain": [
-        "captions"
+        "social media"
     ],
     "Form": "text",
     "Collection Style": [
-        "human annotation"
+        "manual curation"
     ],
-    "Description": "ruInstructionTuning is a instruction tuning dataset, that contains 572.0 sentences",
-    "Volume": 572.0,
+    "Description": "ruNaturalLanguageInference is a natural language inference dataset, that contains 5132.0 sentences",
+    "Volume": 5132.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
         ""
     ],
     "Derived From": [],
-    "Paper Title": "ruInstructionTuning: A instruction tuning dataset for ru",
+    "Paper Title": "ruNaturalLanguageInference: A natural language inference dataset for ru",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "instruction tuning"
+        "natural language inference"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Dmitry Ivanov",
-        "Olga Sokolova"
+        "Olga Sokolova",
+        "Sergey Volkov"
     ],
     "Affiliations": [
         "Novosibirsk State University",
-        "Moscow State University"
+        "Tomsk Polytechnic University"
     ],
     "Abstract": ""
 }

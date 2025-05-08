@@ -1,45 +1,46 @@
 {
-    "Name": "ruQuestionAnswering",
-    "Link": "https://github.com/dmitryivanov/ruQuestionAnswering",
+    "Name": "ruInformationRetrieval",
+    "Link": "https://github.com/olgasokolova/ruInformationRetrieval",
     "HF Link": "",
-    "License": "CC BY-SA 3.0",
-    "Year": 2015,
+    "License": "CC BY-NC 2.0",
+    "Year": 2025,
     "Language": "ru",
     "Domain": [
-        "public datasets"
+        "wikipedia",
+        "social media"
     ],
     "Form": "text",
     "Collection Style": [
-        "human annotation"
+        "LLM generated"
     ],
-    "Description": "ruQuestionAnswering is a question answering dataset, that contains 3807.0 sentences",
-    "Volume": 3807.0,
+    "Description": "ruInformationRetrieval is a information retrieval dataset, that contains 7525.0 sentences",
+    "Volume": 7525.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        "GFQK"
+        "HPOJ"
     ],
     "Derived From": [],
-    "Paper Title": "ruQuestionAnswering: A question answering dataset for ru",
+    "Paper Title": "ruInformationRetrieval: A information retrieval dataset for ru",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "question answering"
+        "information retrieval"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Dmitry Ivanov",
-        "Sergey Volkov"
+        "Olga Sokolova",
+        "Natalia Smirnova"
     ],
     "Affiliations": [
-        "Novosibirsk State University",
-        "Saint Petersburg Polytechnic University"
+        "Kazan Federal University",
+        "Tomsk Polytechnic University"
     ],
     "Abstract": ""
 }

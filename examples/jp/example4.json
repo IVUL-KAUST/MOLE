@@ -1,45 +1,47 @@
 {
-    "Name": "jpDependencyParsing",
-    "Link": "https://github.com/hinatanaka/jpDependencyParsing",
+    "Name": "jpCross-lingualInformationRetrieval",
+    "Link": "https://github.com/harutotakahashi/jpCross-lingualInformationRetrieval",
     "HF Link": "",
-    "License": "CC BY-NC 2.0",
-    "Year": 2010,
+    "License": "CC BY-SA 4.0",
+    "Year": 2017,
     "Language": "jp",
     "Domain": [
-        "captions"
+        "LLM",
+        "social media"
     ],
     "Form": "text",
     "Collection Style": [
-        "crawling"
+        "human annotation"
     ],
-    "Description": "jpDependencyParsing is a dependency parsing dataset, that contains 5680.0 sentences",
-    "Volume": 5680.0,
+    "Description": "jpCross-lingualInformationRetrieval is a cross-lingual information retrieval dataset, that contains 8602.0 sentences",
+    "Volume": 8602.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
         ""
     ],
     "Derived From": [],
-    "Paper Title": "jpDependencyParsing: A dependency parsing dataset for jp",
+    "Paper Title": "jpCross-lingualInformationRetrieval: A cross-lingual information retrieval dataset for jp",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "dependency parsing"
+        "cross-lingual information retrieval"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Hina Tanaka",
-        "Rina Fujimoto"
+        "Haruto Takahashi",
+        "Souta Yamamoto"
     ],
     "Affiliations": [
-        "Nagoya University",
-        "Osaka University"
+        "Kyoto University",
+        "University of Tokyo"
     ],
-    "Abstract": ""
+    "Abstract": "",
+    "Script": "mixed"
 }

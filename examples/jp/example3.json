@@ -1,45 +1,47 @@
 {
-    "Name": "jpDialectIdentification",
-    "Link": "https://github.com/hinatanaka/jpDialectIdentification",
-    "HF Link": "https://huggingface.co/datasets/JOFB/jpDialectIdentification",
-    "License": "LDC User Agreement",
-    "Year": 2017,
+    "Name": "jpTransliteration",
+    "Link": "https://github.com/hinatanaka/jpTransliteration",
+    "HF Link": "",
+    "License": "CC BY-NC 1.0",
+    "Year": 2013,
     "Language": "jp",
     "Domain": [
-        "TV Channels"
+        "captions",
+        "reviews"
     ],
     "Form": "text",
     "Collection Style": [
-        "human annotation"
+        "crawling"
     ],
-    "Description": "jpDialectIdentification is a dialect identification dataset, that contains 228.0 sentences",
-    "Volume": 228.0,
+    "Description": "jpTransliteration is a transliteration dataset, that contains 1085.0 sentences",
+    "Volume": 1085.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        "JOFB"
+        "QBGA"
     ],
     "Derived From": [],
-    "Paper Title": "jpDialectIdentification: A dialect identification dataset for jp",
+    "Paper Title": "jpTransliteration: A transliteration dataset for jp",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "dialect identification"
+        "transliteration"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
         "Hina Tanaka",
-        "Rina Fujimoto"
+        "Souta Yamamoto"
     ],
     "Affiliations": [
         "Kyoto University",
-        "Osaka University"
+        "Nagoya University"
     ],
-    "Abstract": ""
+    "Abstract": "",
+    "Script": "Katakana"
 }

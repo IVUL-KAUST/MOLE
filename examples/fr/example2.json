@@ -1,44 +1,44 @@
 {
-    "Name": "frDialectIdentification",
-    "Link": "https://github.com/\u00e9milemoreau/frDialectIdentification",
-    "HF Link": "",
-    "License": "CC BY-NC-SA 3.0",
-    "Year": 2016,
+    "Name": "frNaturalLanguageInference",
+    "Link": "https://github.com/camillelaurent/frNaturalLanguageInference",
+    "HF Link": "https://huggingface.co/datasets/BZMH/frNaturalLanguageInference",
+    "License": "BSD",
+    "Year": 2022,
     "Language": "fr",
     "Domain": [
-        "news articles"
+        "web pages"
     ],
     "Form": "text",
     "Collection Style": [
         "human annotation"
     ],
-    "Description": "frDialectIdentification is a dialect identification dataset, that contains 1545.0 sentences",
-    "Volume": 1545.0,
+    "Description": "frNaturalLanguageInference is a natural language inference dataset, that contains 3432.0 sentences",
+    "Volume": 3432.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        ""
+        "BZMH"
     ],
     "Derived From": [],
-    "Paper Title": "frDialectIdentification: A dialect identification dataset for fr",
+    "Paper Title": "frNaturalLanguageInference: A natural language inference dataset for fr",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "dialect identification"
+        "natural language inference"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "\u00c9mile Moreau",
-        "Jean-Pierre Martin"
+        "Camille Laurent",
+        "Louis Dupont"
     ],
     "Affiliations": [
-        "Universit\u00e9 de Lyon",
+        "Sorbonne University",
         "\u00c9cole Polytechnique"
     ],
     "Abstract": ""

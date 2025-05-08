@@ -1,0 +1,64 @@
+{
+    "Name": "multiDependencyParsing",
+    "Link": "https://github.com/sophiamitchell/multiDependencyParsing",
+    "HF Link": "",
+    "License": "CC BY-NC 2.0",
+    "Year": 2020,
+    "Language": [
+        "Finnish",
+        "Bulgarian"
+    ],
+    "Domain": [
+        "public datasets",
+        "books",
+        "social media"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "machine annotation"
+    ],
+    "Description": "multiDependencyParsing is a dependency parsing dataset, that contains 15079.0 sentences",
+    "Volume": 15079.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "multiDependencyParsing: A dependency parsing dataset for multi",
+    "Paper Link": "",
+    "Tokenized": false,
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": false,
+    "Tasks": [
+        "dependency parsing"
+    ],
+    "Venue Title": "arXiv",
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Sophia Mitchell",
+        "James Richardson"
+    ],
+    "Affiliations": [
+        "Stanford University",
+        "Massachusetts Institute of Technology"
+    ],
+    "Abstract": "",
+    "Subsets": [
+        {
+            "Name": "Finnish",
+            "Volume": 8199,
+            "Unit": "sentences",
+            "Language": "Finnish"
+        },
+        {
+            "Name": "Bulgarian",
+            "Volume": 6880,
+            "Unit": "sentences",
+            "Language": "Bulgarian"
+        }
+    ]
+}

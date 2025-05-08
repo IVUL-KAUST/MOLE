@@ -22,11 +22,11 @@
     "Derived From": [],
     "Paper Title": "arSentimentAnalysis: A sentiment analysis dataset for ar",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
         "sentiment analysis"
     ],
