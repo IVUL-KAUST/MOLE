@@ -171,7 +171,17 @@ def has_common(d1, d2, max_diff = 1):
         return True
     else:
         return False
+def get_id_from_path(path):
+    # static/results_context_half/1410.3791/*.json
+    return path.split("/")[2]
 
+def get_metadata_from_id(json_path):
+    id = get_id_from_path(json_path)
+    for path in glob("evals/**/**/*.json", recursive=True):
+        metadata = json.load(open(path, "r"))
+        if id in metadata["Paper Link"]:
+            return metadata
+    return None
 
 def all_same(d1, d2):
     d1 = [d.lower().strip() for d in d1.split(",")]

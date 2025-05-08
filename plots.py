@@ -5,7 +5,7 @@ import argparse
 from constants import eval_datasets_ids, non_browsing_models, schemata
 import numpy as np
 from plot_utils import print_table
-from utils import get_predictions, evaluate_metadata
+from utils import get_predictions, evaluate_metadata, get_metadata_from_id
 
 args = argparse.ArgumentParser()
 args.add_argument("--eval", type=str, default="valid")
@@ -203,6 +203,7 @@ def remap_names(model_name):
     elif "google_gemma-3-27b-it" in model_name:
         model_name = "Gemma 3 27B"
     return model_name + browsing
+
 def plot_langs():
     json_files_by_language = get_jsons_by_lang()
     langs = list(json_files_by_language.keys())
@@ -217,14 +218,7 @@ def plot_langs():
             pred_metadata = results["metadata"]
             if model_name not in metric_results:
                 metric_results[model_name] = {}
-            human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
-            # if 'zero_shot' in human_json_path:
-            #     human_json_path = human_json_path.replace('/zero_shot', '')
-            # else:
-            #     for i in [1,3,5]:
-            #        human_json_path = human_json_path.replace(f'/few_shot/{i}', '') 
-            gold_metadata = json.load(open(human_json_path))["metadata"]
-
+            gold_metadata = get_metadata_from_id(json_file)
             scores = evaluate_metadata(
                 gold_metadata, pred_metadata,
                 schema = lang
@@ -457,7 +451,6 @@ def plot_subsets(lang = 'ar'):
 
 
 if __name__ == "__main__":
-    print(f"{args.results_path}/{args.type}/**/*.json")
     json_files = glob(f"{args.results_path}/**/{args.type}/*.json")
 
     if args.non_browsing:
