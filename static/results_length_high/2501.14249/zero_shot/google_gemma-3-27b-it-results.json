@@ -1,0 +1,98 @@
+{
+    "metadata": {
+        "Name": "Humanity's Last Exam",
+        "Link": "https://lastexam.ai/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "social media",
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "Humanity's Last Exam (HLE) is a benchmark of 2,500 challenging questions across over a hundred subjects, designed to be the final closed-ended academic benchmark. Questions are developed by subject-matter experts and undergo multiple rounds of review.",
+        "Volume": 2500.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Center for AI Safety",
+            "Scale AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "Humanity's Last Exam",
+        "Paper Link": "https://arxiv.org/abs/2501.14249",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "multiple choice question answering",
+            "named entity recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Long Phan",
+            "Alice Gatti",
+            "Ziwen Han",
+            "Nathaniel Li",
+            "Josephina Hu",
+            "Hugh Zhang",
+            "Chen Bo Calvin Zhang",
+            "Mohamed Shaaban",
+            "John Ling",
+            "Sean Shi",
+            "Michael Choi",
+            "Anish Agrawal",
+            "Arnav Chopra",
+            "Adam Khoja",
+            "Ryan Kim",
+            "Richard Ren",
+            "Jason Hausenloy",
+            "Oliver Zhang",
+            "Mantas Mazeika",
+            "Summer Yue",
+            "Alexandr Wang",
+            "Dan Hendrycks"
+        ],
+        "Affiliations": [
+            "Center for AI Safety",
+            "Scale AI"
+        ],
+        "Abstract": "Benchmarks are important tools for tracking the rapid advancements in large language model (LLM) capabilities. However, benchmarks are not keeping pace in difficulty: LLMs now achieve over 90% accuracy on popular benchmarks like MMLU, limiting informed measurement of state-of-the-art LLM capabilities. In response, we introduce fullname{} (name{}), a multi-modal benchmark at the frontier of human knowledge, designed to be the final closed-ended academic benchmark of its kind with broad subject coverage. name{} consists of questioncount{} questions across dozens of subjects, including mathematics, humanities, and the natural sciences. name{} is developed by academics and domain experts, providing a precise measure of capabilities as LLMs continue to improve. We publicly release name{} at https://lastexam.ai."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.8620689655172411,
+    "cost": {
+        "cost": 0.0033423,
+        "input_tokens": 32909,
+        "output_tokens": 644
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.14249"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

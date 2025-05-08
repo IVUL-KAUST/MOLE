@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "JaFIn",
+        "Link": "https://huggingface.co/datasets/ku-nlp/ja-fin-instructions",
+        "HF Link": "https://huggingface.co/datasets/ku-nlp/ja-fin-instructions",
+        "License": "CC BY-SA 4.0",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "TV Channels",
+            "commentary",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "JaFIn is a Japanese financial instruction dataset for LLMs, containing 1,490 samples collected from government websites, financial institutions, and Wikipedia.",
+        "Volume": 1490.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Ministry of Finance Japan",
+            "Japan Pension Service",
+            "Bank of Japan"
+        ],
+        "Derived From": [],
+        "Paper Title": "JaFIn: Japanese Financial Instruction Dataset",
+        "Paper Link": "https://arxiv.org/abs/2403.12373",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "sentiment analysis",
+            "language modeling"
+        ],
+        "Venue Title": "The 2024 Joint International Conference on Computational Language Learning and Natural Language Processing (COLING-NLP 2024)",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Kota Tanabe",
+            "Masahiro Suzuki",
+            "Hiroki Sakaji",
+            "Itsuki Noda"
+        ],
+        "Affiliations": [
+            "Hokkaido University",
+            "The University of Tokyo"
+        ],
+        "Abstract": "This paper introduces JaFIn, a Japanese financial instruction dataset for Large Language Models (LLMs). JaFIn is constructed from multiple data sources including Japanese government websites and is used to fine-tune LLMs for financial domain tasks. The effectiveness of JaFIn is demonstrated through quantitative and qualitative evaluations."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0032052,
+        "input_tokens": 16549,
+        "output_tokens": 465
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.09260"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

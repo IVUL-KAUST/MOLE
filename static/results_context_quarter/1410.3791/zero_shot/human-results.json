@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "POLYGLOT-NER",
+        "Subsets": [],
+        "HF Link": "https://huggingface.co/datasets/rmyeid/polyglot_ner",
+        "Link": "https://huggingface.co/datasets/rmyeid/polyglot_ner",
+        "License": "unknown",
+        "Year": 2014,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "Polyglot-NER A training dataset automatically generated from Wikipedia and Freebase the task of named entity recognition. The dataset contains the basic Wikipedia based training data for 40 languages we have (with coreference resolution) for the task of named entity recognition.",
+        "Volume": 10000144.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stony Brook University"
+        ],
+        "Derived From": [],
+        "Paper Title": "POLYGLOT-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/pdf/1410.3791",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Vivek Kulkarni",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Stony Brook University"
+        ],
+        "Abstract": "The increasing diversity of languages used on the web introduces a new level of complexity to Information Retrieval (IR) systems. We can no longer assume that textual content is written in one language or even the same language family. In this paper, we demonstrate how to build massive multilingual annotators with minimal human expertise and intervention. We describe a system that builds Named Entity Recognition (NER) annotators for 40 major languages using Wikipedia and Freebase. Our approach does not require NER human annotated datasets or language specific resources like treebanks, parallel corpora, and orthographic rules. The novelty of approach lies therein - using only language agnostic techniques, while achieving competitive performance. Our method learns distributed word representations (word embeddings) which encode semantic and syntactic features of words in each language. Then, we automatically generate datasets from Wikipedia link structure and Freebase attributes. Finally, we apply two preprocessing stages (oversampling and exact surface form matching) which do not require any linguistic expertise. Our evaluation is two fold: First, we demonstrate the system performance on human annotated datasets. Second, for languages where no gold-standard benchmarks are available, we propose a new method, distant evaluation, based on statistical machine translation.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "HF Link": 0,
+            "Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Dialect": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 0,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Script": 1,
+            "Tokenized": 1,
+            "Host": 0,
+            "Access": 0,
+            "Cost": 0,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,117 @@
+{
+    "metadata": {
+        "Name": "ARASPIDER",
+        "Subsets": [],
+        "HF Link": "",
+        "Link": "https://github.com/ahmedheakl/AraSpider",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "public datasets",
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "LLM generated",
+            "human annotation"
+        ],
+        "Description": "AraSpider is a translated version of the Spider dataset, which is commonly used for semantic parsing and text-to-SQL generation. The dataset includes 200 databases across 138 domains with 10,181 questions and 5,693 unique complex SQL queries.",
+        "Volume": 10181.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Egypt-Japan University of Science and Technology"
+        ],
+        "Derived From": [
+            "Spider"
+        ],
+        "Paper Title": "ARASPIDER: Democratizing Arabic-to-SQL",
+        "Paper Link": "https://arxiv.org/pdf/2402.07448",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing",
+            "text to SQL"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ahmed Heakl",
+            "Youssef Mohamed",
+            "Ahmed B. Zaky"
+        ],
+        "Affiliations": [
+            "Egypt-Japan University of Science and Technology",
+            "Egypt-Japan University of Science and Technology",
+            "Egypt-Japan University of Science and Technology"
+        ],
+        "Abstract": "The AraSpider dataset is an Arabic version of the Spider dataset, designed for text-to-SQL tasks in natural language processing. Four multilingual translation models were evaluated for translating the Spider dataset from English to Arabic, and two models were tested for their ability to generate SQL queries from Arabic text. The study highlights the effectiveness of back translation strategies, and proposes methodologies for democratizing NLP resources and enhancing collaboration within the Arabic-speaking research community.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "HF Link": 0,
+            "Link": 1,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Dialect": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Script": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2402.07448"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,111 @@
+{
+    "metadata": {
+        "Name": "AceGPT",
+        "Subsets": [],
+        "Link": "https://github.com/FreedomIntelligence/AceGPT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media",
+            "news articles",
+            "books",
+            "wikipedia",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "AceGPT is a large language model tailored for Arabic, addressing the localization issue by incorporating further pre-training, instruction tuning, and RLAIF.",
+        "Volume": 30.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Freedom Intelligence",
+            "Shenzhen International Center for Industrial and Applied Mathematics",
+            "The Chinese University of Hong Kong, Shenzhen",
+            "King Abdullah University of Science and Technology"
+        ],
+        "Derived From": [
+            "LLaMA2",
+            "Arabic text2022",
+            "Slim Pajama"
+        ],
+        "Paper Title": "AceGPT, Localizing Large Language Models in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2309.12053",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "sentiment analysis",
+            "language modeling",
+            "dialect identification"
+        ],
+        "Venue Title": "The 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2023",
+        "Authors": [
+            "Huang Huang",
+            "Fei Yu",
+            "Jianqing Zhu",
+            "Xuening Sun",
+            "Hao Cheng",
+            "Dingjie Song",
+            "Zhihong Chen",
+            "Abdulmohsen Alharthi",
+            "Bang An",
+            "Juncai He",
+            "Ziche Liu",
+            "Zhiyi Zhang",
+            "Junying Chen",
+            "Jianquan Li",
+            "Benyou Wang",
+            "Lian Zhang",
+            "Ruoyu Sun",
+            "Xiang Wan",
+            "Haizhou Li",
+            "Jinchao Xu"
+        ],
+        "Affiliations": [
+            "Shenzhen International Center for Industrial and Applied Mathematics",
+            "The Chinese University of Hong Kong, Shenzhen",
+            "King Abdullah University of Science and Technology",
+            "Shenzhen Research Institute of Big Data"
+        ],
+        "Abstract": "This paper presents AceGPT, a large language model localized for Arabic. It addresses the localization issue by further pre-training with Arabic texts, supervised fine-tuning with native Arabic instructions, and reinforcement learning with AI feedback using a reward model attuned to local culture and values. Comprehensive evaluations show that AceGPT achieves state-of-the-art performance among open Arabic LLMs across various benchmarks."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.42857142857142855
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0065448,
+        "input_tokens": 34478,
+        "output_tokens": 621
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

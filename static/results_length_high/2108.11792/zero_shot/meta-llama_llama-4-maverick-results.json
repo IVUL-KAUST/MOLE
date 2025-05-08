@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "Belgian Statutory Article Retrieval Dataset (BSARD)",
+        "Link": "https://github.com/maastrichtlawtech/bsard",
+        "HF Link": "https://huggingface.co/datasets/antoiloui/bsard",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2021,
+        "Language": "fr",
+        "Domain": [
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset for statutory article retrieval in French, containing 1,100+ legal questions and 22,600+ law articles.",
+        "Volume": 22633.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Droits Quotidiens",
+            "Maastricht University"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Statutory Article Retrieval Dataset in French",
+        "Paper Link": "https://github.com/maastrichtlawtech/bsard",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Antoine Louis",
+            "Gerasimos Spanakis"
+        ],
+        "Affiliations": [
+            "Law & Tech Lab, Maastricht University"
+        ],
+        "Abstract": "This paper presents the Belgian Statutory Article Retrieval Dataset (BSARD), a novel dataset for statutory article retrieval in French. The dataset consists of 1,100+ legal questions posed by Belgian citizens and labeled by legal experts with references to relevant articles from a corpus of 22,600+ Belgian law articles. We benchmark several state-of-the-art retrieval approaches on BSARD and show that fine-tuned dense retrieval models significantly outperform other systems."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9310344827586203,
+    "cost": {
+        "cost": 0.00299883,
+        "input_tokens": 17267,
+        "output_tokens": 419
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.11792"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

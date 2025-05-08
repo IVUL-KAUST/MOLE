@@ -1,0 +1,109 @@
+{
+    "metadata": {
+        "Name": "FQuAD1.1",
+        "Link": "https://fquad.illuin.tech",
+        "HF Link": "https://huggingface.co/datasets/illuin/fquad",
+        "License": "CC BY-NC-SA 3.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "FQuAD is a French Question Answering dataset composed of 10,000 question-answer pairs extracted from news articles. The dataset is designed to be used for training and evaluating question answering models in French.",
+        "Volume": 62003.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "FQuAD1.0"
+        ],
+        "Paper Title": "FQuAD: French Question Answering Dataset",
+        "Paper Link": "https://arxiv.org/pdf/2002.06071",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Martin d'Hoffschmidt",
+            "Wacim Belblidia",
+            "Tom Brendl\u00e9",
+            "Quentin Heinrich",
+            "Maxime Vidal"
+        ],
+        "Affiliations": [
+            "Illuin Technology",
+            "ETH Zurich"
+        ],
+        "Abstract": "We present FQuAD, a French Question Answering dataset composed of 10,000 question-answer pairs extracted from news articles. The dataset is designed to be used for training and evaluating question answering models in French. We provide a detailed analysis of the dataset, including its size, distribution of question types, and difficulty. We also evaluate the performance of several state-of-the-art question answering models on FQuAD. Our results show that FQuAD is a challenging dataset that can be used to benchmark the performance of question answering models in French.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 0,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 0,
+            "Access": 1,
+            "Cost": 0,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.06071"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,122 @@
+{
+    "metadata": {
+        "Name": "Multilingual Amazon Reviews Corpus (MARC)",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 200000,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 200000,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "German",
+                "Volume": 200000,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 200000,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 200000,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 200000,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://registry.opendata.aws/amazon-reviews-ml/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Japanese",
+            "German",
+            "French",
+            "Spanish",
+            "Chinese"
+        ],
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A large-scale collection of Amazon reviews for multilingual text classification in English, Japanese, German, French, Spanish, and Chinese.",
+        "Volume": 1200000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Amazon"
+        ],
+        "Derived From": [
+            "Amazon reviews"
+        ],
+        "Paper Title": "The Multilingual Amazon Reviews Corpus",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.369/",
+        "Tokenized": false,
+        "Host": "Mendeley Data",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "2020 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Phillip Keung",
+            "Yichao Lu",
+            "Gy\u00f6rgy Szarvas",
+            "Noah A. Smith"
+        ],
+        "Affiliations": [
+            "Amazon",
+            "University of Washington",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "We present the Multilingual Amazon Reviews Corpus (MARC), a large-scale collection of Amazon reviews for multilingual text classification. The corpus contains reviews in English, Japanese, German, French, Spanish, and Chinese, which were collected between 2015 and 2019. Each record in the dataset contains the review text, the review title, the star rating, an anonymized reviewer ID, an anonymized product ID, and the coarse-grained product category (e.g., 'books', 'appliances', etc.). The corpus is balanced across the 5 possible star ratings, so each rating constitutes 20% of the reviews in each language. For each language, there are 200,000, 5,000, and 5,000 reviews in the training, development, and test sets, respectively."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0020008,
+        "input_tokens": 9768,
+        "output_tokens": 726
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02573"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

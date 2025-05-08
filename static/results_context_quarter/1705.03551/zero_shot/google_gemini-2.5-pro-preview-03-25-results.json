@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "TriviaQA",
+        "Link": "http://nlp.cs.washington.edu/triviaqa/",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2017,
+        "Language": "en",
+        "Domain": [
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "Large-scale reading comprehension dataset with over 650K question-answer-evidence triples. Questions are authored by trivia enthusiasts, and evidence documents are sourced from Wikipedia and the Web. Includes a human-verified subset and is designed to be challenging.",
+        "Volume": 650000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Washington"
+        ],
+        "Derived From": [],
+        "Paper Title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension",
+        "Paper Link": "https://aclanthology.org/P17-1147/",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Mandar Joshi",
+            "Eunsol Choi",
+            "Daniel S. Weld",
+            "Luke Zettlemoyer"
+        ],
+        "Affiliations": [
+            "University of Washington"
+        ],
+        "Abstract": "This paper introduces TriviaQA, a challenging new dataset for reading comprehension. It contains 95K question-answer pairs authored by trivia enthusiasts. We include on average 6 evidence documents per question, collected from a Wikipedia-based and a web-based corpus, that provide noisy, distant supervision for answering the question. TriviaQA questions are significantly more complex and diverse than existing datasets. For example, 38% of questions require multi-sentence reasoning and 20% require reasoning about lists or tables. We demonstrate that there is a large gap between state-of-the-art methods and human performance on TriviaQA, suggesting significant room for future work. The dataset is available at http://nlp.cs.washington.edu/triviaqa/."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0900775,
+        "input_tokens": 5569,
+        "output_tokens": 547
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.03551"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

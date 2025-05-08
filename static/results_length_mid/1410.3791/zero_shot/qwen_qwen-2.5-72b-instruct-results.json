@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A massive multilingual named entity recognition dataset.",
+        "Volume": 1000000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Rami Al-Rfou"
+        ],
+        "Derived From": [],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://bit.ly/polyglot-ner",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Rami Al-Rfou"
+        ],
+        "Affiliations": [],
+        "Abstract": "We present Polyglot-NER, a large-scale multilingual named entity recognition dataset. The dataset is created by aligning Wikipedia articles across multiple languages and extracting named entities. It covers a wide range of languages and is designed to support research in multilingual NLP tasks such as named entity recognition."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00059217,
+        "input_tokens": 3693,
+        "output_tokens": 356
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

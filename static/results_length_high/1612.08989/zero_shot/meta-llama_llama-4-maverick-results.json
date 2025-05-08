@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "Name": "Shamela",
+        "Subsets": [
+            {
+                "Name": "Hadith Collections",
+                "Volume": 179,
+                "Unit": "documents",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Biographies",
+                "Volume": 377,
+                "Unit": "documents",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Jurisprudence",
+                "Volume": 157,
+                "Unit": "documents",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Popular religious writing",
+                "Volume": 298,
+                "Unit": "documents",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://github.com/OpenArabic/RAWrabica",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2018,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "books",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "A large-scale historical Arabic corpus containing over 6,000 texts and 1 billion words.",
+        "Volume": 1.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Al-Maktaba Al-Shamela",
+            "Leipzig University",
+            "Bar-Ilan University"
+        ],
+        "Derived From": [
+            "Al-Maktaba Al-Shamela"
+        ],
+        "Paper Title": "Shamela: A Large-Scale Historical Arabic Corpus",
+        "Paper Link": "https://arxiv.org/abs/1612.08989",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Yonatan Belinkov",
+            "Alexander Magidow",
+            "Maxim Romanov",
+            "Avi Shmidman",
+            "Moshe Koppel"
+        ],
+        "Affiliations": [
+            "MIT",
+            "University of Rhode Island",
+            "Leipzig University",
+            "Bar-Ilan University",
+            "Dicta"
+        ],
+        "Abstract": "This paper presents the creation of a large-scale historical Arabic corpus, Shamela, which contains over 6,000 texts and 1 billion words. The corpus is designed to support digital humanities research and NLP applications."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 0.90625,
+    "cost": {
+        "cost": 0.0022626,
+        "input_tokens": 11087,
+        "output_tokens": 554
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

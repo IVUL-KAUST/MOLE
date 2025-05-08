@@ -1,0 +1,70 @@
+{
+    "metadata": {
+        "Name": "Arabic Offensive Tweets",
+        "Subsets": [],
+        "Link": "https://example.com/dataset/link_not_specified",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "An Arabic dataset of tweets collected using emojis as anchors, manually annotated for offensive content, fine-grained hate speech, vulgarity, and violence. It is described as the largest of its kind.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Emoji-driven Collection and Analysis of Arabic Offensive Tweets",
+        "Paper Link": "https://example.com/paper/link_not_specified",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "Not specified in text",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Anonymous"
+        ],
+        "Affiliations": [],
+        "Abstract": "We introduce a generic, language-independent method to collect a large percentage of offensive and hate tweets regardless of their topics or genres. We harness the extralinguistic information embedded in the emojis to collect a large number of offensive tweets. We apply the proposed method on Arabic tweets and compare it with English tweets -- analysing key cultural differences. We observed a constant usage of these emojis to represent offensiveness throughout different timespans on Twitter. We manually annotate and publicly release the largest Arabic dataset for offensive, fine-grained hate speech, vulgar and violence content. Furthermore, we benchmark the dataset for detecting offensiveness and hate speech using different transformer architectures and perform in-depth linguistic analysis. We evaluate our models on external datasets -- a Twitter dataset collected using a completely different method, and a multi-platform dataset containing comments from Twitter, YouTube and Facebook, for assessing generalization capability. Competitive results on these datasets suggest that the data collected using our method captures universal characteristics of offensive language."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.09557125,
+        "input_tokens": 7794,
+        "output_tokens": 521
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

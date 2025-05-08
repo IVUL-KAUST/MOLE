@@ -1,0 +1,118 @@
+{
+    "metadata": {
+        "Name": "FLORES-101",
+        "Subsets": [],
+        "HF Link": "https://hf.co/datasets/gsarti/flores_101",
+        "Link": "https://github.com/facebookresearch/flores/tree/main/previous_releases/flores101",
+        "License": "CC BY-SA 4.0",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia",
+            "books",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "The FLORES-101 evaluation benchmark consists of 3001 sentences extracted from English Wikipedia and covers various topics and domains. These sentences have been translated into 101 languages by professional translators through a carefully controlled process.",
+        "Volume": 3001.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook"
+        ],
+        "Derived From": [],
+        "Paper Title": "The FLORES-101 Evaluation Benchmark for Low-Resource and Multilingual Machine Translation",
+        "Paper Link": "https://arxiv.org/pdf/2106.03193",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Naman Goyal",
+            "Cynthia Gao",
+            "Vishrav Chaudhary",
+            "Guillaume Wenzek",
+            "Da Ju",
+            "Sanjan Krishnan",
+            "Marc'Aurelio Ranzato",
+            "Francisco Guzm\u00e1n",
+            "Angela Fan"
+        ],
+        "Affiliations": [
+            "Facebook AI Research"
+        ],
+        "Abstract": "One of the biggest challenges hindering progress in low-resource and multilingual machine translation is the lack of good evaluation benchmarks. Current evaluation benchmarks either lack good coverage of low-resource languages, consider only restricted domains, or are low quality because they are constructed using semi-automatic procedures. In this work, we introduce the FLORES-101 evaluation benchmark, consisting of 3001 sentences extracted from English Wikipedia and covering a variety of different topics and domains. These sentences have been translated in 101 languages by professional translators through a carefully controlled process. The resulting dataset enables better assessment of model quality on the long tail of low-resource languages, including the evaluation of many-to-many multilingual translation systems, as all translations are multilingually aligned. By publicly releasing such a highquality and high-coverage dataset, we hope to foster progress in the machine translation community and beyond.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "HF Link": 0,
+            "Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Dialect": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Script": 1,
+            "Tokenized": 1,
+            "Host": 0,
+            "Access": 0,
+            "Cost": 0,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.03193"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "LLM generated",
+            "machine annotation"
+        ],
+        "Description": "A multilingual named entity recognition dataset covering 40 languages, derived from Wikipedia and Freebase.",
+        "Volume": 0.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stony Brook University"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Freebase"
+        ],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://dl.acm.org/doi/10.1145/2783258.2783380",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+        "Venue Type": "conference",
+        "Venue Name": "KDD '15",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, Stony Brook University"
+        ],
+        "Abstract": "Named entity recognition (NER) is a key component of many natural language processing pipelines. However, most NER systems are developed for English and a few other resource-rich languages. We present Polyglot-NER, a named entity recognition system capable of identifying entities in 40 languages. We achieve this by training a single sequence labeling model jointly on multiple languages using multilingual word embeddings. Our system leverages large amounts of unlabeled data from Wikipedia and Freebase to learn cross-lingual representations. We evaluate our system on standard NER benchmarks for several languages and show that it achieves state-of-the-art performance in many cases, especially for resource-poor languages. We release our models and code to facilitate research in multilingual NER."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0276275,
+        "input_tokens": 3696,
+        "output_tokens": 538
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

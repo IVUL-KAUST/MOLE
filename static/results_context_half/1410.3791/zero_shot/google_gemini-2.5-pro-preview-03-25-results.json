@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 1900,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "A massive multilingual dataset for named entity recognition.",
+        "Volume": 1.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Rami Al-Rfou"
+        ],
+        "Derived From": [],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/1410.3791",
+        "Script": "Arab-Latin",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Rami Al-Rfou"
+        ],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.06596625,
+        "input_tokens": 3638,
+        "output_tokens": 288
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

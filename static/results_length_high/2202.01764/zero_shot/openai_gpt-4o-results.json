@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "JaQuAD",
+        "Link": "https://github.com/SkelterLabsInc/JaQuAD",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "JaQuAD is a Japanese Question Answering Dataset for Machine Reading Comprehension, consisting of 39,696 extractive question-answer pairs on Japanese Wikipedia articles.",
+        "Volume": 39696.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Skelter Labs"
+        ],
+        "Derived From": [],
+        "Paper Title": "JaQuAD: Japanese Question Answering Dataset for Machine Reading Comprehension",
+        "Paper Link": "https://github.com/SkelterLabsInc/JaQuAD",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "ByungHoon So",
+            "Kyuhong Byun",
+            "Kyungwon Kang",
+            "Seongjin Cho"
+        ],
+        "Affiliations": [
+            "Skelter Labs"
+        ],
+        "Abstract": "Question Answering (QA) is a task in which a machine understands a given document and a question to find an answer. Despite impressive progress in the NLP area, QA is still a challenging problem, especially for non-English languages due to the lack of annotated datasets. In this paper, we present the Japanese Question Answering Dataset, JaQuAD, which is annotated by humans. JaQuAD consists of 39,696 extractive question-answer pairs on Japanese Wikipedia articles. We finetuned a baseline model which achieves 78.92% for F1 score and 63.38% for EM on test set. The dataset and our experiments are available at https://github.com/SkelterLabsInc/JaQuAD."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.038395,
+        "input_tokens": 13463,
+        "output_tokens": 473
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.01764"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "Name": "LABR",
+        "Subsets": [],
+        "HF Link": "",
+        "Link": "https://github.com/mohamedadaly/LABR",
+        "License": "GPL-2.0",
+        "Year": 2015,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media",
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large Arabic book review dataset for sentiment analysis",
+        "Volume": 63257.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Cairo University"
+        ],
+        "Derived From": [],
+        "Paper Title": "LABR: A Large Scale Arabic Sentiment Analysis Benchmark",
+        "Paper Link": "https://arxiv.org/pdf/1411.6718",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "review classification",
+            "sentiment analysis"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Mahmoud Nabil",
+            "Mohamed Aly",
+            "Amir F. Atiya"
+        ],
+        "Affiliations": [
+            "Cairo University",
+            "Cairo University",
+            "Cairo University"
+        ],
+        "Abstract": "We introduce LABR, the largest sentiment analysis dataset to-date for the Arabic language. It consists of over 63,000 book reviews, each rated on a scale of 1 to 5 stars. We investigate the properties of the dataset, and present its statistics. We explore using the dataset for two tasks: (1) sentiment polarity classification; and (2) ratings classification. Moreover, we provide standard splits of the dataset into training, validation and testing, for both polarity and ratings classification, in both balanced and unbalanced settings. We extend our previous work by performing a comprehensive analysis on the dataset. In particular, we perform an extended survey of the different classifiers typically used for the sentiment polarity classification problem. We also construct a sentiment lexicon from the dataset that contains both single and compound sentiment words and we explore its effectiveness. We make the dataset and experimental details publicly available.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "HF Link": 0,
+            "Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Dialect": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Script": 1,
+            "Tokenized": 1,
+            "Host": 0,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2015",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1411.6718"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

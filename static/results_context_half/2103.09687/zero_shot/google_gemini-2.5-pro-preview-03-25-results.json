@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "Name": "DODa",
+        "Subsets": [
+            {
+                "Name": "food",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "animals",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "human body",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "health",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "education",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "verb-to-noun correspondences",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "masculine-to-feminine correspondences",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "verb conjugations",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Morocco"
+            }
+        ],
+        "Link": "https://github.com/AissamOu/DODa",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "Morocco",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Darija Open Dataset (DODa) is an open-source collaborative project for Moroccan dialect (Darija) to English translation, containing over 10,000 entries. It includes semantic and syntactic categorization, different spellings, verb-to-noun and masculine-to-feminine correspondences, and verb conjugations.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Independent Researchers"
+        ],
+        "Derived From": [],
+        "Paper Title": "Moroccan Dialect -Darija- Open Dataset",
+        "Paper Link": "Not provided in the text",
+        "Script": "Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "unknown",
+        "Venue Type": "preprint",
+        "Venue Name": "unknown",
+        "Authors": [
+            "Aissam Outchakoucht",
+            "Hamza Es-Samaali"
+        ],
+        "Affiliations": [
+            "Independent Researchers"
+        ],
+        "Abstract": "Darija Open Dataset (DODa) is an open-source project for the Moroccan dialect. With more than 10,000 entries DODa is arguably the largest open-source collaborative project for Darija \u21c6 English translation built for Natural Language Processing purposes. In fact, besides semantic categorization, DODa also adopts a syntactic one, presents words under different spellings, offers verb-to-noun and masculine-to-feminine correspondences, contains the conjugation of hundreds of verbs in different tenses, and many other subsets to help researchers better understand and study Moroccan dialect. This data paper presents a description of DODa, its features, how it was collected, as well as a first application in Image Classification using ImageNet labels translated to Darija. This collaborative project is hosted on GitHub platform under MIT's Open-Source license and aims to be a standard resource for researchers, students, and anyone who is interested in Moroccan Dialect."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.04359625,
+        "input_tokens": 5289,
+        "output_tokens": 865
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.09687"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

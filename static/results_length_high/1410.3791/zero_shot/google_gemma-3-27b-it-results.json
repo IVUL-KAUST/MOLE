@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "This paper introduces Polyglot-NER, a massive multilingual named entity recognition dataset. It aims to provide a resource for training and evaluating NER models across a wide range of languages.",
+        "Volume": 0.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google"
+        ],
+        "Derived From": [],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/1410.3791",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "sdm.pdf",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Rami Al-Rfou"
+        ],
+        "Affiliations": [],
+        "Abstract": "This paper introduces Polyglot-NER, a massive multilingual named entity recognition dataset. It aims to provide a resource for training and evaluating NER models across a wide range of languages."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.25,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0005049,
+        "input_tokens": 3696,
+        "output_tokens": 357
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

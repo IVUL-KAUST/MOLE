@@ -65,7 +65,8 @@ if __name__ == "__main__":
                 few_shot = args.few_shot,
                 results_path = args.results_path,
                 pdf_mode = args.pdf_mode,
-                repeat_on_error = args.repeat_on_error
+                repeat_on_error = args.repeat_on_error,
+                context_size = args.context_size
             )
         else:
             model_results = run(
@@ -84,7 +85,8 @@ if __name__ == "__main__":
                 few_shot = args.few_shot,
                 results_path = args.results_path,
                 pdf_mode = args.pdf_mode,
-                repeat_on_error = args.repeat_on_error
+                repeat_on_error = args.repeat_on_error,
+                context_size = args.context_size
             )
 
         for model_name in model_results:

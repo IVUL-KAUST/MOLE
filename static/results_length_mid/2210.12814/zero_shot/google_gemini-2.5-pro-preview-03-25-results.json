@@ -1,0 +1,101 @@
+{
+    "metadata": {
+        "Name": "RuCoLA",
+        "Link": "https://github.com/RussianNLP/RuCoLA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "public datasets",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A Russian corpus for binary linguistic acceptability judgment, containing 9.8k sentences from linguistic literature (in-domain) and 3.6k machine-generated sentences (out-of-domain).",
+        "Volume": 13445.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SberDevices",
+            "ABBYY",
+            "HSE University",
+            "Yandex",
+            "Huawei Noah's Ark Lab"
+        ],
+        "Derived From": [
+            "Tatoeba",
+            "WikiMatrix",
+            "TED",
+            "Yandex Parallel Corpus",
+            "rusgram",
+            "Testelets:2001",
+            "Lutikova:2010",
+            "mitrenina2017",
+            "Paducheva:2010",
+            "Paducheva:2004",
+            "Paducheva:2013",
+            "Seliverstova:2004",
+            "shavrina-etal-2020-humans"
+        ],
+        "Paper Title": "RuCoLA: Russian Corpus of Linguistic Acceptability",
+        "Paper Link": "https://aclanthology.org/2022.emnlp-main.163/",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "Linguistic acceptability"
+        ],
+        "Venue Title": "EMNLP 2022",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Vladislav Mikhailov",
+            "Tatiana Shamardina",
+            "Max Ryabinin",
+            "Alena Pestova",
+            "Ivan Smurov",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "SberDevices",
+            "ABBYY",
+            "HSE University",
+            "Yandex",
+            "Huawei Noah's Ark Lab",
+            "Center for Information and Language Processing (CIS), MaiNLP lab, LMU Munich, Germany"
+        ],
+        "Abstract": "Linguistic acceptability (LA) attracts the attention of the research community due to its many uses, such as testing the grammatical knowledge of language models and filtering implausible texts with acceptability classifiers. However, the application scope of LA in languages other than English is limited due to the lack of high-quality resources. To this end, we introduce the Russian Corpus of Linguistic Acceptability (RuCoLA), built from the ground up under the well-established binary LA approach. RuCoLA consists of $9.8$k in-domain sentences from linguistic publications and $3.6$k out-of-domain sentences produced by generative models. The out-of-domain set is created to facilitate the practical use of acceptability for improving language generation. Our paper describes the data collection protocol and presents a fine-grained analysis of acceptability classification experiments with a range of baseline approaches. In particular, we demonstrate that the most widely used language models still fall behind humans by a large margin, especially when detecting morphological and semantic errors. We release RuCoLA, the code of experiments, and a public leaderboard to assess the linguistic competence of language models for Russian."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.06691875,
+        "input_tokens": 25183,
+        "output_tokens": 810
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12814"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

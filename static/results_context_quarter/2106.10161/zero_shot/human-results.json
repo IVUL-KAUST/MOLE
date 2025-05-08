@@ -1,0 +1,104 @@
+{
+    "metadata": {
+        "Name": "Golos",
+        "Link": "https://github.com/sberdevices/golos",
+        "HF Link": "https://huggingface.co/datasets/SberDevices/Golos",
+        "License": "custom",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "Golos is a large Russian speech dataset consisting of 1240 hours of manually annotated audio. It was collected using crowd-sourcing and studio recordings with far-field settings.",
+        "Volume": 1240.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber"
+        ],
+        "Derived From": [],
+        "Paper Title": "Golos: Russian Dataset for Speech Research",
+        "Paper Link": "https://arxiv.org/pdf/2106.10161",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Nikolay Karpov",
+            "Alexander Denisenko",
+            "Fedor Minkin"
+        ],
+        "Affiliations": [
+            "Sber, Russia"
+        ],
+        "Abstract": "This paper introduces a novel Russian speech dataset called Golos, a large corpus suitable for speech research. The dataset mainly consists of recorded audio files manually annotated on the crowd-sourcing platform. The total duration of the audio is about 1240 hours. We have made the corpus freely available to download, along with the acoustic model with CTC loss prepared on this corpus. Additionally, transfer learning was applied to improve the performance of the acoustic model. In order to evaluate the quality of the dataset with the beam-search algorithm, we have built a 3-gram language model on the open Common Crawl dataset. The total word error rate (WER) metrics turned out to be about 3.3% and 11.5%.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

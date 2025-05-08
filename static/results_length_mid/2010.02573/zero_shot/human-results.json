@@ -1,0 +1,153 @@
+{
+    "metadata": {
+        "Name": "MARC",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 2100000.0,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 2100000.0,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "German",
+                "Volume": 2100000.0,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 2100000.0,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 2100000.0,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2100000.0,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://registry.opendata.aws/amazon-reviews-ml",
+        "HF Link": "https://huggingface.co/datasets/defunct-datasets/amazon_reviews_multi",
+        "License": "custom",
+        "Year": 2020,
+        "Language": [
+            "Japanese",
+            "English",
+            "German",
+            "French",
+            "Spanish",
+            "Chinese"
+        ],
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "Amazon product reviews dataset for multilingual text classification. The dataset contains reviews in English, Japanese, German, French, Chinese and Spanish, collected between November 1, 2015 and November 1, 2019",
+        "Volume": 12600000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Amazon"
+        ],
+        "Derived From": [],
+        "Paper Title": "The Multilingual Amazon Reviews Corpus",
+        "Paper Link": "https://arxiv.org/pdf/2010.02573",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "review classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Phillip Keung",
+            "Yichao Lu",
+            "Gyorgy Szarvas",
+            "Noah A. Smith"
+        ],
+        "Affiliations": [
+            "Amazon",
+            "Washington University"
+        ],
+        "Abstract": "We present the Multilingual Amazon Reviews Corpus (MARC), a large-scale collection of Amazon reviews for multilingual text classification. The corpus contains reviews in English, Japanese, German, French, Spanish, and Chinese, which were collected between 2015 and 2019. Each record in the dataset contains the review text, the review title, the star rating, an anonymized reviewer ID, an anonymized product ID, and the coarse-grained product category (e.g., \u2018books\u2019, \u2018appliances\u2019, etc.) The corpus is balanced across the 5 possible star ratings, so each rating constitutes 20% of the reviews in each language. For each language, there are 200,000, 5,000, and 5,000 reviews in the training, development, and test sets, respectively. We report baseline results for supervised text classification and zero-shot crosslingual transfer learning by fine-tuning a multilingual BERT model on reviews data. We propose the use of mean absolute error (MAE) instead of classification accuracy for this task, since MAE accounts for the ordinal nature of the ratings.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "Link": 1,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02573"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

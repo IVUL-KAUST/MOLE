@@ -1,0 +1,119 @@
+{
+    "metadata": {
+        "Name": "Maknuune",
+        "Subsets": [
+            {
+                "Name": "West Bank",
+                "Volume": 36000,
+                "Unit": "entries",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "www.palestine-lexicon.org",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "Maknuune is a large open lexicon for the Palestinian Arabic dialect, with over 36K entries from 17K lemmas, and 3.7K roots. All entries include diacritized Arabic orthography, phonological transcription and English glosses.",
+        "Volume": 36000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Oxford",
+            "New York University Abu Dhabi",
+            "University College of Educational Sciences - UNRWA"
+        ],
+        "Derived From": [],
+        "Paper Title": "Maknuune: A Large Open Palestinian Arabic Lexicon",
+        "Paper Link": "https://arxiv.org/abs/2210.12985",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "speech recognition",
+            "sentiment analysis",
+            "language modeling",
+            "topic classification",
+            "dialect identification",
+            "text generation",
+            "cross-lingual information retrieval",
+            "named entity recognition",
+            "question answering",
+            "multiple choice question answering",
+            "information retrieval",
+            "part of speech tagging",
+            "language identification",
+            "summarization",
+            "speaker identification",
+            "transliteration",
+            "morphological analysis",
+            "offensive language detection",
+            "review classification",
+            "gender identification",
+            "fake news detection",
+            "dependency parsing",
+            "irony detection",
+            "meter classification",
+            "natural language inference",
+            "instruction tuning",
+            "Linguistic acceptability"
+        ],
+        "Venue Title": "EMNLP2022",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Shahd Dibas",
+            "Christian Khairallah",
+            "Nizar Habash",
+            "Omar Fayez Sadi",
+            "Tariq Sairafy",
+            "Karmel Sarabta",
+            "Abrar Ardah"
+        ],
+        "Affiliations": [
+            "University of Oxford",
+            "New York University Abu Dhabi",
+            "University College of Educational Sciences - UNRWA"
+        ],
+        "Abstract": "We present Maknuune~<\u0645\u0643\u0646\u0648\u0646\u0629>, a large open lexicon for the Palestinian Arabic dialect. Maknuune has over 36K entries from 17K lemmas, and 3.7K roots. All entries include diacritized Arabic orthography, phonological transcription and English glosses. Some entries are enriched with additional information such as broken plurals and templatic feminine forms, associated phrases and collocations, Standard Arabic glosses, and examples or notes on grammar, usage, or location of collected entry."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.23809523809523808
+    },
+    "length_forcing": 0.90625,
+    "cost": {
+        "cost": 0.0017253,
+        "input_tokens": 15442,
+        "output_tokens": 746
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12985"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

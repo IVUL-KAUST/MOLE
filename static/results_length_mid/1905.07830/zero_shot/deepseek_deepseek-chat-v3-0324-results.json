@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "HellaSwag",
+        "Link": "https://rowanzellers.com/hellaswag",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A dataset for commonsense natural language inference, challenging for state-of-the-art models.",
+        "Volume": 70.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Derived From": [
+            "ActivityNet Captions",
+            "WikiHow"
+        ],
+        "Paper Title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "Paper Link": "https://rowanzellers.com/hellaswag",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference",
+            "question answering"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Rowan Zellers",
+            "Ari Holtzman",
+            "Yonatan Bisk",
+            "Ali Farhadi",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Paul G. Allen School of Computer Science & Engineering, University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Abstract": "In this paper, we investigate the following question: How well do deep pretrained models, like BERT, perform at commonsense natural language inference (NLI)? Our surprising conclusion is that the underlying task remains unsolved. Indeed, we find that deep models such as BERT do not demonstrate robust commonsense reasoning ability by themselves. Instead, they operate more like rapid surface learners for a particular dataset. Their strong performance on SWAG is dependent on the finetuning process, wherein they largely learn to pick up on dataset-specific distributional biases. When the distribution of language shifts slightly, performance drops drastically -- even if the domain remains identical. We study this question by introducing HellaSwag, a new benchmark for commonsense NLI. We use Adversarial Filtering (AF), a data-collection paradigm in which a series of discriminators is used to select a challenging set of generated wrong answers. AF is surprisingly effective towards this goal: the resulting dataset of 70k problems is easy for humans (95.6% accuracy), yet challenging for machines (<50%). This result holds even when models are given a significant number of training examples, and even when the test data comes from the exact same distribution as the training data. Machine performance slips an additional 5% when evaluated on examples that cover novel concepts from the same domain."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.016101,
+        "input_tokens": 17644,
+        "output_tokens": 620
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1905.07830"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

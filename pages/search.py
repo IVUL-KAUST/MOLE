@@ -238,7 +238,7 @@ def generate_fake_arxiv_pdf(paper_pdf):
     return f"{year}{month}.{generate_pdf_hash(paper_pdf)}"
 
 
-def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "plumber"):
+def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "plumber", context_size = "all"):
     if use_pdf:
         source_files = glob(f"{path}/paper.pdf")
     else:
@@ -287,7 +287,19 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
             f"⚠️ The paper text is too long, trimming some content"
         )
         paper_text = paper_text[:150_000]
-    return paper_text
+    print(len(paper_text))
+    if context_size == "all":
+        return paper_text
+    elif context_size == "half":
+        paper_text = paper_text[:len(paper_text)//2]
+        print(len(paper_text))
+        return paper_text
+    elif context_size == "quarter":
+        paper_text = paper_text[:len(paper_text)//4]
+        print(len(paper_text))
+        return paper_text
+    else:
+        raise ValueError(f"Invalid context_size: {context_size}")
 
 def run(
     args=None,
@@ -309,7 +321,8 @@ def run(
     few_shot = 0,
     results_path = "results_latex",
     pdf_mode = "plumber",
-    repeat_on_error = False
+    repeat_on_error = False,
+    context_size = "all"
 ):
     use_pdf = False if pdf_mode is None else True
     submitted = False
@@ -461,7 +474,7 @@ def run(
                     start_time = time.time()
                     model_name = model_name.replace("/", "_")
                     if model_name not in non_browsing_models and paper_text == "":
-                        paper_text = extract_paper_text(paper_path, use_pdf = use_pdf, st_context=st_context, pdf_mode = pdf_mode)
+                        paper_text = extract_paper_text(paper_path, use_pdf = use_pdf, st_context=st_context, pdf_mode = pdf_mode, context_size = context_size)
                         open(f"{save_path}/paper_text.txt", "w").write(paper_text)
                     curr_idx[0] += 1
                     if curr_idx[1]:
@@ -757,6 +770,13 @@ def create_args():
         "--repeat_on_error",
         action="store_true",
         help="repeat on error",
+    )
+
+    parser.add_argument(
+        "--context_size",
+        type=str,
+        default="all",
+        help="context size to use",
     )
 
     # Parse arguments

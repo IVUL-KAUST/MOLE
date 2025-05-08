@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Shamela Corpus",
+        "Subsets": [],
+        "Link": "http://shamela.ws/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "other"
+        ],
+        "Description": "A large corpus of Arabic texts (Al-Maktaba Al-Shamela) with over 815 million words from >6,100 texts, primarily religious and historical, spanning all periods. This paper details its processing, including lemmatization and dating.",
+        "Volume": 815000000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Al-Maktaba Al-Shamela"
+        ],
+        "Derived From": [],
+        "Paper Title": "The History of the Arabic Language: A Study of the Shamela Corpus",
+        "Paper Link": "https://aclanthology.org/W17-0806.pdf",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "fake news detection",
+            "text generation",
+            "language modeling",
+            "morphological analysis"
+        ],
+        "Venue Title": "Proceedings of the 3rd Workshop on Arabic Corpus Linguistics (WACL-3)",
+        "Venue Type": "workshop",
+        "Venue Name": "3rd Workshop on Arabic Corpus Linguistics (WACL-3)",
+        "Authors": [
+            "Maxim Romanov",
+            "Uri Shmidman",
+            "Moshe Koppel"
+        ],
+        "Affiliations": [
+            "University of Leipzig",
+            "Tufts University",
+            "Bar-Ilan University"
+        ],
+        "Abstract": "The Al-Maktaba Al-Shamela (Shamela) corpus is the largest collection of Arabic texts, containing over 800 million words from all periods of the Arabic language. In this paper, we describe our work on preparing this corpus for research in historical linguistics and digital humanities. We discuss the challenges of working with such a large and diverse collection of texts, including metadata wrangling, text reuse detection, and automatic text dating. We also present some initial findings from our analysis of the corpus, such as the lifespan of Arabic words and the evolution of genres over time. Finally, we announce the public release of the lemmatized version of the corpus, which we hope will be a valuable resource for the research community."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0922875,
+        "input_tokens": 7383,
+        "output_tokens": 584
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

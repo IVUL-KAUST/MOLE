@@ -1,0 +1,753 @@
+{
+    "metadata": {
+        "Name": "LASER Tatoeba Test Set",
+        "Subsets": [
+            {
+                "Name": "af",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "South Africa"
+            },
+            {
+                "Name": "am",
+                "Volume": 168,
+                "Unit": "sentences",
+                "Dialect": "Ethiopia"
+            },
+            {
+                "Name": "ar",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "az",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Azerbaijan"
+            },
+            {
+                "Name": "be",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Belarus"
+            },
+            {
+                "Name": "ber",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "North Africa"
+            },
+            {
+                "Name": "bg",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Bulgaria"
+            },
+            {
+                "Name": "bn",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Bangladesh"
+            },
+            {
+                "Name": "br",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "France"
+            },
+            {
+                "Name": "bs",
+                "Volume": 354,
+                "Unit": "sentences",
+                "Dialect": "Bosnia and Herzegovina"
+            },
+            {
+                "Name": "ca",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Spain"
+            },
+            {
+                "Name": "cbk",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Philippines"
+            },
+            {
+                "Name": "cs",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Czech Republic"
+            },
+            {
+                "Name": "da",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Denmark"
+            },
+            {
+                "Name": "de",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Germany"
+            },
+            {
+                "Name": "dtp",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Malaysia"
+            },
+            {
+                "Name": "el",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Greece"
+            },
+            {
+                "Name": "eo",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "es",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Spain"
+            },
+            {
+                "Name": "et",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Estonia"
+            },
+            {
+                "Name": "eu",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Spain"
+            },
+            {
+                "Name": "fi",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Finland"
+            },
+            {
+                "Name": "fr",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "France"
+            },
+            {
+                "Name": "ga",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Ireland"
+            },
+            {
+                "Name": "gl",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Spain"
+            },
+            {
+                "Name": "he",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Israel"
+            },
+            {
+                "Name": "hi",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "hr",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Croatia"
+            },
+            {
+                "Name": "hu",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Hungary"
+            },
+            {
+                "Name": "hy",
+                "Volume": 742,
+                "Unit": "sentences",
+                "Dialect": "Armenia"
+            },
+            {
+                "Name": "ia",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "id",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Indonesia"
+            },
+            {
+                "Name": "ie",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "io",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "is",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Iceland"
+            },
+            {
+                "Name": "it",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Italy"
+            },
+            {
+                "Name": "ja",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Japan"
+            },
+            {
+                "Name": "ka",
+                "Volume": 746,
+                "Unit": "sentences",
+                "Dialect": "Georgia"
+            },
+            {
+                "Name": "kab",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Algeria"
+            },
+            {
+                "Name": "kk",
+                "Volume": 575,
+                "Unit": "sentences",
+                "Dialect": "Kazakhstan"
+            },
+            {
+                "Name": "km",
+                "Volume": 722,
+                "Unit": "sentences",
+                "Dialect": "Cambodia"
+            },
+            {
+                "Name": "ko",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "South Korea"
+            },
+            {
+                "Name": "ku",
+                "Volume": 410,
+                "Unit": "sentences",
+                "Dialect": "Iraq"
+            },
+            {
+                "Name": "kw",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "United Kingdom"
+            },
+            {
+                "Name": "kzj",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Malaysia"
+            },
+            {
+                "Name": "la",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Vatican City"
+            },
+            {
+                "Name": "lfn",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "lt",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Lithuania"
+            },
+            {
+                "Name": "lv",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Latvia"
+            },
+            {
+                "Name": "mhr",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Russia"
+            },
+            {
+                "Name": "mk",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "North Macedonia"
+            },
+            {
+                "Name": "ml",
+                "Volume": 687,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "mr",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "ms",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Malaysia"
+            },
+            {
+                "Name": "nb",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Norway"
+            },
+            {
+                "Name": "nds",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Germany"
+            },
+            {
+                "Name": "nl",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Netherlands"
+            },
+            {
+                "Name": "oc",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "France"
+            },
+            {
+                "Name": "pl",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Poland"
+            },
+            {
+                "Name": "ps",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Afghanistan"
+            },
+            {
+                "Name": "pt",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Portugal"
+            },
+            {
+                "Name": "ro",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Romania"
+            },
+            {
+                "Name": "ru",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Russia"
+            },
+            {
+                "Name": "sk",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Slovakia"
+            },
+            {
+                "Name": "sl",
+                "Volume": 823,
+                "Unit": "sentences",
+                "Dialect": "Slovenia"
+            },
+            {
+                "Name": "sq",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Albania"
+            },
+            {
+                "Name": "sr",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Serbia"
+            },
+            {
+                "Name": "sv",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Sweden"
+            },
+            {
+                "Name": "sw",
+                "Volume": 390,
+                "Unit": "sentences",
+                "Dialect": "Tanzania"
+            },
+            {
+                "Name": "ta",
+                "Volume": 307,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "te",
+                "Volume": 234,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "th",
+                "Volume": 548,
+                "Unit": "sentences",
+                "Dialect": "Thailand"
+            },
+            {
+                "Name": "tl",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Philippines"
+            },
+            {
+                "Name": "tr",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Turkey"
+            },
+            {
+                "Name": "tt",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Russia"
+            },
+            {
+                "Name": "ug",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "China"
+            },
+            {
+                "Name": "uk",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Ukraine"
+            },
+            {
+                "Name": "ur",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Pakistan"
+            },
+            {
+                "Name": "uz",
+                "Volume": 428,
+                "Unit": "sentences",
+                "Dialect": "Uzbekistan"
+            },
+            {
+                "Name": "vi",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Vietnam"
+            },
+            {
+                "Name": "wuu",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "China"
+            },
+            {
+                "Name": "yue",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "China"
+            },
+            {
+                "Name": "zh",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "China"
+            },
+            {
+                "Name": "ang",
+                "Volume": 134,
+                "Unit": "sentences",
+                "Dialect": "United Kingdom"
+            },
+            {
+                "Name": "arq",
+                "Volume": 911,
+                "Unit": "sentences",
+                "Dialect": "Algeria"
+            },
+            {
+                "Name": "arz",
+                "Volume": 477,
+                "Unit": "sentences",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "ast",
+                "Volume": 127,
+                "Unit": "sentences",
+                "Dialect": "Spain"
+            },
+            {
+                "Name": "awa",
+                "Volume": 231,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "ceb",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Dialect": "Philippines"
+            },
+            {
+                "Name": "ch",
+                "Volume": 137,
+                "Unit": "sentences",
+                "Dialect": "United States"
+            },
+            {
+                "Name": "csb",
+                "Volume": 253,
+                "Unit": "sentences",
+                "Dialect": "Poland"
+            },
+            {
+                "Name": "cy",
+                "Volume": 575,
+                "Unit": "sentences",
+                "Dialect": "United Kingdom"
+            },
+            {
+                "Name": "dsb",
+                "Volume": 479,
+                "Unit": "sentences",
+                "Dialect": "Germany"
+            },
+            {
+                "Name": "fo",
+                "Volume": 262,
+                "Unit": "sentences",
+                "Dialect": "Denmark"
+            },
+            {
+                "Name": "fy",
+                "Volume": 173,
+                "Unit": "sentences",
+                "Dialect": "Netherlands"
+            },
+            {
+                "Name": "gd",
+                "Volume": 829,
+                "Unit": "sentences",
+                "Dialect": "United Kingdom"
+            },
+            {
+                "Name": "gsw",
+                "Volume": 117,
+                "Unit": "sentences",
+                "Dialect": "Switzerland"
+            },
+            {
+                "Name": "hsb",
+                "Volume": 483,
+                "Unit": "sentences",
+                "Dialect": "Germany"
+            },
+            {
+                "Name": "jv",
+                "Volume": 205,
+                "Unit": "sentences",
+                "Dialect": "Indonesia"
+            },
+            {
+                "Name": "max",
+                "Volume": 284,
+                "Unit": "sentences",
+                "Dialect": "Indonesia"
+            },
+            {
+                "Name": "mn",
+                "Volume": 440,
+                "Unit": "sentences",
+                "Dialect": "Mongolia"
+            },
+            {
+                "Name": "nn",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Norway"
+            },
+            {
+                "Name": "nov",
+                "Volume": 257,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "orv",
+                "Volume": 835,
+                "Unit": "sentences",
+                "Dialect": "Russia"
+            },
+            {
+                "Name": "pam",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Philippines"
+            },
+            {
+                "Name": "pms",
+                "Volume": 525,
+                "Unit": "sentences",
+                "Dialect": "Italy"
+            },
+            {
+                "Name": "swg",
+                "Volume": 112,
+                "Unit": "sentences",
+                "Dialect": "Germany"
+            },
+            {
+                "Name": "tk",
+                "Volume": 203,
+                "Unit": "sentences",
+                "Dialect": "Turkmenistan"
+            },
+            {
+                "Name": "tzl",
+                "Volume": 104,
+                "Unit": "sentences",
+                "Dialect": "Nicaragua"
+            },
+            {
+                "Name": "war",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Dialect": "Philippines"
+            },
+            {
+                "Name": "xh",
+                "Volume": 142,
+                "Unit": "sentences",
+                "Dialect": "South Africa"
+            },
+            {
+                "Name": "yi",
+                "Volume": 848,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "https://github.com/facebookresearch/LASER",
+        "HF Link": "",
+        "License": "BSD",
+        "Year": 2019,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "public datasets",
+            "captions",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "other"
+        ],
+        "Description": "A multilingual test set for similarity search covering 112 languages, derived from Tatoeba.",
+        "Volume": 166410.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research"
+        ],
+        "Derived From": [
+            "Tatoeba"
+        ],
+        "Paper Title": "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond",
+        "Paper Link": "https://arxiv.org/abs/1812.10464",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "information retrieval"
+        ],
+        "Venue Title": "Transactions of the Association for Computational Linguistics",
+        "Venue Type": "journal",
+        "Venue Name": "TACL",
+        "Authors": [
+            "Mikel Artetxe",
+            "Holger Schwenk"
+        ],
+        "Affiliations": [
+            "University of the Basque Country (UPV/EHU)",
+            "Facebook AI Research"
+        ],
+        "Abstract": "We introduce an architecture to learn joint multilingual sentence representations for 93 languages, belonging to more than 30 different families and written in 28 different scripts. Our system uses a single BiLSTM encoder with a shared BPE vocabulary for all languages, which is coupled with an auxiliary decoder and trained on publicly available parallel corpora. This enables us to learn a classifier on top of the resulting embeddings using English annotated data only, and transfer it to any of the 93 languages without any modification. Our experiments in cross-lingual natural language inference (XNLI dataset), cross-lingual document classification (MLDoc dataset) and parallel corpus mining (BUCC dataset) show the effectiveness of our approach. We also introduce a new test set of aligned sentences in 112 languages, and show that our sentence embeddings obtain strong results in multilingual similarity search even for low-resource languages. Our implementation, the pre-trained encoder and the multilingual test set are available at https://github.com/facebookresearch/LASER."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 0.90625,
+    "cost": {
+        "cost": 0.13827625,
+        "input_tokens": 19752,
+        "output_tokens": 4457
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1812.10464"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

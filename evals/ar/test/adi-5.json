@@ -4,31 +4,31 @@
         {
             "Name": "Egyptian",
             "Dialect": "Egypt",
-            "Volume": "14.4",
+            "Volume": 14.4,
             "Unit": "hours"
         },
         {
             "Name": "Gulf",
             "Dialect": "Gulf",
-            "Volume": "14.1",
+            "Volume": 14.1,
             "Unit": "hours"
         },
         {
             "Name": "Levantine",
             "Dialect": "Levant",
-            "Volume": "14.3",
+            "Volume": 14.3,
             "Unit": "hours"
         },
         {
             "Name": "MSA",
             "Dialect": "Modern Standard Arabic",
-            "Volume": "14.3",
+            "Volume": 14.3,
             "Unit": "hours"
         },
         {
             "Name": "North African",
             "Dialect": "North Africa",
-            "Volume": "14.6",
+            "Volume": 14.6,
             "Unit": "hours"
         }
     ],
