@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "GSM8K",
+        "Link": "https://github.com/openai/grade-school-math",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2021,
+        "Language": "en",
+        "Domain": [
+            "other",
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation",
+            "LLM generated"
+        ],
+        "Description": "GSM8K is a dataset of 8.5K high quality, linguistically diverse grade school math word problems with natural language solutions, designed to test multi-step mathematical reasoning in language models.",
+        "Volume": 8500.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "OpenAI"
+        ],
+        "Derived From": [],
+        "Paper Title": "Training Verifiers to Solve Math Word Problems",
+        "Paper Link": "https://arxiv.org/abs/2110.14168",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "text generation"
+        ],
+        "Venue Title": "arXiv preprint arXiv:2110.14168",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Karl Cobbe",
+            "Vineet Kosaraju",
+            "Mohammad Bavarian",
+            "Mark Chen",
+            "Heewoo Jun",
+            "\u0141ukasz Kaiser",
+            "Matthias Plappert",
+            "Jerry Tworek",
+            "Jacob Hilton",
+            "Reiichiro Nakano",
+            "Christopher Hesse",
+            "John Schulman"
+        ],
+        "Affiliations": [
+            "OpenAI"
+        ],
+        "Abstract": "State-of-the-art language models can match human performance on manytasks,buttheystillstruggletorobustlyperformmulti-stepmathe-maticalreasoning. Todiagnosethefailuresofcurrentmodelsandsupportresearch, we introduce GSM8K, a dataset of 8.5K high quality linguisti-cally diverse grade school math word problems. We find that even thelargest transformer models fail to achieve high test performance, despitethe conceptual simplicity of this problem distribution. To increase per-formance, we propose training verifiers to judge the correctness of modelcompletions. At test time, we generate many candidate solutions andselect the one ranked highest by the verifier. We demonstrate that ver-ification significantly improves performance on GSM8K, and we providestrong empirical evidence that verification scales more effectively withincreased data than a finetuning baseline."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0862325,
+        "input_tokens": 14614,
+        "output_tokens": 610
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2110.14168"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

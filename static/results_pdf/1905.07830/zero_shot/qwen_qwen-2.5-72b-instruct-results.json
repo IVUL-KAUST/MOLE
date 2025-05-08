@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "HellaSwag",
+        "Link": "https://rowanzellers.com/hellaswag",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "wikipedia",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "HellaSwag is a dataset for commonsense natural language inference, created using adversarial filtering to generate challenging machine-generated wrong answers.",
+        "Volume": 70000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Derived From": [
+            "SWAG"
+        ],
+        "Paper Title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "Paper Link": "https://arxiv.org/abs/1810.04805",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "natural language inference"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP",
+        "Authors": [
+            "Rowan Zellers",
+            "Ari Holtzman",
+            "Yonatan Bisk",
+            "Ali Farhadi",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Paul G. Allen School of Computer Science & Engineering, University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Abstract": "A woman is outside with a bucket and a dog. The dog is running around trying to avoid a bath. She... A. rinses the bucket off with soap and blow dry the dog\u2019s head. Recent work by Zellers et al. (2018) introduced a new task of commonsense natural language inference: given an event description such as \u201cA woman sits at a piano,\u201d a machine must select the most likely followup: \u201cShe sets her fingers on the keys.\u201d With the introduction of BERT (Devlin et al., 2018), near-human level performance was reached. However, this paper shows that commonsense inference remains difficult for even state-of-the-art models, by presenting HellaSwag, a new challenge dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00258594,
+        "input_tokens": 17480,
+        "output_tokens": 529
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1905.07830"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

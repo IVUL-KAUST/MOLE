@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "Name": "NEREL",
+        "Link": "https://github.com/nerel-ds/NEREL",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "NEREL is a Russian dataset for named entity recognition and relation extraction, featuring annotation of nested named entities, relations within nested entities, cross-sentence relations, and events involving named entities.",
+        "Volume": 900.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Lomonosov Moscow State University",
+            "HSE University",
+            "Novosibirsk State University",
+            "Ural Federal University",
+            "Innopolis University",
+            "Kazan Federal University"
+        ],
+        "Derived From": [
+            "Wikinews"
+        ],
+        "Paper Title": "NEREL: A Russian Dataset with Nested Named Entities, Relations and Events",
+        "Paper Link": "https://arxiv.org/abs/2108.13112",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "irony detection",
+            "other"
+        ],
+        "Venue Title": "arXiv:2108.13112v2 [cs.CL]",
+        "Venue Type": "preprint",
+        "Venue Name": "ArXiv",
+        "Authors": [
+            "Natalia Loukachevitch",
+            "Ekaterina Artemova",
+            "Tatiana Batura",
+            "Pavel Braslavski",
+            "Ilia Denisov",
+            "Vladimir Ivanov",
+            "Suresh Manandhar",
+            "Alexander Pugachev",
+            "Elena Tutubalina"
+        ],
+        "Affiliations": [
+            "Lomonosov Moscow State University, Russia",
+            "HSE University, Russia",
+            "Huawei Noah\u2019s Ark lab, Russia",
+            "Novosibirsk State University, Russia",
+            "Ural Federal University, Russia",
+            "Innopolis University, Russia",
+            "Kazan Federal University, Russia",
+            "SberAI, Russia",
+            "Wiseyak, United States"
+        ],
+        "Abstract": "In this paper, we present NEREL (Named Entities and RELations), a new Russian dataset with annotated named entities and relations. In developing the annotation schema, we aimed to accommodate recent advances in information extraction methods and datasets. In particular, nested named entities and relations within named entities are annotated in NEREL. Both of these provide a richer and more complete annotation compared with a flat annotation scheme. Current datasets with nested named entities (Ringland et al., 2019; Benikova et al., 2014) are not annotated with relations. Therefore, most state-of-the-art relation extraction models (Joshi et al., 2020; Alt et al., 2019) do not work with relations between nested and overlapping entities. NEREL aims to address these deficiencies with the addition of nested named entities and relations within nested entities. Secondly, NEREL relations are annotated across sentence boundaries at the discourse level allowing for more realistic information extraction experiments. Figure 1 illustrates annotation of nested entities, relations between overlapping entities, as well as cross-sentence relations on a sample NEREL sentence. Finally, NEREL provides annotation for factual events (such as meetings, negotiations, incidents, etc.) involving named entities and their roles in the events. Future versions of the dataset can easily expand the current inventory of entities and relations. NEREL is the largest dataset for Russian annotated with named entities and relations. NEREL features 29 entity and 49 relation types. At the time of writing the dataset contains 56K entities and 39K relations annotated in 900+ Russian Wikinews documents. In the rest of the paper, we describe the principles behind dataset building process. We also report dataset statistics and provide baseline results for several models. These results indicate that there is a room for improvements. The NEREL collection is freely available."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.09001375,
+        "input_tokens": 13687,
+        "output_tokens": 926
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.13112"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

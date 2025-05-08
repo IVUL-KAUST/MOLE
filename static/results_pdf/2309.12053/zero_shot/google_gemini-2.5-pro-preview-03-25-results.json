@@ -1,0 +1,122 @@
+{
+    "metadata": {
+        "Name": "AceGPT",
+        "Subsets": [],
+        "Link": "https://github.com/FreedomIntelligence/AceGPT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "web pages",
+            "wikipedia",
+            "social media",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation",
+            "LLM generated"
+        ],
+        "Description": "AceGPT is an Arabic LLM localized via pre-training, SFT with Arabic instructions/GPT-4 responses, and RLAIF for cultural alignment. It achieves SOTA on Arabic benchmarks.",
+        "Volume": 19200000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Shenzhen Research Institute of Big Data",
+            "The Chinese University of Hong Kong, Shenzhen",
+            "King Abdullah University of Science and Technology",
+            "Shenzhen International Center for Industrial and Applied Mathematics"
+        ],
+        "Derived From": [
+            "open-source Arabic text 2022",
+            "Arabic Wikipedia",
+            "CC100",
+            "OSCAR",
+            "SlimPajama",
+            "Quora",
+            "Alpaca",
+            "Evol-Instruct",
+            "Code-Alpaca",
+            "ShareGPT",
+            "Anthropic helpfulness and harmlessness",
+            "OpenAI Summarize",
+            "OpenAssistant Conversations (OASST1)",
+            "LLaMA2"
+        ],
+        "Paper Title": "AceGPT, Localizing Large Language Models in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2309.10253",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "instruction tuning",
+            "question answering",
+            "language modeling",
+            "sentiment analysis",
+            "dialect identification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "HuangHuang",
+            "FeiYu",
+            "JianqingZhu",
+            "XueningSun",
+            "HaoCheng",
+            "DingjieSong",
+            "ZhihongChen",
+            "AbdulmohsenAlharthi",
+            "BangAn",
+            "JuncaiHe",
+            "ZicheLiu",
+            "ZhiyiZhang",
+            "JunyingChen",
+            "JianquanLi",
+            "BenyouWang",
+            "LianZhang",
+            "RuoyuSun",
+            "XiangWan",
+            "HaizhouLi",
+            "JinchaoXu"
+        ],
+        "Affiliations": [
+            "Shenzhen International Center for Industrial and Applied Mathematics",
+            "Shenzhen Research Institute of Big Data",
+            "The Chinese University of Hong Kong, Shenzhen",
+            "King Abdullah University of Science and Technology"
+        ],
+        "Abstract": "This paper is devoted to the development of a localized Large Language Model (LLM) specifically for Arabic, a language imbued with unique cultural characteristics inadequately addressed by current mainstream models. Significant concerns emerge when addressing cultural sensitivity and local values. To address this, the paper proposes a comprehensive solution that includes further pre-training with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and GPT-4 responses in Arabic, alongside Reinforcement Learning with AI Feedback (RLAIF) employing a reward model attuned to local culture and values. The goal is to cultivate culturally cognizant and value-aligned Arabic LLMs capable of accommodating the diverse, application-specific needs of Arabic-speaking communities. Comprehensive evaluations reveal that the resulting model, dubbed 'AceGPT', sets the state-of-the-art standard for open Arabic LLMs across various benchmarks. Codes, data, and models are in https://github.com/FreedomIntelligence/AceGPT."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.38095238095238093
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.20333625,
+        "input_tokens": 73915,
+        "output_tokens": 900
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

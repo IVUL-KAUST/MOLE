@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "ATHAR",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
+        "HF Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
+        "License": "CC BY-NC-SA 3.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books",
+            "captions",
+            "commentary",
+            "social media",
+            "social media",
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A high-quality and diverse dataset for Classical Arabic to English translation, covering a wide array of subjects including science, culture, and philosophy.",
+        "Volume": 66000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "MohammedKhalil",
+            "MohammedSabry"
+        ],
+        "Derived From": [],
+        "Paper Title": "ATHAR: A High-Quality and Diverse Dataset for Classical Arabic to English Translation",
+        "Paper Link": "https://arxiv.org/abs/2305.05700",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "Proceedings of the 14th International Conference on Spoken Language Translation",
+        "Venue Type": "conference",
+        "Venue Name": "IWSLT 2023",
+        "Authors": [
+            "MohammedKhalil",
+            "MohammedSabry"
+        ],
+        "Affiliations": [
+            "Independent Researcher",
+            "ADAPT/DCU, Dublin, Ireland"
+        ],
+        "Abstract": "Classical Arabic represents a significant era, encompassing the golden age of Arab culture, during dataset creation for machine translation. This work introduces the ATHAR dataset, a translation resource from Classical Arabic to English, comprising 66,000 high-quality translation samples that cover a wide array of subjects including science, culture, and philosophy. The dataset aims to address the representativeness and quality limitations of previous datasets."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00269673,
+        "input_tokens": 18081,
+        "output_tokens": 497
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.19835"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

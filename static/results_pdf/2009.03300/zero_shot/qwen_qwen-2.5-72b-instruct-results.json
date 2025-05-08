@@ -1,0 +1,87 @@
+{
+    "metadata": {
+        "Name": "Massive Multitask Language Understanding",
+        "Link": "https://github.com/hendrycks/test",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "en",
+        "Domain": [
+            "other",
+            "TV Channels",
+            "social media",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A benchmark consisting of 57 multiple-choice questions across various subjects to assess a model's ability to learn and apply knowledge from pretraining.",
+        "Volume": 15908.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "UC Berkeley",
+            "Columbia University",
+            "University of Chicago",
+            "University of Illinois Urbana-Champaign"
+        ],
+        "Derived From": [],
+        "Paper Title": "Measuring Massive Multitask Language Understanding",
+        "Paper Link": "https://arxiv.org/abs/2103.03373",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "part of speech tagging",
+            "question answering"
+        ],
+        "Venue Title": "Measuring Massive Multitask Language Understanding",
+        "Venue Type": "conference",
+        "Venue Name": "ICLR 2021",
+        "Authors": [
+            "Dan Hendrycks",
+            "Collin Burns",
+            "Steven Basart",
+            "Andy Zou",
+            "Mantas Mazeika",
+            "Dawn Song",
+            "Jacob Steinhardt"
+        ],
+        "Affiliations": [
+            "UC Berkeley",
+            "Columbia University",
+            "University of Chicago",
+            "UIUC"
+        ],
+        "Abstract": "We propose a new test to measure a text model\u2019s multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem-solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model\u2019s academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00351466,
+        "input_tokens": 24168,
+        "output_tokens": 566
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2009.03300"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

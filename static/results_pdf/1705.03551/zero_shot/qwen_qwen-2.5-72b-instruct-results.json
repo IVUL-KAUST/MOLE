@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "TriviaQA",
+        "Link": "http://nlp.cs.washington.edu/triviaqa/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "TriviaQA is a large-scale reading comprehension dataset containing over 650K question-answer-evidence triples. Questions are authored by trivia enthusiasts independently of the evidence documents.",
+        "Volume": 650659.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Derived From": [],
+        "Paper Title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension",
+        "Paper Link": "http://nlp.cs.washington.edu/triviaqa/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "ACL 2016",
+        "Authors": [
+            "Mandar Joshi",
+            "Eunsol Choi",
+            "Daniel S. Weld",
+            "Luke Zettlemoyer"
+        ],
+        "Affiliations": [
+            "Paul G. Allen School of Computer Science & Engineering, Univ. of Washington, Seattle, WA",
+            "Allen Institute for Artificial Intelligence, Seattle, WA"
+        ],
+        "Abstract": "We present TriviaQA, a challenging reading comprehension dataset containing over 650K question-answer-evidence triples. TriviaQA includes 95K question-answer pairs authored by trivia enthusiasts and independently gathered evidence documents, six per question on average, that provide high quality distant supervision for answering the questions. We show that, compared to other recently introduced large-scale datasets, TriviaQA has relatively complex, compositional questions, considerable syntactic and lexical variability, and often requires multi-sentence reasoning."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00228761,
+        "input_tokens": 14989,
+        "output_tokens": 477
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.03551"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

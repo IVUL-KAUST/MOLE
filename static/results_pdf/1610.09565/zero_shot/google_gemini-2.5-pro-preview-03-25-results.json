@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "AR-EN Transliteration",
+        "Subsets": [],
+        "Link": "https://github.com/googlei18n/transliteration",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "An Arabic to English transliteration dataset of 15,898 name pairs, extracted from Wikipedia titles. It was created by aligning full names from Arabic and English articles referring to the same person.",
+        "Volume": 15898.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "Sequence-to-sequence neural network models for transliteration",
+        "Paper Link": "https://arxiv.org/abs/1610.09565",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "transliteration"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Mihaela Rosca",
+            "Thomas Breuel"
+        ],
+        "Affiliations": [
+            "Google Zurich",
+            "Google Mountain View, CA"
+        ],
+        "Abstract": "Transliteration is a key component of machine translation systems and software internationalization. This paper demonstrates that neural sequence-to-sequence models obtain state of the art or close to state of the art results on existing datasets. In an effort to make machine transliteration accessible, we open source a new Arabic to English transliteration dataset and our trained models."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.05398875,
+        "input_tokens": 8824,
+        "output_tokens": 455
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.09565"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

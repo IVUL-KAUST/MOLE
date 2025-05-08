@@ -1,0 +1,121 @@
+{
+    "metadata": {
+        "Name": "ArabicDialectIDCorpus",
+        "Subsets": [
+            {
+                "Name": "EGY",
+                "Volume": 13.0,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "GLF",
+                "Volume": 9.5,
+                "Unit": "hours",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "LAV",
+                "Volume": 11.0,
+                "Unit": "hours",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "NOR",
+                "Volume": 9.0,
+                "Unit": "hours",
+                "Dialect": "North Africa"
+            },
+            {
+                "Name": "MSA",
+                "Volume": 10.0,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "http://alt.qcri.org/resources/ArabicDialectIDCorpus/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A corpus of Arabic broadcast speech for dialect identification, covering Egyptian, Gulf, Levantine, North African, and MSA. Released publicly for language identification research.",
+        "Volume": 52.5,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute, HBKU",
+            "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)",
+            "JHU Center for Language and Speech Processing (CLSP)",
+            "\u00c9cole de technologie sup\u00e9rieure",
+            "Centre for Speech Technology Research, University of Edinburgh"
+        ],
+        "Derived From": [],
+        "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
+        "Paper Link": "https://arxiv.org/abs/1509.06928",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "QCRI Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "language identification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ahmed Ali",
+            "Najim Dehak",
+            "Patrick Cardinal",
+            "Sameer Khurana",
+            "Sree Harsha Yella",
+            "James Glass",
+            "Peter Bell",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL), Cambridge, MA, USA",
+            "JHU Center for Language and Speech Processing (CLSP), Baltimore, MD, USA",
+            "\u00c9cole de technologie sup\u00e9rieure, D\u00e9partement de G\u00e9nie Logiciel et des TI, Montr\u00e9al, Canada",
+            "Centre for Speech Technology Research, University of Edinburgh, UK"
+        ],
+        "Abstract": "In this paper, we investigate different approache_s for dialect identification in Arabic broadcast speech. These methods are based on phonetic and lexical features obtained from a speech recognition system, and bottleneck features using the i-vector framework. We studied both generative and discriminative classifiers, and we combined these features using a multi-class Support Vector Machine (SVM). We validated our results on an Arabic/English language identification task, with an accuracy of 100%. We also evaluated these features in a binary classifier to discriminate between Modern Standard Arabic (MSA) and Dialectal Arabic, with an accuracy of 100%. We further reported results using the proposed methods to discriminate between the five most widely used dialects of Arabic: namely Egyptian, Gulf, Levantine, North African, and MSA, with an accuracy of 59.2%. We discuss dialect identification errors in the context of dialect code-switching between Dialectal Arabic and MSA, and compare the error pattern between manually labeled data, and the output from our classifier. All the data used on our experiments have been released to the public as a language identification corpus."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.1005825,
+        "input_tokens": 11190,
+        "output_tokens": 943
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

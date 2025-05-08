@@ -1,0 +1,133 @@
+{
+    "metadata": {
+        "Name": "MLQA",
+        "Subsets": [
+            {
+                "Name": "MLQA-en",
+                "Volume": 12738,
+                "Unit": "instances",
+                "Language": "English"
+            },
+            {
+                "Name": "MLQA-ar",
+                "Volume": 5852,
+                "Unit": "instances",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "MLQA-de",
+                "Volume": 6220,
+                "Unit": "instances",
+                "Language": "German"
+            },
+            {
+                "Name": "MLQA-es",
+                "Volume": 5753,
+                "Unit": "instances",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "MLQA-hi",
+                "Volume": 5425,
+                "Unit": "instances",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "MLQA-vi",
+                "Volume": 6006,
+                "Unit": "instances",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "MLQA-zh",
+                "Volume": 5641,
+                "Unit": "instances",
+                "Language": "Simplified Chinese"
+            }
+        ],
+        "Link": "https://github.com/facebookresearch/mlqa",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": [
+            "Arabic",
+            "English",
+            "German",
+            "Spanish",
+            "Hindi",
+            "Vietnamese",
+            "Simplified Chinese"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "MLQA is a multi-way aligned extractive QA evaluation benchmark in seven languages: English, Arabic, German, Spanish, Hindi, Vietnamese, and Simplified Chinese.",
+        "Volume": 5852.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research",
+            "University College London"
+        ],
+        "Derived From": [
+            "SQuAD"
+        ],
+        "Paper Title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
+        "Paper Link": "https://arxiv.org/abs/1910.08983",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "cross-lingual information retrieval",
+            "natural language inference"
+        ],
+        "Venue Title": "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "ACL 2019",
+        "Authors": [
+            "Patrick Lewis",
+            "Barlas Oguz",
+            "Ruty Rinott",
+            "Sebastian Riedel",
+            "Holger Schwenk"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "University College London"
+        ],
+        "Abstract": "Question answering (QA) models have shown rapid progress enabled by the availability of large, high-quality benchmark datasets. Such annotated datasets are difficult and costly to collect, and rarely exist in languages other than English, making building QA systems that work well in other languages challenging. In order to develop such systems, it is crucial to invest in high quality multilingual evaluation benchmarks to measure progress. We present MLQA, a multi-way aligned extractive QA evaluation benchmark intended to spur research in this area."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00336052,
+        "input_tokens": 22393,
+        "output_tokens": 695
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1910.07475"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

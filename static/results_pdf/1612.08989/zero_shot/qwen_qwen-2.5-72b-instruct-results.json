@@ -1,0 +1,117 @@
+{
+    "metadata": {
+        "Name": "Shamela",
+        "Subsets": [
+            {
+                "Name": "HadithCollections",
+                "Volume": 179,
+                "Unit": "texts",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Biographies",
+                "Volume": 377,
+                "Unit": "texts",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Jurisprudence(Fiqh)",
+                "Volume": 157,
+                "Unit": "texts",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "PopularReligiousWriting",
+                "Volume": 298,
+                "Unit": "texts",
+                "Dialect": "Classical Arabic"
+            }
+        ],
+        "Link": "http://shamela.ws",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2018,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A large-scale historical Arabic corpus of about 1 billion words from diverse periods of time, cleaned, processed with a morphological analyzer, and enhanced with parallel passage detection and text dating.",
+        "Volume": 1000000000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Al-Maktaba Al-Shamela",
+            "Bar-Ilan University",
+            "MIT",
+            "University of Rhode Island",
+            "Leipzig University"
+        ],
+        "Derived From": [
+            "Al-Maktaba Al-Shamela"
+        ],
+        "Paper Title": "Shamela: A Large-Scale Historical Arabic Corpus",
+        "Paper Link": "https://github.com/OpenArabic/RAWrabica",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "morphological analysis",
+            "morphological analysis",
+            "text generation",
+            "fake news detection"
+        ],
+        "Venue Title": "arXiv preprint",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Yonatan Belinkov",
+            "Alexander Magidow",
+            "Maxim Romanov",
+            "Avi Shmidman",
+            "Moshe Koppel"
+        ],
+        "Affiliations": [
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "Department of Languages and Literatures, University of Rhode Island",
+            "The Humboldt Chair of Digital Humanities, Leipzig University",
+            "Department of Hebrew Literature, Bar-Ilan University",
+            "Department of Computer Science, Bar-Ilan University",
+            "Dicta: The Israel Center for Text Analysis"
+        ],
+        "Abstract": "Arabic is a widely-spoken language with a rich and long history spanning more than fourteen centuries. Yet existing Arabic corpora largely focus on the modern period or lack sufficient diachronic information. We develop a large-scale, historical corpus of Arabic of about 1 billion words from diverse periods of time. We clean this corpus, process it with a morphological analyzer, and enhance it by detecting parallel passages and automatically dating undated texts. We demonstrate its utility with selected case-studies in which we show its application to the digital humanities."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00201036,
+        "input_tokens": 12338,
+        "output_tokens": 710
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

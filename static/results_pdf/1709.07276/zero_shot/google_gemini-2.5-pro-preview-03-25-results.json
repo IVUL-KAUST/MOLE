@@ -1,0 +1,115 @@
+{
+    "metadata": {
+        "Name": "MGB-3",
+        "Subsets": [
+            {
+                "Name": "MGB-3 ADI EGY",
+                "Volume": 4.0,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "MGB-3 ADI GLF",
+                "Volume": 4.1,
+                "Unit": "hours",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "MGB-3 ADI LAV",
+                "Volume": 4.0,
+                "Unit": "hours",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "MGB-3 ADI MSA",
+                "Volume": 3.9,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "MGB-3 ADI NOR",
+                "Volume": 4.1,
+                "Unit": "hours",
+                "Dialect": "North Africa"
+            }
+        ],
+        "Link": "http://www.mgb-challenge.org",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "Egypt",
+        "Domain": [
+            "social media",
+            "web pages",
+            "news articles"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling",
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "Dataset for the Arabic MGB-3 Challenge, focusing on speech recognition in Egyptian Arabic from YouTube (16 hours total for adaptation, development, test) and Arabic dialect identification (5 dialects: EGY, LAV, GLF, NOR, MSA; ~20 hours for development/test, plus ~54 hours training data from Al Jazeera).",
+        "Volume": 16.0,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Qatar Computing Research Institute, HBKU",
+            "Centre for Speech Technology Research, University of Edinburgh"
+        ],
+        "Derived From": [
+            "Al Jazeera multi-dialectal speech corpus"
+        ],
+        "Paper Title": "SPEECH RECOGNITION CHALLENGE IN THE WILD: ARABIC MGB-3",
+        "Paper Link": "https://arxiv.org/abs/1709.07276",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "dialect identification"
+        ],
+        "Venue Title": "IEEE Automatic Speech Recognition and Understanding Workshop",
+        "Venue Type": "workshop",
+        "Venue Name": "IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)",
+        "Authors": [
+            "Ahmed Ali",
+            "Stephan Vogel",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "Centre for Speech Technology Research, University of Edinburgh, UK"
+        ],
+        "Abstract": "This paper describes the Arabic MGB-3 Challenge \u2013 Arabic Speech Recognition in the Wild. Unlike last year\u2019s Arabic MGB-2 Challenge, for which the recognition task was based on more than 1,200 hours broadcast TV news recordings from Aljazeera Arabic TV programs, MGB-3 emphasises dialectal Arabic using a multi-genre collection of Egyptian YouTube videos. Seven genres were used for the data collection: comedy, cooking, family/kids, fashion, drama, sports, and science (TEDx). A total of 16 hours of videos, split evenly across the different genres, were divided into adaptation, development and evaluation data sets. The Arabic MGB-Challenge comprised two tasks: A) Speech transcription, evaluated on the MGB-3 test set, along with the 10 hour MGB-2 test set to report progress on the MGB-2 evaluation; B) Arabic dialect identification, introduced this year in order to distinguish between four major Arabic dialects \u2013 Egyptian, Levantine, North African, Gulf, as well as Modern Standard Arabic. Two hours of audio per dialect were released for development and a further two hours were used for evaluation. For dialect identification, both lexical features and i-vector bottleneck features were shared with participants in addition to the raw audio recordings. Overall, thirteen teams submitted ten systems to the challenge. We outline the approaches adopted in each system, and summarise the evaluation results."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.11131,
+        "input_tokens": 12664,
+        "output_tokens": 998
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

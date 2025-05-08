@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "Maknuune",
+        "Subsets": [],
+        "Link": "http://www.palestine-lexicon.org",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "ar",
+        "Dialect": "Palestine",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Maknuune is a large open lexicon for the Palestinian Arabic dialect with over 36K entries from 17K lemmas and 3.7K roots. It includes diacritized Arabic orthography, phonological transcription, and English glosses. Some entries are enriched with additional information such as broken plurals, templatic feminine forms, associated phrases, collocations, Standard Arabic glosses, and examples or notes on grammar, usage, or location of collected entry.",
+        "Volume": 36.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oxford",
+            "New York University Abu Dhabi",
+            "University College of Educational Sciences-UNRWA"
+        ],
+        "Derived From": [],
+        "Paper Title": "Maknuune: A Large Open Palestinian Arabic Lexicon",
+        "Paper Link": "https://arxiv.org/abs/2210.12985",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "morphological analysis"
+        ],
+        "Venue Title": "Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Shahd Dibas",
+            "Christian Khairallah",
+            "Nizar Habash",
+            "Omar Fayez Sadi",
+            "Tariq Sairafy",
+            "Karmel Sarabta",
+            "Abrar Ardah"
+        ],
+        "Affiliations": [
+            "University of Oxford",
+            "New York University Abu Dhabi",
+            "University College of Educational Sciences-UNRWA"
+        ],
+        "Abstract": "We present Maknuune, a large open lexicon for the Palestinian Arabic dialect. Maknuune has over 36K entries from 17K lemmas, and 3.7K roots. All entries include diacritized Arabic orthography, phonological transcription and English glosses. Some entries are enriched with additional information such as broken plurals and templatic feminine forms, associated phrases and collocations, Standard Arabic glosses, and examples or notes on grammar, usage, or location of collected entry."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0521925,
+        "input_tokens": 20406,
+        "output_tokens": 550
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12985"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

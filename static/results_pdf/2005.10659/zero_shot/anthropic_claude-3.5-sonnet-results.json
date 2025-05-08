@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "RuBQ",
+        "Link": "http://doi.org/10.5281/zenodo.3835913",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "RuBQ is the first Russian knowledge base question answering dataset containing 1,500 questions of varying complexity over Wikidata",
+        "Volume": 1500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "ITMO University",
+            "JetBrains Research",
+            "Ural Federal University"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuBQ: A Russian Dataset for Question Answering over Wikidata",
+        "Paper Link": "https://arxiv.org/abs/2005.10659v1",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Vladislav Korablinov",
+            "Pavel Braslavski"
+        ],
+        "Affiliations": [
+            "ITMO University",
+            "JetBrains Research",
+            "Ural Federal University"
+        ],
+        "Abstract": "The paper presents RuBQ, the first Russian knowledge base question answering (KBQA) dataset. The high-quality dataset consists of 1,500 Russian questions of varying complexity, their English machine translations, SPARQL queries to Wikidata, reference answers, as well as a Wikidata sample of triples containing entities with Russian labels. The dataset creation started with a large collection of question-answer pairs from online quizzes. The data underwent automatic filtering, crowd-assisted entity linking, automatic generation of SPARQL queries, and their subsequent in-house verification. The freely available dataset will be of interest for a wide community of researchers and practitioners in the areas of Semantic Web, NLP, and IR, especially for those working on multilingual question answering. The proposed dataset generation pipeline proved to be efficient and can be employed in other data annotation projects."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.054879,
+        "input_tokens": 12642,
+        "output_tokens": 497
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.10659"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

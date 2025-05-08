@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "FrenchMedMCQA",
+        "Link": "https://github.com/qanastek/FrenchMedMCQA",
+        "HF Link": "https://huggingface.co/qanastek/FrenchMedMCQA-BioBERT-V1.1-Wikipedia-BM25/tree/main",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A French Multiple-Choice Question Answering (MCQA) dataset for the medical domain, containing 3,105 questions from real exams of the French medical specialization diploma in pharmacy.",
+        "Volume": 3105.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Zenidoc",
+            "DIETS project",
+            "Agence Nationale de la Recherche (ANR)"
+        ],
+        "Derived From": [],
+        "Paper Title": "FrenchMedMCQA: A French Multiple-Choice Question Answering Dataset for Medical Domain",
+        "Paper Link": "https://arxiv.org/abs/2007.01282",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "Proceedings of the Conference on Health, Inference, and Learning",
+        "Venue Type": "conference",
+        "Venue Name": "Proceedings of Machine Learning Research",
+        "Authors": [
+            "Yanis Labrak",
+            "Adrien Bazoge",
+            "Richard Dufour",
+            "B\u00e9atrice Daille",
+            "Pierre-Antoine Gourraud",
+            "Emmanuel Morin",
+            "Mickael Rouvier"
+        ],
+        "Affiliations": [
+            "LIA-Avignon University",
+            "LS2N-Nantes University",
+            "CHU de Nantes-La clinique des donn\u00e9es-Nantes University",
+            "ZeniDoc"
+        ],
+        "Abstract": "This paper introduces FrenchMedMCQA, the first publicly available Multiple-Choice Question Answering (MCQA) dataset in French for the medical domain, containing 3,105 questions from real exams of the French medical specialization diploma in pharmacy. Each instance of the dataset contains an identifier, a question, five possible answers, and their manual correction(s). We also propose first baseline models to automatically process this MCQA task in order to report on the current performances and to highlight the difficulty of the task."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00140847,
+        "input_tokens": 9397,
+        "output_tokens": 540
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2304.04280"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "LASER",
+        "Subsets": [],
+        "Link": "https://github.com/facebookresearch/LASER",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media",
+            "news articles",
+            "news articles",
+            "news articles",
+            "captions",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A dataset of multilingual sentence embeddings for 93 languages, including Arabic, trained on publicly available parallel corpora.",
+        "Volume": 223000000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond",
+        "Paper Link": "https://arxiv.org/abs/1811.01136",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference",
+            "meter classification",
+            "instruction tuning",
+            "part of speech tagging"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2018",
+        "Authors": [
+            "Mikel Artetxe",
+            "Holger Schwenk"
+        ],
+        "Affiliations": [
+            "University of the Basque Country (UPV/EHU)",
+            "Facebook AI Research"
+        ],
+        "Abstract": "Pennington et al., 2014), but has recently been superseded by sentence-level representations (Peters et al., 2018; Devlin et al., 2019). Nevertheless, all these works learn a separate model for each language and are thus unable to leverage information across different languages, greatly limiting their potential performance for low-resource languages. In this work, we are interested in universal language-agnostic sentence embeddings, that is, vector representations of sentences that are general with respect to the input language and the NLP task."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00311894,
+        "input_tokens": 20256,
+        "output_tokens": 502
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1812.10464"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "ara_dangspeech",
+        "Subsets": [],
+        "Link": "https://github.com/UBC-NLP/ara_dangspeech",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2020,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "An Arabic Twitter dataset of 5,011 tweets, manually annotated for dangerous speech (direct physical threats). Collected using a multi-dialectal lexicon, it's designed for training models to detect harmful online content.",
+        "Volume": 5011.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "SUNY at Buffalo",
+            "The University of British Columbia"
+        ],
+        "Derived From": [],
+        "Paper Title": "Understanding and Detecting Dangerous Speech in Social Media",
+        "Paper Link": "https://arxiv.org/abs/2005.06608",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "arXiv preprint arXiv:2005.06608",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ali Alshehri",
+            "ElMoatez Billah Nagoudi",
+            "Muhammad Abdul-Mageed"
+        ],
+        "Affiliations": [
+            "SUNY at Buffalo",
+            "Natural Langauge Processing Lab, The University of British Columbia"
+        ],
+        "Abstract": "Social media communication has become a significant part of daily activity in modern societies. For this reason, ensuring safety in socialmediaplatformsisanecessity.Useofdangerouslanguagesuchasphysicalthreatsinonlineenvironmentsisasomewhatrare,yet remainshighlyimportant.Althoughseveralworkshavebeenperformedontherelatedissueofdetectingoffensiveandhatefullanguage, dangerousspeechhasnotpreviouslybeentreatedinanysignificantway.Motivatedbytheseobservations,wereportoureffortstobuild alabeleddatasetfordangerousspeech. Wealsoexploitourdatasettodevelophighlyeffectivemodelstodetectdangerouscontent. Our bestmodelperformsat59.60%macroF ,significantlyoutperformingacompetitivebaseline."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7619047619047619
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.07048,
+        "input_tokens": 20162,
+        "output_tokens": 591
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.06608"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

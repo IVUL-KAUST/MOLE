@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "Name": "OpenITI",
+        "Subsets": [
+            {
+                "Name": "Classical Arabic",
+                "Volume": 725,
+                "Unit": "documents",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 1106,
+                "Unit": "documents",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://github.com/OpenITI",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "books",
+            "wikipedia",
+            "web pages",
+            "public datasets",
+            "TV Channels",
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "A large-scale diachronic corpus of Arabic, spanning 1400 years, with texts from various genres and periods.",
+        "Volume": 1537.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "MIT",
+            "University of Rhode Island",
+            "Bar-Ilan University",
+            "University of Vienna"
+        ],
+        "Derived From": [
+            "Shamela",
+            "Al-Jami\u2019 Al-Kabir",
+            "Shia online library"
+        ],
+        "Paper Title": "Studying the History of the Arabic Language: Language Technology and a Large-Scale Historical Corpus",
+        "Paper Link": "http://willbeinsertedbytheeditor",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "text generation",
+            "dialect identification",
+            "named entity recognition",
+            "part of speech tagging"
+        ],
+        "Venue Title": "Proceedings of the Workshop on Language Technology Resources and Tools for Digital Humanities (LT4DH at Coling)",
+        "Venue Type": "workshop",
+        "Venue Name": "LT4DH at Coling",
+        "Authors": [
+            "Yonatan Belinkov",
+            "Alexander Magidow",
+            "Alberto Barro\u00b4n-Ceden\u02dco",
+            "Avi Shmidman",
+            "Maxim Romanov"
+        ],
+        "Affiliations": [
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "Department of Modern and Classical Languages and Literatures, University of Rhode Island",
+            "Qatar Computing Research Institute, HBKU",
+            "Department of Hebrew Literature, Bar-Ilan University",
+            "Department of History, University of Vienna"
+        ],
+        "Abstract": "Arabic is a widely-spoken language with a long and rich history, but existing corpora and language technology focus mostly on modern Arabic and its varieties. Therefore, studying the history of the language has so far been mostly limited to manual analyses on a small scale. In this work, we present a large-scale historical corpus of the written Arabic language, spanning 1400 years. We describe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques. Our findings confirm the established division of written Arabic into Modern Standard and Classical Arabic, and confirm other established periodizations, while suggesting that written Arabic may be divisible into still further periods of development."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42857142857142855
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00372753,
+        "input_tokens": 26445,
+        "output_tokens": 739
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.03891"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

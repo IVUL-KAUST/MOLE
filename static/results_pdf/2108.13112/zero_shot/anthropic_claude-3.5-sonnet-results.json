@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "Name": "NEREL",
+        "Link": "https://github.com/nerel-ds/NEREL",
+        "HF Link": "",
+        "License": "CC BY 2.0",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A Russian dataset for named entity recognition and relation extraction containing 56K annotated named entities and 39K annotated relations with nested entities and cross-sentence relations",
+        "Volume": 56000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Lomonosov Moscow State University",
+            "HSE University",
+            "Novosibirsk State University",
+            "Ural Federal University",
+            "Innopolis University",
+            "Kazan Federal University",
+            "SberAI"
+        ],
+        "Derived From": [
+            "Wikinews"
+        ],
+        "Paper Title": "NEREL: A Russian Dataset with Nested Named Entities, Relations and Events",
+        "Paper Link": "arXiv:2012.11381v2",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "irony detection"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Natalia Loukachevitch",
+            "Ekaterina Artemova",
+            "Tatiana Batura",
+            "Pavel Braslavski",
+            "Ilia Denisov",
+            "Vladimir Ivanov",
+            "Suresh Manandhar",
+            "Alexander Pugachev",
+            "Elena Tutubalina"
+        ],
+        "Affiliations": [
+            "Lomonosov Moscow State University",
+            "HSE University",
+            "Huawei Noah's Ark lab",
+            "Novosibirsk State University",
+            "Ural Federal University",
+            "Innopolis University",
+            "Kazan Federal University",
+            "SberAI",
+            "Wiseyak"
+        ],
+        "Abstract": "In this paper, we present NEREL, a Russian dataset for named entity recognition and relation extraction. NEREL is significantly larger than existing Russian datasets: to date it contains 56K annotated named entities and 39K annotated relations. Its important difference from previous datasets is annotation of nested named entities, as well as relations within nested entities and at the discourse level. NEREL can facilitate development of novel models that can extract relations between nested named entities, as well as relations on both sentence and document levels. NEREL also contains the annotation of events involving named entities and their roles in the events."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.062331,
+        "input_tokens": 13687,
+        "output_tokens": 582
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.13112"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

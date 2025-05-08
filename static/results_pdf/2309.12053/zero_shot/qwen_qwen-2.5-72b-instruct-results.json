@@ -1,0 +1,122 @@
+{
+    "metadata": {
+        "Name": "AceGPT",
+        "Subsets": [
+            {
+                "Name": "AceGPT-7B",
+                "Volume": 19.2,
+                "Unit": "tokens",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "AceGPT-13B",
+                "Volume": 6,
+                "Unit": "tokens",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "https://github.com/FreedomIntelligence/AceGPT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media",
+            "news articles",
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "AceGPT is a localized Large Language Model (LLM) for Arabic, developed to address cultural and value alignment issues. It includes further pre-training with Arabic texts, supervised fine-tuning with native Arabic instructions, and reinforcement learning with a reward model attuned to local culture and values.",
+        "Volume": 25.2,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Freedom Intelligence"
+        ],
+        "Derived From": [
+            "LLaMA2",
+            "Arabic Wikipedia",
+            "CC100",
+            "OSCAR",
+            "Slim Pajama"
+        ],
+        "Paper Title": "AceGPT, Localizing Large Language Models in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2308.16149",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "instruction tuning",
+            "speech recognition",
+            "natural language inference",
+            "natural language inference"
+        ],
+        "Venue Title": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2023",
+        "Authors": [
+            "HuangHuang",
+            "FeiYu",
+            "JianqingZhu",
+            "XueningSun",
+            "HaoCheng",
+            "DingjieSong",
+            "ZhihongChen",
+            "AbdulmohsenAlharthi",
+            "BangAn",
+            "JuncaiHe",
+            "ZicheLiu",
+            "ZhiyiZhang",
+            "JunyingChen",
+            "JianquanLi",
+            "BenyouWang",
+            "LianZhang",
+            "RuoyuSun",
+            "XiangWan",
+            "HaizhouLi",
+            "JinchaoXu"
+        ],
+        "Affiliations": [
+            "Shenzhen International Center for Industrial and Applied Mathematics",
+            "Shenzhen Research Institute of Big Data",
+            "The Chinese University of Hong Kong, Shenzhen, China",
+            "King Abdullah University of Science and Technology, Thuwal, Saudi Arabia"
+        ],
+        "Abstract": "This paper is devoted to the development of a localized Large Language Model (LLM) specifically for Arabic, a language imbued with unique cultural characteristics inadequately addressed by current mainstream models. Significant concerns emerge when addressing cultural sensitivity and local values. To address these, the paper proposes a comprehensive solution that includes further pre-training with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and Reinforcement Learning with AI Feedback (RLAIF) employing a reward model attuned to local culture and values. The goal is to cultivate culturally cognizant and value-aligned Arabic LLMs capable of accommodating the diverse, application-specific needs of Arabic-speaking communities. Comprehensive evaluations reveal that the resulting model, dubbed 'AceGPT', sets the state-of-the-art standard for open Arabic LLMs across various benchmarks."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.38095238095238093
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.1100952,
+        "input_tokens": 73912,
+        "output_tokens": 838
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "Golos",
+        "Link": "https://github.com/sberdevices/golos",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "social media",
+            "captions"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A large Russian speech dataset consisting of 1240 hours of manually annotated audio, suitable for speech recognition research.",
+        "Volume": 1240.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber"
+        ],
+        "Derived From": [],
+        "Paper Title": "Golos: Russian Dataset for Speech Research",
+        "Paper Link": "https://arxiv.org/abs/2012.03411",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "language modeling",
+            "language modeling"
+        ],
+        "Venue Title": "arXiv preprint arXiv:2012.03411",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Nikolay Karpov",
+            "Alexander Denisenko",
+            "Fedor Minkin"
+        ],
+        "Affiliations": [
+            "Sber, Russia"
+        ],
+        "Abstract": "This paper introduces a novel Russian speech dataset called Golos, a large corpus suitable for speech research. The dataset mainly consists of recorded audio files manually annotated on the crowd-sourcing platform. The total duration of the audio is about 1240 hours. We have made the corpus freely available to download, along with the acoustic model with CTC loss prepared on this corpus. Additionally, transfer learning was applied to improve the performance of the acoustic model."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00141316,
+        "input_tokens": 9063,
+        "output_tokens": 411
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

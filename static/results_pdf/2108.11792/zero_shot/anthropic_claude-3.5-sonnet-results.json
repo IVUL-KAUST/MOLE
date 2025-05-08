@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "BSARD",
+        "Link": "https://huggingface.co/datasets/antoiloui/bsard",
+        "HF Link": "https://huggingface.co/datasets/antoiloui/bsard",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2021,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A French native dataset of 1,100+ legal questions labeled with relevant articles from Belgian legislation for statutory article retrieval",
+        "Volume": 1108.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Maastricht University",
+            "Droits Quotidiens"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Statutory Article Retrieval Dataset in French",
+        "Paper Link": "https://arxiv.org/abs/2108.11792v2",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "information retrieval"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Antoine Louis",
+            "Gerasimos Spanakis"
+        ],
+        "Affiliations": [
+            "Law & Tech Lab, Maastricht University"
+        ],
+        "Abstract": "Statutory article retrieval is the task of automatically retrieving law articles relevant to a legal question. While recent advances in natural language processing have sparked considerable interest in many legal tasks, statutory article retrieval remains primarily untouched due to the scarcity of large-scale and high-quality annotated datasets. To address this bottleneck, we introduce the Belgian Statutory Article Retrieval Dataset (BSARD), which consists of 1,100+ French native legal questions labeled by experienced jurists with relevant articles from a corpus of 22,600+ Belgian law articles. Using BSARD, we benchmark several state-of-the-art retrieval approaches, including lexical and dense architectures, both in zero-shot and supervised setups. We find that fine-tuned dense retrieval models significantly outperform other systems. Our best performing baseline achieves 74.8% R@100, which is promising for the feasibility of the task and indicates there is still room for improvement. By the specificity of the domain and addressed task, BSARD presents a unique challenge problem for future research on legal information retrieval. Our dataset and source code are publicly available."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.083274,
+        "input_tokens": 19132,
+        "output_tokens": 546
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.11792"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

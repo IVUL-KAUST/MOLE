@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "JSUT",
+        "Link": "https://sites.google.com/site/shinnosuketakamichi/publication/jsut",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "other",
+            "news articles",
+            "books",
+            "wikipedia",
+            "public datasets",
+            "web pages",
+            "TV Channels",
+            "commentary"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A free, large-scale Japanese speech corpus designed for end-to-end speech synthesis research, covering all pronunciations of daily-use kanji characters and various domains.",
+        "Volume": 10.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "TANAKA corpus",
+            "VoiceActressCorpus",
+            "SNOWE4 corpus",
+            "English-Japanese Translation Alignment Data",
+            "COURTS IN JAPAN"
+        ],
+        "Paper Title": "JSUT CORPUS: FREE LARGE-SCALE JAPANESE SPEECH CORPUS FOR END-TO-END SPEECH SYNTHESIS",
+        "Paper Link": "http://arxiv.org/abs/1v45300.1171",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "speech recognition",
+            "part of speech tagging"
+        ],
+        "Venue Title": "INTERSPEECH",
+        "Venue Type": "conference",
+        "Venue Name": "INTERSPEECH 2017",
+        "Authors": [
+            "Ryosuke Sonobe",
+            "Shinnosuke Takamichi",
+            "Hiroshi Saruwatari"
+        ],
+        "Affiliations": [
+            "Graduate School of Information Science and Technology, The University of Tokyo"
+        ],
+        "Abstract": "Thanks to improvements in machine learning techniques including deep learning, a free large-scale speech corpus that can be shared between academic institutions and commercial companies has an important role. However, such a corpus for Japanese speech synthesis does not exist. In this paper, we describe the results of constructing a free, large-scale Japanese speech corpus, named the \u201cJSUT corpus,\u201d that is aimed at achieving end-to-end speech synthesis. The corpus consists of 10 hours of reading-style speech data and its transcription and covers all of the main pronunciations of daily-use Japanese characters."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0035176,
+        "input_tokens": 7869,
+        "output_tokens": 547
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1711.00354"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "FQuAD",
+        "Link": "https://illuin-tech.github.io/FQuAD-explorer/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A French native Reading Comprehension dataset of questions and answers on a set of Wikipedia articles.",
+        "Volume": 60000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "SQuAD1.1"
+        ],
+        "Paper Title": "FQuAD: French Question Answering Dataset",
+        "Paper Link": "https://arxiv.org/abs/2002.02028",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 12th Conference on Language Resources and Evaluation",
+        "Venue Type": "conference",
+        "Venue Name": "LREC 2020",
+        "Authors": [
+            "Martin d\u2019Hoffschmidt",
+            "Wacim Belblidia",
+            "Tom Brendl\u00e9",
+            "Quentin Heinrich",
+            "Maxime Vidal"
+        ],
+        "Affiliations": [
+            "Illuin Technology",
+            "ETH Zurich"
+        ],
+        "Abstract": "Recent advances in the field of language modeling have improved state-of-the-art results on many Natural Language Processing tasks. Among them, Reading Comprehension has made significant progress over the past few years. However, most results are reported in English since labeled resources available in other languages, such as French, remain scarce. In the present work, we introduce the French Question Answering Dataset (FQuAD). FQuAD is a French Native Reading Comprehension dataset of questions and answers on a set of Wikipedia articles that consists of 25,000+ samples for the 1.0 version and 60,000+ samples for the 1.1 version."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00295068,
+        "input_tokens": 21628,
+        "output_tokens": 467
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.06071"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

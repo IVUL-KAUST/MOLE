@@ -1,0 +1,139 @@
+{
+    "metadata": {
+        "Name": "XOR-TYDI QA",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 20379,
+                "Unit": "questions",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 5704,
+                "Unit": "questions",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 12110,
+                "Unit": "questions",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 9564,
+                "Unit": "questions",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 5847,
+                "Unit": "questions",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 11218,
+                "Unit": "questions",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 8196,
+                "Unit": "questions",
+                "Language": "Telugu"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/xor_tydi_qa",
+        "HF Link": "https://huggingface.co/datasets/xor_tydi_qa",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "XOR-TYDI QA is a large-scale dataset for cross-lingual open-retrieval question answering. It features ~40k questions in 7 non-English languages, originally unanswerable in TYDI QA, now answerable using English Wikipedia, supplemented by TYDI QA's in-language data. It supports retrieval and answer generation tasks.",
+        "Volume": 20379.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Derived From": [
+            "TYDI QA"
+        ],
+        "Paper Title": "XOR QA: Cross-lingual Open-Retrieval Question Answering",
+        "Paper Link": "https://arxiv.org/abs/2011.02018",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "cross-lingual information retrieval",
+            "text generation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "Multilingual question answering tasks typically assume that answers exist in the same language as the question. Yet in practice, many languages face both information scarcity\u2014where languages have few reference articles\u2014and information asymmetry\u2014where questions reference concepts from other cultures. This work extends open-retrieval question answering to a cross-lingual setting enabling questions from one language to be answered via answer content from another language. We construct a large-scale dataset built on 40K information-seeking questions across 7 diverse non-English languages that TYDI QA could not find same-language answers for. Based on this dataset, we introduce a task framework, called Cross-lingual Open-Retrieval Question Answering (XOR QA), that consists of three new tasks involving cross-lingual document retrieval from multilingual and English resources. We establish baselines with state-of-the-art machine translation systems and cross-lingual pretrained models. Experimental results suggest that XOR QA is a challenging task that will facilitate the development of novel techniques for multilingual question answering. Our data and code are available at https://nlp.cs.washington.edu/xorqa/."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.10786875,
+        "input_tokens": 23960,
+        "output_tokens": 1013
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
