@@ -1,34 +1,35 @@
 {
-    "Name": "jpDependencyParsing",
-    "Link": "https://github.com/rinafujimoto/jpDependencyParsing",
-    "HF Link": "",
-    "License": "unknown",
-    "Year": 2023,
+    "Name": "jpMeterClassification",
+    "Link": "https://github.com/rinafujimoto/jpMeterClassification",
+    "HF Link": "https://huggingface.co/datasets/PSDV/jpMeterClassification",
+    "License": "Apache-2.0",
+    "Year": 2010,
     "Language": "jp",
     "Domain": [
+        "web pages",
         "social media"
     ],
     "Form": "text",
     "Collection Style": [
-        "machine annotation"
+        "human annotation"
     ],
-    "Description": "jpDependencyParsing is a dependency parsing dataset, that contains 7952.0 sentences",
-    "Volume": 7952.0,
+    "Description": "jpMeterClassification is a meter classification dataset, that contains 3191.0 sentences",
+    "Volume": 3191.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        ""
+        "PSDV"
     ],
     "Derived From": [],
-    "Paper Title": "jpDependencyParsing: A dependency parsing dataset for jp",
+    "Paper Title": "jpMeterClassification: A meter classification dataset for jp",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "dependency parsing"
+        "meter classification"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
@@ -38,8 +39,9 @@
         "Yuki Nakamura"
     ],
     "Affiliations": [
-        "Kyoto University",
-        "Nagoya University"
+        "Osaka University",
+        "Tohoku University"
     ],
-    "Abstract": ""
+    "Abstract": "",
+    "Script": "mixed"
 }

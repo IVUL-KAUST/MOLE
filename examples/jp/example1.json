@@ -1,34 +1,36 @@
 {
-    "Name": "jpNamedEntityRecognition",
-    "Link": "https://github.com/rinafujimoto/jpNamedEntityRecognition",
-    "HF Link": "https://huggingface.co/datasets/WOQY/jpNamedEntityRecognition",
-    "License": "ODC-By",
-    "Year": 2017,
+    "Name": "jpReviewClassification",
+    "Link": "https://github.com/rinafujimoto/jpReviewClassification",
+    "HF Link": "",
+    "License": "CC BY-NC-ND 3.0",
+    "Year": 2011,
     "Language": "jp",
     "Domain": [
-        "TV Channels"
+        "web pages",
+        "captions",
+        "news articles"
     ],
     "Form": "text",
     "Collection Style": [
-        "LLM generated"
+        "crawling"
     ],
-    "Description": "jpNamedEntityRecognition is a named entity recognition dataset, that contains 3868.0 sentences",
-    "Volume": 3868.0,
+    "Description": "jpReviewClassification is a review classification dataset, that contains 9733.0 sentences",
+    "Volume": 9733.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        "WOQY"
+        ""
     ],
     "Derived From": [],
-    "Paper Title": "jpNamedEntityRecognition: A named entity recognition dataset for jp",
+    "Paper Title": "jpReviewClassification: A review classification dataset for jp",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "named entity recognition"
+        "review classification"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
@@ -39,7 +41,8 @@
     ],
     "Affiliations": [
         "Nagoya University",
-        "Kyoto University"
+        "Osaka University"
     ],
-    "Abstract": ""
+    "Abstract": "",
+    "Script": "Kanji"
 }

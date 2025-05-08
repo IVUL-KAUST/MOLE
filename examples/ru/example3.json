@@ -1,45 +1,46 @@
 {
-    "Name": "ruTransliteration",
-    "Link": "https://github.com/sergeyvolkov/ruTransliteration",
+    "Name": "ruGenderIdentification",
+    "Link": "https://github.com/dmitryivanov/ruGenderIdentification",
     "HF Link": "",
-    "License": "CC0",
-    "Year": 2012,
+    "License": "Apache-1.0",
+    "Year": 2020,
     "Language": "ru",
     "Domain": [
-        "web pages"
+        "wikipedia",
+        "public datasets"
     ],
     "Form": "text",
     "Collection Style": [
-        "manual curation"
+        "LLM generated"
     ],
-    "Description": "ruTransliteration is a transliteration dataset, that contains 1192.0 sentences",
-    "Volume": 1192.0,
+    "Description": "ruGenderIdentification is a gender identification dataset, that contains 6989.0 sentences",
+    "Volume": 6989.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
         ""
     ],
     "Derived From": [],
-    "Paper Title": "ruTransliteration: A transliteration dataset for ru",
+    "Paper Title": "ruGenderIdentification: A gender identification dataset for ru",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "transliteration"
+        "gender identification"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Sergey Volkov",
-        "Dmitry Ivanov"
+        "Dmitry Ivanov",
+        "Ivan Petrov"
     ],
     "Affiliations": [
-        "Tomsk Polytechnic University",
-        "Saint Petersburg Polytechnic University"
+        "Novosibirsk State University",
+        "Moscow State University"
     ],
     "Abstract": ""
 }

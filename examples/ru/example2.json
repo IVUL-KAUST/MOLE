@@ -1,45 +1,47 @@
 {
-    "Name": "ruSentimentAnalysis",
-    "Link": "https://github.com/olgasokolova/ruSentimentAnalysis",
-    "HF Link": "",
-    "License": "CC BY-NC 2.0",
-    "Year": 2025,
+    "Name": "ruDependencyParsing",
+    "Link": "https://github.com/sergeyvolkov/ruDependencyParsing",
+    "HF Link": "https://huggingface.co/datasets/MRED/ruDependencyParsing",
+    "License": "LDC User Agreement",
+    "Year": 2017,
     "Language": "ru",
     "Domain": [
-        "web pages"
+        "social media",
+        "public datasets",
+        "wikipedia"
     ],
     "Form": "text",
     "Collection Style": [
-        "human annotation"
+        "LLM generated"
     ],
-    "Description": "ruSentimentAnalysis is a sentiment analysis dataset, that contains 2236.0 sentences",
-    "Volume": 2236.0,
+    "Description": "ruDependencyParsing is a dependency parsing dataset, that contains 9675.0 sentences",
+    "Volume": 9675.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        ""
+        "MRED"
     ],
     "Derived From": [],
-    "Paper Title": "ruSentimentAnalysis: A sentiment analysis dataset for ru",
+    "Paper Title": "ruDependencyParsing: A dependency parsing dataset for ru",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "sentiment analysis"
+        "dependency parsing"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Olga Sokolova",
-        "Sergey Volkov"
+        "Sergey Volkov",
+        "Olga Sokolova"
     ],
     "Affiliations": [
-        "Moscow State University",
-        "Saint Petersburg Polytechnic University"
+        "Kazan Federal University",
+        "Tomsk Polytechnic University"
     ],
     "Abstract": ""
 }

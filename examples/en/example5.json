@@ -1,45 +1,45 @@
 {
-    "Name": "enQuestionAnswering",
-    "Link": "https://github.com/oliviabennett/enQuestionAnswering",
+    "Name": "enNamedEntityRecognition",
+    "Link": "https://github.com/emilycarter/enNamedEntityRecognition",
     "HF Link": "",
-    "License": "MIT License",
-    "Year": 2016,
+    "License": "CC BY-SA 4.0",
+    "Year": 2019,
     "Language": "en",
     "Domain": [
-        "books"
+        "captions"
     ],
     "Form": "text",
     "Collection Style": [
         "human annotation"
     ],
-    "Description": "enQuestionAnswering is a question answering dataset, that contains 4348.0 sentences",
-    "Volume": 4348.0,
+    "Description": "enNamedEntityRecognition is a named entity recognition dataset, that contains 8692.0 sentences",
+    "Volume": 8692.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
         ""
     ],
     "Derived From": [],
-    "Paper Title": "enQuestionAnswering: A question answering dataset for en",
+    "Paper Title": "enNamedEntityRecognition: A named entity recognition dataset for en",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "question answering"
+        "named entity recognition"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Olivia Bennett",
-        "Emily Carter"
+        "Emily Carter",
+        "James Richardson"
     ],
     "Affiliations": [
-        "University of Cambridge",
-        "Massachusetts Institute of Technology"
+        "University of Oxford",
+        "Stanford University"
     ],
     "Abstract": ""
 }

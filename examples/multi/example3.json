@@ -1,0 +1,78 @@
+{
+    "Name": "multiLinguisticAcceptability",
+    "Link": "https://github.com/sophiamitchell/multiLinguisticAcceptability",
+    "HF Link": "",
+    "License": "unknown",
+    "Year": 2024,
+    "Language": [
+        "French",
+        "Polish",
+        "Telugu",
+        "Greek"
+    ],
+    "Domain": [
+        "books",
+        "social media",
+        "captions"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "human annotation"
+    ],
+    "Description": "multiLinguisticAcceptability is a Linguistic acceptability dataset, that contains 29486.0 sentences",
+    "Volume": 29486.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "multiLinguisticAcceptability: A Linguistic acceptability dataset for multi",
+    "Paper Link": "",
+    "Tokenized": false,
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": false,
+    "Tasks": [
+        "Linguistic acceptability"
+    ],
+    "Venue Title": "arXiv",
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Sophia Mitchell",
+        "James Richardson"
+    ],
+    "Affiliations": [
+        "Stanford University",
+        "Massachusetts Institute of Technology"
+    ],
+    "Abstract": "",
+    "Subsets": [
+        {
+            "Name": "French",
+            "Volume": 9528,
+            "Unit": "sentences",
+            "Language": "French"
+        },
+        {
+            "Name": "Polish",
+            "Volume": 3099,
+            "Unit": "sentences",
+            "Language": "Polish"
+        },
+        {
+            "Name": "Telugu",
+            "Volume": 7366,
+            "Unit": "sentences",
+            "Language": "Telugu"
+        },
+        {
+            "Name": "Greek",
+            "Volume": 9493,
+            "Unit": "sentences",
+            "Language": "Greek"
+        }
+    ]
+}

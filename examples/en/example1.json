@@ -1,44 +1,45 @@
 {
-    "Name": "enDependencyParsing",
-    "Link": "https://github.com/oliviabennett/enDependencyParsing",
+    "Name": "enTextGeneration",
+    "Link": "https://github.com/oliviabennett/enTextGeneration",
     "HF Link": "",
-    "License": "CC0",
-    "Year": 2012,
+    "License": "CDLA-Permissive-2.0",
+    "Year": 2020,
     "Language": "en",
     "Domain": [
-        "commentary"
+        "TV Channels",
+        "web pages"
     ],
     "Form": "text",
     "Collection Style": [
-        "manual curation"
+        "human annotation"
     ],
-    "Description": "enDependencyParsing is a dependency parsing dataset, that contains 9336.0 sentences",
-    "Volume": 9336.0,
+    "Description": "enTextGeneration is a text generation dataset, that contains 5198.0 sentences",
+    "Volume": 5198.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        "XAWG"
+        ""
     ],
     "Derived From": [],
-    "Paper Title": "enDependencyParsing: A dependency parsing dataset for en",
+    "Paper Title": "enTextGeneration: A text generation dataset for en",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "dependency parsing"
+        "text generation"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
         "Olivia Bennett",
-        "Emily Carter"
+        "Sophia Mitchell"
     ],
     "Affiliations": [
-        "University of Cambridge",
+        "University of Oxford",
         "Stanford University"
     ],
     "Abstract": ""

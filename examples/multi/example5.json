@@ -1,0 +1,70 @@
+{
+    "Name": "multiTextGeneration",
+    "Link": "https://github.com/jamesrichardson/multiTextGeneration",
+    "HF Link": "",
+    "License": "CC BY-NC 1.0",
+    "Year": 2016,
+    "Language": [
+        "Bulgarian",
+        "Russian",
+        "Vietnamese"
+    ],
+    "Domain": [
+        "wikipedia",
+        "news articles"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "human annotation"
+    ],
+    "Description": "multiTextGeneration is a text generation dataset, that contains 24066.0 sentences",
+    "Volume": 24066.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "multiTextGeneration: A text generation dataset for multi",
+    "Paper Link": "",
+    "Tokenized": false,
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": false,
+    "Tasks": [
+        "text generation"
+    ],
+    "Venue Title": "arXiv",
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "James Richardson",
+        "Sophia Mitchell"
+    ],
+    "Affiliations": [
+        "Stanford University",
+        "University of Oxford"
+    ],
+    "Abstract": "",
+    "Subsets": [
+        {
+            "Name": "Bulgarian",
+            "Volume": 8909,
+            "Unit": "sentences",
+            "Language": "Bulgarian"
+        },
+        {
+            "Name": "Russian",
+            "Volume": 9133,
+            "Unit": "sentences",
+            "Language": "Russian"
+        },
+        {
+            "Name": "Vietnamese",
+            "Volume": 6024,
+            "Unit": "sentences",
+            "Language": "Vietnamese"
+        }
+    ]
+}

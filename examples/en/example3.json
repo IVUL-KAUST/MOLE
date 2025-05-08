@@ -1,45 +1,47 @@
 {
-    "Name": "enOffensiveLanguageDetection",
-    "Link": "https://github.com/oliviabennett/enOffensiveLanguageDetection",
+    "Name": "enFakeNewsDetection",
+    "Link": "https://github.com/sophiamitchell/enFakeNewsDetection",
     "HF Link": "",
-    "License": "BSD",
-    "Year": 2021,
+    "License": "CC BY-SA 4.0",
+    "Year": 2019,
     "Language": "en",
     "Domain": [
-        "TV Channels"
+        "news articles",
+        "captions",
+        "public datasets"
     ],
     "Form": "text",
     "Collection Style": [
         "machine annotation"
     ],
-    "Description": "enOffensiveLanguageDetection is a offensive language detection dataset, that contains 3992.0 sentences",
-    "Volume": 3992.0,
+    "Description": "enFakeNewsDetection is a fake news detection dataset, that contains 8212.0 sentences",
+    "Volume": 8212.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
         ""
     ],
     "Derived From": [],
-    "Paper Title": "enOffensiveLanguageDetection: A offensive language detection dataset for en",
+    "Paper Title": "enFakeNewsDetection: A fake news detection dataset for en",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "offensive language detection"
+        "fake news detection"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Olivia Bennett",
+        "Sophia Mitchell",
         "Emily Carter"
     ],
     "Affiliations": [
-        "Harvard University",
-        "University of Cambridge"
+        "University of Cambridge",
+        "University of Oxford"
     ],
     "Abstract": ""
 }

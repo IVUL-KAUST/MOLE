@@ -1,19 +1,21 @@
 {
     "Name": "frQuestionAnswering",
-    "Link": "https://github.com/louisdupont/frQuestionAnswering",
+    "Link": "https://github.com/jean-pierremartin/frQuestionAnswering",
     "HF Link": "",
-    "License": "MPL-2.0",
-    "Year": 2020,
+    "License": "GPL-1.0",
+    "Year": 2019,
     "Language": "fr",
     "Domain": [
-        "public datasets"
+        "news articles",
+        "LLM",
+        "TV Channels"
     ],
     "Form": "text",
     "Collection Style": [
-        "human annotation"
+        "manual curation"
     ],
-    "Description": "frQuestionAnswering is a question answering dataset, that contains 6377.0 sentences",
-    "Volume": 6377.0,
+    "Description": "frQuestionAnswering is a question answering dataset, that contains 1983.0 sentences",
+    "Volume": 1983.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
@@ -22,11 +24,11 @@
     "Derived From": [],
     "Paper Title": "frQuestionAnswering: A question answering dataset for fr",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
         "question answering"
     ],
@@ -34,12 +36,12 @@
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Louis Dupont",
+        "Jean-Pierre Martin",
         "Camille Laurent"
     ],
     "Affiliations": [
-        "Universit\u00e9 de Bordeaux",
-        "Universit\u00e9 de Lyon"
+        "Sorbonne University",
+        "Universit\u00e9 de Bordeaux"
     ],
     "Abstract": ""
 }

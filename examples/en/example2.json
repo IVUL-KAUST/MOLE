@@ -1,44 +1,46 @@
 {
-    "Name": "enDialectIdentification",
-    "Link": "https://github.com/oliviabennett/enDialectIdentification",
+    "Name": "enInstructionTuning",
+    "Link": "https://github.com/danielfoster/enInstructionTuning",
     "HF Link": "",
-    "License": "BSD",
-    "Year": 2020,
+    "License": "CC BY-NC 1.0",
+    "Year": 2019,
     "Language": "en",
     "Domain": [
+        "wikipedia",
+        "news articles",
         "commentary"
     ],
     "Form": "text",
     "Collection Style": [
-        "LLM generated"
+        "human annotation"
     ],
-    "Description": "enDialectIdentification is a dialect identification dataset, that contains 7973.0 sentences",
-    "Volume": 7973.0,
+    "Description": "enInstructionTuning is a instruction tuning dataset, that contains 6618.0 sentences",
+    "Volume": 6618.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
         ""
     ],
     "Derived From": [],
-    "Paper Title": "enDialectIdentification: A dialect identification dataset for en",
+    "Paper Title": "enInstructionTuning: A instruction tuning dataset for en",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "dialect identification"
+        "instruction tuning"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Olivia Bennett",
-        "James Richardson"
+        "Daniel Foster",
+        "Sophia Mitchell"
     ],
     "Affiliations": [
-        "University of Oxford",
+        "Massachusetts Institute of Technology",
         "University of Cambridge"
     ],
     "Abstract": ""

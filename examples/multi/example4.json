@@ -1,0 +1,84 @@
+{
+    "Name": "multiFakeNewsDetection",
+    "Link": "https://github.com/sophiamitchell/multiFakeNewsDetection",
+    "HF Link": "",
+    "License": "CC BY-SA 4.0",
+    "Year": 2010,
+    "Language": [
+        "Arabic",
+        "Chinese",
+        "Polish",
+        "Swahili",
+        "Vietnamese"
+    ],
+    "Domain": [
+        "TV Channels",
+        "LLM"
+    ],
+    "Form": "text",
+    "Collection Style": [
+        "crawling"
+    ],
+    "Description": "multiFakeNewsDetection is a fake news detection dataset, that contains 39660.0 sentences",
+    "Volume": 39660.0,
+    "Unit": "sentences",
+    "Ethical Risks": "Low",
+    "Provider": [
+        ""
+    ],
+    "Derived From": [],
+    "Paper Title": "multiFakeNewsDetection: A fake news detection dataset for multi",
+    "Paper Link": "",
+    "Tokenized": false,
+    "Host": "GitHub",
+    "Access": "Free",
+    "Cost": "",
+    "Test Split": false,
+    "Tasks": [
+        "fake news detection"
+    ],
+    "Venue Title": "arXiv",
+    "Venue Type": "preprint",
+    "Venue Name": "",
+    "Authors": [
+        "Sophia Mitchell",
+        "Daniel Foster"
+    ],
+    "Affiliations": [
+        "Stanford University",
+        "University of Oxford"
+    ],
+    "Abstract": "",
+    "Subsets": [
+        {
+            "Name": "Arabic",
+            "Volume": 8838,
+            "Unit": "sentences",
+            "Language": "Arabic"
+        },
+        {
+            "Name": "Chinese",
+            "Volume": 7496,
+            "Unit": "sentences",
+            "Language": "Chinese"
+        },
+        {
+            "Name": "Polish",
+            "Volume": 7559,
+            "Unit": "sentences",
+            "Language": "Polish"
+        },
+        {
+            "Name": "Swahili",
+            "Volume": 8653,
+            "Unit": "sentences",
+            "Language": "Swahili"
+        },
+        {
+            "Name": "Vietnamese",
+            "Volume": 7114,
+            "Unit": "sentences",
+            "Language": "Vietnamese"
+        }
+    ]
+}

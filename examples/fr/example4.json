@@ -1,45 +1,46 @@
 {
-    "Name": "frMachineTranslation",
-    "Link": "https://github.com/louisdupont/frMachineTranslation",
+    "Name": "frFakeNewsDetection",
+    "Link": "https://github.com/camillelaurent/frFakeNewsDetection",
     "HF Link": "",
-    "License": "ODbl-1.0",
-    "Year": 2020,
+    "License": "CC BY-SA 1.0",
+    "Year": 2017,
     "Language": "fr",
     "Domain": [
-        "web pages"
+        "TV Channels",
+        "books"
     ],
     "Form": "text",
     "Collection Style": [
-        "crawling"
+        "LLM generated"
     ],
-    "Description": "frMachineTranslation is a machine translation dataset, that contains 7175.0 sentences",
-    "Volume": 7175.0,
+    "Description": "frFakeNewsDetection is a fake news detection dataset, that contains 9468.0 sentences",
+    "Volume": 9468.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        ""
+        "DOQD"
     ],
     "Derived From": [],
-    "Paper Title": "frMachineTranslation: A machine translation dataset for fr",
+    "Paper Title": "frFakeNewsDetection: A fake news detection dataset for fr",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "machine translation"
+        "fake news detection"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Louis Dupont",
+        "Camille Laurent",
         "\u00c9mile Moreau"
     ],
     "Affiliations": [
-        "\u00c9cole Polytechnique",
-        "Universit\u00e9 de Lyon"
+        "Sorbonne University",
+        "Universit\u00e9 de Bordeaux"
     ],
     "Abstract": ""
 }

@@ -1,45 +1,46 @@
 {
-    "Name": "frQuestionAnswering",
-    "Link": "https://github.com/camillelaurent/frQuestionAnswering",
+    "Name": "frInformationRetrieval",
+    "Link": "https://github.com/jean-pierremartin/frInformationRetrieval",
     "HF Link": "",
-    "License": "CC BY-NC 4.0",
-    "Year": 2014,
+    "License": "CC0",
+    "Year": 2019,
     "Language": "fr",
     "Domain": [
-        "commentary"
+        "TV Channels",
+        "captions"
     ],
     "Form": "text",
     "Collection Style": [
-        "crawling"
+        "machine annotation"
     ],
-    "Description": "frQuestionAnswering is a question answering dataset, that contains 3513.0 sentences",
-    "Volume": 3513.0,
+    "Description": "frInformationRetrieval is a information retrieval dataset, that contains 2988.0 sentences",
+    "Volume": 2988.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        "WDFP"
+        ""
     ],
     "Derived From": [],
-    "Paper Title": "frQuestionAnswering: A question answering dataset for fr",
+    "Paper Title": "frInformationRetrieval: A information retrieval dataset for fr",
     "Paper Link": "",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
-        "question answering"
+        "information retrieval"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
-        "Camille Laurent",
-        "Sophie Dubois"
+        "Jean-Pierre Martin",
+        "\u00c9mile Moreau"
     ],
     "Affiliations": [
-        "Sorbonne University",
-        "Universit\u00e9 de Bordeaux"
+        "Universit\u00e9 de Lyon",
+        "\u00c9cole Polytechnique"
     ],
     "Abstract": ""
 }
