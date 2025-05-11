@@ -20,6 +20,7 @@ args.add_argument("--results_path", type = str, default = "static/results_latex"
 args.add_argument("--length", action="store_true")
 args.add_argument("--non_browsing", action="store_true")
 args.add_argument("--browsing", action="store_true")
+args.add_argument("--errors", action="store_true")
 args = args.parse_args()
 
 # evaluation_subsets = schema[args.schema]['evaluation_subsets']
@@ -73,6 +74,37 @@ def get_all_ids():
 def get_openrouter_cost(model_name, input_tokens, output_tokens):
     model_name = model_name.split("_")[1]
     return (open_router_costs[model_name]["input"] * input_tokens + open_router_costs[model_name]["output"] * output_tokens) / (1e6)
+
+def plot_by_errors():
+    ids = get_all_ids()
+    metric_results = {}
+    json_files = glob(f"static/results_**/**/**/**/*.json") + glob(f"static/results_**/**/**/*.json")
+    for json_file in json_files:
+        results = json.load(open(json_file))
+        arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
+        if arxiv_id not in ids:
+            continue
+        model_name = results["config"]["model_name"]
+        if "-browsing" in model_name:
+            model_name = model_name.replace("-browsing", "")
+        if model_name in non_browsing_models:
+            continue
+        if model_name not in metric_results:
+            metric_results[model_name] = []
+        is_error = 1 if results["error"] else 0
+        metric_results[model_name].append([is_error])
+    final_results = {}
+    for model_name in metric_results:
+        final_results[model_name] = metric_results[model_name]
+
+    results = []
+    for model_name in final_results:
+        results.append(
+            [remap_names(model_name)] + (np.sum(final_results[model_name], axis=0)).tolist()
+        )
+
+    headers = ["Model", "Number of Errors"]
+    print_table(results, headers)
 
 def plot_by_cost():
     ids = get_all_ids()
@@ -280,6 +312,68 @@ def plot_langs():
             "* Computed average by considering metadata exctracted from outside the paper."
         )
 
+def plot_context_length():
+    headers = [ "MODEL"] + ["quarter", "half", "all"]
+    ids = get_all_ids()
+    metric_results = {}
+    use_annotations_paper = args.use_annotations_paper
+
+    for json_file in json_files:
+        results = json.load(open(json_file))
+        arxiv_id = get_id_from_path(json_file)
+        if arxiv_id not in ids:
+            continue
+        model_name = results["config"]["model_name"]
+        pred_metadata = results["metadata"]
+        if model_name not in metric_results:
+            metric_results[model_name] = {}
+        gold_metadata = get_metadata_from_id(json_file)
+        for i in ["quarter", "half", "all"]:
+            if i not in metric_results[model_name]:
+                metric_results[model_name][i] = []
+
+            if i == "all":
+                pred_metadata = json.load(open(json_file))['metadata']
+            else:
+                few_shot_path = json_file.replace("results_latex", f"results_context_{i}")
+                if os.path.exists(few_shot_path):
+                    pred_metadata = json.load(open(few_shot_path))['metadata']
+                else:
+                    continue
+
+            scores = evaluate_metadata(
+                gold_metadata, pred_metadata,
+                schema = get_schema_from_path(json_file)
+            )
+            scores = [scores["AVERAGE"]]
+            if use_annotations_paper:
+                average_ignore_mistakes = evaluate_metadata(
+                    gold_metadata, pred_metadata, use_annotations_paper=True
+                )["AVERAGE"]
+                scores = [average_ignore_mistakes]
+            metric_results[model_name][i].append(scores[0])
+    results = []
+    # print(metric_results)
+    for model_name in metric_results:
+        if "human" in model_name.lower():
+            continue
+        few_shot_scores = []
+        for i in ["quarter", "half", "all"]:
+            print(i, len(metric_results[model_name][i]), len(ids))
+            try:
+                if len(metric_results[model_name][i]) == len(ids):
+                    few_shot_scores.append(float(np.mean(metric_results[model_name][i]) * 100))
+                else:
+                    few_shot_scores.append(0)
+            except:
+                few_shot_scores.append(0)
+        results.append([remap_names(model_name)] + few_shot_scores)
+    print_table(results, headers, format = False)
+    if use_annotations_paper:
+        print(
+            "* Computed average by considering metadata exctracted from outside the paper."
+        )
+
 def plot_fewshot():
     headers = [ "MODEL"] + [f'{idx}-fewshot' for idx in [0, 1, 3, 5]]
     ids = get_all_ids()
@@ -477,6 +571,10 @@ if __name__ == "__main__":
 
     if args.type == 'fewshot':
         plot_fewshot()
+    elif args.type == 'context_length':
+        plot_context_length()
+    elif args.errors:
+        plot_by_errors()
     elif args.length:
         plot_by_length()
     elif args.year:
