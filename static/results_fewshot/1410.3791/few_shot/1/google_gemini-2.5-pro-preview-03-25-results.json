@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 178000000.0,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "CC BY-SA 3.0",
+        "Year": 2013,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A multilingual Named Entity Recognition dataset bootstrapped from Wikipedia for 40 languages, using projected labels from an English NER system. No labeled data in the target languages is required.",
+        "Volume": 178000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stony Brook University"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://doi.org/10.1137/1.9781611972832.52",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the 2013 SIAM International Conference on Data Mining",
+        "Venue Type": "conference",
+        "Venue Name": "SIAM International Conference on Data Mining",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Stony Brook University"
+        ],
+        "Abstract": "We present a method for bootstrapping a named entity recognizer for a new language using Wikipedia. Our system requires no labeled data in the target language, no knowledge of the target language, and no bilingual dictionary or parallel corpora. We achieve this by exploiting the structural properties of Wikipedia, specifically its category tags, infoboxes, and the inter-language links that connect articles on the same topic in different languages. We use these links to project labels from an English named entity recognizer to the target language. We then train a sequence model using these projected labels. We evaluate our system on seven diverse languages and show an average F1 score of 76.1%, which is within 10.9% of a fully supervised system. We release our models and the data used to train them for 40 major languages."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0865475,
+        "input_tokens": 4362,
+        "output_tokens": 612
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 1,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

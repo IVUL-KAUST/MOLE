@@ -1,0 +1,95 @@
+{
+    "metadata": {
+        "Name": "FLORES-101",
+        "Subsets": [],
+        "Link": "https://dl.fbaipublicfiles.com/flores101/dataset/flores101_dataset.tar.gz",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia",
+            "news articles",
+            "books",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A multilingual machine translation evaluation benchmark with 3001 sentences from English Wikipedia, professionally translated into 101 languages, covering diverse topics.",
+        "Volume": 3001.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research"
+        ],
+        "Derived From": [
+            "English Wikipedia",
+            "Wikinews",
+            "Wikijunior",
+            "WikiVoyage"
+        ],
+        "Paper Title": "The FLORES-101 Evaluation Benchmark for Low-Resource and Multilingual Machine Translation",
+        "Paper Link": "https://arxiv.org/abs/2106.03193",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "meter classification",
+            "language identification",
+            "topic classification"
+        ],
+        "Venue Title": "Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume",
+        "Venue Type": "conference",
+        "Venue Name": "Conference of the European Chapter of the Association for Computational Linguistics",
+        "Authors": [
+            "Naman Goyal",
+            "Cynthia Gao",
+            "Vishrav Chaudhary",
+            "Peng-Jen Chen",
+            "Guillaume Wenzek",
+            "Da Ju",
+            "Sanjana Krishnan",
+            "Marc'Aurelio Ranzato",
+            "Francisco Guzm{'{a}}n",
+            "Angela Fan"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "LORIA"
+        ],
+        "Abstract": "One of the biggest challenges hindering progress in low-resource and multilingual machine translation is the lack of good evaluation benchmarks. nCurrent evaluation benchmarks either lack good coverage of low-resource languages, consider only restricted domains, or are low quality because they are constructed using semi-automatic procedures. nIn this work, we introduce the FLORES-101 evaluation benchmark, consisting of 3001 sentences extracted from English Wikipedia and covering a variety of different topics and domains. nThese sentences have been translated in 101 languages by professional translators through a carefully controlled process. nThe resulting dataset enables better assessment of model quality on the long tail of low-resource languages, including the evaluation of many-to-many multilingual translation systems, as all translations are multilingually aligned. nBy publicly releasing such a high-quality and high-coverage dataset, we hope to foster progress in the machine translation community and beyond."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.120115,
+        "input_tokens": 32767,
+        "output_tokens": 691
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 1,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.03193"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

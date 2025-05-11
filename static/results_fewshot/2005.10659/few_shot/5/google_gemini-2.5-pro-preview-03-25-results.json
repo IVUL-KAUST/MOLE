@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "RuBQ",
+        "Link": "http://doi.org/10.5281/zenodo.3835913",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": "multilingual",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "RuBQ is a Russian KBQA dataset with 1,500 questions (plus English translations), SPARQL queries for Wikidata, and answers, sourced from online quizzes and verified through crowdsourcing and in-house annotation.",
+        "Volume": 1500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "ITMO University",
+            "JetBrains Research",
+            "Ural Federal University"
+        ],
+        "Derived From": [
+            "Wikidata",
+            "web pages"
+        ],
+        "Paper Title": "RuBQ: A Russian Dataset for Question Answering over Wikidata",
+        "Paper Link": "https://arxiv.org/abs/2005.10659",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "dependency parsing"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Vladislav Korablinov",
+            "Pavel Braslavski"
+        ],
+        "Affiliations": [
+            "ITMO University",
+            "JetBrains Research",
+            "Ural Federal University"
+        ],
+        "Abstract": "The paper presents RuBQ, the first Russian knowledge base question answering (KBQA) dataset. The high-quality dataset consists of 1,500 Russian questions of varying complexity, their English machine translations, SPARQL queries to Wikidata, reference answers, as well as a Wikidata sample of triples containing entities with Russian labels. The dataset creation started with a large collection of question-answer pairs from online quizzes. The data underwent automatic filtering, crowd-assisted entity linking, automatic generation of SPARQL queries, and their subsequent in-house verification. The freely available dataset will be of interest for a wide community of researchers and practitioners in the areas of Semantic Web, NLP, and IR, especially for those working on multilingual question answering. The proposed dataset generation pipeline proved to be efficient and can be employed in other data annotation projects."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.08862,
+        "input_tokens": 13617,
+        "output_tokens": 565
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 5,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.10659"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

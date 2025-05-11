@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "AceGPT",
+        "Subsets": [],
+        "Link": "https://github.com/FreedomIntelligence/AceGPT",
+        "HF Link": "",
+        "License": "CC BY-NC 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "AceGPT is a localized Large Language Model (LLM) for Arabic, designed to align with Arabic culture and values. It includes further pre-training with Arabic texts, supervised fine-tuning with native Arabic instructions, and reinforcement learning with a reward model attuned to local culture.",
+        "Volume": 19.2,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Shenzhen International Center for Industrial and Applied Mathematics",
+            "The Chinese University of Hong Kong",
+            "King Abdullah University of Science and Technology",
+            "Shenzhen Research Institute of Big Data"
+        ],
+        "Derived From": [
+            "ArabicText-2022",
+            "Quora",
+            "Alpaca",
+            "Evol-Instruct",
+            "Code-Alpaca",
+            "ShareGPT"
+        ],
+        "Paper Title": "AceGPT, Localizing Large Language Models in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2309.12053",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "instruction tuning",
+            "Linguistic acceptability",
+            "language modeling",
+            "natural language inference"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Huang Huang",
+            "Fei Yu",
+            "Jianqing Zhu",
+            "Xuening Sun",
+            "Hao Cheng",
+            "Dingjie Song",
+            "Zhihong Chen",
+            "Abdulmohsen Alharthi",
+            "Bang An",
+            "Juncai He",
+            "Ziche Liu",
+            "Zhiyi Zhang",
+            "Junying Chen",
+            "Jianquan Li",
+            "Benyou Wang",
+            "Lian Zhang",
+            "Ruoyu Sun",
+            "Xiang Wan",
+            "Haizhou Li",
+            "Jinchao Xu"
+        ],
+        "Affiliations": [
+            "Shenzhen International Center for Industrial and Applied Mathematics",
+            "Shenzhen Research Institute of Big Data",
+            "The Chinese University of Hong Kong",
+            "King Abdullah University of Science and Technology",
+            "Shenzhen Research Institute of Big Data"
+        ],
+        "Abstract": "This paper is devoted to the development of a localized Large Language Model (LLM) specifically for Arabic, a language imbued with unique cultural characteristics inadequately addressed by current mainstream models. Significant concerns emerge when addressing cultural sensitivity and local values. To address this, the paper proposes a comprehensive solution that includes further pre-training with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and GPT-4 responses in Arabic, alongside Reinforcement Learning with AI Feedback (RLAIF) employing a reward model attuned to local culture and values. The goal is to cultivate culturally cognizant and value-aligned Arabic LLMs capable of accommodating the diverse, application-specific needs of Arabic-speaking communities. Comprehensive evaluations reveal that the resulting model, dubbed `AceGPT', sets the state-of-the-art standard for open Arabic LLMs across various benchmarks. Codes, data, and models are in https://github.com/FreedomIntelligence/AceGPT."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00531861,
+        "input_tokens": 36375,
+        "output_tokens": 751
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 3,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

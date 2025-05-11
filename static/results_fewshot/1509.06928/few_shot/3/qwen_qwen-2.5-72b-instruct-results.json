@@ -1,0 +1,126 @@
+{
+    "metadata": {
+        "Name": "ArabicDialectIDCorpus",
+        "Subsets": [
+            {
+                "Name": "EGY",
+                "Volume": 13.0,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "GLF",
+                "Volume": 9.5,
+                "Unit": "hours",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "LAV",
+                "Volume": 11.0,
+                "Unit": "hours",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "NOR",
+                "Volume": 9.0,
+                "Unit": "hours",
+                "Dialect": "North Africa"
+            },
+            {
+                "Name": "MSA",
+                "Volume": 10.0,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "ENG",
+                "Volume": 10.0,
+                "Unit": "hours",
+                "Dialect": "English"
+            }
+        ],
+        "Link": "http://alt.qcri.org/resources/ArabicDialectIDCorpus/",
+        "HF Link": "",
+        "License": "CC BY-NC 4.0",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "TV Channels",
+            "captions"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A dataset for dialect identification in Arabic broadcast speech, containing 10 hours of speech for each of the five most widely used dialects: Egyptian, Gulf, Levantine, North African, and Modern Standard Arabic.",
+        "Volume": 63.5,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "JHU Center for Language and Speech Processing",
+            "\u00c9cole de technologie sup\u00e9rieure",
+            "University of Edinburgh"
+        ],
+        "Derived From": [],
+        "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
+        "Paper Link": "https://arxiv.org/abs/1509.06928",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "QCRI Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification"
+        ],
+        "Venue Title": "Interspeech",
+        "Venue Type": "conference",
+        "Venue Name": "Interspeech 2016",
+        "Authors": [
+            "Ahmed Ali",
+            "Najim Dehak",
+            "Patrick Cardinal",
+            "Sameer Khurana",
+            "Sree Harsha Yella",
+            "James Glass",
+            "Peter Bell",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "MIT Computer Science and Artificial Intelligence Laboratory, Cambridge, MA, USA",
+            "JHU Center for Language and Speech Processing, Baltimore, MD, USA",
+            "\u00c9cole de technologie sup\u00e9rieure, D\u00e9partement de G\u00e9nie Logiciel et des TI, Montr\u00e9al, Canada",
+            "University of Edinburgh, UK"
+        ],
+        "Abstract": "This paper investigates different approaches for dialect identification in Arabic broadcast speech. The dataset was collected from the Broadcast News domain in four Arabic dialects (EGY, LAV, GLF, and NOR) as well as MSA. The dataset contains 10 hours of speech for each dialect. The dataset was used to train and test various classifiers, achieving an accuracy of 60.2% on the dialect identification task. The dataset is publicly available under the CC BY-NC 4.0 license."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00342813,
+        "input_tokens": 25076,
+        "output_tokens": 781
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 3,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

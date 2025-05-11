@@ -244,7 +244,7 @@ for schema_file in os.listdir("schema"):
             examples.append(
                 f"""
             Paper Text: {input_text}
-            Output Json: {output_text}
+            Output JSON: {output_text}
             """
             )
         except:

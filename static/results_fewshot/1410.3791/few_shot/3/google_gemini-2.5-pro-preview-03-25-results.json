@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A massive multilingual dataset for Named Entity Recognition, derived from Wikipedia dumps in 40 languages. Includes annotated data and trained models.",
+        "Volume": 11039011.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Inc.",
+            "Stony Brook University"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "http://www.cs.stonybrook.edu/~polyglot/polyglot-ner2015.pdf",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the 2015 SIAM International Conference on Data Mining",
+        "Venue Type": "conference",
+        "Venue Name": "SIAM International Conference on Data Mining",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Google Inc.",
+            "Stony Brook University"
+        ],
+        "Abstract": "We present Polyglot-NER, a resource for multilingual named entity recognition. We publicly release named entity annotated Wikipedia dumps in 40 languages, as well as trained models. Our models are trained on the entire Wikipedia corpus for each language, using distributed word representations (word embeddings) as features. This allows our models to generalize better from a small seed of annotated data than previous approaches. We demonstrate the utility of our resource by training a state-of-the-art NER system for 40 languages. Our models achieve an average F1 score of 76.76, outperforming previous work by a large margin. We release these entity-annotated Wikipedia dumps, as well as our trained models, to the research community."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.06983375,
+        "input_tokens": 5590,
+        "output_tokens": 545
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 3,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
