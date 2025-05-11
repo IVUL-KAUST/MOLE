@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "TriviaQA",
+        "Link": "http://nlp.cs.washington.edu/triviaqa/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "TriviaQA is a reading comprehension dataset with over 650K question-answer-evidence triples, designed to test complex reasoning and understanding from multiple sentences.",
+        "Volume": 650000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington"
+        ],
+        "Derived From": [],
+        "Paper Title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension",
+        "Paper Link": "https://arxiv.org/abs/1705.03551",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "machine translation",
+            "information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [
+            "University of Washington"
+        ],
+        "Abstract": "This paper presents TriviaQA, a new reading comprehension dataset designed to test complex reasoning and understanding from multiple sentences. The dataset contains over 650K question-answer-evidence triples, with questions authored by trivia enthusiasts and evidence documents collected retrospectively from Wikipedia and the web. The dataset is challenging, with a high percentage of questions requiring multi-sentence reasoning and exhibiting substantial syntactic and lexical variability. Baseline experiments show a significant gap between state-of-the-art methods and human performance, suggesting room for future work."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.018549,
+        "input_tokens": 5569,
+        "output_tokens": 388
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.03551"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

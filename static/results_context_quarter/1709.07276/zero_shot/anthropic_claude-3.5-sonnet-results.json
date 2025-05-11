@@ -1,0 +1,87 @@
+{
+    "metadata": {
+        "Name": "MGB-3",
+        "Subsets": [],
+        "Link": "http://www.mgb-challenge.org/workshop.html",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "Egypt",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A speech recognition dataset containing dialectal Egyptian Arabic TV shows across different genres like comedy, cooking, family shows, and fashion.",
+        "Volume": 5.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "MGB Challenge"
+        ],
+        "Derived From": [
+            "MGB-2"
+        ],
+        "Paper Title": "The MGB-3 Arabic Speech Recognition Challenge",
+        "Paper Link": "http://www.mgb-challenge.org/workshop.html",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "dialect identification"
+        ],
+        "Venue Title": "MGB Workshop",
+        "Venue Type": "workshop",
+        "Venue Name": "MGB Workshop",
+        "Authors": [
+            "Aalto University",
+            "NDSC-THUEE",
+            "Johns Hopkins University",
+            "MIT",
+            "Brno University of Technology",
+            "RDI & Cairo University"
+        ],
+        "Affiliations": [
+            "Aalto University",
+            "THUEE",
+            "Johns Hopkins University",
+            "MIT",
+            "Brno University of Technology",
+            "RDI",
+            "Cairo University"
+        ],
+        "Abstract": "The MGB-3 Arabic Challenge involved multiple teams working on Arabic speech recognition and dialect identification tasks. The challenge used Egyptian dialectal Arabic TV data, with teams submitting systems for speech-to-text transcription. Various approaches including transfer learning, audio adaptation, and different neural network architectures were used. The best system achieved 13.2% WER on MGB-2 and 37.5% AV-WER on MGB-3 test sets."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.029751,
+        "input_tokens": 6089,
+        "output_tokens": 464
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

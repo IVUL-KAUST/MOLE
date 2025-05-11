@@ -1,0 +1,109 @@
+{
+    "metadata": {
+        "Name": "Arabic DID System",
+        "Subsets": [
+            {
+                "Name": "EGY",
+                "Volume": 315,
+                "Unit": "segments",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "GLF",
+                "Volume": 265,
+                "Unit": "segments",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "LAV",
+                "Volume": 348,
+                "Unit": "segments",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "MSA",
+                "Volume": 279,
+                "Unit": "segments",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "NOR",
+                "Volume": 355,
+                "Unit": "segments",
+                "Dialect": "North Africa"
+            }
+        ],
+        "Link": "https://github.com/Qatar-Computing-Research-Institute/dialectID",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2014,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset for Arabic Dialect Identification (DID) from broadcast speech, including five dialects: Egyptian, Gulf, Levantine, North African, and Modern Standard Arabic.",
+        "Volume": 1562.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "Automatic Dialect Identification for Arabic Broadcast Speech",
+        "Paper Link": "https://github.com/Qatar-Computing-Research-Institute/dialectID",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification"
+        ],
+        "Venue Title": "Automatic Dialect Identification for Arabic Broadcast Speech",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ali, Hady",
+            "Samn, Samer",
+            "Meignier, Sylvain"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute",
+            "Qatar Computing Research Institute",
+            "LIUM, Universit\u00e9 du Maine"
+        ],
+        "Abstract": "We investigate different approaches for dialect identification in Arabic broadcast speech. These methods are based on phonetic and lexical features obtained from a speech recognition system, and bottleneck features using the i-vector framework. We studied both generative and discriminative classifiers, and we combined these features using a multi-class Support Vector Machine (SVM). We validated our results on an Arabic/English language identification task, with an accuracy of 100%. We also evaluated these features in a binary classifier to discriminate between Modern Standard Arabic (MSA) and Dialectal Arabic, with an accuracy of 100%. We further reported results using the proposed methods to discriminate between the five most widely used dialects of Arabic: namely Egyptian, Gulf, Levantine, North African, and MSA, with an accuracy of 59.2%. We discuss dialect identification errors in the context of dialect code-switching between Dialectal Arabic and MSA, and compare the error pattern between manually labeled data, and the output from our classifier."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00199743,
+        "input_tokens": 12622,
+        "output_tokens": 739
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

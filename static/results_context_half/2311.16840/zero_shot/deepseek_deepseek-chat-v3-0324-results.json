@@ -1,0 +1,94 @@
+{
+    "metadata": {
+        "Name": "Claire French Dialogue Dataset",
+        "Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "HF Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "License": "CC BY-NC-SA 1.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "social media",
+            "news articles",
+            "reviews",
+            "commentary",
+            "books",
+            "wikipedia",
+            "web pages",
+            "public datasets",
+            "TV Channels",
+            "captions",
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "machine annotation",
+            "manual curation",
+            "LLM generated"
+        ],
+        "Description": "A corpus containing roughly 160 million words from transcripts and stage plays in French, designed for NLP tasks requiring understanding and generation of spontaneous, oral French dialogue.",
+        "Volume": 160000000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LINAGORA"
+        ],
+        "Derived From": [],
+        "Paper Title": "The Claire French Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2311.16840",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "speech recognition",
+            "sentiment analysis",
+            "language modeling",
+            "dialect identification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Julie Hunter",
+            "J\u00e9r\u00f4me Louradour",
+            "Virgile Rennard",
+            "Isma\u00efl Harrando",
+            "Guokan Shang",
+            "Jean-Pierre Lorr\u00e9"
+        ],
+        "Affiliations": [
+            "LINAGORA",
+            "Ecole Polytechnique"
+        ],
+        "Abstract": "We present the Claire French Dialogue Dataset (CFDD), a resource created by members of LINAGORA Labs in the context of the OpenLLM France initiative. CFDD is a corpus containing roughly 160 million words from transcripts and stage plays in French that we have assembled and publicly released in an effort to further the development of multilingual, open source language models. This paper describes the 24 individual corpora of which CFDD is composed and provides links and citations to their original sources. It also provides our proposed breakdown of the full CFDD dataset into eight categories of subcorpora and describes the process we followed to standardize the format of the final dataset. We conclude with a discussion of similar work and future directions."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.01413375,
+        "input_tokens": 10737,
+        "output_tokens": 567
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2311.16840"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

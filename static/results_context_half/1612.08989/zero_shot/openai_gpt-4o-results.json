@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "Al-Maktaba Al-Shamela",
+        "Subsets": [],
+        "Link": "http://kitab-project.org/kitab/index.jsp",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "books",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Al-Maktaba Al-Shamela is a corpus of digitized texts from the history of the Arabic language, primarily religious in nature, collected and stored by a religious charity. The corpus includes over 6,100 texts, with a significant portion undated, and totals 800 million words.",
+        "Volume": 800.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Al-Maktaba Al-Shamela"
+        ],
+        "Derived From": [],
+        "Paper Title": "Corpus Enhancements",
+        "Paper Link": "https://arxiv.org/abs/1612.08989",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "Al-Maktaba Al-Shamela is a website which collects and stores digitized copies of important texts from throughout the history of the Arabic language. Sponsored by a religious charity, the texts are largely religious in nature, though there was not a strong division between religious and secular texts in the pre-modern era, and so many of the pre-modern texts are simply part of the Islamicate intellectual and literary tradition."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 0.9375,
+    "cost": {
+        "cost": 0.01821,
+        "input_tokens": 7383,
+        "output_tokens": 407
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

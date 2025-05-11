@@ -1,0 +1,108 @@
+{
+    "metadata": {
+        "Name": "Arabic Dialect Identification Dataset",
+        "Subsets": [
+            {
+                "Name": "Egyptian",
+                "Volume": 315,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 265,
+                "Unit": "hours",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "Levantine",
+                "Volume": 348,
+                "Unit": "hours",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 279,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "North African",
+                "Volume": 355,
+                "Unit": "hours",
+                "Dialect": "North Africa"
+            }
+        ],
+        "Link": "https://github.com/Qatar-Computing-Research-Institute/dialectID",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles",
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A dataset for Arabic dialect identification in broadcast speech",
+        "Volume": 1562.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "Automatic Dialect Identification for Arabic Broadcast Speech",
+        "Paper Link": "https://arxiv.org/abs/1509.06928",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ahmed Ali",
+            "Stephan Vogel",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute",
+            "University of Edinburgh"
+        ],
+        "Abstract": "This paper presents our efforts on automatic dialect identification for Arabic broadcast speech. We have demonstrated a dialect classifier with an accuracy of 60.2% using system combination. We also achieved 100% accuracy on two binary classification tasks; MSA vs Dialectal Arabic and English vs Arabic."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8095238095238095
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00366995,
+        "input_tokens": 12625,
+        "output_tokens": 558
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

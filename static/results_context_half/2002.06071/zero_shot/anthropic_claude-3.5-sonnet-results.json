@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "FQuAD",
+        "Link": "https://illuin-tech.github.io/FQuAD-explorer/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A French native reading comprehension dataset of 60,000+ question-answer pairs from Wikipedia articles",
+        "Volume": 60000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology",
+            "ETH Zurich"
+        ],
+        "Derived From": [],
+        "Paper Title": "FQuAD: French Question Answering Dataset",
+        "Paper Link": "https://arxiv.org/abs/2002.06071",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Martin d'Hoffschmidt",
+            "Wacim Belblidia",
+            "Tom Brendl\u00e9",
+            "Quentin Heinrich",
+            "Maxime Vidal"
+        ],
+        "Affiliations": [
+            "Illuin Technology",
+            "ETH Zurich"
+        ],
+        "Abstract": "Recent advances in language modeling have improved state-of-the-art results on many NLP tasks. However, most results are reported in English since labeled resources in other languages remain scarce. We introduce the French Question Answering Dataset (FQuAD), a French native Reading Comprehension dataset of 25,000+ samples for v1.0 and 60,000+ for v1.1. We train a baseline model achieving 92.2 F1 and 82.1 exact match on the test set. The dataset is freely available and we propose a leaderboard to track progress of French Question Answering models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.058911,
+        "input_tokens": 14760,
+        "output_tokens": 414
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.06071"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

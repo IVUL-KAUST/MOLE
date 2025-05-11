@@ -1,0 +1,102 @@
+{
+    "metadata": {
+        "Name": "Arabic Dialect Identification Corpus",
+        "Subsets": [
+            {
+                "Name": "Egyptian",
+                "Volume": 315,
+                "Unit": "utterances",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 265,
+                "Unit": "utterances",
+                "Dialect": "Kuwait"
+            },
+            {
+                "Name": "Levantine",
+                "Volume": 348,
+                "Unit": "utterances",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 279,
+                "Unit": "utterances",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "North African",
+                "Volume": 355,
+                "Unit": "utterances",
+                "Dialect": "Morocco"
+            }
+        ],
+        "Link": "https://github.com/Qatar-Computing-Research-Institute/dialectID",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A corpus for Arabic dialect identification in broadcast speech, including Egyptian, Gulf, Levantine, North African, and Modern Standard Arabic dialects.",
+        "Volume": 1562.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "Investigating Phonetic and Lexical Features for Dialect Identification in Arabic Broadcast Speech",
+        "Paper Link": "https://arxiv.org/abs/1509.06928",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [
+            "Qatar Computing Research Institute"
+        ],
+        "Abstract": "In this paper, we investigate different approaches for dialect identification in Arabic broadcast speech. These methods are based on phonetic and lexical features obtained from a speech recognition system, and bottleneck features using the i-vector framework. We studied both generative and discriminative classifiers, and we combined these features using a multi-class Support Vector Machine (SVM). We validated our results on an Arabic/English language identification task, with an accuracy of 100%. We also evaluated these features in a binary classifier to discriminate between Modern Standard Arabic (MSA) and Dialectal Arabic, with an accuracy of 100%. We further reported results using the proposed methods to discriminate between the five most widely used dialects of Arabic: namely Egyptian, Gulf, Levantine, North African, and MSA, with an accuracy of 59.2%. We discuss dialect identification errors in the context of dialect code-switching between Dialectal Arabic and MSA, and compare the error pattern between manually labeled data, and the output from our classifier. All the data used on our experiments have been released to the public as a language identification corpus."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.00491668,
+        "input_tokens": 12625,
+        "output_tokens": 708
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

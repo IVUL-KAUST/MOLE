@@ -1,0 +1,98 @@
+{
+    "metadata": {
+        "Name": "RuCoLA",
+        "Link": "https://github.com/RussianNLP/RuCoLA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "public datasets",
+            "news articles",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "Russian Corpus of Linguistic Acceptability",
+        "Volume": 13400.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SberDevices",
+            "ABBYY",
+            "HSE University",
+            "Yandex",
+            "Huawei Noah's Ark Lab",
+            "Center for Information and Language Processing (CIS)",
+            "MaiNLP lab",
+            "LMU Munich"
+        ],
+        "Derived From": [
+            "Tatoeba",
+            "WikiMatrix",
+            "TED",
+            "Yandex Parallel Corpus"
+        ],
+        "Paper Title": "RuCoLA: Russian Corpus of Linguistic Acceptability",
+        "Paper Link": "https://arxiv.org/abs/2210.12814",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "meter classification",
+            "Linguistic acceptability"
+        ],
+        "Venue Title": "EMNLP 2022",
+        "Venue Type": "conference",
+        "Venue Name": "2022 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Vladislav Mikhailov",
+            "Tatiana Shamardina",
+            "Max Ryabinin",
+            "Alena Pestova",
+            "Ivan Smurov",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "SberDevices",
+            "ABBYY",
+            "HSE University",
+            "Yandex",
+            "Huawei Noah's Ark Lab",
+            "Center for Information and Language Processing (CIS)",
+            "MaiNLP lab",
+            "LMU Munich"
+        ],
+        "Abstract": "This paper introduces RuCoLA, a novel benchmark for evaluating the linguistic competence of language models in Russian, based on binary acceptability classification. RuCoLA consists of 13.4k sentences labeled as acceptable or not, with a combination of in-domain sentences manually collected from linguistic literature and out-of-domain sentences produced by nine machine translation and paraphrase generation models. The dataset is designed to facilitate the practical use of acceptability judgments for improving language generation and testing the linguistic competence of modern and upcoming language models for Russian."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0019185,
+        "input_tokens": 8091,
+        "output_tokens": 532
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12814"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

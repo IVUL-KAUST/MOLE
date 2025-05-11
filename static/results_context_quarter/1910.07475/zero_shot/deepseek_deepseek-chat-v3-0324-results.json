@@ -1,0 +1,128 @@
+{
+    "metadata": {
+        "Name": "MLQA",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 12000,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 5000,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "German",
+                "Volume": 5000,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 5000,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 5000,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 5000,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Simplified Chinese",
+                "Volume": 5000,
+                "Unit": "sentences",
+                "Language": "Simplified Chinese"
+            }
+        ],
+        "Link": "https://github.com/facebookresearch/mlqa",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": [
+            "English",
+            "Arabic",
+            "German",
+            "Spanish",
+            "Hindi",
+            "Vietnamese",
+            "Simplified Chinese"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "MLQA is a multi-way aligned extractive QA evaluation benchmark containing QA instances in 7 languages, with each instance parallel between 4 languages on average.",
+        "Volume": 5000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research",
+            "University College London"
+        ],
+        "Derived From": [],
+        "Paper Title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
+        "Paper Link": "https://arxiv.org/abs/1910.07475",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Patrick Lewis",
+            "Barlas Ou{g}uz",
+            "Ruty Rinott",
+            "Sebastian Riedel",
+            "Holger Schwenk"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "University College London"
+        ],
+        "Abstract": "Question answering (QA) models have shown rapid progress enabled by the availability of large, high-quality benchmark datasets. Such annotated datasets are difficult and costly to collect, and rarely exist in languages other than English, making building QA systems that work well in other languages challenging. In order to develop such systems, it is crucial to invest in high quality multilingual evaluation benchmarks to measure progress. We present MLQA, a multi-way aligned extractive QA evaluation benchmark intended to spur research in this area. MLQA contains QA instances in 7 languages, English, Arabic, German, Spanish, Hindi, Vietnamese and Simplified Chinese. MLQA has over 12K instances in English and 5K in each other language, with each instance parallel between 4 languages on average. We evaluate state-of-the-art cross-lingual models and machine-translation-based baselines on MLQA. In all cases, transfer results are significantly behind training-language performance."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00289568,
+        "input_tokens": 6496,
+        "output_tokens": 771
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1910.07475"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

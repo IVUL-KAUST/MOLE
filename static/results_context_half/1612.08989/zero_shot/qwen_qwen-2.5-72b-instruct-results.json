@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Shamela Corpus",
+        "Subsets": [],
+        "Link": "https://github.com/maximromanov/mARkdown",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "A corpus of digitized Arabic texts from the Islamicate literary tradition, primarily religious in nature.",
+        "Volume": 800.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Al-Maktaba Al-Shamela"
+        ],
+        "Derived From": [],
+        "Paper Title": "Corpus Enhancements for Historical Arabic Texts",
+        "Paper Link": "https://example.com/paper-link",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "morphological analysis",
+            "text generation",
+            "summarization"
+        ],
+        "Venue Title": "Corpus Enhancements for Historical Arabic Texts",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Maxim Romanov",
+            "Other Author"
+        ],
+        "Affiliations": [
+            "University of XYZ",
+            "Another University"
+        ],
+        "Abstract": "A major desideratum in approaching this corpus is being able to detect, and potentially eliminate duplicate and reused text segments. Quotation of extensive sections of material is common in the Islamicate literary tradition, but unlike modern quotation it is not distinguished from the text at large. Identification of reused text is valuable for computational linguistic work, and for DH projects."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00115832,
+        "input_tokens": 7380,
+        "output_tokens": 392
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

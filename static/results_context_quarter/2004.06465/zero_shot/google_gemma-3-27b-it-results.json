@@ -1,0 +1,187 @@
+{
+    "metadata": {
+        "Name": "DE-LIMIT",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 4120,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 1670,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "English",
+                "Volume": 5593,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "English",
+                "Volume": 10944,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "English",
+                "Volume": 6304,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "English",
+                "Volume": 12805,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "English",
+                "Volume": 1939,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "English",
+                "Volume": 58738,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "German",
+                "Volume": 369,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "German",
+                "Volume": 5786,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 13169,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 713,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 1560,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 8000,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 9788,
+                "Unit": "sentences",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 5670,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 2228,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            }
+        ],
+        "Link": "https://github.com/punyajoy/DE-LIMIT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "English",
+            "German",
+            "Indonesian",
+            "Italian",
+            "Polish",
+            "Portuguese",
+            "Spanish"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This paper presents a large-scale analysis of multilingual hate speech detection in 9 languages from 16 different sources. It explores the performance of deep learning models and provides a catalogue of effective models for different languages based on data availability.",
+        "Volume": 13169.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Indian Institute of Technology Kharagpur"
+        ],
+        "Derived From": [],
+        "Paper Title": "Deep Learning Models for Multilingual Hate Speech Detection",
+        "Paper Link": "https://arxiv.org/abs/2004.06465",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "fake news detection",
+            "offensive language detection"
+        ],
+        "Venue Title": "ECML-PKDD",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Sai Saketh Aluru",
+            "Binny Mathew",
+            "Punyajoy Saha",
+            "Animesh Mukherjee"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology Kharagpur, India"
+        ],
+        "Abstract": "In this paper, we conduct a large scale analysis of multilingual hate speech in 9 languages from 16 different sources. We observe that in low resource setting, simple models such as LASER embedding with logistic regression performs the best, while in high resource setting BERT based models perform better. In case of zero-shot classification, languages such as Italian and Portuguese achieve good results. Our proposed framework could be used as an efficient solution for low-resource languages. These models could also act as good baselines for future multilingual hate speech detection tasks. We have made our code and experimental settings public for other researchers."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.001082275,
+        "input_tokens": 6780,
+        "output_tokens": 1120
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.06465"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

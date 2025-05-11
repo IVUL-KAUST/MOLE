@@ -1,0 +1,98 @@
+{
+    "metadata": {
+        "Name": "XNLI",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": [
+            "English",
+            "French",
+            "Spanish",
+            "German",
+            "Greek",
+            "Bulgarian",
+            "Russian",
+            "Turkish",
+            "Arabic",
+            "Vietnamese",
+            "Thai",
+            "Chinese",
+            "Hindi",
+            "Swahili",
+            "Urdu"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A cross-lingual natural language inference corpus extending MultiNLI to 15 languages for evaluating cross-lingual sentence understanding",
+        "Volume": 112500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI",
+            "New York University"
+        ],
+        "Derived From": [
+            "MultiNLI"
+        ],
+        "Paper Title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+        "Paper Link": "https://arxiv.org/abs/1809.05053",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference"
+        ],
+        "Venue Title": "EMNLP 2018",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Alexis Conneau",
+            "Guillaume Lample",
+            "Ruty Rinott",
+            "Holger Schwenk",
+            "Ves Stoyanov",
+            "Adina Williams",
+            "Samuel R. Bowman"
+        ],
+        "Affiliations": [
+            "Facebook AI",
+            "New York University"
+        ],
+        "Abstract": "State-of-the-art natural language processing systems rely on supervision in the form of annotated data to learn competent models. These models are generally trained on data in a single language (usually English), and cannot be directly used beyond that language. Since collecting data in every language is not realistic, there has been a growing interest in cross-lingual language understanding (XLU) and low-resource cross-language transfer. In this work, we construct an evaluation set for XLU by extending the development and test sets of the Multi-Genre Natural Language Inference Corpus (MultiNLI) to 15 languages, including low-resource languages such as Swahili and Urdu. We hope that our dataset, dubbed XNLI, will catalyze research in cross-lingual sentence understanding by providing an informative standard evaluation task. In addition, we provide several baselines for multilingual sentence understanding, including two based on machine translation systems, and two that use parallel data to train aligned multilingual bag-of-words and LSTM encoders. We find that XNLI represents a practical and challenging evaluation suite, and that directly translating the test data yields the best performance among available baselines."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.032181,
+        "input_tokens": 6159,
+        "output_tokens": 613
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.05053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

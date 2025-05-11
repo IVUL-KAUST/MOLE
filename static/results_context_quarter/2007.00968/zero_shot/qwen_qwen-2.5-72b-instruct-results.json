@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "PIAF",
+        "Link": "https://piaf.etalab.studio/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A native French Question Answering dataset collected through participatory efforts and annotathons.",
+        "Volume": 100000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "reciTAL",
+            "Etalab",
+            "DINUM",
+            "Sorbonne Universit\u00e9"
+        ],
+        "Derived From": [
+            "SQuAD"
+        ],
+        "Paper Title": "Project PIAF: Building a Native French Question-Answering Dataset",
+        "Paper Link": "http://www.europarl.europa.eu/sides/getDoc.do?pubRef=-//EP//TEXT+TA+P8-TA-2018-0332+0+DOC+XML+V0//EN",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "LREC 2020",
+        "Venue Type": "conference",
+        "Venue Name": "12th Language Resources and Evaluation Conference",
+        "Authors": [
+            "Rachel Keraron",
+            "Guillaume Lancrenon",
+            "Mathilde Bras",
+            "Fr\u00e9d\u00e9ric Allary",
+            "Gilles Moyse",
+            "Thomas Scialom",
+            "Edmundo-Pavel Soriano-Morales",
+            "Jacopo Staiano"
+        ],
+        "Affiliations": [
+            "reciTAL, Paris (France)",
+            "Etalab, DINUM, Prime Minister's Office, Paris (France)",
+            "Sorbonne Universit\u00e9, CNRS, LIP6, F-75005 Paris, France"
+        ],
+        "Abstract": "Motivated by the lack of data for non-English languages, in particular for the evaluation of downstream tasks such as Question Answering, we present a participatory effort to collect a native French Question Answering Dataset. Furthermore, we describe and publicly release the annotation tool developed for our collection effort, along with the data obtained and preliminary baselines."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00243794,
+        "input_tokens": 5771,
+        "output_tokens": 503
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2007.00968"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

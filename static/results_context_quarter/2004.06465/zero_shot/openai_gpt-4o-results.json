@@ -1,0 +1,180 @@
+{
+    "metadata": {
+        "Name": "Multilingual Hate Speech Detection Dataset",
+        "Subsets": [
+            {
+                "Name": "Mulki et al.",
+                "Volume": 4120,
+                "Unit": "documents",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Ousidhoum et al.",
+                "Volume": 1670,
+                "Unit": "documents",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Davidson et al.",
+                "Volume": 5593,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Gibert et al.",
+                "Volume": 10944,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Waseem et al.",
+                "Volume": 6304,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Basile et al.",
+                "Volume": 12805,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Ousidhoum et al.",
+                "Volume": 1939,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Founta et al.",
+                "Volume": 58738,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Ross et al.",
+                "Volume": 369,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "Bretschneider et al.",
+                "Volume": 5786,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "Ibrohim et al.",
+                "Volume": 13169,
+                "Unit": "documents",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Alfina et al.",
+                "Volume": 713,
+                "Unit": "documents",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Sanguinetti et al.",
+                "Volume": 1560,
+                "Unit": "documents",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Bosco et al.",
+                "Volume": 8000,
+                "Unit": "documents",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Ptaszynski et al.",
+                "Volume": 9788,
+                "Unit": "documents",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Fortuna et al.",
+                "Volume": 5670,
+                "Unit": "documents",
+                "Language": "Portuguese"
+            }
+        ],
+        "Link": "https://github.com/punyajoy/DE-LIMIT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "English",
+            "German",
+            "Indonesian",
+            "Italian",
+            "Polish",
+            "Portuguese",
+            "Spanish"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This dataset is used for multilingual hate speech detection, analyzing the performance of deep learning models on 16 datasets from 9 different languages.",
+        "Volume": 4120.0,
+        "Unit": "documents",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Indian Institute of Technology Kharagpur"
+        ],
+        "Derived From": [],
+        "Paper Title": "Deep Learning Models for Multilingual Hate Speech Detection",
+        "Paper Link": "https://github.com/punyajoy/DE-LIMIT",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "fake news detection"
+        ],
+        "Venue Title": "ECML-PKDD 2020",
+        "Venue Type": "conference",
+        "Venue Name": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases",
+        "Authors": [
+            "Sai Saketh Aluru",
+            "Binny Mathew",
+            "Punyajoy Saha",
+            "Animesh Mukherjee"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology Kharagpur, India"
+        ],
+        "Abstract": "Hate speech detection is a challenging problem with most of the datasets available in only one language: English. In this paper, we conduct a large scale analysis of multilingual hate speech in 9 languages from 16 different sources. We observe that in low resource setting, simple models such as LASER embedding with logistic regression performs the best, while in high resource setting BERT based models perform better. In case of zero-shot classification, languages such as Italian and Portuguese achieve good results. Our proposed framework could be used as an efficient solution for low-resource languages. These models could also act as good baselines for future multilingual hate speech detection tasks. We have made our code and experimental settings public for other researchers."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0243775,
+        "input_tokens": 6768,
+        "output_tokens": 1145
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.06465"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

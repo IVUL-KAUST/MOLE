@@ -1,0 +1,207 @@
+{
+    "metadata": {
+        "Name": "Arap-Tweet",
+        "Subsets": [
+            {
+                "Name": "Egypt",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Levantine",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "North Africa",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "North Africa"
+            },
+            {
+                "Name": "Iraq",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Iraq"
+            },
+            {
+                "Name": "Jordan",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Jordan"
+            },
+            {
+                "Name": "Kuwait",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Kuwait"
+            },
+            {
+                "Name": "Lebanon",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "Libya",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Libya"
+            },
+            {
+                "Name": "Morocco",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Mauritania",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Mauritania"
+            },
+            {
+                "Name": "Oman",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Oman"
+            },
+            {
+                "Name": "Palestine",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Palestine"
+            },
+            {
+                "Name": "Qatar",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Qatar"
+            },
+            {
+                "Name": "Saudi Arabia",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Saudi Arabia"
+            },
+            {
+                "Name": "Sudan",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Sudan"
+            },
+            {
+                "Name": "Somalia",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Somalia"
+            },
+            {
+                "Name": "South Sudan",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "South Sudan"
+            },
+            {
+                "Name": "Syria",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Syria"
+            },
+            {
+                "Name": "Tunisia",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Tunisia"
+            },
+            {
+                "Name": "Yemen",
+                "Volume": 100000,
+                "Unit": "tweets",
+                "Dialect": "Yemen"
+            }
+        ],
+        "Link": "http://arap.qatar.cmu.edu",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world, annotated for age, gender, and dialectal variety.",
+        "Volume": 1600000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Hamad Bin Khalifa University",
+            "Carnegie Mellon University Qatar"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age and Language Variety Identification",
+        "Paper Link": "http://arap.qatar.cmu.edu",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "dialect identification",
+            "gender identification",
+            "language identification"
+        ],
+        "Venue Title": "Proceedings of the 11th International Conference on Language Resources and Evaluation (LREC 2018)",
+        "Venue Type": "conference",
+        "Venue Name": "LREC 2018",
+        "Authors": [
+            "Wajdi Zaghouani",
+            "Anis Charfi"
+        ],
+        "Affiliations": [
+            "College of Humanities and Social Sciences, Hamad Bin Khalifa University, Qatar",
+            "Information Systems Program, Carnegie Mellon University Qatar"
+        ],
+        "Abstract": "In this paper, we present Arap-Tweet, which is a large-scale and multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world representing the major Arabic dialectal varieties. To build this corpus, we collected data from Twitter and we provided a team of experienced annotators with annotation guidelines that they used to annotate the corpus for age categories, gender, and dialectal variety. During the data collection effort, we based our search on distinctive keywords that are specific to the different Arabic dialects and we also validated the location using Twitter API. In this paper, we report on the corpus data collection and annotation efforts. We also present some issues that we encountered during these phases. Then, we present the results of the evaluation performed to ensure the consistency of the annotation. The provided corpus will enrich the limited set of available language resources for Arabic and will be an invaluable enabler for developing author profiling tools and NLP tools for Arabic."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00129767,
+        "input_tokens": 5325,
+        "output_tokens": 1336
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1808.07674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

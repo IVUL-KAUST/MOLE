@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "Arabic Offensive Tweets Dataset",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset of Arabic tweets annotated for offensiveness, hate speech, vulgarity, and violence.",
+        "Volume": 0.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Generic Method for Collecting and Annotating Offensive and Hate Tweets in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2201.06723",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection",
+            "fake news detection"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Firoj Alam",
+            "Hamdy Mubarak",
+            "Nadir Durrani",
+            "Sabri Elkateb",
+            "Kareem Darwish"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute",
+            "University of Edinburgh"
+        ],
+        "Abstract": "This paper introduces a method to collect and annotate offensive and hate tweets in Arabic. The authors collected a large dataset of Arabic tweets and annotated them for offensiveness, hate speech, vulgarity, and violence. They also benchmarked the dataset for detecting offensiveness and hate speech using different transformer architectures."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00151383,
+        "input_tokens": 7794,
+        "output_tokens": 382
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

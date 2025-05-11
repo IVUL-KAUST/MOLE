@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "JaFIn",
+        "Link": "https://huggingface.co/datasets/tanabe-jafin/jafin",
+        "HF Link": "https://huggingface.co/datasets/tanabe-jafin/jafin",
+        "License": "CC BY-SA 4.0",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "Japanese Financial Instruction Dataset for LLM",
+        "Volume": 1490.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Hokkaido University",
+            "The University of Tokyo"
+        ],
+        "Derived From": [],
+        "Paper Title": "JaFIn: Japanese Financial Instruction Dataset",
+        "Paper Link": "https://arxiv.org/abs/2403.13548",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "sentiment analysis",
+            "language modeling"
+        ],
+        "Venue Title": "The 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation",
+        "Venue Type": "conference",
+        "Venue Name": "LREC-COLING 2024",
+        "Authors": [
+            "Kota Tanabe",
+            "Masahiro Suzuki",
+            "Hiroki Sakaji",
+            "Itsuki Noda"
+        ],
+        "Affiliations": [
+            "Hokkaido University",
+            "The University of Tokyo"
+        ],
+        "Abstract": "This paper presents JaFIn, a Japanese financial instruction dataset for large language models (LLMs). The dataset is manually constructed based on multiple data sources, including Japanese government websites, and is designed to improve the domain adaptation of LLMs in the financial sector. The effectiveness of JaFIn is demonstrated through instruction tuning experiments on several LLMs, showing improved performance on financial tasks."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00204076,
+        "input_tokens": 9229,
+        "output_tokens": 450
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.09260"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

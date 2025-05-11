@@ -1,0 +1,137 @@
+{
+    "metadata": {
+        "Name": "TyDi-XOR",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2.574,
+                "Unit": "documents",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 2.582,
+                "Unit": "documents",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 2.088,
+                "Unit": "documents",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 2.288,
+                "Unit": "documents",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 2.469,
+                "Unit": "documents",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 1.941,
+                "Unit": "documents",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 1.308,
+                "Unit": "documents",
+                "Language": "Telugu"
+            }
+        ],
+        "Link": "https://nlp.cs.washington.edu/xorqa/XORQA_site/xorqa_datasheet.pdf",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "TyDi-XOR is a cross-lingual open-retrieval question answering dataset that includes questions from diverse languages and answers retrieved from English Wikipedia.",
+        "Volume": 2.574,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Derived From": [
+            "TyDi QA"
+        ],
+        "Paper Title": "XOR: Cross-lingual Open-Retrieval Question Answering",
+        "Paper Link": "https://nlp.cs.washington.edu/xorqa/XORQA_site/xorqa_datasheet.pdf",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "NAACL-HLT 2021",
+        "Venue Type": "conference",
+        "Venue Name": "North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "Our tydixor dataset comprises questions inherited from tydi and answers augmented with our annotation process across 7 typologically diverse languages. We focus on cross-lingual retrieval from English Wikipedia because in our preliminary investigation we were able to find answers to a majority of the questions from resource-rich English Wikipedia, and native speakers with much annotation experience were readily available via crowdsourcing in English."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.030335,
+        "input_tokens": 8843,
+        "output_tokens": 822
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

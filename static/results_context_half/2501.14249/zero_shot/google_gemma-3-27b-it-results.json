@@ -1,0 +1,98 @@
+{
+    "metadata": {
+        "Name": "Humanity's Last Exam",
+        "Link": "https://lastexam.ai/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "books",
+            "wikipedia",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A benchmark of 2500 challenging questions across over a hundred subjects, designed to be the final closed-ended academic benchmark.",
+        "Volume": 2500.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Center for AI Safety",
+            "Scale AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "Humanity's Last Exam",
+        "Paper Link": "https://arxiv.org/abs/2501.14249",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "multiple choice question answering",
+            "named entity recognition"
+        ],
+        "Venue Title": "neurips_2024",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Long Phan",
+            "Alice Gatti",
+            "Ziwen Han",
+            "Nathaniel Li",
+            "Josephina Hu",
+            "Hugh Zhang",
+            "Chen Bo Calvin Zhang",
+            "Mohamed Shaaban",
+            "John Ling",
+            "Sean Shi",
+            "Michael Choi",
+            "Anish Agrawal",
+            "Arnav Chopra",
+            "Adam Khoja",
+            "Ryan Kim",
+            "Richard Ren",
+            "Jason Hausenloy",
+            "Oliver Zhang",
+            "Mantas Mazeika",
+            "Summer Yue",
+            "Alexandr Wang",
+            "Dan Hendrycks"
+        ],
+        "Affiliations": [
+            "Center for AI Safety",
+            "Scale AI"
+        ],
+        "Abstract": "Benchmarks are important tools for tracking the rapid advancements in large language model (LLM) capabilities. However, benchmarks are not keeping pace in difficulty: LLMs now achieve over 90% accuracy on popular benchmarks like MMLU, limiting informed measurement of state-of-the-art LLM capabilities. In response, we introduce fullname{} (name{}), a multi-modal benchmark at the frontier of human knowledge, designed to be the final closed-ended academic benchmark of its kind with broad subject coverage. name{} consists of questioncount{} questions across over a hundred subjects, including mathematics, humanities, and the natural sciences. name{} is developed by academics and domain experts, providing a precise measure of capabilities as LLMs continue to improve (Cref{subsec:dataset-collection}). name{} is multi-modal, featuring questions that are either text-only or accompanied by an image reference, and includes both multiple-choice and exact-match questions for automated answer verification. Questions are original, precise, unambiguous, and resistant to simple internet lookup or database retrieval. Amongst the diversity of questions in the benchmark, name{} emphasizes world-class mathematics problems aimed at testing deep reasoning skills broadly applicable across multiple academic areas. We employ a multi-stage review process to thoroughly ensure question difficulty and quality (Cref{subsec:dataset-review}). Before submission, each question is tested against state-of-the-art LLMs to verify its difficulty - questions are rejected if LLMs can answer them correctly. Questions submitted then proceed through a two-stage reviewing process: (1) an initial feedback round with multiple graduate-level reviewers and (2) organizer and expert reviewer approval, ensuring quality and adherence to our submission criteria. Following release, we conducted a public review period, welcoming community feedback to correct any points of concern in the dataset. Frontier LLMs consistently demonstrate low accuracy and high calibration error across all models, highlighting a significant gap between current capabilities and expert-level academic performance (Cref{sec:evaluation}). Models also provide incorrect answers with high confidence rather than acknowledging uncertainty on these challenging questions, with RMS calibration errors above 70% across all models. As AI systems approach human expert performance in many domains, precise measurement of their capabilities and limitations is essential for informing research, governance, and the broader public. High performance on name{} would suggest expert-level capabilities on closed-ended academic questions. To establish a common reference point for assessing these capabilities, we publicly release a large number of questioncount{} questions from name{} to enable this precise measurement, while maintaining a private test set to assess potential model overfitting."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0020711,
+        "input_tokens": 17807,
+        "output_tokens": 986
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.14249"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

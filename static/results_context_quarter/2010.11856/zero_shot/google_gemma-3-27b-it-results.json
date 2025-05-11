@@ -1,0 +1,136 @@
+{
+    "metadata": {
+        "Name": "XOR",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2574.0,
+                "Unit": "questions",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 2582.0,
+                "Unit": "questions",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 2088.0,
+                "Unit": "questions",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 2288.0,
+                "Unit": "questions",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 2469.0,
+                "Unit": "questions",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 1941.0,
+                "Unit": "questions",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 1308.0,
+                "Unit": "questions",
+                "Language": "Telugu"
+            }
+        ],
+        "Link": "https://nlp.cs.washington.edu/xorqa/XORQA_site/xorqa_datasheet.pdf",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "The XOR dataset comprises questions from TyDi and answers augmented with annotation across 7 typologically diverse languages. It focuses on cross-lingual retrieval from English Wikipedia.",
+        "Volume": 2574.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Derived From": [
+            "TyDi"
+        ],
+        "Paper Title": "Cross-lingual Open-Retrieval Question Answering",
+        "Paper Link": "https://arxiv.org/abs/2010.11856",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "NAACL-HLT",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "We introduce xor, a new cross-lingual open-retrieval question answering (QA) dataset. xor~is built upon the existing tydi~QA dataset, and augments it with questions that require cross-lingual information retrieval to answer. We annotate questions in 7 typologically diverse languages (Arabic, Bengali, Finnish, Japanese, Korean, Russian, and Telugu) by translating them into English, retrieving relevant passages from English Wikipedia, and then translating the answers back to the original language. We evaluate a variety of baselines, including multilingual sentence encoders and cross-lingual information retrieval methods. Our results show that cross-lingual retrieval is crucial for achieving strong performance on xor, and that the dataset presents a challenging testbed for cross-lingual QA models."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0011093,
+        "input_tokens": 8843,
+        "output_tokens": 869
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

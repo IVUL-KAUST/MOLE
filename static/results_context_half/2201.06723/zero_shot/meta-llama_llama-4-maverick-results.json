@@ -1,0 +1,93 @@
+{
+    "metadata": {
+        "Name": "OSACT4 OffensEval 2022 Arabic Dataset",
+        "Subsets": [
+            {
+                "Name": "Offensive Language",
+                "Volume": 4463,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Hate Speech",
+                "Volume": 1339,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "https://arxiv.org/abs/2201.06631",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset for offensive language and hate speech detection in Arabic social media.",
+        "Volume": 12698.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "IIT Kharagpur"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Generic Approach to Collecting Offensive and Hate Tweets in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2201.06631",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection",
+            "fake news detection"
+        ],
+        "Venue Title": "ACL Workshop",
+        "Venue Type": "workshop",
+        "Venue Name": "OSACT4",
+        "Authors": [
+            "AbdelRahim Elmadany",
+            "Muhammad Abdul-Mageed",
+            "Abdelrahman Elmadany"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute",
+            "University of British Columbia",
+            "IIT Kharagpur"
+        ],
+        "Abstract": "This paper introduces a generic method to collect offensive and hate tweets in Arabic. The method uses emojis to collect a large number of tweets, which are then annotated for offensiveness and hate speech. The resulting dataset is the largest publicly available dataset for Arabic offensive language and hate speech detection."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00303974,
+        "input_tokens": 12396,
+        "output_tokens": 498
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

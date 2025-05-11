@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "Shamela Corpus",
+        "Subsets": [],
+        "Link": "http://kitab-project.org/kitab/index.jsp",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "A large corpus of Classical Arabic texts with methods for detecting text reuse and dating texts.",
+        "Volume": 815000000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Kitab Project"
+        ],
+        "Derived From": [
+            "CLAUDia corpus"
+        ],
+        "Paper Title": "Corpus Enhancements for Classical Arabic Texts",
+        "Paper Link": "http://kitab-project.org/kitab/index.jsp",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitLab",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "fake news detection"
+        ],
+        "Venue Title": "Conference on Computational Linguistics and Financial Engineering (CLFL)",
+        "Venue Type": "conference",
+        "Venue Name": "CLFL 2016",
+        "Authors": [
+            "Shamela Project Team"
+        ],
+        "Affiliations": [
+            "Kitab Project"
+        ],
+        "Abstract": "This paper discusses enhancements to the Shamela corpus, focusing on methods for detecting text reuse and dating texts. The text reuse algorithm uses a hash-based approach to identify matching passages, while the text dating method employs language models to predict the date of undated texts. Both methods show promising results, with the text reuse algorithm identifying significant quotations and the text dating method achieving high accuracy."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00091453,
+        "input_tokens": 5558,
+        "output_tokens": 397
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

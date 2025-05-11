@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "Arabic Offensive Language Dataset",
+        "Subsets": [
+            {
+                "Name": "Overall",
+                "Volume": 12698,
+                "Unit": "tweets",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://aclanthology.org/2023.emnlp-main.491.pdf",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "This paper introduces a method to collect offensive Arabic tweets using emojis and releases a large, manually annotated dataset for offensive language detection.",
+        "Volume": 12698.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "QCRI"
+        ],
+        "Derived From": [],
+        "Paper Title": "Emojis as Anchors: Collecting Offensive Arabic Tweets Using Extralinguistic Information",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.491.pdf",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "ResearchGate",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection",
+            "fake news detection",
+            "sentiment analysis"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Abdulrahman Alqayyim",
+            "Muhammad Abdul-Majeed",
+            "Mohammad Al-Shatnawi",
+            "Hamza El-Sawy",
+            "Preslav Nakov"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute (QCRI), Hamad Bin Khalifa University, Doha, Qatar",
+            "University of Southern California, Los Angeles, CA, USA"
+        ],
+        "Abstract": "We introduce a generic, language-independent method to collect a large percentage of offensive and hate tweets regardless of their topics or genres. We harness the extralinguistic information embedded in the emojis to collect a large number of offensive tweets. We apply the proposed method on Arabic tweets and compare it with English tweets -- analysing key cultural differences. We observed a constant usage of these emojis to represent offensiveness throughout different timespans on Twitter. We manually annotate and publicly release the largest Arabic dataset for offensive, fine-grained hate speech, vulgar and violence content. Furthermore, we benchmark the dataset for detecting offensiveness and hate speech using different transformer architectures and perform in-depth linguistic analysis. We evaluate our models on external datasets -- a Twitter dataset collected using a completely different method, and a multi-platform dataset containing comments from Twitter, YouTube and Facebook, for assessing generalization capability. Competitive results on these datasets suggest that the data collected using our method captures universal characteristics of offensive language. Our findings also highlight the common words used in offensive communications, common targets for hate speech, specific patterns in violence tweets; and pinpoint common classification errors that can be attributed to limitations of NLP models. We observe that even state-of-the-art transformer models may fail to take into account culture, background and context or understand nuances present in real-world data such as sarcasm."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0015221,
+        "input_tokens": 12396,
+        "output_tokens": 752
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
