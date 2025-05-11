@@ -2,7 +2,7 @@ import plotext as plt  # type: ignore
 from glob import glob
 import json
 import argparse
-from constants import eval_datasets_ids, non_browsing_models, schemata
+from constants import eval_datasets_ids, non_browsing_models, schemata, open_router_costs
 import numpy as np
 from plot_utils import print_table
 from utils import get_predictions, evaluate_metadata, get_metadata_from_id, get_id_from_path, get_schema_from_path
@@ -70,6 +70,10 @@ def get_all_ids():
         ids = eval_datasets_ids[args.schema][args.eval]
     return ids
 
+def get_openrouter_cost(model_name, input_tokens, output_tokens):
+    model_name = model_name.split("_")[1]
+    return (open_router_costs[model_name]["input"] * input_tokens + open_router_costs[model_name]["output"] * output_tokens) / (1e6)
+
 def plot_by_cost():
     ids = get_all_ids()
     metric_results = {}
@@ -89,6 +93,7 @@ def plot_by_cost():
                 results["cost"]["output_tokens"],
                 results["cost"]["input_tokens"] + results["cost"]["output_tokens"],
                 results["cost"]["cost"],
+                get_openrouter_cost(model_name, results["cost"]["input_tokens"], results["cost"]["output_tokens"]),
             ]
         )
     final_results = {}
@@ -102,7 +107,7 @@ def plot_by_cost():
             [remap_names(model_name)] + (np.sum(final_results[model_name], axis=0)).tolist()
         )
 
-    headers = ["MODEL", "INPUT TOKENS", "OUTPUT TOKENS", "TOTAL TOKENS", "COST (USD)"]
+    headers = ["Model", "Input Tokens", "Output Tokens", "Total Tokens", "Cost (USD)", "Cost (OpenRouter)"]
     print_table(results, headers)
 
 
