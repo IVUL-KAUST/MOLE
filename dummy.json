@@ -30,11 +30,11 @@
     "Paper Title": "CIDAR: Culturally Relevant Instruction Dataset For Arabic",
     "Paper Link": "https://arxiv.org/pdf/2402.03177",
     "Script": "Arab",
-    "Tokenized": "No",
+    "Tokenized": false,
     "Host": "HuggingFace",
     "Access": "Free",
     "Cost": "",
-    "Test Split": "No",
+    "Test Split": false,
     "Tasks": [
         "instruction tuning",
         "question answering"

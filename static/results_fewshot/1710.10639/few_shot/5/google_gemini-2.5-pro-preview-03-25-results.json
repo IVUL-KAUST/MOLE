@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "JESC",
+        "Link": "https://nlp.stanford.edu/projects/jesc/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "captions",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "JESC is a large Japanese-English parallel corpus of over 3.2 million examples from TV and movie subtitles, focusing on conversational dialogue.",
+        "Volume": 3240661.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [],
+        "Paper Title": "JESC: Japanese-English Subtitle Corpus",
+        "Paper Link": "https://arxiv.org/abs/1710.10639",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Reid Pryzant",
+            "Youngjoo Chung",
+            "Dan Jurafsky",
+            "Denny Britz"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Rakuten Institute of Technology",
+            "Google Brain"
+        ],
+        "Abstract": "In this paper we describe the Japanese-English Subtitle Corpus (JESC). JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind. The corpus was assembled by crawling and aligning subtitles found on the web. The assembly process incorporates a number of novel preprocessing elements to ensure high monolingual fluency and accurate bilingual alignments. We summarize its contents and evaluate its quality using human experts and baseline machine translation (MT) systems."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.08303625,
+        "input_tokens": 10241,
+        "output_tokens": 465
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 5,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1710.10639"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

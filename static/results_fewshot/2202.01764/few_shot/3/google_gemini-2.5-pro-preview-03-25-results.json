@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "JaQuAD",
+        "Link": "https://github.com/SkelterLabsInc/JaQuAD",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "jp",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "JaQuAD (Japanese Question Answering Dataset) contains 39,696 human-annotated, extractive question-answer pairs based on Japanese Wikipedia articles. It is designed for machine reading comprehension tasks in Japanese.",
+        "Volume": 39696.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Skelter Labs Inc."
+        ],
+        "Derived From": [
+            "Japanese Wikipedia"
+        ],
+        "Paper Title": "JaQuAD: Japanese Question Answering Dataset for Machine Reading Comprehension",
+        "Paper Link": "https://arxiv.org/abs/2101.02679",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "ByungHoon So",
+            "Kyuhong Byun",
+            "Kyungwon Kang",
+            "Seongjin Cho"
+        ],
+        "Affiliations": [
+            "Skelter Labs Inc."
+        ],
+        "Abstract": "Question Answering (QA) is a task in which a machine understands a given document and a question to find an answer. Despite impressive progress in the NLP area, QA is still a challenging problem, especially for non-English languages due to the lack of annotated datasets. In this paper, we present the Japanese Question Answering Dataset, JaQuAD, which is annotated by humans. JaQuAD consists of 39,696 extractive question-answer pairs on Japanese Wikipedia articles. We finetuned a baseline model which achieves 78.92% for F1 score and 63.38% for EM on test set. The dataset and our experiments are available at https://github.com/SkelterLabsInc/JaQuAD."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0734175,
+        "input_tokens": 14690,
+        "output_tokens": 534
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 3,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.01764"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

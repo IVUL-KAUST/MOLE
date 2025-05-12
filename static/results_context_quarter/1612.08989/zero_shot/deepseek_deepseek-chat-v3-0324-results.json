@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "Shamela corpus",
+        "Subsets": [],
+        "Link": "http://kitab-project.org/kitab/index.jsp",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The Shamela corpus is a large collection of Arabic texts focusing on the Islamicate literary tradition, with efforts to detect and eliminate duplicate and reused text segments.",
+        "Volume": 815000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Kitab Project"
+        ],
+        "Derived From": [],
+        "Paper Title": "Corpus Enhancements for the Shamela Arabic Corpus",
+        "Paper Link": "https://arxiv.org/abs/1612.08989",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "text generation",
+            "fake news detection"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "The paper discusses enhancements to the Shamela Arabic corpus, focusing on detecting and eliminating duplicate and reused text segments, and text dating. The corpus contains 815 million words and uses a skip-gram algorithm for text reuse detection. The text dating experiment achieved an accuracy of 42.95% at top-1 predictions."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.00304445,
+        "input_tokens": 5561,
+        "output_tokens": 356
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

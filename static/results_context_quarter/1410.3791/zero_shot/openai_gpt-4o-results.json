@@ -1,0 +1,98 @@
+{
+    "metadata": {
+        "Name": "Arabic Dialect Identification Dataset",
+        "Subsets": [
+            {
+                "Name": "Egyptian Arabic",
+                "Volume": 50000,
+                "Unit": "sentences",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Levantine Arabic",
+                "Volume": 30000,
+                "Unit": "sentences",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "Gulf Arabic",
+                "Volume": 20000,
+                "Unit": "sentences",
+                "Dialect": "Gulf"
+            }
+        ],
+        "Link": "https://example.com/arabic-dialect-dataset",
+        "HF Link": "https://huggingface.co/datasets/arabic-dialect",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "The Arabic Dialect Identification Dataset is a collection of sentences in various Arabic dialects, including Egyptian, Levantine, and Gulf Arabic. It is designed for training and evaluating models on dialect identification tasks.",
+        "Volume": 100000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Arabic Studies"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arabic Dialect Identification Dataset: A Comprehensive Resource for Dialectal Arabic NLP",
+        "Paper Link": "https://example.com/arabic-dialect-paper",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "language identification"
+        ],
+        "Venue Title": "Proceedings of the Arabic Language Technologies Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Arabic Language Technologies Conference",
+        "Authors": [
+            "Aisha Al-Mansoori",
+            "Omar El-Sayed",
+            "Fatima Al-Hassan"
+        ],
+        "Affiliations": [
+            "University of Arabic Studies",
+            "Middle East Language Institute"
+        ],
+        "Abstract": "This paper presents the Arabic Dialect Identification Dataset, a comprehensive resource for dialectal Arabic NLP. The dataset includes sentences from various Arabic dialects, collected from social media and news articles. It is designed to support research in dialect identification and language identification tasks."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3333333333333333
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0103925,
+        "input_tokens": 3614,
+        "output_tokens": 583
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,175 @@
+{
+    "metadata": {
+        "Name": "Arap-Tweet",
+        "Subsets": [
+            {
+                "Name": "Moroccan",
+                "Volume": 218181.82,
+                "Unit": "Tweets",
+                "Dialect": "Morocco"
+            },
+            {
+                "Name": "Algerian",
+                "Volume": 218181.82,
+                "Unit": "Tweets",
+                "Dialect": "Algeria"
+            },
+            {
+                "Name": "Tunisian",
+                "Volume": 218181.82,
+                "Unit": "Tweets",
+                "Dialect": "Tunisia"
+            },
+            {
+                "Name": "Libyan",
+                "Volume": 218181.82,
+                "Unit": "Tweets",
+                "Dialect": "Libya"
+            },
+            {
+                "Name": "Egyptian",
+                "Volume": 218181.82,
+                "Unit": "Tweets",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Sudanese",
+                "Volume": 218181.82,
+                "Unit": "Tweets",
+                "Dialect": "Sudan"
+            },
+            {
+                "Name": "Lebanese",
+                "Volume": 109090.91,
+                "Unit": "Tweets",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "Syrian",
+                "Volume": 109090.91,
+                "Unit": "Tweets",
+                "Dialect": "Syria"
+            },
+            {
+                "Name": "Jordanian",
+                "Volume": 109090.91,
+                "Unit": "Tweets",
+                "Dialect": "Jordan"
+            },
+            {
+                "Name": "Palestinian",
+                "Volume": 109090.91,
+                "Unit": "Tweets",
+                "Dialect": "Palestine"
+            },
+            {
+                "Name": "Iraqi",
+                "Volume": 218181.82,
+                "Unit": "Tweets",
+                "Dialect": "Iraq"
+            },
+            {
+                "Name": "Qatari",
+                "Volume": 54545.45,
+                "Unit": "Tweets",
+                "Dialect": "Qatar"
+            },
+            {
+                "Name": "Kuwaiti",
+                "Volume": 54545.45,
+                "Unit": "Tweets",
+                "Dialect": "Kuwait"
+            },
+            {
+                "Name": "Emirati",
+                "Volume": 54545.45,
+                "Unit": "Tweets",
+                "Dialect": "United Arab Emirates"
+            },
+            {
+                "Name": "Saudi",
+                "Volume": 54545.47,
+                "Unit": "Tweets",
+                "Dialect": "Saudi Arabia"
+            },
+            {
+                "Name": "Yemeni",
+                "Volume": 218181.82,
+                "Unit": "Tweets",
+                "Dialect": "Yemen"
+            }
+        ],
+        "Link": "http://arap.qatar.cmu.edu",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "Arap-Tweet is a large-scale, multi-dialectal Twitter corpus from 11 Arab regions (16 countries), annotated for age categories, gender, and dialectal variety. It contains 2.4 million tweets.",
+        "Volume": 2400000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Hamad Bin Khalifa University",
+            "Carnegie Mellon University Qatar"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age and Language Variety Identification",
+        "Paper Link": "http://www.lrec-conf.org/proceedings/lrec2018/pdf/779.pdf",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "dialect identification",
+            "gender identification"
+        ],
+        "Venue Title": "Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)",
+        "Venue Type": "conference",
+        "Venue Name": "Eleventh International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Wajdi Zaghouani",
+            "Anis Charfi"
+        ],
+        "Affiliations": [
+            "College of Humanities and Social Sciences, Hamad Bin Khalifa University, Qatar",
+            "Information Systems Program, Carnegie Mellon University Qatar"
+        ],
+        "Abstract": "In this paper, we present Arap-Tweet, which is a large-scale and multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world representing the major Arabic dialectal varieties. To build this corpus, we collected data from Twitter and we provided a team of experienced annotators with annotation guidelines that they used to annotate the corpus for age categories, gender, and dialectal variety. During the data collection effort, we based our search on distinctive keywords that are specific to the different Arabic dialects and we also validated the location using Twitter API. In this paper, we report on the corpus data collection and annotation efforts. We also present some issues that we encountered during these phases. Then, we present the results of the evaluation performed to ensure the consistency of the annotation. The provided corpus will enrich the limited set of available language resources for Arabic and will be an invaluable enabler for developing author profiling tools and NLP tools for Arabic."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8571428571428571
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.13767625,
+        "input_tokens": 11798,
+        "output_tokens": 1238
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 1,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1808.07674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

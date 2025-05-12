@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Al-Maktaba Al-Shamela",
+        "Subsets": [],
+        "Link": "https://github.com/maximromanov/mARkdown",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A corpus of digitized Arabic texts from the Islamicate intellectual and literary tradition, primarily religious in nature, with extensive metadata and lemmatization.",
+        "Volume": 800000000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Vienna"
+        ],
+        "Derived From": [],
+        "Paper Title": "Corpus Enhancements and Initial Corpus Preparation for Al-Maktaba Al-Shamela",
+        "Paper Link": "https://arxiv.org/abs/1612.08989",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "morphological analysis",
+            "text generation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Maxim Romanov"
+        ],
+        "Affiliations": [
+            "University of Vienna"
+        ],
+        "Abstract": "The paper describes the enhancement and preparation of the Al-Maktaba Al-Shamela corpus, a large collection of digitized Arabic texts from the Islamicate intellectual and literary tradition. The corpus includes extensive metadata, lemmatization, and text reuse detection. The paper also discusses text dating and corpus statistics."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7619047619047619
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.004272,
+        "input_tokens": 7383,
+        "output_tokens": 372
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

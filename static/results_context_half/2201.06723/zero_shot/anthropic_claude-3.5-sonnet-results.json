@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "Arabic Offensive Emoji Dataset",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large Arabic dataset for offensive language and hate speech detection collected using emojis as anchors from Twitter. The dataset contains fine-grained annotations for offensive, hate speech, vulgar and violent content.",
+        "Volume": 12698.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            ""
+        ],
+        "Derived From": [],
+        "Paper Title": "Harnessing Emojis for Collecting Arabic Offensive Language Dataset",
+        "Paper Link": "https://arxiv.org/abs/2201.06723",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection",
+            "fake news detection"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "We introduce a generic, language-independent method to collect a large percentage of offensive and hate tweets regardless of their topics or genres. We harness the extralinguistic information embedded in the emojis to collect a large number of offensive tweets. We apply the proposed method on Arabic tweets and compare it with English tweets -- analysing key cultural differences. We observed a constant usage of these emojis to represent offensiveness throughout different timespans on Twitter."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.050142,
+        "input_tokens": 12396,
+        "output_tokens": 372
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

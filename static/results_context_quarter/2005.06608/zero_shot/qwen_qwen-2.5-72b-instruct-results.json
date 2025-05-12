@@ -1,0 +1,98 @@
+{
+    "metadata": {
+        "Name": "Arabic Threats Dataset",
+        "Subsets": [
+            {
+                "Name": "Saudi Arabia",
+                "Volume": 10000,
+                "Unit": "tweets",
+                "Dialect": "Saudi Arabia"
+            },
+            {
+                "Name": "Egypt",
+                "Volume": 5000,
+                "Unit": "tweets",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Lebanon",
+                "Volume": 3000,
+                "Unit": "tweets",
+                "Dialect": "Lebanon"
+            }
+        ],
+        "Link": "http://edinburghnlp.inf.ed.ac.uk/workshops/OSACT4/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A multi-dialectal dataset of threatening speech collected from Arabic Twitter and manually annotated.",
+        "Volume": 18000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Natural Language Processing Lab, The University of British Columbia",
+            "SUNY at Buffalo"
+        ],
+        "Derived From": [],
+        "Paper Title": "Understanding and Detecting Dangerous Speech in Social Media",
+        "Paper Link": "http://edinburghnlp.inf.ed.ac.uk/workshops/OSACT4/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection",
+            "irony detection"
+        ],
+        "Venue Title": "4th Workshop on Open-Source Arabic Corpora and Processing Tools (OSACT4)",
+        "Venue Type": "workshop",
+        "Venue Name": "OSACT4",
+        "Authors": [
+            "Ali Alshehri",
+            "El Moatez Billah Nagoudi",
+            "Muhammad Abdul-Mageed"
+        ],
+        "Affiliations": [
+            "SUNY at Buffalo",
+            "Natural Language Processing Lab, The University of British Columbia"
+        ],
+        "Abstract": "Social media communication has become a significant part of daily activity in modern societies. For this reason, ensuring safety in social media platforms is a necessity. Use of dangerous language such as physical threats in online environments is a somewhat rare, yet remains highly important. Although several works have been performed on the related issue of detecting offensive and hateful language, dangerous speech has not previously been treated in any significant way. Motivated by these observations, we report our efforts to build a labeled dataset for dangerous speech. We also exploit our dataset to develop highly effective models to detect dangerous content. Our best model performs at 59.60% macro F1, significantly outperforming a competitive baseline."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00106931,
+        "input_tokens": 6145,
+        "output_tokens": 617
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.06608"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

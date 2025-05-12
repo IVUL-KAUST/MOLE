@@ -1,0 +1,138 @@
+{
+    "metadata": {
+        "Name": "XOR-TyDi QA",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2574,
+                "Unit": "documents",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 2582,
+                "Unit": "documents",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 2088,
+                "Unit": "documents",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 2288,
+                "Unit": "documents",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 2469,
+                "Unit": "documents",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 1941,
+                "Unit": "documents",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 1308,
+                "Unit": "documents",
+                "Language": "Telugu"
+            }
+        ],
+        "Link": "https://nlp.cs.washington.edu/xorqa/",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu",
+            "English"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A cross-lingual open-retrieval QA dataset derived from TyDi QA, covering 7 typologically diverse languages. Questions are annotated by native speakers with answers found in English Wikipedia.",
+        "Volume": 2574.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Google Research",
+            "University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Derived From": [
+            "TyDi QA"
+        ],
+        "Paper Title": "XOR: Cross-lingual Open-Retrieval Question Answering",
+        "Paper Link": "https://aclanthology.org/2021.naacl-main.46/",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "NAACL",
+        "Venue Type": "conference",
+        "Venue Name": "North American Chapter of the Association for Computational Linguistics",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "We introduce XOR QA, a new cross-lingual open-retrieval question answering dataset. XOR QA consists of questions annotated by native speakers in 7 typologically diverse languages (Arabic, Bengali, Finnish, Japanese, Korean, Russian, and Telugu). The questions are written to require information from English Wikipedia articles that is not available in the corresponding articles in the native speakers' language. To evaluate cross-lingual open-retrieval question answering skills, we construct an evaluation framework that consists of three tasks: question translation, passage retrieval from multilingual document collections, and reading comprehension. We present baseline results from state-of-the-art models on all three tasks and analyze the challenges they face."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.045558,
+        "input_tokens": 8843,
+        "output_tokens": 815
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,112 @@
+{
+    "metadata": {
+        "Name": "QALB",
+        "Subsets": [
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 160000,
+                "Unit": "sentences",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Egyptian Arabic",
+                "Volume": 160000,
+                "Unit": "sentences",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Gulf Arabic",
+                "Volume": 160000,
+                "Unit": "sentences",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "Levantine Arabic",
+                "Volume": 160000,
+                "Unit": "sentences",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "Maghrebi Arabic",
+                "Volume": 160000,
+                "Unit": "sentences",
+                "Dialect": "North Africa"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/QCRI/QALB",
+        "HF Link": "https://huggingface.co/datasets/QCRI/QALB",
+        "License": "CC BY-SA 4.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "QALB is a large-scale, publicly available dataset of Arabic social media text, covering five major Arabic dialects. It consists of 800k sentences collected from Twitter, with 160k sentences per dialect (Modern Standard Arabic, Egyptian, Gulf, Levantine, and Maghrebi).",
+        "Volume": 800000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "QALB: A Dataset for Arabic Dialect Identification",
+        "Paper Link": "https://arxiv.org/abs/2305.16253",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "language identification",
+            "sentiment analysis",
+            "offensive language detection"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Fahad Alshammari",
+            "Ahmed Elsayed",
+            "Mohamed Abdelrahman",
+            "Hasan Al-Sayegh",
+            "Preslav Nakov"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, Hamad Bin Khalifa University",
+            "University of Sheffield"
+        ],
+        "Abstract": "Arabic dialect identification (ADI) is a challenging task due to the high linguistic diversity across different Arabic dialects and the lack of large-scale labeled datasets. In this paper, we introduce QALB, a new dataset for ADI consisting of 800k sentences collected from Twitter, with 160k sentences per dialect (Modern Standard Arabic, Egyptian, Gulf, Levantine, and Maghrebi). We evaluate several state-of-the-art multilingual language models on QALB, and show that performance varies significantly across different dialects. Our results indicate that ADI is still an open problem, and that more research is needed to develop effective methods for this task. We release QALB to the public to encourage further research in this area."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3333333333333333
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.000630888,
+        "input_tokens": 3626,
+        "output_tokens": 806
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

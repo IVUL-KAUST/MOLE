@@ -1,0 +1,138 @@
+{
+    "metadata": {
+        "Name": "XOR",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2574,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 2582,
+                "Unit": "sentences",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 2088,
+                "Unit": "sentences",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 2288,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 2469,
+                "Unit": "sentences",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 1941,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 1308,
+                "Unit": "sentences",
+                "Language": "Telugu"
+            }
+        ],
+        "Link": "https://nlp.cs.washington.edu/xorqa/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu",
+            "English"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A cross-lingual open-retrieval question answering dataset.",
+        "Volume": 4500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Derived From": [
+            "TyDi QA"
+        ],
+        "Paper Title": "XOR: Cross-lingual Open-Retrieval Question Answering",
+        "Paper Link": "https://aclanthology.org/2021.naacl-main.46.pdf",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "NAACL",
+        "Venue Type": "conference",
+        "Venue Name": "2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, NAACL-HLT 2021",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "Open-retrieval question answering (OpenQA) systems answer questions by retrieving and extracting answers from a large corpus. Cross-lingual OpenQA, where questions are written in languages different from the language of the corpus, is largely under-explored due to the lack of large-scale labeled datasets. We introduce XOR-TyDi QA, a cross-lingual OpenQA dataset that consists of questions written in 7 typologically diverse languages (Arabic, Bengali, Finnish, Japanese, Korean, Russian, and Telugu). We extend the existing TyDi QA dataset  by annotating answers to a subset of the unanswerable questions in TyDi QA. Our cross-lingual OpenQA dataset is the most comprehensive dataset to the best of our knowledge, covering 7 diverse languages and with over 40K questions."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00195099,
+        "input_tokens": 8843,
+        "output_tokens": 888
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

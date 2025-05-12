@@ -1,0 +1,189 @@
+{
+    "metadata": {
+        "Name": "XNLI",
+        "Subsets": [
+            {
+                "Name": "en",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "fr",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "es",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "de",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "el",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Greek"
+            },
+            {
+                "Name": "bg",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Bulgarian"
+            },
+            {
+                "Name": "ru",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "tr",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "ar",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "vi",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "th",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "zh",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "hi",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "sw",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "ur",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Urdu"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/xnli",
+        "HF Link": "https://huggingface.co/datasets/xnli",
+        "License": "custom",
+        "Year": 2018,
+        "Language": [
+            "English",
+            "French",
+            "Spanish",
+            "German",
+            "Greek",
+            "Bulgarian",
+            "Russian",
+            "Turkish",
+            "Arabic",
+            "Vietnamese",
+            "Thai",
+            "Chinese",
+            "Hindi",
+            "Swahili",
+            "Urdu"
+        ],
+        "Domain": [
+            "public datasets",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "XNLI is an evaluation dataset for cross-lingual understanding (XLU), extending MultiNLI's development/test sets to 15 languages. It contains 7,500 human-translated sentence pairs per language for natural language inference, aiming to foster research in cross-lingual sentence representations.",
+        "Volume": 7500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Facebook AI",
+            "New York University"
+        ],
+        "Derived From": [
+            "MultiNLI"
+        ],
+        "Paper Title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+        "Paper Link": "https://arxiv.org/abs/1809.05053",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Alexis Conneau",
+            "Guillaume Lample",
+            "Ruty Rinott",
+            "Holger Schwenk",
+            "Ves Stoyanov",
+            "Adina Williams",
+            "Samuel R. Bowman"
+        ],
+        "Affiliations": [
+            "Facebook AI",
+            "New York University"
+        ],
+        "Abstract": "State-of-the-art natural language processing systems rely on supervision in the form of annotated data to learn competent models. These models are generally trained on data in a single language (usually English), and cannot be directly used beyond that language.nSince collecting data in every language is not realistic, there has been a growing interest in cross-lingual language understanding (XLU) and low-resource cross-language transfer.nIn this work, we construct an evaluation set for XLU by extending the development and test sets of the Multi-Genre Natural Language Inference Corpus (MultiNLI) nto 15 languages, including low-resource languages such as Swahili and Urdu. We hope that our dataset, dubbed XNLI, will catalyze research in cross-lingual sentence understanding by providing an informative standard evaluation task.nIn addition, we provide several baselines for multilingual sentence understanding, including two based on machine translation systems, and two that use parallel data to train aligned multilingual bag-of-words and LSTM encoders.nWe find that XNLI represents a practical and challenging evaluation suite, and that directly translating the test data yields the best performance among available baselines."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.08959625,
+        "input_tokens": 16901,
+        "output_tokens": 1265
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 1,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.05053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

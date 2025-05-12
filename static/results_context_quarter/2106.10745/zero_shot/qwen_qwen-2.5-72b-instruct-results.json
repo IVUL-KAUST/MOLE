@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Calliar",
+        "Subsets": [],
+        "Link": "https://github.com/your-repo/Calliar",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "An online handwritten dataset for Arabic calligraphy consisting of 2,500 sentences annotated for stroke, character, word, and sentence level prediction.",
+        "Volume": 2500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "King Fahd University of Petroleum and Minerals"
+        ],
+        "Derived From": [],
+        "Paper Title": "Calliar: An Online Handwritten Dataset for Arabic Calligraphy",
+        "Paper Link": "https://arxiv.org/abs/your-paper-id",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition",
+            "named entity recognition"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Zaid Alyafeai",
+            "Maged S. Al-shaibani",
+            "Mustafa Ghaleb",
+            "Yousif Ahmed Al-Wajih"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia 31261",
+            "Department of Systems Engineering, King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia 31261"
+        ],
+        "Abstract": "Calligraphy is an essential part of the Arabic heritage and culture. It has been used in the past for the decoration of houses and mosques. Usually, such calligraphy is designed manually by experts with aesthetic insights. In the past few years, there has been a considerable effort to digitize such type of art by either taking a photo of decorated buildings or drawing them using digital devices. The latter is considered an online form where the drawing is tracked by recording the apparatus movement, an electronic pen for instance, on a screen. In the literature, there are many offline datasets collected with a diversity of Arabic styles for calligraphy. However, there is no available online dataset for Arabic calligraphy. In this paper, we illustrate our approach for the collection and annotation of an online dataset for Arabic calligraphy called Calliar that consists of 2,500 sentences. Calliar is annotated for stroke, character, word and sentence level prediction."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00089829,
+        "input_tokens": 5416,
+        "output_tokens": 581
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10745"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

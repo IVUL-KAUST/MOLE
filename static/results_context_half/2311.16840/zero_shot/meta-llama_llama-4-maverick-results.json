@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "Claire French Dialogue Dataset",
+        "Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "HF Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "License": "CC BY-NC-SA 1.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "commentary",
+            "other",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset containing roughly 160 million words from transcripts and stage plays in French",
+        "Volume": 160000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LINAGORA Labs"
+        ],
+        "Derived From": [],
+        "Paper Title": "The Claire French Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2309.12345",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "text generation",
+            "language modeling"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Julie Hunter",
+            "J\u00e9r\u00f4me Louradour",
+            "Virgile Rennard",
+            "Isma\u00efl Harrando",
+            "Guokan Shang",
+            "Jean-Pierre Lorr\u00e9"
+        ],
+        "Affiliations": [
+            "LINAGORA",
+            "Ecole Polytechnique"
+        ],
+        "Abstract": "We present the Claire French Dialogue Dataset (CFDD), a resource created by members of LINAGORA Labs in the context of the OpenLLM France initiative. CFDD is a corpus containing roughly 160 million words from transcripts and stage plays in French that we have assembled and publicly released in an effort to further the development of multilingual, open source language models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00237437,
+        "input_tokens": 10737,
+        "output_tokens": 450
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2311.16840"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

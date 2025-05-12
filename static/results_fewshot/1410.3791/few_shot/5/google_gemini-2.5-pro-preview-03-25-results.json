@@ -1,0 +1,90 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 10000000.0,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "CC BY-SA 3.0",
+        "Year": 2015,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "Polyglot-NER is a massively multilingual Named Entity Recognition (NER) dataset covering 40 languages, including Arabic. Built from Wikipedia using interlingual links and Freebase types, the Arabic portion has 10M tokens. It facilitates multilingual NER research.",
+        "Volume": 10000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Research",
+            "Google",
+            "Stony Brook University"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Freebase"
+        ],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://dl.acm.org/doi/10.1137/1.9781611974010.18",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the 2015 SIAM International Conference on Data Mining",
+        "Venue Type": "conference",
+        "Venue Name": "SIAM International Conference on Data Mining",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Google Research",
+            "Google",
+            "Stony Brook University"
+        ],
+        "Abstract": "We present a massively multilingual named entity recognition (NER) dataset and models. Our dataset covers 40 languages and is built using an efficient, semi-automatic annotation scheme that exploits the richly structured interlingual linkage in Wikipedia. We train strong NER models by transferring knowledge from English data and by jointly training on all languages. Our models significantly outperform existing state-of-the-art systems on benchmark datasets in Spanish, Dutch, and German. We make our dataset and models publicly available to encourage further research in multilingual NER."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0769525,
+        "input_tokens": 6688,
+        "output_tokens": 591
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 5,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

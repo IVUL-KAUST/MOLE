@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "JESC",
+        "Link": "https://nlp.stanford.edu/projects/jesc/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "multilingual",
+        "Domain": [
+            "TV Channels",
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind.",
+        "Volume": 3200000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Stanford University",
+            "Rakuten Institute of Technology",
+            "Google Brain"
+        ],
+        "Derived From": [
+            "kitsunekko.net",
+            "d-addicts.com",
+            "opensubtitles.org",
+            "subscene.com"
+        ],
+        "Paper Title": "JESC: Japanese-English Subtitle Corpus",
+        "Paper Link": "https://arxiv.org/abs/1710.10639",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Reid Pryzant",
+            "Youngjoo Chung",
+            "Dan Jurafsky",
+            "Denny Britz"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Rakuten Institute of Technology",
+            "Google Brain"
+        ],
+        "Abstract": "In this paper we describe the Japanese-English Subtitle Corpus (JESC). JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind. The corpus was assembled by crawling and aligning subtitles found on the web. The assembly process incorporates a number of novel preprocessing elements to ensure high monolingual fluency and accurate bilingual alignments. We summarize its contents and evaluate its quality using human experts and baseline machine translation (MT) systems."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0016744,
+        "input_tokens": 5615,
+        "output_tokens": 516
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1710.10639"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -175,7 +175,7 @@ def get_id_from_path(path):
     # static/results_context_half/1410.3791/*.json
     return path.split("/")[2]
 
-def get_metadata_from_id(json_path):
+def get_metadata_from_path(json_path):
     id = get_id_from_path(json_path)
     for path in glob("evals/**/**/*.json", recursive=True):
         metadata = json.load(open(path, "r"))
@@ -288,7 +288,22 @@ def evaluate_lengths(pred_metadata, schema = "ar"):
             # print(pred_metadata[c])
             pass
     return length_forcing
-     
+
+def get_schema_from_path(json_path):
+    id = get_id_from_path(json_path)
+    if id in eval_datasets_ids["ar"]["test"]:
+        return "ar"
+    elif id in eval_datasets_ids["en"]["test"]:
+        return "en"
+    elif id in eval_datasets_ids["jp"]["test"]:
+        return "jp"
+    elif id in eval_datasets_ids["fr"]["test"]:
+        return "fr"
+    elif id in eval_datasets_ids["ru"]["test"]:
+        return "ru"
+    else:
+        return "multi"
+
 def evaluate_metadata(
     gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar"
 ):

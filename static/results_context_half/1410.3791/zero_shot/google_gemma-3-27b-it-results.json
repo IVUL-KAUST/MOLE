@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://github.com/google-research/polyglot-ner",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "We introduce Polyglot-NER, a massive multilingual named entity recognition (NER) dataset covering 152 languages. Polyglot-NER is created by distantly supervising Wikipedia articles using a multilingual NER model. The dataset contains 236M named entities, making it the largest publicly available NER dataset. We evaluate several NER models on Polyglot-NER and show that they achieve strong performance. We also demonstrate that Polyglot-NER can be used to improve the performance of NER models on other datasets.",
+        "Volume": 236000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/2305.15638",
+        "Script": "Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Jason Wei",
+            "Xing Han",
+            "Percy Liang",
+            "Zou Jing",
+            "Pengcheng He"
+        ],
+        "Affiliations": [
+            "Google Research"
+        ],
+        "Abstract": "We introduce Polyglot-NER, a massive multilingual named entity recognition (NER) dataset covering 152 languages. Polyglot-NER is created by distantly supervising Wikipedia articles using a multilingual NER model. The dataset contains 236M named entities, making it the largest publicly available NER dataset. We evaluate several NER models on Polyglot-NER and show that they achieve strong performance. We also demonstrate that Polyglot-NER can be used to improve the performance of NER models on other datasets."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0005674,
+        "input_tokens": 3638,
+        "output_tokens": 570
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,137 @@
+{
+    "metadata": {
+        "Name": "XOR TyDi QA",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 15728,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 2510,
+                "Unit": "sentences",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 7768,
+                "Unit": "sentences",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 5815,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 3025,
+                "Unit": "sentences",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 7684,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 5763,
+                "Unit": "sentences",
+                "Language": "Telugu"
+            }
+        ],
+        "Link": "https://nlp.cs.washington.edu/xorqa/XORQA_site/xorqa_datasheet.pdf",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "The dataset comprises questions inherited from TyDi QA and answers augmented with cross-lingual annotation across 7 languages, focusing on cross-lingual retrieval from English Wikipedia.",
+        "Volume": 15728.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Derived From": [
+            "TyDi QA"
+        ],
+        "Paper Title": "XOR: Cross-lingual Open-Retrieval Question Answering",
+        "Paper Link": "https://arxiv.org/abs/2010.11856",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "NAACL-HLT",
+        "Venue Type": "conference",
+        "Venue Name": "North American Chapter of the Association for Computational Linguistics - Human Language Technologies",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "This paper introduces XOR, a cross-lingual open-retrieval question answering dataset, which includes questions inherited from TyDi QA and answers augmented with cross-lingual annotation across 7 languages for cross-lingual retrieval from English Wikipedia."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00388442,
+        "input_tokens": 8843,
+        "output_tokens": 729
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

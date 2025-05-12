@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "Arabic-Hebrew parallel corpus of TED talks",
+        "Subsets": [],
+        "Link": "wit3.fbk.eu/mt.php?release=2016-01-more",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2016,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "An Arabic-Hebrew parallel corpus of TED talks built upon wit3, consisting of about 2,000 talks, approximately 3.5M tokens per language. Talks have been partitioned into train, development and test sets.",
+        "Volume": 7000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "FBK"
+        ],
+        "Derived From": [
+            "TED"
+        ],
+        "Paper Title": "An Arabic-Hebrew parallel corpus of TED talks",
+        "Paper Link": "https://arxiv.org/abs/1610.00572",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "emnlp2016",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Mauro Cettolo"
+        ],
+        "Affiliations": [
+            "FBK, Trento, Italy"
+        ],
+        "Abstract": "We describe an Arabic-Hebrew parallel corpus of TED talks built uponnwit3, the Web inventory that repurposes the original content of thenTED website in a way which is more convenient for MT researchers.nnThe benchmark consists of about 2,000 talks, whose subtitles in Arabicnand Hebrew have been accurately aligned and rearranged in sentences,nfor a total of about 3.5M tokens per language. Talks have beennpartitioned in train, development and test sets similarly in allnrespects to the MT tasks of the IWSLT 2016 evaluation campaign.nnIn addition to describing the benchmark, we list the problemsnencountered in preparing it and the novel methods designed to solventhem. Baseline MT results and some measures on sentence length arenprovided as an extrinsic evaluation of the quality of the benchmark."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0012904,
+        "input_tokens": 5192,
+        "output_tokens": 556
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.00572"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

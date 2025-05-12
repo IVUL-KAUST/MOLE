@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "TriviaQA",
+        "Link": "http://nlp.cs.washington.edu/triviaqa/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "TriviaQA is a large reading comprehension dataset containing over 650K question-answer-evidence triples. Questions are authored independently by trivia enthusiasts and evidence documents are collected retrospectively from Wikipedia and the Web.",
+        "Volume": 650000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Web pages"
+        ],
+        "Paper Title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension",
+        "Paper Link": "http://nlp.cs.washington.edu/triviaqa/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "question answering"
+        ],
+        "Venue Title": "Annual Meeting of the Association for Computational Linguistics (ACL)",
+        "Venue Type": "conference",
+        "Venue Name": "ACL 2017",
+        "Authors": [
+            "Danqi Chen",
+            "Adam Fisch",
+            "Jason Weston",
+            "Antoine Bordes"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Facebook AI Research",
+            "Facebook AI Research",
+            "Facebook AI Research"
+        ],
+        "Abstract": "Reading comprehension (RC) systems aim to answer any question that could be posed against the facts in some reference text. This goal is challenging for a number of reasons: (1) the questions can be complex (e.g. have highly compositional semantics), (2) finding the correct answer can require complex reasoning (e.g. combining facts from multiple sentences or background knowledge) and (3) individual facts can be difficult to recover from text (e.g. due to lexical and syntactic variation). This paper presents TriviaQA, a new reading comprehension dataset designed to simultaneously test all of these challenges."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00087765,
+        "input_tokens": 5566,
+        "output_tokens": 488
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.03551"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

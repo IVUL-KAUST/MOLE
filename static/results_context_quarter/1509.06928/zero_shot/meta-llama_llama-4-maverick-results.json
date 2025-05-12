@@ -1,0 +1,111 @@
+{
+    "metadata": {
+        "Name": "Arabic Dialect Identification Dataset",
+        "Subsets": [
+            {
+                "Name": "Egyptian",
+                "Volume": 315,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 265,
+                "Unit": "hours",
+                "Dialect": "Saudi Arabia"
+            },
+            {
+                "Name": "Levantine",
+                "Volume": 348,
+                "Unit": "hours",
+                "Dialect": "Lebanon"
+            },
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 279,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "North African",
+                "Volume": 355,
+                "Unit": "hours",
+                "Dialect": "Tunisia"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A dataset for Arabic dialect identification in broadcast speech",
+        "Volume": 1562.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arabic Dialect Identification in Broadcast Speech",
+        "Paper Link": "https://arxiv.org/abs/1509.06928",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification"
+        ],
+        "Venue Title": "INTERSPEECH",
+        "Venue Type": "conference",
+        "Venue Name": "INTERSPEECH 2015",
+        "Authors": [
+            "Ahmed Ali",
+            "Najim Dehak",
+            "Peter Bell",
+            "Samuel Thomas",
+            "Suwon Shon",
+            "Tuka AlHanai",
+            "Yifan Zhang"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute",
+            "University of Edinburgh"
+        ],
+        "Abstract": "This paper investigates different approaches for dialect identification in Arabic broadcast speech. The authors studied both generative and discriminative classifiers and combined these features using a multi-class Support Vector Machine (SVM). The dataset used in the experiments has been released to the public as a language identification corpus."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00168828,
+        "input_tokens": 7967,
+        "output_tokens": 541
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,94 @@
+{
+    "metadata": {
+        "Name": "MGB-3 Arabic",
+        "Subsets": [
+            {
+                "Name": "MGB-2",
+                "Volume": 1022,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "MGB-3",
+                "Volume": 5,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            }
+        ],
+        "Link": "http://www.mgb-challenge.org/workshop.html",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "Egypt",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The MGB-3 Arabic dataset is a speech-to-text transcription dataset focusing on Egyptian dialectal speech, used for the MGB-3 challenge.",
+        "Volume": 1027.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "MGB-3 Challenge"
+        ],
+        "Derived From": [
+            "MGB-2"
+        ],
+        "Paper Title": "MGB-3 Arabic Challenge: Key Features of Participating Systems",
+        "Paper Link": "http://www.mgb-challenge.org/workshop.html",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "sourceforge",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "dialect identification"
+        ],
+        "Venue Title": "MGB-3 Arabic Challenge",
+        "Venue Type": "workshop",
+        "Venue Name": "MGB-3 Workshop",
+        "Authors": [
+            "Various Authors"
+        ],
+        "Affiliations": [
+            "Aalto University",
+            "NDSC-THUEE",
+            "Johns Hopkins University",
+            "MIT",
+            "Brno University of Technology",
+            "RDI u0026 Cairo University"
+        ],
+        "Abstract": "The MGB-3 Arabic Challenge sparked the interest of quite a number of research teams around the globe. The data was distributed to more than 20 teams, out of which 13 teams submitted 10 systems to the challenge for the ASR and ADI tasks. We attempt to highlight key features of the systems below."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00101494,
+        "input_tokens": 6086,
+        "output_tokens": 507
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
