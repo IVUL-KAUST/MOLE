@@ -1,0 +1,140 @@
+{
+    "metadata": {
+        "Name": "Multilingual Hate Speech Dataset",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 4170,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "English",
+                "Volume": 75930,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "German",
+                "Volume": 6155,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 13882,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 9560,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 9788,
+                "Unit": "sentences",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 5670,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 11365,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "French",
+                "Volume": 1220,
+                "Unit": "sentences",
+                "Language": "French"
+            }
+        ],
+        "Link": "https://github.com/punyajoy/DE-LIMIT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "English",
+            "German",
+            "Indonesian",
+            "Italian",
+            "Polish",
+            "Portuguese",
+            "Spanish",
+            "French"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large scale analysis of multilingual hate speech in 9 languages from 16 different sources",
+        "Volume": 159753.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Indian Institute of Technology Kharagpur"
+        ],
+        "Derived From": [],
+        "Paper Title": "Deep Learning Models for Multilingual Hate Speech Detection",
+        "Paper Link": "https://ecmlpkdd2020.net/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fake news detection"
+        ],
+        "Venue Title": "ECML-PKDD",
+        "Venue Type": "conference",
+        "Venue Name": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases",
+        "Authors": [
+            "Sai Saketh Aluru",
+            "Binny Mathew",
+            "Punyajoy Saha",
+            "Animesh Mukherjee"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology Kharagpur, India"
+        ],
+        "Abstract": "Hate speech detection is a challenging problem with most datasets available in English. This paper conducts a large scale analysis of multilingual hate speech in 9 languages from 16 sources, proposing a framework for efficient multilingual hate speech detection."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0036408,
+        "input_tokens": 17587,
+        "output_tokens": 768
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.06465"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

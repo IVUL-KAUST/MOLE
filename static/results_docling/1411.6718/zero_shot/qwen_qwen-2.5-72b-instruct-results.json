@@ -1,22 +1,28 @@
 {
     "metadata": {
         "Name": "LABR",
-        "Subsets": [],
+        "Subsets": [
+            {
+                "Name": "LABR",
+                "Volume": 63257,
+                "Unit": "reviews",
+                "Dialect": "MSA/Dialectal"
+            }
+        ],
         "Link": "http://www.mohamedaly.info/datasets/labr",
         "HF Link": "",
         "License": "unknown",
         "Year": 2013,
         "Language": "ar",
-        "Dialect": "Modern Standard Arabic",
+        "Dialect": "Saudi Arabia",
         "Domain": [
-            "reviews"
+            "books"
         ],
         "Form": "text",
         "Collection Style": [
-            "crawling",
-            "manual curation"
+            "crawling"
         ],
-        "Description": "The largest Arabic sentiment analysis dataset to-date, consisting of over 63,000 book reviews rated on a scale of 1 to 5 stars.",
+        "Description": "The largest Arabic sentiment analysis dataset to-date, consisting of over 63,000 book reviews, each rated on a scale of 1 to 5 stars.",
         "Volume": 63257.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
@@ -24,7 +30,7 @@
             "Cairo University"
         ],
         "Derived From": [],
-        "Paper Title": "LABR: Large Scale Arabic Book Reviews Dataset",
+        "Paper Title": "LABR: A Large Scale Arabic Sentiment Analysis Benchmark",
         "Paper Link": "http://www.mohamedaly.info/datasets/labr",
         "Script": "Arab",
         "Tokenized": false,
@@ -50,17 +56,17 @@
         "Abstract": "We introduce LABR, the largest sentiment analysis dataset to-date for the Arabic language. It consists of over 63,000 book reviews, each rated on a scale of 1 to 5 stars. We investigate the properties of the dataset, and present its statistics. We explore using the dataset for two tasks: (1) sentiment polarity classification; and (2) ratings classification. Moreover, we provide standard splits of the dataset into training, validation and testing, for both polarity and ratings classification, in both balanced and unbalanced settings. We extend our previous work by performing a comprehensive analysis on the dataset. In particular, we perform an extended survey of the different classifiers typically used for the sentiment polarity classification problem. We also construct a sentiment lexicon from the dataset that contains both single and compound sentiment words and we explore its effectiveness. We make the dataset and experimental details publicly available."
     },
     "validation": {
-        "DIVERSITY": 0.6666666666666666,
+        "DIVERSITY": 0.3333333333333333,
         "ACCESSABILITY": 0.7142857142857143,
         "CONTENT": 0.875,
         "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.7619047619047619
+        "AVERAGE": 0.7142857142857143
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00261125,
+        "cost": 0.00243837,
         "input_tokens": 16932,
-        "output_tokens": 526
+        "output_tokens": 566
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

@@ -67,7 +67,7 @@
             "MaiNLP lab",
             "LMU Munich"
         ],
-        "Abstract": "Linguistic acceptability (LA) attracts the attention of the research community due to its many uses, such as testing the grammatical knowledge of language models and filtering implausible texts with acceptability classifiers. However, the application scope of LA in languages other than English is limited due to the lack of high-quality resources. To this end, we introduce the Russian Corpus of Linguistic Acceptability (RuCoLA), built from the ground up under the well-established binary LA approach. RuCoLA consists of 98.3k in-domain sentences from linguistic publications and 36.1k out-of-domain sentences produced by generative models. The out-of-domain set is created to facilitate the practical use of acceptability for improving language generation. Our paper describes the data collection protocol and presents a fine-grained analysis of acceptability classification experiments with a range of baseline approaches. We release RuCoLA, the code of experiments, and a public leaderboard to assess the linguistic competence of language models for Russian."
+        "Abstract": "Linguistic acceptability (LA) attracts the attention of the research community due to its many uses, such as testing the grammatical knowledge of language models and filtering implausible texts with acceptability classifiers. However, the application scope of LA in languages other than English is limited due to the lack of high-quality resources. To this end, we introduce the Russian Corpus of Linguistic Acceptability (RuCoLA), built from the ground up under the well-established binary LA approach. RuCoLA consists of 98.3k in-domain sentences from linguistic publications and 36.2k out-of-domain sentences produced by generative models. The out-of-domain set is created to facilitate the practical use of acceptability for improving language generation. Our paper describes the data collection protocol and presents a fine-grained analysis of acceptability classification experiments with a range of baseline approaches."
     },
     "validation": {
         "ACCESSABILITY": 0.5714285714285714,
@@ -78,9 +78,9 @@
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00369986,
+        "cost": 0.00368946,
         "input_tokens": 24622,
-        "output_tokens": 689
+        "output_tokens": 663
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

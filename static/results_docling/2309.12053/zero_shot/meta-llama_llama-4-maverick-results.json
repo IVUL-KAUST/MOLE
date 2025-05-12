@@ -1,0 +1,106 @@
+{
+    "metadata": {
+        "Name": "AceGPT",
+        "Subsets": [],
+        "Link": "https://github.com/FreedomIntelligence/AceGPT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media",
+            "news articles",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "AceGPT is a localized Large Language Model (LLM) specifically for Arabic, addressing cultural sensitivity and local values. It includes further pre-training with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and GPT-4 responses in Arabic, alongside Reinforcement Learning with AI Feedback (RLAIF) employing a reward model attuned to local culture and values.",
+        "Volume": 30.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "King Abdullah University of Science and Technology",
+            "The Chinese University of Hong Kong, Shenzhen",
+            "Shenzhen Research Institute of Big Data"
+        ],
+        "Derived From": [
+            "LLaMA2"
+        ],
+        "Paper Title": "AceGPT, Localizing Large Language Models in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2308.16149",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "sentiment analysis",
+            "dialect identification",
+            "text generation"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Huang Huang",
+            "Fei Yu",
+            "Jianqing Zhu",
+            "Xuening Sun",
+            "Hao Cheng",
+            "Dingjie Song",
+            "Zhihong Chen",
+            "Abdulmohsen Alharthi",
+            "Bang An",
+            "Juncai He",
+            "Ziche Liu",
+            "Zhiyi Zhang",
+            "Junying Chen",
+            "Jianquan Li",
+            "Benyou Wang",
+            "Lian Zhang",
+            "Ruoyu Sun",
+            "Xiang Wan",
+            "Haizhou Li",
+            "Jinchao Xu"
+        ],
+        "Affiliations": [
+            "Shenzhen International Center for Industrial and Applied Mathematics, Shenzhen Research Institute of Big Data",
+            "The Chinese University of Hong Kong, Shenzhen, China",
+            "King Abdullah University of Science and Technology, Thuwal, Saudi Arabia",
+            "Shenzhen Research Institute of Big Data, Shenzhen, China"
+        ],
+        "Abstract": "This paper is devoted to the development of a localized Large Language Model (LLM) specifically for Arabic, a language imbued with unique cultural characteristics inadequately addressed by current mainstream models. The proposed model, dubbed 'AceGPT', sets the state-of-the-art standard for open Arabic LLMs across various benchmarks. The model includes further pre-training with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and GPT-4 responses in Arabic, alongside Reinforcement Learning with AI Feedback (RLAIF) employing a reward model attuned to local culture and values."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.00948056,
+        "input_tokens": 53084,
+        "output_tokens": 694
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

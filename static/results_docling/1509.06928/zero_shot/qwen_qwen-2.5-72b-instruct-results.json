@@ -55,8 +55,7 @@
             "Qatar Computing Research Institute",
             "MIT Computer Science and Artificial Intelligence Laboratory",
             "JHU Center for Language and Speech Processing",
-            "Ecole de technologie superieure",
-            "Centre for Speech Technology Research, University of Edinburgh"
+            "Ecole de technologie superieure"
         ],
         "Derived From": [],
         "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
@@ -70,9 +69,9 @@
         "Tasks": [
             "dialect identification"
         ],
-        "Venue Title": "EUSIPCO2010: European Signal Processing Conference",
+        "Venue Title": "INTERSPEECH",
         "Venue Type": "conference",
-        "Venue Name": "EUSIPCO2010",
+        "Venue Name": "International Speech Communication Association",
         "Authors": [
             "Ahmed Ali",
             "Najim Dehak",
@@ -101,9 +100,9 @@
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00194424,
+        "cost": 0.00193464,
         "input_tokens": 11557,
-        "output_tokens": 891
+        "output_tokens": 871
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

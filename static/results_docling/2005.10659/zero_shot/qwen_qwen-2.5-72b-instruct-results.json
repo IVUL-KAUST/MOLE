@@ -3,20 +3,20 @@
         "Name": "RuBQ",
         "Link": "http://doi.org/10.5281/zenodo.3835913",
         "HF Link": "",
-        "License": "CC BY-SA 4.0",
+        "License": "CC BY-SA 1.0",
         "Year": 2020,
         "Language": "ru",
         "Domain": [
-            "captions",
-            "web pages"
+            "captions"
         ],
         "Form": "text",
         "Collection Style": [
             "crawling",
             "human annotation",
-            "machine annotation"
+            "machine annotation",
+            "manual curation"
         ],
-        "Description": "RuBQ is the first Russian knowledge base question answering (KBQA) dataset, consisting of 1,500 Russian questions, their English translations, SPARQL queries, and reference answers.",
+        "Description": "RuBQ is a Russian KBQA dataset consisting of 1,500 questions, their English translations, SPARQL queries, and a Wikidata sample. It is the first Russian KBQA and semantic parsing dataset.",
         "Volume": 1500.0,
         "Unit": "tokens",
         "Ethical Risks": "Low",
@@ -26,7 +26,7 @@
             "Ural Federal University"
         ],
         "Derived From": [
-            "TriviaQA"
+            "quiz collections"
         ],
         "Paper Title": "RuBQ: A Russian Dataset for Question Answering over Wikidata",
         "Paper Link": "http://doi.org/10.5281/zenodo.3835913",
@@ -47,24 +47,24 @@
             "Pavel Braslavski"
         ],
         "Affiliations": [
-            "ITMO University, Saint Petersburg, Russia",
-            "JetBrains Research, Saint Petersburg, Russia",
-            "Ural Federal University, Yekaterinburg, Russia"
+            "ITMO University",
+            "JetBrains Research",
+            "Ural Federal University"
         ],
-        "Abstract": "The paper presents RuBQ, the first Russian knowledge base question answering (KBQA) dataset. The high-quality dataset consists of 1,500 Russian questions of varying complexity, their English machine translations, SPARQL queries to Wikidata, reference answers, as well as a Wikidata sample of triples containing entities with Russian labels. The dataset creation started with a large collection of trivia Q&A pairs harvested on the Web. The data underwent automatic filtering, crowd-assisted entity linking, automatic generation of SPARQL queries, and their subsequent in-house verification."
+        "Abstract": "The paper presents RuBQ, the first Russian knowledge base question answering (KBQA) dataset. The high-quality dataset consists of 1,500 Russian questions of varying complexity, their English machine translations, SPARQL queries to Wikidata, reference answers, as well as a Wikidata sample of triples containing entities with Russian labels. The dataset creation started with a large collection of question-answer pairs from online quizzes. The data underwent automatic filtering, crowdassisted entity linking, automatic generation of SPARQL queries, and their subsequent in-house verification. The freely available dataset will be of interest for a wide community of researchers and practitioners in the areas of Semantic Web, NLP, and IR, especially for those working on multilingual question answering. The proposed dataset generation pipeline proved to be efficient and can be employed in other data annotation projects."
     },
     "validation": {
-        "ACCESSABILITY": 0.8571428571428571,
+        "ACCESSABILITY": 0.7142857142857143,
         "DIVERSITY": 0.0,
         "CONTENT": 0.7142857142857143,
         "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.6666666666666666
+        "AVERAGE": 0.6111111111111112
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00195498,
+        "cost": 0.00183018,
         "input_tokens": 12643,
-        "output_tokens": 506
+        "output_tokens": 543
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

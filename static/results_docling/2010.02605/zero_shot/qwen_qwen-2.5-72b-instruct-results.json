@@ -12,9 +12,9 @@
         "Form": "text",
         "Collection Style": [
             "crawling",
-            "manual curation"
+            "human annotation"
         ],
-        "Description": "DaNetQA is a new middle-scale dataset for the Russian language, comprising yes/no questions paired with paragraphs from Wikipedia.",
+        "Description": "DaNetQA is a new middle-scale dataset for the Russian language, comprising yes/no questions paired with Wikipedia paragraphs.",
         "Volume": 2691.0,
         "Unit": "tokens",
         "Ethical Risks": "Low",
@@ -61,9 +61,9 @@
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.0048416,
-        "input_tokens": 11054,
-        "output_tokens": 485
+        "cost": 0.0017088,
+        "input_tokens": 11051,
+        "output_tokens": 483
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

@@ -1,0 +1,658 @@
+{
+    "metadata": {
+        "Name": "FLORES-101",
+        "Subsets": [
+            {
+                "Name": "Afrikaans",
+                "Volume": "570K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Amharic",
+                "Volume": "339K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": "25.2M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Armenian",
+                "Volume": "977K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Assamese",
+                "Volume": "43.7K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Asturian",
+                "Volume": "124K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Azerbaijani",
+                "Volume": "867K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Belarusian",
+                "Volume": "42.4K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": "2.16M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Bosnian",
+                "Volume": "187K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Bulgarian",
+                "Volume": "10.3M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Burmese",
+                "Volume": "283K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Catalan",
+                "Volume": "5.77M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Cebuano",
+                "Volume": "484K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Chinese (Simpl)",
+                "Volume": "37.9M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Chinese (Trad)",
+                "Volume": "37.9M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Croatian",
+                "Volume": "42.2K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Danish",
+                "Volume": "10.6M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Dutch",
+                "Volume": "82.4M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": "70.6K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Filipino (Tagalog)",
+                "Volume": null,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": "15.2M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "French",
+                "Volume": "289M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Fula",
+                "Volume": "71K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Galician",
+                "Volume": "1.13M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Georgian",
+                "Volume": "1.23M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "German",
+                "Volume": "216M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Greek",
+                "Volume": "23.7M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Gujarati",
+                "Volume": "160K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Hau",
+                "Volume": "335K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Hebrew",
+                "Volume": "3.3M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": "16.3M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Hungarian",
+                "Volume": "1.17M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Icelandic",
+                "Volume": null,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Igbo",
+                "Volume": "145K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": "39.1M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Irish",
+                "Volume": "826K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Italian",
+                "Volume": "116M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": "7.46M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Javanese",
+                "Volume": "1.49M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Kamba",
+                "Volume": "5.46K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Kannada",
+                "Volume": "155K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Kazakh",
+                "Volume": "701K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Khmer",
+                "Volume": "398K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Korean",
+                "Volume": "7.46M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Kyrgyz",
+                "Volume": "566K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Lao",
+                "Volume": "153K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Latvian",
+                "Volume": "4.8M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Lingala",
+                "Volume": "21.1K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Lithuanian",
+                "Volume": "6.69M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Luo",
+                "Volume": "142K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Luxembourgish",
+                "Volume": "3.41M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Macedonian",
+                "Volume": "1.13M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Malay",
+                "Volume": "968K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Malayalam",
+                "Volume": "497K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Maltese",
+                "Volume": "5.82M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Maori",
+                "Volume": "196K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Marathi",
+                "Volume": "555K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Mongolian",
+                "Volume": null,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Nepali",
+                "Volume": null,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Nyanja",
+                "Volume": "932K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Occitan",
+                "Volume": "5.11K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Oromo",
+                "Volume": "162K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Pashto",
+                "Volume": "293K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Persian",
+                "Volume": "6.63M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Polish",
+                "Volume": "40.9M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Portuguese (Brazil)",
+                "Volume": "137M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Punjabi",
+                "Volume": "142K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Romanian",
+                "Volume": "31.9M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Russian",
+                "Volume": "127M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Serbian",
+                "Volume": "7.01M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Shona",
+                "Volume": "877K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Sindhi",
+                "Volume": "21.8K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Slovak",
+                "Volume": "10.5M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Slovenian",
+                "Volume": "5.42M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Somali",
+                "Volume": "358K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Sorani Kurdish",
+                "Volume": "305K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Spanish (Latin America)",
+                "Volume": "315M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": "349K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Swedish",
+                "Volume": "54.8M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Tajik",
+                "Volume": "544K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": "992K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": "381K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Thai",
+                "Volume": "10.6M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": "41.2M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Ukrainian",
+                "Volume": "5.44M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Umbundu",
+                "Volume": "217K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Urdu",
+                "Volume": "630K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Uzbek",
+                "Volume": null,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": "32.1M",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Welsh",
+                "Volume": "826K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Wolof",
+                "Volume": "86.9K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Xhosa",
+                "Volume": "130K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Yoruba",
+                "Volume": "171K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Zulu",
+                "Volume": "123K",
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media",
+            "news articles",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The FLORES-101 evaluation benchmark, consisting of 3001 sentences extracted from English Wikipedia and covering a variety of different topics and domains.",
+        "Volume": 3001.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research",
+            "LORIA"
+        ],
+        "Derived From": [],
+        "Paper Title": "The FLORES-101 Evaluation Benchmark for Low-Resource and Multilingual Machine Translation",
+        "Paper Link": "https://arxiv.org/abs/2106.03193",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "data.world",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Naman Goyal",
+            "Cynthia Gao",
+            "Vishrav Chaudhary",
+            "Peng-Jen Chen",
+            "Guillaume Wenzek",
+            "Da Ju",
+            "Sanjana Krishnan",
+            "Marc'Aurelio Ranzato",
+            "Francisco Guzm\u00e1n",
+            "Angela Fan"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "LORIA"
+        ],
+        "Abstract": "One of the biggest challenges hindering progress in low-resource and multilingual machine translation is the lack of good evaluation benchmarks. Current evaluation benchmarks either lack good coverage of low-resource languages, consider only restricted domains, or are low quality because they are constructed using semi-automatic procedures. In this work, we introduce the FLORES-101 evaluation benchmark, consisting of 3001 sentences extracted from English Wikipedia and covering a variety of different topics and domains. These sentences have been translated in 101 languages by professional translators through a carefully controlled process. The resulting dataset enables better assessment of model quality on the long tail of low-resource languages, including the evaluation of many-to-many multilingual translation systems, as all translations are multilingually aligned. By publicly releasing such a highquality and high-coverage dataset, we hope to foster progress in the machine translation community and beyond."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0040843,
+        "input_tokens": 29045,
+        "output_tokens": 4110
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.03193"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

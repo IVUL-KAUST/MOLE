@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "CALLIAR",
+        "Subsets": [],
+        "Link": "https://github.com/ARBML/Calliar",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "CALLIAR is an online dataset for Arabic calligraphy containing 2,500 sentences with stroke, character, word, and sentence level annotations.",
+        "Volume": 7556.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "King Fahd University of Petroleum and Minerals"
+        ],
+        "Derived From": [],
+        "Paper Title": "CALLIAR: AN ONLINE HANDWRITTEN DATASET FOR ARABIC CALLIGRAPHY",
+        "Paper Link": "https://arxiv.org/abs/2106.10745",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "named entity recognition",
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Zaid Alyafeai",
+            "Maged S. Al-shaibani",
+            "Mustafa Ghaleb",
+            "Yousif Ahmed Al-Wajih"
+        ],
+        "Affiliations": [
+            "King Fahd University of Petroleum and Minerals"
+        ],
+        "Abstract": "Calligraphy is an essential part of Arabic heritage and culture. This paper introduces CALLIAR, an online dataset for Arabic calligraphy, containing 2,500 sentences annotated for stroke, character, word, and sentence level prediction. The dataset includes various calligraphic styles like Diwani, Thuluth, Kufi, and Farisi."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.002637,
+        "input_tokens": 11562,
+        "output_tokens": 418
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10745"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

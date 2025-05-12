@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "LABR",
+        "Subsets": [],
+        "Link": "http://www.mohamedaly.info/datasets/labr",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2013,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "LABR is the largest sentiment analysis dataset for Arabic, consisting of over 63,000 book reviews rated from 1 to 5 stars. It includes standard splits for training, validation, and testing, and supports sentiment polarity and ratings classification tasks.",
+        "Volume": 63257.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Cairo University"
+        ],
+        "Derived From": [],
+        "Paper Title": "LABR: A Large Scale Arabic Sentiment Analysis Benchmark",
+        "Paper Link": "https://arxiv.org/abs/1411.6718",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "Meetings of the Association for Computational Linguistics (ACL)",
+        "Authors": [
+            "Mahmoud Nabil",
+            "Mohamed Aly",
+            "Amir F. Atiya"
+        ],
+        "Affiliations": [
+            "Dept of Computer Engineering Cairo University Giza, Egypt"
+        ],
+        "Abstract": "We introduce LABR, the largest sentiment analysis dataset to-date for the Arabic language. It consists of over 63,000 book reviews, each rated on a scale of 1 to 5 stars. We investigate the properties of the dataset, and present its statistics. We explore using the dataset for two tasks: (1) sentiment polarity classification; and (2) ratings classification. Moreover, we provide standard splits of the dataset into training, validation and testing, for both polarity and ratings classification, in both balanced and unbalanced settings. We extend our previous work by performing a comprehensive analysis on the dataset. In particular, we perform an extended survey of the different classifiers typically used for the sentiment polarity classification problem. We also construct a sentiment lexicon from the dataset that contains both single and compound sentiment words and we explore its effectiveness. We make the dataset and experimental details publicly available."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0083657,
+        "input_tokens": 16935,
+        "output_tokens": 528
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2015",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1411.6718"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

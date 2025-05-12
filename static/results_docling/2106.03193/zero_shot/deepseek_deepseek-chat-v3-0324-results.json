@@ -1,0 +1,149 @@
+{
+    "metadata": {
+        "Name": "FLORES-101",
+        "Subsets": [
+            {
+                "Name": "Amharic",
+                "Volume": 339,
+                "Unit": "sentences",
+                "Dialect": "Ethiopia"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 25200,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Chinese (Simpl)",
+                "Volume": 37900,
+                "Unit": "sentences",
+                "Dialect": "China"
+            },
+            {
+                "Name": "Chinese (Trad)",
+                "Volume": 37900,
+                "Unit": "sentences",
+                "Dialect": "Taiwan"
+            },
+            {
+                "Name": "French",
+                "Volume": 289000,
+                "Unit": "sentences",
+                "Dialect": "France"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 2160000,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 315000,
+                "Unit": "sentences",
+                "Dialect": "Spain"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 127000,
+                "Unit": "sentences",
+                "Dialect": "Russia"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": 349,
+                "Unit": "sentences",
+                "Dialect": "Kenya"
+            },
+            {
+                "Name": "Zulu",
+                "Volume": 123,
+                "Unit": "sentences",
+                "Dialect": "South Africa"
+            }
+        ],
+        "Link": "https://dl.fbaipublicfiles.com/flores101/dataset/flores101_dataset.tar.gz",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "wikipedia",
+            "news articles",
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "FLORES-101 is a multilingual evaluation benchmark consisting of 3001 sentences extracted from English Wikipedia and translated into 101 languages, enabling assessment of model quality on low-resource languages and many-to-many multilingual translation systems.",
+        "Volume": 3001.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "The FLORES-101 Evaluation Benchmark for Low-Resource and Multilingual Machine Translation",
+        "Paper Link": "https://arxiv.org/abs/2106.03193",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language modeling",
+            "topic classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Naman Goyal",
+            "Cynthia Gao",
+            "Vishrav Chaudhary",
+            "Peng-Jen Chen",
+            "Guillaume Wenzek",
+            "Da Ju",
+            "Sanjana Krishnan",
+            "Marc'Aurelio Ranzato",
+            "Francisco Guzm\u00e1n",
+            "Angela Fan"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "LORIA"
+        ],
+        "Abstract": "One of the biggest challenges hindering progress in low-resource and multilingual machine translation is the lack of good evaluation benchmarks. Current evaluation benchmarks either lack good coverage of low-resource languages, consider only restricted domains, or are low quality because they are constructed using semi-automatic procedures. In this work, we introduce the FLORES-101 evaluation benchmark, consisting of 3001 sentences extracted from English Wikipedia and covering a variety of different topics and domains. These sentences have been translated in 101 languages by professional translators through a carefully controlled process. The resulting dataset enables better assessment of model quality on the long tail of low-resource languages, including the evaluation of many-to-many multilingual translation systems, as all translations are multilingually aligned. By publicly releasing such a highquality and high-coverage dataset, we hope to foster progress in the machine translation community and beyond."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.01087796,
+        "input_tokens": 29031,
+        "output_tokens": 954
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.03193"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

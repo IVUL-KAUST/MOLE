@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "WIT3 Arabic-Hebrew",
+        "Subsets": [],
+        "Link": "wit3.fbk.eu/mt.php?release=2016-01-more",
+        "HF Link": "",
+        "License": "CC BY-NC-ND 3.0",
+        "Year": 2016,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A parallel corpus of TED talks in Arabic and Hebrew containing about 225k sentences and 3.5M tokens per language, with train/dev/test splits",
+        "Volume": 3590000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "FBK"
+        ],
+        "Derived From": [
+            "TED Talks"
+        ],
+        "Paper Title": "An Arabic-Hebrew parallel corpus of TED talks",
+        "Paper Link": "https://aclanthology.org/W16-4806/",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "SeMaT 2016",
+        "Venue Type": "workshop",
+        "Venue Name": "Workshop on Semitic Machine Translation",
+        "Authors": [
+            "Mauro Cettolo"
+        ],
+        "Affiliations": [
+            "FBK, Trento, Italy"
+        ],
+        "Abstract": "We describe an Arabic-Hebrew parallel corpus of TED talks built upon WIT3, the Web inventory that repurposes the original content of the TED website in a way which is more convenient for MT researchers. The benchmark consists of about 2,000 talks, whose subtitles in Arabic and Hebrew have been accurately aligned and rearranged in sentences, for a total of about 3.5M tokens per language. Talks have been partitioned in train, development and test sets similarly in all respects to the MT tasks of the IWSLT 2016 evaluation campaign."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.039753,
+        "input_tokens": 9027,
+        "output_tokens": 461
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.00572"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

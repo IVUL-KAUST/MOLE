@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "Golos",
+        "Link": "https://github.com/sberdevices/golos",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation",
+            "other"
+        ],
+        "Description": "A large Russian speech dataset for speech research.",
+        "Volume": 1240.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber"
+        ],
+        "Derived From": [],
+        "Paper Title": "Golos: Russian Dataset for Speech Research",
+        "Paper Link": "https://arxiv.org/abs/2106.10161",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Nikolay Karpov",
+            "Alexander Denisenko",
+            "Fedor Minkin"
+        ],
+        "Affiliations": [
+            "Sber, Russia"
+        ],
+        "Abstract": "This paper introduces a novel Russian speech dataset called Golos, a large corpus suitable for speech research. The dataset mainly consists of recorded audio files manually annotated on the crowd-sourcing platform. The total duration of the audio is about 1240 hours. We have made the corpus freely available to download, along with the acoustic model with CTC loss prepared on this corpus. Additionally, transfer learning was applied to improve the performance of the acoustic model. In order to evaluate the quality of the dataset with the beam-search algorithm, we have built a 3-gram language model on the open Common Crawl dataset. The total word error rate (WER) metrics turned out to be about 3.3% and 11.5%."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0019394,
+        "input_tokens": 9217,
+        "output_tokens": 404
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

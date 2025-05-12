@@ -5,49 +5,49 @@
             {
                 "Name": "Arabic",
                 "Volume": 2574,
-                "Unit": "sentences",
+                "Unit": "paragraphs",
                 "Language": "Arabic"
             },
             {
                 "Name": "Bengali",
                 "Volume": 2582,
-                "Unit": "sentences",
+                "Unit": "paragraphs",
                 "Language": "Bengali"
             },
             {
                 "Name": "Finnish",
                 "Volume": 2088,
-                "Unit": "sentences",
+                "Unit": "paragraphs",
                 "Language": "Finnish"
             },
             {
                 "Name": "Japanese",
                 "Volume": 2288,
-                "Unit": "sentences",
+                "Unit": "paragraphs",
                 "Language": "Japanese"
             },
             {
                 "Name": "Korean",
                 "Volume": 2469,
-                "Unit": "sentences",
+                "Unit": "paragraphs",
                 "Language": "Korean"
             },
             {
                 "Name": "Russian",
                 "Volume": 1941,
-                "Unit": "sentences",
+                "Unit": "paragraphs",
                 "Language": "Russian"
             },
             {
                 "Name": "Telugu",
                 "Volume": 1308,
-                "Unit": "sentences",
+                "Unit": "paragraphs",
                 "Language": "Telugu"
             }
         ],
         "Link": "https://nlp.cs.washington.edu/xorqa/",
-        "HF Link": "https://huggingface.co/datasets/xorqa",
-        "License": "CC BY 4.0",
+        "HF Link": "",
+        "License": "unknown",
         "Year": 2020,
         "Language": [
             "Arabic",
@@ -63,12 +63,12 @@
         ],
         "Form": "text",
         "Collection Style": [
-            "crawling",
-            "human annotation"
+            "human annotation",
+            "machine annotation"
         ],
-        "Description": "A large-scale cross-lingual open-retrieval QA dataset that enables questions from one language to be answered via answer content from another language.",
-        "Volume": 40000.0,
-        "Unit": "tokens",
+        "Description": "A large-scale dataset for cross-lingual open-retrieval question answering, built on 40K information-seeking questions across 7 diverse non-English languages.",
+        "Volume": 2574.0,
+        "Unit": "images",
         "Ethical Risks": "Low",
         "Provider": [
             "University of Washington",
@@ -90,9 +90,9 @@
             "cross-lingual information retrieval",
             "question answering"
         ],
-        "Venue Title": "ACL",
+        "Venue Title": "EMNLP",
         "Venue Type": "conference",
-        "Venue Name": "ACL 2020",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
         "Authors": [
             "Akari Asai",
             "Jungo Kasai",
@@ -107,7 +107,7 @@
             "The University of Texas at Austin",
             "Allen Institute for AI"
         ],
-        "Abstract": "This work extends open-retrieval question answering to a cross-lingual setting enabling questions from one language to be answered via answer content from another language. We construct a large-scale dataset built on 40K information-seeking questions across 7 diverse non-English languages that TYDI QA could not find same-language answers for. Based on this dataset, we introduce a task framework, called Cross-lingual Open-Retrieval Question Answering (XOR QA), that consists of three new tasks involving cross-lingual document retrieval from multilingual and English resources."
+        "Abstract": "Multilingual question answering tasks typically assume that answers exist in the same language as the question. Yet in practice, many languages face both information scarcity and information asymmetry. This work extends open-retrieval question answering to a cross-lingual setting enabling questions from one language to be answered via answer content from another language. We construct a large-scale dataset built on 40K information-seeking questions across 7 diverse non-English languages that TYDI QA could not find same-language answers for. Based on this dataset, we introduce a task framework, called Cross-lingual Open-Retrieval Question Answering (XOR QA), that consists of three new tasks involving cross-lingual document retrieval from multilingual and English resources."
     },
     "validation": {
         "DIVERSITY": 0.5,
@@ -118,9 +118,9 @@
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00355875,
+        "cost": 0.00384724,
         "input_tokens": 25329,
-        "output_tokens": 792
+        "output_tokens": 818
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

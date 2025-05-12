@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "JESC",
+        "Link": "https://github.com/google/sentencepiece",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "TV Channels",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind.",
+        "Volume": 3.2,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University",
+            "Rakuten Institute of Technology",
+            "Google Brain"
+        ],
+        "Derived From": [
+            "OpenSubtitles"
+        ],
+        "Paper Title": "JESC: Japanese-English Subtitle Corpus",
+        "Paper Link": "https://github.com/google/sentencepiece",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Reid Pryzant",
+            "Youngjoo Chung",
+            "Dan Jurafsky",
+            "Denny Britz"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Rakuten Institute of Technology",
+            "Google Brain"
+        ],
+        "Abstract": "In this paper we describe the Japanese-English Subtitle Corpus (JESC). JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind. The corpus was assembled by crawling and aligning subtitles found on the web. The assembly process incorporates a number of novel preprocessing elements to ensure high monolingual fluency and accurate bilingual alignments. We summarize its contents and evaluate its quality using human experts and baseline machine translation (MT) systems."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0047527,
+        "input_tokens": 8966,
+        "output_tokens": 468
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1710.10639"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

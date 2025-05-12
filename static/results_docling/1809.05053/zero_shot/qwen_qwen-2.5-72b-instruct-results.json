@@ -3,88 +3,58 @@
         "Name": "XNLI",
         "Subsets": [
             {
-                "Name": "Arabic",
+                "Name": "Face-To-Face",
                 "Volume": 750,
                 "Unit": "sentences",
                 "Language": "Arabic"
             },
             {
-                "Name": "Chinese",
+                "Name": "Telephone",
                 "Volume": 750,
                 "Unit": "sentences",
-                "Language": "Chinese"
+                "Language": "Arabic"
             },
             {
-                "Name": "English",
+                "Name": "Government",
                 "Volume": 750,
                 "Unit": "sentences",
-                "Language": "English"
+                "Language": "Arabic"
             },
             {
-                "Name": "French",
+                "Name": "Nine-Eleven",
                 "Volume": 750,
                 "Unit": "sentences",
-                "Language": "French"
+                "Language": "Arabic"
             },
             {
-                "Name": "German",
+                "Name": "Letters",
                 "Volume": 750,
                 "Unit": "sentences",
-                "Language": "German"
+                "Language": "Arabic"
             },
             {
-                "Name": "Greek",
+                "Name": "Oxford University Press",
                 "Volume": 750,
                 "Unit": "sentences",
-                "Language": "Greek"
+                "Language": "Arabic"
             },
             {
-                "Name": "Bulgarian",
+                "Name": "Slate",
                 "Volume": 750,
                 "Unit": "sentences",
-                "Language": "Bulgarian"
+                "Language": "Arabic"
             },
             {
-                "Name": "Russian",
+                "Name": "Verbatim",
                 "Volume": 750,
                 "Unit": "sentences",
-                "Language": "Russian"
+                "Language": "Arabic"
             },
             {
-                "Name": "Turkish",
+                "Name": "Fiction",
                 "Volume": 750,
                 "Unit": "sentences",
-                "Language": "Turkish"
-            },
-            {
-                "Name": "Vietnamese",
-                "Volume": 750,
-                "Unit": "sentences",
-                "Language": "Vietnamese"
-            },
-            {
-                "Name": "Thai",
-                "Volume": 750,
-                "Unit": "sentences",
-                "Language": "Thai"
-            },
-            {
-                "Name": "Hindi",
-                "Volume": 750,
-                "Unit": "sentences",
-                "Language": "Hindi"
-            },
-            {
-                "Name": "Swahili",
-                "Volume": 750,
-                "Unit": "sentences",
-                "Language": "Swahili"
-            },
-            {
-                "Name": "Urdu",
-                "Volume": 750,
-                "Unit": "sentences",
-                "Language": "Urdu"
+                "Language": "Arabic"
             }
         ],
         "Link": "https://s3.amazonaws.com/xnli/XNLI-1.0.zip",
@@ -93,9 +63,9 @@
         "Year": 2018,
         "Language": [
             "Arabic",
-            "Chinese",
             "English",
             "French",
+            "Spanish",
             "German",
             "Greek",
             "Bulgarian",
@@ -103,30 +73,26 @@
             "Turkish",
             "Vietnamese",
             "Thai",
+            "Chinese",
             "Hindi",
             "Swahili",
             "Urdu"
         ],
         "Domain": [
+            "news articles",
             "books",
             "commentary",
-            "news articles",
-            "captions",
-            "captions",
-            "captions",
             "other",
-            "books",
-            "public datasets",
-            "news articles",
-            "TV Channels"
+            "captions",
+            "other"
         ],
         "Form": "text",
         "Collection Style": [
             "human annotation",
             "manual curation"
         ],
-        "Description": "XNLI is a large-scale multilingual dataset for evaluating cross-lingual sentence understanding. It extends the Multi-Genre Natural Language Inference Corpus to 15 languages, including low-resource languages like Swahili and Urdu.",
-        "Volume": 750.0,
+        "Description": "XNLI is a large-scale multilingual dataset for evaluating cross-lingual sentence understanding. It extends the Multi-Genre NLI Corpus to 15 languages, including low-resource languages like Swahili and Urdu.",
+        "Volume": 7500.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
@@ -147,9 +113,9 @@
             "natural language inference",
             "cross-lingual information retrieval"
         ],
-        "Venue Title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+        "Venue Title": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
         "Venue Type": "conference",
-        "Venue Name": "EMNLP",
+        "Venue Name": "EMNLP 2018",
         "Authors": [
             "Alexis Conneau",
             "Guillaume Lample",
@@ -174,9 +140,9 @@
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00278302,
+        "cost": 0.00271022,
         "input_tokens": 16637,
-        "output_tokens": 1193
+        "output_tokens": 1011
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

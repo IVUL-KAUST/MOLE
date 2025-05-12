@@ -1,10 +1,10 @@
 {
     "metadata": {
-        "Name": "Arabic-English Transliteration",
+        "Name": "AR-EN Transliteration",
         "Subsets": [],
         "Link": "https://github.com/googlei18n/transliteration",
         "HF Link": "",
-        "License": "Apache-2.0",
+        "License": "unknown",
         "Year": 2016,
         "Language": "ar",
         "Dialect": "Modern Standard Arabic",
@@ -16,19 +16,19 @@
             "crawling",
             "manual curation"
         ],
-        "Description": "A new Arabic to English transliteration dataset extracted from Wikipedia, containing names of various origins.",
+        "Description": "A new Arabic to English transliteration dataset extracted from Wikipedia, focusing on full names from titles of articles.",
         "Volume": 15898.0,
-        "Unit": "sentences",
+        "Unit": "tokens",
         "Ethical Risks": "Low",
         "Provider": [
             "Google"
         ],
         "Derived From": [
-            "Wikipedia"
+            "wikipedia"
         ],
         "Paper Title": "Sequence-to-sequence neural network models for transliteration",
         "Paper Link": "https://arxiv.org/abs/1603.04467",
-        "Script": "Arab-Latin",
+        "Script": "Arab",
         "Tokenized": false,
         "Host": "GitHub",
         "Access": "Free",
@@ -52,16 +52,16 @@
     },
     "validation": {
         "DIVERSITY": 0.6666666666666666,
-        "ACCESSABILITY": 0.7142857142857143,
+        "ACCESSABILITY": 0.5714285714285714,
         "CONTENT": 0.875,
         "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.7619047619047619
+        "AVERAGE": 0.7142857142857143
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00129981,
+        "cost": 0.00139692,
         "input_tokens": 9076,
-        "output_tokens": 405
+        "output_tokens": 403
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

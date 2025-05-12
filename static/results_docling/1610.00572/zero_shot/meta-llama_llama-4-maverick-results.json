@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Arabic-Hebrew parallel corpus of TED talks",
+        "Subsets": [],
+        "Link": "wit3.fbk.eu/mt.php?release=2016-01-more",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2016,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "An Arabic-Hebrew parallel corpus of TED talks built upon WIT3, a Web inventory that repurposes the original content of the TED website.",
+        "Volume": 3.5,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "FBK"
+        ],
+        "Derived From": [
+            "WIT3"
+        ],
+        "Paper Title": "An Arabic-Hebrew parallel corpus of TED talks",
+        "Paper Link": "https://arxiv.org/abs/1610.00572",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Mauro Cettolo"
+        ],
+        "Affiliations": [
+            "FBK, Trento, Italy"
+        ],
+        "Abstract": "We describe an Arabic-Hebrew parallel corpus of TED talks built upon WIT3, the Web inventory that repurposes the original content of the TED website in a way which is more convenient for MT researchers."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.00271154,
+        "input_tokens": 9027,
+        "output_tokens": 356
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.00572"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

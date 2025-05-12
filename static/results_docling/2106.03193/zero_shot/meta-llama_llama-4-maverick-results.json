@@ -1,0 +1,156 @@
+{
+    "metadata": {
+        "Name": "FLORES-101",
+        "Subsets": [
+            {
+                "Name": "Assamese",
+                "Volume": 43.7,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 2.16,
+                "Unit": "sentences",
+                "Dialect": "Bangladesh"
+            },
+            {
+                "Name": "Gujarati",
+                "Volume": 160,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 16.3,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "Marathi",
+                "Volume": 109,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "Nepali",
+                "Volume": 19.6,
+                "Unit": "sentences",
+                "Dialect": "Nepal"
+            },
+            {
+                "Name": "Oriya",
+                "Volume": 5,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "Punjabi",
+                "Volume": 142,
+                "Unit": "sentences",
+                "Dialect": "Pakistan"
+            },
+            {
+                "Name": "Sinhala",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Sri Lanka"
+            },
+            {
+                "Name": "Urdu",
+                "Volume": 630,
+                "Unit": "sentences",
+                "Dialect": "Pakistan"
+            }
+        ],
+        "Link": "https://dl.fbaipublicfiles.com/flores101/dataset/flores101_dataset.tar.gz",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles",
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "FLORES-101 is a multilingual translation benchmark dataset covering 101 languages.",
+        "Volume": 3001.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research",
+            "LORIA"
+        ],
+        "Derived From": [
+            "English Wikipedia",
+            "Wikinews",
+            "Wikijunior",
+            "WikiVoyage"
+        ],
+        "Paper Title": "The FLORES-101 Evaluation Benchmark for Low-Resource and Multilingual Machine Translation",
+        "Paper Link": "https://arxiv.org/abs/2106.03193",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language identification",
+            "language identification"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Naman Goyal",
+            "Cynthia Gao",
+            "Vishrav Chaudhary",
+            "Peng-Jen Chen",
+            "Guillaume Wenzek",
+            "Da Ju",
+            "Sanjana Krishnan",
+            "Marc'Aurelio Ranzato",
+            "Francisco Guzm\u00e1n",
+            "Angela Fan"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "LORIA"
+        ],
+        "Abstract": "FLORES-101 is a multilingual translation benchmark dataset covering 101 languages. The dataset is intended to foster progress in low-resource and multilingual machine translation."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00708664,
+        "input_tokens": 29045,
+        "output_tokens": 823
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.03193"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

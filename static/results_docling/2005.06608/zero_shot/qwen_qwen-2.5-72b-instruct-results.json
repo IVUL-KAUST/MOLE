@@ -48,19 +48,19 @@
             "human annotation"
         ],
         "Description": "A labeled dataset for detecting dangerous speech in Arabic Twitter, focusing on physical threats.",
-        "Volume": 2800000.0,
+        "Volume": 2.8,
         "Unit": "sentences",
         "Ethical Risks": "High",
         "Provider": [
-            "UBC-NLP"
+            "University of British Columbia"
         ],
         "Derived From": [],
         "Paper Title": "Understanding and Detecting Dangerous Speech in Social Media",
-        "Paper Link": "https://github.com/UBC-NLP/ara_dangspeech",
+        "Paper Link": "https://arxiv.org/abs/1912.13072",
         "Script": "Arab",
         "Tokenized": false,
         "Host": "GitHub",
-        "Access": "Upon-Request",
+        "Access": "Free",
         "Cost": "",
         "Test Split": true,
         "Tasks": [
@@ -83,16 +83,16 @@
     },
     "validation": {
         "DIVERSITY": 0.6666666666666666,
-        "ACCESSABILITY": 0.42857142857142855,
+        "ACCESSABILITY": 0.5714285714285714,
         "CONTENT": 0.875,
         "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.6190476190476191
+        "AVERAGE": 0.6666666666666666
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00482467,
+        "cost": 0.00482387,
         "input_tokens": 33630,
-        "output_tokens": 672
+        "output_tokens": 669
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

@@ -11,15 +11,14 @@
         ],
         "Form": "text",
         "Collection Style": [
-            "manual curation",
-            "human annotation"
+            "human annotation",
+            "manual curation"
         ],
-        "Description": "BSARD is a French native dataset for statutory article retrieval, consisting of 1,100+ legal questions labeled by experienced jurists with relevant articles from a corpus of 22,600+ Belgian law articles.",
+        "Description": "A French native dataset of legal questions and relevant articles from Belgian legislation, annotated by experienced jurists.",
         "Volume": 1108.0,
         "Unit": "tokens",
         "Ethical Risks": "Medium",
         "Provider": [
-            "Law & Tech Lab",
             "Maastricht University"
         ],
         "Derived From": [],
@@ -31,7 +30,6 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "information retrieval",
             "information retrieval"
         ],
         "Venue Title": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
@@ -55,9 +53,9 @@
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00277916,
+        "cost": 0.00276436,
         "input_tokens": 18410,
-        "output_tokens": 592
+        "output_tokens": 560
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

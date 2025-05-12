@@ -4,7 +4,7 @@
         "Subsets": [],
         "Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
         "HF Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
-        "License": "CC BY-NC-SA 3.0",
+        "License": "CC BY 4.0",
         "Year": 2023,
         "Language": "ar",
         "Dialect": "Classical Arabic",
@@ -42,9 +42,9 @@
             "machine translation",
             "language modeling"
         ],
-        "Venue Title": "Proceedings of the Third Conference on Machine Translation: Research Papers",
+        "Venue Title": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
         "Venue Type": "conference",
-        "Venue Name": "ACL",
+        "Venue Name": "ACL 2020",
         "Authors": [
             "Mohammed Khalil",
             "Mohammed Sabry"
@@ -64,9 +64,9 @@
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00232605,
+        "cost": 0.00683212,
         "input_tokens": 16060,
-        "output_tokens": 627
+        "output_tokens": 631
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

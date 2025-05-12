@@ -1,0 +1,94 @@
+{
+    "metadata": {
+        "Name": "XOR QA",
+        "Subsets": [],
+        "Link": "https://nlp.cs.washington.edu/xorqa/",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A large-scale dataset of 40K information-seeking questions across 7 diverse non-English languages for cross-lingual open-retrieval question answering",
+        "Volume": 40000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Google Research",
+            "University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Derived From": [
+            "TYDI QA"
+        ],
+        "Paper Title": "XOR QA: Cross-lingual Open-Retrieval Question Answering",
+        "Paper Link": "https://nlp.cs.washington.edu/xorqa/",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Google Research",
+            "The University of Texas at Austin",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "Multilingual question answering tasks typically assume that answers exist in the same language as the question. Yet in practice, many languages face both information scarcity -where languages have few reference articles-and information asymmetry -where questions reference concepts from other cultures. This work extends open-retrieval question answering to a cross-lingual setting enabling questions from one language to be answered via answer content from another language. We construct a large-scale dataset built on 40K information-seeking questions across 7 diverse non-English languages that TYDI QA could not find same-language answers for. Based on this dataset, we introduce a task framework, called Cross -lingual O penR etrieval Q uestion A nswering ( XOR QA ), that consists of three new tasks involving crosslingual document retrieval from multilingual and English resources."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.098316,
+        "input_tokens": 25332,
+        "output_tokens": 579
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

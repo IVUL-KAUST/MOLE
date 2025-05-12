@@ -79,9 +79,9 @@
             "language modeling",
             "text generation"
         ],
-        "Venue Title": "The Multilingual Amazon Reviews Corpus",
-        "Venue Type": "preprint",
-        "Venue Name": "",
+        "Venue Title": "NAACL",
+        "Venue Type": "conference",
+        "Venue Name": "NAACL 2019",
         "Authors": [
             "Phillip Keung",
             "Yichao Lu",
@@ -104,9 +104,9 @@
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00159429,
+        "cost": 0.00159546,
         "input_tokens": 10022,
-        "output_tokens": 765
+        "output_tokens": 766
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "ATHAR",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
+        "HF Link": "https://huggingface.co/datasets/mohamed-khalil/ATHAR",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "ATHAR dataset, comprising 66,000 high-quality Classical Arabic to English translation samples that cover a wide array of subjects including science, culture, and philosophy.",
+        "Volume": 66000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Independent Researcher",
+            "ADAPT/DCU, Dublin, Ireland"
+        ],
+        "Derived From": [],
+        "Paper Title": "ATHAR: A High-Quality and Diverse Dataset for Classical Arabic to English Translation",
+        "Paper Link": "https://example.com/athar_paper_not_found",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "Not specified in text",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Mohammed Khalil",
+            "Mohammed Sabry"
+        ],
+        "Affiliations": [
+            "Independent Researcher",
+            "ADAPT/DCU, Dublin, Ireland"
+        ],
+        "Abstract": "Classical Arabic represents a significant era, encompassing the golden age of Arab culture, philosophy, and scientific literature. With a broad consensus on the importance of translating these literatures to enrich knowledge dissemination across communities, the advent of large language models (LLMs) and translation systems offers promising tools to facilitate this goal. However, we have identified a scarcity of translation datasets in Classical Arabic, which are often limited in scope and topics, hindering the development of high-quality translation systems. In response, we present the ATHAR dataset, comprising 66,000 high-quality Classical Arabic to English translation samples that cover a wide array of subjects including science, culture, and philosophy. Furthermore, we assess the performance of current state-ofthe-art LLMs under various settings, concluding that there is a need for such datasets in current systems. Our findings highlight how models can benefit from fine-tuning or incorporating this dataset into their pretraining pipelines. The dataset is publicly available on the HuggingFace Data Hub at https://huggingface.co/ datasets/mohamed-khalil/ATHAR ."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7619047619047619
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.08838875,
+        "input_tokens": 16063,
+        "output_tokens": 628
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.19835"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

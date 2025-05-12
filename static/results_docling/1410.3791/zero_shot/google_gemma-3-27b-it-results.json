@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "POLYGLOT-NER",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2013,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "The paper introduces a system for building massive multilingual Named Entity Recognition (NER) annotators using Wikipedia and Freebase, without relying on human-annotated datasets or language-specific resources.",
+        "Volume": 0.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stony Brook University"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Freebase"
+        ],
+        "Paper Title": "POLYGLOT-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/1410.3791",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Bryan Perozzi",
+            "Vivek Kulkarni",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Department of Computer Science Stony Brook University"
+        ],
+        "Abstract": "The increasing diversity of languages used on the web introduces a new level of complexity to Information Retrieval (IR) systems. We can no longer assume that textual content is written in one language or even the same language family. in NLP and Information Retrieval (IR) systems, where it is used for a variety of purposes (e.g, event extraction or knowledge base population). Successful approaches to address NER rely on supervised learning [5, 12]. Applying these approaches to a massively multilingual setting exposes two major drawbacks; First, they require human annotated datasets which are scarce. Second, to design relevant features, sufficient linguistic proficiency is required for each language of interest. This makes building multilingual NER annotators a tedious and cumbersome process. Our method learns distributed word representations (word embeddings) which encode semantic and syntactic features of words in each language. Then, we automatically generate datasets from Wikipedia link structure and Freebase attributes. Finally, we apply two preprocessing stages (oversampling and exact surface form matching) which do not require any linguistic expertise. In this paper, we demonstrate how to build massive multilingual annotators with minimal human expertise and intervention. We describe a system that builds Named Entity Recognition (NER) annotators for 40 major languages using Wikipedia and Freebase. Our approach does not require NER human annotated datasets or language specific resources like treebanks, parallel corpora, and orthographic rules. The novelty of approach lies therein - using only language agnostic techniques, while achieving competitive performance. Our evaluation is two fold: First, we demonstrate the system performance on human annotated datasets. Second, for languages where no gold-standard benchmarks are available, we propose a new method, distant evaluation , based on statistical machine translation."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0019171,
+        "input_tokens": 15946,
+        "output_tokens": 711
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
