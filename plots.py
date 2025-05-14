@@ -75,10 +75,17 @@ def get_openrouter_cost(model_name, input_tokens, output_tokens):
     model_name = model_name.split("_")[1]
     return (open_router_costs[model_name]["input"] * input_tokens + open_router_costs[model_name]["output"] * output_tokens) / (1e6)
 
+def map_error(error):
+    if "Expecting value: line" in error:
+        return "JSON Reading Error"
+    else:
+        return error
 def plot_by_errors():
+    types_of_errors = {}
     ids = get_all_ids()
     metric_results = {}
     json_files = glob(f"static/results_**/**/**/**/*.json") + glob(f"static/results_**/**/**/*.json")
+    print(len(json_files))
     for json_file in json_files:
         results = json.load(open(json_file))
         arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
@@ -92,6 +99,10 @@ def plot_by_errors():
         if model_name not in metric_results:
             metric_results[model_name] = []
         is_error = 1 if results["error"] else 0
+        if results["error"] in types_of_errors:
+            types_of_errors[results["error"]] += 1
+        else:
+            types_of_errors[results["error"]] = 1
         metric_results[model_name].append([is_error])
     final_results = {}
     for model_name in metric_results:
@@ -102,7 +113,7 @@ def plot_by_errors():
         results.append(
             [remap_names(model_name)] + (np.sum(final_results[model_name], axis=0)).tolist()
         )
-
+    print(types_of_errors)
     headers = ["Model", "Number of Errors"]
     print_table(results, headers)
 
