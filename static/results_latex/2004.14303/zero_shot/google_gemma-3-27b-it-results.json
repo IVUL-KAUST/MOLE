@@ -48,9 +48,9 @@
     },
     "length_forcing": 0.90625,
     "cost": {
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "cost": 0
+        "cost": 0.0011487,
+        "input_tokens": 10623,
+        "output_tokens": 531
     },
     "config": {
         "model_name": "google_gemma-3-27b-it",
@@ -63,5 +63,5 @@
         "link": "https://arxiv.org/abs/2004.14303"
     },
     "ratio_filling": 1.0,
-    "error": "Expecting ',' delimiter: line 49 column 161 (char 1282)"
+    "error": "Expecting ',' delimiter: line 49 column 161 (char 1318)"
 }
