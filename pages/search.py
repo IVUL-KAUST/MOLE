@@ -170,9 +170,9 @@ def get_metadatav2(
             # if "qwen" in model_name and len(paper_text) == 95618:
             #     raise Exception("Timeout")
             # else:
+            cost = get_cost(message)
             response =  message.choices[0].message.content
             predictions = read_json(response)
-            cost = get_cost(message)
         except json.JSONDecodeError as e:
             error = str(e)  
         except Exception as e:
