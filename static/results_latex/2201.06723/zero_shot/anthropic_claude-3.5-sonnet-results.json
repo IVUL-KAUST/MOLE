@@ -48,9 +48,9 @@
     },
     "length_forcing": 0.90625,
     "cost": {
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "cost": 0
+        "cost": 0.081552,
+        "input_tokens": 20511,
+        "output_tokens": 612
     },
     "config": {
         "model_name": "anthropic_claude-3.5-sonnet",
