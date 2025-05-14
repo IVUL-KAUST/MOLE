@@ -1,0 +1,112 @@
+{
+    "metadata": {
+        "Name": "Claire French Dialogue Dataset (CFDD)",
+        "Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "HF Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "License": "CC BY-NC-SA 1.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "social media",
+            "news articles",
+            "books",
+            "wikipedia",
+            "web pages",
+            "public datasets",
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A dataset containing roughly 160 million words from transcripts and stage plays in French",
+        "Volume": 160.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LINAGORA Labs"
+        ],
+        "Derived From": [
+            "ACSYNT",
+            "Assembl\u00e9e Nationale",
+            "Orf\u00e9o-CEFC",
+            "C-ORAL-ROM",
+            "CRFP",
+            "FLEURON",
+            "Valibel",
+            "CFPB",
+            "R\u00e9unions De Travail",
+            "CFPP",
+            "CID",
+            "CLAPI",
+            "ESLO",
+            "FREDSum",
+            "LinTO",
+            "OFROM",
+            "Parole Publique",
+            "Paris Stories",
+            "PFC",
+            "Rhapsodie",
+            "SUMM-RE",
+            "TCOF",
+            "Th\u00e9\u00e2tre Classique",
+            "Th\u00e9\u00e2tre Gratuit"
+        ],
+        "Paper Title": "THE CLAIRE FRENCH DIALOGUE DATASET",
+        "Paper Link": "https://arxiv.org/abs/2307.10172",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "text generation",
+            "summarization",
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Julie Hunter",
+            "J\u00e9r\u00f4me Louradour",
+            "Virgile Rennard",
+            "Isma\u00efl Harrando",
+            "Guokan Shang",
+            "Jean-Pierre Lorr\u00e9"
+        ],
+        "Affiliations": [
+            "LINAGORA Toulouse, France",
+            "LINAGORA Ecole Polytechnique Paris, France"
+        ],
+        "Abstract": "We present the Claire French Dialogue Dataset (CFDD), a resource created by members of LINAGORA Labs in the context of the OpenLLM France initiative. CFDD is a corpus containing roughly 160 million words from transcripts and stage plays in French that we have assembled and publicly released in an effort to further the development of multilingual, open source language models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0032876,
+        "input_tokens": 15373,
+        "output_tokens": 600
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2311.16840"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

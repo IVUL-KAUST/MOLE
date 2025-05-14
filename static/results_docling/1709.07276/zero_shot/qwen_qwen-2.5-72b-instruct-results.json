@@ -3,34 +3,46 @@
         "Name": "MGB-3",
         "Subsets": [
             {
-                "Name": "EGY",
-                "Volume": 12.4,
+                "Name": "Comedy",
+                "Volume": 2.2,
                 "Unit": "hours",
-                "Dialect": "Egypt"
+                "Dialect": "Egyptian"
             },
             {
-                "Name": "GLF",
-                "Volume": 10.0,
+                "Name": "Cooking",
+                "Volume": 2.0,
                 "Unit": "hours",
-                "Dialect": "Gulf"
+                "Dialect": "Egyptian"
             },
             {
-                "Name": "LAV",
-                "Volume": 10.3,
+                "Name": "FamilyKids",
+                "Volume": 2.8,
                 "Unit": "hours",
-                "Dialect": "Levant"
+                "Dialect": "Egyptian"
             },
             {
-                "Name": "MSA",
-                "Volume": 10.4,
+                "Name": "Fashion",
+                "Volume": 2.0,
                 "Unit": "hours",
-                "Dialect": "Modern Standard Arabic"
+                "Dialect": "Egyptian"
             },
             {
-                "Name": "NOR",
-                "Volume": 10.5,
+                "Name": "Drama",
+                "Volume": 2.2,
                 "Unit": "hours",
-                "Dialect": "North Africa"
+                "Dialect": "Egyptian"
+            },
+            {
+                "Name": "Science",
+                "Volume": 2.0,
+                "Unit": "hours",
+                "Dialect": "Egyptian"
+            },
+            {
+                "Name": "Sports",
+                "Volume": 2.0,
+                "Unit": "hours",
+                "Dialect": "Egyptian"
             }
         ],
         "Link": "http://www.mgb-challenge.org/workshop.html",
@@ -40,13 +52,14 @@
         "Language": "ar",
         "Dialect": "Egypt",
         "Domain": [
-            "reviews"
+            "other"
         ],
         "Form": "spoken",
         "Collection Style": [
-            "crawling"
+            "crawling",
+            "manual curation"
         ],
-        "Description": "Arabic MGB-3 Challenge dataset for speech recognition and dialect identification using Egyptian dialect YouTube videos.",
+        "Description": "The MGB-3 dataset focuses on Egyptian Arabic speech recognition and dialect identification using YouTube videos across seven genres: comedy, cooking, family/kids, fashion, drama, science, and sports.",
         "Volume": 16.0,
         "Unit": "hours",
         "Ethical Risks": "Low",
@@ -61,7 +74,7 @@
         "Paper Link": "http://www.mgb-challenge.org/workshop.html",
         "Script": "Arab",
         "Tokenized": false,
-        "Host": "sourceforge",
+        "Host": "GitHub",
         "Access": "Free",
         "Cost": "",
         "Test Split": true,
@@ -69,9 +82,9 @@
             "speech recognition",
             "dialect identification"
         ],
-        "Venue Title": "ASRU",
+        "Venue Title": "ASRU 2017",
         "Venue Type": "conference",
-        "Venue Name": "ASRU 2017",
+        "Venue Name": "IEEE Automatic Speech Recognition and Understanding Workshop",
         "Authors": [
             "Ahmed Ali",
             "Stephan Vogel",
@@ -81,20 +94,20 @@
             "Qatar Computing Research Institute, HBKU, Doha, Qatar",
             "Centre for Speech Technology Research, University of Edinburgh, UK"
         ],
-        "Abstract": "This paper describes the Arabic MGB-3 Challenge - Arabic Speech Recognition in the Wild. Unlike last year's Arabic MGB-2 Challenge, for which the recognition task was based on more than 1,200 hours broadcast TV news recordings from Aljazeera Arabic TV programs, MGB-3 emphasises dialectal Arabic using a multi-genre collection of Egyptian YouTube videos. Seven genres were used for the data collection: comedy, cooking, family/kids, fashion, drama, sports, and science (TEDx). A total of 16 hours of videos, split evenly across the different genres, were divided into adaptation, development and evaluation data sets. The Arabic MGB-Challenge comprised two tasks: A) Speech transcription, evaluated on the MGB-3 test set, along with the 10 hour MGB-2 test set to report progress on the MGB-2 evaluation; B) Arabic dialect identification, introduced this year in order to distinguish between four major Arabic dialects - Egyptian, Levantine, North African, Gulf, as well as Modern Standard Arabic. Two hours of audio per dialect were released for development and a further two hours were used for evaluation. For dialect identification, both lexical features and i-vector bottleneck features were shared with participants in addition to the raw audio recordings. Overall, thirteen teams submitted ten systems to the challenge. We outline the approaches adopted in each system, and summarise the evaluation results."
+        "Abstract": "This paper describes the Arabic MGB-3 Challenge - Arabic Speech Recognition in the Wild. Unlike last year's Arabic MGB-2 Challenge, for which the recognition task was based on more than 1,200 hours broadcast TV news recordings from Aljazeera Arabic TV programs, MGB-3 emphasises dialectal Arabic using a multi-genre collection of Egyptian YouTube videos. Seven genres were used for the data collection: comedy, cooking, family/kids, fashion, drama, sports, and science (TEDx). A total of 16 hours of videos, split evenly across the different genres, were divided into adaptation, development and evaluation data sets. The Arabic MGB-Challenge comprised two tasks: A) Speech transcription, evaluated on the MGB-3 test set, along with the 10 hour MGB-2 test set to report progress on the MGB-2 evaluation; B) Arabic dialect identification, introduced this year in order to distinguish between four major Arabic dialects - Egyptian, Levantine, North African, Gulf, as well as Modern Standard Arabic."
     },
     "validation": {
         "DIVERSITY": 0.6666666666666666,
-        "ACCESSABILITY": 0.42857142857142855,
+        "ACCESSABILITY": 0.5714285714285714,
         "CONTENT": 0.875,
         "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.6190476190476191
+        "AVERAGE": 0.6666666666666666
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00198501,
+        "cost": 0.0021403,
         "input_tokens": 13199,
-        "output_tokens": 836
+        "output_tokens": 860
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

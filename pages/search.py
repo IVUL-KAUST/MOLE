@@ -279,7 +279,45 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
                         text_pages.append(page.extract_text())
                     paper_text += " ".join(text_pages)
             elif pdf_mode == "docling":
-                paper_text = get_paper_content_from_docling(source_file)
+                # If we need to extract (either no existing file or reading failed)
+                pdf_dir = os.path.dirname(source_file)
+                docling_file_path = os.path.join(pdf_dir, "paper_text_docling.txt")
+                
+                # Check if docling extraction already exists and reuse it
+                if os.path.exists(docling_file_path):
+                    show_info(
+                        f"📄 Found existing docling extraction, reusing from {docling_file_path}",
+                        st_context=st_context,
+                    )
+                    try:
+                        with open(docling_file_path, "r", encoding="utf-8") as f:
+                            paper_text = f.read()
+                        continue
+                    except Exception as e:
+                        show_warning(
+                            f"⚠️ Failed to read existing docling extraction: {str(e)}. Will extract again.",
+                            st_context=st_context,
+                        )
+                else:
+                    show_info(
+                        f"📄 Extracting text using docling...",
+                        st_context=st_context,
+                    )
+                    paper_text = get_paper_content_from_docling(source_file)
+                    
+                    # Save the docling extracted text
+                    try:
+                        with open(docling_file_path, "w", encoding="utf-8") as f:
+                            f.write(paper_text)
+                        show_info(
+                            f"📄 Saved docling extracted text to {docling_file_path}",
+                            st_context=st_context,
+                        )
+                    except Exception as e:
+                        show_warning(
+                            f"⚠️ Failed to save docling extracted text: {str(e)}",
+                            st_context=st_context,
+                        )
             else:
                 raise ValueError(f"Invalid pdf_mode: {pdf_mode}")
         else:

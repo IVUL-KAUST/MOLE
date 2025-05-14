@@ -31,7 +31,9 @@
             "French"
         ],
         "Domain": [
-            "social media"
+            "social media",
+            "news articles",
+            "other"
         ],
         "Form": "text",
         "Collection Style": [
@@ -45,24 +47,7 @@
         "Provider": [
             "Indian Institute of Technology Kharagpur"
         ],
-        "Derived From": [
-            "Mulki et al. [26]",
-            "Ousidhoum et al. [28]",
-            "Davidson et al. [10]",
-            "Gibert et al. [18]",
-            "Waseem et al. [37]",
-            "Basile et al. [4]",
-            "Ross et al. [33]",
-            "Bretschneider et al. [6]",
-            "Ibrohim et al. [22]",
-            "Alfina et al. [1]",
-            "Sanguinetti et al. [34]",
-            "Bosco et al. [5]",
-            "Ptaszynski et al. [30]",
-            "Fortuna et al. [15]",
-            "Pereira et al. [29]",
-            "Ousidhoum et al. [28]"
-        ],
+        "Derived From": [],
         "Paper Title": "Deep Learning Models for Multilingual Hate Speech Detection",
         "Paper Link": "https://github.com/punyajoy/DE-LIMIT",
         "Tokenized": false,
@@ -71,7 +56,8 @@
         "Cost": "",
         "Test Split": true,
         "Tasks": [
-            "fake news detection"
+            "fake news detection",
+            "sentiment analysis"
         ],
         "Venue Title": "ECML-PKDD 2020",
         "Venue Type": "conference",
@@ -90,15 +76,15 @@
     "validation": {
         "DIVERSITY": 0.5,
         "ACCESSABILITY": 0.7142857142857143,
-        "CONTENT": 0.5714285714285714,
+        "CONTENT": 0.42857142857142855,
         "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.5789473684210527
+        "AVERAGE": 0.5263157894736842
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00279339,
+        "cost": 0.00272899,
         "input_tokens": 17584,
-        "output_tokens": 745
+        "output_tokens": 600
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

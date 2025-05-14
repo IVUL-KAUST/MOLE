@@ -15,7 +15,7 @@
             "machine annotation",
             "LLM generated"
         ],
-        "Description": "HellaSwag is a dataset for commonsense natural language inference, created using adversarial filtering to generate challenging wrong answers. It includes video captions and WikiHow articles.",
+        "Description": "HellaSwag is a dataset for commonsense natural language inference, created using adversarial filtering to produce challenging machine-generated wrong answers.",
         "Volume": 70000.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
@@ -51,7 +51,7 @@
             "Paul G. Allen School of Computer Science & Engineering, University of Washington",
             "Allen Institute for Artificial Intelligence"
         ],
-        "Abstract": "We present HellaSwag, a new challenge dataset for commonsense natural language inference. Though its questions are trivial for humans (\u00a1 95% accuracy), state-of-the-art models struggle (\u00a1 48%). We achieve this via Adversarial Filtering (AF), a data collection paradigm wherein a series of discriminators iteratively select an adversarial set of machine-generated wrong answers."
+        "Abstract": "Recent work by Zellers et al. (2018) introduced a new task of commonsense natural language inference: given an event description such as 'A woman sits at a piano,' a machine must select the most likely followup: 'She sets her fingers on the keys.' With the introduction of BERT (Devlin et al., 2018), near human-level performance was reached. Does this mean that machines can perform human level commonsense inference? In this paper, we show that commonsense inference still proves difficult for even state-of-the-art models, by presenting HellaSwag, a new challenge dataset. Though its questions are trivial for humans (\u00a1 95% accuracy), state-of-the-art models struggle (\u00a1 48%). We achieve this via Adversarial Filtering (AF), a data collection paradigm wherein a series of discriminators iteratively select an adversarial set of machine-generated wrong answers. AF proves to be surprisingly robust. The key insight is to scale up the length and complexity of the dataset examples towards a critical 'Goldilocks' zone wherein generated text is ridiculous to humans, yet often misclassified by state-of-the-art models."
     },
     "validation": {
         "ACCESSABILITY": 0.42857142857142855,
@@ -62,9 +62,9 @@
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.0021303,
+        "cost": 0.00219036,
         "input_tokens": 15593,
-        "output_tokens": 483
+        "output_tokens": 633
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

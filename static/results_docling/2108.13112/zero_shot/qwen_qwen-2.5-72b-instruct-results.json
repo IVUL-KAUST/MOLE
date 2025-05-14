@@ -21,7 +21,7 @@
         "Provider": [
             "Lomonosov Moscow State University",
             "HSE University",
-            "Huawei Noah's Ark lab",
+            "Huawei Noah's Ark Lab",
             "Novosibirsk State University",
             "Ural Federal University",
             "Innopolis University",
@@ -33,7 +33,7 @@
             "RURED"
         ],
         "Paper Title": "NEREL: A Russian Dataset with Nested Named Entities, Relations and Events",
-        "Paper Link": "https://github.com/nerel-ds/NEREL",
+        "Paper Link": "https://arxiv.org/abs/2005.07213",
         "Tokenized": false,
         "Host": "GitHub",
         "Access": "Free",
@@ -42,11 +42,11 @@
         "Tasks": [
             "named entity recognition",
             "irony detection",
-            "transliteration"
+            "machine translation"
         ],
-        "Venue Title": "Computational Linguistics and Intellectual Technologies: Proceedings of the International Conference 'Dialog'",
+        "Venue Title": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
         "Venue Type": "conference",
-        "Venue Name": "Dialog",
+        "Venue Name": "ACL 2020",
         "Authors": [
             "Natalia Loukachevitch",
             "Ekaterina Artemova",
@@ -61,7 +61,7 @@
         "Affiliations": [
             "Lomonosov Moscow State University, Russia",
             "HSE University, Russia",
-            "Huawei Noah's Ark lab, Russia",
+            "Huawei Noah's Ark Lab, Russia",
             "Novosibirsk State University, Russia",
             "Ural Federal University, Russia",
             "Innopolis University, Russia",
@@ -80,9 +80,9 @@
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00206097,
+        "cost": 0.00206657,
         "input_tokens": 13196,
-        "output_tokens": 625
+        "output_tokens": 631
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

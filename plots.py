@@ -5,7 +5,7 @@ import argparse
 from constants import eval_datasets_ids, non_browsing_models, schemata, open_router_costs
 import numpy as np
 from plot_utils import print_table
-from utils import get_predictions, evaluate_metadata, get_metadata_from_id, get_id_from_path, get_schema_from_path
+from utils import get_predictions, evaluate_metadata, get_metadata_from_path, get_id_from_path, get_schema_from_path
 import os
 args = argparse.ArgumentParser()
 args.add_argument("--eval", type=str, default="valid")
@@ -270,7 +270,7 @@ def plot_langs():
             pred_metadata = results["metadata"]
             if model_name not in metric_results:
                 metric_results[model_name] = {}
-            gold_metadata = get_metadata_from_id(json_file)
+            gold_metadata = get_metadata_from_path(json_file)
             scores = evaluate_metadata(
                 gold_metadata, pred_metadata,
                 schema = lang
@@ -338,7 +338,7 @@ def plot_context_length():
         pred_metadata = results["metadata"]
         if model_name not in metric_results:
             metric_results[model_name] = {}
-        gold_metadata = get_metadata_from_id(json_file)
+        gold_metadata = get_metadata_from_path(json_file)
         for i in ["quarter", "half", "all"]:
             if i not in metric_results[model_name]:
                 metric_results[model_name][i] = []
@@ -400,7 +400,7 @@ def plot_fewshot():
         pred_metadata = results["metadata"]
         if model_name not in metric_results:
             metric_results[model_name] = {}
-        gold_metadata = get_metadata_from_id(json_file)
+        gold_metadata = get_metadata_from_path(json_file)
         for i in [0, 1, 3, 5]:
             if i not in metric_results[model_name]:
                 metric_results[model_name][i] = []
@@ -461,10 +461,8 @@ def plot_table(lang = 'ar'):
         pred_metadata = results["metadata"]
         if model_name not in metric_results:
             metric_results[model_name] = []
-        human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
         # human_json_path = human_json_path.replace(f"/{args.type}", "")
-        gold_metadata = json.load(open(human_json_path))["metadata"]
-        scores = {c: 0 for c in evaluation_subsets}
+        gold_metadata = get_metadata_from_path(json_file)
 
         scores = evaluate_metadata(
             gold_metadata, pred_metadata,
@@ -488,7 +486,7 @@ def plot_table(lang = 'ar'):
     results = []
     for model_name in final_results:
         results.append(
-            [model_name] + (np.mean(final_results[model_name], axis=0) * 100).tolist()
+            [remap_names(model_name)] + (np.mean(final_results[model_name], axis=0) * 100).tolist()
         )
 
     print_table(results, headers, format = True)

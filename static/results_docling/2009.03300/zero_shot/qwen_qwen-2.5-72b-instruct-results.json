@@ -1,9 +1,9 @@
 {
     "metadata": {
-        "Name": "Multitask Test",
+        "Name": "Massive Multitask Language Understanding Test",
         "Link": "https://github.com/hendrycks/test",
         "HF Link": "",
-        "License": "CC BY 4.0",
+        "License": "unknown",
         "Year": 2021,
         "Language": "en",
         "Domain": [
@@ -15,7 +15,7 @@
         "Collection Style": [
             "manual curation"
         ],
-        "Description": "A benchmark for assessing models across a diverse set of subjects that humans learn, covering 57 tasks from STEM, humanities, social sciences, and other areas.",
+        "Description": "A benchmark consisting of 57 tasks across various subjects to measure a model's ability to learn and apply knowledge from pretraining.",
         "Volume": 15908.0,
         "Unit": "tokens",
         "Ethical Risks": "Medium",
@@ -27,7 +27,7 @@
         ],
         "Derived From": [],
         "Paper Title": "Measuring Massive Multitask Language Understanding",
-        "Paper Link": "https://arxiv.org/abs/2010.01708",
+        "Paper Link": "https://arxiv.org/abs/2010.03092",
         "Tokenized": false,
         "Host": "GitHub",
         "Access": "Free",
@@ -40,7 +40,7 @@
         ],
         "Venue Title": "ICLR",
         "Venue Type": "conference",
-        "Venue Name": "ICLR 2021",
+        "Venue Name": "International Conference on Learning Representations",
         "Authors": [
             "Dan Hendrycks",
             "Collin Burns",
@@ -67,9 +67,9 @@
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00297138,
+        "cost": 0.00296826,
         "input_tokens": 22195,
-        "output_tokens": 554
+        "output_tokens": 548
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

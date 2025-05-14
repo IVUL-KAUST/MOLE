@@ -11,22 +11,17 @@
         ],
         "Link": "https://www.palestinianarabic.com/",
         "HF Link": "",
-        "License": "unknown",
+        "License": "CC BY 4.0",
         "Year": 2023,
         "Language": "ar",
         "Dialect": "Palestine",
         "Domain": [
             "social media",
             "news articles",
-            "reviews",
-            "commentary",
             "books",
             "wikipedia",
             "web pages",
-            "public datasets",
-            "TV Channels",
-            "captions",
-            "LLM"
+            "public datasets"
         ],
         "Form": "text",
         "Collection Style": [
@@ -54,11 +49,10 @@
         "Cost": "",
         "Test Split": false,
         "Tasks": [
-            "language modeling",
             "dialect identification",
+            "language modeling",
             "named entity recognition",
-            "part of speech tagging",
-            "morphological analysis"
+            "part of speech tagging"
         ],
         "Venue Title": "Proceedings of the Language Resources and Evaluation Conference",
         "Venue Type": "conference",
@@ -88,9 +82,9 @@
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00812434,
+        "cost": 0.00272733,
         "input_tokens": 19696,
-        "output_tokens": 623
+        "output_tokens": 603
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

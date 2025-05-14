@@ -7,14 +7,13 @@
         "Year": 2021,
         "Language": "en",
         "Domain": [
-            "social media"
+            "web pages"
         ],
         "Form": "text",
         "Collection Style": [
-            "human annotation",
-            "manual curation"
+            "human annotation"
         ],
-        "Description": "A dataset of 8.5K high-quality grade school math word problems with natural language solutions.",
+        "Description": "A dataset of 8.5K high quality grade school math word problems with natural language solutions.",
         "Volume": 8500.0,
         "Unit": "tokens",
         "Ethical Risks": "Low",
@@ -33,7 +32,7 @@
             "multiple choice question answering",
             "morphological analysis"
         ],
-        "Venue Title": "arXiv preprint arXiv:2109.03034",
+        "Venue Title": "arXiv preprint",
         "Venue Type": "preprint",
         "Venue Name": "",
         "Authors": [
@@ -64,9 +63,9 @@
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00222257,
+        "cost": 0.00607262,
         "input_tokens": 14614,
-        "output_tokens": 525
+        "output_tokens": 512
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

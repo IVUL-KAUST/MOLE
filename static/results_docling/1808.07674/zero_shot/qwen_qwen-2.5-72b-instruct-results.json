@@ -113,7 +113,7 @@
             "crawling",
             "human annotation"
         ],
-        "Description": "A large multi-dialect Twitter corpus for gender, age, and dialectal variety identification, covering 11 regions and 16 countries in the Arab world.",
+        "Description": "A large multi-dialect Twitter corpus for gender, age, and dialect identification.",
         "Volume": 2400000.0,
         "Unit": "sentences",
         "Ethical Risks": "Medium",
@@ -123,17 +123,18 @@
         ],
         "Derived From": [],
         "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age and Language Variety Identification",
-        "Paper Link": "https://doi.org/10.1111/lnc3.12275",
+        "Paper Link": "http://arap.qatar.cmu.edu",
         "Script": "Arab",
         "Tokenized": false,
         "Host": "GitHub",
         "Access": "Free",
         "Cost": "",
-        "Test Split": true,
+        "Test Split": false,
         "Tasks": [
+            "language modeling",
+            "dialect identification",
             "gender identification",
-            "language identification",
-            "dialect identification"
+            "language identification"
         ],
         "Venue Title": "Proceedings of the 11th International Conference on Language Resources and Evaluation",
         "Venue Type": "conference",
@@ -152,14 +153,14 @@
         "DIVERSITY": 0.6666666666666666,
         "ACCESSABILITY": 0.5714285714285714,
         "CONTENT": 1.0,
-        "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.7142857142857143
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7619047619047619
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00208723,
+        "cost": 0.00198414,
         "input_tokens": 12072,
-        "output_tokens": 1043
+        "output_tokens": 1136
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

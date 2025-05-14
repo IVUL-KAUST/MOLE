@@ -1,0 +1,90 @@
+{
+    "metadata": {
+        "Name": "Emoji-based Arabic Offensive Language Dataset",
+        "Subsets": [
+            {
+                "Name": "Offensive Tweets",
+                "Volume": 4463,
+                "Unit": "tweets",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Hate Speech Tweets",
+                "Volume": 1339,
+                "Unit": "tweets",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "https://github.com/HamdyMubarak/Emoji-based-Arabic-Offensive-Language-Dataset",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A dataset of Arabic tweets annotated for offensiveness, hate speech, and vulgarity using emojis as anchors.",
+        "Volume": 12698.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "Emojis as Anchors to Detect Arabic Offensive Language and Hate Speech",
+        "Paper Link": "https://arxiv.org/abs/2102.10684",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection",
+            "fake news detection"
+        ],
+        "Venue Title": "ACL-IJCNLP 2021",
+        "Venue Type": "conference",
+        "Venue Name": "Joint Conference of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing",
+        "Authors": [
+            "Hamdy Mubarak",
+            "Sabit Hassan",
+            "Shammur Absar Chowdhury"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, Hamad Bin Khalifa University",
+            "University of Pittsburgh"
+        ],
+        "Abstract": "This paper introduces a generic, language-independent method to collect a large percentage of offensive and hate tweets regardless of their topics or genres. We harness the extralinguistic information embedded in the emojis to collect a large number of offensive tweets."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00466769,
+        "input_tokens": 24909,
+        "output_tokens": 509
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

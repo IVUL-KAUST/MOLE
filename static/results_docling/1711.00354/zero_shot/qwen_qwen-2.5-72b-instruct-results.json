@@ -15,7 +15,7 @@
         ],
         "Form": "spoken",
         "Collection Style": [
-            "manual curation",
+            "human annotation",
             "crawling"
         ],
         "Description": "A free, large-scale Japanese speech corpus designed for end-to-end speech synthesis, covering various pronunciations and domains.",
@@ -66,9 +66,9 @@
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00326,
-        "input_tokens": 7271,
-        "output_tokens": 575
+        "cost": 0.00121975,
+        "input_tokens": 7268,
+        "output_tokens": 574
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

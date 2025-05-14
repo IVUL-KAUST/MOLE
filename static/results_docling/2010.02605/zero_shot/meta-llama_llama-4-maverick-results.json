@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "DaNetQA",
+        "Link": "https://github.com/PragmaticsLab/DaNetQA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A yes/no Question Answering Dataset for the Russian Language",
+        "Volume": 2691.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Research University Higher School of Economics",
+            "Sberbank"
+        ],
+        "Derived From": [
+            "BoolQ"
+        ],
+        "Paper Title": "DaNetQA: a yes/no Question Answering Dataset for the Russian Language",
+        "Paper Link": "https://arxiv.org/abs/2010.02605",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Taisia Glushkova",
+            "Alexey Machnev",
+            "Alena Fenogenova",
+            "Tatiana Shavrina",
+            "Ekaterina Artemova",
+            "Dmitry I. Ignatov"
+        ],
+        "Affiliations": [
+            "National Research University Higher School of Economics",
+            "Sberbank"
+        ],
+        "Abstract": "DaNetQA, a new question-answering corpus, follows BoolQ design: it comprises natural yes/no questions. Each question is paired with a paragraph from Wikipedia and an answer, derived from the paragraph. The task is to take both the question and a paragraph as input and come up with a yes/no answer, i.e. to produce a binary output."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00218518,
+        "input_tokens": 11054,
+        "output_tokens": 393
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02605"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

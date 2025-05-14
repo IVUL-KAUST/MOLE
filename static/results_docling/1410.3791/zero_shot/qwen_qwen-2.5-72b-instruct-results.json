@@ -17,7 +17,7 @@
             "crawling",
             "machine annotation"
         ],
-        "Description": "A multilingual NER system built using Wikipedia and Freebase, trained on 40 languages without language-specific resources.",
+        "Description": "A multilingual NER system built using Wikipedia and Freebase, covering 40 languages.",
         "Volume": 40.0,
         "Unit": "images",
         "Ethical Risks": "Low",
@@ -62,9 +62,9 @@
     },
     "length_forcing": 1.0,
     "cost": {
-        "cost": 0.00214071,
+        "cost": 0.00213876,
         "input_tokens": 15943,
-        "output_tokens": 465
+        "output_tokens": 460
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

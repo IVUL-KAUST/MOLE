@@ -4,7 +4,7 @@
         "Link": "https://github.com/SkelterLabsInc/JaQuAD",
         "HF Link": "",
         "License": "unknown",
-        "Year": 2022,
+        "Year": 2021,
         "Language": "jp",
         "Domain": [
             "wikipedia"
@@ -33,9 +33,9 @@
             "question answering",
             "machine translation"
         ],
-        "Venue Title": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Title": "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics",
         "Venue Type": "conference",
-        "Venue Name": "ACL 2022",
+        "Venue Name": "ACL 2021",
         "Authors": [
             "ByungHoon So",
             "Kyuhong Byun",

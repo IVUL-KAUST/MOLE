@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "POLYGLOT-NER",
+        "Subsets": [],
+        "Link": "http://nlp.stonybrook.edu/polylgot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2013,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "wikipedia",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "POLYGLOT-NER is a multilingual Named Entity Recognition system that builds annotators for 40 major languages using Wikipedia and Freebase. It employs language-agnostic techniques to achieve competitive performance without requiring human annotated datasets or language-specific resources.",
+        "Volume": 40.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stony Brook University"
+        ],
+        "Derived From": [],
+        "Paper Title": "POLYGLOT-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "http://nlp.stonybrook.edu/polylgot-ner",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of CoNLL",
+        "Venue Type": "conference",
+        "Venue Name": "CoNLL",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Bryan Perozzi",
+            "Vivek Kulkarni",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Department of Computer Science Stony Brook University"
+        ],
+        "Abstract": "The increasing diversity of languages used on the web introduces a new level of complexity to Information Retrieval (IR) systems. We can no longer assume that textual content is written in one language or even the same language family. Our method learns distributed word representations (word embeddings) which encode semantic and syntactic features of words in each language. Then, we automatically generate datasets from Wikipedia link structure and Freebase attributes. Finally, we apply two preprocessing stages (oversampling and exact surface form matching) which do not require any linguistic expertise. In this paper, we demonstrate how to build massive multilingual annotators with minimal human expertise and intervention. We describe a system that builds Named Entity Recognition (NER) annotators for 40 major languages using Wikipedia and Freebase. Our approach does not require NER human annotated datasets or language specific resources like treebanks, parallel corpora, and orthographic rules. The novelty of approach lies therein - using only language agnostic techniques, while achieving competitive performance."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.04125,
+        "input_tokens": 15946,
+        "output_tokens": 570
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

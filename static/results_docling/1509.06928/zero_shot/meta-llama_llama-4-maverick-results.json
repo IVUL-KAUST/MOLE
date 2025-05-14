@@ -1,0 +1,119 @@
+{
+    "metadata": {
+        "Name": "Arabic Dialect Detection Dataset",
+        "Subsets": [
+            {
+                "Name": "Egyptian",
+                "Volume": 13,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 9.5,
+                "Unit": "hours",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "Levantine",
+                "Volume": 11,
+                "Unit": "hours",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "North African",
+                "Volume": 9,
+                "Unit": "hours",
+                "Dialect": "North Africa"
+            },
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 10,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "http://alt.qcri.org/resources/ArabicDialectIDCorpus/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "news articles",
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset for Arabic dialect identification collected from broadcast news.",
+        "Volume": 52.5,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute",
+            "MIT Computer Science and Artificial Intelligence Laboratory"
+        ],
+        "Derived From": [],
+        "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
+        "Paper Link": "https://arxiv.org/abs/1509.06928",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "QCRI Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "language identification"
+        ],
+        "Venue Title": "INTERSPEECH",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Conference of the International Speech Communication Association",
+        "Authors": [
+            "Ahmed Ali",
+            "Najim Dehak",
+            "Patrick Cardinal",
+            "Sameer Khurana",
+            "Sree Harsha Yella",
+            "James Glass",
+            "Peter Bell",
+            "Steve Renals"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU, Doha, Qatar",
+            "MIT Computer Science and Artificial Intelligence Laboratory (CSAIL), Cambridge, MA, USA",
+            "JHU Center for Language and Speech Processing (CLSP), Baltimore, MD, USA",
+            "Ecole de technologie superieure, Departement de Genie Logiciel et des TI, Montreal, Canada",
+            "Centre for Speech Technology Research, University of Edinburgh, UK"
+        ],
+        "Abstract": "This paper investigates different approaches for dialect identification in Arabic broadcast speech. The methods are based on phonetic and lexical features obtained from a speech recognition system, and bottleneck features using the i-vector framework. The study achieved an accuracy of 60.2% in identifying five Arabic dialects."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0025143,
+        "input_tokens": 11560,
+        "output_tokens": 677
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

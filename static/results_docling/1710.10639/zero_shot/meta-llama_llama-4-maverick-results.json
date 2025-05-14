@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "JESC",
+        "Link": "https://github.com/google/sentencepiece",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "social media",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A large Japanese-English parallel corpus covering conversational dialogue",
+        "Volume": 3.2,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University",
+            "Rakuten Institute of Technology",
+            "Google Brain"
+        ],
+        "Derived From": [
+            "OpenSubtitles"
+        ],
+        "Paper Title": "JESC: Japanese-English Subtitle Corpus",
+        "Paper Link": "https://arxiv.org/abs/1710.10639",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Reid Pryzant",
+            "Youngjoo Chung",
+            "Dan Jurafsky",
+            "Denny Britz"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Rakuten Institute of Technology",
+            "Google Brain"
+        ],
+        "Abstract": "In this paper we describe the Japanese-English Subtitle Corpus (JESC). JESC is a large Japanese-English parallel corpus covering the underrepresented domain of conversational dialogue. It consists of more than 3.2 million examples, making it the largest freely available dataset of its kind. The corpus was assembled by crawling and aligning subtitles found on the web. The assembly process incorporates a number of novel preprocessing elements to ensure high monolingual fluency and accurate bilingual alignments. We summarize its contents and evaluate its quality using human experts and baseline machine translation (MT) systems."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00185766,
+        "input_tokens": 8966,
+        "output_tokens": 414
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1710.10639"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

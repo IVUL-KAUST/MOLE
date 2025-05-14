@@ -15,8 +15,8 @@
             "crawling",
             "machine annotation"
         ],
-        "Description": "JESC is a large-scale parallel corpus for the Japanese-English language pair, covering conversational dialogue. It consists of 3.2 million pairs of crawled TV and movie subtitles.",
-        "Volume": 3200661.0,
+        "Description": "JESC is a large-scale Japanese-English parallel corpus covering conversational dialogue, created by crawling and aligning subtitles from the web.",
+        "Volume": 3240661.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
@@ -40,7 +40,7 @@
         ],
         "Venue Title": "LREC",
         "Venue Type": "conference",
-        "Venue Name": "LREC 2017",
+        "Venue Name": "LREC 2018",
         "Authors": [
             "Reid Pryzant",
             "Youngjoo Chung",
@@ -57,15 +57,15 @@
     "validation": {
         "ACCESSABILITY": 0.42857142857142855,
         "DIVERSITY": 1.0,
-        "CONTENT": 0.875,
+        "CONTENT": 1.0,
         "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.6842105263157895
+        "AVERAGE": 0.7368421052631579
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.0013137,
+        "cost": 0.0013098,
         "input_tokens": 8963,
-        "output_tokens": 472
+        "output_tokens": 460
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "Measuring Massive Multitask Language Understanding",
+        "Link": "https://github.com/hendrycks/test",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "captions",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A new test to measure a text model's multitask accuracy across 57 tasks including elementary mathematics, US history, computer science, law, and more.",
+        "Volume": 15908.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "UC Berkeley",
+            "Columbia University",
+            "UChicago",
+            "UIUC"
+        ],
+        "Derived From": [],
+        "Paper Title": "Measuring Massive Multitask Language Understanding",
+        "Paper Link": "https://arxiv.org/abs/2109.01661",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "meter classification"
+        ],
+        "Venue Title": "ICLR",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [
+            "Dan Hendrycks",
+            "Collin Burns",
+            "Steven Basart",
+            "Andy Zou",
+            "Mantas Mazeika",
+            "Dawn Song",
+            "Jacob Steinhardt"
+        ],
+        "Affiliations": [
+            "UC Berkeley",
+            "Columbia University",
+            "UChicago",
+            "UC Berkeley",
+            "UIUC",
+            "UC Berkeley",
+            "UC Berkeley"
+        ],
+        "Abstract": "We propose a new test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem-solving ability."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0044422,
+        "input_tokens": 22198,
+        "output_tokens": 428
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2009.03300"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

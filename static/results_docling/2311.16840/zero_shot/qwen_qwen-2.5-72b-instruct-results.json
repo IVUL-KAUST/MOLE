@@ -7,8 +7,8 @@
         "Year": 2023,
         "Language": "fr",
         "Domain": [
-            "public datasets",
-            "web pages"
+            "web pages",
+            "public datasets"
         ],
         "Form": "text",
         "Collection Style": [
@@ -23,27 +23,27 @@
             "LINAGORA"
         ],
         "Derived From": [
+            "Orf\u00e9o",
+            "Th\u00e9\u00e2tre Classique",
+            "Th\u00e9\u00e2tre Gratuit",
+            "ESLO",
+            "CFPP",
             "ACSYNT",
-            "Assembl\u00e9e Nationale",
-            "Orf\u00e9o-CEFC",
-            "C-ORAL-ROM",
-            "CRFP",
-            "FLEURON",
-            "Valibel",
             "CID",
             "CLAPI",
-            "ESLO",
             "FREDSum",
             "LinTO",
-            "OFROM",
             "Rhapsodie",
             "SUMM-RE",
             "TCOF",
-            "Th\u00e9\u00e2tre Classique",
-            "Th\u00e9\u00e2tre Gratuit"
+            "Accueil UBS",
+            "OTG",
+            "Paris Stories",
+            "PFC",
+            "Valibel"
         ],
         "Paper Title": "The Claire French Dialogue Dataset",
-        "Paper Link": "https://huggingface.co/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "Paper Link": "https://huggingface.co/OpenLLM-France",
         "Tokenized": false,
         "Host": "HuggingFace",
         "Access": "Free",
@@ -53,8 +53,8 @@
             "speech recognition",
             "summarization",
             "summarization",
-            "irony detection",
-            "offensive language detection"
+            "language identification",
+            "irony detection"
         ],
         "Venue Title": "Findings of Empirical Methods in Natural Language Processing (EMNLP)",
         "Venue Type": "conference",
@@ -83,9 +83,9 @@
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.0023809,
+        "cost": 0.0023729,
         "input_tokens": 15370,
-        "output_tokens": 599
+        "output_tokens": 581
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

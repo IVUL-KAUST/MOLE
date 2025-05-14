@@ -4,9 +4,21 @@
         "Subsets": [
             {
                 "Name": "Arabic",
-                "Volume": 5335,
+                "Volume": 5852,
                 "Unit": "instances",
                 "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 5641,
+                "Unit": "instances",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "English",
+                "Volume": 12738,
+                "Unit": "instances",
+                "Language": "English"
             },
             {
                 "Name": "German",
@@ -15,42 +27,36 @@
                 "Language": "German"
             },
             {
+                "Name": "Hindi",
+                "Volume": 5425,
+                "Unit": "instances",
+                "Language": "Hindi"
+            },
+            {
                 "Name": "Spanish",
                 "Volume": 5753,
                 "Unit": "instances",
                 "Language": "Spanish"
             },
             {
-                "Name": "Simplified Chinese",
-                "Volume": 5641,
-                "Unit": "instances",
-                "Language": "Simplified Chinese"
-            },
-            {
                 "Name": "Vietnamese",
                 "Volume": 6006,
                 "Unit": "instances",
                 "Language": "Vietnamese"
-            },
-            {
-                "Name": "Hindi",
-                "Volume": 5425,
-                "Unit": "instances",
-                "Language": "Hindi"
             }
         ],
         "Link": "https://github.com/facebookresearch/mlqa",
-        "HF Link": "https://huggingface.co/datasets/mlqa",
-        "License": "CC BY 4.0",
+        "HF Link": "",
+        "License": "unknown",
         "Year": 2019,
         "Language": [
             "Arabic",
+            "Chinese",
+            "English",
             "German",
-            "Spanish",
-            "Simplified Chinese",
-            "Vietnamese",
             "Hindi",
-            "English"
+            "Spanish",
+            "Vietnamese"
         ],
         "Domain": [
             "wikipedia"
@@ -60,8 +66,8 @@
             "crawling",
             "human annotation"
         ],
-        "Description": "MLQA is a multi-way aligned extractive QA evaluation benchmark intended to spur research in cross-lingual QA. It contains QA instances in 7 languages, with each instance parallel between 4 languages on average.",
-        "Volume": 12738.0,
+        "Description": "MLQA is a multi-way aligned extractive QA evaluation benchmark in seven languages: English, Arabic, German, Spanish, Hindi, Vietnamese, and Simplified Chinese.",
+        "Volume": 5852.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
         "Provider": [
@@ -72,7 +78,7 @@
             "SQuAD"
         ],
         "Paper Title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
-        "Paper Link": "https://arxiv.org/abs/1909.05053",
+        "Paper Link": "https://arxiv.org/abs/1910.08982",
         "Tokenized": false,
         "Host": "GitHub",
         "Access": "Free",
@@ -82,13 +88,13 @@
             "question answering",
             "cross-lingual information retrieval"
         ],
-        "Venue Title": "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Title": "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
         "Venue Type": "conference",
-        "Venue Name": "ACL 2019",
+        "Venue Name": "EMNLP-IJCNLP",
         "Authors": [
             "Holger Schwenk",
             "Patrick Lewis",
-            "Barlas O\u011fuz",
+            "Barlas Ou011fuz",
             "Ruty Rinott",
             "Sebastian Riedel"
         ],
@@ -96,20 +102,20 @@
             "Facebook AI Research",
             "University College London"
         ],
-        "Abstract": "Question answering (QA) models have shown rapid progress enabled by the availability of large, high-quality benchmark datasets. Such annotated datasets are difficult and costly to collect, and rarely exist in languages other than English, making building QA systems that work well in other languages challenging. In order to develop such systems, it is crucial to invest in high quality multilingual evaluation benchmarks to measure progress. We present MLQA, a multi-way aligned extractive QA evaluation benchmark intended to spur research in this area. MLQA contains QA instances in 7 languages, English, Arabic, German, Spanish, Hindi, Vietnamese and Simplified Chinese. MLQA has over 12K instances in English and 5K in each other language, with each instance parallel between 4 languages on average. We evaluate state-of-the-art cross-lingual models and machine-translation-based baselines on MLQA. In all cases, transfer results are significantly behind training-language performance."
+        "Abstract": "Question answering (QA) models have shown rapid progress enabled by the availability of large, high-quality benchmark datasets. Such annotated datasets are difficult and costly to collect, and rarely exist in languages other than English, making building QA systems that work well in other languages challenging. In order to develop such systems, it is crucial to invest in high quality multilingual evaluation benchmarks to measure progress. We present MLQA, a multi-way aligned extractive QA evaluation benchmark intended to spur research in this area."
     },
     "validation": {
-        "DIVERSITY": 0.5,
+        "DIVERSITY": 0.0,
         "ACCESSABILITY": 0.5714285714285714,
         "CONTENT": 0.7142857142857143,
         "EVALUATION": 0.3333333333333333,
-        "AVERAGE": 0.5789473684210527
+        "AVERAGE": 0.5263157894736842
     },
     "length_forcing": 0.9999999999999999,
     "cost": {
-        "cost": 0.00278976,
+        "cost": 0.00297854,
         "input_tokens": 19294,
-        "output_tokens": 807
+        "output_tokens": 742
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

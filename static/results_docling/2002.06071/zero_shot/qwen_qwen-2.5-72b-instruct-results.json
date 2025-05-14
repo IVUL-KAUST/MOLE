@@ -11,9 +11,10 @@
         ],
         "Form": "text",
         "Collection Style": [
-            "manual curation"
+            "crawling",
+            "human annotation"
         ],
-        "Description": "FQuAD is a French Native Reading Comprehension dataset of questions and answers on a set of Wikipedia articles.",
+        "Description": "FQuAD is a French Native Reading Comprehension dataset of questions and answers on a set of Wikipedia articles. It consists of 25,000+ samples for the 1.0 version and 60,000+ samples for the 1.1 version.",
         "Volume": 60000.0,
         "Unit": "sentences",
         "Ethical Risks": "Low",
@@ -53,15 +54,15 @@
     "validation": {
         "ACCESSABILITY": 0.42857142857142855,
         "DIVERSITY": 1.0,
-        "CONTENT": 0.8571428571428571,
+        "CONTENT": 0.7142857142857143,
         "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.6666666666666666
+        "AVERAGE": 0.6111111111111112
     },
     "length_forcing": 0.9999999999999996,
     "cost": {
-        "cost": 0.00295203,
+        "cost": 0.00296802,
         "input_tokens": 21246,
-        "output_tokens": 584
+        "output_tokens": 619
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",
