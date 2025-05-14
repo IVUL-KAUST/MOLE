@@ -73,6 +73,8 @@ def get_all_ids():
 
 def get_openrouter_cost(model_name, input_tokens, output_tokens):
     model_name = model_name.split("_")[1]
+    if "-browsing" in model_name:
+        model_name = model_name.replace("-browsing", "")
     return (open_router_costs[model_name]["input"] * input_tokens + open_router_costs[model_name]["output"] * output_tokens) / (1e6)
 
 def map_error(error):
