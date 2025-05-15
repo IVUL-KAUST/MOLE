@@ -438,7 +438,7 @@ def compose(dicts, schema="ar"):
             majority_value = [
                 value for value, score in value_counts if score == max_score
             ]
-        elif answer_types[key] in ["str", "int", "float", "url", "date[year]"]:
+        elif answer_types[key] in ["str", "int", "float", "url", "date[year]", "bool"]:
             majority_value, _ = value_counts[0]
         else:
             print(answer_types[key])

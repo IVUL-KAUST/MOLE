@@ -564,7 +564,8 @@ def run(
                     error = None
                     if "jury" in model_name.lower() or "composer" in model_name.lower():
                         all_results = []
-                        for file in glob(f"{save_path}/**.json"):
+                        base_dir = "/".join(save_path.split("/")[:-1])
+                        for file in glob(f"{base_dir}/**.json"):
                             if not any([m in file for m in non_browsing_models]):
                                 all_results.append(json.load(open(file)))
                         message, metadata = get_metadata_judge(
