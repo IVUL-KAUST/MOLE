@@ -21,6 +21,7 @@ args.add_argument("--length", action="store_true")
 args.add_argument("--non_browsing", action="store_true")
 args.add_argument("--browsing", action="store_true")
 args.add_argument("--errors", action="store_true")
+args.add_argument("--group_by", type = str, default = "evaluation_subsets")
 args = args.parse_args()
 
 # evaluation_subsets = schema[args.schema]['evaluation_subsets']
@@ -449,14 +450,14 @@ def plot_fewshot():
             "* Computed average by considering metadata exctracted from outside the paper."
         )
 
-def plot_table(lang = 'ar', group_by = "evaluation_subsets"):
+def plot_table():
     headers = ["Model"]
-    if group_by == "evaluation_subsets":
+    if args.group_by == "evaluation_subsets":
         evaluation_subsets = schemata["ar"]['evaluation_subsets']
         headers += [c for c in evaluation_subsets]
-    elif group_by == "metadata":
+    elif args.group_by == "attributes_few":
         headers += ["Link", "License", "Tasks", "Domain", "Collection Style", "Volume"]
-    elif group_by == "all":
+    elif args.group_by == "attributes":
         headers  += ["Link", "HF Link", "License", "Language", "Domain", "Form", "Collection Style", "Volume", "Unit", "Ethical Risks", "Provider", "Derived From", "Tokenized", "Host", "Access", "Cost", "Test Split", "Tasks"]
     
     headers += ["AVERAGE"]
@@ -481,7 +482,8 @@ def plot_table(lang = 'ar', group_by = "evaluation_subsets"):
 
         scores = evaluate_metadata(
             gold_metadata, pred_metadata,
-            schema = schema
+            schema = schema,
+            return_columns = True
         )
         scores = [scores[c] for c in headers[1:-1]]
         
@@ -607,10 +609,10 @@ if __name__ == "__main__":
         plot_by_year()
     elif args.cost:
         plot_by_cost()
-    # elif args.schema == 'all':
-    #     plot_langs()
+    elif args.group_by == 'language':
+        plot_langs()
     else:
         if args.subsets:
             plot_subsets()
         else:
-            plot_table(lang = args.schema)
+            plot_table()
