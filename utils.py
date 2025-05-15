@@ -319,6 +319,8 @@ def evaluate_metadata(
     for subset in evaluation_subsets:
         for column in evaluation_subsets[subset]:
             results[subset] += predictions[column]
+            if column not in results:
+                results[column] = predictions[column]
         results[subset] = results[subset] / len(evaluation_subsets[subset])
     results["AVERAGE"] = sum(predictions.values()) / len(predictions)
     return results
