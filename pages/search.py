@@ -170,9 +170,9 @@ def get_metadatav2(
             # if "qwen" in model_name and len(paper_text) == 95618:
             #     raise Exception("Timeout")
             # else:
+            cost = get_cost(message)
             response =  message.choices[0].message.content
             predictions = read_json(response)
-            cost = get_cost(message)
         except json.JSONDecodeError as e:
             error = str(e)  
         except Exception as e:
@@ -245,7 +245,7 @@ def generate_fake_arxiv_pdf(paper_pdf):
     return f"{year}{month}.{generate_pdf_hash(paper_pdf)}"
 
 
-def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "plumber", context_size = "all"):
+def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "plumber", context_size = "all", use_cached_docling=True):
     if use_pdf:
         source_files = glob(f"{path}/paper.pdf")
     else:
@@ -253,10 +253,7 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
 
     if len(source_files) == 0:
         source_files = glob(f"{path}/paper.pdf")
-    show_info(
-        f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...",
-        st_context=st_context,
-    )
+    
     paper_text = ""
     if len(source_files) == 0:
         return paper_text
@@ -266,6 +263,10 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
     else:
         source_files = [file for file in source_files if file.endswith(".pdf")]
 
+    show_info(
+        f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...",
+        st_context=st_context,
+    )
     paper_text = ""
     for source_file in source_files:
         if source_file.endswith(".tex"):
@@ -283,14 +284,14 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
                 docling_file_path = os.path.join(pdf_dir, "paper_text_docling.txt")
                 
                 # Check if docling extraction already exists and reuse it
-                if os.path.exists(docling_file_path):
+                if os.path.exists(docling_file_path) and use_cached_docling:
                     show_info(
                         f"📄 Found existing docling extraction, reusing from {docling_file_path}",
                         st_context=st_context,
                     )
                     try:
                         with open(docling_file_path, "r", encoding="utf-8") as f:
-                            paper_text = f.read()
+                            paper_text += f.read()
                         continue
                     except Exception as e:
                         show_warning(
@@ -302,7 +303,7 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
                         f"📄 Extracting text using docling...",
                         st_context=st_context,
                     )
-                    paper_text = get_paper_content_from_docling(source_file)
+                    paper_text += get_paper_content_from_docling(source_file)
                     
                     # Save the docling extracted text
                     try:
@@ -329,7 +330,7 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
             f"⚠️ The paper text is too long, trimming some content"
         )
         paper_text = paper_text[:150_000]
-    print(len(paper_text))
+    # print(len(paper_text))
     if context_size == "all":
         return paper_text
     elif context_size == "half":

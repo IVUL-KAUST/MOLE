@@ -48,9 +48,9 @@
     },
     "length_forcing": 0.90625,
     "cost": {
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "cost": 0
+        "cost": 0.00129378,
+        "input_tokens": 3696,
+        "output_tokens": 1062
     },
     "config": {
         "model_name": "meta-llama_llama-4-maverick",

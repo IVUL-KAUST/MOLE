@@ -1,0 +1,4 @@
+Method,Avg Time (s),Median Time (s),Min Time (s),Max Time (s),Std Dev
+latex,0.08,0.00,0.00,1.70,0.33
+pdfplumber,2.03,1.44,0.14,14.80,2.54
+docling,72.31,22.48,9.14,796.27,164.86
