@@ -170,9 +170,9 @@ def get_metadatav2(
             # if "qwen" in model_name and len(paper_text) == 95618:
             #     raise Exception("Timeout")
             # else:
+            cost = get_cost(message)
             response =  message.choices[0].message.content
             predictions = read_json(response)
-            cost = get_cost(message)
         except json.JSONDecodeError as e:
             error = str(e)  
         except Exception as e:
@@ -253,10 +253,7 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
 
     if len(source_files) == 0:
         source_files = glob(f"{path}/paper.pdf")
-    show_info(
-        f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...",
-        st_context=st_context,
-    )
+    
     paper_text = ""
     if len(source_files) == 0:
         return paper_text
@@ -266,6 +263,10 @@ def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "pl
     else:
         source_files = [file for file in source_files if file.endswith(".pdf")]
 
+    show_info(
+        f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...",
+        st_context=st_context,
+    )
     paper_text = ""
     for source_file in source_files:
         if source_file.endswith(".tex"):

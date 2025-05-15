@@ -7,7 +7,7 @@ template = """
 {affs}
 {name}, is a {schema} {task} dataset, that contains {volume} {unit}.
 {language_table}
-{provider_stmt}The dataset was collected from {collection_style} of {domain} in {year}. 
+{provider_stmt} The dataset was collected from {collection_style} of {domain} in {year}. 
 The dataset is publically available through this link {link}. {license_stmt}.
 {hf_stmt}
 """
