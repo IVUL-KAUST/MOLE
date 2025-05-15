@@ -436,15 +436,28 @@ def plot_fewshot():
             "* Computed average by considering metadata exctracted from outside the paper."
         )
 
-def plot_table(lang = 'ar'):
-    evaluation_subsets = schemata[lang]['evaluation_subsets']
-    headers = [ "MODEL"] + [c for c in evaluation_subsets] + ["AVERAGE"]
+def plot_table(lang = 'ar', group_by = "evaluation_subsets"):
+    headers = ["Model"]
+    if group_by == "evaluation_subsets":
+        evaluation_subsets = schemata["ar"]['evaluation_subsets']
+        headers += [c for c in evaluation_subsets]
+    elif group_by == "metadata":
+        headers += ["Link", "License", "Tasks", "Domain", "Collection Style", "Volume"]
+    elif group_by == "all":
+        headers  += ["Link", "HF Link", "License", "Language", "Domain", "Form", "Collection Style", "Volume", "Unit", "Ethical Risks", "Provider", "Derived From", "Tokenized", "Host", "Access", "Cost", "Test Split", "Tasks"]
+    
+    headers += ["AVERAGE"]
+
+    if args.use_annotations_paper:
+        headers += ["AVERAGE^*"]    
     metric_results = {}
     use_annotations_paper = args.use_annotations_paper
+    ids = get_all_ids()
     for json_file in json_files:
         results = json.load(open(json_file))
-        arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
-        if arxiv_id not in eval_datasets_ids[lang][args.eval]:
+        arxiv_id = get_id_from_path(json_file)
+        schema = get_schema_from_path(json_file)
+        if arxiv_id not in ids:
             continue
         model_name = results["config"]["model_name"]
         pred_metadata = results["metadata"]
@@ -455,21 +468,21 @@ def plot_table(lang = 'ar'):
 
         scores = evaluate_metadata(
             gold_metadata, pred_metadata,
-            schema = args.schema
+            schema = schema
         )
-        scores = [scores[c] for c in evaluation_subsets] + [scores["AVERAGE"]]
+        scores = [scores[c] for c in headers[1:-1]]
+        
         if use_annotations_paper:
             average_ignore_mistakes = evaluate_metadata(
-                gold_metadata, pred_metadata, use_annotations_paper=True
+                gold_metadata, pred_metadata, use_annotations_paper=True, schema = schema
             )["AVERAGE"]
             scores += [average_ignore_mistakes]
-            headers += ["AVERAGE^*"]
         metric_results[model_name].append(scores)
     final_results = {}
     for model_name in metric_results:
         if "human" in model_name.lower():
             continue
-        if len(metric_results[model_name]) == len(eval_datasets_ids[lang][args.eval]):
+        if len(metric_results[model_name]) == len(ids):
             final_results[model_name] = metric_results[model_name]
 
     results = []
@@ -561,6 +574,8 @@ if __name__ == "__main__":
 
     if args.non_browsing:
         json_files = [file for file in json_files if "-browsing" not in file]
+    if args.browsing:
+        json_files = [file for file in json_files if "-browsing" in file]
 
     if args.schema == 'all':
         langs = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
@@ -579,8 +594,8 @@ if __name__ == "__main__":
         plot_by_year()
     elif args.cost:
         plot_by_cost()
-    elif args.schema == 'all':
-        plot_langs()
+    # elif args.schema == 'all':
+    #     plot_langs()
     else:
         if args.subsets:
             plot_subsets()
