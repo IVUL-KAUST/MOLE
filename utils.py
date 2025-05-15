@@ -305,7 +305,7 @@ def get_schema_from_path(json_path):
         return "multi"
 
 def evaluate_metadata(
-    gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar"
+    gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar", return_columns=False
 ):
     evaluation_subsets = schemata[schema]["evaluation_subsets"]       
     results = {c: 0 for c in evaluation_subsets}
@@ -319,8 +319,9 @@ def evaluate_metadata(
     for subset in evaluation_subsets:
         for column in evaluation_subsets[subset]:
             results[subset] += predictions[column]
-            if column not in results:
-                results[column] = predictions[column]
+            if return_columns:
+                if column not in results:
+                    results[column] = predictions[column]
         results[subset] = results[subset] / len(evaluation_subsets[subset])
     results["AVERAGE"] = sum(predictions.values()) / len(predictions)
     return results
@@ -387,7 +388,7 @@ def majority_vote(dicts, schema="ar"):
             majority_value = [
                 value for value, score in value_counts if score == max_score
             ]
-        elif answer_types[key] in ["str", "int", "float", "url", "date[year]"]:
+        elif answer_types[key] in ["str", "int", "float", "url", "date[year]", "bool"]:
             majority_value, _ = value_counts[0]
         else:
             print(answer_types[key])
