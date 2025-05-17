@@ -15,11 +15,16 @@ import json
 import shutil
 from litellm import completion
 from openai import OpenAI
-from .utils import get_paper_content_from_docling
+from .utils import get_paper_content_from_docling, process_pdf_with_llm
 
 load_dotenv()
 
 logger = setup_logger()
+
+def is_multimodal_model(model_name):
+    """Check if the model supports multimodal capabilities."""
+    non_multimodal_models = ["qwen", "deepseek", "jury", "composer", "human", "dummy", "baseline"]
+    return not any(model in model_name.lower() for model in non_multimodal_models)
 
 
 def compute_filling(metadata):
@@ -111,6 +116,8 @@ def get_metadatav2(
         "output_tokens": 0,
         "cost": 0,
     }
+    sys_prompt = ""
+    
     for i in range(max_retries):
         predictions = {}
         error = None
@@ -145,6 +152,14 @@ def get_metadatav2(
                         Given the following Input schema: {schemata[schema]['schema']}, then update the metadata in the Input schema with the information from the readme.
                         Output JSON:
                         """
+            sys_prompt = schemata[schema]["system_prompt"]
+        else:
+            # Handle the case where neither paper_text nor readme is provided
+            prompt = f"""
+                    Input Schema: {schemata[schema]['schema']}
+                    Please provide metadata based on the schema.
+                    Output JSON:
+                    """
             sys_prompt = schemata[schema]["system_prompt"]
         
         messages = []
@@ -245,7 +260,32 @@ def generate_fake_arxiv_pdf(paper_pdf):
     return f"{year}{month}.{generate_pdf_hash(paper_pdf)}"
 
 
-def extract_paper_text(path, use_pdf = False, st_context = False, pdf_mode = "plumber", context_size = "all", use_cached_docling=True):
+def extract_paper_text(path, use_pdf=False, st_context=False, pdf_mode="plumber", context_size="all", use_cached_docling=True, use_multimodal=False, multimodal_model=None):
+    if use_pdf and use_multimodal and multimodal_model and is_multimodal_model(multimodal_model):
+        # Find PDF path
+        pdf_path = None
+        source_files = glob(f"{path}/paper.pdf")
+        if len(source_files) > 0:
+            pdf_path = source_files[0]
+            
+        if pdf_path:
+            show_info(
+                f"📷 Processing PDF with multimodal model {multimodal_model} ...",
+                st_context=st_context,
+            )
+            
+            # Define a prompt for the multimodal model
+            prompt = "Extract all relevant information from this academic paper. Include title, authors, abstract, methodology, dataset details, and any metrics or results."
+            
+            try:
+                # Use the multimodal processing function
+                extracted_text = process_pdf_with_llm(pdf_path, prompt=prompt, model=get_openrouter_model(multimodal_model))
+                return extracted_text
+            except Exception as e:
+                show_warning(
+                    f"⚠️ Multimodal processing failed: {str(e)}. Falling back to traditional extraction.",
+                    st_context=st_context,
+                )
     if use_pdf:
         source_files = glob(f"{path}/paper.pdf")
     else:
@@ -361,11 +401,12 @@ def run(
     summarize=False,
     curr_idx=[0, 0],
     schema="ar",
-    few_shot = 0,
-    results_path = "results_latex",
-    pdf_mode = "plumber",
-    repeat_on_error = False,
-    context_size = "all"
+    few_shot=0,
+    results_path="results_latex",
+    pdf_mode="plumber",
+    repeat_on_error=False,
+    context_size="all",
+    use_multimodal=False
 ):
     use_pdf = False if pdf_mode is None else True
     submitted = False
@@ -513,11 +554,20 @@ def run(
                     save_path = f"{save_path}/zero_shot"
                     os.makedirs(save_path, exist_ok=True)
                 paper_text = ""
+                
                 for model_name in models:
                     start_time = time.time()
                     model_name = model_name.replace("/", "_")
                     if model_name not in non_browsing_models and paper_text == "":
-                        paper_text = extract_paper_text(paper_path, use_pdf = use_pdf, st_context=st_context, pdf_mode = pdf_mode, context_size = context_size)
+                        paper_text = extract_paper_text(
+                            paper_path, 
+                            use_pdf=use_pdf, 
+                            st_context=st_context, 
+                            pdf_mode=pdf_mode, 
+                            context_size=context_size,
+                            use_multimodal=use_multimodal,
+                            multimodal_model=model_name if use_multimodal and is_multimodal_model(model_name) else None
+                        )
                         open(f"{save_path}/paper_text.txt", "w").write(paper_text)
                     curr_idx[0] += 1
                     if curr_idx[1]:
@@ -820,6 +870,12 @@ def create_args():
         type=str,
         default="all",
         help="context size to use",
+    )
+    
+    parser.add_argument(
+        "--use_multimodal",
+        action="store_true",
+        help="use multimodal capabilities for PDF processing"
     )
 
     # Parse arguments
