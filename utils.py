@@ -244,7 +244,8 @@ def get_predictions(
         pred_answer = pred_metadata[column]
         if use_annotations_paper:
             if gold_metadata["annotations_from_paper"][column] == 0:
-                results[column] = 1
+                # results[column] = 1
+                del results[column]
                 continue
         if "List[Dict" in answer_types[column]:
             # print(gold_answer, pred_answer)
@@ -301,8 +302,10 @@ def get_schema_from_path(json_path):
         return "fr"
     elif id in eval_datasets_ids["ru"]["test"]:
         return "ru"
-    else:
+    elif id in eval_datasets_ids["multi"]["test"]:
         return "multi"
+    else:
+        raise Exception(f"Schema not found for {id}")
 
 def evaluate_metadata(
     gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar", return_columns=False
@@ -318,7 +321,8 @@ def evaluate_metadata(
     )
     for subset in evaluation_subsets:
         for column in evaluation_subsets[subset]:
-            results[subset] += predictions[column]
+            if column in predictions:
+                results[subset] += predictions[column]
             if return_columns:
                 if column not in results:
                     results[column] = predictions[column]
