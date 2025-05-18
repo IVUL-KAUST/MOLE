@@ -266,11 +266,12 @@ def get_predictions(
     return results
 
 
-def evaluate_lengths(pred_metadata, schema = "ar"):
+def evaluate_lengths(pred_metadata, schema = "ar" , columns = None):
     validation_columns = schemata[schema]["validation_columns"]
     answer_types = schemata[schema]["answer_types"]
     answer_lengths = schemata[schema]['answer_lengths']
-    columns = schemata[schema]["columns"] 
+    if columns is None:
+        columns = schemata[schema]["columns"] 
     length_forcing = 0
     for c in columns:
         r = answer_lengths[c]
@@ -282,11 +283,12 @@ def evaluate_lengths(pred_metadata, schema = "ar"):
         else:
             pred_len = len(str(pred_metadata[c]).split(' '))
 
-        if pred_len >= r[0] and (pred_len <=r[1] or r[1] < 0):
-            length_forcing += 1/len(columns)
+        if pred_len >= r[0]:
+            if r[1] < 0:
+                length_forcing += 1/len(columns)
+            elif pred_len <= r[1]:
+                length_forcing += 1/len(columns)
         else:
-            # print(c, pred_len)
-            # print(pred_metadata[c])
             pass
     return length_forcing
 

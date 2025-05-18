@@ -5,7 +5,7 @@ import argparse
 from constants import eval_datasets_ids, non_browsing_models, schemata, open_router_costs
 import numpy as np
 from plot_utils import print_table
-from utils import get_predictions, evaluate_metadata, get_metadata_from_path, get_id_from_path, get_schema_from_path
+from utils import get_predictions, evaluate_metadata, get_metadata_from_path, get_id_from_path, get_schema_from_path, evaluate_lengths
 import os
 args = argparse.ArgumentParser()
 args.add_argument("--eval", type=str, default="valid")
@@ -41,14 +41,15 @@ def plot_by_length():
 
         if model_name in non_browsing_models:
             continue
-        arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
+        arxiv_id = get_id_from_path(json_file)
+        schema = get_schema_from_path(json_file)
         if arxiv_id not in ids:
             continue
         else:
             found_ids.append(arxiv_id)
         if model_name not in metric_results:
             metric_results[model_name] = []
-        metric_results[model_name].append([results["length_forcing"]])
+        metric_results[model_name].append(evaluate_lengths(results["metadata"], schema = schema, columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]))
     
     final_results = {}
 
@@ -58,7 +59,7 @@ def plot_by_length():
     results = []
     for model_name in final_results:
         results.append(
-            [model_name] + (np.mean(final_results[model_name], axis=0)).tolist()
+            [model_name] + [(np.mean(final_results[model_name], axis=0)).tolist()]
         )
     headers = ["MODEL", "LENGTH"]
     print_table(results, headers)
@@ -485,7 +486,7 @@ def plot_table():
             schema = schema,
             return_columns = True
         )
-        scores = [scores[c] for c in headers[1:-1]]
+        scores = [scores[c] for c in headers[1:] if c in scores]
         
         if use_annotations_paper:
             average_ignore_mistakes = evaluate_metadata(
