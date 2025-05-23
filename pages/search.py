@@ -367,6 +367,8 @@ def run(
     repeat_on_error = False,
     context_size = "all"
 ):
+    if paper_pdf is not None:
+        pdf_mode = "plumber"
     use_pdf = False if pdf_mode is None else True
     submitted = False
     st_context = False
