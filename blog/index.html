@@ -18,7 +18,47 @@
             background-color: #f8f9fa;
             padding: 20px;
         }
-
+                /* Add table styling */
+                table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #e9f5ff;
+        }
+        
+        td:first-child {
+            font-weight: 600;
+            text-align: left;
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -220,6 +260,7 @@
             <div class="section">
                 <h2>Introduction</h2>
                 <p>MOLE is a framework that leverages Large Language Models (LLMs) to automatically extract metadata attributes from scientific papers covering datasets of languages other than Arabic. Our schema-driven methodology processes entire documents across multiple input formats and incorporates robust validation mechanisms for consistent output.</p>
+                <img src="../images/pipeline.png" width = "100%" />
             </div>
             
             <div class="section">
@@ -228,6 +269,98 @@
                 <iframe src="demo.html" style="width: 100%; height: 600px; border: none; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"></iframe>
             </div>
             
+            <div class="section">
+                <h2>Results</h2>
+
+                <table border="1">
+                    <thead>
+                      <tr>
+                        <th>Model</th>
+                        <th>ar</th>
+                        <th>en</th>
+                        <th>jp</th>
+                        <th>fr</th>
+                        <th>ru</th>
+                        <th>multi</th>
+                        <th>Average</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Gemma 3 27B</td>
+                        <td>56.69</td>
+                        <td>60.00</td>
+                        <td>66.32</td>
+                        <td>70.00</td>
+                        <td>66.67</td>
+                        <td>53.68</td>
+                        <td>60.30</td>
+                      </tr>
+                      <tr>
+                        <td>Llama 4 Maverick</td>
+                        <td>58.28</td>
+                        <td>66.67</td>
+                        <td>68.42</td>
+                        <td>68.89</td>
+                        <td>68.89</td>
+                        <td>58.95</td>
+                        <td>62.67</td>
+                      </tr>
+                      <tr>
+                        <td>Qwen 2.5 72B</td>
+                        <td>64.17</td>
+                        <td>62.22</td>
+                        <td>64.21</td>
+                        <td>71.11</td>
+                        <td>65.56</td>
+                        <td>55.79</td>
+                        <td>63.96</td>
+                      </tr>
+                      <tr>
+                        <td>DeepSeek V3</td>
+                        <td>64.17</td>
+                        <td>70.00</td>
+                        <td>65.26</td>
+                        <td>64.44</td>
+                        <td>70.00</td>
+                        <td>54.74</td>
+                        <td>64.56</td>
+                      </tr>
+                      <tr>
+                        <td>Claude 3.5 Sonnet</td>
+                        <td>60.54</td>
+                        <td>66.67</td>
+                        <td>71.58</td>
+                        <td><b>74.44</b></td>
+                        <td><b>73.33</b></td>
+                        <td><b>61.05</b></td>
+                        <td>65.37</td>
+                      </tr>
+                      <tr>
+                        <td>GPT 4o</td>
+                        <td>64.17</td>
+                        <td>71.11</td>
+                        <td>69.47</td>
+                        <td>70.00</td>
+                        <td><b>73.33</b></td>
+                        <td>60.00</td>
+                        <td>66.68</td>
+                      </tr>
+                      <tr>
+                        <td>Gemini 2.5 Pro</td>
+                        <td><b>65.31</b></td>
+                        <td><b>72.22</b></td>
+                        <td><b>74.74</b></td>
+                        <td>68.89</td>
+                        <td><b>73.33</b></td>
+                        <td>56.84</td>
+                        <td><b>67.42</b></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+            </div>
+
             <div class="References">
                 <h2>References</h2>
                 <p>1. Alyafeai, Zaid, et al. "Masader: Metadata sourcing for arabic text and speech data resources." arXiv preprint arXiv:2110.06744 (2021).

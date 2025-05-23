@@ -129,3 +129,10 @@ Example extracted metadata using Gemini 2.5 Pro
     },
 }
 ```
+
+## Citation
+
+```
+@misc{
+}
+```
