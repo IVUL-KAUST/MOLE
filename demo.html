@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        .panel {
+            flex: 1;
+            padding: 20px;
+            overflow: auto;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        
+        .panel-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        #text-panel {
+            background-color: #f9f9f9;
+        }
+        
+        #json-panel {
+            background-color: #f5f5f5;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        
+        .keyword {
+            cursor: pointer;
+            border-bottom: 1px dotted #666;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+        
+        /* Color palette for different keywords */
+        .keyword-link, .json-value-link {
+            background-color: #e3f2fd;
+            border-bottom: 1px dotted #1565c0;
+        }
+        
+        .keyword-n, .json-value-n {
+            background-color: #f3e5f5;
+            border-bottom: 1px dotted #7b1fa2;
+        }
+        
+        .keyword-email, .json-value-email {
+            background-color: #e8f5e9;
+            border-bottom: 1px dotted #2e7d32;
+        }
+        
+        /* Default color for any other keywords */
+        .keyword-default, .json-value-default {
+            background-color: #fff3e0;
+            border-bottom: 1px dotted #e65100;
+        }
+        
+        .highlight {
+            filter: brightness(85%);
+            transition: all 0.2s;
+            font-weight: bold;
+        }
+        
+        .controls {
+            padding: 10px;
+            background-color: #eee;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            font-family: inherit;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        b {
+            font-size: 1.2em;
+        }
+        
+        /* JSON specific styles */
+        .json-key {
+            color: #9c27b0;  /* Purple for keys */
+        }
+        
+        .json-value {
+            color: #2196f3;  /* Blue for values */
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="panel" id="text-panel">
+            <div id="text-content"></div>
+        </div>
+        <div class="panel" id="json-panel">
+            <div id="json-content"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textContent = document.getElementById('text-content');
+            const jsonContent = document.getElementById('json-content');
+            const text = `<center><b><Paper_Title>MOLE: Metadata Extraction and Validation in Scientific Papers Using LLMs</Paper_Title></b></center>
+
+<center><i><Authors>Zaid Alyafeai,Maged AlShaibani,Bernard Ghanem</Authors></i></center>
+<br>
+<b>Abstract:</b>
+<br>
+<Abstract>MOLE is an information extraction dataset that contains papers with their metadata attributes. MOLE is constructed by manual annotation from papers, resulting in a diverse and comprehensive evaluation framework. This resource is uniquely tailored to evaluate models on multilingual content, with datasets focusing on the following languages: Arabic, French, Japanese, Russian, English.</Abstract> 
+<br><br>
+<b>Introduction</b>
+<br>
+<Name>MOLE</Name> is an <Tasks>information retrieval</Tasks> <Description>dataset that contains papers with their metadata attributes in <Form>text</Form> format
+<br><br>
+<b>Dataset Overview</b>
+<br>
+MOLE is constructed by <Collection_Style value='manual curation,human annotation'>manual annotation</Collection_Style> from <Domain value='other'>papers</Domain>, resulting in a diverse and comprehensive evaluation framework. This innovative resource is uniquely tailored to evaluate models on multilingual content, with datasets focusing on the following languages: <Language>Arabic,French,Japanese,Russian,English</Language>. The <Test_Split value='True'>testset</Test_Split> contains <Volume>41</Volume> <Unit>documents</Unit> in text format.
+<Subsets>
+<table>
+    <thead>
+        <tr>
+            <th>Language</th>
+            <th>Number of papers</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Arabic</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Russian</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>French</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>English</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Japanese</td>
+            <td>5</td>
+        </tr>
+    </tbody>
+</table>
+</Subsets>
+<br>
+<b>Development Context</b>
+<br>
+We release the dataset <Access value='Free'>freely</Access><Cost></Cost> the dataset in <Host>GitHub</Host>(<Link>https://github.com/zaidalyafeai/mole</Link>) and Hugging Face through <HF_Link>https://huggingface.co/datasets/Zaid/mole</HF_Link>. The dataset is released under the <License>Apache-2.0</License> License. 
+<br><br>
+<b>Conclusion</b>
+<br>
+<Description>MOLE is an information extraction dataset containing papers with their metadata attributes, constructed by manual annotation. It is designed to evaluate models on multilingual content, focusing on Arabic, French, Japanese, Russian, and English.</Description>
+<br><br>
+<center><i><Venue_Type>preprint</Venue_Type> <Paper_Link value='https://arxiv.org/abs/2402.03177'>arXiv:2402.03177</Paper_Link> [cs.CL] 5 Feb <Year>2025</Year></i></center>
+`            
+            
+            // Process button click
+            processText(text);
+            
+            
+            
+            
+            function processText(text) {
+                // Extract all keywords and their values including attributes
+                const keywordPattern = /<([A-Z][a-zA-Z0-9_-]*)((?:\s+[a-zA-Z_][a-zA-Z0-9_]*=['"][^'"]*['"])*)>(.*?)<\/\1>/g;
+                let match;
+                const keywords = {};
+                let processedText = text;
+                let idx = 0;
+                const replacements = [];
+                
+                // Define predefined keywords that have specific colors
+                const predefinedKeywords = ['link', 'n', 'email'];
+                // Track used keywords to assign default color to new ones
+                const usedKeywords = new Set();
+                
+                // Find all keywords and store replacements
+                while ((match = keywordPattern.exec(text)) !== null) {
+                    const fullMatch = match[0];
+                    const keyword = match[1];
+                    const attributes = match[2] || '';
+                    const content = match[3];
+                    
+                    // Check if there's a value attribute
+                    let value = content;
+                    const valueMatch = attributes.match(/\s+value=['"]([^'"]*)['"]/);
+                    if (valueMatch) {
+                        value = valueMatch[1];
+                    }
+                    
+                    // Store keyword and value
+                    if (!keywords[keyword]) {
+                        keywords[keyword] = [];
+                    }
+                    
+                    // Track unique keywords for styling
+                    usedKeywords.add(keyword);
+                    
+                    const keywordId = `${keyword}-${idx}`;
+                    keywords[keyword].push(value);
+                    
+                    // Create replacement with span for highlighting - with keyword-specific class
+                    replacements.push({
+                        original: fullMatch,
+                        replacement: `<span class="keyword keyword-${keyword}" data-keyword="${keyword}" data-index="${idx}" data-has-attr="${valueMatch ? 'true' : 'false'}">${content}</span>`,
+                        keyword,
+                        value,
+                        content,
+                        index: idx
+                    });
+                    
+                    idx++;
+                }
+                
+                // Generate CSS for any new keywords not in predefined list
+                usedKeywords.forEach(keyword => {
+                    if (!predefinedKeywords.includes(keyword)) {
+                        const styleElement = document.createElement('style');
+                        styleElement.textContent = `
+                            .keyword-${keyword}, .json-value-${keyword} {
+                                background-color: #fff3e0;
+                                border-bottom: 1px dotted #e65100;
+                            }
+                        `;
+                        // Add the style only if it doesn't exist already
+                        if (!document.querySelector(`style[data-keyword="${keyword}"]`)) {
+                            styleElement.setAttribute('data-keyword', keyword);
+                            document.head.appendChild(styleElement);
+                        }
+                    }
+                });
+                
+                // Apply replacements to text (in reverse to avoid index issues)
+                for (const replacement of replacements) {
+                    processedText = processedText.replace(
+                        replacement.original, 
+                        replacement.replacement
+                    );
+                }
+                
+                // Update text panel
+                textContent.innerHTML = processedText;
+                
+                // Create and update JSON panel
+                const jsonObj = {};
+                for (const keyword in keywords) {
+                    // Replace underscores with spaces in the JSON key
+                    const displayKey = keyword.replace(/_/g, ' ');
+                    if (keywords[keyword].length === 1) {
+                        if (keyword == "Domain" || keyword == "Tasks") {
+                            jsonObj[displayKey] = [keywords[keyword][0]];
+                        } else if (keyword == "Language" || keyword == "Authors" || keyword == "Collection_Style") {
+                            jsonObj[displayKey] = keywords[keyword][0].split(',');
+                        } else {
+                            jsonObj[displayKey] = keywords[keyword][0];
+                        }
+                    } else {
+                        jsonObj[displayKey] = keywords[keyword];
+                    }
+                }
+                
+                // Add the new fields
+                jsonObj['Ethical Risks'] = 'Low';
+                jsonObj['Provider'] = [];
+                jsonObj['Derived From'] = [];
+                jsonObj['Subsets'] = [{'Name': 'Arabic', 'Volume': 21.0, 'Unit': 'documents', 'Language': 'Arabic'}, {'Name': 'Russian', 'Volume': 5.0, 'Unit': 'documents', 'Language': 'Russian'}, {'Name': 'French', 'Volume': 5.0, 'Unit': 'documents', 'Language': 'French'}, {'Name': 'English', 'Volume': 5.0, 'Unit': 'documents', 'Language': 'English'}, {'Name': 'Japanese', 'Volume': 5.0, 'Unit': 'documents', 'Language': 'Japanese'}]
+                jsonObj['Tokenized'] = "False"
+                jsonObj['Venue Title'] = ""
+                jsonObj['Venue Name'] = "arXiv"
+                jsonObj['Affiliation'] = []
+                // Pretty print JSON with spans for highlighting
+                let jsonString = JSON.stringify(jsonObj, null, 4);
+                
+                // Add spans to JSON keys and values for highlighting
+                jsonString = jsonString.replace(/"([^"]+)":/g, '"<span class="json-key">$1</span>":');
+                
+                // Add spans to JSON values for highlighting
+                for (const replacement of replacements) {
+                    const valuePattern = new RegExp(`"${escapeRegExp(replacement.value)}"`, 'g');
+                    jsonString = jsonString.replace(
+                        valuePattern,
+                        `"<span class="json-value json-value-${replacement.keyword}" data-keyword="${replacement.keyword}" data-index="${replacement.index}">${replacement.value}</span>"`
+                    );
+                    
+                    // Handle split values (for Language attribute)
+                    if (replacement.keyword === "Language" || replacement.keyword === "Authors" || replacement.keyword === "Collection_Style" || replacement.keyword ==="Ethical Risks") {
+                        const languages = replacement.value.split(',');
+                        languages.forEach(lang => {
+                            const trimmedLang = lang.trim();
+                            const langPattern = new RegExp(`"${escapeRegExp(trimmedLang)}"`, 'g');
+                            jsonString = jsonString.replace(
+                                langPattern,
+                                `"<span class="json-value json-value-${replacement.keyword}" data-keyword="${replacement.keyword}" data-index="${replacement.index}">${trimmedLang}</span>"`
+                            );
+                        });
+                    }
+                }
+                
+                // Convert line breaks to <br> and spaces to &nbsp; to preserve formatting
+                jsonContent.innerHTML = jsonString;
+                
+                // Add event listeners for highlighting
+                setupHighlighting();
+            }
+            
+            function setupHighlighting() {
+                const keywordElements = document.querySelectorAll('.keyword');
+                const jsonValueElements = document.querySelectorAll('.json-value');
+                
+                // Add hover events to text keywords
+                keywordElements.forEach(element => {
+                    element.addEventListener('mouseenter', function() {
+                        const keyword = this.getAttribute('data-keyword');
+                        const index = this.getAttribute('data-index');
+                        
+                        // Highlight this element
+                        this.classList.add('highlight');
+                        
+                        // Find and highlight corresponding JSON element
+                        const jsonElement = document.querySelector(`.json-value[data-keyword="${keyword}"][data-index="${index}"]`);
+                        if (jsonElement) {
+                            jsonElement.classList.add('highlight');
+                            
+                            // Scroll JSON panel to show the highlighted element
+                            jsonElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    });
+                    
+                    element.addEventListener('mouseleave', function() {
+                        const keyword = this.getAttribute('data-keyword');
+                        const index = this.getAttribute('data-index');
+                        
+                        // Remove highlight from this element
+                        this.classList.remove('highlight');
+                        
+                        // Remove highlight from JSON element
+                        const jsonElement = document.querySelector(`.json-value[data-keyword="${keyword}"][data-index="${index}"]`);
+                        if (jsonElement) {
+                            jsonElement.classList.remove('highlight');
+                        }
+                    });
+                });
+                
+                // Add hover events to JSON values
+                jsonValueElements.forEach(element => {
+                    element.addEventListener('mouseenter', function() {
+                        const keyword = this.getAttribute('data-keyword');
+                        const index = this.getAttribute('data-index');
+                        
+                        // Highlight this element
+                        this.classList.add('highlight');
+                        
+                        // Find and highlight corresponding text element
+                        const textElement = document.querySelector(`.keyword[data-keyword="${keyword}"][data-index="${index}"]`);
+                        if (textElement) {
+                            textElement.classList.add('highlight');
+                            
+                            // Scroll text panel to show the highlighted element
+                            textElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    });
+                    
+                    element.addEventListener('mouseleave', function() {
+                        const keyword = this.getAttribute('data-keyword');
+                        const index = this.getAttribute('data-index');
+                        
+                        // Remove highlight from this element
+                        this.classList.remove('highlight');
+                        
+                        // Remove highlight from text element
+                        const textElement = document.querySelector(`.keyword[data-keyword="${keyword}"][data-index="${index}"]`);
+                        if (textElement) {
+                            textElement.classList.remove('highlight');
+                        }
+                    });
+                });
+            }
+            
+            // Helper function to escape special characters in regular expressions
+            function escapeRegExp(string) {
+                return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            }
+        });
+    </script>
+</body>
+</html>
