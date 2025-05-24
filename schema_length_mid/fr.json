@@ -219,7 +219,7 @@
     },
     "Paper Link": {
         "question": "What is the link to the paper?",
-        "answer_type": "str",
+        "answer_type": "url",
         "answer_min": 1
     },
     "Tokenized": {
