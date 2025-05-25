@@ -12,7 +12,7 @@ async def func(link: str =  Form(''), schema: str = Form(''), file: UploadFile =
         pdf_content = None
 
     browse_web = False
-    model_name = 'google/gemini-2.5-pro-preview'
+    model_name = 'google/gemma-3-27b-it'
     # Call your processing function with the file content and link
     results = run(link = link, paper_pdf=pdf_content, models = model_name.split(','), overwrite=True, few_shot = 0, schema = schema)
     
