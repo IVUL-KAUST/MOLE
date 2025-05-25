@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ```
 
 ## Evaluation
-Given a schema we can run evaluation using the following code. We use OpenRouter to run inference. You have to create `.env` file in the directory and save the API key OPENROUTER_API_KEY=sk-***. 
+Given a schema we can run evaluation using the following code. We use OpenRouter to run inference. You have to create `.env` file in the directory and save the API key `OPENROUTER_API_KEY=sk-***`. 
 ```bash
 python evaluate.py --models google/gemini-flash-1.5 -mv --schema ar -o --few_shot 0 --results_path results_latex
 ```
