@@ -9,3 +9,6 @@ arxiv_latex_cleaner==1.0.8
 litellm==1.65.4.post1
 docling~=2.30
 plotext==5.3.2
+uvicorn==0.34.2
+fastapi==0.115.12
+python-multipart==0.0.20
