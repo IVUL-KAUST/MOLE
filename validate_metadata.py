@@ -14,4 +14,6 @@ for schema in os.listdir('schema'):
         for key in metadata:
             if key not in annotations_from_paper:
                 print(f"{file} is missing {key} in annotations_from_paper")
-        evaluate_lengths(new_metadata, schema = lang)
+        length = evaluate_lengths(new_metadata, schema = lang)
+        if abs(length - 1) > 0.01:
+            print(f"{file} has length {length}")
