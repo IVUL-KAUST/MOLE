@@ -71,6 +71,8 @@
             "MPL-1.0",
             "MPL-2.0",
             "ODC-By",
+            "AFL-3.0",
+            "CDLA-SHARING-1.0",
             "unknown",
             "custom"
         ],
@@ -161,7 +163,7 @@
     },
     "Form": {
         "question":"What is the form of the data?", 
-        "options": ["text", "spoken", "images"], 
+        "options": ["text", "spoken", "images", "videos"], 
         "answer_type": "str", 
         "validation_group":"CONTENT", 
         "answer_min": 1,
@@ -204,13 +206,14 @@
     },
     "Unit": {
         "question": "What kind of examples does the dataset include?",
-        "options": ["tokens", "sentences", "documents", "hours", "images"],
+        "options": ["tokens", "sentences", "documents", "hours", "images", "videos"],
         "option_description": {
             "tokens": "the dataset contains individual tokens/words",
             "sentences": "the samples are sentences or short paragraphs",
             "documents": "the samples are long documents i.e. web pages or books",
             "hours": "the samples are audio files",
-            "images": "the samples are images"
+            "images": "the samples are images",
+            "videos": "the samples are videos"
         },
         "answer_type": "str",
         "validation_group":"CONTENT",
@@ -369,6 +372,17 @@
             "natural language inference",
             "instruction tuning",
             "Linguistic acceptability",
+            "commonsense reasoning",
+            "word prediction",
+            "image captioning",
+            "word similarity",
+            "grammatical error correction",
+            "intent classification",
+            "sign language recognition",
+            "optical character recognition",
+            "fill-in-the blank",
+            "relation extraction",
+            "stance detection",
             "other"
         ],
         "answer_type": "List[str]",
