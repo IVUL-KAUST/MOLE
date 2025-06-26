@@ -363,11 +363,11 @@ def run(
     schema="ar",
     few_shot = 0,
     results_path = "results_latex",
-    pdf_mode = "plumber",
+    pdf_mode = None,
     repeat_on_error = False,
     context_size = "all"
 ):
-    if paper_pdf is not None:
+    if paper_pdf is not None and pdf_mode is None:
         pdf_mode = "plumber"
     use_pdf = False if pdf_mode is None else True
     submitted = False
