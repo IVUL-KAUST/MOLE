@@ -31,8 +31,8 @@ TEST_DATASETS_IDS_AR = [
     "1612.08989",  # shamela
     "1610.09565",  # transliteration
     "1809.03891",  # OpenITI-proc
-    "1411.6718",  # labr
-    "1410.3791",  # polygot-ner
+    "1411.6718",   # labr
+    "1410.3791",   # polygot-ner
     "2309.12053",  # acva
     "1907.03110",  # anetac
     "2407.19835",  # athar
@@ -52,6 +52,20 @@ TEST_DATASETS_IDS_JP = [
     "1911.10668",  # JParaCrawl
     "1710.10639",  # JESC
     "1711.00354",  # JUST
+    "2403.19454",  # jdocqa
+    "1705.00823",  # stair captions
+    "1703.05916",  # jsimilarity
+    "2002.08595",  # kaokore
+    "2305.12720",  # llm-japaense
+    "2305.11444",  # arukikata
+    "2112.09323",  # jtubespeech
+    "2404.17733",  # ljwc
+    "2306.10727",  # jamp
+    "2204.02718",  # fakenews-japanese
+    "2306.17399",  # JaLeCoN
+    "2201.08038",  # japanese-gec
+    "2403.17319",  # JMultiWOZ
+    "2309.12676",  # JCoLA
 ]
 
 TEST_DATASETS_IDS_EN = [
@@ -60,6 +74,21 @@ TEST_DATASETS_IDS_EN = [
     "2009.03300",  # mmlu
     "1905.07830",  # hellaswag
     "1705.03551",  # triviaqa
+    "2306.01116",  # fineweb
+    "1911.11641",  # piqa
+    "1907.10641",  # winograd
+    "1606.05250",  # squad
+    "2406.01574",  # mmlu-pro
+    "2311.12022",  # gpqa
+    "2305.07759",  # tinystories
+    "1806.03822",  # squadv2
+    "1905.10044",  # boolq
+    "2407.12883",  # bright
+    "2504.13161",  # climb
+    "1606.06031",  # lambada
+    "1707.06209",  # sciq
+    "1704.04683",  # race
+    "1809.09600",  # hotpotqa
 ]
 
 TEST_DATASETS_IDS_FR = [
@@ -68,6 +97,18 @@ TEST_DATASETS_IDS_FR = [
     "2108.11792",  # bsard
     "2007.00968",  # piaf
     "2304.04280",  # FrenchMedMCQA
+    "2504.15941",  # FiarTranslate
+    "2207.08292",  # PxSLU
+    "2302.07738",  # Alloprof
+    "2403.19727",  # intent-media
+    "2005.05075",  # lockdown-fr
+    "2309.10770",  # FRASIMED
+    "2109.13209",  # FQuAD2.0
+    "2312.04843",  # FREDSum
+    "2501.17117",  # HISTOIRESMORALES
+    "2202.09452",  # FREEM
+    "1809.00388",  # MTNT
+    "2406.17566",  # FrenchToxicityPrompts
 ]
 
 TEST_DATASETS_IDS_RU = [
@@ -76,6 +117,20 @@ TEST_DATASETS_IDS_RU = [
     "2106.10161",  # golos
     "2108.13112",  # NEREL
     "2210.12814",  # rucola
+    "2403.17553",  # RuBia
+    "2405.07886",  # russiansummarization
+    "2108.12626",  # HeadlineCaust
+    "2112.02325",  # Russian Jeopardy
+    "2204.08009",  # WikiOmnia
+    "2209.13750",  # RuDSI
+    "2503.13102",  # REPA
+    "2406.19232",  # RuBLiMP
+    "2305.14527",  # Solvo
+    "2303.16531",  # RusTitW
+    "2010.06436",  # RuSemShift
+    "2006.11063",  # summarization
+    "1912.09723",  # SberQuAD
+    "2502.07455",  # RusCode
 ]
 
 TEST_DATASETS_IDS_MULTI = [
@@ -84,6 +139,21 @@ TEST_DATASETS_IDS_MULTI = [
     "1910.07475",  # mlqa
     "2004.06465",  # DE-LIMIT
     "2010.02573",  # marc
+    "2103.01910",  # multi-subs
+    "2303.08954",  # PRESTO
+    "2210.01613",  # mintaka 
+    "2306.17674",  # X-RiSAWOZ
+    "2211.05958",  # minion 
+    "2205.10400",  # multi2woz
+    "2211.05955",  # MEE
+    "2104.08655",  # DiS-ReX
+    "2305.13194",  # SEAHORSE
+    "2304.00913",  # LAHM
+    "2008.09335",  # MTOP
+    "2005.00333",  # XCOPA
+    "2004.14900",  # MLSUM
+    "2003.08385",  # X-stance
+    "2407.12336",  # M2DS
 ]
 
 TEST_DATASETS_IDS_MOD = [
