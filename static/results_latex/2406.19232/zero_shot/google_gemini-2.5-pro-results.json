@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "RuBLiMP",
+        "Link": "https://hf.co/datasets/RussianNLP/rublimp",
+        "HF Link": "https://hf.co/datasets/RussianNLP/rublimp",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia",
+            "news articles",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "The Russian Benchmark of Linguistic Minimal Pairs (RuBLiMP) includes 45,000 pairs of sentences that differ in grammaticality and isolate a morphological, syntactic, or semantic phenomenon. It is created by applying linguistic perturbations to automatically annotated sentences from open text corpora and decontaminating test data.",
+        "Volume": 45000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Edinburgh",
+            "HSE University",
+            "University of Groningen",
+            "Ghent University",
+            "SaluteDevices",
+            "Toloka AI",
+            "University of Oslo"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Wikinews",
+            "Librusec"
+        ],
+        "Paper Title": "RuBLiMP: Russian Benchmark of Linguistic Minimal Pairs",
+        "Paper Link": "https://arxiv.org/abs/2406.19232",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "Linguistic acceptability"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ekaterina Taktasheva",
+            "Maxim Bazhukov",
+            "Kirill Koncha",
+            "Alena Fenogenova",
+            "Ekaterina Artemova",
+            "Vladislav Mikhailov"
+        ],
+        "Affiliations": [
+            "University of Edinburgh",
+            "HSE University",
+            "University of Groningen",
+            "Ghent University",
+            "SaluteDevices",
+            "Toloka AI",
+            "University of Oslo"
+        ],
+        "Abstract": "Minimal pairs are a well-established approach to evaluating the grammatical knowledge of language models. However, existing resources for minimal pairs address a limited number of languages and lack diversity of language-specific grammatical phenomena. This paper introduces the Russian Benchmark of Linguistic Minimal Pairs (RuBLiMP), which includes 45k pairs of sentences that differ in grammaticality and isolate a morphological, syntactic, or semantic phenomenon. In contrast to existing benchmarks of linguistic minimal pairs, RuBLiMP is created by applying linguistic perturbations to automatically annotated sentences from open text corpora and decontaminating test data. We describe the data collection protocol and present the results of evaluating 25 language models in various scenarios. We find that the widely used LMs for Russian are sensitive to morphological and agreement-oriented contrasts, but fall behind humans on phenomena requiring the understanding of structural relations, negation, transitivity, and tense. RuBLiMP, the codebase, and other materials are publicly available."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.094935,
+        "input_tokens": 45428,
+        "output_tokens": 1418
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2406.19232"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

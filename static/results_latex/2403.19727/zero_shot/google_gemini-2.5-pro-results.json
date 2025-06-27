@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "MEDIA with Intents",
+        "Link": "https://github.com/Ala-Na/media_benchmark_intent_ann",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "An enhanced version of the French MEDIA Spoken Language Understanding (SLU) dataset. Originally annotated only for slots (named entities), this version adds intent classification labels using a semi-automatic tri-training methodology. The corpus consists of recorded human-machine dialogues for hotel booking.",
+        "Volume": 22848.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Paris-Saclay",
+            "CNRS",
+            "LISN",
+            "Avignon Universit\u00e9",
+            "LIA",
+            "QWANT"
+        ],
+        "Derived From": [
+            "MEDIA"
+        ],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2304.12797",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "topic classification",
+            "speech recognition"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "ArXiv",
+        "Authors": [
+            "Nad\u00e8ge Alavoine",
+            "Ga\u00eblle Laperri\u00e8re",
+            "Christophe Servan",
+            "Sahar Ghannay",
+            "Sophie Rosset"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris-Saclay",
+            "CNRS",
+            "LISN",
+            "Avignon Universit\u00e9",
+            "LIA",
+            "QWANT"
+        ],
+        "Abstract": "Intent classification and slot-filling are essential tasks of Spoken Language Understanding (SLU). In most SLU systems, those tasks are realized by independent modules. For about fifteen years, models achieving both of them jointly and exploiting their mutual enhancement have been proposed. A multilingual module using a joint modelwasenvisionedtocreateatouristicdialoguesystemforaEuropeanproject,HumanE-AI-Net. Acombination of multiple datasets, includingthe MEDIA dataset, was suggested for training this joint model. The MEDIA SLU datasetisa Frenchdatasetdistributedsince2005byELRA,mainlyusedbytheFrenchresearchcommunityand free for academic research since 2020. Unfortunately,it is annotatedonly in slots but not intents. An enhanced version of MEDIA annotated with intents has been built to extend its use to more tasks and use cases. This paper presents the semi-automatic methodology used to obtain this enhanced version. In addition, we present thefirstresultsofSLUexperimentsonthisenhanceddatasetusingjointmodelsforintentclassificationandslot-filling."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.062825,
+        "input_tokens": 23199,
+        "output_tokens": 1334
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

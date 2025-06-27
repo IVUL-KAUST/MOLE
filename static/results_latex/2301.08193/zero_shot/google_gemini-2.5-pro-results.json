@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Japanese STS benchmark",
+        "Link": "https://github.com/mu-kindai/JCSE",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "public datasets",
+            "news articles",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A comprehensive Japanese Semantic Textual Similarity (STS) benchmark created by combining existing human-annotated datasets (JSICK, JSTS) with machine-translated versions of English STS datasets (STS12-16, STS-B). It is designed to evaluate Japanese sentence embedding models.",
+        "Volume": 43165.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Kindai University"
+        ],
+        "Derived From": [
+            "STS12",
+            "STS13",
+            "STS14",
+            "STS15",
+            "STS16",
+            "STS-B",
+            "JSICK",
+            "JSTS"
+        ],
+        "Paper Title": "JCSE: Contrastive Learning of Japanese Sentence Embeddings and Its Applications",
+        "Paper Link": "https://arxiv.org/abs/2301.08193",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "information retrieval",
+            "other"
+        ],
+        "Venue Title": "Neurocomputing",
+        "Venue Type": "journal",
+        "Venue Name": "Neurocomputing",
+        "Authors": [
+            "Zihao Chen",
+            "Hisashi Handa",
+            "Kimiaki Shirahama"
+        ],
+        "Affiliations": [
+            "Graduate School of Science and Engineering, Kindai University",
+            "Faculty of Informatics, Kindai University"
+        ],
+        "Abstract": "Contrastive learning is widely used for sentence representation learning. Despite this prevalence, most studies have focused exclusively on English and few concern domain adaptation for domain-specific downstream tasks, especially for low-resource languages like Japanese, which are characterized by insufficient target domain data and the lack of a proper training strategy. To overcome this, we propose a novel Japanese sentence representation framework, JCSE (derived from 'Contrastive learning of Sentence Embeddings for Japanese'), that creates training data by generating sentences and synthesizing them with sentences available in a target domain. Specifically, a pre-trained data generator is finetuned to a target domain using our collected corpus. It is then used to generate contradictory sentence pairs that are used in contrastive learning for adapting a Japanese language model to a specific task in the target domain. Another problem of Japanese sentence representation learning is the difficultyofevaluatingexistingembeddingmethodsduetothelackofbenchmark datasets. Thus, we establish a comprehensive Japanese Semantic Textual Similarity (STS) benchmark on which various embedding models are evaluated. Based on this benchmark result, multiple embedding methods are chosen and compared with JCSE on two domain-specific tasks, STS in a clinical domainandinformationretrievalinaneducationaldomain. Theresultsshow that JCSE achieves significant performance improvement surpassing direct transfer and other training strategies. This empirically demonstrates JCSE\u2019s effectiveness and practicability for downstream tasks of a low-resource language."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.07298125,
+        "input_tokens": 18982,
+        "output_tokens": 2045
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2301.08193"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

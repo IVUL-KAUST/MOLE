@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "SberQuAD",
+        "Link": "https://github.com/sberbank-ai/data-science-journey-2017",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "SberQuAD is a large-scale Russian reading comprehension dataset, analogous to SQuAD. It contains over 50,000 question-answer pairs created by crowdworkers based on paragraphs from Russian Wikipedia articles. The task is to find a contiguous text span in the paragraph that answers the question.",
+        "Volume": 50364.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sberbank"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "SberQuAD \u2013 Russian Reading Comprehension Dataset: Description and Analysis",
+        "Paper Link": "https://arxiv.org/abs/1912.09279",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Pavel Efimov",
+            "Andrey Chertok",
+            "Leonid Boytsov",
+            "Pavel Braslavski"
+        ],
+        "Affiliations": [
+            "Saint Petersburg State University",
+            "Sberbank",
+            "Ural Federal University",
+            "JetBrains Research"
+        ],
+        "Abstract": "SberQuAD\u2014a large scale analog of Stanford SQuAD in the Russian language\u2014is a valuable resource that has not been properly presented to the scientific community. We fill this gap by providing a description, a thorough analysis, and baseline experimental results."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.04911375,
+        "input_tokens": 15973,
+        "output_tokens": 1160
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/1912.09723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,69 @@
+{
+    "metadata": {
+        "Name": "SQuAD",
+        "Link": "https://stanford-qa.com",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A reading comprehension dataset consisting of over 100,000 questions posed by crowdworkers on a set of Wikipedia articles. The answer to each question is a segment of text, or span, from the corresponding reading passage.",
+        "Volume": 107785.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+        "Paper Link": "https://arxiv.org/abs/1606.05250",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Jian Zhang",
+            "Konstantin Lopyrev",
+            "Percy Liang"
+        ],
+        "Affiliations": [
+            "Computer Science Department",
+            "Stanford University"
+        ],
+        "Abstract": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage. We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees. We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%). However, human performance (86.8%) is much higher, indicating that the dataset presents a good challenge problem for future research. The dataset is freely available at https://stanford-qa.com."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.0426,
+        "input_tokens": 12614,
+        "output_tokens": 1109
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/1606.05250"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

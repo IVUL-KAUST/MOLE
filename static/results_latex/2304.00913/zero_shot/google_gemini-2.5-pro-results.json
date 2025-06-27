@@ -1,0 +1,117 @@
+{
+    "metadata": {
+        "Name": "LAHM",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 105120,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 32734,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 5394,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "French",
+                "Volume": 20809,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 8631,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 55148,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            }
+        ],
+        "Link": "https://arxiv.org/abs/2203.09104",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "Hindi",
+            "Arabic",
+            "French",
+            "German",
+            "Spanish"
+        ],
+        "Domain": [
+            "social media",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large-scale, semi-supervised dataset for multilingual and multi-domain hate speech identification. It contains nearly 300k tweets across 6 languages (English, Hindi, Arabic, French, German, Spanish) and 5 domains (Abuse, Racism, Sexism, Religious Hate, Extremism), created using a 3-layer annotation pipeline.",
+        "Volume": 5394.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Logically.ai"
+        ],
+        "Derived From": [
+            "HateBase",
+            "Counter Extremism Database"
+        ],
+        "Paper Title": "LAHM : Large Annotated Dataset for Multi-Domain and Multilingual Hate Speech Identification",
+        "Paper Link": "https://arxiv.org/abs/2203.09104",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "offensive language detection",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "De-Factify: Workshop on Multimodal Fact Checking and Hate Speech Detection, co-located with AAAI 2022",
+        "Venue Type": "workshop",
+        "Venue Name": "AAAI",
+        "Authors": [
+            "Ankit Yadav",
+            "Shubham Chandel",
+            "Sushant Chatufale",
+            "Anil Bandhakavi"
+        ],
+        "Affiliations": [
+            "Logically.ai"
+        ],
+        "Abstract": "Current research on hate speech analysis is typically oriented towards monolingual and single classification tasks. In this paper, we present a new multilingual hate speech analysis dataset for English, Hindi, Arabic, French, German and Spanish languages for multiple domains across hate speech - Abuse, Racism, Sexism, Religious Hate and Extremism. To the best of our knowledge, this paper is the first to address the problem of identifying various types of hate speech in these five wide domains in these six languages. In this work, we describe how we created the dataset, created annotations at high level and low level for different domains and how we use it to test the current state-of-the-art multilingual and multitask learning approaches. We evaluate our dataset in various monolingual, cross-lingual and machine translation classification settings and compare it against open source English datasets that we aggregated and merged for this task. Then we discuss how this approach can be used to create large scale hate-speech datasets and how to leverage our annotations in order to improve hate speech detection and classification in general."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.0650525,
+        "input_tokens": 13806,
+        "output_tokens": 1873
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2304.00913"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

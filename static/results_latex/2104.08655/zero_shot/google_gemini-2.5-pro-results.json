@@ -1,0 +1,100 @@
+{
+    "metadata": {
+        "Name": "DiS-ReX",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 532499,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 409087,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 456418,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "German",
+                "Volume": 438315,
+                "Unit": "sentences",
+                "Language": "German"
+            }
+        ],
+        "Link": "https://github.com/dair-iitd/DiS-ReX",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "German",
+            "Spanish",
+            "French"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "DiS-ReX is a multilingual dataset for distantly supervised relation extraction (DS-RE) spanning English, German, Spanish, and French. It contains over 1.5 million sentences aligned with DBpedia, featuring 36 relation classes and a 'no relation' class, designed to be a challenging benchmark.",
+        "Volume": 1858012.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Indian Institute of Technology"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "DBpedia"
+        ],
+        "Paper Title": "DiS-ReX: A Multilingual Dataset for Distantly Supervised Relation Extraction",
+        "Paper Link": "https://arxiv.org/abs/2012.08655",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Abhyuday Bhartiya",
+            "Kartikeya Badola",
+            "Mausam"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology"
+        ],
+        "Abstract": "Distant supervision (DS) is a well established technique for creating large-scale datasets for relation extraction (RE) without using human annotations. However, research in DS-RE has been mostly limited to the English language. Constraining RE to a single language inhibits utilization of large amounts of data in other languages which could allow extraction of more diverse facts. Very recently, a dataset for multilingual DS-RE has been released. However, our analysis reveals that the proposed dataset exhibits unrealistic characteristics such as 1) lack of sentences that do not express any relation, and 2) all sentences for a given entity pair expressing exactly one relation. We show that these characteristics lead to a gross overestimation of the model performance. In response, we propose a new dataset, DiS-ReX, which alleviates these issues. Our dataset has more than 1.5 million sentences, spanning across 4 languages with 36 relation classes + 1 no relation (NA) class. We also modify the widely used bag attention models by encoding sentences using mBERT and provide the first benchmark results on multilingual DS-RE. Unlike the competing dataset, we show that our dataset is challenging and leaves enough room for future research to take place in this field."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.0635625,
+        "input_tokens": 11457,
+        "output_tokens": 1802
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2104.08655"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

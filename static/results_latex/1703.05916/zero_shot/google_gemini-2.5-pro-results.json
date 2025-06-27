@@ -1,0 +1,68 @@
+{
+    "metadata": {
+        "Name": "Japanese Word Similarity Dataset",
+        "Link": "https://github.com/tmu-nlp/JapaneseWordSimilarityDataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "jp",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A Japanese word similarity dataset (JWSD) containing 4,851 word pairs with human-annotated similarity scores. The dataset includes various parts of speech (nouns, verbs, adjectives, adverbs) and covers both common and rare words, designed for evaluating Japanese distributed word representations.",
+        "Volume": 4851.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Tokyo Metropolitan University"
+        ],
+        "Derived From": [
+            "Evaluation Dataset of Japanese Lexical Simplification"
+        ],
+        "Paper Title": "Construction of a Japanese Word Similarity Dataset",
+        "Paper Link": "http://www.lrec-conf.org/proceedings/lrec2018/pdf/98.pdf",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Yuya Sakaizawa",
+            "Mamoru Komachi"
+        ],
+        "Affiliations": [
+            "Tokyo Metropolitan University"
+        ],
+        "Abstract": "An evaluation of distributed word representation is generally conducted using a word similarity task and/or a word analogy task. There are many datasets readily available for these tasks in English. However, evaluating distributed representation in languages that do not have such resources (e.g., Japanese) is difficult. Therefore, as a first step toward evaluating distributed representations in Japanese, we constructed a Japanese word similarity dataset. To the best of our knowledge, our dataset is the first resource that can be used to evaluate distributed representations in Japanese. Moreover, our dataset contains various parts of speech and includes rare words in addition to common words."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.03985375,
+        "input_tokens": 8750,
+        "output_tokens": 1303
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/1703.05916"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

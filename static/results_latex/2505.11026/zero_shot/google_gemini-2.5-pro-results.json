@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "StRuCom",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "LLM generated"
+        ],
+        "Description": "StRuCom is a large-scale dataset with 153K examples designed for generating structured Russian code comments. It covers five programming languages (Python, Java, JavaScript, C#, Go) and combines human-written comments from Russian GitHub repositories with synthetically generated ones, validated for structural correctness.",
+        "Volume": 153181.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "MTS AI",
+            "ITMO University",
+            "IITU University"
+        ],
+        "Derived From": [
+            "GitHub"
+        ],
+        "Paper Title": "StRuCom: A Novel Dataset of Structured Code Comments in Russian",
+        "Paper Link": "https://arxiv.org/abs/2409.12186",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Maria Dziuba",
+            "Valentin Malykh"
+        ],
+        "Affiliations": [
+            "MTS AI",
+            "ITMO University",
+            "IITU University"
+        ],
+        "Abstract": "Structured code comments in docstring format are essential for code comprehension and maintenance, but existing machine learning models for their generation perform poorly for Russian compared to English. To bridge this gap, we present StRuCom \u2014 the first large-scale dataset (153K examples) specifically designed for Russian code documentation. Unlike machine-translated English datasets that distort terminology (e.g., technical loanwords vs. literal translations) and docstring structures, StRuCom combines human-written comments from Russian GitHub repositories with synthetically generated ones, ensuring compliance with Python, Java, JavaScript, C#, and Go standards through automated validation. Fine-tuning Qwen2.5-Coder models (0.5B-7B) on StRuCom shows statistically significant improvements of chrf++ and BERTScore over baseline models."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.05149875,
+        "input_tokens": 12344,
+        "output_tokens": 1284
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2505.11026"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

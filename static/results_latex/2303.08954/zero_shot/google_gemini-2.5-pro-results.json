@@ -1,0 +1,132 @@
+{
+    "metadata": {
+        "Name": "PRESTO",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 83584,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "English",
+                "Volume": 95671,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 96164,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "French",
+                "Volume": 95870,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 72107,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 109528,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            }
+        ],
+        "Link": "https://github.com/google-research-datasets/presto",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2022,
+        "Language": [
+            "German",
+            "English",
+            "Spanish",
+            "French",
+            "Hindi",
+            "Japanese"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "PRESTO is a public, multilingual dataset of over 550K contextual conversations between humans and virtual assistants for parsing realistic task-oriented dialogs. It contains challenges like disfluencies, code-switching, and user revisions, and provides structured context (contacts, lists) for each example across six languages.",
+        "Volume": 552924.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Inc.",
+            "University of Rochester",
+            "University of California, Santa Barbara",
+            "Columbia University"
+        ],
+        "Derived From": [],
+        "Paper Title": "PRESTO: A Multilingual Dataset for Parsing Realistic Task-Oriented Dialogs",
+        "Paper Link": "https://arxiv.org/abs/2203.09845",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "topic classification",
+            "named entity recognition",
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Rahul Goel",
+            "Waleed Ammar",
+            "Aditya Gupta",
+            "Siddharth Vashishtha",
+            "Motoki Sano",
+            "Faiz Surani",
+            "Max Chang",
+            "HyunJeong Choe",
+            "David Greene",
+            "Kyle He",
+            "Rattima Nitisaroj",
+            "Anna Trukhina",
+            "Shachi Paul",
+            "Pararth Shah",
+            "Rushin Shah",
+            "Zhou Yu"
+        ],
+        "Affiliations": [
+            "Google Inc.",
+            "University of Rochester",
+            "University of California, Santa Barbara",
+            "Columbia University"
+        ],
+        "Abstract": "Research interest in task-oriented dialogs has increased as systems such as Google Assistant, Alexa and Siri have become ubiquitous in everyday life. However, the impact of academic research in this area has been limited by the lack of datasets that realistically capture the wide array of user pain points. To enable research on some of the more challenging aspects of parsing realistic conversations, we introduce PRESTO, a public dataset of over 550K contextual multilingual conversations between humans and virtual assistants. PRESTO contains a diverse array of challenges that occur in real-world NLU tasks such as disfluencies, code-switching, and revisions. It is the only large-scale human generated conversational parsing dataset that provides structured context such as a user's contacts and lists for each example. Our mT5 model based baselines demonstrate that the conversational phenomenon present in PRESTO are challenging to model, which is further pronounced in a low-resource setup."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.05880875,
+        "input_tokens": 16162,
+        "output_tokens": 1585
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2303.08954"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

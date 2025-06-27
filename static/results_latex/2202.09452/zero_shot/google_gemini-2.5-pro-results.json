@@ -1,0 +1,104 @@
+{
+    "metadata": {
+        "Name": "FREEMmax",
+        "Link": "https://zenodo.org/record/6038242",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "books",
+            "news articles",
+            "web pages",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "FREEMmax is a large corpus of Early Modern French (16th-18th centuries), with some texts extending to the 1920s. It aggregates texts from various sources, including institutional databases, research projects, and web scraping, covering diverse genres like literature, correspondence, and plays.",
+        "Volume": 185643482.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Inria",
+            "Sorbonne Universite",
+            "Universite de Geneve",
+            "LIGM",
+            "Universite Gustage Eiffel",
+            "CNRS"
+        ],
+        "Derived From": [
+            "FRANTEXT",
+            "Electronic Enlightenment",
+            "Antonomaz project",
+            "Acta Pacis Westphalicae",
+            "Bibliotheques virtuelles humanistes",
+            "Corpus electronique de la premiere modernite",
+            "Conde project",
+            "Corpus Descartes",
+            "Bibliotheque dramatique",
+            "Fabula numerica project",
+            "Fonds Boissy",
+            "Mercure Galant project",
+            "Rousseau online project",
+            "Sermo project",
+            "The\u00b4a\u02c6tre classique project",
+            "Wikisource",
+            "Gallica"
+        ],
+        "Paper Title": "From FREEM to D\u2019AlemBERT: a Large Corpus and a Language Model for Early Modern French",
+        "Paper Link": "https://arxiv.org/abs/2202.09452",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "part of speech tagging",
+            "named entity recognition",
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Simon Gabay",
+            "Pedro Ortiz Suarez",
+            "Alexandre Bartz",
+            "Alix Chague",
+            "Rachel Bawden",
+            "Philippe Gambette",
+            "Beno\u00eet Sagot"
+        ],
+        "Affiliations": [
+            "Inria",
+            "Sorbonne Universite",
+            "Universite de Geneve",
+            "LIGM",
+            "Universite Gustage Eiffel",
+            "CNRS"
+        ],
+        "Abstract": "Language models for historical states of language are becoming increasingly important to allow the optimal digitisation and analysis of old textual sources. Because these historical states are at the same time more complex to process and more scarce in the corpora available, specific efforts are necessary to train natural language processing (NLP) tools adapted to the data. In this paper, we present our efforts to develop NLP tools for Early Modern French (historical French from the 16th to the 18th centuries). We present the FREEMmax corpus of Early Modern French and D\u2019AlemBERT, a RoBERTa-based language model trained on FREEMmax. We evaluate the usefulness of D\u2019AlemBERT by fine-tuning it on a part-of-speech tagging task, outperforming previous work on the test set. Importantly, we find evidence for the transfer learning capacity of the language model, since its performance on lesser-resourced time periods appears to have been boosted by the more resourced ones. We release D\u2019AlemBERT and the open-sourced subpart of the FREEMmax corpus."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.06998125,
+        "input_tokens": 14278,
+        "output_tokens": 2190
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2202.09452"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

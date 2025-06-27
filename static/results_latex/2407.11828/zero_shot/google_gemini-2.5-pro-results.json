@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Vibravox",
+        "Link": "https://huggingface.co/datasets/Cnam-LMSSC/vibravox",
+        "HF Link": "https://huggingface.co/datasets/Cnam-LMSSC/vibravox",
+        "License": "CC BY 4.0",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Vibravox is a GDPR-compliant dataset containing audio recordings of French speech using five different body-conduction audio sensors and a reference airborne microphone. It includes 45 hours of speech per sensor from 188 participants under various acoustic conditions, with linguistic and phonetic transcriptions.",
+        "Volume": 45.62,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Laboratoire de Me\u00b4canique des Structures et des Syste`mes Couple\u00b4s, Conservatoire national des arts et me\u00b4tiers, HESAM Universite\u00b4",
+            "French-German Research Institute of Saint-Louis (ISL)"
+        ],
+        "Derived From": [
+            "Common Voice"
+        ],
+        "Paper Title": "Vibravox: A Dataset of French Speech Captured with Body-conduction Audio Sensors",
+        "Paper Link": "https://arxiv.org/abs/2407.11828",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "speech recognition",
+            "speaker identification"
+        ],
+        "Venue Title": "Speech Communication",
+        "Venue Type": "journal",
+        "Venue Name": "Elsevier Speech Communication",
+        "Authors": [
+            "Julien Hauret",
+            "Malo Olivier",
+            "Thomas Joubaud",
+            "Christophe Langrenne",
+            "Sarah Poire\u00b4e",
+            "Ve\u00b4ronique Zimpfer",
+            "E\u00b4ric Bavu"
+        ],
+        "Affiliations": [
+            "Laboratoire de Me\u00b4canique des Structures et des Syste`mes Couple\u00b4s, Conservatoire national des arts et me\u00b4tiers, HESAM Universite\u00b4, 75003 Paris, France",
+            "Department of Acoustics and Soldier Protection, French-German Research Institute of Saint-Louis (ISL)"
+        ],
+        "Abstract": "Vibravox is a dataset compliant with the General Data Protection Regulation (GDPR) containing audio recordings using five different body-conduction audio sensors: two in-ear microphones, two bone conduction vibration pickups, and a laryngophone. The dataset also includes audio data from an airborne microphone used as a reference. The Vibravox corpus contains 45 hours per sensor of speech samples and physiological sounds recorded by 188 participants under different acoustic conditions imposed by a high order ambisonics 3D spatializer. Annotations about the recording conditions and linguistic transcriptions are also included in the corpus. We conducted a series of experiments on various speech-related tasks, including speech recognition, speech enhancement, and speaker verification. These experiments were carried out using state-of-the-art models to evaluate and compare their performances on signals captured by the different audio sensors offered by the Vibravox dataset, with the aim of gaining a better grasp of their individual characteristics."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.07135125,
+        "input_tokens": 30130,
+        "output_tokens": 1345
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2407.11828"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

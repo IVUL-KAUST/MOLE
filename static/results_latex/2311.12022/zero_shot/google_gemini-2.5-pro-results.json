@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "GPQA",
+        "Link": "https://github.com/idavidrein/gpqa/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry. The questions are designed to be difficult for both state-of-the-art AI systems and skilled non-experts, even with access to the web.",
+        "Volume": 448.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "New York University",
+            "Cohere",
+            "Anthropic, PBC"
+        ],
+        "Derived From": [],
+        "Paper Title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2311.12022",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "NeurIPS 2022",
+        "Venue Type": "preprint",
+        "Venue Name": "Conference on Neural Information Processing Systems",
+        "Authors": [
+            "David Rein",
+            "Betty Li Hou",
+            "Asa Cooper Stickland",
+            "Jackson Petty",
+            "Richard Yuanzhe Pang",
+            "Julien Dirani",
+            "Julian Michael",
+            "Samuel R. Bowman"
+        ],
+        "Affiliations": [
+            "New York University",
+            "Cohere",
+            "Anthropic, PBC"
+        ],
+        "Abstract": "We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry. We ensure that the questions are high-quality and extremely difficult: experts who have or are pursuing PhDs in the corresponding domains reach 65% accuracy (74% when discounting clear mistakes the experts identified in retrospect), while highly skilled non-expert validators only reach 34% accuracy, despite spending on average over 30 minutes with unrestricted access to the web (i.e., the questions are 'Google-proof'). The questions are also difficult for state-of-the-art AI systems, with our strongest GPT-4\u2013based baseline achieving 39% accuracy. If we are to use future AI systems to help us answer very hard questions\u2014for example, when developing new scientific knowledge\u2014we need to develop scalable oversight methods that enable humans to supervise their outputs, which may be difficult even if the supervisors are themselves skilled and knowledgeable. The difficulty of GPQA both for skilled non-experts and frontier AI systems should enable realistic scalable oversight experiments, which we hope can help devise ways for human experts to reliably get truthful information from AI systems that surpass human capabilities."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.0908375,
+        "input_tokens": 27242,
+        "output_tokens": 1765
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2311.12022"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

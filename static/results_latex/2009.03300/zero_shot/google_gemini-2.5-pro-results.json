@@ -1,0 +1,425 @@
+{
+    "metadata": {
+        "Name": "Massive Multitask Language Understanding",
+        "Subsets": [
+            {
+                "Name": "Abstract Algebra",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Anatomy",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Astronomy",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Business Ethics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Clinical Knowledge",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "College Biology",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "College Chemistry",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "College Computer Science",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "College Mathematics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "College Medicine",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "College Physics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Computer Security",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Conceptual Physics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Econometrics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Electrical Engineering",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Elementary Mathematics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Formal Logic",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Global Facts",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Biology",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Chemistry",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Computer Science",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School European History",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Geography",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Gov't and Politics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Macroeconomics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Mathematics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Microeconomics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Physics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Psychology",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School Statistics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School US History",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "High School World History",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Human Aging",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Human Sexuality",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "International Law",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Jurisprudence",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Logical Fallacies",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Machine Learning",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Management",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Marketing",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Medical Genetics",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Miscellaneous",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Moral Disputes",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Moral Scenarios",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Nutrition",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Philosophy",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Prehistory",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Professional Accounting",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Professional Law",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Professional Medicine",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Professional Psychology",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Public Relations",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Security Studies",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Sociology",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "US Foreign Policy",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Virology",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "World Religions",
+                "Volume": 279,
+                "Unit": "documents",
+                "Language": "English"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/cais/mmlu",
+        "HF Link": "https://huggingface.co/datasets/cais/mmlu",
+        "License": "MIT License",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "French"
+        ],
+        "Domain": [
+            "books",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A massive multitask test consisting of 57 tasks of multiple-choice questions covering subjects in STEM, humanities, social sciences, and more. It is designed to measure a model's world knowledge and problem-solving ability in zero-shot and few-shot settings.",
+        "Volume": 15908.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "UC Berkeley",
+            "Columbia University",
+            "UChicago",
+            "UIUC"
+        ],
+        "Derived From": [
+            "ETHICS dataset"
+        ],
+        "Paper Title": "MEASURING MASSIVE MULTITASK LANGUAGE UNDERSTANDING",
+        "Paper Link": "https://arxiv.org/abs/2009.03300",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "International Conference on Learning Representations",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [
+            "Dan Hendrycks",
+            "Collin Burns",
+            "Steven Basart",
+            "Andy Zou",
+            "Mantas Mazeika",
+            "Dawn Song",
+            "Jacob Steinhardt"
+        ],
+        "Affiliations": [
+            "UC Berkeley",
+            "Columbia University",
+            "UChicago",
+            "UIUC"
+        ],
+        "Abstract": "We propose a new test to measure a text model\u2019s multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model\u2019s academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.1049675,
+        "input_tokens": 24359,
+        "output_tokens": 3931
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2009.03300"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

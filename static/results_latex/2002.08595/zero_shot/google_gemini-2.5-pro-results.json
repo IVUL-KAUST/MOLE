@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "KaoKore",
+        "Link": "https://github.com/rois-codh/kaokore",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": "jp",
+        "Domain": [
+            "public datasets",
+            "books"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "KaoKore is a dataset of 5,552 face images extracted from pre-modern Japanese artwork from the 16th to 17th centuries. It is derived from the 'Collection of Facial Expressions' dataset and provides labels for gender and social status, along with official train/dev/test splits for classification and generative tasks.",
+        "Volume": 5552.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Brain",
+            "ROIS-DS Center for Open Data in the Humanities",
+            "NII",
+            "University of Cambridge",
+            "MILA",
+            "Universit'e de Montr'eal"
+        ],
+        "Derived From": [
+            "Collection of Facial Expressions"
+        ],
+        "Paper Title": "KaoKore: A Pre-modern Japanese Art Facial Expression Dataset",
+        "Paper Link": "https://computationalcreativity.net/iccc20/wp-content/uploads/2020/09/ICCC20_paper_10.pdf",
+        "Script": "Kanji",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "gender identification",
+            "other"
+        ],
+        "Venue Title": "Proceedings of the 11th International Conference on Computational Creativity",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Computational Creativity",
+        "Authors": [
+            "Yingtao Tian",
+            "Chikahiko Suzuki",
+            "Tarin Clanuwat",
+            "Mikel Bober-Irizar",
+            "Alex Lamb",
+            "Asanobu Kitamoto"
+        ],
+        "Affiliations": [
+            "Google Brain",
+            "ROIS-DS Center for Open Data in the Humanities",
+            "NII",
+            "University of Cambridge",
+            "MILA",
+            "Universit'e de Montr'eal"
+        ],
+        "Abstract": "From classifying handwritten digits to generating strings of text, the datasets which have received long-time focus from the machine learning community vary greatly in their subject matter. This has motivated a renewed interest in building datasets which are socially and culturally relevant, so that algorithmic research may have a more direct and immediate impact on society. One such area is in history and the humanities, where better and relevant machine learning models can accelerate research across various fields. To this end, newly released benchmarks ~cite{clanuwat2018deep} and models~cite{clanuwat2019kuronet} have been proposed for transcribing historical Japanese cursive writing, yet for the field as a whole using machine learning for historical Japanese artworks still remains largely uncharted. To bridge this gap, in this work we propose a new dataset KaoKore which consists of faces extracted from pre-modern Japanese artwork. We demonstrate its value as both a dataset for image classification as well as a creative and artistic dataset, which we explore using generative models."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.05546875,
+        "input_tokens": 10089,
+        "output_tokens": 1613
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2002.08595"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

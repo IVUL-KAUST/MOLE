@@ -1,0 +1,66 @@
+{
+    "metadata": {
+        "Name": "Russian Jeopardy! Data Set",
+        "Link": "https://github.com/evrog/Russian-QA-Jeopardy",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A dataset of 29,375 Russian quiz-show questions of the Jeopardy! type, collected from the ChGK database. The questions are fact-oriented and suitable for open-domain question answering tasks.",
+        "Volume": 29375.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Tyumen State University"
+        ],
+        "Derived From": [
+            "ChGK database"
+        ],
+        "Paper Title": "Russian Jeopardy! Data Set for Question-Answering Systems",
+        "Paper Link": "https://arxiv.org/abs/2205.12032",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "ArXiv",
+        "Authors": [
+            "Elena Mikhalkova",
+            "Alexander Khlyupin"
+        ],
+        "Affiliations": [
+            "Tyumen State University"
+        ],
+        "Abstract": "Question answering (QA) is one of the most common NLP tasks that relates to named entity recognition, fact extraction, semantic search and some other fields. In industry, it is much valued in chat-bots and corporate information systems. It is also a challenging task that attracted the attention of a very general audience at the quiz show Jeopardy! In this article we describe a Jeopardy!-like Russian QA dataset collected from the official Russian quiz database Chgk che-ge-\u2018ka:. The data set includes 379,284 quiz-like questions with 29,375 from the Russian analogue of Jeopardy! \u2013 'Own Game'. We observe its linguistic features and the related QA-task. We conclude about perspectives of a QA challenge based on the collected dataset."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.0443325,
+        "input_tokens": 12038,
+        "output_tokens": 1205
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2112.02325"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

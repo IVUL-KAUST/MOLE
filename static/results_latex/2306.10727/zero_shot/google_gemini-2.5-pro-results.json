@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "Jamp",
+        "Link": "https://github.com/tomo-ut/temporalNLI_dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "Jamp is a Japanese Natural Language Inference (NLI) benchmark focused on temporal inference. It was created using a template-based approach, generating diverse examples by combining templates derived from formal semantics test suites with a Japanese case frame dictionary, allowing for controlled distribution of inference patterns.",
+        "Volume": 10094.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo",
+            "The University of Texas at Austin"
+        ],
+        "Derived From": [
+            "JSeM",
+            "Japanese case frame dictionary"
+        ],
+        "Paper Title": "Jamp: Controlled Japanese Temporal Inference Dataset for Evaluating Generalization Capacity of Language Models",
+        "Paper Link": "https://aclanthology.org/2023.acl-long.595",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference"
+        ],
+        "Venue Title": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics (ACL)",
+        "Authors": [
+            "Tomoki Sugimoto",
+            "Yasumasa Onoe",
+            "Hitomi Yanaka"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "The University of Texas at Austin"
+        ],
+        "Abstract": "Natural Language Inference (NLI) tasks involving temporal inference remain challenging for pre-trained language models (LMs). Although various datasets have been created for this task, they primarily focus on English and do not address the need for resources in other languages. It is unclear whether current LMs realize the generalization capacity for temporal inference across languages. In this paper, we present Jamp, a Japanese NLI benchmark focused on temporal inference. Our dataset includes a range of temporal inference patterns, which enables us to conduct fine-grained analysis. To begin the data annotation process, we create diverse inference templates based on the formal semantics test suites. We then automatically generate diverse NLI examples by using the Japanese case frame dictionary and well-designed templates while controlling the distribution of inference patterns and gold labels. We evaluate the generalization capacities of monolingual/multilingual LMs by splitting our dataset based on tense fragments (i.e., temporal inference patterns). Our findings demonstrate that LMs struggle with specific linguistic phenomena, such as habituality, indicating that there is potential for the development of more effective NLI models across languages."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.065285,
+        "input_tokens": 21971,
+        "output_tokens": 1631
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2306.10727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

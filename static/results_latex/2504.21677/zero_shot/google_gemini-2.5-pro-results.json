@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "20min-XD",
+        "Link": "https://huggingface.co/datasets/ZurichNLP/20min-XD",
+        "HF Link": "https://huggingface.co/datasets/ZurichNLP/20min-XD",
+        "License": "custom",
+        "Year": 2024,
+        "Language": "multilingual",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A French-German, document-level comparable corpus of news articles from the Swiss online news outlet 20 Minuten/20 minutes. It contains 15,000 article pairs from 2015-2024, automatically aligned based on semantic similarity, exhibiting a broad spectrum of cross-lingual similarity.",
+        "Volume": 15000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Zurich",
+            "20 Minuten (TX Group)"
+        ],
+        "Derived From": [],
+        "Paper Title": "20min-XD: A Comparable Corpus of Swiss News Articles",
+        "Paper Link": "https://aclanthology.org/2024.findings-acl.323",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "cross-lingual information retrieval",
+            "other"
+        ],
+        "Venue Title": "Findings of the Association for Computational Linguistics: ACL 2024",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Michelle Wastl",
+            "Jannis Vamvas",
+            "Selena Calleri",
+            "Rico Sennrich"
+        ],
+        "Affiliations": [
+            "Department of Computational Linguistics, University of Zurich",
+            "20 Minuten (TX Group)"
+        ],
+        "Abstract": "We present 20min-XD (20 Minuten cross-lingual document-level), a French-German, document-level comparable corpus of news articles, sourced from the Swiss online news outlet 20 Minuten/20 minutes. Our dataset comprises around 15,000 article pairs spanning 2015 to 2024, automatically aligned based on semantic similarity. We detail the data collection process and alignment methodology. Furthermore, we provide a qualitative and quantitative analysis of the corpus. The resulting dataset exhibits a broad spectrum of cross-lingual similarity, ranging from near-translations to loosely related articles, making it valuable for various NLP applications and broad linguistically motivated studies. We publicly release the dataset in document- and sentence-aligned versions and code for the described experiments."
+    },
+    "validation": {},
+    "cost": {
+        "cost": 0.04808,
+        "input_tokens": 12795,
+        "output_tokens": 1407
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": null,
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/pdf/2504.21677"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
