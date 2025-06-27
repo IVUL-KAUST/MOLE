@@ -66,6 +66,9 @@ TEST_DATASETS_IDS_JP = [
     "2201.08038",  # japanese-gec
     "2403.17319",  # JMultiWOZ
     "2309.12676",  # JCoLA
+    "2107.13998",  # JAFFE
+    "2403.19259",  # J-CRe3
+
 ]
 
 TEST_DATASETS_IDS_EN = [
@@ -89,6 +92,7 @@ TEST_DATASETS_IDS_EN = [
     "1707.06209",  # sciq
     "1704.04683",  # race
     "1809.09600",  # hotpotqa
+    "2005.00547",  # goemotions
 ]
 
 TEST_DATASETS_IDS_FR = [
@@ -109,6 +113,10 @@ TEST_DATASETS_IDS_FR = [
     "2202.09452",  # FREEM
     "1809.00388",  # MTNT
     "2406.17566",  # FrenchToxicityPrompts
+    "2403.16099",  # obsinfox
+    "2407.11828",  # vigravox
+    "2405.00821",  
+    "2204.05208",  # FIJO
 ]
 
 TEST_DATASETS_IDS_RU = [
@@ -131,6 +139,8 @@ TEST_DATASETS_IDS_RU = [
     "2006.11063",  # summarization
     "1912.09723",  # SberQuAD
     "2502.07455",  # RusCode
+    "2501.05841",  # RFSD
+    "2505.04851",  # CRAFT
 ]
 
 TEST_DATASETS_IDS_MULTI = [
@@ -154,6 +164,7 @@ TEST_DATASETS_IDS_MULTI = [
     "2004.14900",  # MLSUM
     "2003.08385",  # X-stance
     "2407.12336",  # M2DS
+    "2010.09381",  # RELX
 ]
 
 TEST_DATASETS_IDS_MOD = [
