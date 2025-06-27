@@ -114,12 +114,7 @@
             "Indonesian",
             "Italian",
             "Polish",
-            "Portuguese",
-            "Tamil",
-            "Estonian",
-            "Haitian Creole",
-            "Eastern Apurímac Quechua",
-            "Sinhala"
+            "Portuguese"
         ],
         "answer_type": "List[str]",
         "validation_group": "DIVERSITY",
@@ -381,6 +376,8 @@
             "optical character recognition",
             "fill-in-the blank",
             "relation extraction",
+            "stance detection",
+            "emotion classification",
             "other"
         ],
         "answer_type": "List[str]",

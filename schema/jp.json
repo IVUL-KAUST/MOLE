@@ -364,6 +364,7 @@
             "fill-in-the blank",
             "relation extraction",
             "stance detection",
+            "emotion classification",
             "other"
         ],
         "answer_type": "List[str]",
