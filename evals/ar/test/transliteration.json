@@ -32,7 +32,7 @@
     "Test Split": true,
     "Tasks": [
         "transliteration",
-        "translation"
+        "machine translation"
     ],
     "Venue Title": "arXiv",
     

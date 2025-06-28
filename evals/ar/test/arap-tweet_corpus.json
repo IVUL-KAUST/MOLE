@@ -34,8 +34,7 @@
     "Test Split": false,
     "Tasks": [
         "dialect identification",
-        "gender identification",
-        "age identification"
+        "gender identification"
     ],
     "Venue Title": "arXiv",
     

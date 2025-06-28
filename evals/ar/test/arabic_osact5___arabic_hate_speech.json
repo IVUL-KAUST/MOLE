@@ -36,8 +36,7 @@
     "Cost": "",
     "Test Split": true,
     "Tasks": [
-        "offensive language detection",
-        "hate speech detection"
+        "offensive language detection"
     ],
     "Venue Title": "arXiv",
     

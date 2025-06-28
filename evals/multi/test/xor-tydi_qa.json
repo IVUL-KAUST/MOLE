@@ -38,8 +38,7 @@
     "Test Split": true,
     "Tasks": [
         "cross-lingual information retrieval",
-        "question answering",
-        "open-retrieval question answering"
+        "question answering"
     ],
     "Venue Title": "arXiv",
     

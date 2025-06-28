@@ -40,7 +40,6 @@
     "Cost": "",
     "Test Split": true,
     "Tasks": [
-        "cross-lingual extractive question answering",
         "question answering"
     ],
     "Venue Title": "arXiv",

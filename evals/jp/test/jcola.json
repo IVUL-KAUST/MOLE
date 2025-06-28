@@ -28,8 +28,8 @@
     "Access": "Free",
     "Cost": "",
     "Test Split": true,
-    "Tasks": [
-        "Linguistic acceptability"
+    "Tasks": [  
+        "linguistic acceptability"
     ],
     "Venue Title": "arXiv",
     "Venue Type": "preprint",

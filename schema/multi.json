@@ -114,7 +114,12 @@
             "Indonesian",
             "Italian",
             "Polish",
-            "Portuguese"
+            "Portuguese",
+            "Estonian",
+            "Haitian Creole",
+            "Eastern Apur\u00edmac Quechua",
+            "Tamil",
+            "Sinhala"
         ],
         "answer_type": "List[str]",
         "validation_group": "DIVERSITY",
@@ -365,7 +370,7 @@
             "meter classification",
             "natural language inference",
             "instruction tuning",
-            "Linguistic acceptability",
+            "linguistic acceptability",
             "commonsense reasoning",
             "word prediction",
             "image captioning",
@@ -378,6 +383,10 @@
             "relation extraction",
             "stance detection",
             "emotion classification",
+            "semantic parsing",
+            "text to SQL",
+            "lexicon analysis",
+            "embedding evaluation",
             "other"
         ],
         "answer_type": "List[str]",
