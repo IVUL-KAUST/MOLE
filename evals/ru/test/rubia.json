@@ -2,7 +2,7 @@
     "Name": "RuBia",
     "Link": "https://github.com/vergrig/RuBia-Dataset",
     "HF Link": "",
-    "License": "CC BY 4.0",
+    "License": "CC BY-SA 4.0",
     "Year": 2024,
     "Language": "ru",
     "Domain": [
@@ -18,11 +18,7 @@
     "Unit": "sentences",
     "Ethical Risks": "High",
     "Provider": [
-        "Queen\u2019s University",
-        "Higher School of Economics",
-        "Wildberries",
-        "Linguistic Convergence Laboratory",
-        "Toloka AI"
+        "HSE University"
     ],
     "Derived From": [],
     "Paper Title": "RuBia: A Russian Language Bias Detection Dataset",

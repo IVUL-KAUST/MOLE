@@ -1,6 +1,6 @@
 {
     "Name": "RusTitW",
-    "Link": "https://www.kaggle.com/datasets/hardtype/rustitw-russian-language-visual-text-recognition",
+    "Link": "https://github.com/markovivl/SynthText",
     "HF Link": "",
     "License": "Apache-2.0",
     "Year": 2023,
@@ -24,7 +24,7 @@
     "Paper Title": "RusTitW: Russian Language Text Dataset for Visual Text in-the-Wild Recognition",
     "Paper Link": "https://arxiv.org/pdf/2303.16531",
     "Tokenized": false,
-    "Host": "kaggle",
+    "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
     "Test Split": true,

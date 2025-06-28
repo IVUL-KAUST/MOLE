@@ -6,7 +6,8 @@
     "Year": 2021,
     "Language": "ru",
     "Domain": [
-        "news articles"
+        "news articles",
+        "wikipedia"
     ],
     "Form": "text",
     "Collection Style": [
@@ -18,15 +19,7 @@
     "Unit": "tokens",
     "Ethical Risks": "Low",
     "Provider": [
-        "Lomonosov Moscow State University",
-        "HSE University",
-        "Huawei  Noah\u2019s Ark lab",
-        "Novosibirsk State University",
-        "Ural Federal University",
-        "Innopolis University",
-        "Kazan Federal University",
-        "Sber AI",
-        "Wiseyak"
+        "HSE University"
     ],
     "Derived From": [],
     "Paper Title": "NEREL: A Russian Dataset with Nested Named Entities, Relations and Events",
@@ -56,15 +49,15 @@
         "Elena Tutubalina"
     ],
     "Affiliations": [
-        "Lomonosov Moscow State University, Russia",
-        "HSE University, Russia",
-        "Huawei  Noah\u2019s Ark lab, Russia",
-        "Novosibirsk State University, Russia",
-        "Ural Federal University, Russia",
-        "Innopolis University, Russia",
-        "Kazan Federal University, Russia",
-        "Sber AI, Russia",
-        "Wiseyak, United States"
+        "Lomonosov Moscow State University",
+        "HSE University",
+        "Huawei Noah's Ark lab",
+        "Novosibirsk State University",
+        "Ural Federal University",
+        "Innopolis University",
+        "Kazan Federal University",
+        "Sber AI",
+        "Wiseyak"
     ],
     "Abstract": "In this paper, we present NEREL, a  Russian dataset for named entity recognition and relation extraction. NEREL is significantly larger than existing Russian datasets: to date it contains 56K annotated named entities and 39K annotated  relations. Its important difference from previous datasets is annotation of nested named entities, as well as relations within nested entities and at the discourse level. NEREL can facilitate development of novel models that can extract relations between nested named entities, as well as relations on both sentence and document levels.   NEREL also contains the annotation of events involving named entities and their roles in the events. The NEREL collection is available via https://github.com/nerel-ds/NEREL.",
     

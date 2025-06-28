@@ -1,6 +1,6 @@
 {
     "Name": "RuBQ",
-    "Link": "http://doi.org/10.5281/zenodo.3835913",
+    "Link": "https://github.com/vladislavneon/RuBQ",
     "HF Link": "https://huggingface.co/datasets/d0rj/RuBQ_2.0-paragraphs",
     "License": "CC BY-SA 4.0",
     "Year": 2020,
@@ -29,12 +29,11 @@
     "Paper Title": "RuBQ: A Russian Dataset for Question Answering over Wikidata",
     "Paper Link": "https://arxiv.org/pdf/2005.10659",
     "Tokenized": false,
-    "Host": "zenodo",
+    "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
     "Test Split": true,
     "Tasks": [
-        "knowledge base question answering",
         "named entity recognition",
         "machine translation"
     ],
@@ -57,7 +56,7 @@
         "Name": 1,
         "Link": 1,
         "HF Link": 0,
-        "License": 0,
+        "License": 1,
         "Year": 1,
         "Language": 1,
         "Domain": 1,

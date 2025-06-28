@@ -19,8 +19,7 @@
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        "National Research University Higher School of Economics",
-        "Sberbank"
+        "Pragmatics Lab"
     ],
     "Derived From": [],
     "Paper Title": "DaNetQA: a yes/no Question Answering Dataset for the Russian Language",
@@ -31,7 +30,7 @@
     "Cost": "",
     "Test Split": true,
     "Tasks": [
-        "yes/no question answering"
+        "question answering"
     ],
     "Venue Title": "arXiv",
     
@@ -65,7 +64,7 @@
         "Volume": 1,
         "Unit": 1,
         "Ethical Risks": 1,
-        "Provider": 1,
+        "Provider": 0,
         "Derived From": 1,
         "Paper Title": 1,
         "Paper Link": 1,

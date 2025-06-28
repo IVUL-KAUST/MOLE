@@ -17,11 +17,7 @@
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        "SberAI",
-        "MIPT",
-        "ITMO University",
-        "SberDevices",
-        "AIRI"
+        "SberAI"
     ],
     "Derived From": [],
     "Paper Title": "RusCode: Russian Cultural Code Benchmark for Text-to-Image Generation",

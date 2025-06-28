@@ -18,12 +18,9 @@
     "Description": "A dataset of 200,000 image-text pairs focusing on the Russian cultural code, designed to enhance text-to-image models' understanding of Russian, Soviet, and post-Soviet culture. It was created by crawling the web, followed by manual filtering and detailed human captioning to ensure quality and cultural relevance.",
     "Volume": 200000.0,
     "Unit": "images",
-    "Ethical Risks": "Medium",
+    "Ethical Risks": "Low",
     "Provider": [
-        "SberAI",
-        "Moscow Institute of Physics and Technology (MIPT)",
-        "Information Technologies, Mechanics and Optics University (ITMO University)",
-        "Artificial Intelligence Research Institute (AIRI)"
+        "SberAI"
     ],
     "Derived From": [],
     "Paper Title": "CRAFT: CULTURAL RUSSIAN-ORIENTED DATASET ADAPTATION FOR FOCUSED TEXT-TO-IMAGE GENERATION",

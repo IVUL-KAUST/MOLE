@@ -19,11 +19,10 @@
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        "National Research University Higher School of Economics",
-        "University of Oslo"
+        "HSE University"
     ],
     "Derived From": [
-        "Russian National Corpus",
+        "RNC",
         "RuWordNet"
     ],
     "Paper Title": "RuDSI: graph-based word sense induction dataset for Russian",
