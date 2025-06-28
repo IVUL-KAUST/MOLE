@@ -1,6 +1,6 @@
 {
     "Name": "20min-XD",
-    "Link": "https://huggingface.co/datasets/ZurichNLP/20min-XD",
+    "Link": "https://github.com/ZurichNLP/20min-XD",
     "HF Link": "https://huggingface.co/datasets/ZurichNLP/20min-XD",
     "License": "custom",
     "Year": 2025,
@@ -18,13 +18,14 @@
     "Unit": "documents",
     "Ethical Risks": "Low",
     "Provider": [
-        "TX Group"
+        " University of Zurich",
+        "20 Minuten (TX Group)"
     ],
     "Derived From": [],
     "Paper Title": "20min-XD: A Comparable Corpus of Swiss News Articles",
     "Paper Link": "https://arxiv.org/pdf/2504.21677",
     "Tokenized": false,
-    "Host": "HuggingFace",
+    "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
     "Test Split": false,

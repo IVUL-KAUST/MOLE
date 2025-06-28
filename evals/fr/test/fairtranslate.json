@@ -18,7 +18,7 @@
     "Unit": "sentences",
     "Ethical Risks": "Medium",
     "Provider": [
-        "IRT Saint Exupery"
+        "IRT Saint Exupéry"
     ],
     "Derived From": [],
     "Paper Title": "FairTranslate: An English-French Dataset for Gender Bias Evaluation in Machine Translation by Overcoming Gender Binarity",

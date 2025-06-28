@@ -18,7 +18,8 @@
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [
-        "Alloprof"
+        "Alloprof",
+        "Mila"
     ],
     "Derived From": [],
     "Paper Title": "Alloprof: a French question-answer education dataset and its use in an information retrieval case study",

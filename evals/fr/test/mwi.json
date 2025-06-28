@@ -19,14 +19,12 @@
     "Ethical Risks": "Low",
     "Provider": [
         "Universit\u00e9 Paris-Saclay",
-        "CNRS",
-        "LISN",
         "Avignon Universit\u00e9",
         "LIA",
         "QWANT"
     ],
     "Derived From": [
-        "MEDIA"
+        "MEDIA-EVALDA"
     ],
     "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
     "Paper Link": "https://arxiv.org/pdf/2403.19727",

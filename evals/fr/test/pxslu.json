@@ -18,11 +18,7 @@
     "Unit": "hours",
     "Ethical Risks": "Medium",
     "Provider": [
-        "Univ. Grenoble Alpes",
-        "CNRS",
-        "Inria",
-        "CHU Grenoble Alpes",
-        "Calystene SA"
+        "Univ. Grenoble Alpes"
     ],
     "Derived From": [],
     "Paper Title": "A Spoken Drug Prescription Dataset in French for Spoken Language Understanding",
@@ -48,7 +44,7 @@
         "Ga\u00ebtan Gavazzi"
     ],
     "Affiliations": [
-        "Univ. Grenoble Alpes, CNRS, Inria",
+        "Univ. Grenoble Alpes",
         "CHU Grenoble Alpes",
         "Calystene SA",
         "Clinique de m\u00e9decine g\u00e9riatrique"

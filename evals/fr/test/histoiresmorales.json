@@ -1,6 +1,6 @@
 {
     "Name": "HISTOIRESMORALES",
-    "Link": "https://hf.co/datasets/LabHC/histoires_morales",
+    "Link": "https://github.com/upunaprosk/histoires-morales",
     "HF Link": "https://hf.co/datasets/LabHC/histoires_morales",
     "License": "MIT License",
     "Year": 2025,
@@ -27,7 +27,7 @@
     "Paper Title": "HISTOIRESMORALES: A French Dataset for Assessing Moral Alignment",
     "Paper Link": "https://arxiv.org/pdf/2501.17117",
     "Tokenized": false,
-    "Host": "HuggingFace",
+    "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
     "Test Split": true,

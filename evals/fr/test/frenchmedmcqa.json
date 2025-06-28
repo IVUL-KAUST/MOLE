@@ -18,7 +18,8 @@
     "Ethical Risks": "Medium",
     "Provider": [
         "Avignon University",
-        "Nantes University"
+        "Nantes University",
+        "Zenidoc"
     ],
     "Derived From": [],
     "Paper Title": "FrenchMedMCQA: A French Multiple-Choice Question Answering Dataset for Medical domain",
