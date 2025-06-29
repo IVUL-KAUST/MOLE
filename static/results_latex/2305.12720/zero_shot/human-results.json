@@ -1,0 +1,129 @@
+{
+    "metadata": {
+        "Name": "llm-japanese-dataset v0",
+        "Link": "https://huggingface.co/datasets/izumi-lab/llm-japanese-dataset",
+        "HF Link": "https://huggingface.co/datasets/izumi-lab/llm-japanese-dataset",
+        "License": "CC BY-SA 4.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Domain": [
+            "public datasets",
+            "wikipedia",
+            "news articles",
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "LLM generated"
+        ],
+        "Description": "A Japanese chat dataset of approximately 8.4 million records, created for tuning large language models. It is composed of various sub-datasets covering tasks like translation, knowledge-based Q&A, summarization, and more, derived from sources like Wikipedia, WordNet, and other publicly available corpora.",
+        "Volume": 8393726.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo"
+        ],
+        "Derived From": [
+            "Coursera Corpus Mining and Multistage Fine-Tuning for Improving Lectures Translation",
+            "ParaNatCom",
+            "Tab-delimited Bilingual Sentence Pairs",
+            "Asian Language Treebank (ALT) Project",
+            "Tanaka Corpus",
+            "Japanese-English Subtitle Corpus",
+            "Japanese WordNet",
+            "Easy Japanese Corpus",
+            "Wikipedia",
+            "AIO Official Distribution Dataset",
+            "Japanese Movie Recommendation Dialogue (JMRD)",
+            "JCommonsenseQA",
+            "Aozorra Paperback",
+            "Wikinews",
+            "JSQuAD",
+            "Japanese-Alpaca-LoRA",
+            "databricks-dolly-15k-ja"
+        ],
+        "Paper Title": "llm-japanese-dataset v0: Construction of Japanese Chat Dataset for Large Language Models and its Methodology",
+        "Paper Link": "https://arxiv.org/pdf/2305.12720",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "text generation",
+            "instruction tuning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Masanori HIRANO",
+            "Masahiro SUZUKI",
+            "Hiroki SAKAJI"
+        ],
+        "Affiliations": [
+            "The University of Tokyo"
+        ],
+        "Abstract": "This study constructed a Japanese chat dataset for tuning large language models (LLMs), which consist of about 8.4 million records. Recently, LLMs have been developed and gaining popularity. However, high-performing LLMs are usually mainly for English. There are two ways to support languages other than English by those LLMs: constructing LLMs from scratch or tuning existing models. However, in both ways, datasets are necessary parts. In this study, we focused on supporting Japanese in those LLMs and making a dataset for training or tuning LLMs in Japanese. The dataset we constructed consisted of various tasks, such as translation and knowledge tasks. In our experiment, we tuned an existing LLM using our dataset and evaluated the performance qualitatively. The results suggest that our dataset is possibly beneficial for LLMs. However, we also revealed some difficulties in constructing LLMs in languages other than English.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 1,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Script": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.12720"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

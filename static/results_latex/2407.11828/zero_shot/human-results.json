@@ -1,0 +1,111 @@
+{
+    "metadata": {
+        "Name": "Vibravox",
+        "Link": "https://huggingface.co/datasets/Cnam-LMSSC/vibravox",
+        "HF Link": "https://huggingface.co/datasets/Cnam-LMSSC/vibravox",
+        "License": "CC BY 4.0",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Vibravox is a GDPR-compliant dataset containing audio recordings of French speech using five different body-conduction audio sensors and a reference airborne microphone. It includes 45 hours of speech per sensor from 188 participants under various acoustic conditions, with linguistic and phonetic transcriptions.",
+        "Volume": 273.72,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LMSSC"
+        ],
+        "Derived From": [
+            "Common Voice"
+        ],
+        "Paper Title": "Vibravox: A Dataset of French Speech Captured with Body-conduction Audio Sensors",
+        "Paper Link": "https://arxiv.org/pdf/2407.11828",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "speaker identification",
+            "speech recognition"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Julien Hauret",
+            "Malo Olivier",
+            "Thomas Joubaud",
+            "Christophe Langrenne",
+            "Sarah Poire\u00b4e",
+            "Ve\u00b4ronique Zimpfer",
+            "E\u00b4ric Bavu"
+        ],
+        "Affiliations": [
+            "Laboratoire de Me\u00b4canique des Structures et des Syste`mes Couple\u00b4s, Conservatoire national des arts et me\u00b4tiers, HESAM Universite\u00b4, 75003 Paris, France",
+            "Department of Acoustics and Soldier Protection, French-German Research Institute of Saint-Louis (ISL)"
+        ],
+        "Abstract": "Vibravox is a dataset compliant with the General Data Protection Regulation (GDPR) containing audio recordings using five different body-conduction audio sensors: two in-ear microphones, two bone conduction vibration pickups, and a laryngophone. The dataset also includes audio data from an airborne microphone used as a reference. The Vibravox corpus contains 45 hours per sensor of speech samples and physiological sounds recorded by 188 participants under different acoustic conditions imposed by a high order ambisonics 3D spatializer. Annotations about the recording conditions and linguistic transcriptions are also included in the corpus. We conducted a series of experiments on various speech-related tasks, including speech recognition, speech enhancement, and speaker verification. These experiments were carried out using state-of-the-art models to evaluate and compare their performances on signals captured by the different audio sensors offered by the Vibravox dataset, with the aim of gaining a better grasp of their individual characteristics.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 1,
+            "License": 1,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.11828"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "Name": "JaLeCoN",
+        "Link": "https://github.com/naist-nlp/jalecon",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 3.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "public datasets",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "JaLeCoN is a Dataset of Japanese Lexical Complexity for Non-Native Readers. It can be used to train or evaluate Japanese lexical complexity prediction models.",
+        "Volume": 600.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "NAIST"
+        ],
+        "Derived From": [
+            "WMT22"
+        ],
+        "Paper Title": "Japanese Lexical Complexity for Non-Native Readers: A New Dataset",
+        "Paper Link": "https://arxiv.org/pdf/2306.17399",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Yusuke Ide",
+            "Masato Mita",
+            "Adam Nohejl",
+            "Hiroki Ouchi",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "NAIST",
+            "CyberAgent Inc.",
+            "RIKEN"
+        ],
+        "Abstract": "Lexical complexity prediction (LCP) is the task of predicting the complexity of words in a text on a continuous scale. It plays a vital role in simplifying or annotating complex words to assist readers. To study lexical complexity in Japanese, we construct the first Japanese LCP dataset. Our dataset provides separate complexity scores for Chinese/Korean annotators and others to address the readers' L1-specific needs. In the baseline experiment, we demonstrate the effectiveness of a BERT-based system for Japanese LCP.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Script": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17399"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

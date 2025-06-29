@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "",
+        "Subsets": [],
+        "Link": "https://github.com/FreedomIntelligence/AceGPT}.",
+        "HF Link": "https://huggingface.co/datasets/philschmid/sharegpt-raw}}",
+        "License": "Apache-1.0",
+        "Year": 2025,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "reviews",
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2309.12053",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "CAMeL Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "dialect identification",
+            "summarization",
+            "instruction tuning",
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42857142857142855
+    },
+    "length_forcing": 0.90625,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "baseline-keyword",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

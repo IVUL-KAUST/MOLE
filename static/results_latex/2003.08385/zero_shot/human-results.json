@@ -1,0 +1,128 @@
+{
+    "metadata": {
+        "Name": "X-stance",
+        "Subsets": [
+            {
+                "Name": "DE",
+                "Volume": 40200.0,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "FR",
+                "Volume": 14129.0,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "IT",
+                "Volume": 1172.7,
+                "Unit": "sentences",
+                "Language": "Italian"
+            }
+        ],
+        "Link": "http://doi.org/10.5281/zenodo.3831317",
+        "HF Link": "https://huggingface.co/datasets/ZurichNLP/x_stance",
+        "License": "CC BY-NC 4.0",
+        "Year": 2020,
+        "Language": [
+            "German",
+            "French",
+            "Italian"
+        ],
+        "Domain": [
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A large-scale, multilingual (German, French, Italian) dataset for stance detection. It contains over 67,000 comments from Swiss political candidates on more than 150 political issues, formatted as question-comment pairs. The dataset is designed for cross-lingual and cross-target evaluation.",
+        "Volume": 55502.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Univeristy of Zurich"
+        ],
+        "Derived From": [],
+        "Paper Title": "X-stance: A Multilingual Multi-Target Dataset for Stance Detection",
+        "Paper Link": "https://arxiv.org/pdf/2003.08385",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "stance detection"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Jannis Vamvas",
+            "Rico Sennrich"
+        ],
+        "Affiliations": [
+            "University of Zurich",
+            "University of Edinburgh"
+        ],
+        "Abstract": "We extract a large-scale stance detection dataset from comments written by candidates of elections in Switzerland. The dataset consists of German, French and Italian text, allowing for a cross-lingual evaluation of stance detection. It contains 67000 comments on more than 150 political issues (targets). Unlike stance detection models that have specific target issues, we use the dataset to train a single model on all the issues. To make learning across targets possible, we prepend to each instance a natural question that represents the target (e.g. 'Do you support X?'). Baseline results from multilingual BERT show that zero-shot cross-lingual and cross-target transfer of stance detection is moderately successful with this approach.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "Link": 1,
+            "HF Link": 1,
+            "License": 1,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2003.08385"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

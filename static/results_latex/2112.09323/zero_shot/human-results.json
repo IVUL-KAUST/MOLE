@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "Name": "JTubeSpeech",
+        "Link": "https://github.com/sarulab-speech/jtubespeech",
+        "HF Link": "https://huggingface.co/datasets/asahi417/j-tube-speech",
+        "License": "Apache-2.0",
+        "Year": 2021,
+        "Language": "jp",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A large-scale Japanese speech corpus collected from YouTube videos and their subtitles. It is designed for both automatic speech recognition (ASR) and automatic speaker verification (ASV) tasks, containing over 1,300 hours for ASR and 900 hours for ASV.",
+        "Volume": 1300.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo",
+            "Technical University of Munich",
+            "Tokyo Metropolitan University",
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [],
+        "Paper Title": "JTubeSpeech: corpus of Japanese speech collected from YouTube for speech recognition and speaker verification",
+        "Paper Link": "https://arxiv.org/pdf/2112.09323",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "speaker identification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Shinnosuke Takamichi",
+            "Ludwig K\u00fcrzinger",
+            "Takaaki Saeki",
+            "Sayaka Shiota",
+            "Shinji Watanabe"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "Technical University of Munich",
+            "Tokyo Metropolitan University",
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "In this paper, we construct a new Japanese speech corpus called 'JTubeSpeech.' Although recent end-to-end learning requires large-size speech corpora, open-sourced such corpora for languages other than English have not yet been established. In this paper, we describe the construction of a corpus from YouTube videos and subtitles for speech recognition and speaker verification. Our method can automatically filter the videos and subtitles with almost no language-dependent processes. We consistently employ Connectionist Temporal Classification (CTC)-based techniques for automatic speech recognition (ASR) and a speaker variation-based method for automatic speaker verification (ASV). We build 1) a large-scale Japanese ASR benchmark with more than 1,300 hours of data and 2) 900 hours of data for Japanese ASV.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Script": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2112.09323"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

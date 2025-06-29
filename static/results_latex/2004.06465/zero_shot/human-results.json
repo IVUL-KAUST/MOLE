@@ -1,0 +1,175 @@
+{
+    "metadata": {
+        "Name": "Multilingual Hate Speech Detection Dataset",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 5790.0,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "English",
+                "Volume": 96323.0,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "German",
+                "Volume": 6155.0,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 13882.0,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 9560.0,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 9788.0,
+                "Unit": "sentences",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 5670.0,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 11365.0,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "French",
+                "Volume": 1220.0,
+                "Unit": "sentences",
+                "Language": "French"
+            }
+        ],
+        "HF Link": "",
+        "Link": "https://github.com/hate-alert/DE-LIMIT",
+        "License": "MIT License",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "English",
+            "German",
+            "Indonesian",
+            "Italian",
+            "Polish",
+            "Portuguese",
+            "Spanish",
+            "French"
+        ],
+        "Domain": [
+            "public datasets",
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "Combined MLMA and L-HSAB datasets",
+        "Volume": 159753.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Indian Institute of Technology Kharagpur"
+        ],
+        "Derived From": [
+            "L-HSAB",
+            "MLMA"
+        ],
+        "Paper Title": "Deep Learning Models for Multilingual Hate\r\nSpeech Detection",
+        "Paper Link": "https://arxiv.org/pdf/2004.06465",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Sai Saket Aluru",
+            "Binny Mathew",
+            "Punyajoy Saha",
+            "Animesh Mukherjee"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology Kharagpur"
+        ],
+        "Abstract": "Hate speech detection is a challenging problem with most of the datasets available in only one language: English. In this paper, we conduct a large scale analysis of multilingual hate speech in 9 languages from 16 different sources. We observe that in low resource setting, simple models such as LASER embedding with logistic regression performs the best, while in high resource setting BERT based models perform better. In case of zero-shot classification, languages such as Italian and Portuguese achieve good results. Our proposed framework could be used as an efficient solution for low-resource languages. These models could also act as good baselines for future multilingual hate speech detection tasks. We have made our code and experimental settings public for other researchers at this https URL.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "HF Link": 0,
+            "Link": 1,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.06465"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

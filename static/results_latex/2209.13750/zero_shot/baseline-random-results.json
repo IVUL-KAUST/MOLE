@@ -1,0 +1,64 @@
+{
+    "metadata": {
+        "Name": "",
+        "Link": "",
+        "HF Link": "",
+        "License": "CC0",
+        "Year": 2025,
+        "Language": "ru",
+        "Domain": [
+            "captions"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2209.13750",
+        "Tokenized": false,
+        "Host": "MPDI",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "part of speech tagging"
+        ],
+        "Venue Title": "",
+        "Venue Type": "workshop",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.8965517241379307,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "baseline-random",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2209.13750"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,67 @@
+{
+    "metadata": {
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "GPL-1.0",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Dialect": "Gulf",
+        "Domain": [
+            "commentary"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2103.09687",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "kaggle",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "journal",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.2857142857142857
+    },
+    "length_forcing": 0.90625,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "baseline-random",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.09687"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

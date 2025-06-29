@@ -1,0 +1,136 @@
+{
+    "metadata": {
+        "Name": "DiS-ReX",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Language": "English",
+                "Volume": 532499.0,
+                "Unit": "sentences"
+            },
+            {
+                "Name": "French",
+                "Language": "French",
+                "Unit": "sentences",
+                "Volume": 409087.0
+            },
+            {
+                "Name": "Spanish",
+                "Language": "Spanish",
+                "Unit": "sentences",
+                "Volume": 456418.0
+            },
+            {
+                "Volume": 438315.0,
+                "Language": "German",
+                "Name": "German",
+                "Unit": "sentences"
+            }
+        ],
+        "Link": "https://github.com/dair-iitd/DiS-ReX",
+        "HF Link": "https://huggingface.co/datasets/FrancophonIA/DiS-ReX",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "German",
+            "Spanish",
+            "French"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "DiS-ReX is a multilingual dataset for distantly supervised relation extraction (DS-RE) spanning English, German, Spanish, and French. It contains over 1.5 million sentences aligned with DBpedia, featuring 36 relation classes and a 'no relation' class, designed to be a challenging benchmark.",
+        "Volume": 1836319.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Indian Institute of Technology"
+        ],
+        "Derived From": [],
+        "Paper Title": "DiS-ReX: A Multilingual Dataset for Distantly Supervised Relation Extraction",
+        "Paper Link": "https://arxiv.org/pdf/2104.08655",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Abhyuday Bhartiya",
+            "Kartikeya Badola",
+            "Mausam"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology"
+        ],
+        "Abstract": "Distant supervision (DS) is a well established technique for creating large-scale datasets for relation extraction (RE) without using human annotations. However, research in DS-RE has been mostly limited to the English language. Constraining RE to a single language inhibits utilization of large amounts of data in other languages which could allow extraction of more diverse facts. Very recently, a dataset for multilingual DS-RE has been released. However, our analysis reveals that the proposed dataset exhibits unrealistic characteristics such as 1) lack of sentences that do not express any relation, and 2) all sentences for a given entity pair expressing exactly one relation. We show that these characteristics lead to a gross overestimation of the model performance. In response, we propose a new dataset, DiS-ReX, which alleviates these issues. Our dataset has more than 1.5 million sentences, spanning across 4 languages with 36 relation classes + 1 no relation (NA) class. We also modify the widely used bag attention models by encoding sentences using mBERT and provide the first benchmark results on multilingual DS-RE. Unlike the competing dataset, we show that our dataset is challenging and leaves enough room for future research to take place in this field.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "Link": 1,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2104.08655"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

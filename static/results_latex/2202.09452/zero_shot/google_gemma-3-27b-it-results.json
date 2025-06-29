@@ -1,0 +1,92 @@
+{
+    "metadata": {
+        "Name": "D'AlemBERT",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "books",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "Presents the FreEM corpus of Early Modern French and D'AlemBERT, a RoBERTa-based language model trained on FreEM. Evaluates the model on a part-of-speech tagging task, outperforming previous work.",
+        "Volume": 185643482.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Inria",
+            "Sorbonne Universitu00e9",
+            "Universitu00e9 de Genu00e8ve",
+            "LIGM",
+            "Universitu00e9 Gustage Eiffel",
+            "CNRS"
+        ],
+        "Derived From": [
+            "Frantext",
+            "Electronic Enlightenment"
+        ],
+        "Paper Title": "From textsc{FreEM} to D\u2019AlemBERT: a Large Corpus and a Language Model for Early Modern French",
+        "Paper Link": "https://arxiv.org/abs/2202.09452",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "part of speech tagging"
+        ],
+        "Venue Title": "LREC 2022",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Simon Gabay",
+            "Pedro Ortiz Suarez",
+            "Alexandre Bartz",
+            "Alix Chaguu00e9",
+            "Rachel Bawden",
+            "Philippe Gambette",
+            "Benou00eet Sagot"
+        ],
+        "Affiliations": [
+            "Inria",
+            "Sorbonne Universitu00e9",
+            "Universitu00e9 de Genu00e8ve",
+            "LIGM",
+            "Universitu00e9 Gustage Eiffel",
+            "CNRS"
+        ],
+        "Abstract": "Language models for historical states of language are becoming increasingly important to allow the optimal digitisation and analysis of old textual sources. Because these historical states are at the same time more complex to process and more scarce in the corpora available, specific efforts are necessary to train natural language processing (NLP) tools adapted to the data. In this paper, we present our efforts to develop NLP tools for Early Modern French (historical French from the 16textsuperscript{th} to the 18textsuperscript{th} centuries). We present the freemmax corpus of Early Modern French and D'AlemBERT, a RoBERTa-based language model trained on freemmax. We evaluate the usefulness of D'AlemBERT by fine-tuning it on a part-of-speech tagging task, outperforming previous work on the test set. Importantly, we find evidence for the transfer learning capacity of the language model, since its performance on lesser-resourced time periods appears to have been boosted by the more resourced ones. We release D'AlemBERT and the open-sourced subpart of the freemmax corpus."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.002851,
+        "input_tokens": 25139,
+        "output_tokens": 745
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.09452"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

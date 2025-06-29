@@ -1,0 +1,64 @@
+{
+    "metadata": {
+        "Name": "",
+        "Link": "",
+        "HF Link": "",
+        "License": "CC BY 3.0",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "tokens",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2405.07886",
+        "Tokenized": false,
+        "Host": "Mendeley Data",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language identification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "journal",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.2777777777777778
+    },
+    "length_forcing": 0.8965517241379307,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "baseline-random",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2405.07886"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

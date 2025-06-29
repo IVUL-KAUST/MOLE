@@ -1,0 +1,130 @@
+{
+    "metadata": {
+        "Name": "CFDD",
+        "Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "HF Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "captions",
+            "public datasets",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "The Claire French Dialogue Dataset (CFDD) is a corpus containing roughly 160 million words from transcripts and stage plays in French.",
+        "Volume": 160000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LINAGORA Labs"
+        ],
+        "Derived From": [
+            "ACSYNT",
+            "Assembl\u00e9e Nationale",
+            "Orf\u00e9o-CEFC",
+            "Orf\u00e9o",
+            "CFPP",
+            "CID",
+            "CLAPI",
+            "ESLO",
+            "FREDSum",
+            "LinTO",
+            "OFRON",
+            "Parole Publique",
+            "Paris Stories",
+            "PFC",
+            "Rhapsodie",
+            "SUMM-RE",
+            "TCOF",
+            "Th\u00e9\u00e2tre Classique",
+            "Th\u00e9\u00e2tre Gratuit"
+        ],
+        "Paper Title": "The Claire French Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/pdf/2311.16840",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Julie Hunter",
+            "J\u00e9r\u00f4me Louradour",
+            "Virgile Rennard",
+            "Isma\u00efl Harrando",
+            "Guokan Shang",
+            "Jean-Pierre Lorr\u00e9"
+        ],
+        "Affiliations": [
+            "LINAGORA"
+        ],
+        "Abstract": "We present the Claire French Dialogue Dataset (CFDD), a resource created by members of LINAGORA Labs in the context of the OpenLLM France initiative. CFDD is a corpus containing roughly 160 million words from  transcripts and stage plays in French that we have assembled and publicly released in an effort to further the development of multilingual, open source language models. This paper describes the 24 individual corpora of which CFDD is composed and provides links and citations to their original sources. It also provides our proposed breakdown of the full CFDD dataset into eight categories of subcorpora and describes the process we followed to standardize the format of the final dataset.    We conclude with a discussion of similar work and future directions.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 1,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2311.16840"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

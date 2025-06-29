@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "FREDSum",
+        "Link": "https://github.com/linto-ai/FREDSum",
+        "HF Link": "https://huggingface.co/datasets/linagora/FREDSum",
+        "License": "CC BY-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "TV Channels",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A dataset of manually transcribed and annotated French political debates from 1974-2023. It is designed for multi-party dialogue summarization and includes abstractive/extractive summaries, topic segmentation, and abstractive communities annotations to support research in this area.",
+        "Volume": 142.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Linagora Labs"
+        ],
+        "Derived From": [],
+        "Paper Title": "FREDSum: A Dialogue Summarization Corpus for French Political Debates",
+        "Paper Link": "https://arxiv.org/pdf/2312.04843",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization",
+            "speech recognition"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Virgile Rennard",
+            "Guokan Shang",
+            "Damien Grari",
+            "Julie Hunter",
+            "Michalis Vazirgiannis"
+        ],
+        "Affiliations": [
+            "Linagora, France",
+            "\u00c9cole Polytechnique",
+            "Grenoble Ecole de Management"
+        ],
+        "Abstract": "Recent advances in deep learning, and especially the invention of encoder-decoder architectures, have significantly improved the performance of abstractive summarization systems. The majority of research has focused on written documents, however, neglecting the problem of multi-party dialogue summarization. In this paper, we present a dataset of French political debates for the purpose of enhancing resources for multi-lingual dialogue summarization. Our dataset consists of manually transcribed and annotated political debates, covering a range of topics and perspectives. We highlight the importance of high quality transcription and annotations for training accurate and effective dialogue summarization models, and emphasize the need for multilingual resources to support dialogue summarization in non-English languages. We also provide baseline experiments using state-of-the-art methods, and encourage further research in this area to advance the field of dialogue summarization. Our dataset will be made publicly available for use by the research community.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2312.04843"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

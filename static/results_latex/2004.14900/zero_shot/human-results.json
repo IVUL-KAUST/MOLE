@@ -1,0 +1,149 @@
+{
+    "metadata": {
+        "Name": "MLSUM",
+        "Subsets": [
+            {
+                "Name": "FR",
+                "Volume": 424763.0,
+                "Unit": "documents",
+                "Language": "French"
+            },
+            {
+                "Name": "DE",
+                "Volume": 242982.0,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "ES",
+                "Volume": 290645.0,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "RU",
+                "Volume": 27063.0,
+                "Unit": "documents",
+                "Language": "Russian"
+            },
+            {
+                "Name": "TR",
+                "Volume": 273617.0,
+                "Unit": "documents",
+                "Language": "Turkish"
+            }
+        ],
+        "Link": "https://github.com/recitalAI/MLSUM",
+        "HF Link": "https://huggingface.co/datasets/reciTAL/mlsum",
+        "License": "custom",
+        "Year": 2020,
+        "Language": [
+            "French",
+            "German",
+            "Spanish",
+            "Russian",
+            "Turkish"
+        ],
+        "Domain": [
+            "news articles",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "MLSUM is a large-scale multilingual summarization dataset with over 1.5 million article/summary pairs in French, German, Spanish, Russian, and Turkish. Collected from online newspapers, it is designed to complement the English CNN/Daily Mail dataset, enabling new research in cross-lingual summarization.",
+        "Volume": 1259070.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "reciTAL",
+            "Sorbonne Universit\u00e9",
+            "CNRS"
+        ],
+        "Derived From": [],
+        "Paper Title": "MLSUM: The Multilingual Summarization Corpus",
+        "Paper Link": "https://arxiv.org/pdf/2004.14900",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Thomas Scialom",
+            "Paul-Alexis Dray",
+            "Sylvain Lamprier",
+            "Benjamin Piwowarski",
+            "Jacopo Staiano"
+        ],
+        "Affiliations": [
+            "reciTAL, Paris, France",
+            "Sorbonne Universit\u00e9, CNRS, LIP6, F-75005 Paris, France",
+            "CNRS, France"
+        ],
+        "Abstract": "We present MLSUM, the first large-scale MultiLingual SUMmarization dataset. Obtained from online newspapers, it contains 1.5M+ article/summary pairs in five different languages \u2013 namely, French, German, Spanish, Russian, Turkish. Together with English newspapers from the popular CNN/Dailymail dataset, the collected data form a large scale multilingual dataset which can enable new research directions for the text summarization community. We report cross-lingual comparative analyses based on state-of-the-art systems. These highlight existing biases which motivate the use of a multi-lingual dataset.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "Link": 1,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14900"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

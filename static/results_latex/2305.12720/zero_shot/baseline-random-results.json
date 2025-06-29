@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "Name": "",
+        "Link": "",
+        "HF Link": "",
+        "License": "Apache-1.0",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "LLM"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "LLM generated"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2305.12720",
+        "Script": "Kanji",
+        "Tokenized": false,
+        "Host": "OneDrive",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "transliteration"
+        ],
+        "Venue Title": "",
+        "Venue Type": "workshop",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.2631578947368421
+    },
+    "length_forcing": 0.8999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "baseline-random",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.12720"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

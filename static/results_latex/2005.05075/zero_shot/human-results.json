@@ -1,0 +1,108 @@
+{
+    "metadata": {
+        "Name": "French COVID19 Lockdown Twitter Dataset",
+        "Link": "https://github.com/calciu/COVID19-LockdownFr",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2020,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A multilingual Twitter dataset, primarily in French, collected during the first COVID-19 lockdown in France starting March 17, 2020. The dataset, collected via Twitter's API using #ConfinementJourXx hashtags, includes sentiment and emotion annotations derived from various lexicons.",
+        "Volume": 2474086.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "University of Picardie",
+            "Paris-Nanterre University",
+            "Lille University"
+        ],
+        "Derived From": [],
+        "Paper Title": "The First French COVID19 Lockdown Twitter Dataset",
+        "Paper Link": "https://arxiv.org/pdf/2005.05075",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Sophie Balech",
+            "Christophe Benavent",
+            "Mihai Calciu"
+        ],
+        "Affiliations": [
+            "University of Picardie",
+            "Paris-Nanterre University",
+            "Lille University"
+        ],
+        "Abstract": "In this paper, we present a mainly French coronavirus Twitter dataset that we have been continuously collecting since lockdown restrictions have been enacted in France (in March 17, 2020). We offer our datasets and sentiment analysis annotations to the research community at https://github.com/calciu/COVID19-LockdownFr. They have been obtained using high performance computing (HPC) capabilities of our university's datacenter. We think that our contribution can facilitate analysis of online conversation dynamics reflecting people sentiments when facing severe home confinement restrictions determined by the outbreak of this world wide epidemic. We hope that our contribution will help decode shared experience and mood but also test the sensitivity of sentiment measurement instruments and incite the development of new instruments, methods and approaches.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 0,
+            "License": 1,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 0,
+            "Venue Type": 0,
+            "Venue Name": 0,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.05075"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

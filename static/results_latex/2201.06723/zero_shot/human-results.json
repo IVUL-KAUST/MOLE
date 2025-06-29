@@ -1,0 +1,116 @@
+{
+    "metadata": {
+        "Name": "EmojisAnchors",
+        "Subsets": [],
+        "HF Link": "https://hf.co/datasets/arbml/osact5_hatespeech",
+        "Link": "https://codalab.lisn.upsaclay.fr/competitions/2324",
+        "License": "custom",
+        "Year": 2022,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "Fine-Grained Hate Speech Detection on Arabic Twitter",
+        "Volume": 12698.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "QCRI",
+            "University of Pittsburgh"
+        ],
+        "Derived From": [
+            "SemEval-2020 Task 12"
+        ],
+        "Paper Title": "Overview of OSACT5 Shared Task on Arabic Offensive Language and Hate Speech Detection",
+        "Paper Link": "https://arxiv.org/pdf/2201.06723",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "CodaLab",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Hamdy Mubarak",
+            "Hend Al-Khalifa",
+            "AbdulMohsen Al-Thubaity"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute",
+            "King Saud University",
+            "King Abdulaziz City for Science and Technology (KACST)"
+        ],
+        "Abstract": "This paper provides an overview of the shard task on detecting offensive language, hate speech, and fine-grained hate speech at the fifth workshop on Open-Source Arabic Corpora and Processing Tools (OSACT5). The shared task comprised of three subtasks; Subtask A, involving the detection of offensive language, which contains socially unacceptable or impolite content including any kind of explicit or implicit insults or attacks against individuals or groups; Subtask B, involving the detection of hate speech, which contains offensive language targeting individuals or groups based on common characteristics such as race, religion, gender, etc.; and Subtask C, involving the detection of the fine-grained type of hate speech which takes one value from the following types: (i) race/ethnicity/nationality, (ii) religion/belief, (iii) ideology, (iv) disability/disease, (v) social class, and (vi) gender. In total, 40 teams signed up to participate in Subtask A, and 17 of them submitted test runs. For Subtask B, 26 teams signed up to participate and 12 of them submitted runs. And for Subtask C, 23 teams signed up to participate and 10 of them submitted runs. 10 teams submitted papers describing their participation in one subtask or more, and 8 papers were accepted. We present and analyze all submissions in this paper.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "HF Link": 0,
+            "Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Dialect": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Script": 1,
+            "Tokenized": 1,
+            "Host": 0,
+            "Access": 0,
+            "Cost": 0,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

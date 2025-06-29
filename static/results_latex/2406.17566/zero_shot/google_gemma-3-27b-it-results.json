@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "FrenchToxicityPrompts",
+        "Link": "https://download.europe.naverlabs.com/FrenchToxicityPrompts/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A dataset of 50K naturally occurring French prompts and their continuations, annotated with toxicity scores.",
+        "Volume": 50000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "NAVER LABS Europe"
+        ],
+        "Derived From": [
+            "L\u00e9lu"
+        ],
+        "Paper Title": "FrenchToxicityPrompts: a Large Benchmark for Evaluating and Mitigating Toxicity in French Texts",
+        "Paper Link": "https://arxiv.org/abs/2406.17566",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Caroline Brun",
+            "Vassilina Nikoulina"
+        ],
+        "Affiliations": [
+            "NAVER LABS Europe"
+        ],
+        "Abstract": "Large language models (LLMs) are increasingly popular but are also prone to generating bias, toxic or harmful language, which can have detrimental effects on individuals and communities. Although most efforts is put to assess and mitigate toxicity in generated content, it is primarily concentrated on English, while it\u2019s essential to consider other languages as well. For addressing this issue, we create and release FrenchToxicityPrompts, a dataset of 50K naturally occurring French prompts and their continuations, annotated with toxicity scores from a widely used toxicity classifier. We evaluate 14 different models from four prevalent open-sourced families of LLMs against our dataset to assess their potential toxicity across various dimensions. We hope that our contribution will foster future research on toxicity detection and mitigation beyond English."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00129199,
+        "input_tokens": 11801,
+        "output_tokens": 489
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.17566"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,134 @@
+{
+    "metadata": {
+        "Name": "BRIGHT",
+        "Link": "https://github.com/xlang-ai/BRIGHT",
+        "HF Link": "https://huggingface.co/datasets/xlangai/BRIGHT",
+        "License": "CC BY 4.0",
+        "Year": 2025,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "public datasets",
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation",
+            "crawling"
+        ],
+        "Description": "BRIGHT is a new benchmark for reasoning-intensive retrieval. It consists of 12 datasets from diverse and advanced domains where relevance between queries and documents requires intensive reasoning beyond simple keyword or semantic matching.",
+        "Volume": 1384.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Hong Kong",
+            "Princeton University",
+            "Stanford University",
+            "University of Washington",
+            "Google Cloud AI Research"
+        ],
+        "Derived From": [
+            "TheoremQA",
+            "CAMEL-Math",
+            "GSM8K",
+            "AQuA-RAT",
+            "GSM8K-RFT"
+        ],
+        "Paper Title": "BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval",
+        "Paper Link": "https://arxiv.org/pdf/2407.12883",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "information retrieval",
+            "question answering"
+        ],
+        "Venue Title": "ICLR",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [
+            "Hongjin Su",
+            "Howard Yen",
+            "Mengzhou Xia",
+            "Weijia Shi",
+            "Niklas Muennighoff",
+            "Han-yu Wang",
+            "Haisu Liu",
+            "Quan Shi",
+            "Zachary S. Siegel",
+            "Michael Tang",
+            "Ruoxi Sun",
+            "Jinsung Yoon",
+            "Sercan \u00d6. Ar\u0131k",
+            "Danqi Chen",
+            "Tao Yu"
+        ],
+        "Affiliations": [
+            "The University of Hong Kong",
+            "Princeton University",
+            "Stanford University",
+            "University of Washington",
+            "Google Cloud AI Research"
+        ],
+        "Abstract": "Information retrieval is a widely employed technology that assists users in locating relevant information from extensive corpora. While existing benchmarks primarily focus on fact-based queries, many real-world scenarios involve complex queries where relevance is not determined by simple keyword or semantic matching but requires intensive reasoning. To bridge this gap, we introduce BRIGHT, a new benchmark for reasoning-intensive retrieval. BRIGHT consists of 12 datasets from diverse and advanced domains, including StackExchange, coding, and mathematics. These datasets are constructed from naturally occurring human data and curated sources, with relevance validated by human annotators. We evaluate 13 representative retrieval models and find that even the best-performing models struggle on BRIGHT, with the top model achieving an nDCG@10 score of only 24.3. We explore methods to improve performance, such as using Large Language Models (LLMs) to generate chain-of-thought reasoning steps for queries, which shows significant gains. Furthermore, we demonstrate that strong retrieval on BRIGHT can significantly enhance downstream reasoning tasks. Our benchmark is designed to be robust against data leakage from pre-training and aims to foster future research in reasoning-intensive retrieval. Our data and code are available at https://brightbenchmark.github.io/.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 1,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12883"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,118 @@
+{
+    "metadata": {
+        "Name": "HISTOIRESMORALES",
+        "Link": "https://github.com/upunaprosk/histoires-morales",
+        "HF Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "License": "MIT License",
+        "Year": 2025,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "LLM generated",
+            "human annotation"
+        ],
+        "Description": "A French dataset for assessing moral alignment in LLMs, derived from the English MORALSTORIES dataset. It consists of 12,000 short narratives describing social situations, moral norms, intentions, and corresponding moral/immoral actions and consequences, adapted to the French cultural context.",
+        "Volume": 12000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Laboratoire Hubert Curien"
+        ],
+        "Derived From": [
+            "MORALSTORIES"
+        ],
+        "Paper Title": "HISTOIRESMORALES: A French Dataset for Assessing Moral Alignment",
+        "Paper Link": "https://arxiv.org/pdf/2501.17117",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "topic classification",
+            "natural language inference",
+            "linguistic acceptability"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Thibaud Leteno",
+            "Irina Proskurina",
+            "Antoine Gourru",
+            "Julien Velcin",
+            "Charlotte Laclau",
+            "Guillaume Metzler",
+            "Christophe Gravier"
+        ],
+        "Affiliations": [
+            "Laboratoire Hubert Curien",
+            "Universit\u00e9 Lumi\u00e8re Lyon 2",
+            "Universit\u00e9 Claude Bernard Lyon 1",
+            "ERIC",
+            "T\u00e9l\u00e9com Paris",
+            "Institut Polytechnique de Paris"
+        ],
+        "Abstract": "Aligning language models with human values is crucial, especially as they become more integrated into everyday life. While models are often adapted to user preferences, it is equally important to ensure they align with moral norms and behaviours in real-world social situations. Despite significant progress in languages like English and Chinese, French has seen little attention in this area, leaving a gap in understanding how LLMs handle moral reasoning in this language. To address this gap, we introduce HISTOIRESMORALES, a French dataset derived from MORALSTORIES, created through translation and subsequently refined with the assistance of native speakers to guarantee grammatical accuracy and adaptation to the French cultural context. We also rely on annotations of the moral values within the dataset to ensure their alignment with French norms. HISTOIRESMORALES covers a wide range of social situations, including differences in tipping practices, expressions of honesty in relationships, and responsibilities toward animals. To foster future research, we also conduct preliminary experiments on the alignment of multilingual models on French and English data and the robustness of the alignment. We find that while LLMs are generally aligned with human moral norms by default, they can be easily influenced with user-preference optimization for both moral and immoral data.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 1,
+            "License": 1,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.17117"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://huggingface.co/datasets/illuin/fquad2",
+        "HF Link": "https://huggingface.co/datasets/illuin/fquad2",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "FQuAD2.0 is an extension of FQuAD1.1 with 17,000+ unanswerable questions, annotated adversarially, making it the first French adversarial Question Answering dataset.",
+        "Volume": 79948.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Illuin Technology",
+            "CentraleSup\u00e9lec"
+        ],
+        "Derived From": [
+            "FQuAD1.1"
+        ],
+        "Paper Title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.549/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Quentin Heinrich",
+            "Gautier Viaud",
+            "Wacim Belblidia"
+        ],
+        "Affiliations": [
+            "Illuin Technology",
+            "Paris, France"
+        ],
+        "Abstract": "FQuAD2.0 is an extension of FQuAD1.1. This extension consists in the addition of unanswerable questions. These questions are hand-crafted in an adversarial manner in order to be difficult to distinguish from answerable ones."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0016925,
+        "input_tokens": 14933,
+        "output_tokens": 470
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

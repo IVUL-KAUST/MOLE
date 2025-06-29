@@ -1,0 +1,137 @@
+{
+    "metadata": {
+        "Name": "FREEMmax",
+        "Link": "https://github.com/FreEM-corpora/FreEMmax_OA",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "FREEMmax is a large corpus of Early Modern French (16th-18th centuries), with some texts extending to the 1920s. It aggregates texts from various sources, including institutional databases, research projects, and web scraping, covering diverse genres like literature, correspondence, and plays.",
+        "Volume": 185643482.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Inria",
+            "Sorbonne Universite",
+            "Universite de Geneve",
+            "LIGM",
+            "Universite Gustage Eiffel",
+            "CNRS"
+        ],
+        "Derived From": [
+            "FRANTEXT",
+            "Electronic Enlightenment",
+            "Antonomaz project",
+            "Acta Pacis Westphalicae",
+            "Bibliotheques virtuelles humanistes",
+            "Corpus electronique de la premiere modernite",
+            "Conde project",
+            "Corpus Descartes",
+            "Bibliotheque dramatique",
+            "Fabula numerica project",
+            "Fonds Boissy",
+            "Mercure Galant project",
+            "Rousseau online project",
+            "Sermo project",
+            "The\u00b4a\u02c6tre classique project",
+            "Wikisource",
+            "Gallica"
+        ],
+        "Paper Title": "From FREEM to D\u2019AlemBERT: a Large Corpus and a Language Model for Early Modern French",
+        "Paper Link": "https://arxiv.org/pdf/2202.09452",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Simon Gabay",
+            "Pedro Ortiz Suarez",
+            "Alexandre Bartz",
+            "Alix Chague",
+            "Rachel Bawden",
+            "Philippe Gambette",
+            "Beno\u00eet Sagot"
+        ],
+        "Affiliations": [
+            "Inria",
+            "Sorbonne Universite",
+            "Universite de Geneve",
+            "LIGM",
+            "Universite Gustage Eiffel",
+            "CNRS"
+        ],
+        "Abstract": "Language models for historical states of language are becoming increasingly important to allow the optimal digitisation and analysis of old textual sources. Because these historical states are at the same time more complex to process and more scarce in the corpora available, specific efforts are necessary to train natural language processing (NLP) tools adapted to the data. In this paper, we present our efforts to develop NLP tools for Early Modern French (historical French from the 16th to the 18th centuries). We present the FREEMmax corpus of Early Modern French and D\u2019AlemBERT, a RoBERTa-based language model trained on FREEMmax. We evaluate the usefulness of D\u2019AlemBERT by fine-tuning it on a part-of-speech tagging task, outperforming previous work on the test set. Importantly, we find evidence for the transfer learning capacity of the language model, since its performance on lesser-resourced time periods appears to have been boosted by the more resourced ones. We release D\u2019AlemBERT and the open-sourced subpart of the FREEMmax corpus.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 0,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.09452"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

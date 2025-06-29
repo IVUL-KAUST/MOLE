@@ -1,0 +1,109 @@
+{
+    "metadata": {
+        "Name": "HeadlineCause",
+        "Link": "https://github.com/IlyaGusev/HeadlineCause",
+        "HF Link": "https://huggingface.co/datasets/IlyaGusev/headline_cause",
+        "License": "CC0",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Domain": [
+            "news articles",
+            "public datasets",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset for detecting implicit causal relations between pairs of news headlines in English and Russian. The pairs are labeled through crowdsourcing and vary from unrelated to having causation or refutation relations.",
+        "Volume": 9553.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Moscow Institute of Physics and Technology",
+            "Yandex"
+        ],
+        "Derived From": [
+            "Lenta corpus"
+        ],
+        "Paper Title": "HeadlineCause: A Dataset of News Headlines for Detecting Causalities",
+        "Paper Link": "https://arxiv.org/pdf/2108.12626",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference"
+        ],
+        "Venue Title": "Preprint",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ilya Gusev",
+            "Alexey Tikhonov"
+        ],
+        "Affiliations": [
+            "Moscow Institute of Physics and Technology",
+            "Yandex"
+        ],
+        "Abstract": "Detecting implicit causal relations in texts is a task that requires both commonsense and world knowledge. Existing datasets are focused either on commonsense causal reasoning or explicit causal relations. In this work, we present HeadlineCause, a dataset for detecting implicit causal relations between pairs of news headlines. The dataset includes over 5000 headline pairs from English news and over 9000 headline pairs from Russian news labeled through crowdsourcing. The pairs vary from totally unrelated or belonging to the same general topic to the ones including causation and refutation relations. We also present a set of models and experiments that demonstrates the dataset validity, including a multilingual XLM-RoBERTa based model for causality detection and a GPT-2 based model for possible effects prediction.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.12626"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,160 @@
+{
+    "metadata": {
+        "Name": "MLQA",
+        "Subsets": [
+            {
+                "Name": "en",
+                "Volume": 12738.0,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "ar",
+                "Volume": 5852.0,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "de",
+                "Volume": 5029.0,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "vi",
+                "Volume": 6006.0,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "es",
+                "Volume": 5770.0,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "zh",
+                "Volume": 5852.0,
+                "Unit": "sentences",
+                "Language": "Simplified Chinese"
+            },
+            {
+                "Name": "hi",
+                "Volume": 5425.0,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            }
+        ],
+        "HF Link": "https://hf.co/datasets/facebook/mlqa",
+        "Link": "https://github.com/facebookresearch/mlqa",
+        "License": "CC BY-SA 3.0",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Arabic",
+            "German",
+            "Vietnamese",
+            "Spanish",
+            "Simplified Chinese",
+            "Hindi"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "MLQA has over 12K instances in English and 5K in each other language, with each instance parallel between 4 languages on average.",
+        "Volume": 46461.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook"
+        ],
+        "Derived From": [],
+        "Paper Title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
+        "Paper Link": "https://arxiv.org/pdf/1910.07475",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Patrick Lewis",
+            "Barlas O\u011fuz",
+            "Ruty Rinott",
+            "S. Riedel",
+            "Holger Schwenk"
+        ],
+        "Affiliations": [
+            "Facebook AI Research;University College London"
+        ],
+        "Abstract": "Question answering (QA) models have shown rapid progress enabled by the availability of large, high-quality benchmark datasets. Such annotated datasets are difficult and costly to collect, and rarely exist in languages other than English, making building QA systems that work well in other languages challenging. In order to develop such systems, it is crucial to invest in high quality multilingual evaluation benchmarks to measure progress. We present MLQA, a multi-way aligned extractive QA evaluation benchmark intended to spur research in this area. MLQA contains QA instances in 7 languages, English, Arabic, German, Spanish, Hindi, Vietnamese and Simplified Chinese. MLQA has over 12K instances in English and 5K in each other language, with each instance parallel between 4 languages on average. We evaluate state-of-the-art cross-lingual models and machine-translation-based baselines on MLQA. In all cases, transfer results are shown to be significantly behind training-language performance.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Subsets": 1,
+            "HF Link": 0,
+            "Link": 1,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1910.07475"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

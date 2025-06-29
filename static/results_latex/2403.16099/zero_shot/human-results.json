@@ -1,0 +1,119 @@
+{
+    "metadata": {
+        "Name": "OBSINFOX",
+        "Link": "https://github.com/obs-info/obsinfox",
+        "HF Link": "",
+        "License": "CC BY-NC 4.0",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A corpus of 100 French press documents from 17 unreliable sources. The documents were annotated by 8 human annotators using 11 labels (e.g., FakeNews, Subjective, Exaggeration) to analyze the characteristics of fake news.",
+        "Volume": 100.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Observatoire"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Multi-Label Dataset of French Fake News: Human and Machine Insights",
+        "Paper Link": "https://arxiv.org/pdf/2403.16099",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "fake news detection",
+            "topic classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Benjamin Icard",
+            "Fran\u00e7ois Maine",
+            "Morgane Casanova",
+            "G\u00e9raud Faye",
+            "Julien Chanson",
+            "Guillaume Gadek",
+            "Ghislain Atemezing",
+            "Fran\u00e7ois Bancilhon",
+            "Paul \u00c9gr\u00e9"
+        ],
+        "Affiliations": [
+            "Sorbonne Universit\u00e9",
+            "Institut Jean-Nicod",
+            "Freedom Partners",
+            "Universit\u00e9 de Rennes",
+            "Airbus Defence and Space",
+            "Universit\u00e9 Paris-Saclay",
+            "Mondeca",
+            "European Union Agency for Railways",
+            "Observatoire des M\u00e9dias"
+        ],
+        "Abstract": "We present a corpus of 100 documents, named OBSINFOX, selected from 17 sources of French press considered unreliable by expert agencies, annotated using 11 labels by 8 annotators. By collecting more labels than usual, by more annotators than is typically done, we can identify features that humans consider as characteristic of fake news, and compare them to the predictions of automated classifiers. We present a topic and genre analysis using GATE Cloud, indicative of the prevalence of satire-like text in the corpus. We then use the subjectivity analyzer VAGO, and a neural version of it, to clarify the link between ascriptions of the label Subjective and ascriptions of the label Fake News. The annotated dataset is available online at the following url: https://github.com/obs-info/obsinfox",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 1,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.16099"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

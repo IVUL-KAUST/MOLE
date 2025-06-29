@@ -1,0 +1,117 @@
+{
+    "metadata": {
+        "Name": "MEDIA with Intents",
+        "Link": "https://github.com/Ala-Na/media_benchmark_intent_annotations",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "An enhanced version of the French MEDIA Spoken Language Understanding (SLU) dataset. Originally annotated only for slots (named entities), this version adds intent classification labels using a semi-automatic tri-training methodology. The corpus consists of recorded human-machine dialogues for hotel booking.",
+        "Volume": 22848.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Paris-Saclay",
+            "Avignon Universit\u00e9",
+            "LIA",
+            "QWANT"
+        ],
+        "Derived From": [
+            "MEDIA-EVALDA"
+        ],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://arxiv.org/pdf/2403.19727",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "intent classification"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "ArXiv",
+        "Authors": [
+            "Nad\u00e8ge Alavoine",
+            "Ga\u00eblle Laperri\u00e8re",
+            "Christophe Servan",
+            "Sahar Ghannay",
+            "Sophie Rosset"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris-Saclay",
+            "CNRS",
+            "LISN",
+            "Avignon Universit\u00e9",
+            "LIA",
+            "QWANT"
+        ],
+        "Abstract": "Intent classification and slot-filling are essential tasks of Spoken Language Understanding (SLU). In most SLU systems, those tasks are realized by independent modules. For about fifteen years, models achieving both of them jointly and exploiting their mutual enhancement have been proposed. A multilingual module using a joint modelwasenvisionedtocreateatouristicdialoguesystemforaEuropeanproject,HumanE-AI-Net. Acombination of multiple datasets, includingthe MEDIA dataset, was suggested for training this joint model. The MEDIA SLU datasetisa Frenchdatasetdistributedsince2005byELRA,mainlyusedbytheFrenchresearchcommunityand free for academic research since 2020. Unfortunately,it is annotatedonly in slots but not intents. An enhanced version of MEDIA annotated with intents has been built to extend its use to more tasks and use cases. This paper presents the semi-automatic methodology used to obtain this enhanced version. In addition, we present thefirstresultsofSLUexperimentsonthisenhanceddatasetusingjointmodelsforintentclassificationandslot-filling.",
+        "annotations_from_paper": {
+            "Name": 1,
+            "Link": 1,
+            "HF Link": 0,
+            "License": 0,
+            "Year": 1,
+            "Language": 1,
+            "Domain": 1,
+            "Form": 1,
+            "Collection Style": 1,
+            "Description": 1,
+            "Volume": 1,
+            "Unit": 1,
+            "Ethical Risks": 1,
+            "Provider": 1,
+            "Derived From": 1,
+            "Paper Title": 1,
+            "Paper Link": 1,
+            "Tokenized": 1,
+            "Host": 1,
+            "Access": 1,
+            "Cost": 1,
+            "Test Split": 1,
+            "Tasks": 1,
+            "Venue Title": 1,
+            "Venue Type": 1,
+            "Venue Name": 1,
+            "Authors": 1,
+            "Affiliations": 1,
+            "Abstract": 1
+        }
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+    },
+    "config": {
+        "model_name": "human",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
