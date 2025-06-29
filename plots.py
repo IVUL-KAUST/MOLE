@@ -165,6 +165,8 @@ def plot_by_year():
     metric_results = {}
     ids = get_all_ids()
     for json_file in json_files:
+        if 'human' in json_file:
+            continue
         results = json.load(open(json_file))
         arxiv_id = get_id_from_path(json_file)
         if arxiv_id not in ids:
@@ -220,11 +222,16 @@ def plot_by_year():
         years, scores = zip(*sorted(zip(years, scores)))
         # plt.scatter(years, scores, label = model_name)
         # if model_name == "google_gemini-2.5-pro":
+        results.append([remap_names(model_name)] + list(scores)+[np.mean(scores)])
         plt.plot(years, scores, label=model_name)
     plt.title("Average Score per Year")
     plt.xlabel("Year")
     plt.ylabel("Average Score")
     plt.show()
+
+    # plot table of results
+    headers = ["Model"] + [str(year) for year in years] + ["Average"]
+    print_table(results, headers)
 
 
 def get_jsons_by_lang():
