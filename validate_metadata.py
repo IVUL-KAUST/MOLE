@@ -2,18 +2,29 @@ import json
 import glob
 import os
 from utils import evaluate_lengths
-for schema in os.listdir('schema'):
-    lang = schema.split('.')[0]
-    metadata = json.load(open(f'schema/{schema}'))
+for lang in os.listdir('schema'):
+    lang = lang.split('.')[0]
+    schema = json.load(open(f'schema/{lang}.json'))
     for file in glob.glob(f'evals/{lang}/**/*.json'):
-        new_metadata = json.load(open(file))
+        metadata = json.load(open(file))
         for key in metadata:
-            if key not in new_metadata:
+            if key == 'annotations_from_paper':
+                continue
+            if key not in schema:
                 print(f"{file} is missing {key}")
-        annotations_from_paper = new_metadata["annotations_from_paper"]
-        for key in metadata:
-            if key not in annotations_from_paper:
+            if 'options' in schema[key]:
+                if 'List' in schema[key]['answer_type']:
+                    for item in metadata[key]:
+                        if item not in schema[key]['options']:
+                            print(f"{file} is missing {item} in {key}")
+                else:
+                    if metadata[key] not in schema[key]['options']:
+                        print(f"{file} is missing {metadata[key]} in {key}")
+                    
+        annotations_from_paper = metadata["annotations_from_paper"]
+        for key in annotations_from_paper:
+            if key not in schema:
                 print(f"{file} is missing {key} in annotations_from_paper")
-        length = evaluate_lengths(new_metadata, schema = lang)
+        length = evaluate_lengths(metadata, schema = lang)
         if abs(length - 1) > 0.01:
             print(f"{file} has length {length}")
