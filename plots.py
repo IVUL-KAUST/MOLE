@@ -22,6 +22,7 @@ args.add_argument("--non_browsing", action="store_true")
 args.add_argument("--browsing", action="store_true")
 args.add_argument("--errors", action="store_true")
 args.add_argument("--group_by", type = str, default = "evaluation_subsets")
+args.add_argument("--ignore_length", action="store_true")
 args = args.parse_args()
 
 # evaluation_subsets = schema[args.schema]['evaluation_subsets']
@@ -65,12 +66,14 @@ def plot_by_length():
     print_table(results, headers)
     
 def get_all_ids():
+    
     ids = []
     if args.schema == 'all':
         for lang in [ "ar", 'en', 'jp', 'fr', 'ru', 'multi']:
             ids.extend(eval_datasets_ids[lang][args.eval])
     else:
         ids = eval_datasets_ids[args.schema][args.eval]
+    print(len(ids))
     return ids
 
 def get_openrouter_cost(model_name, input_tokens, output_tokens):
@@ -160,34 +163,40 @@ def plot_by_cost():
 
 def plot_by_year():
     metric_results = {}
+    ids = get_all_ids()
     for json_file in json_files:
         results = json.load(open(json_file))
-        arxiv_id = json_file.split("/")[-2].replace("_arXiv", "")
+        arxiv_id = get_id_from_path(json_file)
         if arxiv_id not in ids:
             continue
+        schema = get_schema_from_path(json_file)
         model_name = results["config"]["model_name"]
         pred_metadata = results["metadata"]
         if model_name not in metric_results:
             metric_results[model_name] = []
-        
-        human_json_path = "/".join(json_file.split("/")[:-1]) + "/human-results.json"
-        gold_metadata = json.load(open(human_json_path))["metadata"]
+        # human_json_path = human_json_path.replace(f"/{args.type}", "")
+        gold_metadata = get_metadata_from_path(json_file)
+        scores = evaluate_metadata(
+            gold_metadata, pred_metadata,
+            schema = schema,
+            return_columns = True
+        )
         
         if args.use_annotations_paper:
-            scores = evaluate_metadata(
-                gold_metadata, pred_metadata, use_annotations_paper=True
-            )
-        else:
-            scores = evaluate_metadata(
-                gold_metadata, pred_metadata
-            )
+            average_ignore_mistakes = evaluate_metadata(
+                gold_metadata, pred_metadata, use_annotations_paper=True, schema = schema
+            )["AVERAGE"]
+            scores += [average_ignore_mistakes]
+        
+        # if gold_metadata["Year"] == 2025:
+        #     print(arxiv_id)
         metric_results[model_name].append(
             [gold_metadata["Year"], scores["AVERAGE"]]
         )
 
     final_results = {}
     for model_name in metric_results:
-        if len(metric_results[model_name]) == len(ids):
+        if len(metric_results[model_name]) == len(ids) or args.ignore_length:
             final_results[model_name] = metric_results[model_name]
 
     results = []
@@ -210,12 +219,13 @@ def plot_by_year():
 
         years, scores = zip(*sorted(zip(years, scores)))
         # plt.scatter(years, scores, label = model_name)
+        # if model_name == "google_gemini-2.5-pro":
         plt.plot(years, scores, label=model_name)
-
     plt.title("Average Score per Year")
     plt.xlabel("Year")
     plt.ylabel("Average Score")
     plt.show()
+
 
 def get_jsons_by_lang():
     json_files_by_language = {}
@@ -266,6 +276,7 @@ def plot_langs():
     headers = [ "Model"] + langs  + ["Average"] + ["Weighted Average"]
     metric_results = {}
     use_annotations_paper = args.use_annotations_paper
+    ignore_length = args.ignore_length
     
     for lang in langs:
         for json_file in json_files_by_language[lang]:
@@ -295,7 +306,7 @@ def plot_langs():
             continue
         
         for lang in metric_results[model_name]:
-            if len(metric_results[model_name][lang]) == len(eval_datasets_ids[lang][args.eval]):
+            if len(metric_results[model_name][lang]) == len(eval_datasets_ids[lang][args.eval]) or ignore_length:
                 if model_name not in final_results:
                     final_results[model_name] = {}
                 if lang not in final_results[model_name]:
@@ -452,6 +463,7 @@ def plot_fewshot():
         )
 
 def plot_table():
+    ignore_length = args.ignore_length
     headers = ["Model"]
     if args.group_by == "evaluation_subsets":
         evaluation_subsets = schemata["ar"]['evaluation_subsets']
@@ -459,7 +471,9 @@ def plot_table():
     elif args.group_by == "attributes_few":
         headers += ["Link", "License", "Tasks", "Domain", "Collection Style", "Volume"]
     elif args.group_by == "attributes":
-        headers  += ["Link", "HF Link", "License", "Language", "Domain", "Form", "Collection Style", "Volume", "Unit", "Ethical Risks", "Provider", "Derived From", "Tokenized", "Host", "Access", "Cost", "Test Split", "Tasks"]
+        headers += ["Link", "HF Link", "License", "Language", "Domain", "Form", "Collection Style", "Volume", "Unit", "Ethical Risks", "Provider", "Derived From", "Tokenized", "Host", "Access", "Cost", "Test Split", "Tasks"]
+    elif args.group_by == 'all':
+        headers += ["Link", "HF Link", "License", "Language", "Domain", "Form", "Collection Style", "Volume", "Unit", "Ethical Risks", "Provider", "Derived From", "Tokenized", "Host", "Access", "Cost", "Test Split", "Tasks", "Venue Title", "Venue Type", "Venue Name", "Authors", "Affiliations", "Abstract"]
     
     headers += ["AVERAGE"]
 
@@ -471,9 +485,9 @@ def plot_table():
     for json_file in json_files:
         results = json.load(open(json_file))
         arxiv_id = get_id_from_path(json_file)
-        schema = get_schema_from_path(json_file)
         if arxiv_id not in ids:
             continue
+        schema = get_schema_from_path(json_file)
         model_name = results["config"]["model_name"]
         pred_metadata = results["metadata"]
         if model_name not in metric_results:
@@ -486,6 +500,7 @@ def plot_table():
             schema = schema,
             return_columns = True
         )
+        print(scores)
         scores = [scores[c] for c in headers[1:] if c in scores]
         
         if use_annotations_paper:
@@ -498,7 +513,7 @@ def plot_table():
     for model_name in metric_results:
         if "human" in model_name.lower():
             continue
-        if len(metric_results[model_name]) == len(ids):
+        if len(metric_results[model_name]) == len(ids) or ignore_length:
             final_results[model_name] = metric_results[model_name]
 
     results = []
