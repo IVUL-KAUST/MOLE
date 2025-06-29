@@ -634,6 +634,9 @@ def process_url(url):
 def cast(metadata, schema="ar"):
     answer_types = schemata[schema]["answer_types"]
     for c in metadata:
+        if c not in answer_types:
+            print(f"Warning: {c} is not in a valid column")
+            continue
         column_type = answer_types[c]
         if column_type == "str":
             try:
