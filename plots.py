@@ -470,13 +470,13 @@ def plot_table():
         headers += [c for c in evaluation_subsets]
     elif args.group_by == "attributes_few":
         headers += ["Link", "License", "Tasks", "Domain", "Collection Style", "Volume"]
+    elif args.group_by == "attributes_hard":
+        headers += ["Link","License", "HF Link", "Volume", "Year", "Derived From", "Host", "Domain", "Collection Style"]
     elif args.group_by == "attributes":
         headers += ["Link", "HF Link", "License", "Language", "Domain", "Form", "Collection Style", "Volume", "Unit", "Ethical Risks", "Provider", "Derived From", "Tokenized", "Host", "Access", "Cost", "Test Split", "Tasks"]
     elif args.group_by == 'all':
         headers += ["Link", "HF Link", "License", "Language", "Domain", "Form", "Collection Style", "Volume", "Unit", "Ethical Risks", "Provider", "Derived From", "Tokenized", "Host", "Access", "Cost", "Test Split", "Tasks", "Venue Title", "Venue Type", "Venue Name", "Authors", "Affiliations", "Abstract"]
-    
     headers += ["AVERAGE"]
-
     if args.use_annotations_paper:
         headers += ["AVERAGE^*"]    
     metric_results = {}
@@ -500,15 +500,13 @@ def plot_table():
             schema = schema,
             return_columns = True
         )
-        print(scores)
-        scores = [scores[c] for c in headers[1:] if c in scores]
-        
+        scores = [scores[c] for c in headers[1:-1] if c in scores]
         if use_annotations_paper:
             average_ignore_mistakes = evaluate_metadata(
                 gold_metadata, pred_metadata, use_annotations_paper=True, schema = schema
             )["AVERAGE"]
             scores += [average_ignore_mistakes]
-        metric_results[model_name].append(scores)
+        metric_results[model_name].append(scores+[np.mean(scores)])
     final_results = {}
     for model_name in metric_results:
         if "human" in model_name.lower():
