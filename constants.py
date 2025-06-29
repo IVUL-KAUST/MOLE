@@ -77,7 +77,7 @@ TEST_DATASETS_IDS_EN = [
     "2009.03300",  # mmlu
     "1905.07830",  # hellaswag
     "1705.03551",  # triviaqa
-    "2306.01116",  # fineweb
+    "2306.01116",  # refineweb
     "1911.11641",  # piqa
     "1907.10641",  # winograd
     "1606.05250",  # squad
@@ -87,7 +87,7 @@ TEST_DATASETS_IDS_EN = [
     "1806.03822",  # squadv2
     "1905.10044",  # boolq
     "2407.12883",  # bright
-    "2504.13161",  # climb
+    "2504.13161",  # climbmix
     "1606.06031",  # lambada
     "1707.06209",  # sciq
     "1704.04683",  # race
@@ -115,7 +115,7 @@ TEST_DATASETS_IDS_FR = [
     "2406.17566",  # FrenchToxicityPrompts
     "2403.16099",  # obsinfox
     "2407.11828",  # vigravox
-    "2405.00821",  
+    "2504.21677",  # 20mins-xd
     "2204.05208",  # FIJO
 ]
 
@@ -136,7 +136,7 @@ TEST_DATASETS_IDS_RU = [
     "2305.14527",  # Solvo
     "2303.16531",  # RusTitW
     "2010.06436",  # RuSemShift
-    "2006.11063",  # summarization
+    "2006.11063",  # gazeta
     "1912.09723",  # SberQuAD
     "2502.07455",  # RusCode
     "2501.05841",  # RFSD
