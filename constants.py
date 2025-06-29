@@ -196,6 +196,7 @@ non_browsing_models = [
     "baseline-first",
     "baseline-last",
     "baseline-random",
+    "baseline-keyword",
 ]
 
 open_router_costs = {
