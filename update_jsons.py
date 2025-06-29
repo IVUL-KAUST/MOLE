@@ -25,7 +25,8 @@ full_names = {
 for lang in langs:
     base_schema = get_base_schema(has_subsets= (lang == 'multi'), lang = lang)
     if lang == 'multi':
-        base_schema["Language"]["options"] = ["Arabic", "English", "French", "Spanish", "German", "Greek", "Bulgarian", "Russian", "Turkish", "Vietnamese", "Thai", "Chinese", "Simplified Chinese", "Hindi", "Swahili", "Urdu", "Bengali", "Finnish", "Japanese", "Korean", "Telugu", "Indonesian", "Italian", "Polish", "Portuguese"]
+        base_schema["Language"]["options"] = ["Arabic", "English", "French", "Spanish", "German", "Greek", "Bulgarian", "Russian", "Turkish", "Vietnamese", "Thai", "Chinese", "Simplified Chinese", "Hindi", "Swahili", "Urdu", "Bengali", "Finnish", "Japanese", "Korean", "Telugu", "Indonesian", "Italian", "Polish", "Portuguese", "Estonian", "Haitian Creole",
+                                              "Eastern Apurímac Quechua", "Tamil", "Sinhala"]
         base_schema["Language"]["answer_type"] = "List[str]"
         base_schema["Language"]["answer_min"] = 2
         base_schema["Language"]["answer_max"] = 25
