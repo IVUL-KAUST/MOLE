@@ -95,6 +95,150 @@ def get_cost(message):
             "input_tokens": stats['tokens_prompt'],
             "output_tokens": stats['tokens_completion'],
         }
+
+def set_default(column, type, schema = "ar"):
+    if "options" in schemata[schema]["schema"][column]:
+        options = schemata[schema]["schema"][column]["options"]
+    else:
+        options = []
+    if type == "str":
+        return options[0] if len(options) > 0 else ""
+    elif type == "int":
+        return options[0] if len(options) > 0 else 0
+    elif type == "float":
+        return options[0] if len(options) > 0 else 0.0
+    elif type == "date[year]":
+        return options[0] if len(options) > 0 else int(date.today().year)
+    elif type == "url":
+        return options[0] if len(options) > 0 else ""
+    elif "List" in type:
+        return [options[0]] if len(options) > 0 else []
+    elif type == "bool":
+        return options[0] if len(options) > 0 else False
+    else:
+        raise ValueError(f"Invalid column type: {type}")
+
+def get_metadata_keyword(
+    paper_text,
+    schema = "ar",
+):
+    message = None
+    error = None
+    predictions = {}
+    cost = {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cost": 0,
+    }
+    columns = schemata[schema]["columns"]
+    types = schemata[schema]["answer_types"]
+    url_pattern = r'(https?://[^\s]+|www\.[^\s]+)'
+    all_urls = re.findall(url_pattern, paper_text)
+    for c in columns:
+        default = set_default(c, types[c], schema)
+        if c == "Link":
+            predictions[c] = all_urls[0] if len(all_urls) > 0 else default
+        elif c == "HF Link":
+            hf_url = [url for url in all_urls if "huggingface.co" in url or "hf.co" in url]
+            predictions[c] = hf_url[0] if len(hf_url) > 0 else default
+        elif c == "License":
+            predictions[c] = default
+        elif c == "Domain":
+            value = []
+            if any([keyword in paper_text.lower() for keyword in ['twitter', 'youtube', 'facebook']]):
+                value.append("social media")
+            if 'news' in paper_text.lower():
+                value.append("news articles")
+            if 'review' in paper_text.lower():
+                value.append("reviews")
+            if 'commentary' in paper_text.lower():
+                value.append("commentary")
+            if 'book' in paper_text.lower():
+                value.append("books")
+            if 'wiki' in paper_text.lower():
+                value.append("wikipedia")
+            if 'web' in paper_text.lower():
+                value.append("web pages")
+            
+            if len(value) > 0:
+                predictions[c] = value
+            else:
+                predictions[c] = default
+        elif c == "Collection Style":
+            value = []
+            if 'crawling' in paper_text.lower():
+                value.append("crawling")
+            if 'manual' in paper_text.lower():
+                value.append("manual curation")
+            if len(value) > 0:  
+                predictions[c] = value
+            else:
+                predictions[c] = default
+        elif c == "Form":
+            value = ''
+            if 'text' in paper_text.lower():
+                value = "text"
+            elif 'speech' in paper_text.lower():
+                value = "spoken"
+            elif 'image' in paper_text.lower():
+                value = "images"
+            elif 'videos' in paper_text.lower():
+                value = "videos"
+            else:
+                value = default
+            predictions[c] = value
+        elif c == "Unit":
+            if predictions['Form'] == "text":
+                if 'tokens' in paper_text.lower():
+                    value = "tokens"
+                elif 'sentences' in paper_text.lower():
+                    value = "sentences"
+                elif 'documents' in paper_text.lower():
+                    value = "documents"
+            elif predictions['Form'] == "spoken":
+                value = "hours"
+            elif predictions['Form'] == "images":
+                value = "images"
+            elif predictions['Form'] == "videos":
+                value = "videos"
+            else:
+                value = default
+            predictions[c] = value
+        elif c == "Tokenized":
+            if 'tokenized' in paper_text.lower():
+                value = True
+            else:
+                value = False
+            predictions[c] = value
+        elif c == "Host":
+            options = schemata[schema]["schema"][c]["options"]
+            value = [option for option in options if any([option in url for url in all_urls])]
+            predictions[c] = value[0] if len(value) > 0 else default
+        elif c == "Access":
+            if 'public' in paper_text.lower():
+                value = "Free"
+            else:
+                value = default
+            predictions[c] = value
+        elif c == "Test Split":
+            if 'test' in paper_text.lower() and 'train' in paper_text.lower():
+                value = True
+            else:
+                value = False
+            predictions[c] = value
+        elif c == "Tasks":
+            value = []
+            options = schemata[schema]["schema"][c]["options"]
+            for option in options:
+                if option in paper_text.lower():
+                    value.append(option)
+            predictions[c] = value if len(value) > 0 else default
+        else:
+            predictions[c] = default
+        
+          
+    return predictions
+
 def get_metadatav2(
     paper_text="",
     model_name="gemini-1.5-flash",
@@ -104,7 +248,8 @@ def get_metadatav2(
     schema="ar",
     use_cot=True,
     few_shot = 0,
-    max_retries = 3
+    max_retries = 3,
+    title = ""
 ):
     cost = {
         "input_tokens": 0,
@@ -146,7 +291,14 @@ def get_metadatav2(
                         Output JSON:
                         """
             sys_prompt = schemata[schema]["system_prompt"]
-        
+        elif title != "":
+            prompt = f"""
+                        You have the following Metadata: {metadata} extracted from a paper and the following Title: {title}
+                        Output JSON:
+                        """
+            sys_prompt = schemata[schema]["system_prompt"].replace("Paper Text", "Title")
+        else:
+            raise ValueError("No input provided")
         messages = []
         messages.append({"role": "system", "content": sys_prompt})
         messages.append({"role": "user", "content": prompt})
@@ -365,8 +517,14 @@ def run(
     results_path = "results_latex",
     pdf_mode = None,
     repeat_on_error = False,
-    context_size = "all"
+    context_size = "all",
+    use_title = False, 
 ):
+    if use_title:
+        title = get_title_from_link(link)
+    else:
+        title = ""
+    
     if paper_pdf is not None and pdf_mode is None:
         pdf_mode = "plumber"
     use_pdf = False if pdf_mode is None else True
@@ -434,7 +592,7 @@ def run(
         if link != "":
             show_info(f"🔍 Using arXiv link {link} ...", st_context=st_context)
             search_results = [
-                {"summary": "", "article_url": link, "title": "", "published": year}
+                {"summary": "", "article_url": link, "title": title, "published": year}
             ]
         elif paper_pdf != None:
             show_info("🔍 Using uploaded PDF ...", st_context=st_context)
@@ -518,7 +676,7 @@ def run(
                 for model_name in models:
                     start_time = time.time()
                     model_name = model_name.replace("/", "_")
-                    if model_name not in non_browsing_models and paper_text == "":
+                    if paper_text == "" and not use_title:
                         paper_text = extract_paper_text(paper_path, use_pdf = use_pdf, st_context=st_context, pdf_mode = pdf_mode, context_size = context_size)
                         open(f"{save_path}/paper_text.txt", "w").write(paper_text)
                     curr_idx[0] += 1
@@ -581,6 +739,10 @@ def run(
                             title=title,
                             schema=schema,
                         )
+                    elif "keyword" in model_name.lower():
+                        metadata = get_metadata_keyword(
+                            paper_text, schema=schema
+                        )
                     elif "baseline" in model_name.lower():
                         message, metadata = "", {}
                     else:
@@ -595,7 +757,7 @@ def run(
                             cost = results["cost"]
                         else:
                             message, metadata, cost, error = get_metadatav2(
-                                paper_text, model_name, schema=schema, few_shot = few_shot
+                                paper_text, model_name, schema=schema, few_shot = few_shot, title = title
                             )
                         if browse_web:
                             browsing_link = get_repo_link(
@@ -823,6 +985,11 @@ def create_args():
         type=str,
         default="all",
         help="context size to use",
+    )
+    parser.add_argument(
+        "--use_title",
+        action="store_true",
+        help="use title instead of paper text",
     )
 
     # Parse arguments
