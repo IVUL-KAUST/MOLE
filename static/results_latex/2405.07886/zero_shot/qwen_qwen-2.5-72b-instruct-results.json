@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "summarization-dataset",
+        "Link": "https://github.com/iis-research-team/summarization-dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A multimodal dataset of Russian-language scientific papers covering 7 domains, including texts, tables, and figures.",
+        "Volume": 420.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Novosibirsk State University",
+            "A.P. Ershov Institute of Informatics Systems"
+        ],
+        "Derived From": [],
+        "Paper Title": "Russian-Language Multimodal Dataset for Automatic Summarization of Scientific Papers",
+        "Paper Link": "https://github.com/iis-research-team/summarization-dataset",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Tsanda Alena",
+            "Bruches Elena"
+        ],
+        "Affiliations": [
+            "Novosibirsk State University, Russia",
+            "A.P. Ershov Institute of Informatics Systems, Russia"
+        ],
+        "Abstract": "The paper discusses the creation of a multimodal dataset of Russian-language scientific papers and testing of existing language models for the task of automatic text summarization. A feature of the dataset is its multimodal data, which includes texts, tables and figures. The paper presents the results of experiments with two language models: Gigachat from SBER and YandexGPT from Yandex. The dataset consists of 420 papers and is publicly available on https://github.com/iis-research-team/summarization-dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00190898,
+        "input_tokens": 12341,
+        "output_tokens": 439
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2405.07886"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

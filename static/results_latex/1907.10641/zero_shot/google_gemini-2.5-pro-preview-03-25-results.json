@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "WinoGrande",
+        "Link": "http://winogrande.allenai.org",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A large-scale dataset of 44k commonsense reasoning problems, inspired by the original Winograd Schema Challenge (WSC). The dataset was created through a carefully designed crowdsourcing procedure and then filtered for systematic bias reduction using a novel AfLite algorithm. The resulting dataset is significantly more challenging for state-of-the-art models while remaining easy for humans.",
+        "Volume": 43972.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Allen Institute for Artificial Intelligence",
+            "University of Washington"
+        ],
+        "Derived From": [],
+        "Paper Title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
+        "Paper Link": "https://arxiv.org/abs/1907.10641",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "fill-in-the blank"
+        ],
+        "Venue Title": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "Venue Type": "conference",
+        "Venue Name": "AAAI Conference on Artificial Intelligence",
+        "Authors": [
+            "Keisuke Sakaguchi",
+            "Ronan Le Bras",
+            "Chandra Bhagavatula",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Allen Institute for Artificial Intelligence",
+            "University of Washington"
+        ],
+        "Abstract": "The Winograd Schema Challenge (WSC) cite{winograd}, a benchmark for commonsense reasoning, is a set of 273 expert-crafted pronoun resolution problems originally designed to be unsolvable for statistical models that rely on selectional preferences or word associations. However, recent advances in neural language models have already reached around 90% accuracy on variants of WSC. This raises an important question whether these models have truly acquired robust commonsense capabilities or whether they rely on spurious biases in the datasets that lead to an overestimation of the true capabilities of machine commonsense.nnTo investigate this question, we introduce WinoGrande, a large-scale dataset of 44k problems, inspired by the original WSC design, but adjusted to improve both the scale and the hardness of the dataset. The key steps of the dataset construction consist of (1) a carefully designed crowdsourcing procedure, followed by (2) systematic bias reduction using a novel AfLite algorithm that generalizes human-detectable word associations to machine-detectable embedding associations. The best state-of-the-art methods on WinoGrande achieve 59.4 -- 79.1%, which are ~15-35% (absolute) below human performance of 94.0%, depending on the amount of the training data allowed (2% -- 100% respectively).nnFurthermore, we establish new state-of-the-art results on five related benchmarks --- WSC (-> 90.1%), DPR (-> 93.1%), COPA(-> 90.6%), KnowRef (-> 85.6%), and Winogender (-> 97.1%). These results have dual implications: on one hand, they demonstrate the effectiveness of WinoGrande when used as a resource for transfer learning. On the other hand, they raise a concern that we are likely to be overestimating the true capabilities of machine commonsense across all these benchmarks. We emphasize the importance of algorithmic bias reduction in existing and future benchmarks to mitigate such overestimation."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.05933375,
+        "input_tokens": 18189,
+        "output_tokens": 1518
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1907.10641"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

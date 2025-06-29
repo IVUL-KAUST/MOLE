@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "PxSLU",
+        "Link": "https://doi.org/10.5281/zenodo.6482586",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": "fr",
+        "Domain": [
+            "captions",
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A spoken drug prescription dataset in French for spoken language understanding",
+        "Volume": 4.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Univ. Grenoble Alpes",
+            "CHU Grenoble Alpes",
+            "Calystene SA"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Spoken Drug Prescription Dataset in French for Spoken Language Understanding",
+        "Paper Link": "https://arxiv.org/abs/2207.08292",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "natural language inference"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ali Can Kocabiyikoglu",
+            "Fran\u00e7ois Portet",
+            "Prudence Gibert",
+            "Herv\u00e9 Blanchon",
+            "Jean-Marc Babouchkine",
+            "Ga\u00ebtan Gavazzi"
+        ],
+        "Affiliations": [
+            "Univ. Grenoble Alpes, CNRS, Inria, Grenoble INP, LIG",
+            "CHU Grenoble Alpes",
+            "Calystene SA",
+            "Clinique de m\u00e9decine g\u00e9riatrique, CHU Grenoble Alpes"
+        ],
+        "Abstract": "Spoken medical dialogue systems are increasingly attracting interest to enhance access to healthcare services and improve quality and traceability of patient care. This paper presents PxSLU Corpus, a drug prescription dataset comprising around 4h of speech recordings acquired from human-machine interactions using a prototype of a goal-oriented dialogue system used for prescribing medicine."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00217785,
+        "input_tokens": 13766,
+        "output_tokens": 403
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2207.08292"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

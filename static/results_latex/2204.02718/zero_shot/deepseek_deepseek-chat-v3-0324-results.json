@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "Japanese Fake News Dataset",
+        "Link": "https://hkefka385.github.io/dataset/fakenews-japanese/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "jp",
+        "Domain": [
+            "social media",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A Japanese fake news dataset annotated with fine-grained labels to capture various aspects of fake news, including factuality, intention, harmfulness, and more.",
+        "Volume": 307.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "SANKEN Osaka University",
+            "NARA Institute of Science and Technology"
+        ],
+        "Derived From": [],
+        "Paper Title": "Annotation-Scheme Reconstruction for 'Fake News' and Japanese Fake News Dataset",
+        "Paper Link": "https://arxiv.org/abs/2204.02718",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "fake news detection",
+            "sentiment analysis",
+            "language modeling",
+            "information retrieval",
+            "sentiment analysis"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Taichi Murayama",
+            "Shohei Hisada",
+            "Makoto Uehara",
+            "Shoko Wakamiya",
+            "Eiji Aramaki"
+        ],
+        "Affiliations": [
+            "SANKEN Osaka University",
+            "NARA Institute of Science and Technology"
+        ],
+        "Abstract": "Fake news provokes many societal problems; therefore, there has been extensive research on fake news detection tasks to counter it. Many fake news datasets were constructed as resources to facilitate this task. Contemporary research focuses almost exclusively on the factuality aspect of the news. However, this aspect alone is insufficient to explain 'fake news,' which is a complex phenomenon that involves a wide range of issues. To fully understand the nature of each instance of fake news, it is important to observe it from various perspectives, such as the intention of the false news disseminator, the harmfulness of the news to our society, and the target of the news. We propose a novel annotation scheme with fine-grained labeling based on detailed investigations of existing fake news datasets to capture these various aspects of fake news. Using the annotation scheme, we construct and publish the first Japanese fake news dataset. The annotation scheme is expected to provide an in-depth understanding of fake news. We plan to build datasets for both Japanese and other languages using our scheme. Our Japanese dataset is published at https://hkefka385.github.io/dataset/fakenews-japanese/."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0108537,
+        "input_tokens": 14137,
+        "output_tokens": 596
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.02718"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

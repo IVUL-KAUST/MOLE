@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "https://aclanthology.org/D17-1161/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "This paper introduces STAIR Captions, a large-scale Japanese image caption dataset. The dataset consists of 80k image-caption pairs.",
+        "Volume": 80000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Tokyo"
+        ],
+        "Derived From": [],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://aclanthology.org/D17-1161/",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "ResearchGate",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "image captioning"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Yuya Yoshikawa",
+            "Yutaro Shigeto",
+            "Akikazu Takeuchi"
+        ],
+        "Affiliations": [
+            "University of Tokyo"
+        ],
+        "Abstract": "We present STAIR Captions, a large-scale Japanese image caption dataset. The dataset contains approximately 80k image-caption pairs collected from the web. We describe the dataset construction process and provide baseline experimental results for image captioning. The dataset is publicly available for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0004999,
+        "input_tokens": 3463,
+        "output_tokens": 405
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

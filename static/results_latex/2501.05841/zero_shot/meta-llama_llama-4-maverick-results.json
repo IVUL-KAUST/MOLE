@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "Russian Financial Statements Database",
+        "Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "HF Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "public datasets",
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "A firm-level collection of the universe of financial statements",
+        "Volume": 56.6,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "European University at Saint Petersburg",
+            "The Institute for the Rule of Law"
+        ],
+        "Derived From": [],
+        "Paper Title": "Russian Financial Statements Database: A firm-level collection of the universe of financial statements",
+        "Paper Link": "https://doi.org/10.5281/zenodo.14622209",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition",
+            "information retrieval"
+        ],
+        "Venue Title": "Zenodo",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Sergey Bondarkov",
+            "Viktor Ledenev",
+            "Dmitry Skougarevskiy"
+        ],
+        "Affiliations": [
+            "European University at Saint Petersburg, The Institute for the Rule of Law"
+        ],
+        "Abstract": "The Russian Financial Statements Database (RFSD) is an open, harmonized collection of annual unconsolidated financial statements of the universe of Russian firms in 2011--2023. It is the first open data set with information on every active firm in the country, including non-filing firms."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00443862,
+        "input_tokens": 25431,
+        "output_tokens": 415
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

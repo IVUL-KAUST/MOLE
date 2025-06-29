@@ -1,0 +1,104 @@
+{
+    "metadata": {
+        "Name": "FREEM max",
+        "Link": "https://github.com/LoicGrobol/zeldarose",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "books",
+            "news articles",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A large corpus of Early Modern French texts collected from various sources, including institutional datasets, research projects, and personal transcriptions.",
+        "Volume": 185643482.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Inria",
+            "Sorbonne Universit\u00e9",
+            "Universit\u00e9 de Gen\u00e8ve",
+            "LIGM, Universit\u00e9 Gustave Eiffel, CNRS"
+        ],
+        "Derived From": [
+            "Frantext int\u00e9gral",
+            "Electronic Enlightenment",
+            "Antonomaz project",
+            "Actis Pacis Westphalicae",
+            "Biblioth\u00e8ques virtuelles humanistes",
+            "Corpus \u00e9lectronique de la premi\u00e8re modernit\u00e9",
+            "Cond\u00e9 project",
+            "Corpus Descartes",
+            "Biblioth\u00e8que dramatique",
+            "Fabula numerica",
+            "Fonds Boissy",
+            "Mercure Galant",
+            "Rousseau Online",
+            "Sermo",
+            "Th\u00e9\u00e2tre classique"
+        ],
+        "Paper Title": "From FREEM to D\u2019AlemBERT: a Large Corpus and a Language Model for Early Modern French",
+        "Paper Link": "https://www.lrec-conf.org/proceedings/lrec2022/pdf/2022.lrec-1.116.pdf",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "part of speech tagging",
+            "text generation",
+            "language modeling"
+        ],
+        "Venue Title": "Proceedings of the 13th Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "LREC 2022",
+        "Authors": [
+            "Simon Gabay",
+            "Pedro Ortiz Suarez",
+            "Alexandre Bartz",
+            "Alix Chagu\u00e9",
+            "Rachel Bawden",
+            "Philippe Gambette",
+            "Beno\u00eet Sagot"
+        ],
+        "Affiliations": [
+            "Inria",
+            "Sorbonne Universit\u00e9",
+            "Universit\u00e9 de Gen\u00e8ve",
+            "LIGM, Universit\u00e9 Gustave Eiffel, CNRS"
+        ],
+        "Abstract": "Language models for historical states of language are becoming increasingly important to allow the optimal digitisation and analysis of old textual sources. Because these historical states are at the same time more complex to process and more scarce in the corpora available, specific efforts are necessary to train natural language processing (NLP) tools adapted to the data. In this paper, we present our efforts to develop NLP tools for Early Modern French (historical French from the 16th to the 18th centuries). We present the FREEM max corpus of Early Modern French and D'AlemBERT, a RoBERTa-based language model trained on FREEM max. We evaluate the usefulness of D'AlemBERT by fine-tuning it on a part-of-speech tagging task, outperforming previous work on the test set. Importantly, we find evidence for the transfer learning capacity of the language model, since its performance on lesser-resourced time periods appears to have been boosted by the more resourced ones. We release D'AlemBERT and the open-sourced subpart of the FREEM max corpus."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00349416,
+        "input_tokens": 25136,
+        "output_tokens": 755
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.09452"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

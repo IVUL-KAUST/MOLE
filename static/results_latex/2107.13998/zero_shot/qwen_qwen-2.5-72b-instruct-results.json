@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "JAFFE",
+        "Link": "https://zenodo.org/record/3451524",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 1996,
+        "Language": "jp",
+        "Domain": [
+            "social media",
+            "books"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A set of facial expression images of Japanese women, intended for use in studying face perception and affective computing.",
+        "Volume": 213.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Ritsumeikan University",
+            "Kyushu University"
+        ],
+        "Derived From": [],
+        "Paper Title": "\u2018Excavating AI\u2019 Re-excavated: Debunking a Fallacious Account of the JAFFE Dataset",
+        "Paper Link": "https://excavating.ai/",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "optical character recognition",
+            "image captioning",
+            "text generation"
+        ],
+        "Venue Title": "\u2018Excavating AI\u2019 Re-excavated: Debunking a Fallacious Account of the JAFFE Dataset",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Michael J. Lyons"
+        ],
+        "Affiliations": [
+            "Ritsumeikan University"
+        ],
+        "Abstract": "Twenty-five years ago, my colleagues Miyuki Kamachi and Jiro Gyoba and I designed and photographed JAFFE, a set of facial expression images intended for use in a study of face perception. In 2019, without seeking permission or informing us, Kate Crawford and Trevor Paglen exhibited JAFFE in two widely publicized art shows. In addition, they published a nonfactual account of the images in the essay \u2018Excavating AI: The Politics of Images in Machine Learning Training Sets.\u2019 The present article recounts the creation of the JAFFE dataset and unravels each of Crawford and Paglen's fallacious statements. I also discuss JAFFE more broadly in connection with research on facial expression, affective computing, and human-computer interaction."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00218021,
+        "input_tokens": 14782,
+        "output_tokens": 501
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2107.13998"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

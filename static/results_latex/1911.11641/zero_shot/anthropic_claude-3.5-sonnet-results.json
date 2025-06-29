@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "PIQA",
+        "Link": "http://yonatanbisk.com/piqa",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A dataset for evaluating physical commonsense understanding through question answering about everyday physical interactions and object properties",
+        "Volume": 16000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Allen Institute for Artificial Intelligence",
+            "Microsoft Research AI",
+            "Carnegie Mellon University",
+            "University of Washington"
+        ],
+        "Derived From": [],
+        "Paper Title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+        "Paper Link": "http://yonatanbisk.com/piqa",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "AAAI",
+        "Venue Type": "conference",
+        "Venue Name": "AAAI Conference on Artificial Intelligence",
+        "Authors": [
+            "Yonatan Bisk",
+            "Rowan Zellers",
+            "Ronan Le Bras",
+            "Jianfeng Gao",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Allen Institute for Artificial Intelligence",
+            "Microsoft Research AI",
+            "Carnegie Mellon University",
+            "Paul G. Allen School for Computer Science and Engineering, University of Washington"
+        ],
+        "Abstract": "To apply eyeshadow without a brush, should I use a cotton swab or a toothpick? Questions requiring this kind of physical commonsense pose a challenge to today's natural language understanding systems. While recent pretrained models (such as BERT) have made progress on question answering over more abstract domains -- such as news articles and encyclopedia entries, where text is plentiful -- in more physical domains, text is inherently limited due to reporting bias. Can AI systems learn to reliably answer physical commonsense questions without experiencing the physical world? In this paper, we introduce the task of physical commonsense reasoning and a corresponding benchmark dataset Physical Interaction: Question Answering or PIQA. Though humans find the dataset easy (95% accuracy), large pretrained models struggle (~77%). We provide analysis about the dimensions of knowledge that existing models lack, which offers significant opportunities for future research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.070311,
+        "input_tokens": 17555,
+        "output_tokens": 527
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1911.11641"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

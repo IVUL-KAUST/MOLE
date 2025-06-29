@@ -1,0 +1,95 @@
+{
+    "metadata": {
+        "Name": "MMLU-Pro",
+        "Link": "https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro",
+        "HF Link": "https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A comprehensive benchmark designed for proficient-level multi-discipline language understanding and reasoning spanning 14 diverse domains",
+        "Volume": 12032.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Waterloo",
+            "University of Toronto",
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [
+            "MMLU",
+            "STEM Website",
+            "TheoremQA",
+            "SciBench"
+        ],
+        "Paper Title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2404.14219",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "arXiv preprint arXiv:2404.14219",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yubo Wang",
+            "Xueguang Ma",
+            "Ge Zhang",
+            "Yuansheng Ni",
+            "Abhranil Chandra",
+            "Shiguang Guo",
+            "Weiming Ren",
+            "Aaran Arulraj",
+            "Xuan He",
+            "Ziyan Jiang",
+            "Tianle Li",
+            "Max Ku",
+            "Kai Wang",
+            "Alex Zhuang",
+            "Rongqi Fan",
+            "Xiang Yue",
+            "Wenhu Chen"
+        ],
+        "Affiliations": [
+            "University of Waterloo",
+            "University of Toronto",
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "In the age of large-scale language models, benchmarks like the Massive Multitask Language Understanding (MMLU) have been pivotal in pushing the boundaries of what AI can achieve in language comprehension and reasoning across diverse domains. However, as models continue to improve, their performance on these benchmarks has begun to plateau, making it increasingly difficult to discern differences in model capabilities. This paper introduces MMLU-Pro, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by integrating more challenging, reasoning-focused questions and expanding the choice set from four to ten options. Additionally, MMLU-Pro eliminates the trivial and noisy questions in MMLU. Our experimental results show that MMLU-Pro not only raises the challenge, causing a significant drop in accuracy by 16% to 33% compared to MMLU but also demonstrates greater stability under varying prompts. With 24 different prompt styles tested, the sensitivity of model scores to prompt variations decreased from 4-5% in MMLU to just 2% in MMLU-Pro. Additionally, we found that models utilizing Chain of Thought (CoT) reasoning achieved better performance on MMLU-Pro compared to direct answering, which is in stark contrast to the findings on the original MMLU, indicating that MMLU-Pro includes more complex reasoning questions. Our assessments confirm that MMLU-Pro is a more discriminative benchmark to better track progress in the field."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.137628,
+        "input_tokens": 35366,
+        "output_tokens": 746
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.01574"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

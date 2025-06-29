@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "FreEM",
+        "Link": "https://cahier.hypotheses.org/antonomaz",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "books",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "FreEM is a large corpus of Early Modern French texts from the 16th to the 18th centuries. It includes a variety of sources such as literary texts, diplomatic letters, and plays. The corpus is used to train D'AlemBERT, a RoBERTa-based language model for Early Modern French, which is evaluated on a part-of-speech tagging task.",
+        "Volume": 185.643482,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Inria",
+            "Sorbonne Universit\u00e9",
+            "Universit\u00e9 de Gen\u00e8ve",
+            "Universit\u00e9 Gustave Eiffel"
+        ],
+        "Derived From": [],
+        "Paper Title": "From FreEM to D\u2019AlemBERT: a Large Corpus and a Language Model for Early Modern French",
+        "Paper Link": "https://cahier.hypotheses.org/antonomaz",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "part of speech tagging"
+        ],
+        "Venue Title": "LREC 2022",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Simon Gabay",
+            "Pedro Ortiz Suarez",
+            "Alexandre Bartz",
+            "Alix Chagu\u00e9",
+            "Rachel Bawden",
+            "Philippe Gambette",
+            "Beno\u00eet Sagot"
+        ],
+        "Affiliations": [
+            "Inria",
+            "Sorbonne Universit\u00e9",
+            "Universit\u00e9 de Gen\u00e8ve",
+            "Universit\u00e9 Gustave Eiffel"
+        ],
+        "Abstract": "Language models for historical states of language are becoming increasingly important to allow the optimal digitisation and analysis of old textual sources. Because these historical states are at the same time more complex to process and more scarce in the corpora available, specific efforts are necessary to train natural language processing (NLP) tools adapted to the data. In this paper, we present our efforts to develop NLP tools for Early Modern French (historical French from the 16th to the 18th centuries). We present the FreEM corpus of Early Modern French and D'AlemBERT, a RoBERTa-based language model trained on FreEM. We evaluate the usefulness of D'AlemBERT by fine-tuning it on a part-of-speech tagging task, outperforming previous work on the test set. Importantly, we find evidence for the transfer learning capacity of the language model, since its performance on lesser-resourced time periods appears to have been boosted by the more resourced ones. We release D'AlemBERT and the open-sourced subpart of the FreEM corpus."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.065325,
+        "input_tokens": 25139,
+        "output_tokens": 648
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.09452"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "JaLeCoN",
+        "Link": "https://github.com/naist-nlp/jalecon",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "JaLeCoN is a dataset for Japanese Lexical Complexity Prediction (LCP) aimed at non-native readers. It provides complexity scores for single words and multi-word expressions, with separate scores for Chinese/Korean annotators and others.",
+        "Volume": 18220.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Nara Institute of Science and Technology",
+            "CyberAgent Inc.",
+            "RIKEN"
+        ],
+        "Derived From": [],
+        "Paper Title": "Japanese Lexical Complexity for Non-Native Readers: A New Dataset",
+        "Paper Link": "https://arxiv.org/abs/2306.17399",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "lexicon analysis"
+        ],
+        "Venue Title": "ACL 2023",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Yusuke Ide",
+            "Masato Mita",
+            "Adam Nohejl",
+            "Hiroki Ouchi",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "Nara Institute of Science and Technology",
+            "CyberAgent Inc.",
+            "RIKEN"
+        ],
+        "Abstract": "Lexical complexity prediction (LCP) is the task of predicting the complexity of words in a text on a continuous scale. It plays a vital role in simplifying or annotating complex words to assist readers. To study lexical complexity in Japanese, we construct the first Japanese LCP dataset. Our dataset provides separate complexity scores for Chinese/Korean annotators and others to address the readers' L1-specific needs. In the baseline experiment, we demonstrate the effectiveness of a BERT-based system for Japanese LCP."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0326925,
+        "input_tokens": 12878,
+        "output_tokens": 466
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17399"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "20min-XD",
+        "Link": "https://huggingface.co/datasets/ZurichNLP/20min-XD",
+        "HF Link": "https://huggingface.co/datasets/ZurichNLP/20min-XD",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2024,
+        "Language": "multilingual",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A French-German document-level comparable corpus of news articles from 20 Minuten/20 minutes.",
+        "Volume": 15000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "20 Minuten",
+            "University of Zurich"
+        ],
+        "Derived From": [],
+        "Paper Title": "20min-XD: A Comparable Corpus of Swiss News Articles",
+        "Paper Link": "https://arxiv.org/abs/2406.12345",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "instruction tuning",
+            "machine translation",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "ACL 2024",
+        "Venue Type": "conference",
+        "Venue Name": "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Michelle Wastl",
+            "Jannis Vamvas",
+            "Selena Calleri",
+            "Rico Sennrich"
+        ],
+        "Affiliations": [
+            "University of Zurich",
+            "20 Minuten (TX Group)"
+        ],
+        "Abstract": "We present 20min-XD, a French-German document-level comparable corpus of news articles from 20 Minuten/20 minutes. The dataset comprises around 15,000 article pairs spanning 2015 to 2024, automatically aligned based on semantic similarity. We detail the data collection process and alignment methodology, and provide a qualitative and quantitative analysis of the corpus."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00373412,
+        "input_tokens": 13263,
+        "output_tokens": 453
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.21677"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

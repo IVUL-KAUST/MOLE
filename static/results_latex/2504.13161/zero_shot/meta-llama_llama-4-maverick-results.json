@@ -1,0 +1,94 @@
+{
+    "metadata": {
+        "Name": "CLIMB",
+        "Link": "https://huggingface.co/datasets/NovaSearch/CLIMB",
+        "HF Link": "https://huggingface.co/datasets/NovaSearch/CLIMB",
+        "License": "Apache-2.0",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "news articles",
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset for language model pre-training using CLustering-based Iterative Data Mixture Bootstrapping",
+        "Volume": 1.2,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "NVIDIA",
+            "Georgia Institute of Technology"
+        ],
+        "Derived From": [
+            "Nemotron-CC",
+            "smollm-corpus"
+        ],
+        "Paper Title": "CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
+        "Paper Link": "https://arxiv.org/abs/2406.03476",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "ArXiv",
+        "Authors": [
+            "Shizhe Diao",
+            "Yu Yang",
+            "Yonggan Fu",
+            "Xin Dong",
+            "Dan Su",
+            "Markus Kliegl",
+            "Zijia Chen",
+            "Peter Belcak",
+            "Yoshi Suhara",
+            "Hongxu Yin",
+            "Mostofa Patwary",
+            "Yingyan (Celine) Lin",
+            "Jan Kautz",
+            "Pavlo Molchanov"
+        ],
+        "Affiliations": [
+            "NVIDIA",
+            "OpenAI",
+            "Georgia Institute of Technology"
+        ],
+        "Abstract": "Pre-training datasets are typically collected from web content and lack inherent domain divisions. For instance, widely used datasets like Common Crawl do not include explicit domain labels, while manually curating labeled datasets such as The Pile is labor-intensive. Consequently, identifying an optimal pre-training data mixture remains a challenging problem, despite its significant benefits for pre-training performance. To address these challenges, we propose CLustering-based Iterative Data Mixture Bootstrapping (CLIMB), an automated framework that discovers, evaluates, and refines data mixtures in a pre-training setting. Specifically, CLIMB embeds and clusters large-scale datasets in a semantic space and then iteratively searches for optimal mixtures using a smaller proxy model and a predictor. When continuously trained on 400B tokens with this mixture, our 1B model exceeds the state-of-the-art Llama-3.2-1B by 2.0%. Moreover, we observe that optimizing for a specific domain (e.g., Social Sciences) yields a 5% improvement over random sampling. Finally, we introduce ClimbLab, a filtered 1.2-trillion-token corpus with 20 clusters as a research playground, and ClimbMix, a compact yet powerful 400-billion-token dataset designed for efficient pre-training that delivers superior performance under an equal token budget. We analyze the final data mixture, elucidating the characteristics of an optimal data mixture."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00469746,
+        "input_tokens": 24232,
+        "output_tokens": 775
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.13161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

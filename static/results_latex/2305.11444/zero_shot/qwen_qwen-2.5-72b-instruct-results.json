@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "Arukikata Travelogue Dataset",
+        "Link": "https://www.nii.ac.jp/dsc/idr/arukikata/",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A Japanese text dataset with over 31 million words, comprising 4,672 domestic and 9,607 overseas travelogues. The dataset is free for academic research and aims to ensure transparency and reproducibility in research.",
+        "Volume": 31563090.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "NAIST",
+            "JAIST",
+            "NICT",
+            "RIKEN"
+        ],
+        "Derived From": [
+            "Arukikata Travelogue Posting Service"
+        ],
+        "Paper Title": "Arukikata Travelogue Dataset",
+        "Paper Link": "https://www.nii.ac.jp/dsc/idr/arukikata/",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "ResearchGate",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis",
+            "named entity recognition",
+            "information retrieval"
+        ],
+        "Venue Title": "TACL",
+        "Venue Type": "journal",
+        "Venue Name": "Transactions of the Association for Computational Linguistics",
+        "Authors": [
+            "Hiroki Ouchi",
+            "Hiroyuki Shindo",
+            "Shoko Wakamiya",
+            "Yuki Matsuda",
+            "Naoya Inoue",
+            "Shohei Higashiyama",
+            "Satoshi Nakamura",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "NAIST",
+            "JAIST",
+            "NICT",
+            "RIKEN"
+        ],
+        "Abstract": "We have constructed Arukikata Travelogue Dataset and released it free of charge for academic research. This dataset is a Japanese text dataset with a total of over 31 million words, comprising 4,672 Japanese domestic travelogues and 9,607 overseas travelogues. Before providing our dataset, there was a scarcity of widely available travelogue data for research purposes, and each researcher had to prepare their own data. This hinders the replication of existing studies and fair comparative analysis of experimental results. Our dataset enables any researchers to conduct investigation on the same data and to ensure transparency and reproducibility in research. In this paper, we describe the academic significance, characteristics, and prospects of our dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00139857,
+        "input_tokens": 9390,
+        "output_tokens": 571
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.11444"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

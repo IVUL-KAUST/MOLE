@@ -1,0 +1,167 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "Haitian Creole",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Eastern Apur\u00edmac Quechua",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Eastern Apur\u00edmac Quechua"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Mandarin Chinese",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://github.com/cambridgeltl/xcopa",
+        "HF Link": "https://huggingface.co/datasets/xcopa",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Estonian",
+            "Haitian Creole",
+            "Indonesian",
+            "Italian",
+            "Eastern Apur\u00edmac Quechua",
+            "Swahili",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Chinese"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "XCOPA is a multilingual dataset for causal commonsense reasoning. It was created by translating the English COPA dataset's validation and test sets into 11 typologically diverse languages. The task is a multiple-choice classification to select the more plausible cause or effect for a given premise.",
+        "Volume": 7600.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Language Technology Lab, TAL, University of Cambridge",
+            "Data and Web Science Group, University of Mannheim"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.20",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Edoardo M. Ponti",
+            "Goran Glava\u0161",
+            "Olga Majewska",
+            "Qianchu Liu",
+            "Ivan Vuli\u0107",
+            "Anna Korhonen"
+        ],
+        "Affiliations": [
+            "Language Technology Lab, TAL, University of Cambridge, UK",
+            "Data and Web Science Group, University of Mannheim, Germany"
+        ],
+        "Abstract": "In order to simulate human language capacity, natural language processing systems must be able to reason about the dynamics of everyday situations, including their possible causes and effects. Moreover, they should be able to generalise the acquired world knowledge to new languages, modulo cultural differences. Advances in machine reasoning and cross-lingual transfer depend on the availability of challenging evaluation benchmarks. Motivated by both demands, we introduce Cross-lingual Choice of Plausible Alternatives (XCOPA), a typologically diverse multilingual dataset for causal commonsense reasoning in 11 languages, which includes resource-poor languages like Eastern Apur\u00edmac Quechua and Haitian Creole. We evaluate a range of state-of-the-art models on this novel dataset, revealing that the performance of current methods based on multilingual pretraining and zero-shot fine-tuning falls short compared to translation-based transfer. Finally, we propose strategies to adapt multilingual models to out-of-sample resource-lean languages where only a small corpus or a bilingual dictionary is available, and report substantial improvements over the random baseline. The XCOPA dataset is freely available at github.com/cambridgeltl/xcopa."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.07734,
+        "input_tokens": 20802,
+        "output_tokens": 2059
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

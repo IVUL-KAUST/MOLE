@@ -1,0 +1,116 @@
+{
+    "metadata": {
+        "Name": "Multi2WOZ",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": "2000",
+                "Unit": "dialogs",
+                "Language": "German"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": "2000",
+                "Unit": "dialogs",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": "2000",
+                "Unit": "dialogs",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "Russian",
+                "Volume": "2000",
+                "Unit": "dialogs",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "https://github.com/umanlp/Multi2WOZ",
+        "HF Link": "https://huggingface.co/umanlp/TOD-XLMR",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "German",
+            "Arabic",
+            "Chinese",
+            "Russian",
+            "English"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "manual curation"
+        ],
+        "Description": "A multilingual multi-domain task-oriented dialog dataset derived from the English MultiWOZ dataset, translated into German, Arabic, Chinese, and Russian.",
+        "Volume": 2000.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Mannheim",
+            "MilaNLP",
+            "University of Cambridge",
+            "University of W\u00fcrzburg"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "Multi$^{2}$WOZ: A Robust Multilingual Dataset and Conversational Pretraining for Task-Oriented Dialog",
+        "Paper Link": "https://aclanthology.org/2022.acl-main.112/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107",
+            "Simone Paolo Ponzetto",
+            "Goran Glava\u0161"
+        ],
+        "Affiliations": [
+            "Data and Web Science Group, University of Mannheim, Germany",
+            "MilaNLP, Bocconi University, Italy",
+            "LTL, University of Cambridge, UK",
+            "CAIDAS, University of W\u00fcrzburg, Germany"
+        ],
+        "Abstract": "Research on (multi-domain) task-oriented dialog (TOD) has predominantly focused on the textit{English} language, primarily due to the shortage of robust TOD datasets in other languages, preventing the systematic investigation of cross-lingual transfer for this crucial NLP application area.     In this work, we introduce mz, a new multilingual multi-domain TOD dataset, derived from the well-established English dataset textsc{MultiWOZ}, that spans four typologically diverse languages: Chinese, German, Arabic, and Russian. In contrast to concurrent efforts cite{ding-etal-2021-globalwoz,zuo-etal-2021-allwoz}, mzs contains gold-standard dialogs in target languages that are directly comparable with development and test portions of the English dataset, enabling reliable and comparable estimates of cross-lingual transfer performance for TOD.  We then introduce a new framework for textit{multilingual conversational specialization} of pretrained language models (PrLMs) that aims to facilitate cross-lingual transfer for arbitrary downstream TOD tasks. Using such conversational PrLMs specialized for concrete target languages, we systematically benchmark a number of zero-shot and few-shot cross-lingual transfer approaches on two standard TOD tasks: Dialog State Tracking and Response Retrieval. Our experiments show that, in most setups, the best performance entails the combination of (i) conversational specialization in the target language and (ii) few-shot transfer for the concrete TOD task. Most importantly, we show that our conversational specialization in the target language allows for an exceptionally textit{sample-efficient few-shot transfer} for downstream TOD tasks."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0035415,
+        "input_tokens": 20804,
+        "output_tokens": 951
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

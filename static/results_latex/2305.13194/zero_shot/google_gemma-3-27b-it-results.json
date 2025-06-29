@@ -1,0 +1,133 @@
+{
+    "metadata": {
+        "Name": "seahorse",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 3359,
+                "Unit": "summaries",
+                "Language": "German"
+            },
+            {
+                "Name": "English",
+                "Volume": 894,
+                "Unit": "summaries",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 2231,
+                "Unit": "summaries",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 3298,
+                "Unit": "summaries",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 2186,
+                "Unit": "summaries",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 2497,
+                "Unit": "summaries",
+                "Language": "Vietnamese"
+            }
+        ],
+        "Link": "https://goo.gle/seahorse",
+        "HF Link": "https://goo.gle/seahorse",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "German",
+            "English",
+            "Spanish",
+            "Russian",
+            "Turkish",
+            "Vietnamese"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A multilingual, multifaceted dataset for summarization evaluation consisting of 96K summaries with human ratings along 6 dimensions of text quality.",
+        "Volume": 96645.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google",
+            "DeepMind",
+            "Research"
+        ],
+        "Derived From": [
+            "XSum",
+            "XL-Sum",
+            "MLSum",
+            "WikiLingua"
+        ],
+        "Paper Title": "seahorse: A Multilingual, Multifaceted Dataset for Summarization Evaluation",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.471/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Elizabeth Clark",
+            "Shruti Rijhwani",
+            "Sebastian Gehrmann",
+            "Joshua Maynez",
+            "Roee Aharoni",
+            "Vitaly Nikolaev",
+            "Thibault Sellam",
+            "Aditya Siddhant",
+            "Dipanjan Das",
+            "Ankur P. Parikh"
+        ],
+        "Affiliations": [
+            "Google DeepMind",
+            "Google Research"
+        ],
+        "Abstract": "Reliable automatic evaluation of summarization systems is challenging due to the multifaceted and subjective nature of the task. This is especially the case for languages other than English, where human evaluations are scarce. In this work, we introduce dataset, a dataset for multilingual, multifaceted summarization evaluation. dataset consists of 96K summaries with human ratings along 6 dimensions of text quality: comprehensibility, repetition, grammar, attribution, main ideas, and conciseness. dataset covers 6 languages, 9 systems (including the reference text), and 4 summarization datasets. As a result of its size and scope, dataset can serve both as a benchmark to evaluate learnt metrics, as well as a large-scale resource for training such metrics. We show that metrics trained with dataset achieve strong performance on two out-of-domain meta-evaluation benchmarks: TRUE cite{honovich-etal-2022-true} and mFACE cite{mface-2022}. We make the dataset dataset and metrics publicly available for future research on multilingual and multifaceted summarization evaluation."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0026818,
+        "input_tokens": 24407,
+        "output_tokens": 911
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.13194"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "JDocQA",
+        "Link": "https://github.com/riken-aip/JDocQA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "JDocQA is a Japanese Document Question Answering dataset that requires both visual and textual information to answer questions.",
+        "Volume": 11600.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Nara Institute of Science and Technology",
+            "RIKEN",
+            "ATR"
+        ],
+        "Derived From": [],
+        "Paper Title": "JDocQA: Japanese Document Question Answering Dataset for Generative Language Models",
+        "Paper Link": "https://arxiv.org/abs/2401.01768",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "LREC-COLING 2024",
+        "Venue Type": "conference",
+        "Venue Name": "LREC-COLING 2024",
+        "Authors": [
+            "Eri Onami",
+            "Shuhei Kurita",
+            "Taiki Miyanishi",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "Nara Institute of Science and Technology",
+            "RIKEN",
+            "ATR"
+        ],
+        "Abstract": "This paper introduces JDocQA, a large-scale Japanese document question answering dataset that requires both visual and textual information to answer questions. The dataset consists of 5,504 documents and 11,600 question-answer pairs."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0032632,
+        "input_tokens": 17057,
+        "output_tokens": 401
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19454"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

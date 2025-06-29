@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "HistoiresMorales",
+        "Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "HF Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "social media",
+            "news articles",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A French dataset for assessing moral alignment, derived from MoralStories.",
+        "Volume": 12000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LabHC"
+        ],
+        "Derived From": [
+            "MoralStories"
+        ],
+        "Paper Title": "HistoiresMorales: A French Dataset for Assessing Moral Alignment",
+        "Paper Link": "https://arxiv.org/abs/2401.XXXXX",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "ACL 2024",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Thibaud Leteno",
+            "Irina Proskurina",
+            "Antoine Gourru",
+            "Julien Velcin",
+            "Charlotte Laclau",
+            "Guillaume Metzler",
+            "Christophe Gravier"
+        ],
+        "Affiliations": [
+            "Laboratoire Hubert Curien",
+            "Universit\u00e9 Lumi\u00e8re Lyon2",
+            "T\u00e9l\u00e9com Paris"
+        ],
+        "Abstract": "This paper introduces HistoiresMorales, a French dataset for assessing moral alignment in language models. The dataset is derived from MoralStories and contains 12,000 stories with moral and immoral actions and consequences."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.005274,
+        "input_tokens": 27628,
+        "output_tokens": 424
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.17117"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

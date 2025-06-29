@@ -1,0 +1,93 @@
+{
+    "metadata": {
+        "Name": "HotpotQA",
+        "Link": "https://hotpotqa.github.io",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale dataset for diverse, explainable multi-hop question answering, collected from Wikipedia articles.",
+        "Volume": 112779.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Carnegie Mellon University",
+            "Stanford University",
+            "Mila, Universit\u00e9 de Montr\u00e9al",
+            "Google AI"
+        ],
+        "Derived From": [
+            "SQuAD",
+            "TriviaQA",
+            "SearchQA",
+            "QAngaroo",
+            "ComplexWebQuestions"
+        ],
+        "Paper Title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+        "Paper Link": "https://www.aclweb.org/anthology/D18-1241/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "commonsense reasoning",
+            "word prediction",
+            "irony detection"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2018",
+        "Authors": [
+            "Zhilin Yang",
+            "Peng Qi",
+            "Saizheng Zhang",
+            "Yoshua Bengio",
+            "William W. Cohen",
+            "Ruslan Salakhutdinov",
+            "Christopher D. Manning"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University",
+            "Stanford University",
+            "Mila, Universit\u00e9 de Montr\u00e9al",
+            "CIFAR Senior Fellow",
+            "Google AI"
+        ],
+        "Abstract": "The ability to perform reasoning and inference over natural language is an important aspect of intelligence. The task of question answering (QA) provides a quantifiable and objective way to test the reasoning ability of intelligent systems. To this end, a few large-scale QA datasets have been proposed, which sparked significant progress in this direction. However, existing datasets have limitations that hinder further advancements of machine reasoning over natural language, especially in testing QA systems' ability to perform multi-hop reasoning, where the system has to reason with information taken from more than one document to arrive at the answer."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0070884,
+        "input_tokens": 16685,
+        "output_tokens": 540
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.09600"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

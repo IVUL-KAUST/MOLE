@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "CRAFT: Cultural Russian-Oriented Dataset Adaptation for Focused Text-to-Image Generation",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "This paper addresses the lack of cultural awareness in text-to-image models, focusing on Russian culture. It proposes a methodology for collecting and processing data to form a culturally-aware dataset and analyzes its impact on the Kandinsky 3.1 model.",
+        "Volume": 200000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "SberDevices"
+        ],
+        "Derived From": [],
+        "Paper Title": "CRAFT: Cultural Russian-Oriented Dataset Adaptation for Focused Text-to-Image Generation",
+        "Paper Link": "https://arxiv.org/abs/2505.04851",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "text generation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Viacheslav Vasilev",
+            "Vladimir Arkhipkin",
+            "Julia Agafonova",
+            "Tatiana Nikulina",
+            "Evelina Mironova",
+            "Alisa Shichanina",
+            "Nikolai Gerasimenko",
+            "Mikhail Shoytov",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [],
+        "Abstract": "Despite the fact that popular text-to-image generation models cope well with international and general cultural queries, they have a significant knowledge gap regarding individual cultures. This is due to the content of existing large training datasets collected on the Internet, which are predominantly based on Western European or American popular culture. Meanwhile, the lack of cultural adaptation of the model can lead to incorrect results, a decrease in the generation quality, and the spread of stereotypes and offensive content. In an effort to address this issue, we examine the concept of cultural code and recognize the critical importance of its understanding by modern image generation models, an issue that has not been sufficiently addressed in the research community to date. We propose the methodology for collecting and processing the data necessary to form a dataset based on the cultural code, in particular the Russian one. We explore how the collected data affects the quality of generations in the national domain and analyze the effectiveness of our approach using the Kandinsky 3.1 text-to-image model. Human evaluation results demonstrate an increase in the level of awareness of Russian culture in the model."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0014842,
+        "input_tokens": 12493,
+        "output_tokens": 615
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2505.04851"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
