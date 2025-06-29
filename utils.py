@@ -332,6 +332,13 @@ def evaluate_metadata(
     results["AVERAGE"] = sum(predictions.values()) / len(predictions)
     return results
 
+def get_title_from_link(link):
+    arxiv_id = get_arxiv_id(link)
+    arxiv_url = f"https://arxiv.org/abs/{arxiv_id}"
+    response = requests.get(arxiv_url)
+    soup = BeautifulSoup(response.text, "html.parser")
+    title = soup.find("title").text
+    return title.split("]")[-1].strip()
 
 def validate(metadata, use_split=None, title="", link="", schema="ar"):
 
@@ -665,7 +672,8 @@ def cast(metadata, schema="ar"):
                 metadata[c] = False
             else:
                 print(metadata[c])
-                raise (f"Error: {metadata[c]} is not a boolean")
+                print (f"Warning: {metadata[c]} is not a boolean")
+                metadata[c] = False
         else:
             print(c, column_type)
             raise (f"Unrecognized column type {type}")
