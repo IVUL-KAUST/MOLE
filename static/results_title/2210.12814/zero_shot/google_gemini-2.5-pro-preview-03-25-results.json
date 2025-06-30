@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "RuCoLA",
+        "Link": "https://huggingface.co/datasets/RussianNLP/rucola",
+        "HF Link": "https://huggingface.co/datasets/RussianNLP/rucola",
+        "License": "CC BY-SA 4.0",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "books",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A Russian Corpus of Linguistic Acceptability (RuCoLA) for training and evaluating Russian language models. It contains over 10,000 sentences labeled for acceptability by native speakers, sourced from grammar books, linguistic articles, and other corpora.",
+        "Volume": 10593.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "HSE University",
+            "Skolkovo Institute of Science and Technology",
+            "Artificial Intelligence Research Institute (AIRI)"
+        ],
+        "Derived From": [
+            "Russian National Corpus",
+            "Taiga corpus",
+            "Universal Dependencies treebanks",
+            "Russian Grammatical Dictionary"
+        ],
+        "Paper Title": "RuCoLA: Russian Corpus of Linguistic Acceptability",
+        "Paper Link": "https://aclanthology.org/2022.emnlp-main.531/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "linguistic acceptability",
+            "language modeling"
+        ],
+        "Venue Title": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Alena Pestova",
+            "Elina Kirillova",
+            "Elena Klyachko",
+            "Ekaterina Artemova",
+            "Irina Piontkovskaya",
+            "Maria Pirogovskaya",
+            "Tatiana Shavrina"
+        ],
+        "Affiliations": [
+            "HSE University",
+            "Skolkovo Institute of Science and Technology",
+            "Artificial Intelligence Research Institute (AIRI)"
+        ],
+        "Abstract": "We present the Russian Corpus of Linguistic Acceptability (RuCoLA), the first open-access dataset for this task in Russian. The corpus contains over 10,000 sentences labeled for acceptability by native speakers. The sentences are sourced from grammar books, linguistic articles, and other language corpora. We describe the data collection process and the main dataset characteristics. We also present the results of a number of baseline models, including state-of-the-art Russian language models. The best model achieves a Matthews correlation coefficient of 0.62, which is significantly lower than the human performance of 0.89. This indicates that there is still much room for improvement in the task of linguistic acceptability for Russian. The dataset is publicly available and can be used for training and evaluating Russian language models, as well as for linguistic research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0407675,
+        "input_tokens": 3014,
+        "output_tokens": 1453
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12814"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

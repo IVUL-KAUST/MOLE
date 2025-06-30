@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "DRUGS-FR",
+        "Link": "https://github.com/orange-opensource/DRZ-SLU-dataset",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "other"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A synthetic dataset of 100k spoken drug prescriptions in French, representing over 110 hours of audio. It was generated using a context-free grammar and a Text-To-Speech (TTS) system for spoken language understanding tasks like intent detection and slot filling.",
+        "Volume": 113.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Orange Labs",
+            "LIA, Avignon Universit\u00e9"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Spoken Drug Prescription Dataset in French for Spoken Language Understanding",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.155/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "intent classification",
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the Thirteenth Language Resources and Evaluation Conference (LREC 2022)",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Basile Goussard",
+            "Panayota Georgiou",
+            "Lina M. Rojas-Barahona"
+        ],
+        "Affiliations": [
+            "Orange Labs",
+            "LIA, Avignon Universit\u00e9"
+        ],
+        "Abstract": "Spoken Language Understanding (SLU) is a key component of task-oriented dialogue systems. It aims at extracting the intent and the arguments of a user's request. While a lot of research has been conducted on this topic for English, other languages such as French have been less studied, partly due to the lack of public datasets. In this paper, we introduce a new dataset for SLU in French. The data is synthetically generated using a context-free grammar that we designed to cover a wide range of plausible drug prescriptions. The final dataset is composed of 100k audio recordings along with their transcriptions and annotations. It is split into train, validation and test sets. We also present a baseline model for intent detection and slot filling that we use to assess the difficulty of the task. The dataset is freely available on the SLURP website, and is one of the first public datasets for SLU in French."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0460875,
+        "input_tokens": 3014,
+        "output_tokens": 1606
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2207.08292"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

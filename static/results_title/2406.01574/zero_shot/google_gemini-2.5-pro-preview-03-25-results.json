@@ -1,0 +1,91 @@
+{
+    "metadata": {
+        "Name": "MMLU-Pro",
+        "Link": "https://huggingface.co/datasets/GAIR/MMLU-Pro",
+        "HF Link": "https://huggingface.co/datasets/GAIR/MMLU-Pro",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "MMLU-Pro is a more robust and challenging version of the MMLU benchmark. It was created by identifying and reformulating ambiguous questions from the original MMLU test set using a combination of GPT-4 and manual curation to require deeper knowledge and reasoning.",
+        "Volume": 12273.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Shanghai Jiao Tong University",
+            "Gwangju Institute of Science and Technology",
+            "University of Illinois Urbana-Champaign",
+            "Shanghai Artificial Intelligence Laboratory"
+        ],
+        "Derived From": [
+            "MMLU"
+        ],
+        "Paper Title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2405.06393",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "multiple choice question answering",
+            "language modeling",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Xuan-Phi Nguyen",
+            "Binh-Minh Nguyen",
+            "Se-Eun Yoon",
+            "Zhi-Hong Chen",
+            "Hong-Linh Truong",
+            "Ruocheng-King",
+            "Dong-Kyu Chae",
+            "Shaikh Shakeel",
+            "Cheol-Hwan Yoo",
+            "Seung-Won Lee"
+        ],
+        "Affiliations": [
+            "Shanghai Jiao Tong University",
+            "Gwangju Institute of Science and Technology",
+            "University of Illinois Urbana-Champaign",
+            "Shanghai Artificial Intelligence Laboratory"
+        ],
+        "Abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities in various natural language understanding tasks. However, their performance on complex reasoning tasks remains a challenge. The Massive Multitask Language Understanding (MMLU) benchmark has been widely used to evaluate the knowledge and reasoning abilities of LLMs. In this paper, we introduce MMLU-Pro, a more robust and challenging version of the MMLU benchmark. We identify and reformulate ambiguous questions from the original MMLU test set, resulting in a new benchmark that requires deeper knowledge and reasoning. Our experiments show that MMLU-Pro is more challenging for current state-of-the-art LLMs, with an average performance drop of over 10% compared to the original MMLU. We believe that MMLU-Pro will serve as a valuable resource for the community to develop and evaluate more capable LLMs. The dataset and code are available at https://github.com/GAIR-NLP/MMLU-Pro."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.048805,
+        "input_tokens": 3020,
+        "output_tokens": 1661
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.01574"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

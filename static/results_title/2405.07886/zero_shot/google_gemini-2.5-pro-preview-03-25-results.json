@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "Ru-Title-Abs-Fig",
+        "Link": "https://github.com/IlyaGusev/ru-title-abs-fig",
+        "HF Link": "https://huggingface.co/datasets/IlyaGusev/ru-title-abs-fig",
+        "License": "Apache-2.0",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A multimodal dataset for summarizing Russian scientific papers. It contains pairs of scientific papers (represented by title, abstract, and figures from arXiv) and their summaries (the paper's title). The task is to generate the title from the abstract and figures.",
+        "Volume": 27000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Moscow Institute of Physics and Technology",
+            "Tinkoff",
+            "Artificial Intelligence Research Institute (AIRI)"
+        ],
+        "Derived From": [
+            "arXiv.org"
+        ],
+        "Paper Title": "Russian-Language Multimodal Dataset for Automatic Summarization of Scientific Papers",
+        "Paper Link": "https://arxiv.org/abs/2110.11392",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization",
+            "text generation"
+        ],
+        "Venue Title": "Artificial Intelligence and Natural Language",
+        "Venue Type": "conference",
+        "Venue Name": "10th Conference on Artificial Intelligence and Natural Language (AINL 2021)",
+        "Authors": [
+            "Ilya Gusev",
+            "Ivan Somov",
+            "Alena Fenogenova"
+        ],
+        "Affiliations": [
+            "Moscow Institute of Physics and Technology",
+            "Tinkoff",
+            "Artificial Intelligence Research Institute (AIRI)"
+        ],
+        "Abstract": "Automatic summarization of scientific papers is a popular and challenging task. Most of the existing datasets for this task are for English and Chinese languages. In this paper, we present the first Russian-language multimodal dataset for automatic summarization of scientific papers (Ru-Title-Abs-Fig). The dataset consists of pairs of a scientific paper and its summary. The paper is represented by its title, abstract, and figures, while the summary is represented by the paper's title. The dataset is based on scientific papers from the arXiv.org preprint archive. The final dataset consists of 27,000 pairs of a paper and its summary. We also present several strong baselines for the task of title generation. The dataset is publicly available on GitHub."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04247,
+        "input_tokens": 3018,
+        "output_tokens": 1442
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2405.07886"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

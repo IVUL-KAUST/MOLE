@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "JLC",
+        "Link": "https://github.com/h-kishine/jlc_dataset",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset for Japanese lexical complexity where 2,000 words from Wikipedia are annotated by non-native Japanese learners on a 5-point difficulty scale. It is designed for lexical complexity prediction tasks.",
+        "Volume": 2000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo",
+            "RIKEN",
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [
+            "Japanese Wikipedia"
+        ],
+        "Paper Title": "Japanese Lexical Complexity for Non-Native Readers: A New Dataset",
+        "Paper Link": "https://arxiv.org/abs/2305.11851",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "61st Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Hitoshi Kishine",
+            "Shonosuke Ishiwatari",
+            "Hiroki Ouchi",
+            "Taro Watanabe",
+            "Naoaki Okazaki"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "RIKEN",
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "Lexical complexity is an important factor in reading comprehension for non-native readers. While there are several datasets for lexical complexity in English, there are few such datasets for Japanese. In this paper, we introduce a new dataset for Japanese lexical complexity, in which words in sentences from the Japanese Wikipedia are annotated by non-native Japanese learners on a 5-point scale. We call this dataset JLC (Japanese Lexical Complexity) and show that it is a high-quality dataset through a pilot study and data analysis. We also build a baseline model for predicting the complexity of Japanese words for non-native readers and show that the model achieves a certain level of performance. The dataset is publicly available."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.03940625,
+        "input_tokens": 3081,
+        "output_tokens": 1770
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17399"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

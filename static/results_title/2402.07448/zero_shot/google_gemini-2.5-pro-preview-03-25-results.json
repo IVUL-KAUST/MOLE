@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "AraSpider",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/TII-NLP/AraSpider",
+        "HF Link": "https://huggingface.co/datasets/TII-NLP/AraSpider",
+        "License": "CC BY-SA 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "AraSpider is the first large-scale, complex, and cross-domain Arabic Text-to-SQL dataset. It is the Arabic version of the Spider dataset, created by translating the English databases and questions into Arabic by native speakers with SQL expertise. It contains 10,181 questions and 5,693 unique complex SQL queries on 200 databases with multiple tables, covering 138 different domains.",
+        "Volume": 10181.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Technology Innovation Institute"
+        ],
+        "Derived From": [
+            "Spider"
+        ],
+        "Paper Title": "AraSpider: Democratizing Arabic-to-SQL",
+        "Paper Link": "https://arxiv.org/abs/2309.09558",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing",
+            "text to SQL"
+        ],
+        "Venue Title": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Badr AlKhamissi",
+            "Faisal Al-Shargi",
+            "Fahim Dalvi",
+            "Ahmed Abdelali",
+            "Bernard Comrie",
+            "Hassan Sajjad"
+        ],
+        "Affiliations": [
+            "Technology Innovation Institute (TII), Abu Dhabi, UAE"
+        ],
+        "Abstract": "Text-to-SQL, the task of translating natural language questions into SQL queries, has gained significant attention in recent years. However, most of the research has been focused on English, leaving a gap for other languages, including Arabic. In this paper, we introduce AraSpider, the first large-scale, complex, and cross-domain Arabic Text-to-SQL dataset. We translate the English databases and questions of the Spider dataset to Arabic. The translation process was carried out by native Arabic speakers with expertise in SQL to ensure the quality and accuracy of the translated data. We benchmark several state-of-the-art Text-to-SQL models on AraSpider and show that there is a large performance gap between English and Arabic. We release the dataset and models to the public to encourage further research on Arabic Text-to-SQL and to democratize the access to this technology for the Arabic-speaking world."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0383575,
+        "input_tokens": 3428,
+        "output_tokens": 1511
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2402.07448"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

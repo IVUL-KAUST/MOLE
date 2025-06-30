@@ -55,7 +55,6 @@
         "text generation"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -69,8 +68,7 @@
     "Affiliations": [
         "LINAGORA"
     ],
-    "Abstract": "We present the Claire French Dialogue Dataset (CFDD), a resource created by members of LINAGORA Labs in the context of the OpenLLM France initiative. CFDD is a corpus containing roughly 160 million words from  transcripts and stage plays in French that we have assembled and publicly released in an effort to further the development of multilingual, open source language models. This paper describes the 24 individual corpora of which CFDD is composed and provides links and citations to their original sources. It also provides our proposed breakdown of the full CFDD dataset into eight categories of subcorpora and describes the process we followed to standardize the format of the final dataset.    We conclude with a discussion of similar work and future directions.",
-    
+    "Abstract": "We present the Claire French Dialogue Dataset (CFDD), a resource created by members of LINAGORA Labs in the context of the OpenLLM France initiative. CFDD is a corpus containing roughly 160 million words from transcripts and stage plays in French that we have assembled and publicly released in an effort to further the development of multilingual, open source language models. This paper describes the 24 individual corpora of which CFDD is composed and provides links and citations to their original sources. It also provides our proposed breakdown of the full CFDD dataset into eight categories of subcorpora and describes the process we followed to standardize the format of the final dataset. We conclude with a discussion of similar work and future directions.",
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
@@ -101,5 +99,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

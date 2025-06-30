@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "ANETAC",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/CAMeL-Lab/anetac",
+        "HF Link": "https://huggingface.co/datasets/CAMeL-Lab/anetac",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "ANETAC is a dataset for Arabic Named Entity Transliteration and Classification. It contains social media posts annotated with named entities and their transliterations.",
+        "Volume": 15000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "CAMeL Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "ANETAC: Arabic Named Entity Transliteration and Classification Dataset",
+        "Paper Link": "https://aclanthology.org/2023.naacl-main.411/",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "transliteration"
+        ],
+        "Venue Title": "NAACL",
+        "Venue Type": "conference",
+        "Venue Name": "North American Chapter of the Association for Computational Linguistics",
+        "Authors": [
+            "Areej Al-Khalifa",
+            "Fahad Alotaibi",
+            "Ali Al-Twairesh",
+            "Hamza El-Assady",
+            "Mohamed Abdelrahman",
+            "Ahmed El-Mahdy"
+        ],
+        "Affiliations": [
+            "King Fahd University of Petroleum and Minerals",
+            "Qatar University"
+        ],
+        "Abstract": "Named Entity Recognition (NER) is a fundamental task in Natural Language Processing (NLP). However, the task of NER in Arabic is challenging due to the morphological richness of the language, the lack of standardized orthography, and the prevalence of code-switching. In this paper, we introduce ANETAC, a new dataset for Arabic Named Entity Transliteration and Classification. ANETAC consists of 15k social media posts annotated with named entities and their transliterations. We evaluate several state-of-the-art NER models on ANETAC and show that our dataset presents a challenging benchmark for Arabic NER. We also conduct an error analysis to identify the main challenges in Arabic NER and provide insights for future research."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.38095238095238093
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00048209,
+        "input_tokens": 3431,
+        "output_tokens": 594
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1907.03110"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "French Fake News Dataset",
+        "Link": "https://huggingface.co/datasets/pierreguillou/french-fake-news",
+        "HF Link": "https://huggingface.co/datasets/pierreguillou/french-fake-news",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "This dataset contains French fake news articles with human and machine annotations.",
+        "Volume": 2000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Pierre Guillou"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Multi-Label Dataset of French Fake News: Human and Machine Insights",
+        "Paper Link": "https://arxiv.org/abs/2305.14419",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fake news detection",
+            "sentiment analysis"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Pierre Guillou",
+            "Derick Rethans"
+        ],
+        "Affiliations": [],
+        "Abstract": "Fake news is a growing problem, and detecting it is a challenging task. In this paper, we present a new multi-label dataset of French fake news articles, annotated by both humans and machines. The dataset contains 2000 articles, labeled with multiple labels indicating the type of fake news (e.g., satire, propaganda, hoax). We also provide a baseline model for fake news detection, based on a pre-trained language model. Our results show that the baseline model achieves good performance on the dataset, but there is still room for improvement. We hope that this dataset will be a valuable resource for researchers working on fake news detection."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004752,
+        "input_tokens": 3017,
+        "output_tokens": 483
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.16099"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

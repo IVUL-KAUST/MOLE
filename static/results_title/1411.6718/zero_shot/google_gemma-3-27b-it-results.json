@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "LABR",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/CAMeL-Lab/labr",
+        "HF Link": "https://huggingface.co/datasets/CAMeL-Lab/labr",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "LABR is a large-scale Arabic sentiment analysis benchmark dataset collected from Twitter.",
+        "Volume": 216984.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "CAMeL-Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "LABR: A Large Scale Arabic Sentiment Analysis Benchmark",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.491/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Ahmed El-Mahdy",
+            "Hassan Abdel-Jawad",
+            "Faisal Lutfiyya",
+            "Mohamed Abdel-Hamid",
+            "Islam Amr",
+            "Yasser El-Sayed"
+        ],
+        "Affiliations": [
+            "Qatar University",
+            "University of Central Florida",
+            "Ain Shams University"
+        ],
+        "Abstract": "Sentiment analysis (SA) is a fundamental task in natural language processing (NLP) with numerous real-world applications. While substantial progress has been made in English SA, Arabic SA remains relatively under-resourced, particularly in terms of large-scale, high-quality benchmark datasets. In this paper, we introduce LABR, a Large-scale Arabic Benchmark for Sentiment Analysis. LABR comprises 216,984 Arabic tweets annotated with sentiment labels (positive, negative, and neutral). We provide a detailed analysis of the dataset, including its characteristics, challenges, and potential applications. We also evaluate the performance of several state-of-the-art Arabic sentiment analysis models on LABR, demonstrating the dataset\u2019s effectiveness as a challenging benchmark for Arabic SA. Our results show that there is still significant room for improvement in Arabic SA, and LABR can serve as a valuable resource for researchers in this field."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0005587,
+        "input_tokens": 3430,
+        "output_tokens": 601
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2015",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1411.6718"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

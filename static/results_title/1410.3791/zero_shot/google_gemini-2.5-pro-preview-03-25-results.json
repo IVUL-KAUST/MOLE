@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "POLYGLOT-NER",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2049999.0,
+                "Unit": "tokens",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "http://polyglot-nlp.com/",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2015,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A massive multilingual Named Entity Recognition (NER) dataset created for 40 languages by leveraging Wikipedia hyperlinks and the Freebase knowledge base. The Arabic portion contains over 2 million tokens.",
+        "Volume": 2049999.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Research",
+            "Stony Brook University"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Freebase"
+        ],
+        "Paper Title": "POLYGLOT-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://aclanthology.org/N15-1028/",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the 2015 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Venue Type": "conference",
+        "Venue Name": "Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Google Research",
+            "Stony Brook University"
+        ],
+        "Abstract": "We present a named entity recognition (NER) system that is trained on a large, diverse, and multilingual dataset that we created by leveraging Wikipedia and the Freebase knowledge base. Our models are not restricted to a small set of languages, but can be trained for any of the 100+ languages in Wikipedia. We created a new NER dataset in 40 languages. We use a neural network architecture with word embeddings to perform NER. Our system is lean, as it does not require any handcrafted features or language-specific resources. We demonstrate the effectiveness of our approach by evaluating our models on 11 languages for which there are existing NER systems and publicly available datasets. We show that our models are competitive with the state-of-the-art in 8 of these languages. The data and the models are available at http://polyglot-nlp.com/."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.04403875,
+        "input_tokens": 3431,
+        "output_tokens": 1591
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

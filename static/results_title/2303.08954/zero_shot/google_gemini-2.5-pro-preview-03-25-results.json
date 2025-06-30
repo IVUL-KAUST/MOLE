@@ -1,0 +1,102 @@
+{
+    "metadata": {
+        "Name": "PRESTO",
+        "Subsets": [
+            {
+                "Name": "PRESTO-English",
+                "Volume": 14874,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "PRESTO-German",
+                "Volume": 14874,
+                "Unit": "sentences",
+                "Language": "German"
+            }
+        ],
+        "Link": "https://github.com/presto-dialogue/presto",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "German"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A multilingual (English, German) dataset for parsing task-oriented dialogs. It features realistic, complex conversations from an in-car assistant domain, collected via a Wizard-of-Oz setup. It includes semantic annotations for intent and arguments.",
+        "Volume": 29748.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Amsterdam",
+            "Heinrich Heine University D\u00fcsseldorf",
+            "PolyAI",
+            "Amazon Alexa AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "PRESTO: A Multilingual Dataset for Parsing Realistic Task-Oriented Dialogs",
+        "Paper Link": "https://aclanthology.org/2021.emnlp-main.595",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing",
+            "intent classification"
+        ],
+        "Venue Title": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Rahul Goel",
+            "Shachi Paul",
+            "Dilek Hakkani-T\u00fcr",
+            "Ben E. Collins",
+            "Devi G. Parikh",
+            "Soham Gadgil",
+            "Jesse Gage",
+            "Saikat Guha"
+        ],
+        "Affiliations": [
+            "University of Amsterdam",
+            "Heinrich Heine University D\u00fcsseldorf",
+            "PolyAI",
+            "Amazon Alexa AI"
+        ],
+        "Abstract": "Existing datasets for task-oriented dialogs are dominated by simplistic, slot-filling style conversations that do not reflect the complexity of real-world scenarios. In this paper, we introduce PRESTO, a new publicly available dataset of over 4,400 realistic, multilingual (English and German) task-oriented dialogs that go beyond the standard slot-filling paradigm. PRESTO was collected via a novel Wizard-of-Oz (WoZ) data collection methodology that encourages agents to produce more complex and varied conversational flows. The dataset features complex phenomena such as additions and removals of items from a list, context switches, and interruptions. We provide a detailed analysis of the dataset and benchmark a state-of-the-art dialog state tracking model on PRESTO, showing that it struggles with the complexity of the dataset. We hope that PRESTO will serve as a challenging testbed for future research in task-oriented dialog."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04317625,
+        "input_tokens": 3192,
+        "output_tokens": 1704
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2303.08954"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

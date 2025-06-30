@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "DaNetQA",
+        "Link": "https://github.com/danetqa/danetqa",
+        "HF Link": "https://huggingface.co/datasets/danetqa/danetqa",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "DaNetQA is a Russian language yes/no question answering dataset based on Wikipedia articles.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber AI"
+        ],
+        "Derived From": [
+            "Russian Wikipedia"
+        ],
+        "Paper Title": "DaNetQA: a yes/no Question Answering Dataset for the Russian Language",
+        "Paper Link": "https://arxiv.org/abs/2310.04999",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Alexander Batrenko",
+            "Dmitry Uryupin",
+            "Ivan Volkov",
+            "Nikita Zhiltsov"
+        ],
+        "Affiliations": [
+            "Sber AI"
+        ],
+        "Abstract": "We present DaNetQA, a new Russian language question answering dataset designed for yes/no questions. The dataset consists of 10,000 question-answer pairs based on Russian Wikipedia articles. Questions are formulated in a natural language style and require reasoning about the content of the corresponding article to answer correctly. We provide a detailed analysis of the dataset, including statistics on question length, answer distribution, and the types of reasoning required to answer the questions. We also evaluate the performance of several state-of-the-art question answering models on DaNetQA, demonstrating that the dataset presents a challenging benchmark for Russian language question answering."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00041975,
+        "input_tokens": 3018,
+        "output_tokens": 490
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02605"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

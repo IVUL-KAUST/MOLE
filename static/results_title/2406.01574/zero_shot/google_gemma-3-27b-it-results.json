@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "MMLU-Pro",
+        "Link": "https://github.com/hendrycks/test",
+        "HF Link": "https://huggingface.co/datasets/hendrycks/mmlu-pro",
+        "License": "Apache-2.0",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "MMLU-Pro is a more robust and challenging multi-task language understanding benchmark. It addresses the limitations of existing benchmarks by introducing adversarial filtering and a more diverse set of questions.",
+        "Volume": 14000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Hendrycks"
+        ],
+        "Derived From": [],
+        "Paper Title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2405.04992",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "language modeling",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Dan Hendrycks",
+            "Mantas Mazeika",
+            "Dawid Pawlak",
+            "Rohit Kumar",
+            "Pavol Bielik"
+        ],
+        "Affiliations": [],
+        "Abstract": "Massive multitask language understanding (MMLU) is a popular benchmark for evaluating the knowledge and reasoning abilities of large language models (LLMs). However, MMLU suffers from several limitations, including a lack of robustness to adversarial examples and a limited diversity of questions. In this paper, we introduce MMLU-Pro, a more robust and challenging version of MMLU. MMLU-Pro is created by applying adversarial filtering to the original MMLU dataset, removing questions that are easily solved by LLMs. We also introduce a more diverse set of questions, covering a wider range of topics and difficulty levels. We show that MMLU-Pro is significantly more challenging than MMLU for LLMs, and that it is more robust to adversarial examples. We also demonstrate that MMLU-Pro is a better predictor of LLM performance on real-world tasks."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00043344,
+        "input_tokens": 3020,
+        "output_tokens": 573
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.01574"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "RuFinSta",
+        "Link": "https://helda.helsinki.fi/bof/bitstream/handle/123456789/18601/bdp0322.pdf",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A database of over 30 million firm-year financial statements for nearly all Russian firms from 2007-2021, collected from official sources (Rosstat and FTS). It includes detailed balance sheets and income statements.",
+        "Volume": 30000000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Bank of Finland Institute for Emerging Economies"
+        ],
+        "Derived From": [
+            "SPARK-Interfax"
+        ],
+        "Paper Title": "Russian Financial Statements Database: A firm-level collection of the universe of financial statements",
+        "Paper Link": "https://helda.helsinki.fi/bof/bitstream/handle/123456789/18601/bdp0322.pdf",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "BOFIT Discussion Papers",
+        "Venue Type": "preprint",
+        "Venue Name": "Bank of Finland Institute for Emerging Economies",
+        "Authors": [
+            "Zuzana Fung\u00e1\u010dov\u00e1",
+            "Eeva Kerola",
+            "Laurent Weill"
+        ],
+        "Affiliations": [
+            "Bank of Finland",
+            "University of Strasbourg"
+        ],
+        "Abstract": "This paper introduces a new firm-level database of the universe of official financial statements for virtually all Russian firms from 2007 to 2021. We collect, clean, and organize the universe of official financial statements from the Federal State Statistics Service (Rosstat) and the Federal Tax Service (FTS). The resulting database contains over 30 million firm-year observations with detailed information on balance sheets and income statements. We describe the data collection process and the structure of the database. We also provide an overview of the database and show that it is representative of the Russian corporate sector. The database is a valuable resource for researchers studying firm dynamics, resource allocation, and the effects of economic policies in Russia."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04580375,
+        "input_tokens": 3018,
+        "output_tokens": 1452
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

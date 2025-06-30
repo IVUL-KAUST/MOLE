@@ -50,7 +50,7 @@
         "NICT",
         "RIKEN"
     ],
-    "Abstract": "We have constructed Arukikata Travelogue Dataset and released it free of charge for academic research.nThis dataset is a Japanese text dataset with a total of over 31 million words, comprising 4,672 Japanese domestic travelogues and 9,607 overseas travelogues.nBefore providing our dataset, there was a scarcity of widely available travelogue data for research purposes, and each researcher had to prepare their own data.nThis hinders the replication of existing studies and fair comparative analysis of experimental results.nOur dataset enables any researchers to conduct investigation on the same data and to ensure transparency and reproducibility in research.nIn this paper, we describe the academic significance, characteristics, and prospects of our dataset.",
+    "Abstract": "We have constructed Arukikata Travelogue Dataset and released it free of charge for academic research. This dataset is a Japanese text dataset with a total of over 31 million words, comprising 4,672 Japanese domestic travelogues and 9,607 overseas travelogues. Before providing our dataset, there was a scarcity of widely available travelogue data for research purposes, and each researcher had to prepare their own data. This hinders the replication of existing studies and fair comparative analysis of experimental results. Our dataset enables any researchers to conduct investigation on the same data and to ensure transparency and reproducibility in research. In this paper, we describe the academic significance, characteristics, and prospects of our dataset.",
     "annotations_from_paper": {
         "Name": 1,
         "Link": 0,

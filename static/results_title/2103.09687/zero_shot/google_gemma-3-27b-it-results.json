@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "Moroccan Darija Dataset",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/CAMeL-Lab/moroccan-dialect",
+        "HF Link": "https://huggingface.co/datasets/CAMeL-Lab/moroccan-dialect",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Morocco",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This dataset contains Moroccan Arabic (Darija) social media posts.",
+        "Volume": 184844.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "CAMeL Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "Moroccan Dialect -Darija- Open Dataset",
+        "Paper Link": "https://huggingface.co/datasets/CAMeL-Lab/moroccan-dialect",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "dialect identification",
+            "sentiment analysis",
+            "offensive language detection"
+        ],
+        "Venue Title": "Hugging Face Datasets",
+        "Venue Type": "conference",
+        "Venue Name": "Hugging Face",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "This dataset contains Moroccan Arabic (Darija) social media posts. It is intended for research on Moroccan dialect processing, including dialect identification, sentiment analysis, and offensive language detection. The dataset consists of 184,844 sentences collected from social media platforms. The data is provided in a text format and is not tokenized. The dataset is licensed under CC BY-NC-SA 4.0."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.38095238095238093
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.00045205,
+        "input_tokens": 3428,
+        "output_tokens": 452
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.09687"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

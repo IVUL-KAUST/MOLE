@@ -1,0 +1,136 @@
+{
+    "metadata": {
+        "Name": "Multi2WOZ",
+        "Subsets": [
+            {
+                "Name": "Multi2WOZ-EN",
+                "Volume": 10438,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Multi2WOZ-ZH",
+                "Volume": 10438,
+                "Unit": "documents",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "Multi2WOZ-FR",
+                "Volume": 10438,
+                "Unit": "documents",
+                "Language": "French"
+            },
+            {
+                "Name": "Multi2WOZ-IT",
+                "Volume": 10438,
+                "Unit": "documents",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Multi2WOZ-DE",
+                "Volume": 10438,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "Multi2WOZ-ES",
+                "Volume": 10438,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Multi2WOZ-RU",
+                "Volume": 10438,
+                "Unit": "documents",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Multi2WOZ-JA",
+                "Volume": 10438,
+                "Unit": "documents",
+                "Language": "Japanese"
+            }
+        ],
+        "Link": "https://github.com/salesforce/Multi2WOZ",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "Chinese",
+            "French",
+            "Italian",
+            "German",
+            "Spanish",
+            "Russian",
+            "Japanese"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "Multi2WOZ is a large-scale multilingual task-oriented dialog dataset. It extends the MultiWOZ 2.1 dataset to eight languages (English, Chinese, French, Italian, German, Spanish, Russian, and Japanese) using a semi-automatic translation pipeline with human verification.",
+        "Volume": 10438.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Salesforce Research"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "Multi2WOZ: A Robust Multilingual Dataset and Conversational Pretraining for Task-Oriented Dialog",
+        "Paper Link": "https://aclanthology.org/2021.emnlp-main.78.pdf",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation"
+        ],
+        "Venue Title": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Chia-Hsuan Lee",
+            "Chien-Sheng Wu",
+            "Andrea Madotto",
+            "Zhaojiang Lin",
+            "Caiming Xiong"
+        ],
+        "Affiliations": [
+            "Salesforce Research"
+        ],
+        "Abstract": "Multilingual task-oriented dialog (TOD) systems are practical for scaling a system to users in different regions. However, existing multilingual TOD datasets are limited by the number of languages, domains, or data size. In this paper, we introduce Multi2WOZ, a new large-scale multilingual TOD dataset that extends the popular MultiWOZ 2.1 dataset to eight languages, including Chinese, French, Italian, German, Spanish, Russian, and Japanese, via a semi-automatic translation pipeline. We also propose a new conversational pretraining method, X-TOD, that leverages a multilingual corpus of dialogs to improve cross-lingual transfer for TOD. We show that our model significantly outperforms existing baselines on the Multi2WOZ benchmark. The dataset and models are publicly available at https://github.com/salesforce/Multi2WOZ."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0417825,
+        "input_tokens": 3195,
+        "output_tokens": 1852
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

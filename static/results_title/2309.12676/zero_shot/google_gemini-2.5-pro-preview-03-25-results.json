@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "JCoLA",
+        "Link": "https://huggingface.co/datasets/osekilab/jcola",
+        "HF Link": "https://huggingface.co/datasets/osekilab/jcola",
+        "License": "MIT License",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "books",
+            "public datasets",
+            "web pages",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A Japanese corpus for linguistic acceptability judgment, containing 8.7k grammatical and ungrammatical sentences from linguistic literature, corpora, and web texts. It includes standard train/dev/test splits.",
+        "Volume": 8651.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Ochanomizu University"
+        ],
+        "Derived From": [
+            "Balanced Corpus of Contemporary Written Japanese (BCCWJ)"
+        ],
+        "Paper Title": "JCoLA: Japanese Corpus of Linguistic Acceptability",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.739/",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "linguistic acceptability"
+        ],
+        "Venue Title": "Proceedings of the Language Resources and Evaluation Conference (LREC)",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Hitomi Otsuki",
+            "Hiroki Ouchi",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "Ochanomizu University"
+        ],
+        "Abstract": "We introduce the Japanese Corpus of Linguistic Acceptability (JCoLA), a new corpus for evaluating the grammatical judgments of Japanese language models. The corpus consists of 8.7k sentences with acceptability judgments by linguistics experts. The sentences are collected from various sources, including linguistics articles, corpora, and web texts, to cover a wide range of linguistic phenomena. We provide a standard split of the dataset into a training/development set (in-domain) and a test set (out-of-domain) to ensure a fair comparison of the models. We report the baseline scores of several pretrained Japanese language models on the corpus. The experimental results show that our dataset is challenging for current models. The dataset is publicly available on our GitHub repository and the Hugging Face Hub."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.03375375,
+        "input_tokens": 3079,
+        "output_tokens": 1208
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12676"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

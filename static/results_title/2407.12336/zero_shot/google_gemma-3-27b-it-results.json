@@ -1,0 +1,99 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "M2DS",
+            "Subsets": null,
+            "Link": null,
+            "HF Link": null,
+            "License": null,
+            "Year": null,
+            "Language": "Multilingual",
+            "Domain": "Summarisation",
+            "Form": null,
+            "Collection Style": "Multi-document",
+            "Description": "Multilingual Dataset for Multi-document Summarisation",
+            "Volume": null,
+            "Unit": null,
+            "Ethical Risks": null,
+            "Provider": null,
+            "Derived From": null,
+            "Paper Title": "M2DS: Multilingual Dataset for Multi-document Summarisation",
+            "Paper Link": null,
+            "Tokenized": null,
+            "Host": null,
+            "Access": null,
+            "Cost": null,
+            "Test Split": null,
+            "Tasks": "Summarisation",
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": null,
+            "Affiliations": null,
+            "Abstract": null
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2407.12336",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.10526315789473684
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.0001381,
+        "input_tokens": 535,
+        "output_tokens": 243
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12336"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "RefinedWeb",
+        "Link": "https://huggingface.co/datasets/tatsu-lab/refinedweb",
+        "HF Link": "https://huggingface.co/datasets/tatsu-lab/refinedweb",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "The RefinedWeb dataset is a large-scale, high-quality web corpus designed for training large language models (LLMs). It demonstrates that web data, when properly refined, can outperform curated corpora.",
+        "Volume": 600.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Tatsu Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+        "Paper Link": "https://arxiv.org/abs/2306.01116",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Chufeng Chen",
+            "Xiaoxue Zang",
+            "Junwei Bao",
+            "Pengcheng He",
+            "Xiang Ren"
+        ],
+        "Affiliations": [
+            "Alibaba Group",
+            "University of California, Riverside"
+        ],
+        "Abstract": "Large language models (LLMs) have demonstrated remarkable capabilities, largely attributed to their training on massive datasets. While curated, high-quality corpora like C4 and RedPajama have been widely used, recent studies suggest that web data can be equally or even more effective. However, web data is notoriously noisy and requires careful cleaning and filtering. In this work, we present RefinedWeb, a 600B token dataset constructed from high-quality web pages using a novel filtering pipeline. We demonstrate that Falcon, an LLM trained on RefinedWeb, outperforms models of similar size trained on curated corpora across a range of benchmarks. Our results highlight the potential of web data as a viable alternative to curated corpora for training LLMs, and provide insights into the key factors that contribute to the quality of web-based training data."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00043423,
+        "input_tokens": 3028,
+        "output_tokens": 573
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.01116"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

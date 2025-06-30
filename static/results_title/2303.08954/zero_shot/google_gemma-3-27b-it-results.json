@@ -1,0 +1,99 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "PRESTO",
+            "Subsets": null,
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/allenai/presto",
+            "License": null,
+            "Year": 2023,
+            "Language": "Multilingual",
+            "Domain": "Task-Oriented Dialog",
+            "Form": null,
+            "Collection Style": null,
+            "Description": "A multilingual dataset for parsing realistic task-oriented dialogs.",
+            "Volume": null,
+            "Unit": null,
+            "Ethical Risks": null,
+            "Provider": "AllenAI",
+            "Derived From": null,
+            "Paper Title": "PRESTO: A Multilingual Dataset for Parsing Realistic Task-Oriented Dialogs",
+            "Paper Link": null,
+            "Tokenized": null,
+            "Host": null,
+            "Access": null,
+            "Cost": null,
+            "Test Split": null,
+            "Tasks": "Parsing, Task-Oriented Dialog",
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": null,
+            "Affiliations": null,
+            "Abstract": null
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2303.08954",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.2631578947368421
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.0001474,
+        "input_tokens": 539,
+        "output_tokens": 266
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2303.08954"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

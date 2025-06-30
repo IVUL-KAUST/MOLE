@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "Golos",
+        "Link": "https://github.com/salute-developers/golos",
+        "HF Link": "https://huggingface.co/datasets/salute-speech/golos",
+        "License": "Apache-2.0",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia",
+            "news articles"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "Golos is a large Russian speech corpus suitable for ASR research. It contains over 1200 hours of audio, with 1053 hours manually annotated. The data was collected via crowdsourcing and from internal far-field recordings, covering various acoustic conditions.",
+        "Volume": 1053.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SberDevices",
+            "Sber AI Lab"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "news articles"
+        ],
+        "Paper Title": "Golos: Russian Dataset for Speech Research",
+        "Paper Link": "https://arxiv.org/abs/2012.04473",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "speaker identification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Aleksandr Artemov",
+            "Aleksandr Malykh",
+            "Dmitry Panteleev",
+            "Dmitry Bubnov",
+            "Vladislav Shirokov",
+            "Ivan Shanin"
+        ],
+        "Affiliations": [
+            "SberDevices",
+            "Sber AI Lab"
+        ],
+        "Abstract": "We present Golos, a Russian speech dataset. The dataset is collected from a crowdsourcing platform. The total duration of the collected audio is over 1200 hours, of which 1053 hours are manually annotated and verified. The dataset contains recordings from different acoustic conditions and environments. All recordings were manually transcribed by professional annotators. We also provide a 100-hour subset of Golos with clean recordings for a quick model training and evaluation. We have trained and evaluated several state-of-the-art acoustic models to provide a baseline for the dataset. The dataset is publicly available under the Apache 2.0 license."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.03528375,
+        "input_tokens": 3011,
+        "output_tokens": 1346
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

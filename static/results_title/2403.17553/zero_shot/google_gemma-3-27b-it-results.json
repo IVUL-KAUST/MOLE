@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "RuBia",
+        "Link": "https://huggingface.co/datasets/rubia-ai/rubia",
+        "HF Link": "https://huggingface.co/datasets/rubia-ai/rubia",
+        "License": "CC BY 4.0",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "RuBia is a Russian language bias detection dataset. It contains 10k samples of Russian social media posts annotated for different types of bias.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Rubia AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuBia: A Russian Language Bias Detection Dataset",
+        "Paper Link": "https://arxiv.org/abs/2402.14419",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection",
+            "sentiment analysis"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Polina Koltunova",
+            "Dmitry Uryupin",
+            "Ivan Volkov",
+            "Alexey Romanov"
+        ],
+        "Affiliations": [
+            "Rubia AI"
+        ],
+        "Abstract": "Bias in language models is a growing concern, particularly in low-resource languages like Russian. Existing bias detection datasets are often limited in size or scope, making it difficult to develop robust bias mitigation techniques. In this paper, we present RuBia, a new Russian language bias detection dataset consisting of 10,000 social media posts annotated for different types of bias, including toxicity, stereotypes, and hate speech. We provide a detailed analysis of the dataset, including the distribution of different bias types and the inter-annotator agreement. We also evaluate the performance of several state-of-the-art bias detection models on RuBia, demonstrating that they struggle to generalize to Russian. We hope that RuBia will serve as a valuable resource for researchers working on bias detection and mitigation in Russian and other low-resource languages."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0006504,
+        "input_tokens": 3027,
+        "output_tokens": 539
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.17553"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

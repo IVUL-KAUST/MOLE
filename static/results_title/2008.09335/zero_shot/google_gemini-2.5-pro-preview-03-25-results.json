@@ -1,0 +1,127 @@
+{
+    "metadata": {
+        "Name": "MTOP",
+        "Subsets": [
+            {
+                "Name": "MTOP-EN",
+                "Volume": 22428,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "MTOP-DE",
+                "Volume": 22428,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "MTOP-ES",
+                "Volume": 22428,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "MTOP-FR",
+                "Volume": 22428,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "MTOP-HI",
+                "Volume": 22428,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "MTOP-TH",
+                "Volume": 22428,
+                "Unit": "sentences",
+                "Language": "Thai"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/facebook/mtop",
+        "HF Link": "https://huggingface.co/datasets/facebook/mtop",
+        "License": "CC BY-NC 4.0",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "German",
+            "Spanish",
+            "French",
+            "Hindi",
+            "Thai"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A multilingual dataset for task-oriented semantic parsing, covering English, German, Spanish, French, Hindi, and Thai across 11 domains. It is a translated and re-annotated version of the English TOP dataset.",
+        "Volume": 134568.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI"
+        ],
+        "Derived From": [
+            "TOP"
+        ],
+        "Paper Title": "MTOP: A Comprehensive Multilingual Task-Oriented Semantic Parsing Benchmark",
+        "Paper Link": "https://aclanthology.org/2021.emnlp-main.673/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing",
+            "intent classification",
+            "named entity recognition",
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Haoran Li",
+            "Yiran Chen",
+            "Abhinav Arora",
+            "Shuohui Chen",
+            "Anchit Gupta",
+            "Sonal Gupta",
+            "Yashar Mehdad"
+        ],
+        "Affiliations": [
+            "Facebook AI"
+        ],
+        "Abstract": "We present MTOP, a new multilingual dataset for task-oriented semantic parsing, covering 6 languages across 11 domains. MTOP is translated and re-annotated from the English TOP dataset (Gupta et al., 2018), and we provide a detailed analysis of the data quality and translation artifacts. We also establish strong baselines for monolingual and cross-lingual semantic parsing, and show that our models are robust to translation artifacts. We further propose a novel data augmentation technique based on round-trip translation to improve cross-lingual transfer, and show that it leads to significant gains on zero-shot and few-shot learning. We release MTOP to the community to encourage further research in multilingual task-oriented semantic parsing."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.05498375,
+        "input_tokens": 3188,
+        "output_tokens": 1824
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2008.09335"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

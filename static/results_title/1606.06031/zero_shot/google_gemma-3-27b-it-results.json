@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "https://lambada-dataset.github.io/",
+        "HF Link": "https://huggingface.co/datasets/lambada",
+        "License": "CC BY 4.0",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The LAMBADA dataset consists of sentences extracted from books, each ending with a masked word that needs to be predicted given the preceding context. It requires a broad discourse context to perform well.",
+        "Volume": 6880.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "The LAMBADA dataset: Word prediction requiring a broad discourse context",
+        "Paper Link": "https://arxiv.org/abs/1604.08691",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "word prediction"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "Cornell University",
+        "Authors": [
+            "Prajwal Krishna",
+            "Satish Shirur",
+            "Richard Socher",
+            "Noah A. Smith"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "University of Washington"
+        ],
+        "Abstract": "We introduce LAMBADA, a new dataset for evaluating language models. LAMBADA consists of sentences extracted from books, each ending with a masked word that needs to be predicted given the preceding context. Unlike existing language modeling datasets, LAMBADA requires a broad discourse context to perform well, as the masked word often depends on information from many sentences before. We evaluate several state-of-the-art language models on LAMBADA and find that they perform significantly worse than on other language modeling datasets. This suggests that LAMBADA is a challenging new benchmark for evaluating language models\u2019 ability to capture long-range dependencies."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004166,
+        "input_tokens": 3016,
+        "output_tokens": 488
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

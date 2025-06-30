@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "https://huggingface.co/datasets/cyberagent/stair-captions",
+        "HF Link": "https://huggingface.co/datasets/cyberagent/stair-captions",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "We construct a large-scale Japanese image caption dataset, STAIR Captions, by crawling images and their captions from the web. The dataset contains 1.4M image-caption pairs.",
+        "Volume": 1400000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "CyberAgent"
+        ],
+        "Derived From": [],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://arxiv.org/abs/2310.13144",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "image captioning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yusuke Suzuki",
+            "Yuta Nakatsuru",
+            "Ryota Nakaoka",
+            "Jun Suzuki"
+        ],
+        "Affiliations": [
+            "CyberAgent, Inc."
+        ],
+        "Abstract": "We construct a large-scale Japanese image caption dataset, STAIR Captions, by crawling images and their captions from the web. The dataset contains 1.4M image-caption pairs. We analyze the characteristics of the dataset and demonstrate its effectiveness for image captioning tasks. Our experiments show that models trained on STAIR Captions achieve competitive performance on Japanese image captioning benchmarks."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00042085,
+        "input_tokens": 3083,
+        "output_tokens": 468
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

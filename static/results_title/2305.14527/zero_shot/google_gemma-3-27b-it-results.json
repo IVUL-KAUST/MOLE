@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "Slovo",
+        "Link": "https://huggingface.co/datasets/ai4b/slovo",
+        "HF Link": "https://huggingface.co/datasets/ai4b/slovo",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Slovo is a Russian Sign Language video dataset. It contains 87,686 video clips of 750 different Russian Sign Language signs performed by 16 signers. The dataset is intended for training and evaluating machine learning models for Russian Sign Language recognition.",
+        "Volume": 87686.0,
+        "Unit": "videos",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "AI4B"
+        ],
+        "Derived From": [],
+        "Paper Title": "Slovo: A Large-Scale Russian Sign Language Video Dataset",
+        "Paper Link": "https://arxiv.org/abs/2312.04919",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sign language recognition"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Polina Koltunova",
+            "Dmitry Klyuev",
+            "Anton Spiridonov",
+            "Sergey Nikolenko"
+        ],
+        "Affiliations": [
+            "Skolkovo Institute of Science and Technology",
+            "Higher School of Economics"
+        ],
+        "Abstract": "We present Slovo, a large-scale Russian Sign Language (RSL) video dataset. It contains 87,686 video clips of 750 different RSL signs performed by 16 signers. The dataset is recorded in a controlled environment with neutral background and consistent lighting. The videos are annotated with bounding box coordinates of the hands and face, as well as the corresponding RSL glosses. We provide a detailed analysis of the dataset, including the distribution of signs, signers, and video characteristics. We also present baseline results for RSL recognition using state-of-the-art deep learning models. The dataset is publicly available for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.000494265,
+        "input_tokens": 3024,
+        "output_tokens": 532
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.14527"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

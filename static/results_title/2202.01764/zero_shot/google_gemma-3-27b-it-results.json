@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "JaQuAD",
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/jacquaddataset",
+            "License": "CC BY-SA 4.0",
+            "Year": 2020,
+            "Language": "Japanese",
+            "Domain": "General",
+            "Form": "Question Answering",
+            "Collection Style": "Human-annotated",
+            "Description": "JaQuAD is a Japanese Question Answering Dataset for Machine Reading Comprehension. It is based on the Japanese Wikipedia and contains over 100k question-answer pairs.",
+            "Volume": "100k+",
+            "Unit": "Question-Answer Pairs",
+            "Ethical Risks": null,
+            "Provider": "Tokyo Metropolitan University",
+            "Derived From": "Japanese Wikipedia",
+            "Paper Title": "JaQuAD: Japanese Question Answering Dataset for Machine Reading Comprehension",
+            "Paper Link": "https://arxiv.org/abs/2006.03276",
+            "Script": "Japanese",
+            "Tokenized": null,
+            "Host": "Hugging Face Datasets",
+            "Access": "Public",
+            "Cost": "Free",
+            "Test Split": null,
+            "Tasks": "Question Answering, Machine Reading Comprehension",
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": "Yusuke Kariya, Takashi Matsuzaki, Hiroshi Nakayama, Yuji Matsumoto",
+            "Affiliations": "Tokyo Metropolitan University",
+            "Abstract": "We introduce JaQuAD, a new Japanese Question Answering Dataset for Machine Reading Comprehension (MRC). JaQuAD is a large-scale, human-annotated dataset consisting of over 100k question-answer pairs based on Japanese Wikipedia. We describe the dataset creation process, including annotation guidelines and quality control measures. We also present baseline experimental results on JaQuAD using several state-of-the-art MRC models. Our results demonstrate that JaQuAD is a challenging yet feasible benchmark for evaluating MRC models in Japanese."
+        },
+        "Name": "",
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2202.01764",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.21052631578947367
+    },
+    "length_forcing": 0.8999999999999999,
+    "cost": {
+        "cost": 0.0002074,
+        "input_tokens": 536,
+        "output_tokens": 464
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.01764"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

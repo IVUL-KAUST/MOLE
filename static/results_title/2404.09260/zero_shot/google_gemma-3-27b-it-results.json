@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "JaFIn",
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/suzuki-lab/jafin",
+            "License": "Apache 2.0",
+            "Year": 2023,
+            "Language": "Japanese",
+            "Domain": "Finance",
+            "Form": "Text",
+            "Collection Style": "Scraped",
+            "Description": "Japanese Financial Instruction Dataset",
+            "Volume": "10k",
+            "Unit": "instructions",
+            "Ethical Risks": "None",
+            "Provider": "suzuki-lab",
+            "Derived From": null,
+            "Paper Title": "JaFIn: Japanese Financial Instruction Dataset",
+            "Paper Link": null,
+            "Script": "Japanese",
+            "Tokenized": null,
+            "Host": "Hugging Face Datasets",
+            "Access": "Public",
+            "Cost": "Free",
+            "Test Split": null,
+            "Tasks": "Instruction Following",
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": null,
+            "Affiliations": null,
+            "Abstract": null
+        },
+        "Name": "",
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2404.09260",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.2631578947368421
+    },
+    "length_forcing": 0.8999999999999999,
+    "cost": {
+        "cost": 0.00011295,
+        "input_tokens": 529,
+        "output_tokens": 269
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.09260"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

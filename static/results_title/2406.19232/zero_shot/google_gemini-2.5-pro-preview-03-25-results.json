@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "RuBLiMP",
+        "Link": "https://github.com/RussianNLP/RuBLiMP",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A benchmark for evaluating Russian language models on their linguistic knowledge. It consists of minimal pairs of sentences, one grammatically correct and one incorrect, covering diverse morphosyntactic phenomena.",
+        "Volume": 122880.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Skolkovo Institute of Science and Technology",
+            "HSE University",
+            "Artificial Intelligence Research Institute"
+        ],
+        "Derived From": [
+            "BLiMP",
+            "Russian National Corpus"
+        ],
+        "Paper Title": "RuBLiMP: Russian Benchmark of Linguistic Minimal Pairs",
+        "Paper Link": "https://arxiv.org/abs/2210.04549",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "linguistic acceptability"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Alena Fenogenova",
+            "Vladislav Mikhailov",
+            "Anastasiia Bashmakova",
+            "Ekaterina Taktasheva",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "Skolkovo Institute of Science and Technology",
+            "HSE University",
+            "Artificial Intelligence Research Institute"
+        ],
+        "Abstract": "We present RuBLiMP, a new benchmark for evaluating Russian language models on their linguistic knowledge. The benchmark is created semi-automatically based on manually crafted grammar templates and consists of minimal pairs of sentences. Each pair illustrates a particular linguistic phenomenon and contains one grammatically correct and one incorrect sentence. The resulting dataset contains over 120k minimal pairs covering a diverse set of morphosyntactic phenomena, such as subject-verb agreement, case marking, and semantic constraints. We use RuBLiMP to evaluate a number of popular pretrained Russian language models. Our results demonstrate that while the models show impressive performance on some phenomena, they still struggle with more complex syntactic structures, such as long-distance dependencies. The dataset is publicly available on GitHub: https://github.com/RussianNLP/RuBLiMP."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0394075,
+        "input_tokens": 3016,
+        "output_tokens": 1446
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.19232"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

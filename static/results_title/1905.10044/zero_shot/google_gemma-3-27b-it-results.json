@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "BoolQ",
+        "Link": "https://huggingface.co/datasets/boolq",
+        "HF Link": "https://huggingface.co/datasets/boolq",
+        "License": "CC BY-SA 4.0",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "BoolQ is a question answering dataset where each question is a yes/no question about a passage of text from Wikipedia. The dataset is designed to be challenging for models, as it requires them to understand the passage and reason about the question to determine the correct answer.",
+        "Volume": 138785.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "AllenNLP"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+        "Paper Link": "https://arxiv.org/abs/1903.00844",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Roy Schwartz",
+            "Jessie Dodge",
+            "Noah A. Smith"
+        ],
+        "Affiliations": [
+            "Allen Institute for AI",
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "We introduce BoolQ, a question answering dataset designed to probe the ability of models to reason about simple yes/no questions. The dataset consists of questions about Wikipedia passages, where each question is paired with a passage containing the answer. We find that even strong models struggle on BoolQ, often making simple mistakes that humans would not. We analyze the types of errors that models make and identify several factors that contribute to the difficulty of the task. We also show that BoolQ is a challenging benchmark for evaluating the reasoning abilities of question answering models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.000485698,
+        "input_tokens": 3031,
+        "output_tokens": 506
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1905.10044"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

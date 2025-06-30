@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "AOLHS",
+        "Subsets": [],
+        "Link": "https://github.com/Hala-Mulki/AOLHS-Dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "An Arabic dataset of 10,000 tweets annotated for offensive language and hate speech. The data was collected using emojis as search queries and manually annotated into three classes: Normal, Offensive, and Hate.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "The University of British Columbia",
+            "The University of Jordan"
+        ],
+        "Derived From": [],
+        "Paper Title": "Emojis as Anchors to Detect Arabic Offensive Language and Hate Speech",
+        "Paper Link": "https://aclanthology.org/2021.wanlp-1.19/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "Proceedings of the Sixth Arabic Natural Language Processing Workshop",
+        "Venue Type": "workshop",
+        "Venue Name": "Sixth Arabic Natural Language Processing Workshop (WANLP 2021)",
+        "Authors": [
+            "Hala Mulki",
+            "Hatem Haddad",
+            "Eiman Al-Sadi"
+        ],
+        "Affiliations": [
+            "The University of British Columbia",
+            "The University of Jordan"
+        ],
+        "Abstract": "The widespread use of social media has been accompanied by a surge of offensive language and hate speech. This paper presents our work on detecting offensive language and hate speech in Arabic tweets. We introduce a new, manually annotated dataset of 10,000 tweets, the Arabic Offensive Language and Hate Speech (AOLHS) dataset. The dataset was collected from Twitter using a list of hate-related emojis as search keywords. We used this dataset to train and test several models based on different deep learning architectures. We also investigated the effect of using emojis on the performance of the models. The best performing model achieved an F1-score of 0.88 for offensive language detection and 0.77 for hate speech detection. The results show that emojis can be used as anchors to collect a dataset for offensive language and hate speech detection, and that using emojis in training improves the performance of the models."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.03263,
+        "input_tokens": 3432,
+        "output_tokens": 1378
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

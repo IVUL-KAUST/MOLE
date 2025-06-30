@@ -1,0 +1,112 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "XNLI",
+            "Subsets": [],
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/xnli",
+            "License": "CC BY-SA 4.0",
+            "Year": 2018,
+            "Language": "Multilingual",
+            "Domain": "General",
+            "Form": "Sentence Pairs",
+            "Collection Style": "Crowdsourced",
+            "Description": "The Cross-lingual Natural Language Inference (XNLI) dataset is a collection of sentence pairs from multiple languages, designed to evaluate the cross-lingual transfer capabilities of sentence representations. It is a translation of the English SNLI dataset into 15 different languages.",
+            "Volume": "15 languages",
+            "Unit": "Sentence Pairs",
+            "Ethical Risks": "Potential biases present in the original SNLI dataset are carried over to XNLI. Translation process may introduce additional biases.",
+            "Provider": "Facebook AI",
+            "Derived From": "SNLI",
+            "Paper Title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+            "Paper Link": "https://arxiv.org/abs/1809.04087",
+            "Tokenized": null,
+            "Host": "Hugging Face Datasets",
+            "Access": "Public",
+            "Cost": "Free",
+            "Test Split": null,
+            "Tasks": [
+                "Natural Language Inference",
+                "Cross-lingual Transfer Learning"
+            ],
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": [
+                "Alexandru M. Ionescu",
+                "Sai Zhang",
+                "Razvan Pascanu",
+                "Graham Neubig",
+                "Mohammad Norouzi",
+                "David Grangier",
+                "Luke S. Zettlemoyer"
+            ],
+            "Affiliations": [
+                "Facebook AI Research"
+            ],
+            "Abstract": "We introduce XNLI, a new benchmark for evaluating cross-lingual sentence representations. XNLI is a translation of the Stanford Natural Language Inference (SNLI) dataset into 15 languages. We evaluate several recent cross-lingual sentence embedding models on XNLI and find that performance varies significantly across languages. We also show that models trained on XNLI can be used to improve performance on other cross-lingual tasks."
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/1809.05053",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.15789473684210525
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.0002266,
+        "input_tokens": 535,
+        "output_tokens": 524
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.05053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

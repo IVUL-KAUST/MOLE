@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "SberQuAD",
+        "Link": "https://huggingface.co/datasets/sberquad",
+        "HF Link": "https://huggingface.co/datasets/sberquad",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A Russian reading comprehension dataset inspired by SQuAD. It contains over 50,000 question-answer pairs based on 5,000 articles from Russian Wikipedia, annotated by humans via a crowdsourcing platform.",
+        "Volume": 50364.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sberbank",
+            "Sberbank AI Lab",
+            "Moscow Institute of Physics and Technology",
+            "Ural Federal University"
+        ],
+        "Derived From": [
+            "Russian Wikipedia"
+        ],
+        "Paper Title": "SberQuAD -- Russian Reading Comprehension Dataset: Description and Analysis",
+        "Paper Link": "https://arxiv.org/abs/1912.09241",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 9th International Conference on Analysis of Images, Social Networks and Texts (AIST 2020)",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Analysis of Images, Social Networks and Texts",
+        "Authors": [
+            "D. Efimov",
+            "E. Boytsov",
+            "V. Klyshinsky",
+            "P. Braslavski",
+            "A. P. Trotsevich"
+        ],
+        "Affiliations": [
+            "Sberbank",
+            "Sberbank AI Lab",
+            "Moscow Institute of Physics and Technology",
+            "Ural Federal University"
+        ],
+        "Abstract": "We present SberQuAD, a new large-scale Russian reading comprehension dataset. It is inspired by SQuAD, a popular machine reading comprehension dataset for English. We crawled 5,000 articles from Russian Wikipedia and collected over 50,000 questions. The dataset was collected and annotated by humans on the crowdsourcing platform Yandex.Toloka. We provide a detailed description of the data collection and annotation methodology and analyze the main properties of the resulting dataset. We also present several baseline models, including a strong multilingual neural model, and compare their performance with human accuracy. The dataset is publicly available. We hope that SberQuAD will foster the research in Russian machine reading comprehension."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04213,
+        "input_tokens": 3018,
+        "output_tokens": 1539
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1912.09723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

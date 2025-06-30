@@ -293,7 +293,7 @@ def get_metadatav2(
             sys_prompt = schemata[schema]["system_prompt"]
         elif title != "":
             prompt = f"""
-                        You have the following Metadata: {metadata} extracted from a paper and the following Title: {title}
+                        You have the following Schema: {schemata[schema]['schema']} and the following Title: {title}
                         Output JSON:
                         """
             sys_prompt = schemata[schema]["system_prompt"].replace("Paper Text", "Title")

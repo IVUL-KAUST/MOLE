@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "FLORES-101",
+        "Subsets": [],
+        "Link": "https://github.com/facebookresearch/flores/tree/main/flores101",
+        "HF Link": "https://huggingface.co/datasets/facebook/flores",
+        "License": "CC BY-SA 4.0",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "FLORES-101 is a many-to-many multilingual translation benchmark containing parallel sentences from Wikipedia across 101 languages. It was created to evaluate low-resource and multilingual machine translation models. Translations were done by professional translators.",
+        "Volume": 2009.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "The FLORES-101 Evaluation Benchmark for Low-Resource and Multilingual Machine Translation",
+        "Paper Link": "https://arxiv.org/abs/2106.03193",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "Findings of the Association for Computational Linguistics: NAACL 2022",
+        "Venue Type": "conference",
+        "Venue Name": "Conference of the North American Chapter of the Association for Computational Linguistics",
+        "Authors": [
+            "Naman Goyal",
+            "Cynthia Gao",
+            "Vishrav Chaudhary",
+            "Peng-Jen Chen",
+            "Guillaume Wenzek",
+            "Da Ju",
+            "Sanjana Krishnan",
+            "Marc\u2019Aurelio Ranzato",
+            "Francisco Guzman",
+            "Angela Fan"
+        ],
+        "Affiliations": [
+            "Facebook AI"
+        ],
+        "Abstract": "Recent work in multilingual machine translation has focused on scaling to a large number of languages. However, these models are primarily evaluated on high-resource languages, and it is unclear if the same techniques are effective for low-resource translation. A major blocker for such an evaluation is the lack of a standardized benchmark. In this work, we create a new evaluation benchmark, FLORES-101, which contains sentences in 101 languages, including many that are considered low-resource. The source for all translations is a collection of English documents from Wikipedia, which were translated by professional translators. We use this new dataset to evaluate the performance of several state-of-the-art and recently proposed multilingual translation models. We find that while these models are very effective for high-resource languages, they are significantly weaker in the low-resource setting, especially in a zero-shot setting. We also show that a simple approach of performing data augmentation by back-translating monolingual data results in a very strong baseline. Our code and data are publicly available."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.06189625,
+        "input_tokens": 3435,
+        "output_tokens": 1884
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.03193"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

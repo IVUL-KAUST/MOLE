@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "MEDIA",
+        "Link": "http://catalog.elra.info/en-us/repository/browse/ELRA-S0258/",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2012,
+        "Language": "fr",
+        "Domain": [
+            "other"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A French spoken language corpus of 1257 human-machine dialogues collected via the Wizard of Oz method in the hotel reservation and tourist information domain. This paper introduces new semantic annotations for a slot-filling task, focusing on temporal expressions and named entities.",
+        "Volume": 1257.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LIA, Universit\u00e9 d\u2019Avignon et des Pays de Vaucluse"
+        ],
+        "Derived From": [
+            "MEDIA"
+        ],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://aclanthology.org/L12-1385/",
+        "Tokenized": true,
+        "Host": "ELRA",
+        "Access": "With-Fee",
+        "Cost": "\u20ac1500 for academic members, \u20ac6000 for non-academic members.",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC'12)",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Anthony Rousseau",
+            "Paul Del\u00e9glise",
+            "Yannick Est\u00e8ve",
+            "Teva Merlin"
+        ],
+        "Affiliations": [
+            "LIA, Universit\u00e9 d\u2019Avignon et des Pays de Vaucluse"
+        ],
+        "Abstract": "This paper presents a new semantic task for the French spoken language understanding MEDIA benchmark. The MEDIA corpus is composed of human-machine dialogs in the domain of hotel reservation and tourist information. The original evaluation campaign, which took place in 2005, was focused on the extraction of a final frame containing all the information provided by the user during the dialog. We propose a new task based on semantic slot filling which aims at extracting finer-grained information. This task is based on a new annotation of the MEDIA corpus which is focused on temporal expressions and named entities. This paper describes the annotation protocol and presents some characteristics of the resulting annotated corpus. The MEDIA corpus, including the new annotations, is distributed by ELRA (European Language Resources Association) with the reference ELRA-S0258."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.2777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0504075,
+        "input_tokens": 3014,
+        "output_tokens": 1980
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

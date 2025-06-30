@@ -42,7 +42,7 @@
     "Affiliations": [
         "Ritsumeikan University"
     ],
-    "Abstract": "Twenty-five years ago, my colleagues Miyuki Kamachi and Jiro Gyoba and I designed and photographed JAFFE, a set of facial expression images intended for use in a study of face perception. In 2019, without seeking permission or informing us, Kate Crawford and Trevor Paglen exhibited JAFFE in two widely publicized art shows. In addition, they published a nonfactual account of the images in the essay 'Excavating AI: The Politics of Images in Machine Learning Training Sets.' The present article recounts the creation of the JAFFE dataset and unravels each of Crawford and Paglen's fallacious statements. I also discuss JAFFE more broadly in connection with research on facial expression, affective computing, and human-computer interaction.",
+    "Abstract": "Twenty-five years ago, my colleagues Miyuki Kamachi and Jiro Gyoba and I designed and photographed JAFFE, a set of facial expression images intended for use in a study of face perception. In 2019, without seeking permission or informing us, Kate Crawford and Trevor Paglen exhibited JAFFE in two widely publicized art shows. In addition, they published a nonfactual account of the images in the essay \"Excavating AI: The Politics of Images in Machine Learning Training Sets.\" The present article recounts the creation of the JAFFE dataset and unravels each of Crawford and Paglen's fallacious statements. I also discuss JAFFE more broadly in connection with research on facial expression, affective computing, and human-computer interaction.",
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,

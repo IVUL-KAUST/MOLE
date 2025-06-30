@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "RuSum",
+        "Link": "https://huggingface.co/datasets/ru_sum",
+        "HF Link": "https://huggingface.co/datasets/ru_sum",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "RuSum is a Russian-language multimodal dataset for automatic summarization of scientific papers. It contains 1,122 scientific papers with abstracts in Russian.",
+        "Volume": 1122.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Hugging Face"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuSum: A Russian-Language Multimodal Dataset for Automatic Summarization of Scientific Papers",
+        "Paper Link": "https://arxiv.org/abs/2312.12191",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Dmitry Uryupin",
+            "Ivan Yushmanov",
+            "Alexey Sorokin",
+            "Elena Voevodina",
+            "Andrey Kurbatov"
+        ],
+        "Affiliations": [
+            "Huawei",
+            "Saint Petersburg State University"
+        ],
+        "Abstract": "Automatic summarization is a crucial task in the age of information overload. While significant progress has been made in English summarization, Russian summarization remains relatively under-explored. In this paper, we present RuSum, a new Russian-language multimodal dataset for automatic summarization of scientific papers. The dataset consists of 1,122 scientific papers with abstracts in Russian, covering a wide range of scientific domains. We provide a detailed analysis of the dataset, including statistics on document length, abstract length, and vocabulary size. We also present baseline results on the dataset using several state-of-the-art summarization models. Our results demonstrate that RuSum is a challenging and valuable resource for Russian summarization research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.000489979,
+        "input_tokens": 3032,
+        "output_tokens": 528
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2405.07886"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,99 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "RELX",
+            "Subsets": null,
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/relx",
+            "License": "CC-BY-SA 4.0",
+            "Year": 2023,
+            "Language": "Multilingual",
+            "Domain": "General",
+            "Form": "Text",
+            "Collection Style": "Crowdsourcing",
+            "Description": "RELX is a large-scale, multilingual relation classification dataset. It contains 18,774 sentences with 41,616 entities and 56,337 relations annotated in 13 languages. The dataset is designed to facilitate cross-lingual relation classification research.",
+            "Volume": "18,774 sentences, 41,616 entities, 56,337 relations",
+            "Unit": "Sentence",
+            "Ethical Risks": null,
+            "Provider": "Relational AI",
+            "Derived From": null,
+            "Paper Title": "The RELX Dataset and Matching the Multilingual Blanks for Cross-Lingual Relation Classification",
+            "Paper Link": null,
+            "Tokenized": null,
+            "Host": "Hugging Face Datasets",
+            "Access": "Public",
+            "Cost": "Free",
+            "Test Split": null,
+            "Tasks": "Relation Classification",
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": null,
+            "Affiliations": null,
+            "Abstract": "We introduce RELX, a large-scale, multilingual relation classification dataset. RELX contains 18,774 sentences with 41,616 entities and 56,337 relations annotated in 13 languages. We also propose a novel method, Matching the Multilingual Blanks (MMB), to improve cross-lingual relation classification performance. Experiments show that MMB significantly outperforms existing methods on RELX and other cross-lingual relation classification benchmarks."
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2010.09381",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.21052631578947367
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.0002028,
+        "input_tokens": 540,
+        "output_tokens": 427
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.09381"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

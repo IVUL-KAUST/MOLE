@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Arabic-Hebrew TED talks",
+        "Subsets": [],
+        "Link": "http://people.csail.mit.edu/belinkov/ar-he-ted/",
+        "HF Link": "",
+        "License": "CC BY-NC-ND 4.0",
+        "Year": 2016,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A parallel corpus of Arabic and Hebrew based on TED and TEDx talks. The Arabic side is transcribed in Modern Standard Arabic (MSA). The corpus contains over 100k sentence pairs and is sentence-aligned.",
+        "Volume": 108321.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "MIT"
+        ],
+        "Derived From": [
+            "TED talks"
+        ],
+        "Paper Title": "An Arabic-Hebrew parallel corpus of TED talks",
+        "Paper Link": "https://aclanthology.org/L16-1232/",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "embedding evaluation"
+        ],
+        "Venue Title": "Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Yonatan Belinkov",
+            "James Glass"
+        ],
+        "Affiliations": [
+            "Computer Science and Artificial Intelligence Laboratory, MIT"
+        ],
+        "Abstract": "We present a new parallel corpus of Arabic-Hebrew, two Semitic languages with complex morphology. The corpus is based on TED and TEDx talks, a collection of presentations on a variety of subjects. The Arabic side is transcribed in Modern Standard Arabic (MSA), while the Hebrew side is in Modern Hebrew. The corpus contains more than 100k sentence pairs and more than 2M tokens on the Arabic side and 1.8M tokens on the Hebrew side. We describe the corpus collection and processing, and provide a quantitative analysis of the corpus. We also report baseline machine translation results on this corpus, which we make publicly available. To the best of our knowledge, this is the first publicly available parallel corpus for this language pair, and we hope it will be a useful resource for machine translation and other cross-lingual NLP tasks involving Arabic and Hebrew."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.042935,
+        "input_tokens": 3429,
+        "output_tokens": 1428
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.00572"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

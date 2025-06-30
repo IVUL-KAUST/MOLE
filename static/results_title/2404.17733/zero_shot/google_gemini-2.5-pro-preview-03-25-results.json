@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "Japanese Web Corpus",
+        "Link": "https://github.com/cl-tohoku/ja-web-corpus",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large-scale, high-quality Japanese web corpus created from Common Crawl data. It is designed for training large language models and was built using extensive filtering, quality control, and deduplication techniques.",
+        "Volume": 1300000000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Tohoku University",
+            "Megagon Labs"
+        ],
+        "Derived From": [
+            "Common Crawl"
+        ],
+        "Paper Title": "Building a Large Japanese Web Corpus for Large Language Models",
+        "Paper Link": "https://arxiv.org/abs/2405.19232",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Shohei Ohsawa",
+            "Yuta Hayashibe",
+            "Yui Uehara",
+            "Takuya Makino",
+            "Shota Sasaki",
+            "Naoki Yoshinaga",
+            "Kentaro Inui"
+        ],
+        "Affiliations": [
+            "Tohoku University",
+            "Megagon Labs"
+        ],
+        "Abstract": "The quality and quantity of pre-training corpora are crucial for the performance of large language models (LLMs). While there are several open LLMs for English, the development of Japanese LLMs has been hindered by the lack of a large-scale, high-quality corpus. In this paper, we introduce the Japanese Web Corpus, a large-scale and high-quality Japanese web corpus designed for training LLMs. We constructed this corpus by extensively filtering and cleaning the Common Crawl, a large-scale web archive. Our filtering pipeline includes language identification, quality filtering with a linear classifier, and deduplication. The resulting corpus contains 1.3T tokens, making it one of the largest Japanese corpora available. We release the corpus and the tools used for its construction, which we hope will facilitate the development of Japanese LLMs."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0353425,
+        "input_tokens": 3078,
+        "output_tokens": 1293
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.17733"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

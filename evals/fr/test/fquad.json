@@ -34,7 +34,6 @@
         "question answering"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -48,8 +47,7 @@
         "Illuin Technology",
         "ETH Zurich"
     ],
-    "Abstract": "We present FQuAD, a French Question Answering dataset composed of 10,000 question-answer pairs extracted from news articles. The dataset is designed to be used for training and evaluating question answering models in French. We provide a detailed analysis of the dataset, including its size, distribution of question types, and difficulty. We also evaluate the performance of several state-of-the-art question answering models on FQuAD. Our results show that FQuAD is a challenging dataset that can be used to benchmark the performance of question answering models in French.",
-    
+    "Abstract": "Recent advances in the field of language modeling have improved state-of-the-art results on many Natural Language Processing tasks. Among them, Reading Comprehension has made significant progress over the past few years. However, most results are reported in English since labeled resources available in other languages, such as French, remain scarce. In the present work, we introduce the French Question Answering Dataset (FQuAD). FQuAD is a French Native Reading Comprehension dataset of questions and answers on a set of Wikipedia articles that consists of 25,000+ samples for the 1.0 version and 60,000+ samples for the 1.1 version. We train a baseline model which achieves an F1 score of 92.2 and an exact match ratio of 82.1 on the test set. In order to track the progress of French Question Answering models we propose a leader-board and we have made the 1.0 version of our dataset freely available at https://illuin-tech.github.io/FQuAD-explorer/.",
     "annotations_from_paper": {
         "Name": 1,
         "Link": 0,
@@ -80,5 +78,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

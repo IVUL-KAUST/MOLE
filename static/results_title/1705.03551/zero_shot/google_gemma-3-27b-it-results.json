@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "TriviaQA",
+        "Link": "https://nlp.cs.washington.edu/triviaqa/",
+        "HF Link": "https://huggingface.co/datasets/trivia_qa",
+        "License": "CC BY-SA 4.0",
+        "Year": 2017,
+        "Language": "en",
+        "Domain": [
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "TriviaQA is a large-scale reading comprehension dataset, distantly supervised from trivia questions and answers. It contains question-answer pairs, supporting documents, and answer spans within those documents.",
+        "Volume": 95000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington"
+        ],
+        "Derived From": [],
+        "Paper Title": "TriviaQA: A Large Scale Distantly Supervised Challenge Dataset for Reading Comprehension",
+        "Paper Link": "https://arxiv.org/abs/1705.03551",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "machine translation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "Cornell University",
+        "Authors": [
+            "Sujay Joshi",
+            "Danqi Chen",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "University of Washington"
+        ],
+        "Abstract": "We introduce TriviaQA, a large-scale reading comprehension dataset distantly supervised from trivia questions and answers. TriviaQA contains 95K question-answer pairs, each with supporting documents retrieved from the web. The questions require reasoning over multiple sentences and documents to find the answer. We present a novel evaluation metric, Exact Match (EM), that measures the overlap between the predicted and ground truth answer spans. We also present results on a set of strong baseline models, including a bidirectional attention flow network and a memory network. Our results show that TriviaQA is a challenging dataset for existing reading comprehension models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00041861,
+        "input_tokens": 3021,
+        "output_tokens": 496
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.03551"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

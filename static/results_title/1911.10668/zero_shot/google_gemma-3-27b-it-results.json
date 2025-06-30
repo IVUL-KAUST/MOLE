@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "Name": "JParaCrawl",
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "A large-scale web-based English-Japanese parallel corpus.",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "JParaCrawl: A Large Scale Web-Based English-Japanese Parallel Corpus",
+        "Paper Link": "https://arxiv.org/abs/1911.10668",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3157894736842105
+    },
+    "length_forcing": 0.9333333333333332,
+    "cost": {
+        "cost": 0.00010748,
+        "input_tokens": 536,
+        "output_tokens": 238
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1911.10668"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

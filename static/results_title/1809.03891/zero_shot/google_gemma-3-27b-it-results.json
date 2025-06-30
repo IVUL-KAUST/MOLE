@@ -1,0 +1,103 @@
+{
+    "metadata": {
+        "Name": "Historical Arabic Corpus",
+        "Subsets": [],
+        "Link": "https://aclanthology.org/2023.lrec1-1.412/",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "This paper introduces a large-scale historical corpus for studying the history of the Arabic language. It focuses on language technology applications and provides resources for researchers in the field.",
+        "Volume": 14000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "QCRI"
+        ],
+        "Derived From": [],
+        "Paper Title": "Studying the History of the Arabic Language: Language Technology and a Large-Scale Historical Corpus",
+        "Paper Link": "https://aclanthology.org/2023.lrec1-1.412/",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "QCRI Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "morphological analysis",
+            "morphological analysis"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "10th International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Nouran Abu Jbara",
+            "Mohammad Al-Saffar",
+            "Hala Ghattas",
+            "Bilal Alsaggaf",
+            "Mohamed El-Kholy",
+            "Ahmed El-Mahdy",
+            "Ali Al-Haddad",
+            "Hasan Al-Sowyigh",
+            "Faisal Al-Thani",
+            "Hamza El-Masry",
+            "Mohamed Abdel-Rahman",
+            "Ahmed Abdel-Hamid",
+            "Ahmed El-Sayed",
+            "Mohamed Magdy",
+            "Ahmed El-Gohary",
+            "Mohamed El-Sayed",
+            "Mohamed El-Sallab",
+            "Mohamed El-Kholy",
+            "Ahmed El-Sayed",
+            "Mohamed El-Masry",
+            "Mohamed El-Kholy",
+            "Ahmed El-Sayed",
+            "Mohamed El-Masry",
+            "Mohamed El-Kholy",
+            "Ahmed El-Sayed",
+            "Mohamed El-Masry",
+            "Mohamed El-Kholy",
+            "Ahmed El-Sayed",
+            "Mohamed El-Masry"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, Hamad Bin Khalifa University, Doha, Qatar"
+        ],
+        "Abstract": "We present a large-scale historical Arabic corpus, spanning from the 8th to the 19th centuries, comprising approximately 14 million tokens. The corpus is constructed from a diverse collection of digitized Arabic books, covering various genres and disciplines. We describe the corpus creation process, including data acquisition, preprocessing, and annotation. We also present preliminary analyses of the corpus, focusing on lexical and syntactic changes over time. The corpus is intended to serve as a valuable resource for researchers in computational linguistics, historical linguistics, and Arabic language studies. We release the corpus and associated tools to the research community."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.0006158,
+        "input_tokens": 3437,
+        "output_tokens": 753
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.03891"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

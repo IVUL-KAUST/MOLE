@@ -1,20 +1,62 @@
 {
     "Name": "MLQA",
     "Subsets": [
-        {"Name": "en", "Volume":12738.0, "Unit":"sentences", "Language":"English"},
-        {"Name": "ar", "Volume":5852.0, "Unit":"sentences", "Language":"Arabic"},
-        {"Name": "de", "Volume":5029.0, "Unit":"sentences", "Language":"German"},
-        {"Name": "vi", "Volume":6006.0, "Unit":"sentences", "Language":"Vietnamese"},
-        {"Name": "es", "Volume":5770.0, "Unit":"sentences", "Language":"Spanish"},
-        {"Name": "zh", "Volume":5852.0, "Unit":"sentences", "Language":"Simplified Chinese"},
-        {"Name": "hi", "Volume":5425.0, "Unit":"sentences", "Language":"Hindi"}
-
+        {
+            "Name": "en",
+            "Volume": 12738.0,
+            "Unit": "sentences",
+            "Language": "English"
+        },
+        {
+            "Name": "ar",
+            "Volume": 5852.0,
+            "Unit": "sentences",
+            "Language": "Arabic"
+        },
+        {
+            "Name": "de",
+            "Volume": 5029.0,
+            "Unit": "sentences",
+            "Language": "German"
+        },
+        {
+            "Name": "vi",
+            "Volume": 6006.0,
+            "Unit": "sentences",
+            "Language": "Vietnamese"
+        },
+        {
+            "Name": "es",
+            "Volume": 5770.0,
+            "Unit": "sentences",
+            "Language": "Spanish"
+        },
+        {
+            "Name": "zh",
+            "Volume": 5852.0,
+            "Unit": "sentences",
+            "Language": "Simplified Chinese"
+        },
+        {
+            "Name": "hi",
+            "Volume": 5425.0,
+            "Unit": "sentences",
+            "Language": "Hindi"
+        }
     ],
     "HF Link": "https://hf.co/datasets/facebook/mlqa",
     "Link": "https://github.com/facebookresearch/mlqa",
     "License": "CC BY-SA 3.0",
     "Year": 2020,
-    "Language": ["English", "Arabic", "German", "Vietnamese", "Spanish", "Simplified Chinese", "Hindi"],
+    "Language": [
+        "English",
+        "Arabic",
+        "German",
+        "Vietnamese",
+        "Spanish",
+        "Simplified Chinese",
+        "Hindi"
+    ],
     "Domain": [
         "wikipedia"
     ],
@@ -55,8 +97,7 @@
     "Affiliations": [
         "Facebook AI Research;University College London"
     ],
-    "Abstract": "Question answering (QA) models have shown rapid progress enabled by the availability of large, high-quality benchmark datasets. Such annotated datasets are difficult and costly to collect, and rarely exist in languages other than English, making building QA systems that work well in other languages challenging. In order to develop such systems, it is crucial to invest in high quality multilingual evaluation benchmarks to measure progress. We present MLQA, a multi-way aligned extractive QA evaluation benchmark intended to spur research in this area. MLQA contains QA instances in 7 languages, English, Arabic, German, Spanish, Hindi, Vietnamese and Simplified Chinese. MLQA has over 12K instances in English and 5K in each other language, with each instance parallel between 4 languages on average. We evaluate state-of-the-art cross-lingual models and machine-translation-based baselines on MLQA. In all cases, transfer results are shown to be significantly behind training-language performance.",
-    
+    "Abstract": "Question answering (QA) models have shown rapid progress enabled by the availability of large, high-quality benchmark datasets. Such annotated datasets are difficult and costly to collect, and rarely exist in languages other than English, making training QA systems in other languages challenging. An alternative to building large monolingual training datasets is to develop cross-lingual systems which can transfer to a target language without requiring training data in that language. In order to develop such systems, it is crucial to invest in high quality multilingual evaluation benchmarks to measure progress. We present MLQA, a multi-way aligned extractive QA evaluation benchmark intended to spur research in this area. MLQA contains QA instances in 7 languages, namely English, Arabic, German, Spanish, Hindi, Vietnamese and Simplified Chinese. It consists of over 12K QA instances in English and 5K in each other language, with each QA instance being parallel between 4 languages on average. MLQA is built using a novel alignment context strategy on Wikipedia articles, and serves as a cross-lingual extension to existing extractive QA datasets. We evaluate current state-of-the-art cross-lingual representations on MLQA, and also provide machine-translation-based baselines. In all cases, transfer results are shown to be significantly behind training-language performance.",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -88,5 +129,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

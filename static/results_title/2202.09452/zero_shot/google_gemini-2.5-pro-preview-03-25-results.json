@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "FreEM",
+        "Link": "https://huggingface.co/datasets/FreEM",
+        "HF Link": "https://huggingface.co/datasets/FreEM",
+        "License": "custom",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "FreEM is a 2.6 billion-word corpus of Early Modern French (1500-1789). It was gathered from various online sources like Google Books and Gallica. The texts were manually selected by specialists of the period.",
+        "Volume": 2600000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Inria",
+            "Universit\u00e9 PSL",
+            "University of Zurich",
+            "\u00c9cole nationale des chartes"
+        ],
+        "Derived From": [
+            "Google Books",
+            "Gallica",
+            "Biblioth\u00e8que de Gen\u00e8ve"
+        ],
+        "Paper Title": "From FreEM to D'AlemBERT: a Large Corpus and a Language Model for Early Modern French",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.151",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "part of speech tagging"
+        ],
+        "Venue Title": "Proceedings of the Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Simon Gabay",
+            "Jean-Baptiste Camps",
+            "Timoth\u00e9e Premat",
+            "Thibault Cl\u00e9rice"
+        ],
+        "Affiliations": [
+            "Inria",
+            "Universit\u00e9 PSL",
+            "University of Zurich",
+            "\u00c9cole nationale des chartes"
+        ],
+        "Abstract": "This paper introduces two new resources for Early Modern French (1500-1789). First, we introduce FreEM, a 2.6 billion-word corpus of Early Modern French gathered from various online sources (Google Books, Gallica, the Biblioth\u00e8que de Gen\u00e8ve, etc.). The selection of the texts was made manually by specialists of the period. The corpus is supplied with rich metadata (author, title, date, publisher, etc.). We also provide D'AlemBERT, a language model for Early Modern French, which was pre-trained on the FreEM corpus. We evaluate our model on two downstream tasks: part-of-speech tagging and masked language modeling. We show that D'AlemBERT outperforms other models for Early Modern French, such as CamemBERT or other multilingual models. The corpus and the model are freely available on the Hugging Face Hub."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04785,
+        "input_tokens": 3024,
+        "output_tokens": 1707
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.09452"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

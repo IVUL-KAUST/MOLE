@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "Name": "Jamp",
+        "Link": "",
+        "HF Link": "https://huggingface.co/datasets/jamp",
+        "License": "custom",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "Controlled Japanese Temporal Inference Dataset for Evaluating Generalization Capacity of Language Models",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Jamp: Controlled Japanese Temporal Inference Dataset for Evaluating Generalization Capacity of Language Models",
+        "Paper Link": "https://arxiv.org/abs/2306.10727",
+        "Script": "Hiragana",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.21052631578947367
+    },
+    "length_forcing": 0.9333333333333332,
+    "cost": {
+        "cost": 0.0001422,
+        "input_tokens": 539,
+        "output_tokens": 260
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.10727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

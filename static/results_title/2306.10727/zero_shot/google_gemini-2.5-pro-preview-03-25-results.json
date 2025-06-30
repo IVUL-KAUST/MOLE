@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Jamp",
+        "Link": "https://github.com/cl-tohoku/jamp",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "LLM generated"
+        ],
+        "Description": "Jamp is a large-scale Japanese dataset for temporal inference, created by translating and augmenting the English TimeTect dataset. It consists of over one million sentence pairs designed to evaluate the generalization capacity of language models on temporal reasoning tasks.",
+        "Volume": 1048575.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Tohoku University",
+            "RIKEN"
+        ],
+        "Derived From": [
+            "TimeTect"
+        ],
+        "Paper Title": "Jamp: Controlled Japanese Temporal Inference Dataset for Evaluating Generalization Capacity of Language Models",
+        "Paper Link": "https://arxiv.org/abs/2405.14372",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Hitomi Yamashita",
+            "Koki Maeda",
+            "Kento Watanabe",
+            "Benjamin Heinzerling",
+            "Naoya Inoue",
+            "Kentaro Inui"
+        ],
+        "Affiliations": [
+            "Tohoku University",
+            "RIKEN"
+        ],
+        "Abstract": "Temporal reasoning is a crucial aspect of natural language understanding, yet it remains a challenge for current language models, especially in languages other than English. To address this gap, we introduce Jamp, a new large-scale Japanese dataset for temporal inference. Jamp is created by translating and augmenting TimeTect, an English temporal inference dataset that is carefully designed to test the generalization capacity of language models. Our dataset consists of over one million sentence pairs, each annotated with one of three temporal relationships: 'before', 'after', or 'vague'. We conduct extensive experiments to evaluate the performance of state-of-the-art Japanese language models on Jamp. Our results show that even the best-performing models struggle with our dataset, especially on the challenge sets designed to test generalization, indicating that there is still significant room for improvement in temporal reasoning for Japanese language models. The dataset is publicly available on GitHub."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.03939,
+        "input_tokens": 3086,
+        "output_tokens": 1484
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.10727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

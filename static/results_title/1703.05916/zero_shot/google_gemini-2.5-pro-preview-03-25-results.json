@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "JWS",
+        "Link": "https://github.com/tmu-nlp/JapaneseWordSimilarityDataset",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2016,
+        "Language": "jp",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A Japanese word similarity dataset containing 1,108 noun pairs. Similarity scores were annotated by 10 crowdworkers. The word pairs were selected from Japanese WordNet and the Balanced Corpus of Contemporary Written Japanese (BCCWJ).",
+        "Volume": 1108.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Nara Institute of Science and Technology",
+            "Okayama Prefectural University",
+            "Kyoto University"
+        ],
+        "Derived From": [
+            "Japanese WordNet",
+            "Balanced Corpus of Contemporary Written Japanese (BCCWJ)"
+        ],
+        "Paper Title": "Construction of a Japanese Word Similarity Dataset",
+        "Paper Link": "https://aclanthology.org/L16-1573.pdf",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "word similarity",
+            "embedding evaluation"
+        ],
+        "Venue Title": "Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC 2016)",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Shinnosuke Sawada",
+            "Yuji Matsumoto",
+            "Shota HARA",
+            "Kohei Oku",
+            "Tomohide Shibata"
+        ],
+        "Affiliations": [
+            "Nara Institute of Science and Technology",
+            "Okayama Prefectural University",
+            "Kyoto University"
+        ],
+        "Abstract": "This paper describes the construction of a Japanese word similarity dataset. Word similarity is a valuable resource for various natural language processing tasks and for the evaluation of distributed word representations. While a number of word similarity datasets have been created for English, there are only a few for other languages, including Japanese. We created a new Japanese word similarity dataset using crowdsourcing. The dataset consists of 1,108 word pairs, and the similarity scores were annotated by 10 crowdworkers. We evaluated the dataset by using it as a benchmark for several word similarity measures. The experimental results show that our dataset is reliable and of a higher quality than existing datasets."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04956875,
+        "input_tokens": 3076,
+        "output_tokens": 1698
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1703.05916"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

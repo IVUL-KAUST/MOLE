@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "CRAFT",
+        "Link": "https://huggingface.co/datasets/ai4bharat/craft",
+        "HF Link": "https://huggingface.co/datasets/ai4bharat/craft",
+        "License": "CC BY-NC 4.0",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "LLM generated"
+        ],
+        "Description": "CRAFT is a culturally oriented Russian dataset for focused text-to-image generation. It contains 10K high-quality Russian prompts and corresponding images.",
+        "Volume": 10000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "AI4Bharat"
+        ],
+        "Derived From": [],
+        "Paper Title": "CRAFT: Cultural Russian-Oriented Dataset Adaptation for Focused Text-to-Image Generation",
+        "Paper Link": "https://arxiv.org/abs/2402.08113",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "text generation",
+            "image captioning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Alexander V. Kulakov",
+            "Dmitry Uryupin",
+            "Nikita Klimov",
+            "Sergey I. Nikolenko"
+        ],
+        "Affiliations": [
+            "Skoltech",
+            "Yandex",
+            "National Research University Higher School of Economics"
+        ],
+        "Abstract": "We present CRAFT, a culturally oriented Russian dataset for focused text-to-image generation. The dataset consists of 10K high-quality Russian prompts and corresponding images. The prompts are designed to reflect Russian culture, history, and everyday life, and the images are carefully selected to match the prompts. We evaluate the performance of several state-of-the-art text-to-image models on the CRAFT dataset and show that they can generate realistic and culturally relevant images. We also analyze the limitations of the models and suggest directions for future research. The dataset is publicly available at https://huggingface.co/datasets/ai4bharat/craft."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.2777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.000494774,
+        "input_tokens": 3035,
+        "output_tokens": 535
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2505.04851"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

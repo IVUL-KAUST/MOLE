@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Shamela",
+        "Subsets": [],
+        "Link": "https://camel.abuduweish.com/shamela/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "A large-scale historical and classical Arabic corpus compiled from the Al-Shamela library. It contains over 6 billion words from books spanning 1400 years, and is provided in raw and tokenized formats with language modeling splits.",
+        "Volume": 6761332988.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Zewail City of Science and Technology",
+            "Nile University"
+        ],
+        "Derived From": [
+            "Al-Shamela library"
+        ],
+        "Paper Title": "Shamela: A Large-Scale Historical Arabic Corpus",
+        "Paper Link": "https://arxiv.org/abs/2205.01904",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "CAMeL Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "embedding evaluation"
+        ],
+        "Venue Title": "Proceedings of the Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Shady El-Gohary",
+            "Ahmed El-Gohary",
+            "Muhammad El-Gohary"
+        ],
+        "Affiliations": [
+            "Zewail City of Science and Technology",
+            "Nile University"
+        ],
+        "Abstract": "We introduce Shamela, a large-scale historical and classical Arabic corpus. The corpus is compiled from the Al-Shamela library, the largest digital collection of Arabic books. The corpus contains over 6 billion words, spanning a period of 1400 years. We describe the compilation and pre-processing of the corpus. We also provide train, development, and test splits for language modeling. We release the corpus in its raw and tokenized formats. The corpus is publicly available at: https://camel.abuduweish.com/shamela/. We believe that the corpus will be a valuable resource for the Arabic NLP community, especially for building language models, word embeddings, and other NLP models for historical and classical Arabic."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.04663625,
+        "input_tokens": 3429,
+        "output_tokens": 1574
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

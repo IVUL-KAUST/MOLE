@@ -1,19 +1,62 @@
 {
     "Name": "XOR-TyDi",
     "Subsets": [
-        {"Name": "Ar", "Volume": 17218.0, "Unit":"sentences", "Language":"Arabic"},
-        {"Name": "Bn", "Volume": 2682.0, "Unit":"sentences", "Language":"Bengali"},
-        {"Name": "Fi", "Volume": 9132.0, "Unit":"sentences", "Language":"Finnish"},
-        {"Name": "Ja", "Volume": 6531.0, "Unit":"sentences", "Language":"Japanese"},
-        {"Name": "Ko", "Volume": 2433.0, "Unit":"sentences", "Language":"Korean"},
-        {"Name": "Ru", "Volume": 8787.0, "Unit":"sentences", "Language":"Russian"},
-        {"Name": "Te", "Volume": 6276.0, "Unit":"sentences", "Language":"Telugu"}
+        {
+            "Name": "Ar",
+            "Volume": 17218.0,
+            "Unit": "sentences",
+            "Language": "Arabic"
+        },
+        {
+            "Name": "Bn",
+            "Volume": 2682.0,
+            "Unit": "sentences",
+            "Language": "Bengali"
+        },
+        {
+            "Name": "Fi",
+            "Volume": 9132.0,
+            "Unit": "sentences",
+            "Language": "Finnish"
+        },
+        {
+            "Name": "Ja",
+            "Volume": 6531.0,
+            "Unit": "sentences",
+            "Language": "Japanese"
+        },
+        {
+            "Name": "Ko",
+            "Volume": 2433.0,
+            "Unit": "sentences",
+            "Language": "Korean"
+        },
+        {
+            "Name": "Ru",
+            "Volume": 8787.0,
+            "Unit": "sentences",
+            "Language": "Russian"
+        },
+        {
+            "Name": "Te",
+            "Volume": 6276.0,
+            "Unit": "sentences",
+            "Language": "Telugu"
+        }
     ],
     "HF Link": "https://hf.co/datasets/akariasai/xor_tydi_qa",
     "Link": "https://nlp.cs.washington.edu/xorqa/",
     "License": "CC BY-SA 4.0",
     "Year": 2021,
-    "Language": ["Arabic", "Bengali", "Finnish", "Japanese", "Korean", "Russian", "Telugu"],
+    "Language": [
+        "Arabic",
+        "Bengali",
+        "Finnish",
+        "Japanese",
+        "Korean",
+        "Russian",
+        "Telugu"
+    ],
     "Domain": [
         "public datasets"
     ],
@@ -41,7 +84,6 @@
         "question answering"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -58,8 +100,7 @@
         "Google Research",
         "The University of Texas at Austin; Allen Institute for AI"
     ],
-    "Abstract": "Multilingual question answering tasks typically assume that answers exist in the same\nlanguage as the question. Yet in practice, many languages face both information\nscarcity\u2014where languages have few reference\narticles\u2014and information asymmetry\u2014where\nquestions reference concepts from other cultures. This work extends open-retrieval question answering to a cross-lingual setting enabling questions from one language to be answered via answer content from another language. We construct a large-scale dataset\nbuilt on 40K information-seeking questions\nacross 7 diverse non-English languages that\nTYDI QA could not find same-language answers for. Based on this dataset, we introduce\na task framework, called Cross-lingual OpenRetrieval Question Answering (XOR QA),\nthat consists of three new tasks involving crosslingual document retrieval from multilingual\nand English resources. We establish baselines\nwith state-of-the-art machine translation systems and cross-lingual pretrained models. Experimental results suggest that XOR QA is a\nchallenging task that will facilitate the development of novel techniques for multilingual\nquestion answering. Our data and code are\navailable at https://nlp.cs.washington.\nedu/xorqa/.",
-    
+    "Abstract": "Multilingual question answering tasks typically assume answers exist in the same language as the question. Yet in practice, many languages face both information scarcity -- where languages have few reference articles -- and information asymmetry -- where questions reference concepts from other cultures. This work extends open-retrieval question answering to a cross-lingual setting enabling questions from one language to be answered via answer content from another language. We construct a large-scale dataset built on questions from TyDi QA lacking same-language answers. Our task formulation, called Cross-lingual Open Retrieval Question Answering (XOR QA), includes 40k information-seeking questions from across 7 diverse non-English languages. Based on this dataset, we introduce three new tasks that involve cross-lingual document retrieval using multi-lingual and English resources. We establish baselines with state-of-the-art machine translation systems and cross-lingual pretrained models. Experimental results suggest that XOR QA is a challenging task that will facilitate the development of novel techniques for multilingual question answering. Our data and code are available at https://nlp.cs.washington.edu/xorqa.",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -91,5 +132,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

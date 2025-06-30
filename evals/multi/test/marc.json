@@ -1,18 +1,55 @@
 {
     "Name": "MARC",
     "Subsets": [
-        {"Name":"English", "Volume":2100000.0, "Unit":"sentences", "Language":"English"},
-        {"Name":"Japanese", "Volume":2100000.0, "Unit":"sentences", "Language":"Japanese"},
-        {"Name":"German", "Volume":2100000.0, "Unit":"sentences", "Language":"German"},
-        {"Name":"French", "Volume":2100000.0, "Unit":"sentences", "Language":"French"},
-        {"Name":"Spanish", "Volume":2100000.0, "Unit":"sentences", "Language":"Spanish"},
-        {"Name":"Chinese", "Volume":2100000.0, "Unit":"sentences", "Language":"Chinese"}
+        {
+            "Name": "English",
+            "Volume": 2100000.0,
+            "Unit": "sentences",
+            "Language": "English"
+        },
+        {
+            "Name": "Japanese",
+            "Volume": 2100000.0,
+            "Unit": "sentences",
+            "Language": "Japanese"
+        },
+        {
+            "Name": "German",
+            "Volume": 2100000.0,
+            "Unit": "sentences",
+            "Language": "German"
+        },
+        {
+            "Name": "French",
+            "Volume": 2100000.0,
+            "Unit": "sentences",
+            "Language": "French"
+        },
+        {
+            "Name": "Spanish",
+            "Volume": 2100000.0,
+            "Unit": "sentences",
+            "Language": "Spanish"
+        },
+        {
+            "Name": "Chinese",
+            "Volume": 2100000.0,
+            "Unit": "sentences",
+            "Language": "Chinese"
+        }
     ],
     "Link": "https://registry.opendata.aws/amazon-reviews-ml",
     "HF Link": "https://huggingface.co/datasets/defunct-datasets/amazon_reviews_multi",
     "License": "custom",
     "Year": 2020,
-    "Language": ["Japanese", "English", "German", "French", "Spanish", "Chinese"],
+    "Language": [
+        "Japanese",
+        "English",
+        "German",
+        "French",
+        "Spanish",
+        "Chinese"
+    ],
     "Domain": [
         "reviews"
     ],
@@ -41,7 +78,6 @@
         "review classification"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -54,9 +90,7 @@
         "Amazon",
         "Washington University"
     ],
-    "Abstract": "We present the Multilingual Amazon Reviews Corpus (MARC), a large-scale collection of Amazon reviews for multilingual text classification. The corpus contains reviews in English, Japanese, German, French, Spanish, and Chinese, which were collected between 2015 and 2019. Each record in the dataset contains the review text, the review title, the star rating, an anonymized reviewer ID, an anonymized product ID, and the coarse-grained product category (e.g., ‘books’, ‘appliances’, etc.) The corpus is balanced across the 5 possible star ratings, so each rating constitutes 20% of the reviews in each language. For each language, there are 200,000, 5,000, and 5,000 reviews in the training, development, and test sets, respectively. We report baseline results for supervised text classification and zero-shot crosslingual transfer learning by fine-tuning a multilingual BERT model on reviews data. We propose the use of mean absolute error (MAE) instead of classification accuracy for this task, since MAE accounts for the ordinal nature of the ratings.",
-    
-    
+    "Abstract": "We present the Multilingual Amazon Reviews Corpus (MARC), a large-scale collection of Amazon reviews for multilingual text classification. The corpus contains reviews in English, Japanese, German, French, Spanish, and Chinese, which were collected between 2015 and 2019. Each record in the dataset contains the review text, the review title, the star rating, an anonymized reviewer ID, an anonymized product ID, and the coarse-grained product category (e.g., 'books', 'appliances', etc.) The corpus is balanced across the 5 possible star ratings, so each rating constitutes 20% of the reviews in each language. For each language, there are 200,000, 5,000, and 5,000 reviews in the training, development, and test sets, respectively. We report baseline results for supervised text classification and zero-shot cross-lingual transfer learning by fine-tuning a multilingual BERT model on reviews data. We propose the use of mean absolute error (MAE) instead of classification accuracy for this task, since MAE accounts for the ordinal nature of the ratings.",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -82,11 +116,11 @@
         "Cost": 1,
         "Test Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,        
+        "Venue Title": 1,
         "Venue Type": 1,
         "Venue Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

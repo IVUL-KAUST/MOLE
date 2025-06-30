@@ -1,0 +1,99 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "XCOPA",
+            "Subsets": null,
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/xcope",
+            "License": null,
+            "Year": 2019,
+            "Language": "Multilingual",
+            "Domain": "Commonsense Reasoning",
+            "Form": "Question Answering",
+            "Collection Style": "Human-authored",
+            "Description": "A multilingual dataset for causal commonsense reasoning. It contains questions that require understanding of causal relationships.",
+            "Volume": "1.5K examples",
+            "Unit": "examples",
+            "Ethical Risks": null,
+            "Provider": "Facebook AI",
+            "Derived From": null,
+            "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+            "Paper Link": null,
+            "Tokenized": null,
+            "Host": null,
+            "Access": null,
+            "Cost": null,
+            "Test Split": null,
+            "Tasks": "Causal Commonsense Reasoning",
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": null,
+            "Affiliations": null,
+            "Abstract": null
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2005.00333",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.15789473684210525
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.0001505,
+        "input_tokens": 536,
+        "output_tokens": 280
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "Calliar",
+        "Subsets": [],
+        "Link": "https://github.com/ahmed-abdelghany/Calliar",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "other"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Calliar is an online handwritten dataset for Arabic calligraphy.",
+        "Volume": 1000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "ahmed-abdelghany"
+        ],
+        "Derived From": [],
+        "Paper Title": "Calliar: An Online Handwritten Dataset for Arabic Calligraphy",
+        "Paper Link": "https://arxiv.org/abs/2310.14919",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "image captioning",
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ahmed Abdelghany",
+            "Mohamed El-Sawy",
+            "Ahmed El-Sayed",
+            "Hossam El-Din",
+            "Mahmoud El-Hefnawy"
+        ],
+        "Affiliations": [],
+        "Abstract": "Arabic calligraphy is a highly artistic and complex skill that has been practiced for centuries. However, the lack of publicly available datasets has hindered the development of machine learning models for Arabic calligraphy recognition and generation. In this paper, we introduce Calliar, a new online handwritten dataset for Arabic calligraphy. Calliar consists of 1000 images of Arabic calligraphy written by 20 different calligraphers. The dataset is diverse in terms of calligraphy styles, pen types, and paper types. We provide a detailed analysis of the dataset and demonstrate its potential for various applications, such as calligraphy recognition, calligraphy generation, and calligraphy style transfer. We believe that Calliar will serve as a valuable resource for the research community and contribute to the advancement of Arabic calligraphy-related technologies."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0004646,
+        "input_tokens": 3431,
+        "output_tokens": 520
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10745"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "AI2 Science Questions",
+        "Link": "http://data.allenai.org/arc/",
+        "HF Link": "https://huggingface.co/datasets/allenai/ai2_arc",
+        "License": "CC BY-SA 4.0",
+        "Year": 2017,
+        "Language": "en",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A dataset of 4,331 multiple-choice science questions for grades 3-9, created via a crowdsourcing pipeline where workers authored questions based on provided science text. This dataset is a precursor to the larger ARC dataset.",
+        "Volume": 4331.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Derived From": [],
+        "Paper Title": "Crowdsourcing Multiple Choice Science Questions",
+        "Paper Link": "https://arxiv.org/abs/1707.06209",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "question answering",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "Proceedings of the Workshop on New Frontiers in Summarization",
+        "Venue Type": "workshop",
+        "Venue Name": "Workshop on New Frontiers in Summarization",
+        "Authors": [
+            "Johannes Welbl",
+            "Nelson F. Liu",
+            "Matt Gardner"
+        ],
+        "Affiliations": [
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Abstract": "We are interested in question answering (QA) as a benchmark for measuring reading comprehension. While there are many QA datasets, most of them have been constructed either from a limited domain of text, or by using crowd-workers to write questions given a paragraph. The former limits the scope of the models that can be built, while the latter has been shown to result in questions that can be answered by looking at the question and the paragraph in isolation. We describe a crowdsourcing pipeline for creating a large dataset of science questions, which we use to create a new dataset of 4,331 questions. We show that by asking crowd-workers to author questions from a given paragraph of science text, we can create a diverse question set that requires a deeper understanding of the text. We analyze the dataset and show that a significant portion of the questions are hard for current state-of-the-art QA systems. We make our dataset publicly available."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0363525,
+        "input_tokens": 3010,
+        "output_tokens": 1283
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1707.06209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "JAFFE",
+        "Link": "https://github.com/jhu-vision/JAFFE",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 1998,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The JAFFE dataset is a collection of facial expression images. It has been used in many studies on facial expression recognition.",
+        "Volume": 213.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Japanese Female Facial Expression"
+        ],
+        "Derived From": [],
+        "Paper Title": "Excavating AI\u201d Re-excavated: Debunking a Fallacious Account of the JAFFE Dataset",
+        "Paper Link": "https://arxiv.org/abs/2310.18493",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "emotion classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yusuke Matsui",
+            "Takashi Matsuyama",
+            "Hideyuki Takagi",
+            "Toshihiko Yamashita"
+        ],
+        "Affiliations": [],
+        "Abstract": "The JAFFE (Japanese Female Facial Expression) dataset is a widely used benchmark for facial expression recognition. However, a recent paper (\u201cExcavating AI\u201d) claims that the dataset is biased and contains inaccurate labels. In this paper, we re-examine the JAFFE dataset and debunk the claims made in \u201cExcavating AI\u201d. We show that the dataset is not as biased as claimed and that the labels are generally accurate. We also provide a more detailed analysis of the dataset and discuss its limitations."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0005209,
+        "input_tokens": 3106,
+        "output_tokens": 451
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2107.13998"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

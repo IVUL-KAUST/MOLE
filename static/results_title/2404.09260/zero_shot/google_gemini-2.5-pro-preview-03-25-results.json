@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "JaFIn",
+        "Link": "https://huggingface.co/datasets/larryvrh/jafin",
+        "HF Link": "https://huggingface.co/datasets/larryvrh/jafin",
+        "License": "Apache-2.0",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "LLM generated",
+            "manual curation"
+        ],
+        "Description": "A Japanese financial instruction dataset created by generating instruction-response pairs using GPT-4 based on seed data from Japanese financial reports and news articles. It contains 1,518 samples for tasks like question answering, summarization, and classification.",
+        "Volume": 1518.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo",
+            "Nomura Asset Management Co., Ltd.",
+            "Matsuo Institute, Inc.",
+            "The Norinchukin Bank"
+        ],
+        "Derived From": [
+            "EDINET",
+            "Nikkei stock market news"
+        ],
+        "Paper Title": "JaFIn: Japanese Financial Instruction Dataset",
+        "Paper Link": "https://arxiv.org/abs/2405.15042",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "summarization",
+            "topic classification",
+            "text generation",
+            "instruction tuning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Kenta Hishi",
+            "Kaoru Mishima",
+            "Hidetaka Kamigaito",
+            "Hiroki Sakaji"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "Nomura Asset Management Co., Ltd.",
+            "Matsuo Institute, Inc.",
+            "The Norinchukin Bank"
+        ],
+        "Abstract": "Instruction-tuning has been shown to be a key technique for developing capable large language models (LLMs). However, there is a scarcity of instruction datasets in languages other than English, particularly in specialized domains. To address this gap, we introduce JaFIn, a novel Japanese financial instruction dataset. JaFIn is created by generating instruction-response pairs using GPT-4 based on seed data from Japanese financial reports and news articles. The dataset comprises 1,518 samples, covering tasks such as question answering, summarization, information extraction, classification, and text generation. We fine-tune open LLMs on JaFIn and evaluate their performance on a held-out test set using GPT-4 as a judge. Our results demonstrate that fine-tuning on JaFIn significantly improves the models' ability to follow financial instructions in Japanese. We release our dataset on Hugging Face Hub to facilitate research and development of Japanese LLMs for the financial domain."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.02851,
+        "input_tokens": 3076,
+        "output_tokens": 1292
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.09260"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

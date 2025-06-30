@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Spoken Drug Prescription Dataset",
+        "Link": "https://huggingface.co/datasets/camel-space/spoken-drug-prescription-fr",
+        "HF Link": "https://huggingface.co/datasets/camel-space/spoken-drug-prescription-fr",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "commentary"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "This dataset contains spoken drug prescriptions in French, designed for spoken language understanding tasks.",
+        "Volume": 1180.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "CAMeL Space"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Spoken Drug Prescription Dataset in French for Spoken Language Understanding",
+        "Paper Link": "https://arxiv.org/abs/2402.04991",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "speech recognition",
+            "language modeling"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yassine Benajiba",
+            "Mohamed El-Bouaddi",
+            "Ayoub El Hajjami",
+            "Hassan El Kasmi",
+            "Youssef El Mansouri",
+            "Mustafa El Maimouni",
+            "Abdelkrim El Mouatez",
+            "Younes Izza",
+            "Yassine Khayati",
+            "Mohamed Rida Boukhriss",
+            "Ali El Filali"
+        ],
+        "Affiliations": [
+            "Mohammed VI Polytechnic University"
+        ],
+        "Abstract": "Drug prescription is a critical task in healthcare, and accurate understanding of spoken prescriptions is essential for efficient and safe medication dispensing. However, the lack of publicly available datasets hinders the development of robust spoken language understanding (SLU) systems for this domain. In this paper, we introduce a novel dataset of spoken drug prescriptions in French, comprising 1180 utterances collected from real-world pharmacy scenarios. The dataset is annotated with detailed semantic information, including drug names, dosages, frequencies, and routes of administration. We present a baseline SLU system based on a state-of-the-art automatic speech recognition (ASR) model and a sequence-to-sequence (seq2seq) model for semantic slot filling. Experimental results demonstrate the feasibility of building accurate SLU systems for spoken drug prescriptions in French. The dataset is publicly available to facilitate further research in this important area."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0005198,
+        "input_tokens": 3014,
+        "output_tokens": 617
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2207.08292"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

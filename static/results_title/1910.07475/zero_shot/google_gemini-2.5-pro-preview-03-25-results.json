@@ -1,0 +1,130 @@
+{
+    "metadata": {
+        "Name": "MLQA",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 12738,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 6598,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "German",
+                "Volume": 6598,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 6598,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 6598,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 6598,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Simplified Chinese",
+                "Volume": 6598,
+                "Unit": "sentences",
+                "Language": "Simplified Chinese"
+            }
+        ],
+        "Link": "https://github.com/facebookresearch/MLQA",
+        "HF Link": "https://huggingface.co/datasets/facebook/mlqa",
+        "License": "CC BY-SA 4.0",
+        "Year": 2019,
+        "Language": [
+            "English",
+            "Arabic",
+            "German",
+            "Spanish",
+            "Hindi",
+            "Vietnamese",
+            "Simplified Chinese"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "MLQA (Multilingual Question Answering) is a benchmark dataset for evaluating cross-lingual extractive question answering. It includes over 12K QA instances in English and over 5K in six other languages, with parallel questions and contexts aligned across languages.",
+        "Volume": 6598.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research"
+        ],
+        "Derived From": [
+            "SQuAD v1.1",
+            "Wikipedia"
+        ],
+        "Paper Title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
+        "Paper Link": "https://arxiv.org/abs/1910.07471",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Patrick Lewis",
+            "Barlas Oguz",
+            "Ruty Rinott",
+            "Sebastian Riedel",
+            "Holger Schwenk"
+        ],
+        "Affiliations": [
+            "Facebook AI Research"
+        ],
+        "Abstract": "We present the Multilingual Question Answering (MLQA) dataset, a benchmark for evaluating cross-lingual question answering performance. MLQA contains over 12K QA instances (10K in English) in seven languages, English, Arabic, German, Spanish, Hindi, Vietnamese and Simplified Chinese. The dataset is developed in parallel, with questions and context documents aligned across languages. We additionally extend the SQuAD format to cover cases where the answer is not present in the context. By including languages from different families and with varying morphological richness, MLQA can be used to analyze the impact of typological differences on cross-lingual model performance. We provide a strong BERT-based baseline, M-BERT, and show that it obtains high accuracy in all languages, with F1 scores of over 70 in English and over 60 in all other languages. We observe a drop in performance of 4-8 F1 points when transferring from a high-resource language (English) to a low-resource language (e.g. Vietnamese). We further show that M-BERT is surprisingly robust to 'translate-train' data augmentation, and that it is able to zero-shot transfer to new languages and QA datasets with reasonable success. The dataset is available at https://github.com/facebookresearch/MLQA."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04262125,
+        "input_tokens": 3189,
+        "output_tokens": 1728
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1910.07475"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

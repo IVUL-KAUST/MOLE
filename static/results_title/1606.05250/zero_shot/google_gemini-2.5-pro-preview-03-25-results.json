@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "SQuAD",
+        "Link": "https://stanford-qa.com",
+        "HF Link": "https://huggingface.co/datasets/squad",
+        "License": "CC BY-SA 4.0",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale reading comprehension dataset with over 100,000 question-answer pairs on Wikipedia articles. The answer to every question is a segment of text from the corresponding passage.",
+        "Volume": 107785.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+        "Paper Link": "https://arxiv.org/abs/1606.05250",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Jian Zhang",
+            "Konstantin Lopyrev",
+            "Percy Liang"
+        ],
+        "Affiliations": [
+            "Stanford University"
+        ],
+        "Abstract": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of questions posed by crowdworkers on a set of Wikipedia articles, where the answer to every question is a segment of text, or span, from the corresponding reading passage. With 100,000+ question-answer pairs on 500+ articles, SQuAD is significantly larger than previous reading comprehension datasets. SQuAD has two notable features compared to previous datasets. First, the answer to a question is a span of text from the paragraph, which in principle could be generated, but in our task is restricted to be a span. This constraint makes the task more tractable than more open-ended question answering. Second, in a departure from previous datasets, we provide a test set that is hidden from the developers and we run a shared evaluation. By withholding the test set, we ensure that the evaluation is a realistic measure of a system's ability to generalize to new passages and questions. We have hosted a public leaderboard for the last three months and have received over 25 submissions from 15 different research groups. The best systems on the leaderboard achieve an F1 score of 80%, a significant improvement over a simple baseline (51%), but still far from human performance (92%), suggesting that the task is challenging for current machine comprehension systems. The dataset is freely available at https://stanford-qa.com."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0340275,
+        "input_tokens": 3020,
+        "output_tokens": 1334
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.05250"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

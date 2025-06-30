@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "GECTOR-QE",
+        "Link": "https://github.com/aomi-k/gector-qe",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A Japanese Quality Estimation dataset for Grammatical Error Correction. It contains 2,000 sentences from the Lang-8 corpus, outputs from a GEC model, and HTER scores annotated by humans.",
+        "Volume": 2000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Waseda University",
+            "Tokyo Metropolitan University"
+        ],
+        "Derived From": [
+            "Lang-8 Learner Corpora FCE-public"
+        ],
+        "Paper Title": "Construction of a Quality Estimation Dataset for Automatic Evaluation of Japanese Grammatical Error Correction",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.115",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "transliteration"
+        ],
+        "Venue Title": "Proceedings of the Language Resources and Evaluation Conference (LREC 2022)",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Aomi Koyama",
+            "Kengo Hotate",
+            "Masahiro Kaneko",
+            "Mamoru Komachi"
+        ],
+        "Affiliations": [
+            "Waseda University",
+            "Tokyo Metropolitan University"
+        ],
+        "Abstract": "Grammatical Error Correction (GEC) is a task that involves automatically correcting grammatical errors in text written by language learners. Although GEC systems have been evaluated using metrics such as F0.5-score and GLEU, these metrics require gold-standard reference sentences, which are costly to create. To address this problem, Quality Estimation (QE) has been proposed as an alternative evaluation method that does not require reference sentences. However, there is no publicly available dataset for Japanese GEC-QE. In this study, we construct a Japanese GEC-QE dataset. We first collected sentences from a Japanese GEC corpus and then used them as input to a state-of-the-art neural GEC model to obtain the model\u2019s outputs. Finally, we annotated the model\u2019s outputs with Human-targeted Translation Error Rate (HTER) labels. The constructed dataset is publicly available."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.03826875,
+        "input_tokens": 3085,
+        "output_tokens": 1344
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.08038"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

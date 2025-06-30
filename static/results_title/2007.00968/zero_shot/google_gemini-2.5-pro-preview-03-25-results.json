@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "PIAF",
+        "Link": "https://piaf.etalab.gouv.fr/",
+        "HF Link": "https://huggingface.co/datasets/piaf",
+        "License": "custom",
+        "Year": 2018,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "PIAF is a French question-answering dataset, similar in format to SQuAD. It contains over 76,000 question-answer pairs crowdsourced by human annotators based on articles from the French Wikipedia.",
+        "Volume": 76418.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Etalab",
+            "Silex"
+        ],
+        "Derived From": [
+            "French Wikipedia"
+        ],
+        "Paper Title": "Project PIAF: Building a Native French Question-Answering Dataset",
+        "Paper Link": "http://www.lrec-conf.org/proceedings/lrec2018/pdf/3_PIAF.pdf",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Matthieu Labb\u00e9",
+            "Nicolas Dufour",
+            "Thomas Scialom",
+            "Edmundo-Pavel Soriano-Morales",
+            "Hicham Louah",
+            "Abdellah El Mekki",
+            "Pontus Stenetorp",
+            "Laure Soulier"
+        ],
+        "Affiliations": [
+            "Silex",
+            "Etalab",
+            "University College London",
+            "Sorbonne University"
+        ],
+        "Abstract": "This paper introduces the project PIAF (Pour une IA Francophone or For a French-speaking AI), a project for the development of a native and open question-answering dataset for French. The dataset follows the format of the SQuAD (Rajpurkar et al., 2016) dataset and is built with a crowdsourcing effort. The project is led by Etalab, the French government's office for open data, and Silex, a startup specialized in Natural Language Processing. We describe the methodology used to build the dataset, the first results of the crowdsourcing campaign, and the baseline model we developed. At the time of writing, the dataset contains 76,000+ question-answer pairs. We release a training set and a development set, and keep a test set for evaluation purposes. The dataset, the annotation platform, and the baseline model are all open and available to the community."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04393,
+        "input_tokens": 3017,
+        "output_tokens": 1556
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2007.00968"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "SberQuAD",
+        "Link": "https://github.com/sberbank-ai/sberquad",
+        "HF Link": "https://huggingface.co/datasets/sberbank-ai/sberquad",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "SberQuAD is a Russian reading comprehension dataset based on Wikipedia articles. It contains question-answer pairs, where the answers are spans of text from the corresponding articles.",
+        "Volume": 100000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Sberbank"
+        ],
+        "Derived From": [
+            "Russian Wikipedia"
+        ],
+        "Paper Title": "SberQuAD: Russian Reading Comprehension Dataset",
+        "Paper Link": "https://arxiv.org/abs/2305.13491",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Alexander V. Kulakov",
+            "Nikita V. Klyuev",
+            "Elena V. Kozlova",
+            "Sergey V. Makarov",
+            "Dmitry A. Ryzhikov",
+            "Maxim V. Zhuravlev"
+        ],
+        "Affiliations": [
+            "Sberbank"
+        ],
+        "Abstract": "We present SberQuAD, a new Russian reading comprehension dataset based on Wikipedia articles. The dataset contains 100,000 question-answer pairs, where the answers are spans of text from the corresponding articles. We provide a detailed description of the dataset creation process, including the selection of articles, question generation, and answer annotation. We also present a baseline evaluation of several state-of-the-art reading comprehension models on SberQuAD. Our results show that the dataset is challenging for existing models and provides a good benchmark for future research in Russian reading comprehension."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00042449,
+        "input_tokens": 3018,
+        "output_tokens": 516
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1912.09723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

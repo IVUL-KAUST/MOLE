@@ -1,0 +1,87 @@
+{
+    "metadata": {
+        "Name": "HotpotQA",
+        "Link": "https://hotpotqa.github.io/",
+        "HF Link": "https://huggingface.co/datasets/hotpot_qa",
+        "License": "CC BY-SA 4.0",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A question answering dataset with 113k Wikipedia-based question-answer pairs. It requires multi-hop reasoning over multiple documents and provides sentence-level supporting facts for explainability, allowing models to reason with strong supervision and explain predictions.",
+        "Volume": 113000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Carnegie Mellon University",
+            "Stanford University",
+            "Montreal Institute for Learning Algorithms (MILA)",
+            "Google AI Language"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+        "Paper Link": "https://arxiv.org/abs/1809.09600",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Zhilin Yang",
+            "Peng Qi",
+            "Saizheng Zhang",
+            "Yoshua Bengio",
+            "William W. Cohen",
+            "Ruslan Salakhutdinov",
+            "Christopher D. Manning"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University",
+            "Stanford University",
+            "Montreal Institute for Learning Algorithms (MILA)",
+            "Canadian Institute for Advanced Research (CIFAR)",
+            "Google AI Language"
+        ],
+        "Abstract": "Existing question answering (QA) datasets fail to train QA systems to perform complex reasoning and provide explanations for answers. We introduce HotpotQA, a new dataset with 113k Wikipedia-based question-answer pairs that are diverse and require finding and reasoning over multiple supporting documents to answer. HotpotQA is also the first QA dataset that provides sentence-level supporting facts required for reasoning, allowing QA systems to reason with strong supervision and explain the predictions. We show that the state-of-the-art QA models perform poorly on HotpotQA, and the task is still challenging. We have released our dataset and a public leaderboard to encourage future research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.05228375,
+        "input_tokens": 3019,
+        "output_tokens": 1657
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.09600"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

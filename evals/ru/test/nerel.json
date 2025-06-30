@@ -34,7 +34,6 @@
         "relation extraction"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -59,8 +58,7 @@
         "Sber AI",
         "Wiseyak"
     ],
-    "Abstract": "In this paper, we present NEREL, a  Russian dataset for named entity recognition and relation extraction. NEREL is significantly larger than existing Russian datasets: to date it contains 56K annotated named entities and 39K annotated  relations. Its important difference from previous datasets is annotation of nested named entities, as well as relations within nested entities and at the discourse level. NEREL can facilitate development of novel models that can extract relations between nested named entities, as well as relations on both sentence and document levels.   NEREL also contains the annotation of events involving named entities and their roles in the events. The NEREL collection is available via https://github.com/nerel-ds/NEREL.",
-    
+    "Abstract": "In this paper, we present NEREL, a Russian dataset for named entity recognition and relation extraction. NEREL is significantly larger than existing Russian datasets: to date it contains 56K annotated named entities and 39K annotated relations. Its important difference from previous datasets is annotation of nested named entities, as well as relations within nested entities and at the discourse level. NEREL can facilitate development of novel models that can extract relations between nested named entities, as well as relations on both sentence and document levels. NEREL also contains the annotation of events involving named entities and their roles in the events. The NEREL collection is available via https://github.com/nerel-ds/NEREL.",
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
@@ -91,5 +89,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

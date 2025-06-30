@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "Slovo",
+        "Link": "https://rsl.sber.ai/",
+        "HF Link": "",
+        "License": "CC BY-NC-ND 4.0",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A large-scale Russian Sign Language (RSL) dataset collected 'in the wild' via a crowdsourcing platform. It features more than 1,000 signers and over 200,000 video samples in total, with a vocabulary of 1,000 gestures. The dataset is intended for isolated sign language recognition.",
+        "Volume": 200000.0,
+        "Unit": "videos",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Sber AI",
+            "SberDevices",
+            "SberCloud",
+            "Sber"
+        ],
+        "Derived From": [],
+        "Paper Title": "Slovo: Russian Sign Language Dataset",
+        "Paper Link": "https://arxiv.org/abs/2110.03422",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sign language recognition"
+        ],
+        "Venue Title": "Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks",
+        "Venue Type": "conference",
+        "Venue Name": "Neural Information Processing Systems",
+        "Authors": [
+            "Aleksandr Burtsev",
+            "Daria Zharikova",
+            "Elena Goryunova",
+            "Tatiana Braudo",
+            "Aleksei Gusev",
+            "Elizaveta Kuzmina",
+            "Andrey Savchenko",
+            "Denis Dimitrov",
+            "Larisa Velikodvorskaia",
+            "Olga Klepikova"
+        ],
+        "Affiliations": [
+            "Sber AI",
+            "SberDevices",
+            "SberCloud",
+            "Sber"
+        ],
+        "Abstract": "Sign Language Recognition (SLR) is a challenging task that has recently received a lot of attention from the research community. However, the progress in this area is hindered by the lack of large-scale datasets. In this paper, we introduce Slovo, a large-scale Russian Sign Language (RSL) dataset. We have collected a large-scale dataset of isolated RSL signs, featuring more than 1,000 signers and over 200,000 video samples in total. The data was collected 'in the wild' using a crowdsourcing platform. The vocabulary of the dataset consists of 1,000 gestures. We provide a detailed description of the dataset and the collection process. We also present baseline results for the isolated sign language recognition task. The dataset is publicly available at https://rsl.sber.ai."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0442425,
+        "input_tokens": 3010,
+        "output_tokens": 1587
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.14527"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

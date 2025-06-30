@@ -37,7 +37,6 @@
         "gender identification"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -48,8 +47,7 @@
         "Hamad Bin Khalifa University",
         "Carnegie Mellon University Qatar"
     ],
-    "Abstract": "This paper presents the Arap-Tweet corpus, a large-scale, multi-dialectal Arabic corpus sourced from Twitter, which has been annotated for age, gender, and dialectal variety. The corpus is intended to provide resources for developing NLP tools and models for Arabic dialects and can be used in tasks such as author profiling, sentiment analysis, and more. The dataset covers 11 major dialect regions and includes over 2.4 million tweets. Annotators identified users based on dialect-specific keywords and verified additional metadata (age and gender) through manual checks and external resources.",
-    
+    "Abstract": "In this paper, we present Arap-Tweet, which is a large-scale and multi-dialectal corpus of Tweets from 11 regions and 16 countries in the Arab world representing the major Arabic dialectal varieties. To build this corpus, we collected data from Twitter and we provided a team of experienced annotators with annotation guidelines that they used to annotate the corpus for age categories, gender, and dialectal variety. During the data collection effort, we based our search on distinctive keywords that are specific to the different Arabic dialects and we also validated the location using Twitter API. In this paper, we report on the corpus data collection and annotation efforts. We also present some issues that we encountered during these phases. Then, we present the results of the evaluation performed to ensure the consistency of the annotation. The provided corpus will enrich the limited set of available language resources for Arabic and will be an invaluable enabler for developing author profiling tools and NLP tools for Arabic.",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -83,5 +81,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

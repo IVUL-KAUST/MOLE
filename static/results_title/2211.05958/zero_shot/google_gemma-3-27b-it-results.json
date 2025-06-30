@@ -1,0 +1,99 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "MINION",
+            "Subsets": null,
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/bigscience/minion",
+            "License": null,
+            "Year": 2023,
+            "Language": "Multilingual",
+            "Domain": "Event Detection",
+            "Form": null,
+            "Collection Style": "Automated",
+            "Description": "A large-scale and diverse dataset for multilingual event detection.",
+            "Volume": null,
+            "Unit": null,
+            "Ethical Risks": null,
+            "Provider": "BigScience",
+            "Derived From": null,
+            "Paper Title": "MINION: a Large-Scale and Diverse Dataset for Multilingual Event Detection",
+            "Paper Link": null,
+            "Tokenized": null,
+            "Host": "Hugging Face",
+            "Access": null,
+            "Cost": null,
+            "Test Split": null,
+            "Tasks": "Event Detection",
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": null,
+            "Affiliations": null,
+            "Abstract": null
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2211.05958",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3157894736842105
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.00011299,
+        "input_tokens": 537,
+        "output_tokens": 264
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05958"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

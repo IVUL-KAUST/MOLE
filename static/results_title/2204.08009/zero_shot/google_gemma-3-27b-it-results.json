@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "WikiOmnia",
+        "Link": "https://huggingface.co/datasets/nlpaueb/wikioomnia",
+        "HF Link": "https://huggingface.co/datasets/nlpaueb/wikioomnia",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "WikiOmnia is a generative question answering corpus based on the whole Russian Wikipedia.",
+        "Volume": 100000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "nlpaueb"
+        ],
+        "Derived From": [
+            "Russian Wikipedia"
+        ],
+        "Paper Title": "WikiOmnia: generative QA corpus on the whole Russian Wikipedia",
+        "Paper Link": "https://arxiv.org/abs/2310.14492",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Alexander V. Kulakov",
+            "Nikita A. Klyuev",
+            "Sergey I. Nikolenko"
+        ],
+        "Affiliations": [
+            "Peter the Great St. Petersburg Polytechnic University",
+            "Saint Petersburg State University"
+        ],
+        "Abstract": "We present WikiOmnia, a new generative question answering (QA) corpus based on the whole Russian Wikipedia. The corpus contains 100K question-answer pairs automatically generated from Wikipedia articles. We use a pipeline based on the T5-based model ruT5 to generate questions from article summaries. The generated questions are diverse and cover a wide range of topics. We evaluate the quality of the generated questions using several metrics, including BLEU, ROUGE, and METEOR. We also evaluate the performance of several state-of-the-art QA models on the WikiOmnia corpus. The results show that WikiOmnia is a challenging and informative QA corpus that can be used to train and evaluate QA models for the Russian language."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004897,
+        "input_tokens": 3016,
+        "output_tokens": 524
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.08009"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,43 +1,12 @@
 {
     "Name": "Arabic MGB-3",
-    "Subsets": [
-        {
-            "Name": "EGY",
-            "Volume": 16.4,
-            "Unit": "hours",
-            "Dialect": "Egypt"
-        },
-        {
-            "Name": "GLF",
-            "Volume": 14.1,
-            "Unit": "hours",
-            "Dialect": "Gulf"
-        },
-        {
-            "Name": "LAV",
-            "Volume": 14.3,
-            "Unit": "hours",
-            "Dialect": "Levant"
-        },
-        {
-            "Name": "MSA",
-            "Volume": 14.3,
-            "Unit": "hours",
-            "Dialect": "Modern Standard Arabic"
-        },
-        {
-            "Name": "NOR",
-            "Volume": 14.6,
-            "Unit": "hours",
-            "Dialect": "North Africa"
-        }
-    ],
+    "Subsets": [],
     "Link": "https://arabicspeech.org/resources/mgb3",
     "HF Link": "",
     "License": "unknown",
     "Year": 2017,
     "Language": "ar",
-    "Dialect": "mixed",
+    "Dialect": "Egypt",
     "Domain": [
         "social media",
         "TV Channels"
@@ -48,12 +17,11 @@
         "human annotation"
     ],
     "Description": "A multi-genre speech dataset for Arabic speech recognition and dialect identification. The ASR portion contains 16 hours of Egyptian Arabic from YouTube across seven genres. The dialect identification portion contains over 70 hours of speech from five major Arabic dialects (Egyptian, Levantine, Gulf, North African, MSA).",
-    "Volume": 73.7,
+    "Volume": 16,
     "Unit": "hours",
-    "Ethical Risks": "Medium",
+    "Ethical Risks": "Low",
     "Provider": [
-        "Qatar Computing Research Institute, HBKU",
-        "Centre for Speech Technology Research, University of Edinburgh, UK"
+        "QCRI"
     ],
     "Derived From": [
         "MGB-2"
@@ -67,8 +35,7 @@
     "Cost": "",
     "Test Split": true,
     "Tasks": [
-        "speech recognition",
-        "dialect identification"
+        "speech recognition"
     ],
     "Venue Title": "ASRU",
     "Venue Type": "workshop",

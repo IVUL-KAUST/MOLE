@@ -1,0 +1,93 @@
+{
+    "metadata": {
+        "Name": "Multilingual Hate Speech Data",
+        "Subsets": [
+            {
+                "Name": "English Hate Speech",
+                "Volume": 14844,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Arabic Hate Speech",
+                "Volume": 4958,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            }
+        ],
+        "Link": "http://www.cs.jhu.edu/~oza/hate_speech/",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2019,
+        "Language": [
+            "English",
+            "Arabic"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A multilingual dataset of tweets in English and Arabic annotated for hate speech. The data was collected from Twitter using hate-related keywords and manually annotated. It contains approximately 15k English tweets and 5k Arabic tweets.",
+        "Volume": 4958.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Johns Hopkins University"
+        ],
+        "Derived From": [],
+        "Paper Title": "Deep Learning Models for Multilingual Hate Speech Detection",
+        "Paper Link": "https://aclanthology.org/W19-3512/",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "Proceedings of the 3rd Workshop on Abusive Language Online (ALW3)",
+        "Venue Type": "workshop",
+        "Venue Name": "Workshop on Abusive Language Online",
+        "Authors": [
+            "Nedjma Ousidhoum",
+            "Zuria Bauer",
+            "Richard F. E. Sutcliffe",
+            "Paul R. McNamee"
+        ],
+        "Affiliations": [
+            "Johns Hopkins University",
+            "Human Language Technology Center of Excellence",
+            "University of Essex"
+        ],
+        "Abstract": "The task of hate speech detection has been mostly addressed for English. In this paper, we focus on the problem of multilingual hate speech detection. We introduce a new dataset of tweets in English and Arabic for this task. We experiment with a number of deep learning models with and without multilingual embeddings. We show that it is possible to build a classifier that can process text from more than one language. We also show that a multilingual model can be used in a zero-shot setting, where it is tested on a language that was not seen during training. Our results show that a multilingual model can be a good starting point for a low-resource language, and that its performance can be improved with a small amount of in-language data."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04954875,
+        "input_tokens": 3184,
+        "output_tokens": 1743
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.06465"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

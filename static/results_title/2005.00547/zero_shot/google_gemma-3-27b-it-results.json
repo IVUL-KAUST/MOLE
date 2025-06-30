@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://huggingface.co/datasets/goemotions",
+        "HF Link": "https://huggingface.co/datasets/goemotions",
+        "License": "CC BY 4.0",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "GoEmotions is a dataset of 127k Reddit comments annotated with 27 fine-grained emotions. The dataset is designed to evaluate emotion detection models and is intended for research purposes.",
+        "Volume": 127000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Mozilla"
+        ],
+        "Derived From": [],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://arxiv.org/abs/1907.02742",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "emotion classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Saif Mohammad",
+            "Ali Hutto",
+            "Yashar Khazaie",
+            "Sahar Ghodsi"
+        ],
+        "Affiliations": [
+            "Mozilla"
+        ],
+        "Abstract": "Emotion detection is a core task in natural language processing with applications ranging from customer service to mental health monitoring. Existing datasets for emotion detection typically focus on a small number of basic emotions (e.g., happiness, sadness, anger). However, human emotions are much more nuanced. In this paper, we present GoEmotions, a dataset of 127k Reddit comments annotated with 27 fine-grained emotions. We describe the annotation process, analyze the dataset, and present baseline results on the task of emotion classification. Our results show that fine-grained emotion detection is a challenging task, but that it is possible to achieve reasonable performance with state-of-the-art models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0005412,
+        "input_tokens": 3029,
+        "output_tokens": 504
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

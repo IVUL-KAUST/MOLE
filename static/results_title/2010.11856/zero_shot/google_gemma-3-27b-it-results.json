@@ -1,0 +1,102 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "XOR QA",
+            "Subsets": [],
+            "Link": "",
+            "HF Link": "https://huggingface.co/datasets/xoraqa",
+            "License": "",
+            "Year": 2023,
+            "Language": "Multilingual",
+            "Domain": "Question Answering",
+            "Form": "Question Answering",
+            "Collection Style": "Crowdsourced",
+            "Description": "XOR QA is a cross-lingual open-retrieval question answering dataset. It contains questions in multiple languages and requires retrieving answers from a knowledge source.",
+            "Volume": "10,000",
+            "Unit": "Question-Answer Pairs",
+            "Ethical Risks": [],
+            "Provider": "Hugging Face",
+            "Derived From": [],
+            "Paper Title": "XOR QA: Cross-lingual Open-Retrieval Question Answering",
+            "Paper Link": "",
+            "Tokenized": false,
+            "Host": "Hugging Face Datasets",
+            "Access": "Public",
+            "Cost": "Free",
+            "Test Split": "Not specified",
+            "Tasks": [
+                "Question Answering",
+                "Cross-lingual Information Retrieval"
+            ],
+            "Venue Title": "",
+            "Venue Type": "",
+            "Venue Name": "",
+            "Authors": [],
+            "Affiliations": [],
+            "Abstract": "XOR QA is a new dataset for cross-lingual open-retrieval question answering. It is designed to evaluate the ability of models to retrieve relevant information from a knowledge source in multiple languages and answer questions based on that information."
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2010.11856",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.21052631578947367
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.0001735,
+        "input_tokens": 536,
+        "output_tokens": 354
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "HellaSwag",
+        "Link": "http://rowanzellers.com/hellaswag/",
+        "HF Link": "https://huggingface.co/datasets/hellaswag",
+        "License": "MIT License",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "LLM generated",
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A dataset for commonsense natural language inference. Given a context from either ActivityNet or wikiHow, a machine must choose the most plausible of four endings. The endings are adversarially generated to be nonsensical but have high lexical overlap with the context, making them difficult for models but easy for humans.",
+        "Volume": 70000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Washington",
+            "Allen Institute for AI"
+        ],
+        "Derived From": [
+            "ActivityNet Captions",
+            "wikiHow"
+        ],
+        "Paper Title": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "Paper Link": "https://arxiv.org/abs/1905.07830",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "natural language inference",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Rowan Zellers",
+            "Ari Holtzman",
+            "Yonatan Bisk",
+            "Ali Farhadi",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "While state-of-the-art models for Natural Language Inference (NLI) have achieved high accuracy on existing benchmarks, they tend to exploit superficial cues in the dataset rather than performing true reasoning. To address this, we introduce a new dataset, HellaSwag, for commonsense NLI. A model is presented with a context, and must choose the most plausible of four endings. The endings are adversarially-generated to be nonsensical, but have high lexical overlap with the context. We show that while humans find this task trivial (95% accuracy), state-of-the-art models struggle. Our dataset, which is over 70k examples, is released at http://rowanzellers.com/hellaswag/."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04084875,
+        "input_tokens": 3015,
+        "output_tokens": 1383
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1905.07830"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

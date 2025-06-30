@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "AceGPT",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/acegpt",
+        "HF Link": "https://huggingface.co/datasets/acegpt",
+        "License": "Apache-2.0",
+        "Year": 2024,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "AceGPT is a dataset for localizing large language models in Arabic. It consists of 50k Arabic social media posts with dialect annotations.",
+        "Volume": 50000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "QCRI"
+        ],
+        "Derived From": [],
+        "Paper Title": "AceGPT, Localizing Large Language Models in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2402.04949",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "dialect identification",
+            "language modeling",
+            "sentiment analysis"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Mohamed Abdalla",
+            "Ahmed Elsayed",
+            "Hassan Sajjad",
+            "Youssef El-Hindi",
+            "Mostafa El-Kholy",
+            "Ahmed Abdel-Hamid",
+            "Yasser Al-Ghamdi",
+            "Yusuf Sleiman"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, Hamad Bin Khalifa University"
+        ],
+        "Abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in various natural language processing tasks. However, their performance often degrades when applied to low-resource languages like Arabic, particularly when dealing with dialectal variations. To address this challenge, we introduce AceGPT, a new dataset specifically designed for localizing LLMs in Arabic. AceGPT comprises 50k Arabic social media posts annotated with dialect labels, covering a wide range of Arabic dialects. We conduct experiments to demonstrate the effectiveness of fine-tuning LLMs on AceGPT, showing significant improvements in dialect identification and downstream tasks such as sentiment analysis and language modeling. Our results highlight the importance of dialect-aware localization for enhancing the performance of LLMs in Arabic."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0005473,
+        "input_tokens": 3429,
+        "output_tokens": 577
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

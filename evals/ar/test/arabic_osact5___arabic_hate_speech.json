@@ -39,7 +39,6 @@
         "offensive language detection"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -52,7 +51,7 @@
         "King Saud University",
         "King Abdulaziz City for Science and Technology (KACST)"
     ],
-    "Abstract": "This paper provides an overview of the shard task on detecting offensive language, hate speech, and fine-grained hate speech at the fifth workshop on Open-Source Arabic Corpora and Processing Tools (OSACT5). The shared task comprised of three subtasks; Subtask A, involving the detection of offensive language, which contains socially unacceptable or impolite content including any kind of explicit or implicit insults or attacks against individuals or groups; Subtask B, involving the detection of hate speech, which contains offensive language targeting individuals or groups based on common characteristics such as race, religion, gender, etc.; and Subtask C, involving the detection of the fine-grained type of hate speech which takes one value from the following types: (i) race/ethnicity/nationality, (ii) religion/belief, (iii) ideology, (iv) disability/disease, (v) social class, and (vi) gender. In total, 40 teams signed up to participate in Subtask A, and 17 of them submitted test runs. For Subtask B, 26 teams signed up to participate and 12 of them submitted runs. And for Subtask C, 23 teams signed up to participate and 10 of them submitted runs. 10 teams submitted papers describing their participation in one subtask or more, and 8 papers were accepted. We present and analyze all submissions in this paper.",
+    "Abstract": "We introduce a generic, language-independent method to collect a large percentage of offensive and hate tweets regardless of their topics or genres. We harness the extralinguistic information embedded in the emojis to collect a large number of offensive tweets. We apply the proposed method on Arabic tweets and compare it with English tweets - analysing key cultural differences. We observed a constant usage of these emojis to represent offensiveness throughout different timespans on Twitter. We manually annotate and publicly release the largest Arabic dataset for offensive, fine-grained hate speech, vulgar and violence content. Furthermore, we benchmark the dataset for detecting offensiveness and hate speech using different transformer architectures and perform in-depth linguistic analysis. We evaluate our models on external datasets - a Twitter dataset collected using a completely different method, and a multi-platform dataset containing comments from Twitter, YouTube and Facebook, for assessing generalization capability. Competitive results on these datasets suggest that the data collected using our method captures universal characteristics of offensive language. Our findings also highlight the common words used in offensive communications, common targets for hate speech, specific patterns in violence tweets; and pinpoint common classification errors that can be attributed to limitations of NLP models. We observe that even state-of-the-art transformer models may fail to take into account culture, background and context or understand nuances present in real-world data such as sarcasm.",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,

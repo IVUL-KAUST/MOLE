@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "FairTranslate",
+        "Link": "https://huggingface.co/datasets/Fannyjrd/FairTranslate_fr",
+        "HF Link": "https://huggingface.co/datasets/Fannyjrd/FairTranslate_fr",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "This paper presents FairTranslate, a novel, fully human-annotated dataset designed to evaluate non-binary gender biases in machine translation systems from English to French.",
+        "Volume": 2418.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "IRT Saint Exupery",
+            "Universit\u00e9 Lumi\u00e8re Lyon 2",
+            "IHRIM UMR 5317",
+            "Universit\u00e9 Claude Bernard Lyon 1",
+            "ERIC"
+        ],
+        "Derived From": [],
+        "Paper Title": "FairTranslate: An English-French Dataset for Gender Bias Evaluation in MT by Overcoming Gender Binarity",
+        "Paper Link": "https://arxiv.org/abs/2405.18411",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "gender identification"
+        ],
+        "Venue Title": "FAccT '25",
+        "Venue Type": "conference",
+        "Venue Name": "The 2025 ACM Conference on Fairness, Accountability, and Transparency",
+        "Authors": [
+            "Fanny Jourdan",
+            "Yannick Chevalier",
+            "C\u00e9cile Favre"
+        ],
+        "Affiliations": [
+            "IRT Saint Exupery",
+            "Universit\u00e9 Lumi\u00e8re Lyon 2",
+            "IHRIM UMR 5317",
+            "Universit\u00e9 Claude Bernard Lyon 1",
+            "ERIC"
+        ],
+        "Abstract": "Large Language Models (LLMs) are increasingly leveraged for translation tasks but often fall short when translating inclusive language -- such as texts containing the singular 'textit{they}' pronoun or otherwise reflecting fair linguistic protocols. Because these challenges span both computational and societal domains, it is imperative to critically evaluate how well LLMs handle inclusive translation with a well-founded framework.  This paper presents FairTranslate, a novel, fully human-annotated dataset designed to evaluate non-binary gender biases in machine translation systems from English to French. FairTranslate includes 2418 English-French sentence pairs related to occupations, annotated with rich metadata such as the stereotypical alignment of the occupation, grammatical gender indicator ambiguity, and the ground-truth gender label (male, female, or inclusive). We evaluate four leading LLMs (Gemma2-2B, Mistral-7B, Llama3.1-8B, Llama3.3-70B) on this dataset under different prompting procedures. Our results reveal substantial biases in gender representation across LLMs, highlighting persistent challenges in achieving equitable outcomes in machine translation. These findings underscore the need for focused strategies and interventions aimed at ensuring fair and inclusive language usage in LLM-based translation systems.  We make the FairTranslate dataset publicly available on Hugging Face, and disclose the code for all experiments on GitHub."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0027354,
+        "input_tokens": 24134,
+        "output_tokens": 737
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.15941"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,133 @@
+{
+    "metadata": {
+        "Name": "MGB-3 ADI",
+        "Subsets": [
+            {
+                "Name": "Egyptian",
+                "Volume": 189.7,
+                "Unit": "hours",
+                "Dialect": "Egypt"
+            },
+            {
+                "Name": "Gulf",
+                "Volume": 189.9,
+                "Unit": "hours",
+                "Dialect": "Gulf"
+            },
+            {
+                "Name": "Levantine",
+                "Volume": 189.9,
+                "Unit": "hours",
+                "Dialect": "Levant"
+            },
+            {
+                "Name": "North African",
+                "Volume": 189.9,
+                "Unit": "hours",
+                "Dialect": "North Africa"
+            },
+            {
+                "Name": "Modern Standard Arabic",
+                "Volume": 189.9,
+                "Unit": "hours",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "http://catalog.elra.info/en-us/repository/browse/ELRA-S0381/",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A large-scale speech dataset for Arabic dialect identification. It contains over 950 hours of broadcast speech from Aljazeera, labeled into five dialect categories: Egyptian, Gulf, Levantine, North African, and Modern Standard Arabic.",
+        "Volume": 949.4,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute (QCRI)"
+        ],
+        "Derived From": [
+            "Aljazeera broadcast archives"
+        ],
+        "Paper Title": "Automatic Dialect Detection in Arabic Broadcast Speech",
+        "Paper Link": "https://www.isca-speech.org/archive/pdfs/interspeech_2016/ali16_interspeech.pdf",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "ELRA",
+        "Access": "With-Fee",
+        "Cost": "18000 EUR for non-members, 9000 EUR for academic members.",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "speech recognition"
+        ],
+        "Venue Title": "Proceedings of the 17th Annual Conference of the International Speech Communication Association (INTERSPEECH 2016)",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Conference of the International Speech Communication Association",
+        "Authors": [
+            "Ahmed Ali",
+            "Najim Dehak",
+            "Patrick Cardinal",
+            "Sameer Khurana",
+            "Brahim Kchaou",
+            "Mohammed Attia",
+            "Mohamed Al-Badrashiny",
+            "Yacine Benahmed",
+            "Lori Lamel",
+            "Jean-Luc Gauvain",
+            "Sameer Maskey",
+            "Yifan Zhang",
+            "Stephen Shum",
+            "Sabato Marco Siniscalchi",
+            "Peter Bell",
+            "Steve Renals",
+            "Reva Schwartz",
+            "Hanan Aldarmaki",
+            "Solange Rossato",
+            "Mohamed E. El-Desoky Mousa"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU",
+            "Computer Science Laboratory for Mechanics and Engineering Sciences (LIMSI), CNRS",
+            "Columbia University",
+            "Kore University of Enna",
+            "University of Messina",
+            "Centre for Speech Technology Research, University of Edinburgh",
+            "National Institute of Standards and Technology (NIST)"
+        ],
+        "Abstract": "We describe the system for Arabic dialect identification (ADI) that we submitted to the 2016 Multi-Genre Broadcast (MGB-3) Challenge. The MGB-3 ADI dataset consists of 1,200 hours of speech from the Aljazeera network. The five dialects are: Egyptian, Gulf, Levantine, North African, and Modern Standard Arabic (MSA). We investigated both acoustic and phonotactic approaches to ADI. For the acoustic approach, we used a standard i-vector system with a backend multiclass logistic regression classifier. For the phonotactic approach, we first generated a phoneme transcription using a multilingual phoneme recognizer, and then trained a support vector machine (SVM) classifier on phoneme n-gram features. We also investigated a text-based approach using a state-of-the-art linear classifier trained on character n-gram features extracted from the ASR transcripts. Finally, we performed a score-level fusion of the best acoustic, phonotactic, and text-based systems. The fused system achieved a 6.1% relative improvement in accuracy over the best single system on the MGB-3 official test set."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.05630375,
+        "input_tokens": 3427,
+        "output_tokens": 2204
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1509.06928"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

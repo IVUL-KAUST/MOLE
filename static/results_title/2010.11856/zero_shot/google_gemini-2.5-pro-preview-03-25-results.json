@@ -1,0 +1,134 @@
+{
+    "metadata": {
+        "Name": "XOR QA",
+        "Subsets": [
+            {
+                "Name": "XOR-Bengali",
+                "Volume": 5717,
+                "Unit": "sentences",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "XOR-Finnish",
+                "Volume": 7537,
+                "Unit": "sentences",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "XOR-Japanese",
+                "Volume": 6107,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "XOR-Korean",
+                "Volume": 4517,
+                "Unit": "sentences",
+                "Language": "Korean"
+            },
+            {
+                "Name": "XOR-Russian",
+                "Volume": 9132,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "XOR-Telugu",
+                "Volume": 5117,
+                "Unit": "sentences",
+                "Language": "Telugu"
+            },
+            {
+                "Name": "XOR-English",
+                "Volume": 2000,
+                "Unit": "sentences",
+                "Language": "English"
+            }
+        ],
+        "Link": "https://xor-qa.github.io/",
+        "HF Link": "https://huggingface.co/datasets/facebook/xor_qa",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": [
+            "Bengali",
+            "English",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Russian",
+            "Telugu"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A cross-lingual open-retrieval question answering dataset. It includes 40k questions in 7 diverse languages written by native speakers based on corresponding Wikipedia passages. The task requires retrieving evidence documents in a different language (English) than the question to answer it.",
+        "Volume": 40127.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research",
+            "University of Washington"
+        ],
+        "Derived From": [
+            "Natural Questions",
+            "Wikipedia"
+        ],
+        "Paper Title": "XOR QA: Cross-lingual Open-Retrieval Question Answering",
+        "Paper Link": "https://arxiv.org/abs/2011.02135",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "ACL-IJCNLP 2021",
+        "Authors": [
+            "Akari Asai",
+            "Jungo Kasai",
+            "Jonathan H. Clark",
+            "Kenton Lee",
+            "Eunsol Choi",
+            "Hannaneh Hajishirzi"
+        ],
+        "Affiliations": [
+            "University of Washington",
+            "Facebook AI Research",
+            "Google"
+        ],
+        "Abstract": "Existing question answering (QA) datasets are predominantly monolingual \u2014 the question and the evidence text are in the same language. Even recent multilingual QA datasets such as TyDi QA and MLQA are not designed to test cross-lingual answer retrieval, as the context passages are given in the same language as the question. We introduce the XOR QA dataset, a new benchmark for cross-lingual open-retrieval question answering. It includes 40k questions in 7 diverse languages that are written by native speakers who are also shown the corresponding Wikipedia passage from which to write the question. The questions are paired with answers, which are extracted from an English Wikipedia corpus. Therefore, to answer a question in any of these 7 languages, a system must be able to retrieve relevant passages from English Wikipedia. We experiment with two state-of-the-art models for open-retrieval QA: a two-stage retrieve-and-read approach, and a recently proposed end-to-end model, REALM. Our experiments show that our dataset presents a significant challenge for these models, with the best model achieving an F1 score of only 35. We also find that models struggle with non-Latin scripts and morphologically rich languages. We hope that our dataset will encourage future work on more robust cross-lingual open-retrieval QA systems. The dataset and our code are available at https://xor-qa.github.io."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.05109125,
+        "input_tokens": 3189,
+        "output_tokens": 2104
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.11856"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

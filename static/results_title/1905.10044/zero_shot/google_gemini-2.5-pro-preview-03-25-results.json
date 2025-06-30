@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "BoolQ",
+        "Link": "https://github.com/google-research-datasets/boolean-questions",
+        "HF Link": "https://huggingface.co/datasets/google/boolq",
+        "License": "Apache-2.0",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A question answering dataset for yes/no questions. Each example consists of a naturally occurring question, a passage from Wikipedia, and a boolean (yes/no) answer. The questions were sourced from anonymized, aggregated Google search queries.",
+        "Volume": 15942.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google AI Language"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Google Search Queries"
+        ],
+        "Paper Title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+        "Paper Link": "https://aclanthology.org/N19-1246/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Authors": [
+            "Christopher Clark",
+            "Kenton Lee",
+            "Ming-Wei Chang",
+            "Tom Kwiatkowski",
+            "Michael Collins",
+            "Kristina Toutanova"
+        ],
+        "Affiliations": [
+            "Google AI Language"
+        ],
+        "Abstract": "Question answering is a major focus of NLP research. However, existing datasets are either small in scale or created using artificial processes such as crowdsourcing or dependency parsing. In this paper, we present a new question answering dataset, BOOLQ, containing 15,942 examples. These are naturally occurring questions, generated in an unconstrained setting. Each example is a triplet of (question, passage, answer), with the passage sourced from a Wikipedia article. We explore the surprising difficulty of this new dataset, as BERT-based models only achieve around 80% accuracy, which is well below human performance (94%). We also show that transfer learning from other QA datasets does not improve performance. Finally, we perform a detailed linguistic analysis of our dataset and show that it contains a rich variety of challenging phenomena that are not well-represented in existing datasets."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04103125,
+        "input_tokens": 3017,
+        "output_tokens": 1477
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1905.10044"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

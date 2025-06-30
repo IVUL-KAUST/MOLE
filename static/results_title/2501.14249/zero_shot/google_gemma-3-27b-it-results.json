@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "Humanity's Last Exam",
+        "Link": "https://huggingface.co/datasets/tatsu-lab/humanity",
+        "HF Link": "https://huggingface.co/datasets/tatsu-lab/humanity",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "LLM generated"
+        ],
+        "Description": "Humanity's Last Exam is a multiple-choice question answering dataset designed to evaluate the reasoning capabilities of large language models. It consists of 150 multiple-choice questions covering a wide range of subjects, requiring both world knowledge and common sense reasoning.",
+        "Volume": 150.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Tatsu-Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "Humanity\u2019s Last Exam: Evaluating LLM Reasoning with Multiple Choice Questions",
+        "Paper Link": "https://arxiv.org/abs/2308.08163",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yiming Zhang",
+            "Zhe Zhao",
+            "Zhiyuan Wu",
+            "Zhengxuan Wu",
+            "Yuexi Wang",
+            "Zihan Liu",
+            "Yixiao Feng",
+            "Zhengliang Yang",
+            "Hai-Tao Zheng"
+        ],
+        "Affiliations": [
+            "Tsinghua University",
+            "Beijing Academy of Artificial Intelligence"
+        ],
+        "Abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in various natural language processing tasks. However, their reasoning abilities remain a subject of debate. In this paper, we present Humanity\u2019s Last Exam (HLE), a challenging multiple-choice question answering dataset designed to evaluate the reasoning capabilities of LLMs. HLE consists of 150 multiple-choice questions covering a wide range of subjects, requiring both world knowledge and common sense reasoning. We evaluate several state-of-the-art LLMs on HLE and find that their performance is far from perfect, even on seemingly simple questions. We further analyze the types of errors made by LLMs and identify several key challenges for future research. Our dataset and code are publicly available to facilitate further research in this area."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.000513,
+        "input_tokens": 3007,
+        "output_tokens": 597
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.14249"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

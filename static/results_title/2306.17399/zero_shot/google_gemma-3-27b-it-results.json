@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "Japanese Lexical Complexity for Non-Native Readers",
+            "Link": null,
+            "HF Link": null,
+            "License": null,
+            "Year": null,
+            "Language": "Japanese",
+            "Domain": "Linguistics",
+            "Form": "Dataset",
+            "Collection Style": "Expert-created",
+            "Description": "A new dataset for assessing Japanese lexical complexity for non-native readers.",
+            "Volume": null,
+            "Unit": null,
+            "Ethical Risks": null,
+            "Provider": null,
+            "Derived From": null,
+            "Paper Title": "Japanese Lexical Complexity for Non-Native Readers: A New Dataset",
+            "Paper Link": null,
+            "Script": "Japanese",
+            "Tokenized": null,
+            "Host": null,
+            "Access": null,
+            "Cost": null,
+            "Test Split": null,
+            "Tasks": null,
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": null,
+            "Affiliations": null,
+            "Abstract": null
+        },
+        "Name": "",
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2306.17399",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.3157894736842105
+    },
+    "length_forcing": 0.8999999999999999,
+    "cost": {
+        "cost": 0.00010946,
+        "input_tokens": 534,
+        "output_tokens": 249
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17399"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

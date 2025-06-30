@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "RACE",
+        "Link": "https://huggingface.co/datasets/race",
+        "HF Link": "https://huggingface.co/datasets/race",
+        "License": "custom",
+        "Year": 2017,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A large-scale reading comprehension dataset collected from English examinations for middle and high school students in China. It contains nearly 28,000 passages and 100,000 multiple-choice questions designed by human experts.",
+        "Volume": 97687.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Carnegie Mellon University",
+            "Peking University"
+        ],
+        "Derived From": [],
+        "Paper Title": "RACE: Large-scale ReAding Comprehension Dataset From Examinations",
+        "Paper Link": "https://aclanthology.org/D17-1082/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Guokun Lai",
+            "Qizhe Xie",
+            "Hanxiao Liu",
+            "Yiming Yang",
+            "Eduard Hovy"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University",
+            "Peking University"
+        ],
+        "Abstract": "We present RACE, a new dataset for benchmark evaluation of machine comprehension. Collected from English examinations in China, which are designed for middle school and high school students, the dataset consists of near 28,000 passages and near 100,000 questions. The dataset is collected from a single source and the questions are designed by human experts. The proportion of questions that requires reasoning is much larger in RACE than in other machine comprehension datasets. We have analyzed the dataset and compared it with other benchmark datasets. We evaluated several state-of-the-art models on the dataset and the results show that there is a large room for improvement. The dataset is freely available at http://www.cs.cmu.edu/\u02dcglai1/data/race/."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04116875,
+        "input_tokens": 3019,
+        "output_tokens": 1686
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1704.04683"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

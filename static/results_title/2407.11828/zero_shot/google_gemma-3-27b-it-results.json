@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "Vibravox",
+        "Link": "https://huggingface.co/datasets/vibravox",
+        "HF Link": "https://huggingface.co/datasets/vibravox",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "commentary"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Vibravox is a dataset of French speech captured with body-conduction audio sensors.",
+        "Volume": 11.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LDC"
+        ],
+        "Derived From": [],
+        "Paper Title": "Vibravox: A Dataset of French Speech Captured with Body-conduction Audio Sensors",
+        "Paper Link": "https://aclanthology.org/2023.interspeech-main.411/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "speech recognition"
+        ],
+        "Venue Title": "Interspeech",
+        "Venue Type": "conference",
+        "Venue Name": "International Speech Communication Association",
+        "Authors": [
+            "Julien Chi\u00e8ze",
+            "Antoine Laveau",
+            "Thomas Pellegrini",
+            "Nicolas Moreau",
+            "Benjamin Maupoin",
+            "Yannick Est\u00e8ve"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 de Lyon",
+            "CNRS",
+            "LPL",
+            "Universit\u00e9 Jean Monnet",
+            "Laboratoire d'Informatique de Saint-\u00c9tienne (LISE)"
+        ],
+        "Abstract": "Body-conduction audio sensors offer a new way to capture speech in noisy environments. However, the lack of publicly available datasets hinders the development of speech recognition systems for this modality. In this paper, we present Vibravox, a dataset of French speech captured with body-conduction audio sensors. The dataset contains 11 hours of speech from 10 speakers, recorded in a quiet environment. We provide a detailed description of the dataset, including the recording setup, the data collection protocol, and the characteristics of the speech signals. We also present preliminary results on speech recognition using a state-of-the-art automatic speech recognition system. The results show that body-conduction audio sensors can be used to capture high-quality speech signals, and that speech recognition systems can be trained to recognize speech from these sensors."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0005058,
+        "input_tokens": 3020,
+        "output_tokens": 571
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.11828"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

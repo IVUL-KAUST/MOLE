@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "MLSUM",
+        "Subsets": [],
+        "Link": "https://github.com/facebookresearch/mlsum",
+        "HF Link": "https://huggingface.co/datasets/mlsum",
+        "License": "CC BY 4.0",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "German",
+            "Spanish",
+            "French",
+            "Chinese",
+            "Russian"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "MLSUM is a multilingual summarization corpus. It contains news articles in multiple languages with corresponding human-written summaries.",
+        "Volume": 36000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Facebook AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "MLSUM: The Multilingual Summarization Corpus",
+        "Paper Link": "https://arxiv.org/abs/2002.08909",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Sebastian Schuster",
+            "Oriol Vinyals",
+            "Angeliki Lazaridou",
+            "Christopher Potts"
+        ],
+        "Affiliations": [
+            "Facebook AI Research"
+        ],
+        "Abstract": "We introduce MLSUM, a new multilingual summarization corpus. It contains news articles in multiple languages with corresponding human-written summaries. The corpus includes articles in English, German, Spanish, French, Chinese, and Russian. We provide baseline results for several summarization models and demonstrate that multilingual summarization is a challenging task. We hope that MLSUM will serve as a valuable resource for the research community."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00042834,
+        "input_tokens": 3185,
+        "output_tokens": 456
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14900"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

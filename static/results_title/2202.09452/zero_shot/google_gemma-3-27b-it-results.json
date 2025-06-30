@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "FreEM",
+        "Link": "https://huggingface.co/datasets/lhoestq/freem",
+        "HF Link": "https://huggingface.co/datasets/lhoestq/freem",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A large corpus and a language model for Early Modern French.",
+        "Volume": 15888989.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Lhoestq"
+        ],
+        "Derived From": [],
+        "Paper Title": "From FreEM to D\u2019AlemBERT: a Large Corpus and a Language Model for Early Modern French",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.471/",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Thomas Lhoestq",
+            "Valentin Ivantchouk",
+            "Simon Viel",
+            "Laure Vignal"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris 8",
+            "Sorbonne Universit\u00e9",
+            "CNRS"
+        ],
+        "Abstract": "Early Modern French (EMF) is a historical period of the French language that spans from the 16th to the 18th century. It is a crucial period for understanding the evolution of the French language, but it is also a challenging period for NLP due to the lack of resources. In this paper, we present FreEM, a large corpus of EMF texts, and D\u2019AlemBERT, a language model trained on FreEM. FreEM contains 15.9M tokens from 533 books published between 1532 and 1799. We evaluate D\u2019AlemBERT on a variety of downstream tasks, including masked language modeling, part-of-speech tagging, and named entity recognition. Our results show that D\u2019AlemBERT outperforms previous state-of-the-art models on these tasks. We also show that FreEM and D\u2019AlemBERT can be used to generate realistic EMF texts."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.000503331,
+        "input_tokens": 3038,
+        "output_tokens": 571
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.09452"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

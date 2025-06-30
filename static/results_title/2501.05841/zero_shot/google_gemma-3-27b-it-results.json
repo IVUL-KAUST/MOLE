@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "Russian Financial Statements Database",
+        "Link": "https://www.camel-ai.org/datasets/russian-financial-statements-database",
+        "HF Link": "https://huggingface.co/datasets/camel-ai/russian-financial-statements-database",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A firm-level collection of the universe of financial statements.",
+        "Volume": 28448.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "CAMeL Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "Russian Financial Statements Database: A firm-level collection of the universe of financial statements",
+        "Paper Link": "https://arxiv.org/abs/2311.16191",
+        "Tokenized": false,
+        "Host": "CAMeL Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Anton Shulgin",
+            "Maxim Fedotov",
+            "Alexey Makarov",
+            "Stanislav Ashikhmin",
+            "Albert Rafikov",
+            "Ilya Verizhnikov"
+        ],
+        "Affiliations": [
+            "Skoltech",
+            "HSE University"
+        ],
+        "Abstract": "We present a new dataset of Russian financial statements, covering the universe of Russian firms from 2000 to 2022. The dataset contains balance sheets, income statements, and cash flow statements, as well as information on firm ownership and industry classification. The data was collected from the Central Bank of Russia\u2019s (CBR) public database and manually curated to ensure accuracy and consistency. The dataset is publicly available and can be used for a variety of research purposes, such as studying the Russian economy, corporate finance, and accounting."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00041842,
+        "input_tokens": 3018,
+        "output_tokens": 485
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

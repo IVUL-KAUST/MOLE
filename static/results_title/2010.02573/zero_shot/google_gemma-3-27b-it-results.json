@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "Multilingual Amazon Reviews Corpus",
+            "Subsets": [],
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/amazon_reviews_multilingual",
+            "License": "CC-BY-SA 4.0",
+            "Year": 2019,
+            "Language": [
+                "en",
+                "es",
+                "de",
+                "fr",
+                "it",
+                "ja",
+                "zh"
+            ],
+            "Domain": "e-commerce",
+            "Form": "text",
+            "Collection Style": "web scraping",
+            "Description": "A collection of product reviews from Amazon.com in multiple languages.",
+            "Volume": "3.2M",
+            "Unit": "reviews",
+            "Ethical Risks": [
+                "bias",
+                "privacy"
+            ],
+            "Provider": "Amazon",
+            "Derived From": "Amazon.com",
+            "Paper Title": "The Multilingual Amazon Reviews Corpus",
+            "Paper Link": null,
+            "Tokenized": false,
+            "Host": "huggingface.co",
+            "Access": "public",
+            "Cost": "free",
+            "Test Split": null,
+            "Tasks": [
+                "sentiment analysis",
+                "machine translation",
+                "cross-lingual transfer learning"
+            ],
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": [],
+            "Affiliations": [],
+            "Abstract": null
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2010.02573",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.2631578947368421
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.00014225,
+        "input_tokens": 542,
+        "output_tokens": 328
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02573"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "Name": "",
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2107.13998",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.375,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.8999999999999999,
+    "cost": {
+        "cost": 0.0430475,
+        "input_tokens": 3092,
+        "output_tokens": 1735
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2107.13998"
+    },
+    "ratio_filling": 1.0,
+    "error": "Expecting ',' delimiter: line 25 column 22 (char 792)"
+}

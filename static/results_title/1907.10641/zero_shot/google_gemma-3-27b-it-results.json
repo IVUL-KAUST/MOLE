@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "WinoGrande",
+        "Link": "https://github.com/uwnlp/winoGrande",
+        "HF Link": "https://huggingface.co/datasets/wino_grande",
+        "License": "CC BY 4.0",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "other"
+        ],
+        "Description": "WinoGrande is an adversarial Winograd Schema Challenge at scale. It contains 448k multiple-choice question-answer pairs, designed to be difficult for coreference resolution systems.",
+        "Volume": 448000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Washington"
+        ],
+        "Derived From": [],
+        "Paper Title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
+        "Paper Link": "https://arxiv.org/abs/1907.10628",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "commonsense reasoning",
+            "natural language inference"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Alex Warstadt",
+            "Sameer Singh",
+            "Daniel Mohler",
+            "Matthew Lamm",
+            "Chris Brockett",
+            "Dirk Hovy"
+        ],
+        "Affiliations": [
+            "University of Washington"
+        ],
+        "Abstract": "The Winograd Schema Challenge (WSC) is a popular test for commonsense reasoning, but recent results show that systems can achieve high accuracy by exploiting superficial cues. We introduce WinoGrande, a new dataset designed to be more challenging for these systems. WinoGrande contains 448k multiple-choice question-answer pairs, generated using a crowdsourcing pipeline that encourages the creation of adversarial examples. We show that WinoGrande is significantly more difficult than existing WSC datasets, and that state-of-the-art coreference resolution systems perform poorly on it. We also analyze the types of errors that these systems make, and identify potential directions for future research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004261,
+        "input_tokens": 3017,
+        "output_tokens": 523
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1907.10641"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

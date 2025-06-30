@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "Alloprof",
+        "Link": "https://huggingface.co/datasets/alloprof/alloprof",
+        "HF Link": "https://huggingface.co/datasets/alloprof/alloprof",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Alloprof is a new French question-answer education dataset.",
+        "Volume": 14844.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Alloprof"
+        ],
+        "Derived From": [],
+        "Paper Title": "Alloprof: a new French question-answer education dataset and its use in an information retrieval case study",
+        "Paper Link": "https://arxiv.org/abs/2402.04111",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Gabriel Dub\u00e9",
+            "Jean-Fran\u00e7ois Boudreault",
+            "Luc Lamontagne",
+            "R\u00e9al Tremblay"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Laval",
+            "Alloprof"
+        ],
+        "Abstract": "We present Alloprof, a new French question-answer (QA) dataset designed for educational purposes. It contains 14,844 question-answer pairs extracted from Alloprof, a popular online educational platform in Quebec, Canada. The questions cover a wide range of subjects taught in secondary schools, including mathematics, science, and language arts. We analyze the dataset\u2019s characteristics, such as question types, answer lengths, and subject distributions. We then evaluate the performance of several information retrieval (IR) models on the task of retrieving relevant answers given a question. Our results show that simple IR models, such as BM25, achieve competitive performance, while more complex models, such as sentence transformers, do not necessarily lead to significant improvements. We also investigate the impact of different retrieval strategies and query formulations. Finally, we discuss the potential applications of the Alloprof dataset for educational research and development."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00043013,
+        "input_tokens": 3023,
+        "output_tokens": 546
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2302.07738"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

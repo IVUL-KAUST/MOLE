@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "BRIGHT",
+        "Link": "https://huggingface.co/datasets/yale-nlp/bright",
+        "HF Link": "https://huggingface.co/datasets/yale-nlp/bright",
+        "License": "CC BY-SA 4.0",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "wikipedia",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "LLM generated",
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "BRIGHT is a benchmark for reasoning-intensive retrieval. It consists of complex questions requiring multi-hop reasoning over multiple sentences, derived from real user queries and grounded in Wikipedia. The dataset contains 4K questions, each paired with supporting passages.",
+        "Volume": 4057.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Yale University"
+        ],
+        "Derived From": [
+            "English Wikipedia",
+            "MS MARCO"
+        ],
+        "Paper Title": "BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval",
+        "Paper Link": "https://arxiv.org/abs/2405.14459",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "information retrieval",
+            "question answering",
+            "text generation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Fan Yin",
+            "Yuxuan Sun",
+            "Naman Garg",
+            "Tao Yu"
+        ],
+        "Affiliations": [
+            "Yale University"
+        ],
+        "Abstract": "Existing retrieval benchmarks often feature questions that can be answered by matching keywords in a single document, which fails to reflect the needs of modern applications that require retrieving and reasoning over multiple pieces of evidence to answer a complex question. To bridge this gap, we introduce BRIGHT, a new benchmark for reasoning-intensive retrieval. We construct BRIGHT from two sources: English Wikipedia as the knowledge source and user queries from the MS MARCO passage ranking dataset as the seed questions. We use large language models (LLMs) to generate reasoning questions from the seed queries and then ask human annotators to find the minimal set of sentences from Wikipedia that are required to answer the question. Our data collection results in 4K questions that are natural, realistic, and require reasoning over multiple sentences. Each question is paired with a set of supporting passages, where each passage contains at least one supporting sentence. Our experiments show that state-of-the-art retrieval models, including sparse, dense, and LLM-based retrievers, struggle on BRIGHT, with the best model achieving only 45.5% Recall@5. This is a significant drop from the 90%+ performance on existing benchmarks, highlighting the challenge of our new benchmark. We further demonstrate that BRIGHT can effectively evaluate and guide the development of retrieval-augmented generation (RAG) models. We release our benchmark at https://github.com/yale-nlp/bright."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04441,
+        "input_tokens": 3020,
+        "output_tokens": 1500
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12883"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,103 @@
+{
+    "metadata": {
+        "Name": "MINION",
+        "Subsets": [
+            {
+                "Name": "MINION-English",
+                "Volume": 1086100,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "MINION-Chinese",
+                "Volume": 100000,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "MINION-Arabic",
+                "Volume": 100000,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            }
+        ],
+        "Link": "https://github.com/PlusLabUSC/MINION",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "Chinese",
+            "Arabic"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "MINION is a large-scale, multilingual dataset for event detection in English, Chinese, and Arabic. It unifies several existing event extraction datasets and includes new data from a large news corpus automatically annotated via a teacher-student framework. It contains over 1.2 million sentences.",
+        "Volume": 100000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Southern California"
+        ],
+        "Derived From": [
+            "ACE 2005",
+            "ERE",
+            "TAC KBP",
+            "CC-NEWS-En"
+        ],
+        "Paper Title": "MINION: a Large-Scale and Diverse Dataset for Multilingual Event Detection",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.582/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "relation extraction"
+        ],
+        "Venue Title": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2023",
+        "Authors": [
+            "Min-Hsuan Weng",
+            "Kuan-Hao Huang",
+            "Lifu Huang"
+        ],
+        "Affiliations": [
+            "University of Southern California"
+        ],
+        "Abstract": "Event extraction has been a long-standing and challenging task in information extraction, which aims to identify structured event information from unstructured texts. Most existing event extraction datasets are either small in scale or limited in language, which hinders the development of large-scale multilingual event extraction systems. To address this issue, we present MINION, a large-scale and diverse dataset for multilingual event detection. We construct MINION by unifying the annotation schema of several existing event extraction datasets and automatically annotating a large news corpus through a teacher-student framework. The resulting dataset contains over 1.2M sentences in English, Chinese, and Arabic, with 65 event types and over 1.3M annotated event mentions. We conduct a comprehensive analysis of MINION and benchmark the performance of state-of-the-art models on the dataset. Experimental results show that MINION presents a challenging testbed for future research in multilingual event extraction. The dataset, code, and models are publicly available at https://github.com/PlusLabUSC/MINION."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3157894736842105
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04304625,
+        "input_tokens": 3190,
+        "output_tokens": 1591
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05958"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

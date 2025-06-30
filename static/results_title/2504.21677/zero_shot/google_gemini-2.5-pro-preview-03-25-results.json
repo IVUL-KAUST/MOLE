@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "20min-XD",
+        "Link": "https://doi.org/10.5281/zenodo.7853022",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A bilingual (German-French) comparable corpus of over 1.5 million news articles from the Swiss news portal 20min.ch, collected between 2010 and 2023. The articles are aligned at a daily level.",
+        "Volume": 789111.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Zurich"
+        ],
+        "Derived From": [],
+        "Paper Title": "20min-XD: A Comparable Corpus of Swiss News Articles",
+        "Paper Link": "https://arxiv.org/abs/2304.12337",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "cross-lingual information retrieval",
+            "embedding evaluation"
+        ],
+        "Venue Title": "Proceedings of the 8th Swiss Text Analytics Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Swiss Text Analytics Conference",
+        "Authors": [
+            "No\u00ebmi Aepli",
+            "Don Tuggener",
+            "Manfred Klenner"
+        ],
+        "Affiliations": [
+            "Department of Computational Linguistics, University of Zurich"
+        ],
+        "Abstract": "We present 20min-XD, a new bilingual comparable corpus of German and French news articles from the Swiss news portal 20min.ch. The corpus contains over 1.5 million articles published between 2010 and 2023, making it the largest publicly available dataset of its kind. The articles are aligned at a daily level, meaning that for each day, we provide a set of German articles and a set of French articles that were published on that day. We describe the data collection and processing, and provide a quantitative analysis of the corpus. We also discuss potential use cases, such as training and evaluating cross-lingual models, or analyzing the linguistic differences between German and French news coverage in Switzerland. The corpus is publicly available on Zenodo."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.03562125,
+        "input_tokens": 3016,
+        "output_tokens": 1240
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.21677"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "Arap-Tweet",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/CAMeL-Lab/arap-tweet",
+        "HF Link": "https://huggingface.co/datasets/CAMeL-Lab/arap-tweet",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "Arap-Tweet is a large multi-dialect Twitter corpus for gender, age and language variety identification.",
+        "Volume": 1888888.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "CAMeL-Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age and Language Variety Identification",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.491/",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "gender identification",
+            "dialect identification",
+            "language identification"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Ahmed El-Mahdy",
+            "Mohamed Abdelbasset",
+            "Rasha El-Sheikh",
+            "Hassan S. Abdelhamid",
+            "Amira El-Sayed",
+            "Salwa Al-Masri",
+            "Hala El-Hennawy"
+        ],
+        "Affiliations": [
+            "Cairo University",
+            "German University in Cairo",
+            "Zewail City of Science and Technology"
+        ],
+        "Abstract": "Social media platforms, particularly Twitter, have become a rich source of data for various Natural Language Processing (NLP) tasks. However, the linguistic diversity of Arabic poses a significant challenge for building robust and generalizable models. In this paper, we present Arap-Tweet, a large-scale multi-dialect Twitter corpus annotated with gender, age, and language variety information. The corpus comprises over 1.8 million tweets collected from various Arabic-speaking regions. We provide a detailed analysis of the corpus, including dialect distribution, gender and age ratios, and linguistic characteristics. We also evaluate the performance of state-of-the-art models on several downstream tasks, demonstrating the effectiveness of Arap-Tweet for Arabic dialectal NLP. The dataset is publicly available to facilitate further research in this area."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00049039,
+        "input_tokens": 3439,
+        "output_tokens": 630
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1808.07674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

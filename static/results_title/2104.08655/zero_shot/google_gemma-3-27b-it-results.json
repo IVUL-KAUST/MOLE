@@ -1,0 +1,101 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "DiS-ReX",
+            "Subsets": [],
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/yiyanghkust/disrex",
+            "License": null,
+            "Year": 2023,
+            "Language": "Multilingual",
+            "Domain": "General",
+            "Form": "Text",
+            "Collection Style": "Automated",
+            "Description": "A multilingual dataset for distantly supervised relation extraction.",
+            "Volume": null,
+            "Unit": null,
+            "Ethical Risks": null,
+            "Provider": "yiyanghkust",
+            "Derived From": null,
+            "Paper Title": "DiS-ReX: A Multilingual Dataset for Distantly Supervised Relation Extraction",
+            "Paper Link": null,
+            "Tokenized": null,
+            "Host": "Hugging Face",
+            "Access": null,
+            "Cost": null,
+            "Test Split": null,
+            "Tasks": [
+                "Relation Extraction"
+            ],
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": [],
+            "Affiliations": [],
+            "Abstract": null
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2104.08655",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.15789473684210525
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.00017805,
+        "input_tokens": 553,
+        "output_tokens": 273
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2104.08655"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

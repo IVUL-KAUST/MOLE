@@ -1,0 +1,68 @@
+{
+    "metadata": {
+        "Name": "Arukikata Travelogue Dataset",
+        "Link": "https://github.com/megagonlabs/arukikata-travelogue-dataset",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This dataset contains travelogues from the Arukikata website.",
+        "Volume": 148949.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Megagon Labs"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arukikata Travelogue Dataset",
+        "Paper Link": "https://megagonlabs.github.io/arukikata-travelogue-dataset/",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "text generation",
+            "language modeling"
+        ],
+        "Venue Title": "Megagon Labs",
+        "Venue Type": "conference",
+        "Venue Name": "Megagon Labs",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "We release the Arukikata Travelogue Dataset, a large-scale Japanese travelogue dataset crawled from the Arukikata website. The dataset contains 148,949 travelogues, which are composed of 1.1 million sentences. We provide the dataset in a simple text format, and we hope it will be useful for a variety of natural language processing tasks."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.000468876,
+        "input_tokens": 3089,
+        "output_tokens": 384
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.11444"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

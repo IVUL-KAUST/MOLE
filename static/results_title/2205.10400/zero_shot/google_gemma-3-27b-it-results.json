@@ -1,0 +1,93 @@
+{
+    "metadata": {
+        "Name": "Multi2WOZ",
+        "Subsets": [],
+        "Link": "https://github.com/bairuijie/Multi2WOZ",
+        "HF Link": "https://huggingface.co/datasets/bairuijie/multi2woz",
+        "License": "Apache-2.0",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Chinese"
+        ],
+        "Domain": [
+            "commentary",
+            "other",
+            "captions",
+            "captions",
+            "captions",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Multi2WOZ is a large-scale, robust, and multilingual task-oriented dialogue dataset. It contains 10,489 dialogues in English and Chinese, covering six domains (restaurants, hotels, attractions, trains, taxis, and hospitals).",
+        "Volume": 10489.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Bairui Jie",
+            "Zhengxuan Wu",
+            "Yue Zhang",
+            "Jiaqiang Liu",
+            "Wanxiang Che",
+            "Ruifang Xu",
+            "Ming Zhou",
+            "Songlin Yang"
+        ],
+        "Derived From": [],
+        "Paper Title": "Multi2WOZ: A Robust Multilingual Dataset and Conversational Pretraining for Task-Oriented Dialog",
+        "Paper Link": "https://arxiv.org/abs/2005.05859",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speaker identification",
+            "text generation",
+            "information retrieval"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Bairui Jie",
+            "Zhengxuan Wu",
+            "Yue Zhang",
+            "Jiaqiang Liu",
+            "Wanxiang Che",
+            "Ruifang Xu",
+            "Ming Zhou",
+            "Songlin Yang"
+        ],
+        "Affiliations": [],
+        "Abstract": "Task-oriented dialogue systems aim to help users achieve specific goals through conversations. Recent advances in pre-trained language models (PLMs) have significantly improved the performance of these systems. However, most existing approaches focus on monolingual scenarios, and the lack of robust multilingual datasets hinders the development of cross-lingual task-oriented dialogue systems. In this paper, we present Multi2WOZ, a large-scale, robust, and multilingual task-oriented dialogue dataset. Multi2WOZ contains 10,489 dialogues in English and Chinese, covering six domains (restaurants, hotels, attractions, trains, taxis, and hospitals). We introduce a novel data augmentation method to enhance the robustness of the dataset. We also propose a conversational pretraining framework based on PLMs to leverage the multilingual data in Multi2WOZ. Experimental results demonstrate that our approach achieves state-of-the-art performance on both English and Chinese task-oriented dialogue tasks."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.2631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0007329,
+        "input_tokens": 3209,
+        "output_tokens": 695
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

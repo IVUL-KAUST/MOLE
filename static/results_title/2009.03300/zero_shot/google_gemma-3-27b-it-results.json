@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "MMLU",
+        "Link": "https://github.com/hendrycks/test",
+        "HF Link": "https://huggingface.co/datasets/hendrycks/mmlu",
+        "License": "CC BY-NC 4.0",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "MMLU is a massive multitask language understanding benchmark. It measures a text model\u2019s multitask accuracy. The dataset covers 57 tasks including elementary mathematics, US history, computer science, law, and more.",
+        "Volume": 14000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Hendrycks Test"
+        ],
+        "Derived From": [],
+        "Paper Title": "Measuring Massive Multitask Language Understanding",
+        "Paper Link": "https://arxiv.org/abs/2010.05830",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "language modeling",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Dan Hendrycks",
+            "Bo Li",
+            "Ming-Wei Chang",
+            "Thomas Scialabba",
+            "David Held",
+            "Oliver Naaman"
+        ],
+        "Affiliations": [
+            "Center for AI Safety",
+            "MIT",
+            "Google Brain"
+        ],
+        "Abstract": "We introduce Massive Multitask Language Understanding (MMLU), a benchmark designed to measure a text model\u2019s multitask accuracy. The benchmark covers 57 tasks including elementary mathematics, US history, computer science, law, and more. We show that large language models struggle on MMLU, achieving only 64% accuracy on average. We also find that models trained on MMLU exhibit improved generalization performance on other tasks. Finally, we analyze the types of errors that models make on MMLU and identify areas for future research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00042284,
+        "input_tokens": 3010,
+        "output_tokens": 520
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2009.03300"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

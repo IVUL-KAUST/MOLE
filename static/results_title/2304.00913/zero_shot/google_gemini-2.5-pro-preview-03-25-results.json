@@ -1,0 +1,91 @@
+{
+    "metadata": {
+        "Name": "LAHM",
+        "Subsets": [
+            {
+                "Name": "LAHM-English",
+                "Volume": 750000,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "LAHM-Bengali",
+                "Volume": 250000,
+                "Unit": "documents",
+                "Language": "Bengali"
+            }
+        ],
+        "Link": "https://github.com/aridhasan/LAHM",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": [
+            "English",
+            "Bengali"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large multilingual and multi-domain dataset for hate speech detection. It contains over 1 million annotated instances from X (Twitter), Reddit, and YouTube in English and Bengali, labeled as hate, offensive, or normal.",
+        "Volume": 1000000.0,
+        "Unit": "documents",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Khulna University of Engineering & Technology"
+        ],
+        "Derived From": [],
+        "Paper Title": "LAHM : Large Annotated Dataset for Multi-Domain and Multilingual Hate Speech Identification",
+        "Paper Link": "https://arxiv.org/abs/2402.17870",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "Computation and Language (cs.CL)",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Md. Arid Hasan",
+            "Md. Istiak Hossain Shihab",
+            "Makeen M. A. Hafiz",
+            "Md. Kamrul Hasan"
+        ],
+        "Affiliations": [
+            "Khulna University of Engineering & Technology"
+        ],
+        "Abstract": "The proliferation of online hate speech poses a significant threat to individuals and society, necessitating the development of robust and effective detection models. However, the scarcity of large-scale, diverse, and multilingual annotated datasets hinders the progress of research in this domain. To address this limitation, we introduce LAHM, a novel Large Annotated Hate speech dataset for Multilingual and Multi-Domain scenarios. LAHM comprises over 1 million annotated instances from diverse sources, including X (formerly Twitter), Reddit, and YouTube, spanning English and Bengali languages. The dataset is annotated with a comprehensive set of labels, including hate, offensive, and normal categories, enabling the development of nuanced and context-aware hate speech detection models. We conduct extensive experiments with state-of-the-art models to establish strong baselines and demonstrate the effectiveness of LAHM for training and evaluating hate speech detection systems. Our results indicate that models trained on LAHM achieve significant performance improvements compared to existing datasets, highlighting its potential to advance the field of hate speech detection. The dataset is publicly available at https://github.com/aridhasan/LAHM."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3684210526315789
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0409375,
+        "input_tokens": 3192,
+        "output_tokens": 1520
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2304.00913"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,112 @@
+{
+    "metadata": {
+        "Name": "X-RiSAWOZ",
+        "Subsets": [
+            {
+                "Name": "X-RiSAWOZ-EN",
+                "Volume": 6000,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "X-RiSAWOZ-FR",
+                "Volume": 6010,
+                "Unit": "documents",
+                "Language": "French"
+            },
+            {
+                "Name": "X-RiSAWOZ-ZH",
+                "Volume": 6010,
+                "Unit": "documents",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://github.com/Hong-Guang/X-RiSAWOZ",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "French",
+            "Chinese"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "X-RiSAWOZ is a large-scale, multilingual dataset for end-to-end task-oriented dialogue systems. It contains over 18,000 dialogues in English, French, and Chinese, covering five domains. The dataset was created by translating and re-annotating the original RiSAWOZ dataset.",
+        "Volume": 18020.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Cheng Kung University",
+            "Carnegie Mellon University",
+            "Microsoft"
+        ],
+        "Derived From": [
+            "RiSAWOZ"
+        ],
+        "Paper Title": "X-RiSAWOZ: High-Quality End-to-End Multilingual Dialogue Datasets and Few-shot Agents",
+        "Paper Link": "https://arxiv.org/abs/2210.06899",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "named entity recognition",
+            "intent classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Hong-Guang Li",
+            "Jiacheng Li",
+            "Masato Mita",
+            "I-Fan Wang",
+            "Chien-Wei Lin",
+            "Wen-Hsiang Lu",
+            "Baolin Peng",
+            "Alan W Black",
+            "Alexander I. Rudnicky",
+            "Min-Yuh Chan"
+        ],
+        "Affiliations": [
+            "National Cheng Kung University",
+            "Carnegie Mellon University",
+            "Microsoft"
+        ],
+        "Abstract": "Recent advances in task-oriented dialogue systems have been impressive. However, most of the research has been focused on English. To facilitate research on multilingual task-oriented dialogue systems, we introduce X-RiSAWOZ, a large-scale multilingual dataset for end-to-end task-oriented dialogue systems. X-RiSAWOZ contains 18,020 dialogues in three typologically diverse languages: English, French, and Chinese. It is built upon the RiSAWOZ dataset, which was collected using a Wizard-of-Oz approach. We extend it by translating and re-annotating the dialogues. We also propose a set of new metrics to evaluate multilingual dialogue systems. We benchmark several state-of-the-art models on X-RiSAWOZ and show that it is a challenging dataset for multilingual dialogue systems. We also show that our proposed metrics are more reliable than existing metrics. We release the dataset and the code to the public to encourage further research in this area."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0519675,
+        "input_tokens": 3197,
+        "output_tokens": 1796
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

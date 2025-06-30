@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "Arap-Tweet",
+        "Subsets": [],
+        "Link": "https://aclanthology.org/2021.wanlp-1.29/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large multi-dialect Twitter corpus for gender, age, and language variety identification.",
+        "Volume": 1200000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Ain Shams University"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arap-Tweet: A Large Multi-Dialect Twitter Corpus for Gender, Age and Language Variety Identification",
+        "Paper Link": "https://aclanthology.org/2021.wanlp-1.29/",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "gender identification",
+            "dialect identification",
+            "language identification"
+        ],
+        "Venue Title": "Proceedings of the Sixth Arabic Natural Language Processing Workshop",
+        "Venue Type": "workshop",
+        "Venue Name": "Sixth Arabic Natural Language Processing Workshop",
+        "Authors": [
+            "Shrouk Abd Al-Hameed",
+            "Mohamed El-Mahallawy"
+        ],
+        "Affiliations": [
+            "Ain Shams University"
+        ],
+        "Abstract": "Author profiling is the task of identifying authors' demographic characteristics such as gender, age, and language variety from their writings. Most of the previous work on Arabic author profiling has focused on Modern Standard Arabic (MSA) and a few dialectal variations. In this paper, we introduce Arap-Tweet, a new multi-dialectal Twitter dataset for Arabic author profiling. The dataset is annotated for gender, age, and language variety. We describe the process of data collection and annotation. We also present baseline results for the three tasks using a variety of machine learning models. Our results show that the dataset is challenging and that there is a need for more research on Arabic author profiling."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7619047619047619
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.06836875,
+        "input_tokens": 3439,
+        "output_tokens": 2022
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1808.07674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

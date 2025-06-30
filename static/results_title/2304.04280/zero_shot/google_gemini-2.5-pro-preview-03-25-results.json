@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "FrenchMedMCQA",
+        "Link": "https://huggingface.co/datasets/abderrahim/FrenchMedMCQA",
+        "HF Link": "https://huggingface.co/datasets/abderrahim/FrenchMedMCQA",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "A French multiple-choice question answering (MCQA) dataset for the medical domain. It was created by translating two English medical QA datasets, MedMCQA and MMLU medical subjects, using a combination of machine and human translation.",
+        "Volume": 104387.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Mohammed VI Polytechnic University"
+        ],
+        "Derived From": [
+            "MedMCQA",
+            "MMLU"
+        ],
+        "Paper Title": "FrenchMedMCQA: A French Multiple-Choice Question Answering Dataset for Medical domain",
+        "Paper Link": "https://aclanthology.org/2023.bionlp-1.24/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "language modeling"
+        ],
+        "Venue Title": "Proceedings of the 22nd Workshop on Biomedical Language Processing and BioNLP Shared Tasks",
+        "Venue Type": "workshop",
+        "Venue Name": "BioNLP 2023",
+        "Authors": [
+            "Abderrahim Oulahna",
+            "Mustapha Boroun",
+            "Said El Alaoui Ouatik",
+            "Abdelhakim El Allali",
+            "Nabil Massa",
+            "Ismail Berrada"
+        ],
+        "Affiliations": [
+            "Mohammed VI Polytechnic University (UM6P)"
+        ],
+        "Abstract": "The medical domain has seen a surge in the development of language models, but progress has been slow for non-English languages due to the scarcity of specialized datasets. To address this gap, we introduce FrenchMedMCQA, the first French Multiple-Choice Question Answering (MCQA) dataset for the medical domain. The dataset is created by translating a combination of two existing English medical QA datasets, MedMCQA and MMLU medical subjects, using a combination of machine and human translation. FrenchMedMCQA contains over 104k questions, covering a wide range of medical subjects and topics. We evaluate the performance of several multilingual and French-based language models on the dataset, including a new French medical language model that we pre-trained from scratch, named DrBERT-fr. Our results show that even the best-performing models struggle with the dataset, with the highest accuracy of 52.1% achieved by DrBERT-fr, indicating that there is significant room for improvement. We believe that FrenchMedMCQA will be a valuable resource for the research community to develop and evaluate language models for the medical domain in French. The dataset is publicly available at https://github.com/abderrahim-oulahna/FrenchMedMCQA."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.03836375,
+        "input_tokens": 3020,
+        "output_tokens": 1486
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2304.04280"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

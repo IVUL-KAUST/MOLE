@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "RuSemShift",
+        "Link": "https://huggingface.co/datasets/ruSemShift",
+        "HF Link": "https://huggingface.co/datasets/ruSemShift",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "RuSemShift is a dataset of historical lexical semantic change in Russian, based on diachronic word embeddings.",
+        "Volume": 13884.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Hugging Face"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuSemShift: a dataset of historical lexical semantic change in Russian",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.491/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "semantic parsing"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Ekaterina Artemova",
+            "Dmitry Uryupin",
+            "Alexander Panchenko"
+        ],
+        "Affiliations": [
+            "Huawei Noah\u2019s Ark Lab",
+            "Saint Petersburg State University"
+        ],
+        "Abstract": "We present RuSemShift, a new dataset for studying historical semantic change in Russian. The dataset consists of sentences from the Russian National Corpus (RNC) spanning the period from the 18th to the 21st century. Each sentence is annotated with a time period, and the dataset is designed to facilitate the study of diachronic word embeddings and other methods for tracking semantic change. We provide a baseline analysis of semantic change in Russian using RuSemShift, and demonstrate the potential of the dataset for further research in this area."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004754,
+        "input_tokens": 3016,
+        "output_tokens": 483
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.06436"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

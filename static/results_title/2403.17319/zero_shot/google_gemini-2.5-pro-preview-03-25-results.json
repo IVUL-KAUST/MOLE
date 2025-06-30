@@ -1,0 +1,92 @@
+{
+    "metadata": {
+        "Name": "JMultiWOZ",
+        "Link": "https://github.com/shohirose/jmultiwoz",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A large-scale Japanese multi-domain task-oriented dialogue dataset created by translating and post-editing the English MultiWOZ 2.1 dataset. It covers seven domains and includes dialogue state annotations.",
+        "Volume": 10422.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Tohoku University",
+            "LINE Corporation",
+            "RIKEN",
+            "IBM Research - Tokyo",
+            "The University of Tokyo",
+            "Ochanomizu University"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "JMultiWOZ: A Large-Scale Japanese Multi-Domain Task-Oriented Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2212.11799",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "relation extraction",
+            "intent classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Toshiaki Shoji",
+            "Ryuichi Takanobu",
+            "Minami Yamashita",
+            "Hidetaka Kamigaito",
+            "Hiroshi Kanayama",
+            "Yusuke Miyao",
+            "Ichiro Kobayashi"
+        ],
+        "Affiliations": [
+            "Tohoku University",
+            "LINE Corporation",
+            "RIKEN",
+            "IBM Research - Tokyo",
+            "The University of Tokyo",
+            "Ochanomizu University"
+        ],
+        "Abstract": "Task-oriented dialogue systems have been studied to help users achieve their goals through conversation. Although many large-scale datasets have been created for English, there are few such datasets for other languages, including Japanese. To address this issue, we present JMultiWOZ, a large-scale Japanese multi-domain task-oriented dialogue dataset. We created JMultiWOZ by translating and post-editing the English MultiWOZ 2.1 dataset, which is a commonly used benchmark for task-oriented dialogue systems. JMultiWOZ contains over 10,000 dialogues, covering seven domains. It also includes dialogue state annotations in the same format as MultiWOZ 2.1, which allows for direct comparison of dialogue state tracking models between English and Japanese. We analyzed the characteristics of JMultiWOZ and found that it has similar statistics to the original English dataset. We also trained several baseline models for dialogue state tracking and end-to-end response generation on JMultiWOZ. The experimental results show that the models perform reasonably well on the dataset, but there is still room for improvement. The dataset is publicly available on GitHub."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0439825,
+        "input_tokens": 3086,
+        "output_tokens": 1585
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.17319"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "AraSpider",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/CAMeL-Lab/AraSpider",
+        "HF Link": "https://huggingface.co/datasets/CAMeL-Lab/AraSpider",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "AraSpider is a large-scale Arabic-to-SQL dataset designed to facilitate research in semantic parsing and question answering over databases in Arabic. It contains complex SQL queries and corresponding natural language questions.",
+        "Volume": 8639.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "CAMeL Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "AraSpider: Democratizing Arabic-to-SQL",
+        "Paper Link": "https://arxiv.org/abs/2310.19427",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing",
+            "text to SQL",
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ahmed El-Sawy",
+            "Mostafa El-Kholy",
+            "Islam Amr",
+            "Hassan Abdel-Jawad",
+            "Amr Amin",
+            "Mohamed El-Mahdy"
+        ],
+        "Affiliations": [
+            "Cairo University",
+            "Zewail City of Science and Technology",
+            "Amazon"
+        ],
+        "Abstract": "Building semantic parsers for low-resource languages like Arabic is challenging due to the scarcity of labeled data. Existing Arabic-to-SQL datasets are either small in size or lack the complexity of real-world queries. In this paper, we introduce AraSpider, a large-scale Arabic-to-SQL dataset containing 8,639 question-SQL pairs. AraSpider covers a wide range of database schemas and SQL query types, making it a suitable benchmark for evaluating the performance of Arabic-to-SQL models. We also propose a baseline model based on a pre-trained Arabic language model and demonstrate its effectiveness on AraSpider. Our experiments show that AraSpider is a challenging dataset that requires advanced semantic parsing techniques to achieve high accuracy. We believe that AraSpider will contribute to the development of more robust and accurate Arabic-to-SQL systems."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00048426,
+        "input_tokens": 3428,
+        "output_tokens": 602
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2402.07448"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

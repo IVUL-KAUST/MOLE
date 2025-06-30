@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Crowdsourcing Multiple Choice Science Questions",
+        "Link": "https://github.com/allenai/science-qa",
+        "HF Link": "https://huggingface.co/datasets/allenai/science-qa",
+        "License": "CC BY 4.0",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "This dataset contains multiple choice science questions. The questions are crowdsourced and cover a variety of science topics.",
+        "Volume": 1000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Allen Institute for AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "Crowdsourcing Multiple Choice Science Questions",
+        "Paper Link": "https://aclanthology.org/D19-1388/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "question answering"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Daniel Khashabi",
+            "Sewon Min",
+            "Tushar Khot",
+            "Ashish Sabharwal",
+            "Oyvind Tafjord",
+            "Peter Clark"
+        ],
+        "Affiliations": [
+            "Allen Institute for AI",
+            "University of Washington"
+        ],
+        "Abstract": "We present a new dataset of 1,000 multiple choice science questions. The questions are designed to require reasoning and are not easily answered by simple keyword matching. We crowdsourced the questions and answers, and we provide a baseline model that achieves 42% accuracy on the dataset. We also analyze the types of reasoning skills required to answer the questions."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004682,
+        "input_tokens": 3010,
+        "output_tokens": 456
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1707.06209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

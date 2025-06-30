@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "J-CRe3",
+        "Link": "https://github.com/nishida-k/j-cre3",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A Japanese conversation dataset for real-world reference resolution. It is constructed from a large-scale crowdsourced dialogue corpus (JDC) and annotated with coreference relations, including those that cross document boundaries.",
+        "Volume": 1100.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Kyushu Institute of Technology"
+        ],
+        "Derived From": [
+            "Japanese Cross-Lingual Dialogue Corpus (JDC)"
+        ],
+        "Paper Title": "J-CRe3: A Japanese Conversation Dataset for Real-world Reference Resolution",
+        "Paper Link": "https://aclanthology.org/2024.lrec-main.598/",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction"
+        ],
+        "Venue Title": "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+        "Venue Type": "conference",
+        "Venue Name": "Joint International Conference on Computational Linguistics, Language Resources and Evaluation",
+        "Authors": [
+            "Kenshin Nishida",
+            "Kimiaki Shirahama",
+            "Koji Matsuda"
+        ],
+        "Affiliations": [
+            "Kyushu Institute of Technology"
+        ],
+        "Abstract": "Reference resolution is a fundamental task in natural language processing that involves identifying and resolving expressions that refer to entities. While various datasets have been developed for this task, most of them are limited to single documents, which do not reflect real-world scenarios where references can span across multiple documents. To address this limitation, we introduce J-CRe3, a Japanese conversation dataset for real-world reference resolution. J-CRe3 is constructed from a large-scale crowdsourced dialogue corpus and annotated with coreference relations, including those that cross document boundaries. We also provide a baseline model for the task and report its performance on J-CRe3. Our dataset and baseline model will facilitate research on real-world reference resolution in Japanese."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04475,
+        "input_tokens": 3082,
+        "output_tokens": 1797
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19259"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

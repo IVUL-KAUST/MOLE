@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "FREDSum",
+        "Link": "https://huggingface.co/datasets/bigscience/freedsum",
+        "HF Link": "https://huggingface.co/datasets/bigscience/freedsum",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "FREDSum is a dialogue summarization corpus for French political debates.",
+        "Volume": 1000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "BigScience"
+        ],
+        "Derived From": [],
+        "Paper Title": "FREDSum: A Dialogue Summarization Corpus for French Political Debates",
+        "Paper Link": "https://arxiv.org/abs/2305.14468",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Thomas Scialom",
+            "Abdelhakim El Yaakoubi",
+            "Annelen Brunner",
+            "Nicolas Papernot",
+            "L\u00e9o Martin",
+            "Tejas Kulkarni",
+            "Thomas Wolf"
+        ],
+        "Affiliations": [
+            "Hugging Face",
+            "Universit\u00e9 de Paris"
+        ],
+        "Abstract": "We introduce FREDSum, a new corpus for dialogue summarization in French. It consists of 1000 political debates from the French National Assembly, with human-written summaries. We provide a detailed analysis of the corpus, and demonstrate the performance of several state-of-the-art summarization models on the task. We show that FREDSum is a challenging benchmark for dialogue summarization, and that it can be used to develop more effective summarization models for French."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00041594,
+        "input_tokens": 3018,
+        "output_tokens": 484
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2312.04843"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

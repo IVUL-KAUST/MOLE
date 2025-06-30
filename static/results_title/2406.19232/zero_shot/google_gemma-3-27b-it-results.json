@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "RuBLiMP",
+        "Link": "https://github.com/facebookresearch/RuBLiMP",
+        "HF Link": "https://huggingface.co/datasets/facebook/rublimp",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "RuBLiMP is a Russian benchmark of linguistic minimal pairs. It consists of 13 tasks designed to evaluate the linguistic capabilities of large language models.",
+        "Volume": 13.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Meta AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuBLiMP: Russian Benchmark of Linguistic Minimal Pairs",
+        "Paper Link": "https://arxiv.org/abs/2310.09293",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "linguistic acceptability",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ekaterina Artemova",
+            "Nikita Kozhevnikov",
+            "Polina Koltunova",
+            "Roman Miller",
+            "Dmitry Uryupin"
+        ],
+        "Affiliations": [
+            "Meta AI"
+        ],
+        "Abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in various natural language processing tasks. However, evaluating their linguistic competence requires specifically designed benchmarks that go beyond simple accuracy metrics. In this work, we introduce RuBLiMP, a Russian benchmark of linguistic minimal pairs. RuBLiMP consists of 13 tasks designed to evaluate the linguistic capabilities of LLMs, covering a wide range of phenomena, including morphological agreement, case marking, verb aspect, and quantifier scope. We evaluate several state-of-the-art LLMs on RuBLiMP and find that they struggle with many of the tasks, even those that seem simple to humans. We also analyze the errors made by the models and identify potential areas for improvement. The RuBLiMP benchmark is publicly available at https://github.com/facebookresearch/RuBLiMP."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.000494141,
+        "input_tokens": 3030,
+        "output_tokens": 549
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.19232"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

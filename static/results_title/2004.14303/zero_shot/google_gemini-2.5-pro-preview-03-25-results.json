@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "TUNIZI",
+        "Subsets": [],
+        "Link": "https://github.com/fbougares/TUNIZI",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2020,
+        "Language": "ar",
+        "Dialect": "Tunisia",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A sentiment analysis dataset for Tunisian Arabizi, collected from Facebook comments. It contains 70k comments manually annotated as positive or negative.",
+        "Volume": 70000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Sfax",
+            "National School of Computer Science, University of Manouba"
+        ],
+        "Derived From": [],
+        "Paper Title": "TUNIZI: a Tunisian Arabizi sentiment analysis Dataset",
+        "Paper Link": "http://www.lrec-conf.org/proceedings/lrec2020/pdf/2020.lrec-1.531.pdf",
+        "Script": "Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "Proceedings of The 12th Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Faten Bougares",
+            "Souhir Gahbiche",
+            "Lamia Hadrich Belguith"
+        ],
+        "Affiliations": [
+            "University of Sfax, REGIM-Lab., Tunisia",
+            "RIADI Laboratory, National School of Computer Science, University of Manouba, Tunisia"
+        ],
+        "Abstract": "The exponential growth of social media has generated a massive amount of user-generated content in the form of opinions, reviews, and comments. This content is a valuable resource for sentiment analysis and opinion mining. However, most of this content is written in dialects, which are often low-resource languages. In this paper, we present TUNIZI, a new sentiment analysis dataset of 70k Tunisian comments. Tunisian is one of the Arabic dialects. The dataset was collected from Facebook and manually annotated into positive and negative classes. We describe the data collection and the annotation process. We also provide a sentiment lexicon of 3k Tunisian words. Furthermore, we run several experiments using different machine learning and deep learning models to build a baseline for Tunisian sentiment analysis. The dataset is publicly available for research purposes on GitHub: https://github.com/fbougares/TUNIZI."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.03624625,
+        "input_tokens": 3432,
+        "output_tokens": 1422
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14303"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

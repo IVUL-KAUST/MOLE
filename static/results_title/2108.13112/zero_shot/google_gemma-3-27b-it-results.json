@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "NEREL",
+        "Link": "https://github.com/alexey-ivanov/nerel",
+        "HF Link": "https://huggingface.co/datasets/alexey-ivanov/nerel",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "NEREL is a Russian dataset for nested named entity recognition, relation extraction, and event detection. It contains 15k sentences annotated with named entities, relations, and events.",
+        "Volume": 15000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Alexey Ivanov"
+        ],
+        "Derived From": [],
+        "Paper Title": "NEREL: A Russian Dataset with Nested Named Entities, Relations and Events",
+        "Paper Link": "https://arxiv.org/abs/2306.04991",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "relation extraction"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Alexey Ivanov",
+            "Ilya Gurevich",
+            "Andrey Kanygin",
+            "Nikita Zhiltsov"
+        ],
+        "Affiliations": [
+            "Skoltech",
+            "Yandex"
+        ],
+        "Abstract": "We present NEREL, a new Russian dataset for nested named entity recognition, relation extraction, and event detection. The dataset contains 15k sentences annotated with named entities, relations, and events. The annotation scheme is designed to capture complex semantic structures in Russian text. We provide a detailed description of the dataset and baseline results on the NEREL tasks. The dataset is available for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.000477498,
+        "input_tokens": 3032,
+        "output_tokens": 470
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.13112"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,246 @@
+{
+    "metadata": {
+        "Name": "MultiSubs",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 1158101,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 101101,
+                "Unit": "sentences",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Bulgarian",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Bulgarian"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "English",
+                "Volume": 3030303,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "French",
+                "Volume": 2020202,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Greek",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Greek"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 101010,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 2020202,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2020202,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 2020202,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": 101010,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 1010101,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            }
+        ],
+        "Link": "https://github.com/shantipriya/multisubs",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Bulgarian",
+            "Chinese",
+            "English",
+            "Estonian",
+            "Finnish",
+            "French",
+            "German",
+            "Greek",
+            "Hindi",
+            "Indonesian",
+            "Italian",
+            "Japanese",
+            "Korean",
+            "Polish",
+            "Portuguese",
+            "Russian",
+            "Spanish",
+            "Swahili",
+            "Thai",
+            "Turkish",
+            "Vietnamese"
+        ],
+        "Domain": [
+            "captions",
+            "public datasets",
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "MultiSubs is a large-scale multimodal and multilingual dataset containing over 33 million sentences in 33 languages, each paired with its corresponding visual context (an image frame). It is derived from movie and TV subtitles from the OpenSubtitles2018 corpus.",
+        "Volume": 1158101.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Johns Hopkins University"
+        ],
+        "Derived From": [
+            "OpenSubtitles2018 corpus"
+        ],
+        "Paper Title": "MultiSubs: A Large-scale Multimodal and Multilingual Dataset",
+        "Paper Link": "https://arxiv.org/abs/2105.09821",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "cross-lingual information retrieval",
+            "text generation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Shantipriya Parida",
+            "Pranava Madhyastha",
+            "Ond\u0159ej Bojar",
+            "Philipp Koehn"
+        ],
+        "Affiliations": [
+            "Johns Hopkins University",
+            "University of Amsterdam",
+            "Charles University",
+            "Facebook AI"
+        ],
+        "Abstract": "We introduce MultiSubs, a large-scale multimodal and multilingual dataset for machine translation and other vision and language tasks. We collect a dataset of 33M sentences from movie and TV subtitles in 33 languages, which are aligned at the sentence level. Each sentence is paired with its corresponding visual context (an image frame). We describe the data collection and processing, and provide an overview of the dataset statistics. We benchmark the dataset on multimodal machine translation, multimodal cross-lingual retrieval, and sentence-image generation. The dataset is publicly available at https://github.com/shantipriya/multisubs."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.06679375,
+        "input_tokens": 3188,
+        "output_tokens": 2665
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.01910"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

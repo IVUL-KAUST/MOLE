@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "KITAB",
+        "Subsets": [],
+        "Link": "http://kitab-project.org/",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2020,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "A large-scale historical corpus of classical Arabic, known as the KITAB corpus, spanning the first millennium of Islam. It is built on the OpenITI corpus and is designed for studying the history and evolution of the Arabic language using computational methods.",
+        "Volume": 900000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "KITAB project"
+        ],
+        "Derived From": [
+            "OpenITI corpus"
+        ],
+        "Paper Title": "Studying the History of the Arabic Language: Language Technology and a Large-Scale Historical Corpus",
+        "Paper Link": "https://aclanthology.org/2020.lrec-1.795",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "information retrieval",
+            "part of speech tagging",
+            "morphological analysis",
+            "other"
+        ],
+        "Venue Title": "Proceedings of the 12th Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Mathew Barber",
+            "Maxim Romanov",
+            "Peter Verkinderen",
+            "David Joseph Wrisley"
+        ],
+        "Affiliations": [
+            "The Aga Khan University",
+            "Leipzig University",
+            "Ghent University",
+            "New York University Abu Dhabi"
+        ],
+        "Abstract": "This paper introduces the KITAB corpus, a large-scale historical corpus of classical Arabic. The corpus is designed to enable new kinds of research into the Arabic-speaking world of the first millennium of Islam, and to provide data for the development of new language technology for historical Arabic. The corpus is built on the OpenITI corpus, a machine-readable corpus of classical Arabic texts that is being built by a team of researchers at the Aga Khan University and Leipzig University. The current version of the corpus (version 1) contains more than 4,200 texts and over 900 million words. The paper describes the corpus and the methods that are being used to build it. It also discusses some of the challenges that are involved in working with historical Arabic texts, and the ways in which the KITAB project is addressing these challenges. The paper concludes with a discussion of the potential applications of the corpus, and the ways in which it can be used to advance our understanding of the history of the Arabic language and the Arabic-speaking world. The corpus is available for research purposes from the KITAB project website: http://kitab-project.org/."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.045005,
+        "input_tokens": 3437,
+        "output_tokens": 1733
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.03891"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -38,7 +38,6 @@
         "machine translation"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -47,8 +46,7 @@
     "Affiliations": [
         "Fondazione Bruno Kessler (FBK)"
     ],
-    "Abstract": "The paper describes the creation of an Arabic-Hebrew parallel corpus from TED talks, aligned using English as a pivot. The benchmark contains around 225,000 sentences and 3.5 million tokens in each language. It was prepared to assist machine translation tasks for Arabic-Hebrew and has been partitioned into train, development, and test sets similar to the IWSLT 2016 evaluation campaign.",
-    
+    "Abstract": "We describe an Arabic-Hebrew parallel corpus of TED talks built upon WIT3, the Web inventory that repurposes the original content of the TED website in a way which is more convenient for MT researchers. The benchmark consists of about 2,000 talks, whose subtitles in Arabic and Hebrew have been accurately aligned and rearranged in sentences, for a total of about 3.5M tokens per language. Talks have been partitioned in train, development and test sets similarly in all respects to the MT tasks of the IWSLT 2016 evaluation campaign. In addition to describing the benchmark, we list the problems encountered in preparing it and the novel methods designed to solve them. Baseline MT results and some measures on sentence length are provided as an extrinsic evaluation of the quality of the benchmark.",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -82,5 +80,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

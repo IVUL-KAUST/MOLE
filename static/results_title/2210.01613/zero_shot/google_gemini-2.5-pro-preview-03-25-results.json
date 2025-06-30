@@ -1,0 +1,144 @@
+{
+    "metadata": {
+        "Name": "Mintaka",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 160000,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 20000,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "German",
+                "Volume": 10000,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 10000,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "French",
+                "Volume": 10000,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 10000,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 10000,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 10000,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 10000,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            }
+        ],
+        "Link": "https://github.com/amazon-research/mintaka",
+        "HF Link": "https://huggingface.co/datasets/amazon/mintaka",
+        "License": "CDLA-Permissive-2.0",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "Arabic",
+            "German",
+            "Spanish",
+            "French",
+            "Italian",
+            "Portuguese",
+            "Japanese",
+            "Hindi"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "Mintaka is a multilingual, open-domain question answering dataset with 250k complex, natural questions. Questions are written by native speakers and require reasoning over multiple entities and relationships. Answers are entities or lists of entities from Wikidata.",
+        "Volume": 20000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Amazon Alexa AI"
+        ],
+        "Derived From": [
+            "Wikidata"
+        ],
+        "Paper Title": "Mintaka: A Complex, Natural, and Multilingual Dataset for End-to-End Question Answering",
+        "Paper Link": "https://arxiv.org/abs/2209.13356",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Bahaa Al-Jubouri",
+            "Haritz Puerto",
+            "Nandeeshwar J",
+            "Fedor Nikolaev",
+            "Siva Reddy",
+            "Adel Youssef"
+        ],
+        "Affiliations": [
+            "Amazon Alexa AI"
+        ],
+        "Abstract": "We introduce Mintaka, a large, complex, and multilingual open-domain question answering (QA) dataset. Mintaka contains 250k question-answer pairs, of which 160k are in English and the rest are translated and validated by native speakers into eight other languages: Arabic, German, Spanish, French, Italian, Portuguese, Japanese, and Hindi. Mintaka's questions are complex, requiring reasoning over multiple entities and relations. They are also written in a natural, conversational style. Unlike most existing QA datasets, Mintaka's answers are not spans of text in a document, but rather entities (e.g., a person, a location) or a list of entities from Wikidata. This makes Mintaka suitable for end-to-end evaluation of QA systems that are based on a knowledge base. We provide a detailed analysis of the dataset and benchmark several state-of-the-art QA systems. Our analysis shows that Mintaka is a challenging dataset that will help advance the state of the art in open-domain QA. The dataset is available at https://github.com/amazon-research/mintaka."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0461525,
+        "input_tokens": 3194,
+        "output_tokens": 1930
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.01613"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

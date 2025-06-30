@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "RuBia",
+        "Link": "https://huggingface.co/datasets/skoltech-nlp/rubia",
+        "HF Link": "https://huggingface.co/datasets/skoltech-nlp/rubia",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "news articles",
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A human-annotated dataset for gender, age, and nationality bias detection in Russian. It contains over 13,000 sentences from news articles and social media comments, split into train, validation, and test sets.",
+        "Volume": 13711.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Skolkovo Institute of Science and Technology"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuBia: A Russian Language Bias Detection Dataset",
+        "Paper Link": "https://arxiv.org/abs/2305.10881",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Nikita Sorokin",
+            "Alena Pestova",
+            "Ivan Smurov"
+        ],
+        "Affiliations": [
+            "Skolkovo Institute of Science and Technology"
+        ],
+        "Abstract": "Recent studies have shown that large language models can learn and amplify social biases from the data they were trained on. This can lead to unfair and stereotypical representations of certain social groups. To address this issue, we present RuBia, a novel human-annotated dataset for gender, age, and nationality bias detection in Russian. The dataset consists of over 13,000 sentences from news articles and social media comments. We formulate the task as a multi-label text classification problem and provide a detailed analysis of the dataset. We also benchmark several state-of-the-art models on our dataset and show that there is still room for improvement. We believe that RuBia will be a valuable resource for the research community to develop and evaluate models for bias detection in Russian. The dataset is publicly available and consists of train, validation, and test sets. We also provide the code for our experiments and the models we trained."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.044325,
+        "input_tokens": 3013,
+        "output_tokens": 1486
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.17553"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

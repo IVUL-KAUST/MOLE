@@ -1,0 +1,66 @@
+{
+    "metadata": {
+        "Name": "JTubeSpeech",
+        "Link": "",
+        "HF Link": "https://huggingface.co/datasets/jtube_speech",
+        "License": "custom",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "Corpus of Japanese speech collected from YouTube for speech recognition and speaker verification.",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "JTubeSpeech: corpus of Japanese speech collected from YouTube for speech recognition and speaker verification",
+        "Paper Link": "https://arxiv.org/abs/2112.09323",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "speech recognition",
+            "speaker identification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "This dataset provides a corpus of Japanese speech collected from YouTube, intended for use in speech recognition and speaker verification tasks."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.3684210526315789
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.00011898,
+        "input_tokens": 539,
+        "output_tokens": 299
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2112.09323"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "First French COVID19 Lockdown Twitter Dataset",
+        "Link": "https://huggingface.co/datasets/covid19-fr/first_lockdown",
+        "HF Link": "https://huggingface.co/datasets/covid19-fr/first_lockdown",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This dataset contains tweets collected during the first French COVID-19 lockdown (March 17 - May 11, 2020).",
+        "Volume": 1682880.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "covid19-fr"
+        ],
+        "Derived From": [],
+        "Paper Title": "The First French COVID19 Lockdown Twitter Dataset",
+        "Paper Link": "https://arxiv.org/abs/2010.14418",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis",
+            "offensive language detection",
+            "topic classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Antoine Dougnac",
+            "Baptiste Caramiaux",
+            "David Degrave",
+            "Nicolas Barnier",
+            "Pierre-Emmanuel Mazar\u00e9"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 de Lorraine",
+            "Loria",
+            "Inria"
+        ],
+        "Abstract": "The COVID-19 pandemic has led to an unprecedented surge in online discussions, particularly on social media platforms like Twitter. In this paper, we present the first French COVID-19 lockdown Twitter dataset, collected during the period of March 17 to May 11, 2020. This dataset comprises over 1.6 million tweets in French, offering a valuable resource for researchers interested in studying public opinion, sentiment, and the spread of information during a public health crisis. We provide a detailed description of the dataset, including its collection methodology, characteristics, and potential applications. We also discuss the ethical considerations associated with using social media data for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00065355,
+        "input_tokens": 3026,
+        "output_tokens": 541
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.05075"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
