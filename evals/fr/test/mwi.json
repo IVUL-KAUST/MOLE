@@ -14,8 +14,8 @@
         "human annotation"
     ],
     "Description": "An enhanced version of the French MEDIA Spoken Language Understanding (SLU) dataset. Originally annotated only for slots (named entities), this version adds intent classification labels using a semi-automatic tri-training methodology. The corpus consists of recorded human-machine dialogues for hotel booking.",
-    "Volume": 22848.0,
-    "Unit": "sentences",
+    "Volume": 70.0,
+    "Unit": "hours",
     "Ethical Risks": "Low",
     "Provider": [
         "Universit\u00e9 Paris-Saclay",
@@ -24,7 +24,7 @@
         "QWANT"
     ],
     "Derived From": [
-        "MEDIA-EVALDA"
+        "MEDIA"
     ],
     "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
     "Paper Link": "https://arxiv.org/pdf/2403.19727",
@@ -37,9 +37,9 @@
         "speech recognition",
         "intent classification"
     ],
-    "Venue Title": "ArXiv",
+    "Venue Title": "arXiv",
     "Venue Type": "preprint",
-    "Venue Name": "ArXiv",
+    "Venue Name": "",
     "Authors": [
         "Nad\u00e8ge Alavoine",
         "Ga\u00eblle Laperri\u00e8re",
@@ -49,10 +49,7 @@
     ],
     "Affiliations": [
         "Universit\u00e9 Paris-Saclay",
-        "CNRS",
-        "LISN",
         "Avignon Universit\u00e9",
-        "LIA",
         "QWANT"
     ],
     "Abstract": "Intent classification and slot-filling are essential tasks of Spoken Language Understanding (SLU). In most SLUsystems, those tasks are realized by independent modules. For about fifteen years, models achieving both of themjointly and exploiting their mutual enhancement have been proposed. A multilingual module using a joint modelwas envisioned to create a touristic dialogue system for a European project, HumanE-AI-Net. A combination ofmultiple datasets, including the MEDIA dataset, was suggested for training this joint model. The MEDIA SLU datasetis a French dataset distributed since 2005 by ELRA, mainly used by the French research community and free foracademic research since 2020. Unfortunately, it is annotated only in slots but not intents. An enhanced version ofMEDIA annotated with intents has been built to extend its use to more tasks and use cases. This paper presents thesemi-automatic methodology used to obtain this enhanced version. In addition, we present the first results of SLUexperiments on this enhanced dataset using joint models for intent classification and slot-filling.",

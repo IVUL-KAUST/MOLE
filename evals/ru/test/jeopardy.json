@@ -6,7 +6,7 @@
     "Year": 2024,
     "Language": "ru",
     "Domain": [
-        "web pages"
+        "TV Channels"
     ],
     "Form": "text",
     "Collection Style": [
@@ -26,11 +26,11 @@
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test Split": true,
     "Tasks": [
         "question answering"
     ],
-    "Venue Title": "ArXiv",
+    "Venue Title": "arXiv",
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
