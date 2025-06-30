@@ -1,0 +1,111 @@
+{
+    "metadata": {
+        "Name": "RELX",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 502,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 502,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 502,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 502,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 502,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            }
+        ],
+        "Link": "https://github.com/boun-tabi/RELX",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "French",
+            "German",
+            "Spanish",
+            "Turkish"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "RELX is a cross-lingual relation classification benchmark dataset with parallel sentences in English, French, German, Spanish, and Turkish.",
+        "Volume": 502.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Bo\u011fazi\u00e7i University"
+        ],
+        "Derived From": [
+            "KBP-37"
+        ],
+        "Paper Title": "The RELX Dataset and Matching the Multilingual Blanks for Cross-Lingual Relation Classification",
+        "Paper Link": "https://arxiv.org/abs/2010.09381",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "emotion classification"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Abdullatif K\u00f6ksal",
+            "Arzucan \u00d6zg\u00fcr"
+        ],
+        "Affiliations": [
+            "Bo\u011fazi\u00e7i University"
+        ],
+        "Abstract": "Relation classification is one of the key topics in information extraction, which can be used to construct knowledge bases or to provide useful information for question answering. Current approaches for relation classification are mainly focused on the English language and require lots of training data with human annotations. Creating and annotating a large amount of training data for low-resource languages is impractical and expensive. To overcome this issue, we propose two cross-lingual relation classification models: a baseline model based on Multilingual BERT and a new multilingual pretraining setup, which significantly improves the baseline with distant supervision. For evaluation, we introduce a new public benchmark dataset for cross-lingual relation classification in English, French, German, Spanish, and Turkish, called RELX. We also provide the RELX-Distant dataset, which includes hundreds of thousands of sentences with relations from Wikipedia and Wikidata collected by distant supervision for these languages. Our code and data are available at: https://github.com/boun-tabi/RELX"
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00411768,
+        "input_tokens": 13014,
+        "output_tokens": 692
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.09381"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

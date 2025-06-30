@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "BoolQ",
+        "Link": "https://goo.gl/boolq",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "BoolQ is a reading comprehension dataset of naturally occurring yes/no questions, requiring a wide range of inference abilities to solve.",
+        "Volume": 16000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google AI Language"
+        ],
+        "Derived From": [
+            "Natural Questions (NQ)"
+        ],
+        "Paper Title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+        "Paper Link": "https://goo.gl/boolq",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "natural language inference"
+        ],
+        "Venue Title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Christopher Clark",
+            "Kenton Lee",
+            "Ming-Wei Chang",
+            "Tom Kwiatkowski",
+            "Michael Collins",
+            "Kristina Toutanova"
+        ],
+        "Affiliations": [
+            "Paul G. Allen School of CSE, University of Washington",
+            "Google AI Language"
+        ],
+        "Abstract": "In this paper we study yes/no questions that are naturally occurring --- meaning they are generated in unprompted and unconstrained settings. We build a reading comprehension dataset, BoolQ, of such questions, and show that they are unexpectedly challenging. They often query for complex, non-factoid information, and require difficult entailment-like inference to solve."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00243677,
+        "input_tokens": 16907,
+        "output_tokens": 414
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1905.10044"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

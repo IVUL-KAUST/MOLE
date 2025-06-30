@@ -1,0 +1,103 @@
+{
+    "metadata": {
+        "Name": "RusCode",
+        "Link": "https://github.com/ai-forever/RusCode",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "news articles",
+            "public datasets",
+            "news articles",
+            "other",
+            "captions",
+            "social media",
+            "wikipedia",
+            "captions",
+            "public datasets",
+            "social media",
+            "other",
+            "books",
+            "captions",
+            "news articles",
+            "social media",
+            "captions",
+            "captions",
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "RusCode is a benchmark dataset for evaluating the quality of text-to-image generation containing elements of the Russian cultural code. It consists of 1250 text prompts in Russian and their translations into English, covering a wide range of topics from Russian visual culture.",
+        "Volume": 1250.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Sber AI",
+            "MIPT",
+            "ITMO University",
+            "SberDevices",
+            "AIRI"
+        ],
+        "Derived From": [],
+        "Paper Title": "RusCode: Russian Cultural Code Benchmark for Text-to-Image Generation",
+        "Paper Link": "https://arxiv.org/abs/2310.00000",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "text generation",
+            "image captioning"
+        ],
+        "Venue Title": "RusCode: Russian Cultural Code Benchmark for Text-to-Image Generation",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Viacheslav Vasilev",
+            "Julia Agafonova",
+            "Nikolai Gerasimenko",
+            "Alexander Kapitanov",
+            "Polina Mikhailova",
+            "Evelina Mironova",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "Sber AI",
+            "MIPT",
+            "ITMO University",
+            "SberDevices",
+            "AIRI"
+        ],
+        "Abstract": "Text-to-image generation models have gained popularity among users around the world. However, many of these models exhibit a strong bias toward English-speaking cultures, ignoring or misrepresenting the unique characteristics of other language groups, countries, and nationalities. The lack of cultural awareness can reduce the generation quality and lead to undesirable consequences such as unintentional insult, and the spread of prejudice. In this paper, we propose a RusCode benchmark for evaluating the quality of text-to-image generation containing elements of the Russian cultural code. Our final dataset consists of 1250 text prompts in Russian and their translations into English. The prompts cover a wide range of topics, including complex concepts from art, popular culture, folk traditions, famous people's names, natural objects, scientific achievements, etc."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00177639,
+        "input_tokens": 12183,
+        "output_tokens": 645
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2502.07455"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

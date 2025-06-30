@@ -1,0 +1,87 @@
+{
+    "metadata": {
+        "Name": "Arukikata Travelogue Dataset",
+        "Link": "https://www.nii.ac.jp/dsc/idr/arukikata/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "jp",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A Japanese text dataset with over 31 million words, comprising 4,672 domestic and 9,607 overseas travelogues.",
+        "Volume": 31563090.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "NAIST",
+            "JAIST",
+            "NICT",
+            "RIKEN",
+            "arukikata"
+        ],
+        "Derived From": [],
+        "Paper Title": "Arukikata Travelogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2305.11444",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "topic classification",
+            "information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Hiroki Ouchi",
+            "Hiroyuki Shindo",
+            "Shoko Wakamiya",
+            "Yuki Matsuda",
+            "Naoya Inoue",
+            "Shohei Higashiyama",
+            "Satoshi Nakamura",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "NAIST",
+            "JAIST",
+            "NICT",
+            "RIKEN"
+        ],
+        "Abstract": "We have constructed Arukikata Travelogue Dataset and released it free of charge for academic research. This dataset is a Japanese text dataset with a total of over 31 million words, comprising 4,672 Japanese domestic travelogues and 9,607 overseas travelogues. Before providing our dataset, there was a scarcity of widely available travelogue data for research purposes, and each researcher had to prepare their own data. This hinders the replication of existing studies and fair comparative analysis of experimental results. Our dataset enables any researchers to conduct investigation on the same data and to ensure transparency and reproducibility in research. In this paper, we describe the academic significance, characteristics, and prospects of our dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00109056,
+        "input_tokens": 9393,
+        "output_tokens": 553
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.11444"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

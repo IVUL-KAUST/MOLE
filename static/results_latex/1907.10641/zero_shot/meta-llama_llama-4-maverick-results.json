@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "WinoGrande",
+        "Link": "http://winogrande.allenai.org",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A large-scale dataset of 44k problems inspired by the original WSC design, adjusted to improve both the scale and hardness of the dataset.",
+        "Volume": 44000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Allen Institute for Artificial Intelligence",
+            "University of Washington"
+        ],
+        "Derived From": [],
+        "Paper Title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
+        "Paper Link": "https://arxiv.org/abs/1907.10641",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning"
+        ],
+        "Venue Title": "AAAI",
+        "Venue Type": "conference",
+        "Venue Name": "Association for the Advancement of Artificial Intelligence",
+        "Authors": [
+            "Keisuke Sakaguchi",
+            "Ronan Le Bras",
+            "Chandra Bhagavatula",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Allen Institute for Artificial Intelligence",
+            "University of Washington"
+        ],
+        "Abstract": "The Winograd Schema Challenge (WSC) is a benchmark for commonsense reasoning. Recent advances in neural language models have reached around 90% accuracy on variants of WSC, raising questions about whether these models have truly acquired robust commonsense capabilities or rely on spurious biases. We introduce WinoGrande, a large-scale dataset of 44k problems, inspired by the original WSC design but adjusted to improve scale and hardness. The best state-of-the-art methods achieve 59.4 - 79.1% accuracy, 15-35% below human performance. We establish new state-of-the-art results on five related benchmarks, demonstrating the effectiveness of WinoGrande for transfer learning."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00281115,
+        "input_tokens": 18189,
+        "output_tokens": 475
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1907.10641"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

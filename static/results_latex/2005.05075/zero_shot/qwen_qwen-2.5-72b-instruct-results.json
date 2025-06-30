@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "COVID19-LockdownFr",
+        "Link": "https://github.com/calciu/COVID19-LockdownFr",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A French Twitter dataset collected during the first COVID-19 lockdown in France, annotated for sentiment and emotions.",
+        "Volume": 2474086.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "IAE Amiens",
+            "Department of Management Science, Paris-Nanterre University",
+            "IAE Lille, Lille University"
+        ],
+        "Derived From": [],
+        "Paper Title": "The First French COVID19 Lockdown Twitter Dataset",
+        "Paper Link": "https://github.com/BenaventC/BarometreConfinement",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis",
+            "irony detection"
+        ],
+        "Venue Title": "The First French COVID19 Lockdown Twitter Dataset",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Sophie Balech",
+            "Christophe Benavent",
+            "Mihai Calciu"
+        ],
+        "Affiliations": [
+            "IAE Amiens, University of Picardie, France",
+            "Department of Management Science, Paris-Nanterre University, France",
+            "IAE Lille, Lille University, France"
+        ],
+        "Abstract": "In this paper, we present a mainly French coronavirus Twitter dataset that we have been continuously collecting since lockdown restrictions have been enacted in France (in March 17, 2020). We offer our datasets and sentiment analysis annotations to the research community at https://github.com/calciu/COVID19-LockdownFr. They have been obtained using high performance computing (HPC) capabilities of our university's datacenter. We think that our contribution can facilitate analysis of online conversation dynamics reflecting people sentiments when facing severe home confinement restrictions determined by the outbreak of this world wide epidemic."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00107061,
+        "input_tokens": 6851,
+        "output_tokens": 486
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.05075"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

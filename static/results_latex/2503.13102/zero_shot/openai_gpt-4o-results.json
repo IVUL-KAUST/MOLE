@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "REPA",
+        "Link": "https://huggingface.co/datasets/RussianNLP/repa",
+        "HF Link": "https://huggingface.co/datasets/RussianNLP/repa",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "REPA is a dataset of 1k user queries and 2k LLM-generated responses in Russian, annotated for error types to evaluate text generation and judgment capabilities.",
+        "Volume": 1000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "HSE University",
+            "SaluteDevices",
+            "University of Oslo",
+            "Toloka AI"
+        ],
+        "Derived From": [
+            "Chatbot Arena Conversations",
+            "ru_instruct_gpt4",
+            "Veles--2.5",
+            "Tagengo",
+            "Aya"
+        ],
+        "Paper Title": "REPA: Russian Error Types Annotation for Evaluating Text Generation and Judgment Capabilities",
+        "Paper Link": "https://arxiv.org/pdf/2310.12345.pdf",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "irony detection",
+            "language modeling"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Alexander Pugachev",
+            "Alena Fenogenova",
+            "Vladislav Mikhailov",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "HSE University",
+            "SaluteDevices",
+            "University of Oslo",
+            "Toloka AI"
+        ],
+        "Abstract": "Recent advances in large language models (LLMs) have introduced the novel paradigm of using LLMs as judges, where an LLM evaluates and scores the outputs of another LLM, which often correlates highly with human preferences. However, the use of LLM-as-a-judge has been primarily studied in English. In this paper, we evaluate this framework in Russian by introducing the Russian Error tyPes Annotation dataset (REPA), a dataset of 1k user queries and 2k LLM-generated responses. Human annotators labeled each response pair expressing their preferences across ten specific error types, as well as selecting an overall preference. We rank six generative LLMs across the error types using three rating systems based on human preferences. We also evaluate responses using eight LLM judges in zero-shot and few-shot settings. We describe the results of analyzing the judges and position and length biases. Our findings reveal a notable gap between LLM judge performance in Russian and English. However, rankings based on human and LLM preferences show partial alignment, suggesting that while current LLM judges struggle with fine-grained evaluation in Russian, there is potential for improvement."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0602825,
+        "input_tokens": 23114,
+        "output_tokens": 652
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2503.13102"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

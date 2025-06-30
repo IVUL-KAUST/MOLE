@@ -1,0 +1,137 @@
+{
+    "metadata": {
+        "Name": "MEE",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 13000,
+                "Unit": "segments",
+                "Language": "English"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 3268,
+                "Unit": "segments",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 4479,
+                "Unit": "segments",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 4480,
+                "Unit": "segments",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 1499,
+                "Unit": "segments",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "https://upwork.com",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "Portuguese",
+            "Spanish",
+            "Polish",
+            "Turkish",
+            "Hindi",
+            "Japanese",
+            "Korean"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "MEE is a novel multilingual event extraction dataset that provides annotation for more than 50K event mentions in 8 typologically different languages. It comprehensively annotates data for entity mentions, event triggers, and event arguments.",
+        "Volume": 13000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Paper Link": "https://upwork.com",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "irony detection",
+            "irony detection",
+            "relation extraction"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2022",
+        "Authors": [
+            "Amir Pouran Ben Veyseh",
+            "Javid Ebrahimi",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, University of Oregon, Eugene, OR, USA",
+            "Adobe Research, Seattle, WA, USA"
+        ],
+        "Abstract": "Event Extraction (EE) is one of the fundamental tasks in Information Extraction (IE) that aims to recognize event mentions and their arguments (i.e., participants) from text. Due to its importance, extensive methods and resources have been developed for Event Extraction. However, one limitation of current research for EE involves the under-exploration for non-English languages in which the lack of high-quality multilingual EE datasets for model training and evaluation has been the main hindrance. To address this limitation, we propose a novel Multilingual Event Extraction dataset (MEE) that provides annotation for more than 50K event mentions in 8 typologically different languages. MEE comprehensively annotates data for entity mentions, event triggers and event arguments. We conduct extensive experiments on the proposed dataset to reveal challenges and opportunities for multilingual EE."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0455025,
+        "input_tokens": 14730,
+        "output_tokens": 868
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05955"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,116 @@
+{
+    "metadata": {
+        "Name": "MLSUM",
+        "Subsets": [
+            {
+                "Name": "French",
+                "Volume": 424763,
+                "Unit": "documents",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 242982,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 290645,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 27063,
+                "Unit": "documents",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 273617,
+                "Unit": "documents",
+                "Language": "Turkish"
+            }
+        ],
+        "Link": "https://github.com/recitalAI/MLSUM",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "French",
+            "German",
+            "Spanish",
+            "Russian",
+            "Turkish"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "MLSUM is the first large-scale MultiLingual SUMmarization dataset, containing over 1.5M article/summary pairs in five languages: French, German, Spanish, Russian, and Turkish.",
+        "Volume": 424763.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "CNRS",
+            "Sorbonne Universit\u00e9",
+            "reciTAL"
+        ],
+        "Derived From": [],
+        "Paper Title": "MLSUM: The Multilingual Summarization Corpus",
+        "Paper Link": "https://arxiv.org/abs/2004.14900",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Thomas Scialom",
+            "Paul-Alexis Dray",
+            "Sylvain Lamprier",
+            "Benjamin Piwowarski",
+            "Jacopo Staiano"
+        ],
+        "Affiliations": [
+            "CNRS",
+            "Sorbonne Universit\u00e9",
+            "reciTAL"
+        ],
+        "Abstract": "We present MLSUM, the first large-scale MultiLingual SUMmarization dataset. Obtained from online newspapers, it contains 1.5M+ article/summary pairs in five different languages -- namely, French, German, Spanish, Russian, Turkish. Together with English newspapers from the popular CNN/Daily mail dataset, the collected data form a large scale multilingual dataset which can enable new research directions for the text summarization community. We report cross-lingual comparative analyses based on state-of-the-art systems. These highlight existing biases which motivate the use of a multi-lingual dataset."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00529808,
+        "input_tokens": 16264,
+        "output_tokens": 646
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14900"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "GPQA",
+        "Link": "https://github.com/idavidrein/gpqa/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "books",
+            "news articles",
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry, designed to be extremely difficult for non-experts and AI systems.",
+        "Volume": 448.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "New York University"
+        ],
+        "Derived From": [],
+        "Paper Title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+        "Paper Link": "https://arxiv.org/abs/your_paper_link_here",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "language identification"
+        ],
+        "Venue Title": "NeurIPS 2022",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "David Rein",
+            "Betty Li Hou",
+            "Asa Cooper Stickland",
+            "Jackson Petty",
+            "Richard Yuanzhe Pang",
+            "Julien Dirani",
+            "Julian Michael",
+            "Samuel R. Bowman"
+        ],
+        "Affiliations": [
+            "New York University",
+            "Cohere",
+            "Anthropic, PBC"
+        ],
+        "Abstract": "We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry. We ensure that the questions are high-quality and extremely difficult: experts who have or are pursuing PhDs in the corresponding domains reach 65% accuracy (74% when discounting clear mistakes the experts identified in retrospect), while highly skilled non-expert validators only reach 34% accuracy, despite spending on average over 30 minutes with unrestricted access to the web (i.e., the questions are ``Google-proof''). The questions are also difficult for state-of-the-art AI systems, with our strongest GPT-4--based baseline achieving 39% accuracy."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00383925,
+        "input_tokens": 27349,
+        "output_tokens": 500
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2311.12022"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

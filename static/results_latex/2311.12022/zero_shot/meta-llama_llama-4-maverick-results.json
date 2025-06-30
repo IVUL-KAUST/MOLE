@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "GPQA",
+        "Link": "https://github.com/idavidrein/gpqa/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A challenging dataset of multiple-choice questions written by domain experts in biology, physics, and chemistry.",
+        "Volume": 448.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "New York University",
+            "Cohere",
+            "Anthropic"
+        ],
+        "Derived From": [],
+        "Paper Title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2311.12022",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "David Rein",
+            "Betty Li Hou",
+            "Asa Cooper Stickland",
+            "Jackson Petty",
+            "Richard Yuanzhe Pang",
+            "Julien Dirani",
+            "Julian Michael",
+            "Samuel R. Bowman"
+        ],
+        "Affiliations": [
+            "New York University",
+            "Cohere",
+            "Anthropic"
+        ],
+        "Abstract": "We present GPQA, a challenging dataset of multiple-choice questions written by domain experts in biology, physics, and chemistry. We ensure that the questions are high-quality and extremely difficult, with 74% estimated objectivity on the basis of expert assessment, and 34% accuracy by highly skilled, resourced, and motivated non-experts who have access to internet resources and spend over 30 minutes on average answering each question."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0052762,
+        "input_tokens": 27352,
+        "output_tokens": 398
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2311.12022"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

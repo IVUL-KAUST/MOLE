@@ -1,0 +1,139 @@
+{
+    "metadata": {
+        "Name": "MEE",
+        "Subsets": [
+            {
+                "Name": "MEE-English",
+                "Volume": 13000,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "MEE-Spanish",
+                "Volume": 3268,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "MEE-Portuguese",
+                "Volume": 1500,
+                "Unit": "documents",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "MEE-Polish",
+                "Volume": 4479,
+                "Unit": "documents",
+                "Language": "Polish"
+            },
+            {
+                "Name": "MEE-Turkish",
+                "Volume": 4480,
+                "Unit": "documents",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "MEE-Hindi",
+                "Volume": 1499,
+                "Unit": "documents",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "MEE-Japanese",
+                "Volume": 1500,
+                "Unit": "documents",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "MEE-Korean",
+                "Volume": 1500,
+                "Unit": "documents",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "https://github.com/amir-pouran/MEE",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "Polish",
+            "Turkish",
+            "Hindi",
+            "Japanese",
+            "Korean"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale Multilingual Event Extraction (MEE) dataset covering 8 languages (English, Spanish, Portuguese, Polish, Turkish, Hindi, Korean, Japanese). It contains over 50K event mentions from Wikipedia articles, comprehensively annotated for entity mentions, event triggers, and event arguments, following the ACE 2005 schema.",
+        "Volume": 50011.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Paper Link": "https://aclanthology.org/2022.emnlp-main.56.pdf",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "relation extraction",
+            "topic classification"
+        ],
+        "Venue Title": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2022",
+        "Authors": [
+            "Amir Pouran Ben Veyseh",
+            "Javid Ebrahimi",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, University of Oregon, Eugene, OR, USA",
+            "Adobe Research, Seattle, WA, USA"
+        ],
+        "Abstract": "Event Extraction (EE) is one of the fundamental tasks in Information Extraction (IE) that aims to recognize event mentions and their arguments (i.e., participants) from text. Due to its importance, extensive methods and resources have been developed for Event Extraction. However, one limitation of current research for EE involves the under-exploration for non-English languages in which the lack of high-quality multilingual EE datasets for model training and evaluation has been the main hindrance. To address this limitation, we propose a novel Multilingual Event Extraction dataset (MEE) that provides annotation for more than 50K event mentions in 8 typologically different languages. MEE comprehensively annotates data for entity mentions, event triggers and event arguments. We conduct extensive experiments on the proposed dataset to reveal challenges and opportunities for multilingual EE."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0768875,
+        "input_tokens": 14730,
+        "output_tokens": 2200
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05955"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

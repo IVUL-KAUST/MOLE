@@ -1,0 +1,136 @@
+{
+    "metadata": {
+        "Name": "MEE",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 13000,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 3268,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 1500,
+                "Unit": "documents",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 4479,
+                "Unit": "documents",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 4480,
+                "Unit": "documents",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 1499,
+                "Unit": "documents",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 1500,
+                "Unit": "documents",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 1500,
+                "Unit": "documents",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "Polish",
+            "Turkish",
+            "Hindi",
+            "Japanese",
+            "Korean"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A large-scale multilingual event extraction dataset covering 8 languages with over 50K event mentions, annotated for entity mentions, event triggers and arguments",
+        "Volume": 31226.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Paper Link": "https://arxiv.org/abs/2211.05955",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "irony detection",
+            "named entity recognition",
+            "relation extraction"
+        ],
+        "Venue Title": "EMNLP2022",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Amir Pouran Ben Veyseh",
+            "Javid Ebrahimi",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, University of Oregon",
+            "Adobe Research"
+        ],
+        "Abstract": "Event Extraction (EE) is one of the fundamental tasks in Information Extraction (IE) that aims to recognize event mentions and their arguments (i.e., participants) from text. Due to its importance, extensive methods and resources have been developed for Event Extraction. However, one limitation of current research for EE involves the under-exploration for non-English languages in which the lack of high-quality multilingual EE datasets for model training and evaluation has been the main hindrance. To address this limitation, we propose a novel Multilingual Event Extraction dataset (MEE) that provides annotation for more than 50K event mentions in 8 typologically different languages. MEE comprehensively annotates data for entity mentions, event triggers and event arguments."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8421052631578947
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.062499,
+        "input_tokens": 14730,
+        "output_tokens": 712
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05955"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

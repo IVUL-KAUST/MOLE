@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "MEDIA 2022",
+        "Link": "https://github.com/Ala-Na/media_benchmark_intent_annotations",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "Enhanced version of the MEDIA benchmark dataset with intent annotations for SLU tasks",
+        "Volume": 1258.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Paris-Saclay",
+            "CNRS",
+            "Avignon Universit\u00e9",
+            "LISN",
+            "LIA"
+        ],
+        "Derived From": [
+            "MEDIA"
+        ],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://hal.science/hal-04098651",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "intent classification",
+            "semantic parsing"
+        ],
+        "Venue Title": "LREC-COLING 2024",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Nad\u00e8ge Alavoine",
+            "Ga\u00eblle Laperri\u00e8re",
+            "Christophe Servan",
+            "Sahar Ghannay",
+            "Sophie Rosset"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris-Saclay, CNRS, LISN",
+            "Avignon Universit\u00e9, LIA",
+            "QWANT"
+        ],
+        "Abstract": "This paper presents an enhanced version of the MEDIA dataset annotated with intents using a semi-automatic approach. The MEDIA SLU dataset is a French dataset distributed since 2005 by ELRA mainly used by the French research community and free for academic research since 2020. Unfortunately it is annotated only in slots but not intents. An enhanced version of MEDIA annotated with intents has been built to extend its use to more tasks and use cases. This paper presents the semi-automatic methodology used to obtain this enhanced version. In addition we present the first results of SLU experiments on this enhanced dataset using joint models for intent classification and slot-filling."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00483,
+        "input_tokens": 25169,
+        "output_tokens": 488
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

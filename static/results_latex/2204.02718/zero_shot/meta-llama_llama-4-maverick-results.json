@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "Japanese Fake News Dataset",
+        "Link": "https://hkefka385.github.io/dataset/fakenews-japanese/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "crawling"
+        ],
+        "Description": "A Japanese fake news dataset with fine-grained labeling based on detailed investigations of existing fake news datasets",
+        "Volume": 471446.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "SANKEN Osaka University",
+            "NARA Institute of Science and Technology"
+        ],
+        "Derived From": [],
+        "Paper Title": "Annotation-Scheme Reconstruction for Fake News and Japanese Fake News Dataset",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.47.pdf",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fake news detection",
+            "sentiment analysis"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Taichi Murayama",
+            "Shohei Hisada",
+            "Makoto Uehara",
+            "Shoko Wakamiya",
+            "Eiji Aramaki"
+        ],
+        "Affiliations": [
+            "SANKEN Osaka University",
+            "NARA Institute of Science and Technology"
+        ],
+        "Abstract": "This paper proposes a novel annotation scheme to capture various aspects of fake news and constructs the first Japanese fake news dataset. The annotation scheme includes fine-grained labeling based on detailed investigations of existing fake news datasets."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00227055,
+        "input_tokens": 14137,
+        "output_tokens": 409
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.02718"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

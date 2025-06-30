@@ -1,0 +1,136 @@
+{
+    "metadata": {
+        "Name": "MINION",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 13000,
+                "Unit": "segments",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 3268,
+                "Unit": "segments",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 4479,
+                "Unit": "segments",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 4480,
+                "Unit": "segments",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 1499,
+                "Unit": "segments",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "https://github.com/your-repo/MINION",
+        "HF Link": "https://huggingface.co/datasets/MINION",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "Polish",
+            "Turkish",
+            "Hindi",
+            "Japanese",
+            "Korean"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "MINION is a large-scale and diverse dataset for multilingual event detection, covering 8 languages and providing consistent event annotation.",
+        "Volume": 31226.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Derived From": [
+            "ACE 2005"
+        ],
+        "Paper Title": "MINION: a Large-Scale and Diverse Dataset for Multilingual Event Detection",
+        "Paper Link": "https://arxiv.org/abs/2105.00000",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "irony detection"
+        ],
+        "Venue Title": "MINION: a Large-Scale and Diverse Dataset for Multilingual Event Detection",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Amir Pouran Ben Veyseh",
+            "Minh Van Nguyen",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+        ],
+        "Affiliations": [
+            "Dept. of Computer and Information Science, University of Oregon, Eugene, OR, USA",
+            "Adobe Research, Seattle, WA, USA"
+        ],
+        "Abstract": "Event Detection (ED) is the task of identifying and classifying trigger words of event mentions in text. Despite considerable research efforts in recent years for English text, the task of ED in other languages has been significantly less explored. Switching to non-English languages, important research questions for ED include how well existing ED models perform on different languages, how challenging ED is in other languages, and how well ED knowledge and annotation can be transferred across languages. To answer those questions, it is crucial to obtain multilingual ED datasets that provide consistent event annotation for multiple languages. There exist some multilingual ED datasets; however, they tend to cover a handful of languages and mainly focus on popular ones. Many languages are not covered in existing multilingual ED datasets. In addition, the current datasets are often small and not accessible to the public. To overcome those shortcomings, we introduce a new large-scale multilingual dataset for ED (called MINION) that consistently annotates events for 8 different languages; 5 of them have not been supported by existing multilingual datasets. We also perform extensive experiments and analysis to demonstrate the challenges and transferability of ED across languages in MINION that in all call for more research effort in this area."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00262917,
+        "input_tokens": 17568,
+        "output_tokens": 920
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05958"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

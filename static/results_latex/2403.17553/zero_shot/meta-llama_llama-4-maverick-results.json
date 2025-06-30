@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "RuBia",
+        "Link": "http://github.com/vergrig/RuBia-Dataset",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "social media",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A Russian language bias detection dataset",
+        "Volume": 1989.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Queen's University",
+            "Higher School of Economics",
+            "Wildberries",
+            "Linguistic Convergence Laboratory"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuBia: A Russian Language Bias Detection Dataset",
+        "Paper Link": "https://arxiv.org/abs/2404.12208",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "irony detection",
+            "language modeling"
+        ],
+        "Venue Title": "LREC-COLING 2024",
+        "Venue Type": "conference",
+        "Venue Name": "LREC-COLING",
+        "Authors": [
+            "Veronika Grigoreva",
+            "Anastasiia Ivanova",
+            "Ilseyar Alimova",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "Queen's University",
+            "Higher School of Economics",
+            "Wildberries",
+            "Linguistic Convergence Laboratory",
+            "Toloka AI"
+        ],
+        "Abstract": "This paper presents RuBia, a novel dataset for bias detection in Russian language models. The dataset consists of 1989 sentence pairs, each pair consisting of a pro-trope sentence and an anti-trope sentence. The dataset is divided into four domains: gender, nationality, socio-economic status, and diverse. The paper also evaluates the bias of nine widely used language models using the RuBia dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00255285,
+        "input_tokens": 15894,
+        "output_tokens": 439
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.17553"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "FREDSum",
+        "Link": "https://github.com/linto-ai/FREDSum",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A dataset of French political debates with manually transcribed and annotated political debates covering various topics and perspectives for dialogue summarization",
+        "Volume": 142.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Linagora",
+            "\u00c9cole Polytechnique",
+            "Grenoble Ecole de Management"
+        ],
+        "Derived From": [],
+        "Paper Title": "FREDSum: A Dialogue Summarization Corpus for French Political Debates",
+        "Paper Link": "https://arxiv.org/abs/2312.04843",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "EMNLP2023",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Virgile Rennard",
+            "Guokan Shang",
+            "Damien Grari",
+            "Julie Hunter",
+            "Michalis Vazirgiannis"
+        ],
+        "Affiliations": [
+            "Linagora, France",
+            "\u00c9cole Polytechnique, France",
+            "Grenoble Ecole de Management, France"
+        ],
+        "Abstract": "Recent advances in deep learning, and especially the invention of encoder-decoder architectures, has significantly improved the performance of abstractive summarization systems. The majority of research has focused on written documents, however, neglecting the problem of multi-party dialogue summarization. In this paper, we present a dataset of French political debates for the purpose of enhancing resources for multi-lingual dialogue summarization. Our dataset consists of manually transcribed and annotated political debates, covering a range of topics and perspectives. We highlight the importance of high quality transcription and annotations for training accurate and effective dialogue summarization models, and emphasize the need for multilingual resources to support dialogue summarization in non-English languages. We also provide baseline experiments using state-of-the-art methods, and encourage further research in this area to advance the field of dialogue summarization. Our dataset will be made publicly available for use by the research community."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.063714,
+        "input_tokens": 15922,
+        "output_tokens": 526
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2312.04843"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

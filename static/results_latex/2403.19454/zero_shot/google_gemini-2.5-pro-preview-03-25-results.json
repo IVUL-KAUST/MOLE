@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "JDocQA",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "web pages",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A large-scale Japanese document question answering (JDocQA) dataset, comprising 5,504 documents in PDF format and 11,600 annotated question-and-answer instances. The dataset is designed to require both visual and textual information to answer questions. It incorporates multiple categories of questions, including 'unanswerable' ones, to support the development of robust generative models and help mitigate hallucination.",
+        "Volume": 11600.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Nara Institute of Science and Technology",
+            "RIKEN",
+            "ATR"
+        ],
+        "Derived From": [],
+        "Paper Title": "JDocQA: Japanese Document Question Answering Dataset for Generative Language Models",
+        "Paper Link": "https://arxiv.org/abs/2310.13179",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "text generation"
+        ],
+        "Venue Title": "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+        "Venue Type": "conference",
+        "Venue Name": "LREC-COLING 2024",
+        "Authors": [
+            "Eri Onami",
+            "Shuhei Kurita",
+            "Taiki Miyanishi",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "Nara Institute of Science and Technology",
+            "RIKEN",
+            "ATR"
+        ],
+        "Abstract": "Document question answering is a task of question answering on given documents such as reports, slides, pamphlets, and websites, and it is a truly demanding task as paper and electronic forms of documents are so common in our society. This is known as a quite challenging task because it requires not only text understanding but also understanding of figures and tables, and hence visual question answering (VQA) methods are often examined in addition to textual approaches. We introduce Japanese Document Question Answering (JDocQA), a large-scale document-based QA dataset, essentially requiring both visual and textual information to answer questions, which comprises 5,504 documents in PDF format and annotated 11,600 question-and-answer instances in Japanese. Each QA instance includes references to the document pages and bounding boxes for the answer clues. We incorporate multiple categories of questions and unanswerable questions from the document for realistic question-answering applications. We empirically evaluate the effectiveness of our dataset with text-based large language models (LLMs) and multimodal models. Incorporating unanswerable questions in finetuning may contribute to harnessing the so-called hallucination generation."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0747575,
+        "input_tokens": 17057,
+        "output_tokens": 2039
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19454"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

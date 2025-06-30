@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "Name": "RELX",
+        "Subsets": [
+            {
+                "Name": "RELX-English",
+                "Volume": 502,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "RELX-French",
+                "Volume": 502,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "RELX-German",
+                "Volume": 502,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "RELX-Spanish",
+                "Volume": 502,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "RELX-Turkish",
+                "Volume": 502,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            }
+        ],
+        "Link": "https://github.com/boun-tabi/RELX",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "French",
+            "German",
+            "Spanish",
+            "Turkish"
+        ],
+        "Domain": [
+            "wikipedia",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A cross-lingual relation classification benchmark with 502 parallel sentences in English, French, German, Spanish, and Turkish.",
+        "Volume": 502.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Bo\u011fazi\u00e7i University"
+        ],
+        "Derived From": [
+            "KBP-37"
+        ],
+        "Paper Title": "The RELX Dataset and Matching the Multilingual Blanks for Cross-Lingual Relation Classification",
+        "Paper Link": "https://github.com/boun-tabi/RELX",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "emotion classification"
+        ],
+        "Venue Title": "EMNLP 2020",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Abdullatif K\u00f6k sal",
+            "Arzucan \u00d6zg\u00fcr"
+        ],
+        "Affiliations": [
+            "Department of Computer Engineering, Bo\u011fazi\u00e7i University"
+        ],
+        "Abstract": "Relation classification is one of the key topics in information extraction, which can be used to construct knowledge bases or to provide useful information for question answering. Current approaches for relation classification are mainly focused on the English language and require lots of training data with human annotations. Creating and annotating a large amount of training data for low-resource languages is impractical and expensive. To overcome this issue, we propose two cross-lingual relation classification models: a baseline model based on Multilingual BERT and a new multilingual pretraining setup, which significantly improves the baseline with distant supervision. For evaluation, we introduce a new public benchmark dataset for cross-lingual relation classification in English, French, German, Spanish, and Turkish, called RELX. We also provide the RELX-Distant dataset, which includes hundreds of thousands of sentences with relations from Wikipedia and Wikidata collected by distant supervision for these languages."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00201692,
+        "input_tokens": 13011,
+        "output_tokens": 715
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.09381"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

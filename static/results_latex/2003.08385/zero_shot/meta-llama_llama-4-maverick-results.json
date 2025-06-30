@@ -1,0 +1,99 @@
+{
+    "metadata": {
+        "Name": "Xstance",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 33850,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 11790,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 1173,
+                "Unit": "sentences",
+                "Language": "Italian"
+            }
+        ],
+        "Link": "http://doi.org/10.5281/zenodo.3831317",
+        "HF Link": "",
+        "License": "CC BY-NC 4.0",
+        "Year": 2020,
+        "Language": [
+            "German",
+            "French",
+            "Italian"
+        ],
+        "Domain": [
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A multilingual dataset for stance detection, containing comments from Swiss election candidates on various political issues.",
+        "Volume": 59915.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Zurich",
+            "University of Edinburgh"
+        ],
+        "Derived From": [
+            "Smartvote"
+        ],
+        "Paper Title": "Xstance: A Multilingual Multi-Target Dataset for Stance Detection",
+        "Paper Link": "https://aclanthology.org/2020.swisstext-1.6.pdf",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "stance detection"
+        ],
+        "Venue Title": "Swiss Text",
+        "Venue Type": "workshop",
+        "Venue Name": "Swiss Text",
+        "Authors": [
+            "Jannis Vamvas",
+            "Rico Sennrich"
+        ],
+        "Affiliations": [
+            "University of Zurich",
+            "University of Edinburgh"
+        ],
+        "Abstract": "This paper presents Xstance, a large-scale multilingual dataset for stance detection, derived from comments by Swiss election candidates. The dataset includes German, French, and Italian text and is used to train a single model for stance detection across multiple political issues."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0021795,
+        "input_tokens": 13222,
+        "output_tokens": 486
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2003.08385"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

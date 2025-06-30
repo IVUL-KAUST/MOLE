@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "FrenchToxicityPrompts",
+        "Link": "https://download.europe.naverlabs.com/FrenchToxicityPrompts/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A dataset of 50K naturally occurring French prompts and their continuations, annotated with toxicity scores.",
+        "Volume": 50000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "NAVER LABS Europe"
+        ],
+        "Derived From": [
+            "L\u00e9lu dataset"
+        ],
+        "Paper Title": "FrenchToxicityPrompts: a Large Benchmark for Evaluating and Mitigating Toxicity in French Texts",
+        "Paper Link": "https://arxiv.org/abs/2406.17566",
+        "Tokenized": false,
+        "Host": "CAMeL Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "irony detection",
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Caroline Brun",
+            "Vassilina Nikoulina"
+        ],
+        "Affiliations": [
+            "NAVER LABS Europe"
+        ],
+        "Abstract": "Large language models (LLMs) are prone to generating bias, toxic or harmful language. This paper creates and releases FrenchToxicityPrompts, a dataset of 50K naturally occurring French prompts and their continuations, annotated with toxicity scores from a widely used toxicity classifier. The dataset is used to evaluate 14 different models from four prevalent open-sourced families of LLMs against the dataset to assess their potential toxicity across various dimensions."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.002364,
+        "input_tokens": 11801,
+        "output_tokens": 397
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.17566"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

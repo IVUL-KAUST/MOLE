@@ -1,0 +1,105 @@
+{
+    "metadata": {
+        "Name": "DiS-ReX",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 532499,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 409087,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 456418,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "German",
+                "Volume": 438315,
+                "Unit": "sentences",
+                "Language": "German"
+            }
+        ],
+        "Link": "https://github.com/dair-iitd/DiS-ReX",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "French",
+            "Spanish",
+            "German"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A multilingual dataset for distantly supervised relation extraction over 4 languages: English, German, Spanish, French.",
+        "Volume": 1.5,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Indian Institute of Technology"
+        ],
+        "Derived From": [
+            "DBpedia"
+        ],
+        "Paper Title": "DiS-ReX: A Multilingual Dataset for Distantly Supervised Relation Extraction",
+        "Paper Link": "https://arxiv.org/abs/2104.08655",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Abhyuday Bhartiya",
+            "Kartikeya Badola",
+            "Mausam"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology"
+        ],
+        "Abstract": "Distant supervision (DS) is a well established technique for creating large-scale datasets for relation extraction (RE) without using human annotations. However, research in DS-RE has been mostly limited to the English language. Constraining RE to a single language inhibits utilization of large amounts of data in other languages which could allow extraction of more diverse facts. Very recently, a dataset for multilingual DS-RE has been released. However, our analysis reveals that the proposed dataset exhibits unrealistic characteristics such as 1) lack of sentences that do not express any relation, and 2) all sentences for a given entity pair expressing exactly one relation. We show that these characteristics lead to a gross overestimation of the model performance. In response, we propose a new dataset, DiS-ReX, which alleviates these issues."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8421052631578947
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0021333,
+        "input_tokens": 12549,
+        "output_tokens": 613
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2104.08655"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
