@@ -15,7 +15,7 @@ def print_table(results, headers, title="", format=False):
                     reverse=False,
                 ),
                 headers=headers,
-                tablefmt="grid",
+                tablefmt="github",
                 floatfmt=".2f",
             )
         )
@@ -53,7 +53,7 @@ def print_table(results, headers, title="", format=False):
                 reverse=False,
             ),
             headers=headers,
-            tablefmt="grid",
-            floatfmt=".2f",
+            tablefmt="github",
+            floatfmt=".2f"
         )
     )
