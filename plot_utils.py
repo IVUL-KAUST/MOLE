@@ -3,11 +3,13 @@ from tabulate import tabulate  # type: ignore
 def remove_average(results, headers):
     # if both Weighted Average and Average are in the headers, remove the Average
     if "Weighted Average" in headers and "Average" in headers:
-        headers.remove("Average")
+        new_results = []
         for row in results:
-            row = row[:-2]+[row[-1]]
-        headers = headers[:-1] + ["Average"]
-    return results, headers
+            new_results.append(row[:-2]+[row[-1]])
+        headers = headers[:-2] + ["Average"]
+        return new_results, headers
+    else:
+        return results, headers
 
 def print_table(results, headers, title="", format=False):
     results, headers = remove_average(results, headers)
