@@ -1,0 +1,181 @@
+{
+    "metadata": {
+        "Name": "seahorse",
+        "Subsets": [
+            {
+                "Name": "mlsum",
+                "Volume": 7506,
+                "Unit": "summaries",
+                "Language": "German"
+            },
+            {
+                "Name": "wikilingua",
+                "Volume": 7085,
+                "Unit": "summaries",
+                "Language": "German"
+            },
+            {
+                "Name": "xsum",
+                "Volume": 6651,
+                "Unit": "summaries",
+                "Language": "English"
+            },
+            {
+                "Name": "xlsum",
+                "Volume": 7884,
+                "Unit": "summaries",
+                "Language": "English"
+            },
+            {
+                "Name": "wikilingua",
+                "Volume": 7804,
+                "Unit": "summaries",
+                "Language": "English"
+            },
+            {
+                "Name": "xlsum",
+                "Volume": 4890,
+                "Unit": "summaries",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "mlsum",
+                "Volume": 4857,
+                "Unit": "summaries",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "wikilingua",
+                "Volume": 5002,
+                "Unit": "summaries",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "xlsum",
+                "Volume": 7254,
+                "Unit": "summaries",
+                "Language": "Russian"
+            },
+            {
+                "Name": "wikilingua",
+                "Volume": 7288,
+                "Unit": "summaries",
+                "Language": "Russian"
+            },
+            {
+                "Name": "xlsum",
+                "Volume": 10627,
+                "Unit": "summaries",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "wikilingua",
+                "Volume": 4791,
+                "Unit": "summaries",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "xlsum",
+                "Volume": 7522,
+                "Unit": "summaries",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "wikilingua",
+                "Volume": 7484,
+                "Unit": "summaries",
+                "Language": "Vietnamese"
+            }
+        ],
+        "Link": "https://goo.gle/seahorse",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "German",
+            "English",
+            "Spanish",
+            "Russian",
+            "Turkish",
+            "Vietnamese"
+        ],
+        "Domain": [
+            "news articles",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "seahorse is a dataset for multilingual, multifaceted summarization evaluation. It consists of 96K summaries with human ratings along 6 dimensions of text quality: comprehensibility, repetition, grammar, attribution, main ideas, and conciseness. seahorse covers 6 languages, 9 systems (including the reference text), and 4 summarization datasets.",
+        "Volume": 96645.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google DeepMind",
+            "Google Research"
+        ],
+        "Derived From": [
+            "XSum",
+            "XL-Sum",
+            "MLSum",
+            "WikiLingua"
+        ],
+        "Paper Title": "seahorse: A Multilingual, Multifaceted Dataset for Summarization Evaluation",
+        "Paper Link": "https://arxiv.org/pdf/2310.12345.pdf",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization",
+            "embedding evaluation"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Elizabeth Clark",
+            "Shruti Rijhwani",
+            "Sebastian Gehrmann",
+            "Joshua Maynez",
+            "Roee Aharoni",
+            "Vitaly Nikolaev",
+            "Thibault Sellam",
+            "Aditya Siddhant",
+            "Dipanjan Das",
+            "Ankur P. Parikh"
+        ],
+        "Affiliations": [
+            "Google DeepMind",
+            "Google Research"
+        ],
+        "Abstract": "Reliable automatic evaluation of summarization systems is challenging due to the multifaceted and subjective nature of the task. This is especially the case for languages other than English, where human evaluations are scarce. In this work, we introduce seahorse, a dataset for multilingual, multifaceted summarization evaluation. seahorse consists of 96K summaries with human ratings along 6 dimensions of text quality: comprehensibility, repetition, grammar, attribution, main ideas, and conciseness. seahorse covers 6 languages, 9 systems (including the reference text), and 4 summarization datasets. As a result of its size and scope, seahorse can serve both as a benchmark to evaluate learnt metrics, as well as a large-scale resource for training such metrics. We show that metrics trained with seahorse achieve strong performance on two out-of-domain meta-evaluation benchmarks: TRUE and mFACE. We make the seahorse dataset and metrics publicly available for future research on multilingual and multifaceted summarization evaluation."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.068895,
+        "input_tokens": 24407,
+        "output_tokens": 1220
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.13194"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

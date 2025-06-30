@@ -1,0 +1,90 @@
+{
+    "metadata": {
+        "Name": "KaoKore",
+        "Link": "https://github.com/rois-codh/kaokore",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "jp",
+        "Domain": [
+            "books",
+            "wikipedia",
+            "other"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A dataset of faces extracted from pre-modern Japanese artwork",
+        "Volume": 5552.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "ROIS-DS Center for Open Data in the Humanities",
+            "Google Brain",
+            "University of Cambridge",
+            "MILA"
+        ],
+        "Derived From": [
+            "Collection of Facial Expressions"
+        ],
+        "Paper Title": "KaoKore: A Pre-modern Japanese Art Facial Expression Dataset",
+        "Paper Link": "https://arxiv.org/abs/2002.08595",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "meter classification",
+            "text generation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Yingtao Tian",
+            "Chikahiko Suzuki",
+            "Tarin Clanuwat",
+            "Mikel Bober-Irizar",
+            "Alex Lamb",
+            "Asanobu Kitamoto"
+        ],
+        "Affiliations": [
+            "Google Brain",
+            "ROIS-DS Center for Open Data in the Humanities",
+            "NII",
+            "University of Cambridge",
+            "MILA",
+            "Universit\u00e9 de Montr\u00e9al"
+        ],
+        "Abstract": "This paper proposes a new dataset, KaoKore, derived from the Collection of Facial Expressions, which consists of faces extracted from pre-modern Japanese artwork. The dataset is designed for image classification and creative applications using generative models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00179965,
+        "input_tokens": 10199,
+        "output_tokens": 414
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.08595"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

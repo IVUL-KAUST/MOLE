@@ -1,0 +1,115 @@
+{
+    "metadata": {
+        "Name": "M2DS",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 67000,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": 32000,
+                "Unit": "documents",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 29000,
+                "Unit": "documents",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 27000,
+                "Unit": "documents",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Sinhala",
+                "Volume": 23500,
+                "Unit": "documents",
+                "Language": "Sinhala"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/KushanH/m2ds",
+        "HF Link": "https://huggingface.co/datasets/KushanH/m2ds",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": [
+            "English",
+            "Japanese",
+            "Korean",
+            "Tamil",
+            "Sinhala"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A multilingual dataset for multi-document summarization (M2DS) containing document-summary pairs in five languages (English, Japanese, Korean, Tamil, and Sinhala) from BBC news articles published between 2010 and 2023. It is the first dataset of its kind.",
+        "Volume": 180000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Moratuwa",
+            "ConscientAI"
+        ],
+        "Derived From": [
+            "M3LS"
+        ],
+        "Paper Title": "M2DS: Multilingual Dataset for Multi-document Summarisation",
+        "Paper Link": "https://arxiv.org/abs/2401.01810",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "Lecture Notes in Computer Science",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Kushan Hewapathirana",
+            "Nisansa de Silva",
+            "C.D. Athuraliya"
+        ],
+        "Affiliations": [
+            "Dept. of Computer Science & Engineering, University of Moratuwa, Sri Lanka",
+            "ConscientAI, Sri Lanka"
+        ],
+        "Abstract": "In the rapidly evolving digital era, there is an increasing demand for concise information as individuals seek to distil key insights from various sources. Recent attention from researchers on Multi-document Summarisation (MDS) has resulted in diverse datasets covering customer reviews, academic papers, medical and legal documents, and news articles. However, the English-centric nature of these datasets has created a conspicuous void for multilingual datasets in today\u2019s globalised digital landscape, where linguistic diversity is celebrated. Media platforms such as British Broadcasting Corporation (BBC) have disseminated news in 20+ languages for decades. With only 380 million people speaking English natively as their first language, accounting for less than 5% of the global population, the vast majority primarily relies on other languages. These facts underscore the need for inclusivity in MDS research, utilising resources from diverse languages. Recognising this gap, we present the Multilingual Dataset for Multi-document Summarisation (M2DS), which, to the best of our knowledge, is the first dataset of its kind. It includes document-summary pairs in five languages from BBC articles published during the 2010-2023 period. This paper introduces M2DS, emphasising its unique multilingual aspect, and includes baseline scores from state-of-the-art MDS models evaluated on our dataset."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.06291,
+        "input_tokens": 14153,
+        "output_tokens": 1877
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12336"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

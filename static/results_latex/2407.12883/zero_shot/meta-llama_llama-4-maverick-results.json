@@ -1,0 +1,101 @@
+{
+    "metadata": {
+        "Name": "BRIGHT",
+        "Link": "https://brightbenchmark.github.io/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "public datasets",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval",
+        "Volume": 1384.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Hong Kong",
+            "Princeton University",
+            "Stanford University",
+            "University of Washington",
+            "Google Cloud AI Research"
+        ],
+        "Derived From": [
+            "TheoremQA",
+            "AoPS",
+            "StackExchange",
+            "Pony"
+        ],
+        "Paper Title": "BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval",
+        "Paper Link": "https://brightbenchmark.github.io/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "ICLR 2025",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [
+            "Hongjin Su",
+            "Howard Yen",
+            "Mengzhou Xia",
+            "Weijia Shi",
+            "Niklas Muennighoff",
+            "Han-yu Wang",
+            "Haisu Liu",
+            "Quan Shi",
+            "Zachary S. Siegel",
+            "Michael Tang",
+            "Ruoxi Sun",
+            "Jinsung Yoon",
+            "Sercan O. Ar\u0131k",
+            "Danqi Chen",
+            "Tao Yu"
+        ],
+        "Affiliations": [
+            "The University of Hong Kong",
+            "Princeton University",
+            "Stanford University",
+            "University of Washington",
+            "Google Cloud AI Research"
+        ],
+        "Abstract": "Existing retrieval benchmarks primarily consist of information-seeking queries where keyword or semantic-based retrieval is usually sufficient. However, many complex real-world queries require in-depth reasoning to identify relevant documents that go beyond surface form matching. To better benchmark retrieval on such challenging queries, we introduce BRIGHT, the first text retrieval benchmark that requires intensive reasoning to retrieve relevant documents. Our dataset consists of 1,384 real-world queries spanning diverse domains, such as economics, psychology, mathematics, and coding. These queries are drawn from naturally occurring and carefully curated human data. Extensive evaluation reveals that even state-of-the-art retrieval models perform poorly on BRIGHT. The leading model on the MTEB leaderboard, SFR-Embedding-Mistral, which achieves a score of 59.0 nDCG@10, produces a score of nDCG@10 of 18.3 on BRIGHT. We show that incorporating explicit reasoning about the query improves retrieval performance by up to 12.2 points. Moreover, incorporating retrieved documents from the top-performing retriever boosts question-answering performance. We believe that BRIGHT paves the way for future research on retrieval systems in more realistic and challenging settings."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00932196,
+        "input_tokens": 54995,
+        "output_tokens": 674
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12883"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

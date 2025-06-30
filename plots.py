@@ -165,6 +165,8 @@ def plot_by_year():
     metric_results = {}
     ids = get_all_ids()
     for json_file in json_files:
+        if 'human' in json_file:
+            continue
         results = json.load(open(json_file))
         arxiv_id = get_id_from_path(json_file)
         if arxiv_id not in ids:
@@ -220,11 +222,16 @@ def plot_by_year():
         years, scores = zip(*sorted(zip(years, scores)))
         # plt.scatter(years, scores, label = model_name)
         # if model_name == "google_gemini-2.5-pro":
+        results.append([remap_names(model_name)] + list(scores)+[np.mean(scores)])
         plt.plot(years, scores, label=model_name)
     plt.title("Average Score per Year")
     plt.xlabel("Year")
     plt.ylabel("Average Score")
     plt.show()
+
+    # plot table of results
+    headers = ["Model"] + [str(year) for year in years] + ["Average"]
+    print_table(results, headers)
 
 
 def get_jsons_by_lang():
@@ -470,13 +477,13 @@ def plot_table():
         headers += [c for c in evaluation_subsets]
     elif args.group_by == "attributes_few":
         headers += ["Link", "License", "Tasks", "Domain", "Collection Style", "Volume"]
+    elif args.group_by == "attributes_hard":
+        headers += ["Link","License", "HF Link", "Volume", "Year", "Derived From", "Host", "Domain", "Collection Style"]
     elif args.group_by == "attributes":
         headers += ["Link", "HF Link", "License", "Language", "Domain", "Form", "Collection Style", "Volume", "Unit", "Ethical Risks", "Provider", "Derived From", "Tokenized", "Host", "Access", "Cost", "Test Split", "Tasks"]
     elif args.group_by == 'all':
         headers += ["Link", "HF Link", "License", "Language", "Domain", "Form", "Collection Style", "Volume", "Unit", "Ethical Risks", "Provider", "Derived From", "Tokenized", "Host", "Access", "Cost", "Test Split", "Tasks", "Venue Title", "Venue Type", "Venue Name", "Authors", "Affiliations", "Abstract"]
-    
     headers += ["AVERAGE"]
-
     if args.use_annotations_paper:
         headers += ["AVERAGE^*"]    
     metric_results = {}
@@ -500,15 +507,13 @@ def plot_table():
             schema = schema,
             return_columns = True
         )
-        print(scores)
-        scores = [scores[c] for c in headers[1:] if c in scores]
-        
+        scores = [scores[c] for c in headers[1:-1] if c in scores]
         if use_annotations_paper:
             average_ignore_mistakes = evaluate_metadata(
                 gold_metadata, pred_metadata, use_annotations_paper=True, schema = schema
             )["AVERAGE"]
             scores += [average_ignore_mistakes]
-        metric_results[model_name].append(scores)
+        metric_results[model_name].append(scores+[np.mean(scores)])
     final_results = {}
     for model_name in metric_results:
         if "human" in model_name.lower():

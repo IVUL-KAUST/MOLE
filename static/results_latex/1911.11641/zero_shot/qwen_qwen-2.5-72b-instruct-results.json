@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "PIQA",
+        "Link": "http://yonatanbisk.com/piqa",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "captions",
+            "books",
+            "captions",
+            "books",
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "PIQA is a dataset for evaluating physical commonsense reasoning in natural language models. It consists of goal-solution pairs where the goal is a physical task and the solutions are two possible ways to achieve it, one correct and one incorrect.",
+        "Volume": 16000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Allen Institute for Artificial Intelligence",
+            "Microsoft Research AI",
+            "Carnegie Mellon University",
+            "Paul G. Allen School for Computer Science and Engineering, University of Washington"
+        ],
+        "Derived From": [
+            "instructables.com"
+        ],
+        "Paper Title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+        "Paper Link": "http://yonatanbisk.com/piqa",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+        "Venue Type": "conference",
+        "Venue Name": "AAAI Conference on Artificial Intelligence",
+        "Authors": [
+            "Yonatan Bisk",
+            "Rowan Zellers",
+            "Ronan Le Bras",
+            "Jianfeng Gao",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Allen Institute for Artificial Intelligence",
+            "Microsoft Research AI",
+            "Carnegie Mellon University",
+            "Paul G. Allen School for Computer Science and Engineering, University of Washington"
+        ],
+        "Abstract": "To apply eyeshadow without a brush, should I use a cotton swab or a toothpick? Questions requiring this kind of physical commonsense pose a challenge to today's natural language understanding systems. While recent pretrained models (such as BERT) have made progress on question answering over more abstract domains -- such as news articles and encyclopedia entries, where text is plentiful -- in more physical domains, text is inherently limited due to reporting bias. Can AI systems learn to reliably answer physical commonsense questions without experiencing the physical world? In this paper, we introduce the task of physical commonsense reasoning and a corresponding benchmark dataset PIQA or Physical Interaction: Question Answering. Though humans find the dataset easy (95% accuracy), large pretrained models struggle (~77%). We provide analysis about the dimensions of knowledge that existing models lack, which offers significant opportunities for future research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0023763,
+        "input_tokens": 17552,
+        "output_tokens": 604
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1911.11641"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

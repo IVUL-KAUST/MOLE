@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "Slovo",
+        "Link": "https://github.com/hukenovs/slovo",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "Slovo is a Russian Sign Language video dataset produced using crowdsourcing platforms. It contains 20,000 FullHD recordings, divided into 1,000 classes of isolated RSL gestures received by 194 signers.",
+        "Volume": 20000.0,
+        "Unit": "videos",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SaluteDevices"
+        ],
+        "Derived From": [],
+        "Paper Title": "Slovo: Russian Sign Language Dataset",
+        "Paper Link": "https://github.com/hukenovs/slovo",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition"
+        ],
+        "Venue Title": "Lecture Notes in Computer Science",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Kapitanov Alexander",
+            "Kvanchiani Karina",
+            "Nagaev Alexander",
+            "Petrova Elizaveta"
+        ],
+        "Affiliations": [
+            "SaluteDevices, Russia"
+        ],
+        "Abstract": "One of the main challenges of the sign language recognition task is the difficulty of collecting a suitable dataset due to the gap between hard-of-hearing and hearing societies. In addition, the sign language in each country differs significantly, which obliges the creation of new data for each of them. This paper presents the Russian Sign Language (RSL) video dataset Slovo, produced using crowdsourcing platforms. The dataset contains 20,000 FullHD recordings, divided into 1,000 classes of isolated RSL gestures received by 194 signers. We also provide the entire dataset creation pipeline, from data collection to video annotation, with the following demo application. Several neural networks are trained and evaluated on the Slovo to demonstrate its teaching ability. Proposed data and pre-trained models are publicly available."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0249775,
+        "input_tokens": 9670,
+        "output_tokens": 481
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.14527"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

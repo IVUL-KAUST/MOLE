@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "Swallow Corpus",
+        "Link": "https://huggingface.co/tokyotech-llm",
+        "HF Link": "https://huggingface.co/tokyotech-llm",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "A large Japanese web corpus created from 21 snapshots of the Common Crawl archive (2020-2023). The corpus was built by extracting text from HTML, applying quality filtering rules specifically designed for Japanese, and performing strict deduplication. It consists of approximately 173 million pages and 312.1 billion characters.",
+        "Volume": 173350375.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Tokyo Institute of Technology"
+        ],
+        "Derived From": [
+            "Common Crawl"
+        ],
+        "Paper Title": "Building a Large Japanese Web Corpus for Large Language Models",
+        "Paper Link": "https://arxiv.org/abs/2402.08259",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "question answering",
+            "summarization",
+            "machine translation",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "The First Conference on Language Modeling",
+        "Venue Type": "conference",
+        "Venue Name": "The First Conference on Language Modeling",
+        "Authors": [
+            "Naoaki Okazaki",
+            "Kakeru Hattori",
+            "Hirai Shota",
+            "Hiroki Iida",
+            "Masanari Ohi",
+            "Kazuki Fujii",
+            "Taishi Nakamura",
+            "Mengsay Loem",
+            "Rio Yokota",
+            "Sakae Mizuki"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, School of Computing, Tokyo Institute of Technology",
+            "Global Scientific Information and Computing Center, Tokyo Institute of Technology"
+        ],
+        "Abstract": "Open Japanese large language models (LLMs) have been trained on the Japanese portions of corpora such as CC-100, mC4, and OSCAR. However, these corpora were not created for the quality of Japanese texts. This study builds a large Japanese web corpus by extracting and refining text from the Common Crawl archive (21 snapshots of approximately 63.4 billion pages crawled between 2020 and 2023). This corpus consists of approximately 312.1 billion characters (approximately 173 million pages), which is the largest of all available training corpora for Japanese LLMs, surpassing CC-100 (approximately 25.8 billion characters), mC4 (approximately 239.7 billion characters) and OSCAR 23.10 (approximately 74 billion characters). To confirm the quality of the corpus, we performed continual pre-training on Llama 2 7B, 13B, 70B, Mistral 7B v0.1, and Mixtral 8x7B Instruct as base LLMs and gained consistent (6.6--8.1 points) improvements on Japanese benchmark datasets. We also demonstrate that the improvement on Llama 2 13B brought from the presented corpus was the largest among those from other existing corpora."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.07754181,
+        "input_tokens": 22413,
+        "output_tokens": 1832
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.17733"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

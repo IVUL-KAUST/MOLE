@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "PxSLU",
+        "Link": "https://doi.org/10.5281/zenodo.6482586",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A spoken medical drug prescriptions corpus in French, containing 4 hours of transcribed and annotated dialogues.",
+        "Volume": 4.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Univ. Grenoble Alpes",
+            "CHU Grenoble Alpes",
+            "Calystene SA"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Spoken Drug Prescription Dataset in French for Spoken Language Understanding",
+        "Paper Link": "https://arxiv.org/abs/2207.08292",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "image captioning"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Ali Can Kocabiyikoglu",
+            "Fran\u00e7ois Portet",
+            "Prudence Gibert",
+            "Herv\u00e9 Blanchon",
+            "Jean-Marc Babouchkine",
+            "Ga\u00ebtan Gavazzi"
+        ],
+        "Affiliations": [
+            "Univ. Grenoble Alpes, CNRS, Inria, Grenoble INP, LIG, 38000 Grenoble, France",
+            "CHU Grenoble Alpes, Avenue Maquis-du-Gr\u00e9sivaudan, 38700 La Tronche, France",
+            "Calystene SA, 16 Rue Ir\u00e8ne Joliot Curie, 38320 Eybens, France",
+            "Clinique de m\u00e9decine g\u00e9riatrique, CHU Grenoble Alpes, \u00c9quipe Gr\u00e9pi, EA 7408, CS 10217, 38700, La Tronche, France"
+        ],
+        "Abstract": "Spoken medical dialogue systems are increasingly attracting interest to enhance access to healthcare services and improve quality and traceability of patient care. In this paper, we focus on medical drug prescriptions acquired on smartphones through spoken dialogue. Such systems would facilitate the traceability of care and would free clinicians' time. However, there is a lack of speech corpora to develop such systems since most of the related corpora are in text form and in English. To facilitate the research and development of spoken medical dialogue systems, we present, to the best of our knowledge, the first spoken medical drug prescriptions corpus, named PxSLU. It contains 4 hours of transcribed and annotated dialogues of drug prescriptions in French acquired through an experiment with 55 participants experts and non-experts in prescriptions. We also present some experiments that demonstrate the interest of this corpus for the evaluation and development of medical dialogue systems."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00693585,
+        "input_tokens": 13766,
+        "output_tokens": 625
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2207.08292"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

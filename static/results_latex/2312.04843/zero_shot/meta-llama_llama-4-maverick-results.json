@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "FREDSum",
+        "Link": "https://github.com/linto-ai/FREDSum",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "news articles",
+            "TV Channels",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset of French political debates for multi-lingual dialogue summarization",
+        "Volume": 2595.5,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Linagora",
+            "\u00c9cole Polytechnique",
+            "Grenoble Ecole de Management"
+        ],
+        "Derived From": [
+            "National Assembly",
+            "Senate"
+        ],
+        "Paper Title": "FREDSum: A Dialogue Summarization Corpus for French Political Debates",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.770.pdf",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization",
+            "summarization"
+        ],
+        "Venue Title": "EMNLP 2023",
+        "Venue Type": "conference",
+        "Venue Name": "The 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Virgile Rennard",
+            "Guokan Shang",
+            "Damien Grari",
+            "Julie Hunter",
+            "Michalis Vazirgiannis"
+        ],
+        "Affiliations": [
+            "Linagora, France",
+            "\u00c9cole Polytechnique, France",
+            "Grenoble Ecole de Management, France"
+        ],
+        "Abstract": "This paper presents FREDSum, a dataset of French political debates for multi-lingual dialogue summarization. The dataset consists of manually transcribed and annotated political debates, covering a range of topics and perspectives. The authors highlight the importance of high-quality transcription and annotations for training accurate and effective dialogue summarization models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0026586,
+        "input_tokens": 15922,
+        "output_tokens": 450
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2312.04843"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

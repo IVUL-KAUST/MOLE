@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "Japanese Quality Estimation Dataset for Grammatical Error Correction",
+        "Link": "https://github.com/tmu-nlp/japanese-gec-qe-dataset",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A dataset for quality estimation of Japanese grammatical error correction, consisting of source text, corrected text, and human ratings.",
+        "Volume": 2042.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Tokyo Metropolitan University",
+            "RIKEN"
+        ],
+        "Derived From": [
+            "NAIST Lang-8 Learner Corpora",
+            "TEC-JL",
+            "FLUTEC"
+        ],
+        "Paper Title": "Construction of a Quality Estimation Dataset for Automatic Evaluation of Japanese Grammatical Error Correction",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.611.pdf",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "transliteration",
+            "grammatical error correction"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Daisuke Suzuki",
+            "Yujin Takahashi",
+            "Ikumi Yamashita",
+            "Taichi Aida",
+            "Tosho Hirasawa",
+            "Michitaka Nakatsuji",
+            "Masato Mita",
+            "Mamoru Komachi"
+        ],
+        "Affiliations": [
+            "Tokyo Metropolitan University",
+            "RIKEN"
+        ],
+        "Abstract": "This paper describes the construction of a quality estimation dataset for Japanese grammatical error correction. The dataset includes source text, corrected text, and human ratings. The authors fine-tuned BERT on the dataset to create a quality estimation model, which outperformed reference-based evaluation methods."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.00296868,
+        "input_tokens": 12304,
+        "output_tokens": 466
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.08038"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

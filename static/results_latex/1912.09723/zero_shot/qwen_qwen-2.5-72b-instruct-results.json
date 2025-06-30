@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "SberQuAD",
+        "Link": "https://github.com/sberbank-ai/data-science-journey-2017",
+        "HF Link": "http://docs.deeppavlov.ai/en/master/features/models/squad.html",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "SberQuAD is a large-scale Russian reading comprehension dataset created by Sberbank. It contains about 50K training examples, 15K development, and 25K testing examples. The dataset is similar to SQuAD and is used for question answering tasks.",
+        "Volume": 50364.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sberbank"
+        ],
+        "Derived From": [
+            "SQuAD"
+        ],
+        "Paper Title": "SberQuAD -- Russian Reading Comprehension Dataset: Description and Analysis",
+        "Paper Link": "https://www.sberbank.com/about",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "question answering"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "LREC 2020",
+        "Authors": [
+            "Pavel Efimov",
+            "Andrey Chertok",
+            "Leonid Boytsov",
+            "Pavel Braslavski"
+        ],
+        "Affiliations": [
+            "Saint Petersburg State University",
+            "Sberbank",
+            "Ural Federal University",
+            "JetBrains Research"
+        ],
+        "Abstract": "SberQuAD---a large scale analog of Stanford SQuAD in the Russian language---is a valuable resource that has not been properly presented to the scientific community. We fill this gap by providing a description, a thorough analysis, and baseline experimental results. Keywords: reading comprehension, question answering, Russian language resources, evaluation"
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00233481,
+        "input_tokens": 17235,
+        "output_tokens": 459
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1912.09723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

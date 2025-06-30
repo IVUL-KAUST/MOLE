@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "Alloprof",
+        "Link": "https://github.com/mila-aia/alloprof-data",
+        "HF Link": "https://huggingface.co/datasets/antoinelb7/alloprof",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A French question-answering dataset collected from Alloprof, a Quebec-based primary and high-school help website, containing 29,349 questions and their explanations in a variety of school subjects.",
+        "Volume": 29349.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Mila - Quebec AI Institute",
+            "Polytechnique Montr\u00e9al"
+        ],
+        "Derived From": [],
+        "Paper Title": "Alloprof: a French question-answer education dataset and its use in an information retrieval case study",
+        "Paper Link": "https://github.com/mila-aia/alloprof-data",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "Alloprof: a French question-answer education dataset and its use in an information retrieval case study",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Antoine Lefebvre-Brossard",
+            "Stephane Gazaille",
+            "Michel C. Desmarais"
+        ],
+        "Affiliations": [
+            "Mila - Quebec AI Institute",
+            "Polytechnique Montr\u00e9al"
+        ],
+        "Abstract": "Context: Teachers and students are increasingly relying on online learning resources to supplement the ones provided in school. This increase in the breadth and depth of available resources is a great thing for students, but only provided they are able to find answers to their queries. Question-answering and information retrieval systems alleviate the task of finding the relevant resources and public datasets of labeled data are essential to train and evaluate their algorithms, but most of these datasets are English text written by and for adults. Objectives: We introduce a new public French question-answering dataset collected from Alloprof, a Quebec-based primary and high-school help website, containing 29,349 questions and their explanations in a variety of school subjects from 10,368 students, with more than half of the explanations containing links to other questions or some of the 2,596 reference pages on the website. We also present a case study using this dataset for an information retrieval task. Method: This dataset was collected on the Alloprof public forum, with all questions verified for their appropriateness and the explanations verified both for their appropriateness and their relevance to the question. To predict relevant documents (questions or reference pages), architectures using pre-trained BERT models were fine-tuned and evaluated on their ability to predict at least one document referred to in the explanation from their top-3 predictions for a question, as well as on the MRR and nDCG metrics. Results: The best model obtains a prediction score of 58.5% (MRR: 0.54, nDCG: 0.62). These results are substantially better than a TF-IDF vector space model (prediction score: 0.24, MRR: 0.20, nDCG: 0.32), but their computational cost is also greater. The fastest model obtains a score of 51.2% (MRR:0.467, nDCG: 0.560) with an inference time of 0.7s, which is still considered acceptable in the context of Alloprof. Conclusions: This dataset will allow researchers to develop question-answering, information retrieval and other algorithms specifically for the French speaking education context. Furthermore, the range of language proficiency, images, mathematical symbols and spelling mistakes will necessitate algorithms based on a multimodal comprehension. The case study we present as a baseline shows an approach that relies on recent techniques provides an acceptable performance level, but more work is necessary before it can reliably be used and trusted in a production setting."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.008586,
+        "input_tokens": 14670,
+        "output_tokens": 890
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2302.07738"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

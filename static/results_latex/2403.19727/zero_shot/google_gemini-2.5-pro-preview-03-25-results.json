@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "MEDIA",
+        "Link": "https://github.com/Ala-Na/media_benchmark_intent_annotations",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "other"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "An enhanced version of the French MEDIA Spoken Language Understanding (SLU) dataset. Originally composed of recorded hotel booking dialogues annotated only for slots, this version adds intent annotations using a semi-automatic tri-training methodology. This enhancement enables the dataset to be used for joint intent classification and slot-filling tasks.",
+        "Volume": 22848.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Paris-Saclay, CNRS, LISN",
+            "Avignon Universit\u00e9, LIA"
+        ],
+        "Derived From": [
+            "MEDIA"
+        ],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://aclanthology.org/2024.lrec-main.815/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "intent classification",
+            "named entity recognition",
+            "speech recognition"
+        ],
+        "Venue Title": "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+        "Venue Type": "conference",
+        "Venue Name": "LREC-COLING 2024",
+        "Authors": [
+            "Nad\u00e8ge Alavoine",
+            "Ga\u00eblle Laperri\u00e8re",
+            "Christophe Servan",
+            "Sahar Ghannay",
+            "Sophie Rosset"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris-Saclay, CNRS, LISN",
+            "Avignon Universit\u00e9, LIA",
+            "QWANT"
+        ],
+        "Abstract": "Intent classification and slot-filling are essential tasks of Spoken Language Understanding (SLU).nIn most SLU systems, those tasks are realized by independent modules.nFor about fifteen years, models achieving both of them jointly and exploiting their mutual enhancement have been proposed.nA multilingual module using a joint model was envisioned to create a touristic dialogue system for a European project, HumanE-AI-Net.nA combination of multiple datasets, including the MEDIA dataset, was suggested for training this joint model.nThe MEDIA SLU dataset is a French dataset distributed since 2005 by ELRA, mainly used by the French research community and free for academic research since 2020. Unfortunately, it is annotated only in slots but not intents.nAn enhanced version of MEDIA annotated with intents has been built to extend its use to more tasks and use cases.nThis paper presents the semi-automatic methodology used to obtain this enhanced version. nIn addition, we present the first results of SLU experiments on this enhanced dataset using joint models for intent classification and slot-filling."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.07503875,
+        "input_tokens": 25169,
+        "output_tokens": 1813
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

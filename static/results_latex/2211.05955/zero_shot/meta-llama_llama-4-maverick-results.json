@@ -1,0 +1,136 @@
+{
+    "metadata": {
+        "Name": "MEE",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 190592,
+                "Unit": "entities",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 48001,
+                "Unit": "entities",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 25463,
+                "Unit": "entities",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 62971,
+                "Unit": "entities",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 38469,
+                "Unit": "entities",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 18797,
+                "Unit": "entities",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 19174,
+                "Unit": "entities",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 12508,
+                "Unit": "entities",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "https://github.com/apouranb/MEE",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "Polish",
+            "Turkish",
+            "Hindi",
+            "Japanese",
+            "Korean"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A novel multilingual event extraction dataset covering 8 typologically different languages.",
+        "Volume": 415975.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Paper Link": "https://aclanthology.org/2022.emnlp-main.329.pdf",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "2022 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Amir Pouran Ben Veyseh",
+            "Javid Ebrahimi",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+        ],
+        "Affiliations": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Abstract": "Event Extraction (EE) is a fundamental task in Information Extraction (IE) that aims to recognize event mentions and their arguments from text. This paper proposes a novel Multilingual Event Extraction dataset (MEE) that provides annotation for more than 50K event mentions in 8 typologically different languages."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00256425,
+        "input_tokens": 14730,
+        "output_tokens": 730
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05955"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "REPA",
+        "Link": "https://huggingface.co/datasets/RussianNLP/repa",
+        "HF Link": "https://huggingface.co/datasets/RussianNLP/repa",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A dataset of 1k user queries and 2k LLM-generated responses with human annotations for evaluating text generation and judgment capabilities in Russian.",
+        "Volume": 1003.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "HSE University",
+            "SaluteDevices",
+            "University of Oslo",
+            "Toloka AI"
+        ],
+        "Derived From": [
+            "Chatbot Arena Conversations",
+            "ru_instruct_gpt4",
+            "Veles--2.5",
+            "Tagengo",
+            "Aya"
+        ],
+        "Paper Title": "REPA: Russian Error Types Annotation for Evaluating Text Generation and Judgment Capabilities",
+        "Paper Link": "https://arxiv.org/abs/XXXXXXX",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "language modeling",
+            "named entity recognition",
+            "question answering"
+        ],
+        "Venue Title": "ACL 2024",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Alexander Pugachev",
+            "Alena Fenogenova",
+            "Vladislav Mikhailov",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "HSE University",
+            "SaluteDevices",
+            "University of Oslo",
+            "Toloka AI"
+        ],
+        "Abstract": "This paper introduces REPA, a dataset for evaluating text generation and judgment capabilities in Russian. REPA consists of 1k user queries and 2k LLM-generated responses annotated by human evaluators across ten error types. The dataset aims to assess the performance of large language models in Russian and their ability to judge the quality of generated text."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00352575,
+        "input_tokens": 23114,
+        "output_tokens": 489
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2503.13102"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -350,17 +350,17 @@ def validate(metadata, use_split=None, title="", link="", schema="ar"):
 
     for row in dataset:
 
-        if title != "":
-            if title == row["Paper Title"]:
-                matched_row = row
-        elif link != "":
-            if link == fix_arxiv_link(row["Paper Link"]):
-                matched_row = row
+        if title != "" and title.strip() == row["Paper Title"].strip():
+            matched_row = row
+        elif link != "" and get_arxiv_id(link).strip() == get_arxiv_id(row["Paper Link"]).strip():
+            matched_row = row
         else:
-            if match_titles(str(metadata["Paper Title"]), row["Paper Title"]) > 0.8:
-                matched_row = row
+            pass 
 
     if matched_row is None and use_split is not None:
+        print("title", title, "link", link)
+        print(get_arxiv_id(link))
+        print(get_arxiv_id(link) in [get_arxiv_id(row["Paper Link"]) for row in dataset])
         raise ()
 
     return evaluate_metadata(matched_row, metadata, schema=schema)

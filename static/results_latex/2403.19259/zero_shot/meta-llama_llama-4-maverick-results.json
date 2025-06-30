@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "J-CRe3",
+        "Link": "https://github.com/riken-grp/J-CRe3",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "other"
+        ],
+        "Description": "A Japanese Conversation dataset for Real-world Reference Resolution",
+        "Volume": 2131.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "RIKEN",
+            "Kyoto University",
+            "Nara Institute of Science and Technology",
+            "Tokyo University of Science",
+            "National Institute of Informatics"
+        ],
+        "Derived From": [],
+        "Paper Title": "J-CRe3: A Japanese Conversation Dataset for Real-world Reference Resolution",
+        "Paper Link": "https://arxiv.org/abs/2404.09193",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "other"
+        ],
+        "Venue Title": "LREC-COLING 2024",
+        "Venue Type": "conference",
+        "Venue Name": "LREC-COLING",
+        "Authors": [
+            "Nobuhiro Ueda",
+            "Hideko Habe",
+            "Yoko Matsui",
+            "Akishige Yuguchi",
+            "Seiya Kawano",
+            "Yasutomo Kawanishi",
+            "Sadao Kurohashi",
+            "Koichiro Yoshino"
+        ],
+        "Affiliations": [
+            "Kyoto University",
+            "RIKEN",
+            "Nara Institute of Science and Technology",
+            "Tokyo University of Science",
+            "National Institute of Informatics"
+        ],
+        "Abstract": "Understanding expressions that refer to the physical world is crucial for human-assisting systems. To this end, we propose a multimodal reference resolution task and construct a Japanese Conversation dataset for Real-world Reference Resolution (J-CRe3). Our dataset contains egocentric video and dialogue audio of real-world conversations between two people acting as a master and an assistant robot at home. The dataset is annotated with crossmodal tags between phrases in the utterances and the object bounding boxes in the video frames. We also constructed an experimental model and clarified the challenges in multimodal reference resolution tasks."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00287815,
+        "input_tokens": 17401,
+        "output_tokens": 508
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19259"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

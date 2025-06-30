@@ -1,0 +1,160 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "XCOPA-et",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "XCOPA-ht",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "XCOPA-id",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "XCOPA-it",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "XCOPA-qu",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Eastern Apur\u00edmac Quechua"
+            },
+            {
+                "Name": "XCOPA-sw",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "XCOPA-ta",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "XCOPA-th",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "XCOPA-tr",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "XCOPA-vi",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "XCOPA-zh",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Simplified Chinese"
+            }
+        ],
+        "Link": "https://github.com/cambridgeltl/xcopa",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "Estonian",
+            "Haitian Creole",
+            "Indonesian",
+            "Italian",
+            "Eastern Apur\u00edmac Quechua",
+            "Swahili",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Simplified Chinese"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "XCOPA is a multilingual dataset for causal commonsense reasoning in 11 languages.",
+        "Volume": 600.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.470/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "EMNLP 2020",
+        "Venue Type": "conference",
+        "Venue Name": "2020 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Edoardo M. Ponti",
+            "Goran Glava\u0161",
+            "Olga Majewska",
+            "Qianchu Liu",
+            "Ivan Vuli\u0107",
+            "Anna Korhonen"
+        ],
+        "Affiliations": [
+            "Language Technology Lab, TAL, University of Cambridge, UK",
+            "Data and Web Science Group, University of Mannheim, Germany"
+        ],
+        "Abstract": "In order to simulate human language capacity, natural language processing systems must be able to reason about the dynamics of everyday situations, including their possible causes and effects. Moreover, they should be able to generalise the acquired world knowledge to new languages, modulo cultural differences. Advances in machine reasoning and cross-lingual transfer depend on the availability of challenging evaluation benchmarks. Motivated by both demands, we introduce Cross-lingual Choice of Plausible Alternatives (XCOPA), a typologically diverse multilingual dataset for causal commonsense reasoning in 11 languages, which includes resource-poor languages like Eastern Apur\u00edmac Quechua and Haitian Creole. We evaluate a range of state-of-the-art models on this novel dataset, revealing that the performance of current methods based on multilingual pretraining and zero-shot fine-tuning falls short compared to translation-based transfer. Finally, we propose strategies to adapt multilingual models to out-of-sample resource-lean languages where only a small corpus or a bilingual dictionary is available, and report substantial improvements over the random baseline. The XCOPA dataset is freely available at https://github.com/cambridgeltl/xcopa."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00535502,
+        "input_tokens": 20802,
+        "output_tokens": 1110
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "FairTranslate",
+        "Link": "https://huggingface.co/datasets/Fannyjrd/FairTranslate_fr",
+        "HF Link": "https://huggingface.co/datasets/Fannyjrd/FairTranslate_fr",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": "fr",
+        "Domain": [
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A novel English-French dataset designed to evaluate non-binary gender biases in machine translation systems, annotated with rich metadata.",
+        "Volume": 2418.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "IRT Saint Exupery",
+            "Universit\u00e9 Lumi\u00e8re Lyon 2",
+            "Universit\u00e9 Claude Bernard Lyon 1",
+            "ERIC"
+        ],
+        "Derived From": [],
+        "Paper Title": "FairTranslate: An English-French Dataset for Gender Bias Evaluation in MT by Overcoming Gender Binarity",
+        "Paper Link": "https://doi.org/10.1145/3715275.3732013",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "gender identification",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "The 2025 ACM Conference on Fairness, Accountability, and Transparency",
+        "Venue Type": "conference",
+        "Venue Name": "FAccT '25",
+        "Authors": [
+            "Fanny Jourdan",
+            "Yannick Chevalier",
+            "C\u00e9cile Favre"
+        ],
+        "Affiliations": [
+            "IRT Saint Exupery",
+            "Universit\u00e9 Lumi\u00e8re Lyon 2, IHRIM UMR 5317",
+            "Universit\u00e9 Claude Bernard Lyon 1, ERIC"
+        ],
+        "Abstract": "Large Language Models (LLMs) are increasingly leveraged for translation tasks but often fall short when translating inclusive language -- such as texts containing the singular 'they' pronoun or otherwise reflecting fair linguistic protocols. Because these challenges span both computational and societal domains, it is imperative to critically evaluate how well LLMs handle inclusive translation with a well-founded framework. This paper presents FairTranslate, a novel, fully human-annotated dataset designed to evaluate non-binary gender biases in machine translation systems from English to French. FairTranslate includes 2418 English-French sentence pairs related to occupations, annotated with rich metadata such as the stereotypical alignment of the occupation, grammatical gender indicator ambiguity, and the ground-truth gender label (male, female, or inclusive)."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00352788,
+        "input_tokens": 24131,
+        "output_tokens": 565
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.15941"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

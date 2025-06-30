@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "http://clic.cimec.unitn.it/lambada/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A dataset to evaluate computational models for text understanding via word prediction, requiring broad discourse context.",
+        "Volume": 10022.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Trento",
+            "University of Amsterdam"
+        ],
+        "Derived From": [
+            "Book Corpus"
+        ],
+        "Paper Title": "The LAMBADA dataset: Word prediction requiring a broad discourse context",
+        "Paper Link": "http://clic.cimec.unitn.it/lambada/",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "word prediction"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Denis Paperno",
+            "Germ\u00e1n Kruszewski",
+            "Angeliki Lazaridou",
+            "Quan Ngoc Pham",
+            "Raffaella Bernardi",
+            "Sandro Pezzelle",
+            "Marco Baroni",
+            "Gemma Boleda",
+            "Raquel Fern\u00e1ndez"
+        ],
+        "Affiliations": [
+            "CIMeC - Center for Mind/Brain Sciences, University of Trento",
+            "Institute for Logic, Language & Computation, University of Amsterdam"
+        ],
+        "Abstract": "We introduce LAMBADA, a dataset to evaluate the capabilities of computational models for text understanding by means of a word prediction task. LAMBADA is a collection of narrative passages sharing the characteristic that human subjects are able to guess their last word if they are exposed to the whole passage, but not if they only see the last sentence preceding the target word. To succeed on LAMBADA, computational models cannot simply rely on local context, but must be able to keep track of information in the broader discourse. We show that LAMBADA exemplifies a wide range of linguistic phenomena, and that none of several state-of-the-art language models reaches accuracy above 1% on this novel benchmark. We thus propose LAMBADA as a challenging test set, meant to encourage the development of new models capable of genuine understanding of broad context in natural language text."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00566193,
+        "input_tokens": 15181,
+        "output_tokens": 548
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

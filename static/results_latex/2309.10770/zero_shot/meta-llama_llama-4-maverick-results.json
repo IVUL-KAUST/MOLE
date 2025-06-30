@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "FRASIMED",
+        "Link": "https://zenodo.org/record/8355629",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "social media",
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "A French annotated resource for medical entity detection and entity linking",
+        "Volume": 2051.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University Hospitals of Geneva",
+            "University of Geneva"
+        ],
+        "Derived From": [
+            "CANTEMIST",
+            "DISTEMIST"
+        ],
+        "Paper Title": "FRASIMED: a Clinical French Annotated Resource Produced through Crosslingual BERT-Based Annotation Projection",
+        "Paper Link": "https://arxiv.org/abs/2307.08322",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "semantic parsing"
+        ],
+        "Venue Title": "ACL 2023",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Jamil Zaghir",
+            "Mina Bjelogrlic",
+            "Jean-Philippe Goldman",
+            "Souka\u00efna Aananou",
+            "Christophe Gaudet-Blavignac",
+            "Christian Lovis"
+        ],
+        "Affiliations": [
+            "Division of Medical Information Sciences (SIMED), University Hospitals of Geneva",
+            "Department of Radiology and Medical Informatics, University of Geneva"
+        ],
+        "Abstract": "This paper introduces a novel methodology for generating translated versions of annotated datasets through crosslingual annotation projection. The methodology is applied to create FRASIMED, a French annotated corpus for medical entity detection and entity linking."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00264192,
+        "input_tokens": 13467,
+        "output_tokens": 429
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.10770"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

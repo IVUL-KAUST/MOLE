@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "FrenchToxicityPrompts",
+        "Link": "https://download.europe.naverlabs.com/FrenchToxicityPrompts/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A dataset of 50,000 real text prompts and continuations in French, annotated with toxicity scores using Perspective API.",
+        "Volume": 50000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "NAVER LABS Europe"
+        ],
+        "Derived From": [
+            "L\u00e9lu"
+        ],
+        "Paper Title": "FrenchToxicityPrompts: a Large Benchmark for Evaluating and Mitigating Toxicity in French Texts",
+        "Paper Link": "https://arxiv.org/abs/2406.17566",
+        "Tokenized": false,
+        "Host": "CAMeL Resources",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "irony detection",
+            "text generation"
+        ],
+        "Venue Title": "FrenchToxicityPrompts: a Large Benchmark for Evaluating and Mitigating Toxicity in French Texts",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Caroline Brun",
+            "Vassilina Nikoulina"
+        ],
+        "Affiliations": [
+            "NAVER LABS Europe"
+        ],
+        "Abstract": "Large language models (LLMs) are increasingly popular but are also prone to generating bias, toxic or harmful language, which can have detrimental effects on individuals and communities. Although most efforts is put to assess and mitigate toxicity in generated content, it is primarily concentrated on English, while it\u2019s essential to consider other languages as well. For addressing this issue, we create and release FrenchToxicityPrompts, a dataset of 50K naturally occurring French prompts and their continuations, annotated with toxicity scores from a widely used toxicity classifier. We evaluate 14 different models from four prevalent open-sourced families of LLMs against our dataset to assess their potential toxicity across various dimensions. We hope that our contribution will foster future research on toxicity detection and mitigation beyond English."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00483576,
+        "input_tokens": 11798,
+        "output_tokens": 493
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.17566"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

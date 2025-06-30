@@ -1,0 +1,139 @@
+{
+    "metadata": {
+        "Name": "Mintaka",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 20000,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 20000,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "French",
+                "Volume": 20000,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 20000,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 20000,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 20000,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 20000,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 20000,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            }
+        ],
+        "Link": "https://github.com/amazon-research/mintaka",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "Arabic",
+            "French",
+            "German",
+            "Hindi",
+            "Italian",
+            "Japanese",
+            "Portuguese"
+        ],
+        "Domain": [
+            "books",
+            "reviews",
+            "news articles",
+            "news articles",
+            "commentary",
+            "captions",
+            "web pages",
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "Mintaka is a complex, natural, and multilingual dataset designed for experimenting with end-to-end question-answering models. It contains 20,000 question-answer pairs collected in English and translated into 8 languages.",
+        "Volume": 180000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Amazon Alexa AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "Mintaka: A Complex, Natural, and Multilingual Dataset for End-to-End Question Answering",
+        "Paper Link": "https://arxiv.org/abs/2210.01613",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Priyanka Sen",
+            "Alham Fikri Aji",
+            "Amir Saffari"
+        ],
+        "Affiliations": [
+            "Amazon Alexa AI",
+            "Cambridge, UK"
+        ],
+        "Abstract": "We introduce textsc{Mintaka}, a complex, natural, and multilingual dataset designed for experimenting with end-to-end question-answering models. Mintaka is composed of 20,000 question-answer pairs collected in English, annotated with Wikidata entities, and translated into Arabic, French, German, Hindi, Italian, Japanese, Portuguese, and Spanish for a total of 180,000 samples. Mintaka includes 8 types of complex questions, including superlative, intersection, and multi-hop questions, which were naturally elicited from crowd workers. We run baselines over Mintaka, the best of which achieves 38% hits@1 in English and 31% hits@1 multilingually, showing that existing models have room for improvement. We release Mintaka at https://github.com/amazon-research/mintaka."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00212004,
+        "input_tokens": 18118,
+        "output_tokens": 859
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.01613"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

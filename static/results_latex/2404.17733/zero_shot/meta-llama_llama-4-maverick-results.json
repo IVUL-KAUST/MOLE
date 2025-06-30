@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "Japanese Web Corpus",
+        "Link": "https://huggingface.co/tokyotech-llm",
+        "HF Link": "https://huggingface.co/tokyotech-llm",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large Japanese web corpus for large language models",
+        "Volume": 312.1,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Tokyo Institute of Technology"
+        ],
+        "Derived From": [
+            "Common Crawl"
+        ],
+        "Paper Title": "Building a Large Japanese Web Corpus for Large Language Models",
+        "Paper Link": "https://example.com/paper-link.pdf",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "COLM 2024",
+        "Venue Type": "conference",
+        "Venue Name": "COLM 2024",
+        "Authors": [
+            "Naoaki Okazaki",
+            "Kakeru Hattori",
+            "Hirai Shota",
+            "Hiroki Iida",
+            "Masanari Ohi",
+            "Kazuki Fujii",
+            "Taishi Nakamura",
+            "Mengsay Loem",
+            "Rio Yokota",
+            "Sakae Mizuki"
+        ],
+        "Affiliations": [
+            "Tokyo Institute of Technology"
+        ],
+        "Abstract": "Open Japanese large language models (LLMs) have been trained on the Japanese portions of corpora such as CC-100, mC4, and OSCAR. However, these corpora were not created for the quality of Japanese texts. This study builds a large Japanese web corpus by extracting and refining text from the Common Crawl archive (21 snapshots of approximately 63.4 billion pages crawled between 2020 and 2023). This corpus consists of approximately 312.1 billion characters (approximately 173 million pages), which is the largest of all available training corpora for Japanese LLMs, surpassing CC-100 (approximately 25.8 billion characters), mC4 (approximately 239.7 billion characters) and OSCAR 23.10 (approximately 74 billion characters). To confirm the quality of the corpus, we performed continual pre-training on Llama 2 7B, 13B, 70B, Mistral 7B v0.1, and Mixtral 8x7B Instruct as base LLMs and gained consistent (6.6--8.1 points) improvements on Japanese benchmark datasets. We also demonstrate that the improvement on Llama 2 13B brought from the presented corpus was the largest among those from other existing corpora."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00337965,
+        "input_tokens": 22413,
+        "output_tokens": 633
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.17733"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
