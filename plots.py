@@ -227,7 +227,7 @@ def plot_by_year():
 
         # calcualte the correlation between the scores and the years
         correlation = np.corrcoef(years, scores)[0, 1]
-        results.append([remap_names(model_name)] + list(scores)+[correlation])
+        results.append([remap_names(model_name)] + list(scores)+[np.mean(scores)])
         plt.plot(years, scores, label=model_name)
     plt.title("Average Score per Year")
     plt.xlabel("Year")
@@ -235,7 +235,7 @@ def plot_by_year():
     plt.show()
 
     # plot table of results
-    headers = ["Model"] + [str(year) for year in years] + ["Correlation"]
+    headers = ["Model"] + [str(year) for year in years] + ["Average"]
     print_table(results, headers)
 
 
