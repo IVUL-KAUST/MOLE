@@ -11,8 +11,12 @@ A framework and dataset for extracting and validation metadata extraction from s
 - Validate extracted metadata against a reference dataset
 
 ## Installation
+download the anonymized repo:
 ```bash
-git clone https://github.com/zaidalyafeai/MOLE
+https://anonymous.4open.science/r/MOLE-EMNLP2025
+```
+then:
+```bash
 cd MOLE
 pip install -r requirements.txt
 ```

@@ -7,5 +7,5 @@ The annotation guidlines are [here](https://docs.google.com/document/d/1m6fesR0-
 
 # Backend
 
-`git clone https://github.com/IVUL-KAUST/MOLE` and change the branch to `molev2` then `pip install -r requirements.txt`
+Download the repo: `https://anonymous.4open.science/r/MOLE-EMNLP2025` then `pip install -r requirements.txt`
 then start the server using `uvicorn main:app`. Make sure you add .env with `OPENROUTER_API_KEY=sk**`
