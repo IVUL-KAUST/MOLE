@@ -8,14 +8,12 @@
     "Domain": [
         "captions",
         "public datasets",
-        "LLM",
-        "web pages"
-    ],
+        "wikipedia"
+    ],  
     "Form": "text",
     "Collection Style": [
         "crawling",
-        "machine annotation",
-        "LLM generated"
+        "machine annotation"
     ],
     "Description": "HellaSwag is a dataset for physically situated commonsense reasoning.",
     "Volume": 70000.0,
@@ -35,8 +33,7 @@
     "Cost": "",
     "Test Split": true,
     "Tasks": [
-        "natural language inference",
-        "other"
+        "natural language inference"
     ],
     "Venue Title": "arXiv",
     
@@ -44,13 +41,12 @@
     "Venue Name": "",
     "Authors": [
         "Rowan Zellers",
-        "Ariz Holtzman",
+        "Ari Holtzman",
         "Yonatan Bisk",
         "Ali Farhadi",
         "Yejin Choi"
     ],
     "Affiliations": [
-        "Paul G. Allen School of Computer Science & Engineering",
         "University of Washington",
         "Allen Institute of Artificial Intelligence"
     ],
