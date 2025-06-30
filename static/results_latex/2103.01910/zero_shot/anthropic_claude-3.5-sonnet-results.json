@@ -1,0 +1,90 @@
+{
+    "metadata": {
+        "Name": "MultiSubs",
+        "Subsets": [],
+        "Link": "https://doi.org/10.5281/zenodo.5034604",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2019,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "French",
+            "German"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "A large-scale multimodal and multilingual dataset that aligns images with text fragments in movie subtitles across multiple languages to facilitate research on grounding words to images in context.",
+        "Volume": 4277772.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Imperial College London",
+            "Federal University of Mato Grosso"
+        ],
+        "Derived From": [
+            "OpenSubtitles 2016",
+            "BabelNet"
+        ],
+        "Paper Title": "MultiSubs: A Large-scale Multimodal and Multilingual Dataset",
+        "Paper Link": "https://doi.org/10.5281/zenodo.5034604",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fill-in-the blank",
+            "machine translation",
+            "word prediction",
+            "machine translation"
+        ],
+        "Venue Title": "svjour3",
+        "Venue Type": "journal",
+        "Venue Name": "",
+        "Authors": [
+            "Josiah Wang",
+            "Pranava Madhyastha",
+            "Josiel Figueiredo",
+            "Chiraag Lala",
+            "Lucia Specia"
+        ],
+        "Affiliations": [
+            "Imperial College London, London, UK",
+            "Federal University of Mato Grosso, Cuiab\u00e1, Brazil"
+        ],
+        "Abstract": "This paper introduces a large-scale multimodal and multilingual dataset that aims to facilitate research on grounding words to images in their contextual usage in language. The dataset consists of images selected to unambiguously illustrate concepts expressed in sentences from movie subtitles. The dataset is a valuable resource as (i) the images are aligned to text fragments rather than whole sentences; (ii) multiple images are possible for a text fragment and a sentence; (iii) the sentences are free-form and real-world like; (iv) the parallel texts are multilingual. We set up a fill-in-the blank game for humans to evaluate the quality of the automatic image selection process of our dataset. We show the utility of the dataset on two automatic tasks: (i) fill-in-the blank; (ii) lexical translation. Results of the human evaluation and automatic models demonstrate that images can be a useful complement to the textual context. The dataset will benefit research on visual grounding of words especially in the context of free-form sentences, and can be obtained from https://doi.org/10.5281/zenodo.5034604 under a Creative Commons licence."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.07668,
+        "input_tokens": 19390,
+        "output_tokens": 632
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.01910"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

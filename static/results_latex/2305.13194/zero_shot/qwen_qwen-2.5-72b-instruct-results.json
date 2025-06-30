@@ -1,0 +1,132 @@
+{
+    "metadata": {
+        "Name": "seahorse",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 7506,
+                "Unit": "summaries",
+                "Language": "German"
+            },
+            {
+                "Name": "English",
+                "Volume": 22339,
+                "Unit": "summaries",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 14749,
+                "Unit": "summaries",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 14542,
+                "Unit": "summaries",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 15418,
+                "Unit": "summaries",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 15006,
+                "Unit": "summaries",
+                "Language": "Vietnamese"
+            }
+        ],
+        "Link": "https://goo.gle/seahorse",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": [
+            "German",
+            "English",
+            "Spanish",
+            "Russian",
+            "Turkish",
+            "Vietnamese"
+        ],
+        "Domain": [
+            "news articles",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A multilingual, multifaceted dataset for summarization evaluation, consisting of 96K summaries with human ratings along 6 dimensions of text quality.",
+        "Volume": 96645.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google DeepMind",
+            "Google Research"
+        ],
+        "Derived From": [
+            "XSum",
+            "XL-Sum",
+            "MLSum",
+            "WikiLingua"
+        ],
+        "Paper Title": "seahorse: A Multilingual, Multifaceted Dataset for Summarization Evaluation",
+        "Paper Link": "https://goo.gle/seahorse",
+        "Tokenized": false,
+        "Host": "kaggle",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "EMNLP 2023",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2023",
+        "Authors": [
+            "Elizabeth Clark",
+            "Shruti Rijhwani",
+            "Sebastian Gehrmann",
+            "Joshua Maynez",
+            "Roee Aharoni",
+            "Vitaly Nikolaev",
+            "Thibault Sellam",
+            "Aditya Siddhant",
+            "Dipanjan Das",
+            "Ankur P. Parikh"
+        ],
+        "Affiliations": [
+            "Google DeepMind",
+            "Google Research"
+        ],
+        "Abstract": "Reliable automatic evaluation of summarization systems is challenging due to the multifaceted and subjective nature of the task. This is especially the case for languages other than English, where human evaluations are scarce. In this work, we introduce seahorse, a dataset for multilingual, multifaceted summarization evaluation. seahorse consists of 96K summaries with human ratings along 6 dimensions of text quality: comprehensibility, repetition, grammar, attribution, main ideas, and conciseness. seahorse covers 6 languages, 9 systems (including the reference text), and 4 summarization datasets. As a result of its size and scope, seahorse can serve both as a benchmark to evaluate learnt metrics, as well as a large-scale resource for training such metrics."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00337716,
+        "input_tokens": 24404,
+        "output_tokens": 776
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.13194"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

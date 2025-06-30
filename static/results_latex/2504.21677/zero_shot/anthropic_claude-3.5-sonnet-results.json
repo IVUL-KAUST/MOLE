@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "20min-XD",
+        "Link": "https://huggingface.co/datasets/ZurichNLP/20min-XD",
+        "HF Link": "https://huggingface.co/datasets/ZurichNLP/20min-XD",
+        "License": "custom",
+        "Year": 2025,
+        "Language": "fr",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A French-German comparable corpus of 15,000 news article pairs from Swiss newspaper 20 Minuten/20 minutes, spanning 2015-2024, automatically aligned based on semantic similarity",
+        "Volume": 15000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "TX Group AG",
+            "20 Minuten",
+            "University of Zurich"
+        ],
+        "Derived From": [],
+        "Paper Title": "20min-XD: A Comparable Corpus of Swiss News Articles",
+        "Paper Link": "https://arxiv.org/abs/2504.21677",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "cross-lingual information retrieval",
+            "machine translation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Michelle Wastl",
+            "Jannis Vamvas",
+            "Selena Calleri",
+            "Rico Sennrich"
+        ],
+        "Affiliations": [
+            "Department of Computational Linguistics, University of Zurich",
+            "20 Minuten (TX Group)"
+        ],
+        "Abstract": "We present 20min-XD (20 Minuten cross-lingual document-level), a French-German, document-level comparable corpus of news articles, sourced from the Swiss online news outlet 20 Minuten/20 minutes. Our dataset comprises around 15,000 article pairs spanning 2015 to 2024, automatically aligned based on semantic similarity. We detail the data collection process and alignment methodology. Furthermore, we provide a qualitative and quantitative analysis of the corpus. The resulting dataset exhibits a broad spectrum of cross-lingual similarity, ranging from near-translations to loosely related articles, making it valuable for various NLP applications and broad linguistically motivated studies. We publicly release the dataset in document- and sentence-aligned versions and code for the described experiments"
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 0.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.055269,
+        "input_tokens": 13263,
+        "output_tokens": 513
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.21677"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

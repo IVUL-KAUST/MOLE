@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "RusCode",
+        "Link": "https://github.com/ai-forever/RusCode",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "Benchmark for evaluating the quality of text-to-image generation containing elements of the Russian cultural code",
+        "Volume": 1250.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber AI",
+            "SberDevices",
+            "MIPT",
+            "ITMO University",
+            "AIRI"
+        ],
+        "Derived From": [],
+        "Paper Title": "RusCode: Russian Cultural Code Benchmark for Text-to-Image Generation",
+        "Paper Link": "https://arxiv.org/abs/2406.12847",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "text generation"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Viacheslav Vasilev",
+            "Julia Agafonova",
+            "Nikolai Gerasimenko",
+            "Alexander Kapitanov",
+            "Polina Mikhailova",
+            "Evelina Mironova",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "Sber AI",
+            "SberDevices",
+            "MIPT",
+            "ITMO University",
+            "AIRI"
+        ],
+        "Abstract": "Text-to-image generation models have gained popularity among users around the world. However, many of these models exhibit a strong bias toward English-speaking cultures, ignoring or misrepresenting the unique characteristics of other language groups, countries, and nationalities. The lack of cultural awareness can reduce the generation quality and lead to undesirable consequences such as unintentional insult, and the spread of prejudice. In contrast to the field of natural language processing, cultural awareness in computer vision has not been explored as extensively. In this paper, we strive to reduce this gap. We propose a RusCode benchmark for evaluating the quality of text-to-image generation containing elements of the Russian cultural code. To do this, we form a list of 19 categories that best represent the features of Russian visual culture. Our final dataset consists of 1250 text prompts in Russian and their translations into English. The prompts cover a wide range of topics, including complex concepts from art, popular culture, folk traditions, famous people's names, natural objects, scientific achievements, etc. We present the results of a human evaluation of the side-by-side comparison of Russian visual concepts representations using popular generative models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 0.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00246666,
+        "input_tokens": 12186,
+        "output_tokens": 599
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2502.07455"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

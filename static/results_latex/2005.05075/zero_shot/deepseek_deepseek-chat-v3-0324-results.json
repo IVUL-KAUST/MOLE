@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "First French COVID19 Lockdown Twitter Dataset",
+        "Link": "https://github.com/calciu/COVID19-LockdownFr",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A French Twitter dataset collected during the COVID-19 lockdown, focusing on sentiment and emotion analysis.",
+        "Volume": 2474086.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Picardie",
+            "Paris-Nanterre University",
+            "Lille University"
+        ],
+        "Derived From": [],
+        "Paper Title": "The First French COVID19 Lockdown Twitter Dataset",
+        "Paper Link": "https://arxiv.org/abs/2005.05075",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis",
+            "emotion classification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Sophie Balech",
+            "Christophe Benavent",
+            "Mihai Calciu"
+        ],
+        "Affiliations": [
+            "IAE Amiens, University of Picardie, France",
+            "Department of Management Science, Paris-Nanterre University, France",
+            "IAE Lille, Lille University, France"
+        ],
+        "Abstract": "In this paper, we present a mainly French coronavirus Twitter dataset that we have been continuously collecting since lockdown restrictions have been enacted in France (in March 17, 2020). We offer our datasets and sentiment analysis annotations to the research community at https://github.com/calciu/COVID19-LockdownFr. They have been obtained using high performance computing (HPC) capabilities of our university's datacenter. We think that our contribution can facilitate analysis of online conversation dynamics reflecting people sentiments when facing severe home confinement restrictions determined by the outbreak of this world wide epidemic. We hope that our contribution will help decode shared experience and mood but also test the sensitivity of sentiment measurement instruments and incite the development of new instruments, methods and approaches."
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00280306,
+        "input_tokens": 6854,
+        "output_tokens": 490
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.05075"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "KaoKore",
+        "Link": "https://github.com/rois-codh/kaokore",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "books",
+            "public datasets"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "KaoKore is a dataset consisting of faces extracted from pre-modern Japanese artwork. It is designed for image classification and creative exploration using generative models.",
+        "Volume": 5552.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "ROIS-DS Center for Open Data in the Humanities",
+            "National Institute of Japanese Literature",
+            "Kyoto University Rare Materials Digital Archive",
+            "Keio University Media Center"
+        ],
+        "Derived From": [
+            "Collection of Facial Expressions"
+        ],
+        "Paper Title": "KaoKore: A Pre-modern Japanese Art Facial Expression Dataset",
+        "Paper Link": "https://github.com/rois-codh/kaokore",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "meter classification"
+        ],
+        "Venue Title": "ICCC",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Yingtao Tian",
+            "Chikahiko Suzuki",
+            "Tarin Clanuwat",
+            "Mikel Bober-Irizar",
+            "Alex Lamb",
+            "Asanobu Kitamoto"
+        ],
+        "Affiliations": [
+            "Google Brain",
+            "ROIS-DS Center for Open Data in the Humanities",
+            "University of Cambridge",
+            "MILA Universit\u00e9 de Montr\u00e9al"
+        ],
+        "Abstract": "From classifying handwritten digits to generating strings of text, the datasets which have received long-time focus from the machine learning community vary greatly in their subject matter. This has motivated a renewed interest in building datasets which are socially and culturally relevant, so that algorithmic research may have a more direct and immediate impact on society. One such area is in history and the humanities, where better and relevant machine learning models can accelerate research across various fields. To this end, newly released benchmarks and models have been proposed for transcribing historical Japanese cursive writing, yet for the field as a whole using machine learning for historical Japanese artworks still remains largely uncharted. To bridge this gap, in this work we propose a new dataset KaoKore which consists of faces extracted from pre-modern Japanese artwork. We demonstrate its value as both a dataset for image classification as well as a creative and artistic dataset, which we explore using generative models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0271625,
+        "input_tokens": 10199,
+        "output_tokens": 583
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.08595"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

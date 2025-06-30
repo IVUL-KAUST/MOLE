@@ -1,0 +1,103 @@
+{
+    "metadata": {
+        "Name": "OBSINFOX",
+        "Link": "https://github.com/obs-info/obsinfox",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "news articles",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "crawling"
+        ],
+        "Description": "A multi-label dataset of 100 French fake news documents annotated with 11 labels by 8 annotators.",
+        "Volume": 100.0,
+        "Unit": "documents",
+        "Ethical Risks": "High",
+        "Provider": [
+            "LIP6, Sorbonne Universit\u00e9, CNRS, France",
+            "Institut Jean-Nicod, CNRS, ENS-PSL, EHESS, France",
+            "Freedom Partners, France",
+            "Universit\u00e9 de Rennes, CNRS, Inria, IRISA, France",
+            "Airbus Defence and Space, France",
+            "Universit\u00e9 Paris-Saclay, CentraleSup\u00e9lec, MICS, France",
+            "Mondeca, France",
+            "European Union Agency for Railways, France",
+            "Observatoire des M\u00e9dias, France"
+        ],
+        "Derived From": [
+            "ISOT",
+            "LIAR",
+            "FreSaDa"
+        ],
+        "Paper Title": "A Multi-Label Dataset of French Fake News: Human and Machine Insights",
+        "Paper Link": "https://onlineacademiccommunity.uvic.ca/isot/#datasets",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "fake news detection",
+            "sentiment analysis",
+            "topic classification",
+            "instruction tuning"
+        ],
+        "Venue Title": "A Multi-Label Dataset of French Fake News: Human and Machine Insights",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Benjamin Icard",
+            "Fran\u00e7ois Maine",
+            "Morgane Casanova",
+            "G\u00e9raud Faye",
+            "Julien Chanson",
+            "Guillaume Gadek",
+            "Ghislain Atemezing",
+            "Fran\u00e7ois Bancilhon",
+            "Paul \u00c9gr\u00e9"
+        ],
+        "Affiliations": [
+            "LIP6, Sorbonne Universit\u00e9, CNRS, France",
+            "Institut Jean-Nicod, CNRS, ENS-PSL, EHESS, France",
+            "Freedom Partners, France",
+            "Universit\u00e9 de Rennes, CNRS, Inria, IRISA, France",
+            "Airbus Defence and Space, France",
+            "Universit\u00e9 Paris-Saclay, CentraleSup\u00e9lec, MICS, France",
+            "Mondeca, France",
+            "European Union Agency for Railways, France",
+            "Observatoire des M\u00e9dias, France"
+        ],
+        "Abstract": "We present a corpus of 100 documents, named OBSINFOX, selected from 17 sources of French press considered unreliable by expert agencies, annotated using 11 labels by 8 annotators. By collecting more labels than usual, by more annotators than is typically done, we can identify features that humans consider as characteristic of fake news, and compare them to the predictions of automated classifiers. We present a topic and genre analysis using GATE Cloud, indicative of the prevalence of satire-like text in the corpus. We then use the subjectivity analyzer VAGO, and a neural version of it, to clarify the link between ascriptions of the label Subjective and ascriptions of the label Fake News."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00151662,
+        "input_tokens": 9896,
+        "output_tokens": 726
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.16099"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,159 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "Estonian",
+                "Volume": 0.097,
+                "Unit": "documents",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "Haitian Creole",
+                "Volume": 0.096,
+                "Unit": "documents",
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 0.099,
+                "Unit": "documents",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 0.098,
+                "Unit": "documents",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Eastern Apur\u00edmac Quechua",
+                "Volume": 0.098,
+                "Unit": "documents",
+                "Language": "Eastern Apur\u00edmac Quechua"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": 0.099,
+                "Unit": "documents",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": 0.1,
+                "Unit": "documents",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 0.099,
+                "Unit": "documents",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 0.097,
+                "Unit": "documents",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 0.097,
+                "Unit": "documents",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Mandarin Chinese",
+                "Volume": 0.096,
+                "Unit": "documents",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://github.com/cambridgeltl/xcopa",
+        "HF Link": "https://huggingface.co/datasets/xcopa",
+        "License": "CC BY 4.0",
+        "Year": 2020,
+        "Language": [
+            "Estonian",
+            "Haitian Creole",
+            "Indonesian",
+            "Italian",
+            "Eastern Apur\u00edmac Quechua",
+            "Swahili",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Chinese"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "XCOPA is a multilingual evaluation benchmark for causal commonsense reasoning, aligned across 11 languages, enabling cross-lingual comparisons. It tests the robustness of machine learning models for an array of rare phenomena displayed by the chosen languages.",
+        "Volume": 0.096,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://github.com/cambridgeltl/xcopa",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning"
+        ],
+        "Venue Title": "EMNLP 2020",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Edoardo M. Ponti",
+            "Goran Glava\u0161",
+            "Olga Majewska",
+            "Qianchu Liu",
+            "Ivan Vuli\u0107",
+            "Anna Korhonen"
+        ],
+        "Affiliations": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Abstract": "In order to simulate human language capacity, natural language processing systems must be able to reason about the dynamics of everyday situations, including their possible causes and effects. Moreover, they should be able to generalise the acquired world knowledge to new languages, modulo cultural differences. Advances in machine reasoning and cross-lingual transfer depend on the availability of challenging evaluation benchmarks. Motivated by both demands, we introduce Cross-lingual Choice of Plausible Alternatives (XCOPA), a typologically diverse multilingual dataset for causal commonsense reasoning in 11 languages, which includes resource-poor languages like Eastern Apur\u00edmac Quechua and Haitian Creole. We evaluate a range of state-of-the-art models on this novel dataset, revealing that the performance of current methods based on multilingual pretraining and zero-shot fine-tuning falls short compared to translation-based transfer. Finally, we propose strategies to adapt multilingual models to out-of-sample resource-lean languages where only a small corpus or a bilingual dictionary is available, and report substantial improvements over the random baseline. The XCOPA dataset is freely available at github.com/cambridgeltl/xcopa."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.059115,
+        "input_tokens": 20802,
+        "output_tokens": 1128
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

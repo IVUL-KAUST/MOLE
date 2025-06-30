@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "JTubeSpeech",
+        "Link": "https://github.com/sarulab-speech/jtubespeech",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "jp",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A Japanese speech corpus collected from YouTube for speech recognition and speaker verification",
+        "Volume": 1300.0,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "The University of Tokyo",
+            "Technical University of Munich",
+            "Tokyo Metropolitan University",
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [],
+        "Paper Title": "JTubeSpeech: corpus of Japanese speech collected from YouTube for speech recognition and speaker verification",
+        "Paper Link": "https://ieeexplore.ieee.org/document/9814547",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "speaker identification"
+        ],
+        "Venue Title": "2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        "Venue Type": "conference",
+        "Venue Name": "ICASSP 2022",
+        "Authors": [
+            "Shinnosuke Takamichi",
+            "Ludwig K\u00fcrzinger",
+            "Takaaki Saeki",
+            "Sayaka Shiota",
+            "Shinji Watanabe"
+        ],
+        "Affiliations": [
+            "The University of Tokyo, Japan",
+            "Technical University of Munich, Germany",
+            "Tokyo Metropolitan University, Japan",
+            "Carnegie Mellon University, USA"
+        ],
+        "Abstract": "In this paper, we construct a new Japanese speech corpus called JTubeSpeech. Although recent end-to-end learning requires large-size speech corpora, open-sourced such corpora for languages other than English have not yet been established. We describe the construction of a corpus from YouTube videos and subtitles for speech recognition and speaker verification. Our method can automatically filter the videos and subtitles with almost no language-dependent processes. We consistently employ Connectionist Temporal Classification (CTC)-based techniques for automatic speech recognition (ASR) and a speaker variation-based method for automatic speaker verification (ASV). We build 1) a large-scale Japanese ASR benchmark with more than 1,300 hours of data and 2) 900 hours of data for Japanese ASV."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8421052631578947
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00242097,
+        "input_tokens": 12097,
+        "output_tokens": 551
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2112.09323"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

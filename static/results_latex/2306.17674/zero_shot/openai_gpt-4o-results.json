@@ -1,0 +1,143 @@
+{
+    "metadata": {
+        "Name": "X-RiSAWOZ",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 18000,
+                "Unit": "utterances",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 18000,
+                "Unit": "utterances",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 18000,
+                "Unit": "utterances",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 18000,
+                "Unit": "utterances",
+                "Language": "Korean"
+            },
+            {
+                "Name": "English-Hindi",
+                "Volume": 18000,
+                "Unit": "utterances",
+                "Language": "Hindi"
+            }
+        ],
+        "Link": "https://github.com/stanford-oval/dialogues",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "French",
+            "Hindi",
+            "Korean"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "X-RiSAWOZ is a multilingual benchmark dataset created by translating the Chinese RiSAWOZ to English, French, Hindi, Korean, and a code-mixed English-Hindi language. It contains more than 18,000 human-verified dialogue utterances for each language and is an end-to-end dataset for building fully-functioning agents.",
+        "Volume": 18000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University",
+            "Tianjin University",
+            "Microsoft",
+            "Universit\u00e9 Paris-Saclay",
+            "International Institute of Information Technology",
+            "Hanyang University",
+            "Karya Inc."
+        ],
+        "Derived From": [
+            "RiSAWOZ"
+        ],
+        "Paper Title": "X-RiSAWOZ: High-Quality End-to-End Multilingual Dialogue Datasets and Few-shot Agents",
+        "Paper Link": "https://arxiv.org/abs/2301.12345",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "stance detection",
+            "text generation",
+            "text generation"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Mehrad Moradshahi",
+            "Tianhao Shen",
+            "Kalika Bali",
+            "Monojit Choudhury",
+            "Ga\u00ebl de Chalendar",
+            "Anmol Goel",
+            "Sungkyun Kim",
+            "Prashant Kodali",
+            "Ponnurangam Kumaraguru",
+            "Nasredine Semmar",
+            "Sina J. Semnani",
+            "Jiwon Seo",
+            "Vivek Seshadri",
+            "Manish Shrivastava",
+            "Michael Sun",
+            "Aditya Yadavalli",
+            "Chaobin You",
+            "Deyi Xiong",
+            "Monica S. Lam"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Tianjin University",
+            "Microsoft",
+            "Universit\u00e9 Paris-Saclay",
+            "International Institute of Information Technology",
+            "Hanyang University",
+            "Karya Inc."
+        ],
+        "Abstract": "Task-oriented dialogue research has mainly focused on a few popular languages like English and Chinese, due to the high dataset creation cost for a new language. To reduce the cost, we apply manual editing to automatically translated data. We create a new multilingual benchmark, X-RiSAWOZ, by translating the Chinese RiSAWOZ to 4 languages: English, French, Hindi, Korean; and a code-mixed English-Hindi language. X-RiSAWOZ has more than 18,000 human-verified dialogue utterances for each language, and unlike most multilingual prior work, is an end-to-end dataset for building fully-functioning agents. The many difficulties we encountered in creating X-RiSAWOZ led us to develop a toolset to accelerate the post-editing of a new language dataset after translation. This toolset improves machine translation with a hybrid entity alignment technique that combines neural with dictionary-based methods, along with many automated and semi-automated validation checks. We establish strong baselines for X-RiSAWOZ by training dialogue agents in the zero- and few-shot settings where limited gold data is available in the target language. Our results suggest that our translation and post-editing methodology and toolset can be used to create new high-quality multilingual dialogue agents cost-effectively. Our dataset, code, and toolkit are released open-source."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.08325,
+        "input_tokens": 30586,
+        "output_tokens": 1097
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

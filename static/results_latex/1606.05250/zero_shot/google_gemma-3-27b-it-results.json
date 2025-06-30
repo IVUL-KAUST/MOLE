@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "SQuAD",
+        "Link": "https://stanford-qa.com",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage.",
+        "Volume": 107785.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "StanfordUniversity"
+        ],
+        "Derived From": [],
+        "Paper Title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+        "Paper Link": "https://arxiv.org/abs/1606.05250",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Jian Zhang",
+            "Konstantin Lopyrev",
+            "Percy Liang"
+        ],
+        "Affiliations": [
+            "ComputerScienceDepartment",
+            "StanfordUniversity"
+        ],
+        "Abstract": "We present the Stanford Question Answer-ingDataset(SQuAD),anewreadingcompre-hension dataset consisting of 100,000+ ques-tions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the cor-responding reading passage. We analyze the dataset to understand the types of reason-ing required to answer the questions, lean-ing heavily on dependency and constituency trees. We build a strong logistic regression model,whichachievesanF1scoreof51.0%,asignificantimprovementoverasimplebase-line (20%). However, human performance (86.8%) is much higher, indicating that the datasetpresentsagoodchallengeproblemforfutureresearch. Thedatasetisfreelyavailableathttps://stanford-qa.com."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00145209,
+        "input_tokens": 12724,
+        "output_tokens": 519
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.05250"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

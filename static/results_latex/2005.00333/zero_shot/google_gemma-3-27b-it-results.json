@@ -1,0 +1,269 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Arabic"
+            },
+            {
+                "Name": "English",
+                "Volume": null,
+                "Unit": null,
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": null,
+                "Unit": null,
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Spanish"
+            },
+            {
+                "Name": "German",
+                "Volume": null,
+                "Unit": null,
+                "Language": "German"
+            },
+            {
+                "Name": "Greek",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Greek"
+            },
+            {
+                "Name": "Bulgarian",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Bulgarian"
+            },
+            {
+                "Name": "Russian",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Thai",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Thai"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Chinese"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Urdu",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Urdu"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Korean"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Telugu"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Italian"
+            },
+            {
+                "Name": "Polish",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Polish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Estonian"
+            },
+            {
+                "Name": "Haitian Creole",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "Eastern Apur\u00edmac Quechua",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Eastern Apur\u00edmac Quechua"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Tamil"
+            },
+            {
+                "Name": "Sinhala",
+                "Volume": null,
+                "Unit": null,
+                "Language": "Sinhala"
+            }
+        ],
+        "Link": "https://github.com/cambridgeltl/xcopa",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Estonian",
+            "Haitian Creole",
+            "Indonesian",
+            "Italian",
+            "Eastern Apur\u00edmac Quechua",
+            "Swahili",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Chinese"
+        ],
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "manual curation"
+        ],
+        "Description": "A multilingual dataset for causal commonsense reasoning, aligned across 11 languages.",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://arxiv.org/abs/2005.00333",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Edoardo M. Ponti",
+            "Goran Glava\u0161",
+            "Olga Majewska",
+            "Qianchu Liu",
+            "Ivan Vuli\u0107",
+            "Anna Korhonen"
+        ],
+        "Affiliations": [
+            "Language Technology Lab, TAL, University of Cambridge, UK",
+            "Data and Web Science Group, University of Mannheim, Germany"
+        ],
+        "Abstract": "In order to simulate human language capacity, natural language processing systems must be able to reason about the dynamics of everyday situations, including their possible causes and effects. Moreover, they should be able to generalise the acquired world knowledge to new languages, modulo cultural differences. Advances in machine reasoning and cross-lingual transfer depend on the availability of challenging evaluation benchmarks. Motivated by both demands, we introduce Cross-lingual Choice of Plausible Alternatives (XCOPA), a typologically diverse multilingual dataset for causal commonsense reasoning in 11 languages, which includes resource-poor languages like Eastern Apur\u00edmac Quechua and Haitian Creole. We evaluate a range of state-of-the-art models on this novel dataset, revealing that the performance of current methods based on multilingual pretraining and zero-shot fine-tuning falls short compared to translation-based transfer. Finally, we propose strategies to adapt multilingual models to out-of-sample resource-lean languages where only a small corpus or a bilingual dictionary is available, and report substantial improvements over the random baseline. The XCOPA dataset is freely available at github.com/cambridgeltl/xcopa."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0026919,
+        "input_tokens": 20802,
+        "output_tokens": 1599
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

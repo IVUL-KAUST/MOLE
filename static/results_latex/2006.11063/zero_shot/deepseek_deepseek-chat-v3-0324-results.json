@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "Gazeta",
+        "Link": "https://github.com/IlyaGusev/gazeta",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "Gazeta is the first dataset for summarization of Russian news, consisting of 63435 text-summary pairs collected from Gazeta.ru. It includes human-generated summaries and is designed for both extractive and abstractive summarization tasks.",
+        "Volume": 63435.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Moscow Institute of Physics and Technology"
+        ],
+        "Derived From": [],
+        "Paper Title": "Dataset for Automatic Summarization of Russian News",
+        "Paper Link": "https://arxiv.org/abs/2006.11063",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ilya Gusev"
+        ],
+        "Affiliations": [
+            "Moscow Institute of Physics and Technology, Moscow, Russia"
+        ],
+        "Abstract": "Automatic text summarization has been studied in a variety of domains and languages. However, this does not hold for the Russian language. To overcome this issue, we present Gazeta, the first dataset for summarization of Russian news. We describe the properties of this dataset and benchmark several extractive and abstractive models. We demonstrate that the dataset is a valid task for methods of text summarization for Russian. Additionally, we prove the pretrained mBART model to be useful for Russian text summarization."
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 1.0
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.01547125,
+        "input_tokens": 12166,
+        "output_tokens": 405
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2006.11063"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "https://stair-lab.github.io/STAIR-captions-web-page/",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A large-scale Japanese image caption dataset containing 820,355 Japanese captions for 164,062 images from the MS COCO dataset. The captions were collected via crowdsourcing and are of comparable quality to the original MS COCO English dataset.",
+        "Volume": 820355.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo",
+            "Nara Institute of Science and Technology"
+        ],
+        "Derived From": [
+            "MS COCO"
+        ],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://aclanthology.org/P17-2041.pdf",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "image captioning",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Yuya Yoshikawa",
+            "Yutaro Shigeto",
+            "Akikazu Takeuchi"
+        ],
+        "Affiliations": [
+            "Nara Institute of Science and Technology",
+            "The University of Tokyo"
+        ],
+        "Abstract": "We introduce a new, large-scale image caption dataset in Japanese, which we call STAIR Captions. While several caption datasets have been created for English, there are no such datasets for other languages like Japanese. This is a critical problem for the development of vision-and-language research, such as image captioning, in a diverse set of languages. To build our dataset, we followed the same procedure as for the MS COCO dataset, which is the de facto standard for image captioning. We collected 820,355 Japanese captions for 164,062 images from the MS COCO dataset. We conducted a crowdsourcing-based evaluation of the generated captions and confirmed that our new dataset is of comparable quality to the original MS COCO English dataset. We also trained a Japanese image captioning model with our dataset and evaluated its output. The dataset is available at https://stair-lab.github.io/STAIR-captions-web-page/."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.05252875,
+        "input_tokens": 3463,
+        "output_tokens": 1606
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

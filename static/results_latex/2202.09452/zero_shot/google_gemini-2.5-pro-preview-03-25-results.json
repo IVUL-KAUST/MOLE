@@ -1,0 +1,106 @@
+{
+    "metadata": {
+        "Name": "FreEMmax",
+        "Link": "https://huggingface.co/datasets/dalembert/FreEMmax",
+        "HF Link": "https://huggingface.co/datasets/dalembert/FreEMmax",
+        "License": "custom",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "books",
+            "public datasets",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A large corpus of Early Modern French texts (16th-18th centuries) collected from various sources including institutional databases, research projects, and web scraping. It was created to train the D'AlemBERT language model.",
+        "Volume": 185643482.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Inria",
+            "Sorbonne Universit\u00e9",
+            "Universit\u00e9 de Gen\u00e8ve",
+            "LIGM, Universit\u00e9 Gustage Eiffel, CNRS"
+        ],
+        "Derived From": [
+            "Frantext",
+            "Electronic Enlightenment",
+            "Antonomaz project",
+            "Actis Pacis Westphalicae",
+            "Biblioth\u00e8ques virtuelles humanistes",
+            "Corpus \u00e9lectronique de la premi\u00e8re modernit\u00e9",
+            "Cond\u00e9 project",
+            "Corpus Descartes",
+            "Biblioth\u00e8que dramatique",
+            "Fabula numerica",
+            "Fonds Boissy",
+            "Mercure Galant",
+            "Rousseau online",
+            "Sermo project",
+            "Th\u00e9\u00e2tre classique",
+            "Wikisource",
+            "Gallica"
+        ],
+        "Paper Title": "From FreEM to D\u2019AlemBERT: a Large Corpus and a Language Model for Early Modern French",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.14",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "part of speech tagging",
+            "language modeling",
+            "named entity recognition",
+            "other"
+        ],
+        "Venue Title": "Proceedings of the Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "LREC 2022",
+        "Authors": [
+            "Simon Gabay",
+            "Pedro Ortiz Suarez",
+            "Alexandre Bartz",
+            "Alix Chagu\u00e9",
+            "Rachel Bawden",
+            "Philippe Gambette",
+            "Beno\u00eet Sagot"
+        ],
+        "Affiliations": [
+            "Inria",
+            "Sorbonne Universit\u00e9",
+            "Universit\u00e9 de Gen\u00e8ve",
+            "LIGM, Universit\u00e9 Gustage Eiffel, CNRS"
+        ],
+        "Abstract": "Language models for historical states of language are becoming increasingly important to allow the optimal digitisation and analysis of old textual sources. Because these historical states are at the same time more complex to process and more scarce in the corpora available, specific efforts are necessary to train natural language processing (NLP) tools adapted to the data. In this paper, we present our efforts to develop NLP tools for Early Modern French (historical French from the 16th to the 18th centuries). We present the FreEMmax corpus of Early Modern French and D'AlemBERT, a RoBERTa-based language model trained on FreEMmax. We evaluate the usefulness of D'AlemBERT by fine-tuning it on a part-of-speech tagging task, outperforming previous work on the test set. Importantly, we find evidence for the transfer learning capacity of the language model, since its performance on lesser-resourced time periods appears to have been boosted by the more resourced ones. We release D'AlemBERT and the open-sourced subpart of the FreEMmax corpus."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0706125,
+        "input_tokens": 25139,
+        "output_tokens": 1671
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.09452"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

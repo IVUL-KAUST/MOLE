@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "RuDSI",
+        "Link": "https://github.com/kategavrishina/RuDSI",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "news articles",
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A graph-based word sense induction dataset for Russian, created using manual annotation and semi-automatic clustering of Word Usage Graphs (WUGs).",
+        "Volume": 840.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Research University Higher School of Economics",
+            "University of Oslo"
+        ],
+        "Derived From": [
+            "Russian National Corpus"
+        ],
+        "Paper Title": "RuDSI: graph-based word sense induction dataset for Russian",
+        "Paper Link": "https://aclanthology.org/2023.findings-acl.686",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "word prediction"
+        ],
+        "Venue Title": "Findings of the Association for Computational Linguistics: ACL 2023",
+        "Venue Type": "conference",
+        "Venue Name": "ACL",
+        "Authors": [
+            "Anna Aksenova",
+            "Ekaterina Gavrishina",
+            "Elisey Rykov",
+            "Andrey Kutuzov"
+        ],
+        "Affiliations": [
+            "National Research University Higher School of Economics",
+            "University of Oslo"
+        ],
+        "Abstract": "We present RuDSI, a new benchmark for word sense induction (WSI) in Russian. The dataset was created using manual annotation and semi-automatic clustering of Word Usage Graphs (WUGs). Unlike prior WSI datasets for Russian, RuDSI is completely data-driven (based on texts from Russian National Corpus), with no external word senses imposed on annotators. Depending on the parameters of graph clustering, different derivative datasets can be produced from raw annotation. We report the performance that several baseline WSI methods obtain on RuDSI and discuss possibilities for improving these scores."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00405998,
+        "input_tokens": 14132,
+        "output_tokens": 483
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2209.13750"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

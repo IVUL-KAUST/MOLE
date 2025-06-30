@@ -1,0 +1,186 @@
+{
+    "metadata": {
+        "Name": "MultiSubs",
+        "Subsets": [
+            {
+                "Name": "intersect_1",
+                "Volume": 2159635,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "intersect_1",
+                "Volume": 1796095,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "intersect_1",
+                "Volume": 1063071,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "intersect_1",
+                "Volume": 384480,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "intersect_2",
+                "Volume": 1083748,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "intersect_2",
+                "Volume": 1043991,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "intersect_2",
+                "Volume": 641865,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "intersect_2",
+                "Volume": 250686,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "intersect_3",
+                "Volume": 335484,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "intersect_3",
+                "Volume": 332996,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "intersect_3",
+                "Volume": 305817,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "intersect_3",
+                "Volume": 131349,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "intersect_4",
+                "Volume": 45209,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "intersect_4",
+                "Volume": 45203,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "intersect_4",
+                "Volume": 45217,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "intersect_4",
+                "Volume": 45214,
+                "Unit": "sentences",
+                "Language": "German"
+            }
+        ],
+        "Link": "https://doi.org/10.5281/zenodo.5034604",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2018,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "French",
+            "German"
+        ],
+        "Domain": [
+            "reviews",
+            "reviews",
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale multimodal and multilingual dataset of movie subtitles with images illustrating text fragments, facilitating research on grounding words to images in their contextual usage.",
+        "Volume": 38000000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Imperial College London",
+            "Federal University of Mato Grosso"
+        ],
+        "Derived From": [
+            "OpenSubtitles 2016 (OPUS)"
+        ],
+        "Paper Title": "MultiSubs: A Large-scale Multimodal and Multilingual Dataset",
+        "Paper Link": "https://doi.org/10.5281/zenodo.5034604",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fill-in-the blank",
+            "machine translation"
+        ],
+        "Venue Title": "MultiSubs: A Large-scale Multimodal and Multilingual Dataset",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Josiah Wang",
+            "Pranava Madhyastha",
+            "Josiel Figueiredo",
+            "Chiraag Lala",
+            "Lucia Specia"
+        ],
+        "Affiliations": [
+            "Imperial College London, London, UK",
+            "Federal University of Mato Grosso, Cuiab\u00e1, Brazil"
+        ],
+        "Abstract": "This paper introduces a large-scale multimodal and multilingual dataset that aims to facilitate research on grounding words to images in their contextual usage in language. The dataset consists of images selected to unambiguously illustrate concepts expressed in sentences from movie subtitles. The dataset is a valuable resource as (i) the images are aligned to text fragments rather than whole sentences; (ii) multiple images are possible for a text fragment and a sentence; (iii) the sentences are free-form and real-world like; (iv) the parallel texts are multilingual."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00311285,
+        "input_tokens": 19387,
+        "output_tokens": 1123
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.01910"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

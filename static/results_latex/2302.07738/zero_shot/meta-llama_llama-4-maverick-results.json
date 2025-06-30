@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Alloprof",
+        "Link": "https://github.com/mila-aia/alloprof-data",
+        "HF Link": "https://huggingface.co/datasets/antoinelb7/alloprof",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A French question-answering dataset for education",
+        "Volume": 29349.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Alloprof",
+            "Mila"
+        ],
+        "Derived From": [],
+        "Paper Title": "Alloprof: a French question-answer education dataset and its use in an information retrieval case study",
+        "Paper Link": "https://arxiv.org/abs/2304.12345",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "Arxiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Antoine Lefebvre-Brossard",
+            "Stephane Gazaille",
+            "Michel C. Desmarais"
+        ],
+        "Affiliations": [
+            "Mila - Quebec AI Institute",
+            "Polytechnique Montr\u00e9al"
+        ],
+        "Abstract": "Context: Teachers and students are increasingly relying on online learning resources to supplement the ones provided in school. Objectives: We introduce a new public French question-answering dataset collected from Alloprof, a Quebec-based primary and high-school help website. Method: This dataset was collected on the Alloprof public forum, with all questions verified for their appropriateness and the explanations verified both for their appropriateness and their relevance to the question. Results: The best model obtains a prediction score of 58.5%. Conclusions: This dataset will allow researchers to develop question-answering, information retrieval and other algorithms specifically for the French speaking education context."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00238935,
+        "input_tokens": 14670,
+        "output_tokens": 457
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2302.07738"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

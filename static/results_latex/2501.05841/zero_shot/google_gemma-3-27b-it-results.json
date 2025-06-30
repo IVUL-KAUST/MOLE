@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "Russian Financial Statements Database",
+        "Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "HF Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Domain": [
+            "reviews",
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "An open, harmonized collection of annual unconsolidated financial statements of the universe of Russian firms in 2011--2023. It is the first open data set with information on every active firm in the country, including non-filing firms.",
+        "Volume": 56646047.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Federal Tax Service of Russia",
+            "Federal State Statistics Service of Russia"
+        ],
+        "Derived From": [],
+        "Paper Title": "Russian Financial Statements Database: A firm-level collection of the universe of financial statements",
+        "Paper Link": "https://arxiv.org/abs/2405.07111",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "lexicon analysis",
+            "language modeling",
+            "question answering",
+            "irony detection",
+            "transliteration",
+            "semantic parsing"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Sergey Bondarkov",
+            "Viktor Ledenev",
+            "Dmitry Skougarevskiy"
+        ],
+        "Affiliations": [
+            "European University at Saint Petersburg, The Institute for the Rule of Law, Saint Petersburg, 191187, Russia"
+        ],
+        "Abstract": "The Russian Financial Statements Database (RFSD) is an open, harmonized collection of annual unconsolidated financial statements of the universe of Russian firms in 2011--2023. It is the first open data set with information on every active firm in the country, including non-filing firms. With 56.6 million geolocated firm-year observations gathered from two official sources, the RFSD features multiple end-user quality-of-life improvements such as data imputation, statement articulation, harmonization across data providers and formats, and data enrichment. Extensive internal and external validation shows that most statements articulate well while their aggregates display higher correlation with the regional GDP than the previous gridded GDP data products. We also examine the direction and magnitude of the reporting bias by comparing the universe of firms that are required to file with the actual filers. The RFSD can be used in various economic applications as diverse as calibration of micro-founded models, estimation of markups and productivity, or assessing industry organization and market power."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.003174008,
+        "input_tokens": 25443,
+        "output_tokens": 663
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

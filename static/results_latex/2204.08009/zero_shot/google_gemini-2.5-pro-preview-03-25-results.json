@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "WikiOmnia",
+        "Link": "https://huggingface.co/datasets/RussianNLP/wikiomnia",
+        "HF Link": "https://huggingface.co/datasets/RussianNLP/wikiomnia",
+        "License": "Apache-2.0",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "LLM generated",
+            "machine annotation"
+        ],
+        "Description": "A large-scale, publicly available question-answering (QA) dataset for Russian. It was created using a fully automated pipeline to generate QA pairs from the summary sections of all Russian Wikipedia articles. The dataset includes a raw version with nearly 16 million pairs and a filtered, high-quality version with over 3.5 million pairs.",
+        "Volume": 15921913.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Artificial Intelligence Research Institute (AIRI)",
+            "SberDevices"
+        ],
+        "Derived From": [
+            "Russian Wikipedia",
+            "SberQuAD"
+        ],
+        "Paper Title": "WikiOmnia: filtration and evaluation of the generated QA corpus on the whole Russian Wikipedia",
+        "Paper Link": "https://aclanthology.org/2021.gem-1.39/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "Proceedings of the 1st Workshop on Natural Language Generation, Evaluation, and Metrics (GEM 2021)",
+        "Venue Type": "workshop",
+        "Venue Name": "1st Workshop on Natural Language Generation, Evaluation, and Metrics",
+        "Authors": [
+            "Dina Pisarevskaya",
+            "Tatiana Shavrina"
+        ],
+        "Affiliations": [
+            "Independent Researcher",
+            "Artificial Intelligence Research Institute (AIRI)",
+            "SberDevices"
+        ],
+        "Abstract": "The General QA field has been developing the methodology referencing the Stanford Question answering dataset (SQuAD) as the significant benchmark. Compiling factual questions datasets requires manual annotations, limiting the training data's potential size. We present the WikiOmnia dataset, a new publicly available set of QA pairs and corresponding Russian Wikipedia article summary sections, composed with a fully automated generation and filtration pipeline. To ensure high quality of generated QA pairs, diverse manual and automated evaluation techniques were applied. The WikiOmnia pipeline is available open-source and is also tested for creating SQuAD-formatted QA on other domains, like news texts, fiction, and social media. The resulting dataset includes two parts: raw data on the whole Russian Wikipedia (7,930,873 QA pairs with paragraphs for ruGPT-3 XL and 7,991,040 QA pairs with paragraphs for ruT5-large) and cleaned data with strict automatic verification (over 160,000 QA pairs with paragraphs for ruGPT-3 XL and over 3,400,000 QA pairs with paragraphs for ruT5-large)."
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8888888888888888
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.05272625,
+        "input_tokens": 12917,
+        "output_tokens": 1601
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.08009"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

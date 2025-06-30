@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "FIJO",
+        "Link": "https://github.com/iid-ulaval/FIJO-dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A public dataset of 867 French job offers from the insurance domain. A subset of 47 offers is manually annotated with 499 soft skill mentions, categorized into four classes: Thoughts, Results, Relational, and Personal. The dataset is intended for soft skill detection tasks.",
+        "Volume": 867.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Laval",
+            "Institute Intelligence and Data"
+        ],
+        "Derived From": [],
+        "Paper Title": "\u201cFIJO\u201d: a French Insurance Soft Skill Detection Dataset",
+        "Paper Link": "https://hal.science/hal-03689783/document",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Conf\u00e9rence sur l'Apprentissage automatique (CAp)",
+        "Venue Type": "conference",
+        "Venue Name": "Conf\u00e9rence sur l'Apprentissage automatique",
+        "Authors": [
+            "David Beauchemin",
+            "Julien Laumonier",
+            "Yvan Le Ster",
+            "Marouane Yassine"
+        ],
+        "Affiliations": [
+            "Departement of Computer Science and Software Engineering, Universit\u00e9 Laval, Qu\u00e9bec, Canada",
+            "Institute Intelligence and Data, Universit\u00e9 Laval, Qu\u00e9bec, Canada"
+        ],
+        "Abstract": "Understanding the evolution of job requirements is becoming more important for workers, companies and public organizations to follow the fast transformation of the employment market. Fortunately, recent natural language processing (NLP) approaches allow for the development of methods to automatically extract information from job ads and recognize skills more precisely. However, these efficient approaches need a large amount of annotated data from the studied domain which is difficult to access, mainly due to intellectual property. This article proposes a new public dataset, FIJO, containing insurance job offers, including many soft skill annotations. To understand the potential of this dataset, we detail some characteristics and some limitations. Then, we present the results of skill detection algorithms using a named entity recognition approach and show that transformers-based models have good token-wise performances on this dataset. Lastly, we analyze some errors made by our best model to emphasize the difficulties that may arise when applying NLP approaches."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.052425,
+        "input_tokens": 13900,
+        "output_tokens": 1332
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.05208"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

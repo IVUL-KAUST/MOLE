@@ -1,0 +1,139 @@
+{
+    "metadata": {
+        "Name": "PRESTO",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 95671,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 96164,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "French",
+                "Volume": 95870,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 72107,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 109528,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "German",
+                "Volume": 83584,
+                "Unit": "sentences",
+                "Language": "German"
+            }
+        ],
+        "Link": "https://github.com/google-research-datasets/presto",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "Spanish",
+            "French",
+            "Hindi",
+            "Japanese",
+            "German"
+        ],
+        "Domain": [
+            "social media",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A multilingual dataset for parsing realistic task-oriented dialogs.",
+        "Volume": 95671.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Inc.",
+            "University of Rochester",
+            "University of California, Santa Barbara",
+            "Columbia University"
+        ],
+        "Derived From": [],
+        "Paper Title": "PRESTO: A Multilingual Dataset for Parsing Realistic Task-Oriented Dialogs",
+        "Paper Link": "https://arxiv.org/abs/2306.08997",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "sentiment analysis"
+        ],
+        "Venue Title": "Transactions of the Association for Computational Linguistics",
+        "Venue Type": "journal",
+        "Venue Name": "TACL",
+        "Authors": [
+            "Rahul Goel",
+            "Waleed Ammar",
+            "Aditya Gupta",
+            "Siddharth Vashishtha",
+            "Motoki Sano",
+            "Faiz Surani",
+            "Max Chang",
+            "HyunJeong Choe",
+            "David Greene",
+            "Kyle He",
+            "Rattima Nitisaroj",
+            "Anna Trukhina",
+            "Shachi Paul",
+            "Pararth Shah",
+            "Rushin Shah",
+            "Zhou Yu"
+        ],
+        "Affiliations": [
+            "Google Inc.",
+            "University of Rochester",
+            "University of California, Santa Barbara",
+            "Columbia University"
+        ],
+        "Abstract": "Research interest in task-oriented dialogs has increased as systems such as Google Assistant, Alexa and Siri have become ubiquitous in everyday life. However, the impact of academic research in this area has been limited by the lack of datasets that realistically capture the wide array of user pain points. To enable research on some of the more challenging aspects of parsing realistic conversations, we introduce PRESTO, a public dataset of over 550K contextual multilingual conversations between humans and virtual assistants. PRESTO contains a diverse array of challenges that occur in real-world NLU tasks such as disfluencies, code-switching, and revisions. It is the only large-scale human generated conversational parsing dataset that provides structured context such as a user's contacts and lists for each example."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0046434,
+        "input_tokens": 23574,
+        "output_tokens": 848
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2303.08954"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

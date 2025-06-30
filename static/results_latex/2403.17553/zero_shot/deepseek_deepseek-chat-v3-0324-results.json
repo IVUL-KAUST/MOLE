@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "RuBia",
+        "Link": "http://github.com/vergrig/RuBia-Dataset",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A Russian language bias detection dataset divided into 4 domains: gender, nationality, socio-economic status, and diverse, with nearly 2,000 unique sentence pairs.",
+        "Volume": 1989.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Queen's University",
+            "Higher School of Economics",
+            "Wildberries",
+            "Linguistic Convergence Laboratory"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuBia: A Russian Language Bias Detection Dataset",
+        "Paper Link": "https://arxiv.org/abs/2403.17553",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "irony detection",
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Veronika Grigoreva",
+            "Anastasiia Ivanova",
+            "Ilseyar Alimova",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "Queen's University",
+            "Higher School of Economics",
+            "Wildberries",
+            "Linguistic Convergence Laboratory"
+        ],
+        "Abstract": "Warning: this work contains upsetting or disturbing content. Large language models (LLMs) tend to learn the social and cultural biases present in the raw pre-training data. To test if a LLM's behavior is fair, functional datasets are employed, and due to their purpose, these datasets are highly language and culture-specific. In this paper, we address a gap in the scope of multilingual bias evaluation by presenting a bias detection dataset specifically designed for the Russian language, dubbed as RuBia. The RuBia dataset is divided into 4 domains: gender, nationality, socio-economic status, and diverse, each of the domains is further divided into multiple fine-grained subdomains. Every example in the dataset consists of two sentences with the first reinforcing a potentially harmful stereotype or trope and the second contradicting it. These sentence pairs were first written by volunteers and then validated by native-speaking crowdsourcing workers. Overall, there are nearly 2,000 unique sentence pairs spread over 19 subdomains in RuBia. To illustrate the dataset's purpose, we conduct a diagnostic evaluation of state-of-the-art or near-state-of-the-art LLMs and discuss the LLMs' predisposition to social biases."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00583834,
+        "input_tokens": 15894,
+        "output_tokens": 592
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.17553"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

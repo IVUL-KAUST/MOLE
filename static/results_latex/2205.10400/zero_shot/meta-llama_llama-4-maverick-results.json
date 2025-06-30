@@ -1,0 +1,116 @@
+{
+    "metadata": {
+        "Name": "Multi$^{2}$WOZ",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 29500,
+                "Unit": "utterances",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 29500,
+                "Unit": "utterances",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 29500,
+                "Unit": "utterances",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 29500,
+                "Unit": "utterances",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "https://github.com/umanlp/Multi2WOZ",
+        "HF Link": "https://huggingface.co/umanlp/TOD-XLMR",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian",
+            "English"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A multilingual multi-domain task-oriented dialog dataset derived from the English MultiWOZ dataset, translated into four languages: Arabic, Chinese, German, and Russian.",
+        "Volume": 29500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Mannheim",
+            "Bocconi University",
+            "University of Cambridge",
+            "University of W\u00fcrzburg"
+        ],
+        "Derived From": [
+            "MultiWOZ"
+        ],
+        "Paper Title": "Multi$^{2}$WOZ: A Robust Multilingual Dataset and Conversational Pretraining for Task-Oriented Dialog",
+        "Paper Link": "https://aclanthology.org/2022.naacl-main.45",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "NAACL",
+        "Venue Type": "conference",
+        "Venue Name": "2022 Annual Conference of the North American Chapter of the Association for Computational Linguistics",
+        "Authors": [
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107",
+            "Simone Paolo Ponzetto",
+            "Goran Glava\u0161"
+        ],
+        "Affiliations": [
+            "Data and Web Science Group, University of Mannheim, Germany",
+            "MilaNLP, Bocconi University, Italy",
+            "LTL, University of Cambridge, UK",
+            "CAIDAS, University of W\u00fcrzburg, Germany"
+        ],
+        "Abstract": "Research on task-oriented dialog (TOD) has predominantly focused on English, due to the lack of robust TOD datasets in other languages. This work introduces Multi$^{2}$WOZ, a multilingual multi-domain TOD dataset derived from the English MultiWOZ dataset, translated into four languages: Arabic, Chinese, German, and Russian. The dataset is designed to facilitate cross-lingual transfer for TOD tasks. The authors also propose a framework for multilingual conversational specialization of pretrained language models, which improves the performance and sample efficiency of cross-lingual transfer for TOD tasks."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00339915,
+        "input_tokens": 20792,
+        "output_tokens": 758
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

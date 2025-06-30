@@ -1,0 +1,155 @@
+{
+    "metadata": {
+        "Name": "MEE",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 13000,
+                "Unit": "segments",
+                "Language": "English"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 3268,
+                "Unit": "segments",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 4479,
+                "Unit": "segments",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 4480,
+                "Unit": "segments",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 1499,
+                "Unit": "segments",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "Polish",
+            "Turkish",
+            "Hindi",
+            "Japanese",
+            "Korean"
+        ],
+        "Domain": [
+            "social media",
+            "news articles",
+            "reviews",
+            "commentary",
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A novel Multilingual Event Extraction dataset (MEE) that provides annotation for more than 50K event mentions in 8 typologically different languages.",
+        "Volume": 415975.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Paper Link": "https://arxiv.org/abs/2211.05955",
+        "Tokenized": false,
+        "Host": "data.world",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation",
+            "speech recognition",
+            "sentiment analysis",
+            "language modeling",
+            "topic classification",
+            "dialect identification",
+            "text generation",
+            "cross-lingual information retrieval",
+            "named entity recognition",
+            "question answering",
+            "multiple choice question answering",
+            "information retrieval",
+            "part of speech tagging",
+            "language identification",
+            "summarization"
+        ],
+        "Venue Title": "EMNLP2022",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Amir Pouran Ben Veyseh",
+            "Javid Ebrahimi",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, University of Oregon",
+            "Adobe Research"
+        ],
+        "Abstract": "Event Extraction (EE) is one of the fundamental tasks in Information Extraction (IE) that aims to recognize event mentions and their arguments (i.e., participants) from text. Due to its importance, extensive methods and resources have been developed for Event Extraction. However, one limitation of current research for EE involves the under-exploration for non-English languages in which the lack of high-quality multilingual EE datasets for model training and evaluation has been the main hindrance. To address this limitation, we propose a novel Multilingual Event Extraction dataset (MEE) that provides annotation for more than 50K event mentions in 8 typologically different languages. MEE comprehensively annotates data for entity mentions, event triggers and event arguments. We conduct extensive experiments on the proposed dataset to reveal challenges and opportunities for multilingual EE."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0019059,
+        "input_tokens": 14730,
+        "output_tokens": 929
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05955"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

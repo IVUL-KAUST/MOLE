@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "MEDIA",
+        "Link": "https://github.com/Ala-Na/media_benchmark_intent_annotations",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "books"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "The MEDIA dataset is a French spoken language understanding dataset for hotel booking, annotated with intents and slots.",
+        "Volume": 70.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "ELRA"
+        ],
+        "Derived From": [
+            "MEDIA"
+        ],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://www.example.com/paper",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "intent classification",
+            "semantic parsing"
+        ],
+        "Venue Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Venue Type": "conference",
+        "Venue Name": "LREC 2024",
+        "Authors": [
+            "Nad\u00e8ge Alavoine",
+            "Ga\u00eblle Laperri\u00e8re",
+            "Christophe Servan",
+            "Sahar Ghannay",
+            "Sophie Rosset"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris-Saclay, CNRS, LISN",
+            "Avignon Universit\u00e9, LIA",
+            "QWANT"
+        ],
+        "Abstract": "Intent classification and slot-filling are essential tasks of Spoken Language Understanding (SLU). In most SLU systems, those tasks are realized by independent modules. For about fifteen years, models achieving both of them jointly and exploiting their mutual enhancement have been proposed. A multilingual module using a joint model was envisioned to create a touristic dialogue system for a European project, HumanE-AI-Net. A combination of multiple datasets, including the MEDIA dataset, was suggested for training this joint model. The MEDIA SLU dataset is a French dataset distributed since 2005 by ELRA, mainly used by the French research community and free for academic research since 2020. Unfortunately, it is annotated only in slots but not intents. An enhanced version of MEDIA annotated with intents has been built to extend its use to more tasks and use cases. This paper presents the semi-automatic methodology used to obtain this enhanced version. In addition, we present the first results of SLU experiments on this enhanced dataset using joint models for intent classification and slot-filling."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00343734,
+        "input_tokens": 25166,
+        "output_tokens": 562
+    },
+    "config": {
+        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

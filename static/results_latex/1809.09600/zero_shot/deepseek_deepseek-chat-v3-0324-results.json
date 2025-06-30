@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "HotpotQA",
+        "Link": "https://hotpotqa.github.io",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "HotpotQA is a dataset for diverse, explainable multi-hop question answering based on Wikipedia articles.",
+        "Volume": 112779.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Carnegie Mellon University",
+            "Stanford University",
+            "Mila, Universit\u00e9 de Montr\u00e9al",
+            "Google AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+        "Paper Link": "https://hotpotqa.github.io",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "commonsense reasoning",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "EMNLP 2018",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Zhilin Yang",
+            "Peng Qi",
+            "Saizheng Zhang",
+            "Yoshua Bengio",
+            "William W. Cohen",
+            "Ruslan Salakhutdinov",
+            "Christopher D. Manning"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University",
+            "Stanford University",
+            "Mila, Universit\u00e9 de Montr\u00e9al",
+            "Google AI"
+        ],
+        "Abstract": "Existing question answering (QA) datasets fail to train QA systems to perform complex reasoning and provide explanations for answers. We introduce HotpotQA, a new dataset with 113k Wikipedia-based question-answer pairs with four key features: (1) the questions require finding and reasoning over multiple supporting documents to answer; (2) the questions are diverse and not constrained to any pre-existing knowledge bases or knowledge schemas; (3) we provide sentence-level supporting facts required for reasoning, allowing QA systems to reason with strong supervision and explain the predictions; (4) we offer a new type of factoid comparison questions to test QA systems' ability to extract relevant facts and perform necessary comparison. We show that HotpotQA is challenging for the latest QA systems, and the supporting facts enable models to improve performance and make explainable predictions."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00606602,
+        "input_tokens": 16685,
+        "output_tokens": 541
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.09600"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
