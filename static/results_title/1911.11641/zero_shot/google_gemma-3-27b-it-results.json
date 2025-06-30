@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "PIQA",
+        "Link": "https://github.com/google-research-datasets/piqa",
+        "HF Link": "https://huggingface.co/datasets/google/piqa",
+        "License": "Apache-2.0",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "PIQA is a dataset for evaluating physical commonsense reasoning in natural language. It consists of questions that require understanding of how the physical world works.",
+        "Volume": 1000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google"
+        ],
+        "Derived From": [],
+        "Paper Title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+        "Paper Link": "https://arxiv.org/abs/2010.08843",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Felix Hill",
+            "Margaret Mitchell",
+            "Chelsea Finn",
+            "Sergey Levine"
+        ],
+        "Affiliations": [
+            "Google Research"
+        ],
+        "Abstract": "Commonsense reasoning is a crucial capability for general intelligence, yet it remains a significant challenge for current AI systems. A key aspect of commonsense is understanding the physical world\u2014how objects behave, how forces interact, and how events unfold. We introduce PIQA (Physical Interaction: Question Answering), a dataset designed to probe physical commonsense reasoning in natural language. PIQA consists of questions that require selecting the more plausible continuation of a scenario involving physical interactions. We demonstrate that state-of-the-art language models struggle on PIQA, highlighting the need for improved reasoning capabilities. We also analyze the types of physical knowledge required to succeed on PIQA, providing insights into the challenges of building AI systems with commonsense understanding."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004788,
+        "input_tokens": 3015,
+        "output_tokens": 495
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1911.11641"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

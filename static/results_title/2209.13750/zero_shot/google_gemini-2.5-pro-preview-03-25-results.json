@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "RuDSI",
+        "Link": "https://github.com/airi-institute/RuDSI",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale dataset for Russian Word Sense Induction (WSI). It contains 102 ambiguous Russian words with contexts manually annotated with dictionary senses. The dataset was created using a graph-based approach to select contexts for annotation.",
+        "Volume": 14798.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "AIRI",
+            "HSE University"
+        ],
+        "Derived From": [
+            "Leipzig Corpora Collection"
+        ],
+        "Paper Title": "RuDSI: graph-based word sense induction dataset for Russian",
+        "Paper Link": "https://arxiv.org/abs/2211.06111",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "Proceedings of the 11th conference on Analysis of Images, Social networks and Texts (AIST 2022)",
+        "Venue Type": "conference",
+        "Venue Name": "Analysis of Images, Social networks and Texts",
+        "Authors": [
+            "Dmitriy Kulagin",
+            "Vasiliy Gromov",
+            "Andrey Chertok",
+            "Alena Fenogenova",
+            "Maria Tikhonova",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "AIRI",
+            "HSE University"
+        ],
+        "Abstract": "Word Sense Induction (WSI) is the task of unsupervised clustering of word usages. WSI is a powerful tool for lexicographers and NLP researchers, but there are few WSI datasets for languages other than English. In this paper, we present RuDSI, a new large-scale dataset for Russian WSI. The dataset was created with a graph-based approach and contains 102 ambiguous Russian words, including 24 verbs, 75 nouns, and 3 adjectives. For each ambiguous word, the dataset provides a set of contexts, illustrating its different meanings. Each context is manually annotated with a sense from the Russian dictionary. RuDSI is publicly available at https://github.com/airi-institute/RuDSI."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04201932,
+        "input_tokens": 3015,
+        "output_tokens": 1526
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2209.13750"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

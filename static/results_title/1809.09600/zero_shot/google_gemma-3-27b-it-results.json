@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "HotpotQA",
+        "Link": "https://hotpotqa.github.io/",
+        "HF Link": "https://huggingface.co/datasets/hotpotqa",
+        "License": "CC BY-SA 4.0",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "HotpotQA is a dataset for diverse, explainable multi-hop question answering. It requires finding and composing information from multiple supporting documents to answer complex questions.",
+        "Volume": 113.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+        "Paper Link": "https://arxiv.org/abs/1809.02233",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "multiple choice question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Rawal Singh",
+            "Oren Etzioni",
+            "Daniel Khashabi"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "We introduce HotpotQA, a novel dataset for diverse, explainable multi-hop question answering. HotpotQA requires reasoning over multiple supporting documents to answer questions, where each question is accompanied by a list of supporting documents that contain the answer. The questions in HotpotQA are more complex than those in existing datasets, requiring multiple hops of reasoning to find the answer. We also provide a new evaluation metric, F1, that measures the overlap between the predicted and gold supporting documents. We show that existing question answering models perform poorly on HotpotQA, and we propose a new model that achieves state-of-the-art results on the dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00042346,
+        "input_tokens": 3019,
+        "output_tokens": 512
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.09600"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

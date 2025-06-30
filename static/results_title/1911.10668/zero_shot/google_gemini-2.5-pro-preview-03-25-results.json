@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "JParaCrawl",
+        "Link": "https://huggingface.co/datasets/jparacrawl",
+        "HF Link": "https://huggingface.co/datasets/jparacrawl",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2020,
+        "Language": "multilingual",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large-scale English-Japanese parallel corpus with over 10 million sentence pairs, created by crawling the web. It was built based on the ParaCrawl project and is the largest publicly available English-Japanese parallel corpus.",
+        "Volume": 18100000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "NTT Communication Science Laboratories"
+        ],
+        "Derived From": [
+            "ParaCrawl"
+        ],
+        "Paper Title": "JParaCrawl: A Large Scale Web-Based English-Japanese Parallel Corpus",
+        "Paper Link": "https://www.aclweb.org/anthology/2020.lrec-1.764/",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 12th Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference (LREC)",
+        "Authors": [
+            "Makoto Morishita",
+            "Jun Suzuki",
+            "Masaaki Nagata"
+        ],
+        "Affiliations": [
+            "NTT Communication Science Laboratories",
+            "Nippon Telegraph and Telephone Corporation"
+        ],
+        "Abstract": "We present JParaCrawl, a large-scale English-Japanese parallel corpus created by crawling the web. The corpus contains over 10 million sentence pairs, making it the largest publicly available English-Japanese parallel corpus, to the best of our knowledge. We built our corpus based on the ParaCrawl project, which has focused on building parallel corpora for European languages. We describe our crawling and text processing pipeline, which is specifically designed for English and Japanese. We also describe the process of filtering the crawled data to obtain a high-quality parallel corpus. We conducted a machine translation experiment to show the effectiveness of JParaCrawl. The results show that a neural machine translation model trained on JParaCrawl outperforms a model trained on a combination of existing English-Japanese parallel corpora. The corpus is publicly available at http://www.kecl.ntt.co.jp/icl/lirg/jparacrawl/."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04488875,
+        "input_tokens": 3083,
+        "output_tokens": 1559
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1911.10668"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

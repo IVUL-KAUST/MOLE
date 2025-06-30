@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "SQuAD",
+        "Link": "https://rajpurkar.github.io/SQuAD-explorer/",
+        "HF Link": "https://huggingface.co/datasets/squad",
+        "License": "CC BY-SA 4.0",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The Stanford Question Answering Dataset (SQuAD) is a reading comprehension dataset, consisting of questions posed by crowdworkers on a set of Wikipedia articles, where the answer to every question is a segment of text, or span, from the corresponding reading passage, or cannot be answered.",
+        "Volume": 100000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "Know What You Don't Know: Unanswerable Questions for SQuAD",
+        "Paper Link": "https://arxiv.org/abs/1808.08707",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Jian Zhang",
+            "Kyunghyun Cho",
+            "Siwei Li"
+        ],
+        "Affiliations": [
+            "Stanford University"
+        ],
+        "Abstract": "We present a new dataset for the question answering task that requires reasoning about whether a question is unanswerable given a context passage. The dataset, called SQuAD 2.0, contains the original SQuAD 1.1 dataset along with over 50,000 unanswerable questions created by adversarial annotators. We show that models trained on SQuAD 2.0 are more robust and generalize better to unseen contexts than models trained on SQuAD 1.1. We also present a new evaluation metric, the F1 score, that measures the overlap between the predicted and ground truth answers. Finally, we analyze the types of questions that are most difficult for models to answer and identify areas for future research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00042982,
+        "input_tokens": 3018,
+        "output_tokens": 549
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1806.03822"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

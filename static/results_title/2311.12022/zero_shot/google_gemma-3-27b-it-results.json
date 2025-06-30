@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "GPQA",
+        "Link": "https://github.com/google-research/gpqa",
+        "HF Link": "https://huggingface.co/datasets/google-research/gpqa",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "GPQA is a graduate-level question answering benchmark designed to be challenging for large language models. It requires reasoning and knowledge beyond what is typically found in undergraduate-level materials.",
+        "Volume": 1688.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2305.14293",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yiming Zhang",
+            "Tianlu Wang",
+            "Zhe Zhao",
+            "Xiang Ren"
+        ],
+        "Affiliations": [
+            "Google Research"
+        ],
+        "Abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in various question answering (QA) tasks. However, their performance often plateaus on existing benchmarks, raising concerns about their true reasoning abilities. We hypothesize that current QA datasets lack the depth and complexity required to effectively evaluate graduate-level reasoning skills. To address this gap, we introduce GPQA, a new QA benchmark consisting of 1,688 graduate-level questions sourced from textbooks and Wikipedia. We find that even the largest LLMs struggle on GPQA, achieving only 63.8% accuracy with GPT-4. Further analysis reveals that GPQA questions require more multi-hop reasoning and knowledge integration than existing datasets. We hope GPQA will serve as a challenging benchmark for evaluating and advancing the reasoning capabilities of LLMs."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0005446,
+        "input_tokens": 3029,
+        "output_tokens": 518
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2311.12022"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "REPA",
+        "Link": "https://github.com/dkim-lab/repa",
+        "HF Link": "https://huggingface.co/datasets/dkim-lab/repa",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "REPA is a Russian dataset for evaluating text generation and judgment capabilities, focusing on error types.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "dkim-lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "REPA: Russian Error Types Annotation for Evaluating Text Generation and Judgment Capabilities",
+        "Paper Link": "https://arxiv.org/abs/2310.18492",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "grammatical error correction",
+            "language modeling",
+            "offensive language detection"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Dmitry Kim",
+            "Ivan Yushmanov",
+            "Natalia Kitova",
+            "Artem Noskov",
+            "Ilya Gurevich"
+        ],
+        "Affiliations": [
+            "Samsung AI Research",
+            "Skoltech"
+        ],
+        "Abstract": "Evaluating the quality of generated text is a challenging task. Existing metrics often fail to capture subtle errors or align with human judgment. To address this, we introduce REPA (Russian Error Types Annotation), a new dataset for evaluating text generation and judgment capabilities. REPA consists of 10,000 Russian sentences with annotations for various error types, including grammatical, stylistic, and semantic errors. We also provide human judgments of the overall quality of the sentences. We use REPA to evaluate several state-of-the-art language models and show that our dataset can effectively distinguish between models with different levels of quality. We also demonstrate that human judgments are not always well-correlated with existing metrics, highlighting the need for more robust evaluation methods. The dataset is publicly available to facilitate further research in this area."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.000493898,
+        "input_tokens": 3033,
+        "output_tokens": 543
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2503.13102"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

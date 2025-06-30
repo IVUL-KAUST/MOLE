@@ -1,0 +1,121 @@
+{
+    "metadata": {
+        "Name": "The Multilingual Amazon Reviews Corpus",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "German",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/amazon_reviews_multi",
+        "HF Link": "https://huggingface.co/datasets/amazon_reviews_multi",
+        "License": "custom",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Japanese",
+            "German",
+            "French",
+            "Spanish",
+            "Chinese"
+        ],
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A multilingual corpus of Amazon product reviews in six languages: English, Japanese, German, French, Spanish, and Chinese. The dataset is balanced, with 200k training, 5k validation, and 5k test samples per language. Each sample contains the review text and a star rating (1-5).",
+        "Volume": 1260000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Amazon"
+        ],
+        "Derived From": [
+            "Amazon Customer Reviews Dataset"
+        ],
+        "Paper Title": "The Multilingual Amazon Reviews Corpus",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.217/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "review classification"
+        ],
+        "Venue Title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Phillip Keung",
+            "Yichao Lu",
+            "Gy\u00f6rgy Szarvas",
+            "Vikas Bhardwaj"
+        ],
+        "Affiliations": [
+            "Amazon"
+        ],
+        "Abstract": "Recent progress in NLP has been driven by benchmarks that have grown in complexity from single sentence classification (SST) to sentence-pair regression (STS) and passage-level question answering (SQuAD, etc.). A parallel trend has been the development of multilingual benchmarks (XNLI, etc.) that have enabled the development of cross-lingual models. However, these benchmarks have been limited to sentence-level tasks, which has limited the development of cross-lingual models for document-level tasks. To address this gap, we create a corpus of Amazon reviews in six languages (English, Japanese, German, French, Spanish, and Chinese) and select a balanced subset of reviews for a document-level sentiment analysis task. We show that a multilingual BERT model fine-tuned on the English training data performs well on the other languages, and that performance can be improved by fine-tuning on the multilingual training data. We release this new corpus to the public."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.062475,
+        "input_tokens": 3181,
+        "output_tokens": 2146
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02573"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

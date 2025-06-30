@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "ATHAR",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/athar-dataset",
+        "HF Link": "https://huggingface.co/datasets/athar-dataset",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "ATHAR is a high-quality and diverse dataset for Classical Arabic to English translation.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "QCRI"
+        ],
+        "Derived From": [],
+        "Paper Title": "ATHAR: A High-Quality and Diverse Dataset for Classical Arabic to English Translation",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.611/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Hala Al-Sanjary",
+            "Youssef El-Hindi",
+            "Mohamed Abdelbasset",
+            "Mohammad Salama",
+            "Hassan S. Al-Sowyigh",
+            "Ali Al-Haddad",
+            "Waleed Al-Nuaimi",
+            "Ahmed El-Kholy",
+            "Mohamed El-Mahdy"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, Hamad Bin Khalifa University",
+            "University of Waterloo",
+            "Cairo University"
+        ],
+        "Abstract": "We introduce ATHAR, a new high-quality and diverse dataset for Classical Arabic (CA) to English translation. ATHAR consists of 10K sentences sourced from a wide range of classical Arabic texts, covering various domains and styles. We carefully curate the dataset to ensure high translation quality and diversity, addressing the scarcity of resources for CA-English translation. We present a detailed analysis of the dataset, including its characteristics and challenges. We also conduct experiments on machine translation models trained on ATHAR, demonstrating its effectiveness in improving translation performance. The dataset is publicly available to facilitate research in CA-English translation."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0005491,
+        "input_tokens": 3435,
+        "output_tokens": 572
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.19835"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

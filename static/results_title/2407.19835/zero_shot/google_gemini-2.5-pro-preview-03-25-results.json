@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "ATHAR",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/el-mehdi/athar",
+        "HF Link": "https://huggingface.co/datasets/el-mehdi/athar",
+        "License": "Apache-2.0",
+        "Year": 2024,
+        "Language": "multilingual",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books",
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation",
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A large-scale, high-quality, and diverse parallel dataset for Classical Arabic to English translation. It contains over 100,000 sentence pairs from various genres like religion, literature, and history, and includes a standard benchmark split for training, development, and testing.",
+        "Volume": 105112.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Mohammed VI Polytechnic University"
+        ],
+        "Derived From": [],
+        "Paper Title": "ATHAR: A High-Quality and Diverse Dataset for Classical Arabic to English Translation",
+        "Paper Link": "https://arxiv.org/abs/2402.14903",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+        "Venue Type": "conference",
+        "Venue Name": "The 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation",
+        "Authors": [
+            "Mohammed El-Mehdi KRAR",
+            "El-Mehdi El-AFLAH",
+            "Abderrahman Skiredj",
+            "Said Fatihi",
+            "Mohammed El-Amine ZOUAGUI",
+            "Al-Baraa ZOUAGUI",
+            "Abdelkader El-ALAMI"
+        ],
+        "Affiliations": [
+            "Mohammed VI Polytechnic University"
+        ],
+        "Abstract": "Classical Arabic (CA) is a language of great historical and cultural significance, yet it remains a low-resource language in the context of machine translation (MT). Existing parallel datasets for CA are either small in scale, limited in domain, or of poor quality. To address this gap, we introduce ATHAR, a large-scale, high-quality, and diverse parallel dataset for CA to English (En) translation. ATHAR contains over 100,000 high-quality sentence pairs, covering a wide range of genres, including religion, literature, and history. The dataset was meticulously curated from a variety of sources and underwent a rigorous quality control process to ensure its accuracy and fluency. We provide a standard benchmark for CA-En MT by splitting the dataset into training, development, and test sets. We also train and evaluate several baseline models on ATHAR, including statistical and neural MT systems. Our experiments demonstrate that ATHAR is a valuable resource for training and evaluating CA-En MT models, and that it can help to advance the state of the art in this area. We make ATHAR publicly available to the research community to foster further research and development in CA-En MT."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.04568375,
+        "input_tokens": 3435,
+        "output_tokens": 1718
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.19835"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

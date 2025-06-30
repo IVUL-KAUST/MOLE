@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Claire",
+        "Link": "https://huggingface.co/datasets/ClaireDialogue/claire-french-dialogue",
+        "HF Link": "https://huggingface.co/datasets/ClaireDialogue/claire-french-dialogue",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The Claire dataset is a French dialogue dataset collected from social media. It contains conversations between two speakers.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "ClaireDialogue"
+        ],
+        "Derived From": [],
+        "Paper Title": "The Claire French Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2311.16589",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "language modeling",
+            "sentiment analysis"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Baptiste Roig",
+            "Thomas Scialom",
+            "Maxime Cordoni",
+            "Loic Houel",
+            "Nicolas Papernot"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris Cit\u00e9",
+            "Universit\u00e9 de Lille",
+            "Hugging Face"
+        ],
+        "Abstract": "We introduce Claire, a new French dialogue dataset collected from social media. Claire contains 10k conversations between two speakers, with an average of 10 turns per conversation. The dataset is designed to facilitate research on dialogue generation, language modeling, and sentiment analysis. We provide a detailed analysis of the dataset, including its size, diversity, and quality. We also present baseline results on several dialogue generation tasks, demonstrating the potential of Claire for advancing research in this area."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00063255,
+        "input_tokens": 3022,
+        "output_tokens": 485
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2311.16840"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

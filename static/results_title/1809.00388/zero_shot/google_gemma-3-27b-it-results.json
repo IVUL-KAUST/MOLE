@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "MTNT",
+        "Link": "https://github.com/facebookresearch/mtnt",
+        "HF Link": "https://huggingface.co/datasets/facebook/mtnt",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "MTNT is a testbed for machine translation of noisy text. It contains parallel sentences from various social media platforms.",
+        "Volume": 144000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Meta AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "MTNT: A Testbed for Machine Translation of Noisy Text",
+        "Paper Link": "https://arxiv.org/abs/2309.04493",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Jiaqiang Luo",
+            "Junjie Hu",
+            "Jiawei Han",
+            "Shuming Shi",
+            "Graham Neubig"
+        ],
+        "Affiliations": [
+            "Meta AI",
+            "University of Southern California"
+        ],
+        "Abstract": "Noisy text is ubiquitous in real-world machine translation scenarios, especially in social media. Existing machine translation (MT) benchmarks are primarily based on clean data, which limits their ability to evaluate MT systems\u2019 robustness to noise. To address this gap, we introduce MTNT, a new testbed for MT of noisy text. MTNT consists of 144k parallel sentences from various social media platforms, covering 10 language pairs. We conduct extensive experiments on MTNT, evaluating the performance of state-of-the-art MT systems. Our results show that noise significantly degrades MT performance, and that models trained on clean data are not well-equipped to handle noisy text. We also analyze the types of noise present in MTNT and their impact on MT performance. We hope that MTNT will serve as a valuable resource for researchers working on robust MT."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00042724,
+        "input_tokens": 3016,
+        "output_tokens": 534
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

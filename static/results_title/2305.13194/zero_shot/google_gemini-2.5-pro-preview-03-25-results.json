@@ -1,0 +1,125 @@
+{
+    "metadata": {
+        "Name": "SEAHORSE",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 96548,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 31184,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 31184,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 31184,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 31184,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 31184,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            }
+        ],
+        "Link": "https://github.com/google-research-datasets/seahorse",
+        "HF Link": "https://huggingface.co/datasets/google/seahorse",
+        "License": "Apache-2.0",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "French",
+            "German",
+            "Italian",
+            "Russian",
+            "Spanish"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A multilingual, multifaceted dataset for summarization evaluation. It contains news articles in 6 languages, each with multiple diverse human-written summaries covering different facets like content, style, and factuality.",
+        "Volume": 252468.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [
+            "XL-Sum"
+        ],
+        "Paper Title": "SEAHORSE: A Multilingual, Multifaceted Dataset for Summarization Evaluation",
+        "Paper Link": "https://arxiv.org/abs/2210.08544",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Elizabeth Clark",
+            "Tal August",
+            "Nishant Raj",
+            "Hila Gonen",
+            "Dan Garrette",
+            "Ankur P. Parikh",
+            "Colin Raffel",
+            "Dipanjan Das"
+        ],
+        "Affiliations": [
+            "Google Research"
+        ],
+        "Abstract": "Existing summarization evaluation datasets are limited, either by the size of the dataset or the diversity of the summaries. We introduce SEAHORSE, a multilingual, multifaceted, and document-grounded dataset for summarization evaluation. We collect 6 diverse human-written summaries for each of 96k articles in six languages (English, French, German, Italian, Russian, and Spanish). The summaries are collected via a novel multifaceted annotation protocol, where we ask annotators to write summaries on a specific facet (e.g., content, style, or factuality). We use SEAHORSE to analyze 16 automatic evaluation metrics on 10 diverse summarization models. We find that no single metric performs the best across all facets and that reference-free metrics are surprisingly competitive, especially on non-factual facets like style. The dataset, code, and models are available at https://github.com/google-research-datasets/seahorse."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3684210526315789
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0493475,
+        "input_tokens": 3192,
+        "output_tokens": 2009
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.13194"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

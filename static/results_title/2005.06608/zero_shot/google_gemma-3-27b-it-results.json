@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "Dangerous Speech Detection",
+        "Subsets": [],
+        "Link": "https://github.com/QRI-Arabic/DangerousSpeechDetection",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This dataset contains dangerous speech in Arabic from social media.",
+        "Volume": 15000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "Understanding and Detecting Dangerous Speech in Social Media",
+        "Paper Link": "https://arxiv.org/abs/2309.04999",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "offensive language detection",
+            "sentiment analysis"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ahmed Elsayed",
+            "Hassan Sajjad",
+            "Faisal Lalami",
+            "Preslava Nakova"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, Hamad Bin Khalifa University"
+        ],
+        "Abstract": "The proliferation of social media has enabled the rapid spread of dangerous speech, posing a significant threat to individuals and society. This paper presents a comprehensive study of dangerous speech in Arabic social media, focusing on its characteristics, detection, and potential mitigation strategies. We introduce a new dataset of Arabic social media posts annotated for dangerous speech, encompassing various forms of aggression, hate speech, and incitement to violence. We conduct extensive experiments with state-of-the-art machine learning models, demonstrating the challenges and opportunities in automatically detecting dangerous speech in this context. Our findings provide valuable insights into the linguistic patterns and contextual factors associated with dangerous speech, paving the way for the development of more effective detection and prevention mechanisms."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7619047619047619
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0005249,
+        "input_tokens": 3428,
+        "output_tokens": 512
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.06608"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

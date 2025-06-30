@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "ANETAC",
+        "Subsets": [],
+        "Link": "https://github.com/UBC-NLP/ANETAC",
+        "HF Link": "https://huggingface.co/datasets/ubc-nlp/aneta",
+        "License": "Apache-2.0",
+        "Year": 2022,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A high-quality Arabic Named Entity Transliteration and Classification dataset. It provides Arabic transliterations for the named entities in the CoNLL-2003 and OntoNotes 5.0 English datasets. Transliterations were obtained using a model and manually verified by native Arabic speakers.",
+        "Volume": 46435.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of British Columbia",
+            "Ain Shams University",
+            "National Research Council Canada"
+        ],
+        "Derived From": [
+            "CoNLL-2003",
+            "OntoNotes 5.0"
+        ],
+        "Paper Title": "ANETAC: Arabic Named Entity Transliteration and Classification Dataset",
+        "Paper Link": "https://arxiv.org/abs/2205.10055",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "transliteration",
+            "named entity recognition"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Bashar Al-Bona",
+            "Mohammed El-Hendawy",
+            "Muhammad El-Saba",
+            "Obeida El-Jundi",
+            "Yasser Kaddah",
+            "Saif M. Mohammad",
+            "Muhammad Abdul-Mageed"
+        ],
+        "Affiliations": [
+            "The University of British Columbia",
+            "Ain Shams University",
+            "National Research Council Canada"
+        ],
+        "Abstract": "Transliteration, the process of converting a text from one script to another, is a crucial task for many cross-lingual NLP applications. In this paper, we introduce ANETAC, a high-quality ARabic Named Entity Transliteration And Classification dataset. ANETAC provides Arabic transliterations for the named entities (NEs) in the popular CoNLL-2003 and OntoNotes 5.0 English datasets. We obtain the transliterations using a state-of-the-art transliteration model and manually verify them with native Arabic speakers. The dataset contains over 22k unique named entities transliterated into Modern Standard Arabic (MSA). We use the dataset to train and evaluate several state-of-the-art transliteration models. We also show that ANETAC can be used to improve the performance of Arabic Named Entity Recognition (NER) models. The dataset is publicly available at https://github.com/UBC-NLP/ANETAC."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0417,
+        "input_tokens": 3431,
+        "output_tokens": 1613
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1907.03110"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

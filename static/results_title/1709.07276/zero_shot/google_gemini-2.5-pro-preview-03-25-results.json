@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "Arabic MGB-3",
+        "Subsets": [],
+        "Link": "http://catalog.elra.info/en-us/repository/browse/ELRA-S0383/",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2017,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale Arabic speech recognition dataset with approximately 1,200 hours of audio. The data was collected from TV broadcasts of Aljazeera, Al-Arabiya, and BBC Arabic, covering multiple genres and dialects (MSA, Levantine, Gulf, Egyptian, North African). It was used for the MGB-3 challenge.",
+        "Volume": 1200.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Qatar Computing Research Institute"
+        ],
+        "Derived From": [],
+        "Paper Title": "Speech Recognition Challenge in the Wild: Arabic MGB-3",
+        "Paper Link": "https://ieeexplore.ieee.org/document/7846301",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "ELRA",
+        "Access": "With-Fee",
+        "Cost": "Varies based on membership and usage type, see ELRA catalogue.",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "dialect identification",
+            "speaker identification"
+        ],
+        "Venue Title": "2016 IEEE Spoken Language Technology Workshop (SLT)",
+        "Venue Type": "workshop",
+        "Venue Name": "IEEE Spoken Language Technology Workshop",
+        "Authors": [
+            "Ahmed Ali",
+            "Yifan Zhang",
+            "Peter Bell",
+            "Steve Renals",
+            "Paul Vozila",
+            "David Snyder",
+            "Daniel Povey",
+            "Nagendra Goel",
+            "Vassil Panayotov",
+            "Mohamed Al-Badrashiny",
+            "Hamdy Mubarak",
+            "Brahim Bouselmi"
+        ],
+        "Affiliations": [
+            "Qatar Computing Research Institute, HBKU",
+            "University of Edinburgh",
+            "Johns Hopkins University"
+        ],
+        "Abstract": "This paper presents the third Arabic Multi-Genre Broadcast (MGB-3) challenge, an open competition for Arabic speech recognition. The MGB-3 challenge is a follow up to the MGB-2 challenge held in 2016. The data used in this challenge was collected from the broadcast television (BTV) streams of Aljazeera, Al-Arabiya, and BBC Arabic channels. The MGB-3 data consists of around 1,200 hours of audio, which is more than six times larger than the MGB-2 data. The data covers a variety of genres such as news, talk shows, and reports. The speech is multi-dialectal Arabic speech, including Modern Standard Arabic (MSA), and four major dialects: Levantine (LEV), Gulf (GLF), Egyptian (EGY), and North African (NOR). The challenge addresses three tracks: speech recognition, dialect identification, and speaker identification. In this paper, we describe the data collection and annotation process, and present the baseline systems for the speech recognition track."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42857142857142855
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.04940875,
+        "input_tokens": 3431,
+        "output_tokens": 1711
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

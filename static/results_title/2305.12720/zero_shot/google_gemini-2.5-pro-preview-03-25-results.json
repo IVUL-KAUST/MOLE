@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "llm-japanese-dataset",
+        "Link": "https://huggingface.co/datasets/llm-jp/llm-japanese-dataset",
+        "HF Link": "https://huggingface.co/datasets/llm-jp/llm-japanese-dataset",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "web pages",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation",
+            "LLM generated"
+        ],
+        "Description": "A Japanese chat dataset of approximately 13 million instruction-response pairs. It was created from Common Crawl and Japanese Wikipedia, filtered for quality, and generated using GPT-3.5 to support the development of Japanese LLMs.",
+        "Volume": 13000000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "llm-jp project"
+        ],
+        "Derived From": [
+            "Common Crawl",
+            "Wikipedia"
+        ],
+        "Paper Title": "llm-japanese-dataset v0: Construction of Japanese Chat Dataset for Large Language Models and its Methodology",
+        "Paper Link": "https://arxiv.org/abs/2305.12721",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "instruction tuning",
+            "text generation",
+            "language modeling"
+        ],
+        "Venue Title": "arXiv:2305.12721",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Shota Suzuki",
+            "Takuya Arakawa",
+            "Kenta Suzuki",
+            "Shingo Tokudo",
+            "Yutaka Matsuo",
+            "Shunsuke A. Kido"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "CyberAgent, Inc.",
+            "Stability AI",
+            "National Institute of Advanced Industrial Science and Technology (AIST)",
+            "llm-jp project"
+        ],
+        "Abstract": "This paper presents the construction of a Japanese chat dataset for large language models (LLMs) and its methodology. We constructed a dataset of approximately 13 million records by crawling Japanese web pages, filtering them for quality and safety, and generating instruction-response pairs using GPT-3.5. The dataset was constructed from two sources: Japanese web pages and Japanese Wikipedia. For the web pages, we used the Japanese portion of the Common Crawl dataset and filtered it using a language model-based approach. For Wikipedia, we used the Japanese version of the Wikipedia dataset and extracted the text. We then used GPT-3.5 to generate instruction-response pairs from the filtered text. The generated dataset is publicly available and can be used to train and evaluate Japanese LLMs. We also describe the methodology used to construct the dataset, including the filtering process and the prompt engineering used to generate the instruction-response pairs. We believe that this dataset will contribute to the development of Japanese LLMs and the advancement of research in this area."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04345625,
+        "input_tokens": 3090,
+        "output_tokens": 1662
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.12720"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

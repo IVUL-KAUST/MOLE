@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "MLQA",
+        "Subsets": [],
+        "Link": "https://github.com/facebookresearch/MLQA",
+        "HF Link": "https://huggingface.co/datasets/mlqa",
+        "License": "CC BY 4.0",
+        "Year": 2019,
+        "Language": [
+            "English",
+            "Arabic",
+            "Chinese",
+            "German"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "MLQA is a dataset for evaluating cross-lingual question answering. It contains questions in multiple languages, all paired with answers from Wikipedia.",
+        "Volume": 14678.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "MLQA: Evaluating Cross-lingual Extractive Question Answering",
+        "Paper Link": "https://arxiv.org/abs/1908.04402",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "multiple choice question answering",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Wang",
+            "Singh",
+            "Lin",
+            "Zhao",
+            "Mittal",
+            "Fischer"
+        ],
+        "Affiliations": [
+            "Facebook AI Research"
+        ],
+        "Abstract": "We introduce MLQA, a new dataset for evaluating cross-lingual question answering (CLQA). MLQA contains questions in multiple languages (English, Arabic, Chinese, and German) paired with their corresponding answers in Wikipedia. The questions are translated from English to the other languages, and the answers are extracted from the corresponding Wikipedia pages. We evaluate several state-of-the-art CLQA models on MLQA and find that they perform significantly worse on non-English languages than on English. This suggests that there is still much room for improvement in CLQA models. We also analyze the types of errors that the models make and identify several potential areas for future research."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00044137,
+        "input_tokens": 3189,
+        "output_tokens": 525
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1910.07475"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

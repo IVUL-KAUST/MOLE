@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "FrenchMedMCQA",
+        "Link": "https://huggingface.co/datasets/medmcqa/french",
+        "HF Link": "https://huggingface.co/datasets/medmcqa/french",
+        "License": "CC BY 4.0",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A French Multiple-Choice Question Answering Dataset for Medical domain.",
+        "Volume": 1000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "medmcqa"
+        ],
+        "Derived From": [],
+        "Paper Title": "FrenchMedMCQA: A French Multiple-Choice Question Answering Dataset for Medical domain",
+        "Paper Link": "https://arxiv.org/abs/2402.01983",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Zhengxuan Wu",
+            "Yiming Zhang",
+            "Zheng Yuan",
+            "Jiaqi Li",
+            "Jianwei Zhang",
+            "Yuexiang Zhai"
+        ],
+        "Affiliations": [
+            "Shanghai Jiao Tong University",
+            "University of California, Los Angeles"
+        ],
+        "Abstract": "Multiple-choice question answering (MCQA) is a challenging task that requires both understanding of the question and reasoning ability. Existing MCQA datasets are predominantly in English, limiting the development of multilingual MCQA models. To address this gap, we introduce FrenchMedMCQA, a French multiple-choice question answering dataset specifically designed for the medical domain. The dataset consists of 1000 multiple-choice questions, each with four answer options, covering a wide range of medical topics. We evaluate several state-of-the-art language models on FrenchMedMCQA and demonstrate that the dataset presents a significant challenge for these models. We hope that FrenchMedMCQA will serve as a valuable resource for the development of multilingual MCQA models and promote research in the medical domain."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004935,
+        "input_tokens": 3020,
+        "output_tokens": 535
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2304.04280"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "JDocQA",
+        "Link": "https://github.com/studio-ousia/jdocqa",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "LLM generated",
+            "human annotation"
+        ],
+        "Description": "A Japanese document question answering (QA) dataset constructed from Japanese Wikipedia articles. A generative language model (GPT-3.5-turbo) was used to generate question-answer pairs which were then manually evaluated for quality.",
+        "Volume": 13867.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Studio Ousia"
+        ],
+        "Derived From": [
+            "Japanese Wikipedia"
+        ],
+        "Paper Title": "JDocQA: Japanese Document Question Answering Dataset for Generative Language Models",
+        "Paper Link": "https://arxiv.org/abs/2311.17014",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Hiroki Ouchi",
+            "Naoki Yoshinaga",
+            "Yusuke Miyao"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "Studio Ousia",
+            "National Institute of Informatics"
+        ],
+        "Abstract": "Generative language models have shown remarkable performance in various natural language processing tasks. However, their performance in Japanese has not been fully explored due to the lack of suitable evaluation datasets. In this paper, we focus on document question answering (QA), a task that requires reading a long document and generating an answer to a given question. We construct a new Japanese document question answering (QA) dataset, JDocQA, from Japanese Wikipedia articles. We use a generative language model to generate question-answer pairs and manually evaluate their quality. The dataset consists of 13,867 question-answer pairs for 1,981 documents. We also conduct experiments with several state-of-the-art generative language models and show that our dataset is challenging for current models. The dataset is publicly available at https://github.com/studio-ousia/jdocqa."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0324275,
+        "input_tokens": 3083,
+        "output_tokens": 1252
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19454"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

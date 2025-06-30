@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "Name": "MEE",
+        "Subsets": [
+            {
+                "Name": "MEE-English",
+                "Volume": 10000,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "MEE-Chinese",
+                "Volume": 2000,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://github.com/jianliu-ml/MEE",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "Chinese"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "MEE is a multilingual event extraction dataset for English and Chinese. It contains 10,000 English sentences and 2,000 Chinese sentences annotated with a uniform, fine-grained event schema. The data was collected from the New York Times and SINA News.",
+        "Volume": 12000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences",
+            "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+        ],
+        "Derived From": [
+            "FrameNet",
+            "ACE 2005"
+        ],
+        "Paper Title": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Paper Link": "https://arxiv.org/abs/2104.13954",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction"
+        ],
+        "Venue Title": "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Venue Type": "conference",
+        "Venue Name": "Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Authors": [
+            "Jian Liu",
+            "Yubo Chen",
+            "Kang Liu",
+            "Jun Zhao"
+        ],
+        "Affiliations": [
+            "National Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences",
+            "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+        ],
+        "Abstract": "Event extraction (EE) aims to extract structured event information from unstructured texts, which is a crucial task in information extraction. However, most existing EE datasets are in English, which hinders the development of multilingual EE. In this paper, we introduce MEE, a new multilingual EE dataset with 10,000/2,000 sentences for English/Chinese respectively. We first define a uniform and fine-grained event schema for both languages. Then we propose a cost-effective method to construct the dataset. We conduct comprehensive experiments on MEE to provide benchmarks for future works. The experimental results show that MEE is a challenging dataset for state-of-the-art models. We will release our dataset and codes to promote the research of multilingual EE."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.03953,
+        "input_tokens": 3185,
+        "output_tokens": 1391
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05955"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

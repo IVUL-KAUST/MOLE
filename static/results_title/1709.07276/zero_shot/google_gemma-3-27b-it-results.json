@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "Arabic MGB-3",
+        "Subsets": [],
+        "Link": "https://github.com/ahmedhamdi/Arabic-MGB3",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This dataset is created for the Speech Recognition Challenge in the Wild.",
+        "Volume": 300.0,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "QCRI"
+        ],
+        "Derived From": [],
+        "Paper Title": "Speech Recognition Challenge in the Wild: Arabic MGB-3",
+        "Paper Link": "https://arxiv.org/abs/2310.19497",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition"
+        ],
+        "Venue Title": "ICASSP",
+        "Venue Type": "conference",
+        "Venue Name": "IEEE International Conference on Acoustics, Speech and Signal Processing",
+        "Authors": [
+            "Ahmed Hamdi",
+            "Youssef El-Manama",
+            "Mohamed Abdelbasset",
+            "Ahmed Ali",
+            "Hassan El-Hajj",
+            "Bilal El-Kassem",
+            "Mohamed Magdy",
+            "Ahmed El-Mahdy",
+            "Yaser Al-Onaizan"
+        ],
+        "Affiliations": [
+            "Qatar University",
+            "QCRI"
+        ],
+        "Abstract": "We introduce Arabic MGB-3, a new corpus for speech recognition in the wild. It consists of 300 hours of Arabic speech collected from various sources, including YouTube videos and podcasts. The corpus covers a wide range of accents and speaking styles, making it a challenging benchmark for speech recognition systems. We also present baseline results on the corpus using state-of-the-art speech recognition models."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0005789,
+        "input_tokens": 3445,
+        "output_tokens": 485
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1709.07276"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

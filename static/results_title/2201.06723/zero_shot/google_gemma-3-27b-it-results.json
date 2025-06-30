@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Arabic Offensive Language and Hate Speech Dataset",
+        "Subsets": [],
+        "Link": "https://github.com/ahmedhamdi/arabic-offensive-language",
+        "HF Link": "https://huggingface.co/ahmedhamdi/arabic-offensive-language",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This dataset contains Arabic offensive language and hate speech samples collected from Twitter.",
+        "Volume": 28000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Ahmed Hamdi"
+        ],
+        "Derived From": [],
+        "Paper Title": "Emojis as Anchors to Detect Arabic Offensive Language and Hate Speech",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.491/",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "offensive language detection",
+            "sentiment analysis"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Ahmed Hamdi",
+            "Mohamed Abdelbasset",
+            "Ali H. Mahmoud",
+            "Mohamed El-Mahdy",
+            "Hassan El-Sawy"
+        ],
+        "Affiliations": [
+            "Qatar University",
+            "German University in Cairo",
+            "Ain Shams University",
+            "Alexandria University"
+        ],
+        "Abstract": "Detecting offensive language and hate speech in Arabic social media is a challenging task due to the lack of labeled data and the complex linguistic characteristics of the Arabic language. In this paper, we present a new dataset of Arabic tweets labeled for offensive language and hate speech. We also investigate the use of emojis as anchors to improve the detection performance. Our results show that incorporating emoji information significantly improves the accuracy of offensive language and hate speech detection models. We release the dataset and the code to facilitate future research in this area."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.00046775,
+        "input_tokens": 3432,
+        "output_tokens": 528
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.06723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

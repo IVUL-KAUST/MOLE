@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "French Fake News",
+        "Link": "https://zenodo.org/records/6395348",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset of 1,110 French news articles, balanced between real and fake news. It is annotated with 10 fine-grained labels to enable detailed analysis and classification of misinformation.",
+        "Volume": 1110.0,
+        "Unit": "documents",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Sorbonne Universit\u00e9",
+            "CNRS"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Multi-Label Dataset of French Fake News: Human and Machine Insights",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.11/",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fake news detection",
+            "topic classification"
+        ],
+        "Venue Title": "Proceedings of the Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Elodie Gode",
+            "Kar\u00ebn Fort",
+            "Nicolas Verheyde"
+        ],
+        "Affiliations": [
+            "Sorbonne Universit\u00e9",
+            "CNRS",
+            "LORIA",
+            "LIP6"
+        ],
+        "Abstract": "This paper presents a new dataset of French fake news, annotated with 10 labels that allow for a fine-grained analysis of the data. The dataset is composed of 1,110 news articles, balanced between fake and real news. The annotation process was conducted by two annotators, and we report a good inter-annotator agreement. We also present a detailed analysis of the dataset, both from a human and a machine perspective. We show that the labels are useful for distinguishing between fake and real news, and that they can be used to train a classifier that achieves good performance. We also show that the dataset is challenging for current state-of-the-art models, and that there is still room for improvement. The dataset is freely available for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04010125,
+        "input_tokens": 3017,
+        "output_tokens": 1393
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.16099"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

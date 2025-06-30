@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "Name": "NEWS 2016",
+        "Subsets": [
+            {
+                "Name": "Arabic-English",
+                "Volume": 12000.0,
+                "Unit": "sentences",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "English-Arabic",
+                "Volume": 15000.0,
+                "Unit": "sentences",
+                "Dialect": "Modern Standard Arabic"
+            }
+        ],
+        "Link": "https://catalog.ldc.upenn.edu/LDC2016T03",
+        "HF Link": "",
+        "License": "LDC User Agreement",
+        "Year": 2016,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A dataset for Arabic-English and English-Arabic transliteration from the NEWS 2016 shared task. It contains pairs of names in Arabic and their corresponding English transliterations, split into training, development, and test sets.",
+        "Volume": 27000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Linguistic Data Consortium"
+        ],
+        "Derived From": [
+            "LDC corpora",
+            "web data"
+        ],
+        "Paper Title": "Sequence-to-sequence neural network models for transliteration",
+        "Paper Link": "https://aclanthology.org/W18-0505/",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "LDC",
+        "Access": "With-Fee",
+        "Cost": "US$ 500.00 for non-members",
+        "Test Split": true,
+        "Tasks": [
+            "transliteration",
+            "machine translation",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "Proceedings of the 2nd Workshop on Subword and Character Level Models in NLP",
+        "Venue Type": "workshop",
+        "Venue Name": "2nd Workshop on Subword and Character Level Models in NLP (SCLeM 2018)",
+        "Authors": [
+            "Surafel M. Lakew",
+            "Ali S. Al-Saegh",
+            "Fabio Rinaldi"
+        ],
+        "Affiliations": [
+            "University of Trento",
+            "Fondazione Bruno Kessler",
+            "University of Zurich",
+            "Swiss Institute of Bioinformatics"
+        ],
+        "Abstract": "Transliteration is the task of converting a text from one script to another based on phonetic equivalence. It is a crucial task for many downstream applications such as machine translation and cross-lingual information retrieval. In this paper, we propose a sequence-to-sequence model for the task of transliteration. We experiment with different types of recurrent neural network (RNN) based models (unidirectional, bidirectional, and multi-layered) with attention mechanism. We evaluate our models on the Arabic-English and English-Arabic transliteration tasks using the NEWS 2016 shared task datasets. Our experimental results show that our models outperform the state-of-the-art systems on both tasks. We also show that our models are robust to the noisy nature of the data."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.38095238095238093
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0588875,
+        "input_tokens": 3429,
+        "output_tokens": 1813
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.09565"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

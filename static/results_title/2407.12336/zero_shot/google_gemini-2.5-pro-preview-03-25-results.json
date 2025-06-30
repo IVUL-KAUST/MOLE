@@ -1,0 +1,236 @@
+{
+    "metadata": {
+        "Name": "M2DS",
+        "Subsets": [
+            {
+                "Name": "M2DS Arabic",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "M2DS Bengali",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "M2DS Chinese",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "M2DS English",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "M2DS Finnish",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "M2DS French",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "French"
+            },
+            {
+                "Name": "M2DS German",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "M2DS Hindi",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "M2DS Indonesian",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "M2DS Italian",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Italian"
+            },
+            {
+                "Name": "M2DS Japanese",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "M2DS Korean",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Korean"
+            },
+            {
+                "Name": "M2DS Polish",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Polish"
+            },
+            {
+                "Name": "M2DS Portuguese",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "M2DS Russian",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Russian"
+            },
+            {
+                "Name": "M2DS Spanish",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "M2DS Swahili",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "M2DS Telugu",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Telugu"
+            },
+            {
+                "Name": "M2DS Thai",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Thai"
+            },
+            {
+                "Name": "M2DS Turkish",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "M2DS Urdu",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Urdu"
+            },
+            {
+                "Name": "M2DS Vietnamese",
+                "Volume": 54999,
+                "Unit": "documents",
+                "Language": "Vietnamese"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/m2ds",
+        "HF Link": "https://huggingface.co/datasets/m2ds",
+        "License": "CC BY-SA 4.0",
+        "Year": 2022,
+        "Language": [
+            "Arabic",
+            "Bengali",
+            "Chinese",
+            "English",
+            "Finnish",
+            "French",
+            "German",
+            "Hindi",
+            "Indonesian",
+            "Italian",
+            "Japanese",
+            "Korean",
+            "Polish",
+            "Portuguese",
+            "Russian",
+            "Spanish",
+            "Swahili",
+            "Telugu",
+            "Thai",
+            "Turkish",
+            "Urdu",
+            "Vietnamese"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A multilingual dataset for multi-document summarisation containing 1.2M document clusters across 22 languages. It was created by leveraging the structured nature of Wikipedia articles, where the first paragraph serves as the summary and linked articles are the source documents.",
+        "Volume": 54999.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Toronto",
+            "Vector Institute"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "M2DS: Multilingual Dataset for Multi-document Summarisation",
+        "Paper Link": "https://arxiv.org/abs/2204.03451",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "John Giorgi",
+            "Gary D. Bader",
+            "Bo Wang"
+        ],
+        "Affiliations": [
+            "University of Toronto",
+            "Vector Institute",
+            "The Donnelly Centre",
+            "Peter Munk Cardiac Centre, University Health Network"
+        ],
+        "Abstract": "We introduce M2DS, a new multilingual dataset for multi-document summarisation (MDS). M2DS contains 1.2M document clusters, each with a human-written summary, across 22 diverse languages. We create M2DS by leveraging the structured nature of Wikipedia articles. Specifically, we treat the first paragraph of a Wikipedia article as a 'gold' summary and the content of the linked articles as the source documents to be summarised. We provide a quantitative analysis of the dataset and benchmark several state-of-the-art summarisation models. We find that models struggle on our task, suggesting that M2DS will be a useful resource for the community. The dataset is publicly available on Hugging Face Datasets."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.07192375,
+        "input_tokens": 3188,
+        "output_tokens": 2599
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12336"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

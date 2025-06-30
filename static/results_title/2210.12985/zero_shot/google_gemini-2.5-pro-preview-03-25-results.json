@@ -1,0 +1,94 @@
+{
+    "metadata": {
+        "Name": "Maknuune",
+        "Subsets": [
+            {
+                "Name": "Palestinian Arabic",
+                "Volume": 10358.0,
+                "Unit": "tokens",
+                "Dialect": "Palestine"
+            }
+        ],
+        "Link": "https://github.com/Birzeit-NLP/Maknuune",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Palestine",
+        "Domain": [
+            "public datasets",
+            "web pages",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large, open-source computational lexicon for Palestinian Arabic. It contains over 10,000 entries, each with detailed morphological, phonological, and dialectal information, designed to be a foundational resource for Palestinian Arabic NLP.",
+        "Volume": 10358.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Birzeit University",
+            "Columbia University"
+        ],
+        "Derived From": [
+            "Calima-AR lexicon",
+            "Palestinian Arabic Spoken Corpus (PASC)"
+        ],
+        "Paper Title": "Maknuune: A Large Open Palestinian Arabic Lexicon",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.565/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "morphological analysis",
+            "part of speech tagging",
+            "dialect identification",
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Muhammad Khalifa",
+            "Bashar Talafha",
+            "Nizar Habash"
+        ],
+        "Affiliations": [
+            "Birzeit University",
+            "Columbia University"
+        ],
+        "Abstract": "We present Maknuune, a large, open-source computational lexicon for Palestinian Arabic. Palestinian Arabic is a major Arabic dialect, but it has been under-resourced in terms of natural language processing tools and resources. Maknuune addresses this gap by providing a comprehensive lexicon of over 10,000 entries, each with detailed morphological, phonological, and dialectal information. The lexicon was constructed by integrating existing resources, crawling online content, and involving native speakers in a collaborative annotation effort. We describe the lexicon's design, construction process, and content. We also demonstrate its utility in a number of downstream NLP tasks, including part-of-speech tagging and dialect identification. Maknuune is a valuable resource for researchers and developers working on Palestinian Arabic and other Arabic dialects. The lexicon is publicly available on GitHub at https://github.com/Birzeit-NLP/Maknuune under the Creative Commons Attribution 4.0 International (CC BY 4.0) license."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3333333333333333
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.04549625,
+        "input_tokens": 3430,
+        "output_tokens": 1782
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12985"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

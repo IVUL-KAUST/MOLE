@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "FairTranslate",
+        "Link": "https://github.com/fair-translate/fairtranslate",
+        "HF Link": "https://huggingface.co/datasets/fair-translate/fairtranslate",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "FairTranslate is an English-French dataset designed for evaluating gender bias in machine translation, specifically addressing the limitations of gender binarity.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Edinburgh",
+            "Meta AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "FairTranslate: An English-French Dataset for Gender Bias Evaluation in Machine Translation by Overcoming Gender Binarity",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.491/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "gender identification"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Jiahao Wang",
+            "Pengfei Liu",
+            "Jiajun Zhang",
+            "Min Zhang",
+            "Fei Huang",
+            "Xiang Ren"
+        ],
+        "Affiliations": [
+            "University of Edinburgh",
+            "Meta AI"
+        ],
+        "Abstract": "Gender bias in machine translation (MT) has attracted increasing attention. Existing datasets for evaluating gender bias in MT typically rely on binary gender categories (male/female), which cannot reflect the diversity of gender identities. In this paper, we present FairTranslate, a new English-French dataset for gender bias evaluation in MT by overcoming gender binarity. FairTranslate contains 10k sentences with gendered pronouns and nouns, and each gendered entity is annotated with its gender identity from a non-binary gender spectrum. We conduct experiments on several state-of-the-art MT models and demonstrate that FairTranslate can effectively reveal gender bias in MT systems. Our analysis shows that MT models tend to translate gender-neutral entities into binary genders, and the translation results are affected by the gender stereotypes in the source language. We hope FairTranslate can serve as a valuable resource for developing fair and inclusive MT systems."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00050445,
+        "input_tokens": 3039,
+        "output_tokens": 582
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.15941"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "SQuAD",
+        "Link": "https://rajpurkar.github.io/SQuAD-explorer/",
+        "HF Link": "https://huggingface.co/datasets/squad",
+        "License": "CC BY-SA 4.0",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "SQuAD is a reading comprehension dataset, consisting of questions posed by crowdworkers on a set of Wikipedia articles, where the answer to every question is a segment of text, or span, from the corresponding reading passage.",
+        "Volume": 100000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+        "Paper Link": "https://arxiv.org/abs/1606.05250",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Eduard Hovy",
+            "Percy Liang",
+            "Olivia Watkins",
+            "James Martinson",
+            "Srinivas Nikhil Ranganath",
+            "Raymond Mooney"
+        ],
+        "Affiliations": [
+            "Stanford University"
+        ],
+        "Abstract": "We present SQuAD, a new reading comprehension dataset consisting of questions posed by crowdworkers on a set of Wikipedia articles, where the answer to every question is a segment of text, or span, from the corresponding reading passage. We also describe a novel approach to machine comprehension that combines information retrieval with machine learning, and achieve human-level performance on this dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00041863,
+        "input_tokens": 3020,
+        "output_tokens": 489
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.05250"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

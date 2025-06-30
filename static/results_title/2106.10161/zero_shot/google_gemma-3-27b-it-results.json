@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "Golos",
+        "Link": "https://huggingface.co/datasets/sergeymakagon/golos",
+        "HF Link": "https://huggingface.co/datasets/sergeymakagon/golos",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "commentary"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Golos is a Russian dataset for speech research. It contains 128 hours of speech data recorded from 160 native speakers of Russian. The dataset includes both read and spontaneous speech, as well as a variety of accents and dialects.",
+        "Volume": 128.0,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Sergey Makagon"
+        ],
+        "Derived From": [],
+        "Paper Title": "Golos: A Russian Speech Dataset",
+        "Paper Link": "https://arxiv.org/abs/2310.04999",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "speech recognition"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Sergey Makagon",
+            "Dmitry Ustalov",
+            "Alexey Voronov",
+            "Yury Dmitriev",
+            "Maxim Zhuravlev"
+        ],
+        "Affiliations": [],
+        "Abstract": "We present Golos, a new Russian speech dataset consisting of 128 hours of speech data recorded from 160 native speakers of Russian. The dataset includes both read and spontaneous speech, as well as a variety of accents and dialects. We provide detailed statistics of the dataset and demonstrate its potential for various speech recognition tasks. The dataset is publicly available for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00041173,
+        "input_tokens": 3011,
+        "output_tokens": 462
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "SEAHORSE",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/allenai/seahorse",
+        "HF Link": "https://huggingface.co/datasets/allenai/seahorse",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "Chinese",
+            "German",
+            "French",
+            "Spanish",
+            "Russian"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "SEAHORSE is a multilingual, multifaceted dataset for summarization evaluation. It contains human-written summaries of news articles in six languages.",
+        "Volume": 16886.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Allen Institute for AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "SEAHORSE: A Multilingual, Multifaceted Dataset for Summarization Evaluation",
+        "Paper Link": "https://arxiv.org/abs/2310.08292",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yiming Wang",
+            "Zihan Liu",
+            "Xinyu Ma",
+            "Pengfei Liu",
+            "Weizhu Chen"
+        ],
+        "Affiliations": [
+            "Allen Institute for AI"
+        ],
+        "Abstract": "High-quality summarization evaluation is crucial for advancing the field, yet it remains a significant challenge. Existing evaluation metrics often exhibit limited correlation with human judgments, and creating reliable human evaluations is expensive and time-consuming. To address these issues, we introduce SEAHORSE, a multilingual, multifaceted dataset for summarization evaluation. SEAHORSE comprises 16,886 news articles in six languages (Chinese, English, French, German, Russian, and Spanish) paired with multiple human-written summaries of varying lengths and styles. We conduct extensive analyses to demonstrate the dataset\u2019s utility for evaluating summarization models and metrics. Our findings reveal that SEAHORSE provides a more robust and reliable assessment of summarization quality compared to existing benchmarks. We also show that SEAHORSE can be used to identify and mitigate biases in summarization models. The dataset is publicly available to facilitate further research in summarization evaluation."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.3684210526315789
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0005269,
+        "input_tokens": 3192,
+        "output_tokens": 589
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.13194"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

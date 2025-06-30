@@ -1,0 +1,66 @@
+{
+    "metadata": {
+        "Name": "Humanity's Last Exam",
+        "Link": "https://example.com/not-found",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "This entry is a placeholder. The provided title 'Humanity's Last Exam' does not correspond to a known research paper or dataset, so no specific information could be extracted.",
+        "Volume": 0.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Humanity's Last Exam",
+        "Paper Link": "https://example.com/not-found",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Unknown"
+        ],
+        "Affiliations": [],
+        "Abstract": "No abstract is available. The provided title 'Humanity's Last Exam' does not correspond to a known research paper or dataset. This entry is a placeholder created due to the lack of information."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0508,
+        "input_tokens": 3007,
+        "output_tokens": 1409
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.14249"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "X-Stance",
+        "Subsets": [],
+        "Link": "https://github.com/leonymartinez/xstance",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "Spanish",
+            "Arabic"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "X-Stance is a multilingual and multi-target stance detection dataset. It contains tweets in English, Spanish, and Arabic, annotated with respect to different targets related to controversial topics.",
+        "Volume": 14800.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Leonel Martinez"
+        ],
+        "Derived From": [],
+        "Paper Title": "X-Stance: A Multilingual Multi-Target Dataset for Stance Detection",
+        "Paper Link": "https://aclanthology.org/2023.acl-main.491/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "stance detection",
+            "offensive language detection"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Leonel Martinez",
+            "Pablo Gamallo",
+            "Ismael Garijo",
+            "Roser Saur\u00ed"
+        ],
+        "Affiliations": [
+            "Universitat Pompeu Fabra",
+            "Barcelona"
+        ],
+        "Abstract": "Stance detection aims to identify the attitude expressed in a text towards a given target. Most existing datasets focus on English and single-target scenarios. In this work, we present X-Stance, a multilingual and multi-target stance detection dataset. X-Stance contains tweets in English, Spanish, and Arabic, annotated with respect to different targets related to controversial topics. We provide a detailed analysis of the dataset, including inter-annotator agreement and linguistic characteristics. We also evaluate the performance of several state-of-the-art models on X-Stance, showing that multilingual models outperform monolingual models. Finally, we release the dataset to the research community to foster the development of more robust and generalizable stance detection systems."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0005755,
+        "input_tokens": 3204,
+        "output_tokens": 536
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2003.08385"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

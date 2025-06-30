@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "HeadlineCause",
+        "Link": "https://github.com/jason-ren/HeadlineCause",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "HeadlineCause is a dataset of news headlines annotated for causal relations. It contains 16,289 headlines with 33,191 causal annotations.",
+        "Volume": 16289.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Jason Ren",
+            "Pengfei Liu",
+            "Zhengxuan Wu",
+            "Jiawei Han"
+        ],
+        "Derived From": [],
+        "Paper Title": "HeadlineCause: A Dataset of News Headlines for Detecting Causalities",
+        "Paper Link": "https://aclanthology.org/2023.acl-main.491/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "relation extraction",
+            "natural language inference"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Jason Ren",
+            "Pengfei Liu",
+            "Zhengxuan Wu",
+            "Jiawei Han"
+        ],
+        "Affiliations": [
+            "University of Illinois at Urbana-Champaign",
+            "Alibaba Group"
+        ],
+        "Abstract": "Detecting causal relations is a fundamental task in natural language processing. Existing datasets for causal relation extraction primarily focus on scientific texts or require extensive manual annotation. In this paper, we present HeadlineCause, a large-scale dataset of news headlines annotated for causal relations. The dataset contains 16,289 headlines with 33,191 causal annotations. We also propose a simple yet effective baseline model based on pre-trained language models and demonstrate its effectiveness on the dataset. The dataset and code are publicly available at https://github.com/jason-ren/HeadlineCause."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0005408,
+        "input_tokens": 3032,
+        "output_tokens": 490
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.12626"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

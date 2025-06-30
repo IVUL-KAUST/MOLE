@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "PIQA",
+        "Link": "https://allenai.org/data/piqa",
+        "HF Link": "https://huggingface.co/datasets/piqa",
+        "License": "custom",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation",
+            "LLM generated"
+        ],
+        "Description": "PIQA is a commonsense question answering benchmark for physical reasoning in natural language. It contains 20,000 QA pairs that are either multiple-choice or true/false questions, focusing on how to interact with the everyday physical world.",
+        "Volume": 21035.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Allen Institute for AI",
+            "University of Washington",
+            "Microsoft Research"
+        ],
+        "Derived From": [
+            "WikiHow"
+        ],
+        "Paper Title": "PIQA: Reasoning about Physical Commonsense in Natural Language",
+        "Paper Link": "https://arxiv.org/abs/1911.11641",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "Proceedings of the Thirty-Fourth AAAI Conference on Artificial Intelligence",
+        "Venue Type": "conference",
+        "Venue Name": "AAAI Conference on Artificial Intelligence",
+        "Authors": [
+            "Yonatan Bisk",
+            "Rowan Zellers",
+            "Ronan Le Bras",
+            "Jianfeng Gao",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Allen Institute for AI",
+            "University of Washington",
+            "Microsoft Research"
+        ],
+        "Abstract": "Much of the world's knowledge is not written down, but is instead implicitly understood by humans. This is especially true for physical commonsense knowledge\u2014the knowledge of how to interact with the everyday physical world. As a result, current NLP systems, which are trained on massive amounts of text, often do not reflect a deep understanding of this implicit knowledge. We introduce PIQA, a new commonsense question answering benchmark for physical reasoning in natural language. PIQA contains 20,000 QA pairs that are either multiple-choice or true/false questions. To create PIQA, we use two semi-automated methods to source a large set of examples from an existing resource (WikiHow) and a generative model. We find that current state-of-the-art models like BERT and RoBERTa struggle on PIQA, achieving only 77% and 79% accuracy respectively, while human performance is 95%. This suggests that there is a large gap between current NLP models and human-level physical commonsense understanding. We release our dataset and code at http://www.piqa.ai."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0369675,
+        "input_tokens": 3015,
+        "output_tokens": 1401
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1911.11641"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "NEREL",
+        "Link": "https://github.com/nerel-ds/NEREL",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A Russian dataset of news articles from the Lenta.ru news website, annotated manually with nested named entities, relations, and events. The annotation scheme includes 3 entity types (Person, Location, Organization), 13 relations, and 3 event types with 33 arguments.",
+        "Volume": 938.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Lomonosov Moscow State University",
+            "HSE University",
+            "Huawei Noah\u2019s Ark Lab",
+            "University of York"
+        ],
+        "Derived From": [
+            "Lenta.ru"
+        ],
+        "Paper Title": "NEREL: A Russian Dataset with Nested Named Entities, Relations and Events",
+        "Paper Link": "https://aclanthology.org/2021.findings-emnlp.293/",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "relation extraction"
+        ],
+        "Venue Title": "Findings of the Association for Computational Linguistics: EMNLP 2021",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Natalia Loukachevitch",
+            "Ekaterina Artemova",
+            "Tatiana Batura",
+            "Pavel Braslavski",
+            "Ivan Denisov",
+            "Vladimir Ivanov",
+            "Suresh Manandhar",
+            "Alexander Pugachev",
+            "Elena Tutubalina"
+        ],
+        "Affiliations": [
+            "Lomonosov Moscow State University",
+            "HSE University",
+            "Huawei Noah\u2019s Ark Lab",
+            "University of York"
+        ],
+        "Abstract": "We present NEREL, a new dataset for Russian language with nested named entities, relations, and events. The data is based on news texts from a large Russian news agency. The dataset contains 938 news texts (about 14,500 sentences, 250,000 tokens) annotated manually. The annotation scheme includes 3 entity types (Person, Location, Organization), 13 relations between them, and 3 event types with 33 arguments. The dataset is the first in Russian to feature nested entities, events, and a large number of n-ary relations. We provide a train/dev/test split and baselines for named entity recognition, relation extraction, and event extraction. The dataset is available at https://github.com/nerel-ds/NEREL."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04265125,
+        "input_tokens": 3018,
+        "output_tokens": 1453
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.13112"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

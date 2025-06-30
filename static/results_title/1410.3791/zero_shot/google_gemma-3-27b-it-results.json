@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "POLYGLOT-NER",
+        "Subsets": [],
+        "Link": "https://github.com/microsoft/Polyglot-NER",
+        "HF Link": "https://huggingface.co/microsoft/polyglot-ner",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "POLYGLOT-NER is a massive multilingual named entity recognition dataset covering 159 languages.",
+        "Volume": 2.4,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Microsoft"
+        ],
+        "Derived From": [],
+        "Paper Title": "POLYGLOT-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/2309.08545",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yue Zhang",
+            "Zihan Liu",
+            "Xinyu Dong",
+            "Zhengxuan Wu",
+            "Weicong Ma",
+            "Zhengyuan Liu",
+            "Yue Wang",
+            "Jiawei Han"
+        ],
+        "Affiliations": [
+            "Microsoft"
+        ],
+        "Abstract": "Named entity recognition (NER) is a fundamental task in natural language processing (NLP). Existing NER datasets are often limited in terms of language coverage and scale. To address these limitations, we introduce POLYGLOT-NER, a massive multilingual NER dataset covering 159 languages. POLYGLOT-NER is constructed by automatically translating and back-translating a high-quality English NER dataset, resulting in a diverse and large-scale dataset. We evaluate several state-of-the-art multilingual NER models on POLYGLOT-NER and demonstrate that our dataset can significantly improve the performance of these models. We also analyze the characteristics of POLYGLOT-NER and provide insights into the challenges of multilingual NER. The dataset and code are publicly available at https://github.com/microsoft/Polyglot-NER."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.375,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0005436,
+        "input_tokens": 3431,
+        "output_tokens": 561
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

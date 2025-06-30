@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "WinoGrande",
+        "Link": "http://winogrande.allenai.org/",
+        "HF Link": "https://huggingface.co/datasets/winogrande",
+        "License": "Apache-2.0",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "WinoGrande is a large-scale dataset of over 40,000 problems for commonsense reasoning, inspired by the original Winograd Schema Challenge. It was created using a novel adversarial filtering algorithm to reduce systematic biases, making it more challenging for state-of-the-art models.",
+        "Volume": 43432.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Allen Institute for Artificial Intelligence",
+            "University of Washington"
+        ],
+        "Derived From": [],
+        "Paper Title": "WinoGrande: An Adversarial Winograd Schema Challenge at Scale",
+        "Paper Link": "https://arxiv.org/abs/1907.10641",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "Proceedings of the Thirty-Fourth AAAI Conference on Artificial Intelligence",
+        "Venue Type": "conference",
+        "Venue Name": "AAAI Conference on Artificial Intelligence",
+        "Authors": [
+            "Keisuke Sakaguchi",
+            "Ronan Le Bras",
+            "Chandra Bhagavatula",
+            "Yejin Choi"
+        ],
+        "Affiliations": [
+            "Allen Institute for Artificial Intelligence",
+            "Paul G. Allen School of Computer Science & Engineering, University of Washington"
+        ],
+        "Abstract": "The Winograd Schema Challenge (WSC) (Levesque, Davis, and Morgenstern 2012), a benchmark for commonsense reasoning, is a collection of pronoun resolution problems that are trivial for humans but hard for machines. While the original WSC dataset is small, recent work has introduced several larger datasets. However, these datasets have been shown to contain biases that models can exploit, enabling them to achieve high performance without truly possessing commonsense. To address these issues, we introduce WinoGrande, a large-scale dataset of 44k problems, inspired by the original WSC design. We employ a novel adversarial filtering algorithm to ensure that the dataset is hard for statistical models, yet understandable for humans. The key idea of our algorithm is to use a strong neural model, i.e., RoBERTa (Liu et al. 2019), to iteratively identify and discard biased examples from a crowdsourced dataset. We systematically evaluate the new dataset and show that it is more challenging than previous datasets. We also show that the performance of state-of-the-art models on WinoGrande is far below human performance (94%). We make the dataset, code, and leaderboard publicly available at http://winogrande.allenai.org/."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04746125,
+        "input_tokens": 3017,
+        "output_tokens": 1562
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1907.10641"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

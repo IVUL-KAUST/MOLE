@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "FRASIMED",
+        "Link": "https://github.com/SihamBoulaknadel/FRASIMED",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A French clinical corpus of 1,000 MEDLINE abstracts annotated for problem, treatment, and test entities. The annotations were created using a cross-lingual projection method from an English resource using multilingual BERT.",
+        "Volume": 1000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Mohammed V University in Rabat"
+        ],
+        "Derived From": [
+            "NCBI-disease corpus",
+            "MEDLINE corpus"
+        ],
+        "Paper Title": "FRASIMED: a Clinical French Annotated Resource Produced through Crosslingual BERT-Based Annotation Projection",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.155/",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference (LREC)",
+        "Authors": [
+            "Oumayma Bounou",
+            "Abderrahim Aitazzi",
+            "Abdessalam Bouchekif",
+            "Zineb El Gharbi",
+            "Kaoutar El Maghraoui",
+            "Abdelhak Lghafour",
+            "Nabil Mekaoui",
+            "Salma El Idrissi",
+            "Siham Boulaknadel",
+            "Driss Boussaidi"
+        ],
+        "Affiliations": [
+            "Mohammed V University in Rabat, Faculty of Sciences, LRIT, Associated Unit to CNRST (URAC29)"
+        ],
+        "Abstract": "The scarcity of annotated data in the medical field is a major obstacle to the development of effective NLP systems. This is particularly true for languages other than English, such as French. In this paper, we present FRASIMED, a new French clinical corpus annotated with problem, treatment and test entities. To build this resource, we use a cross-lingual annotation projection approach. More precisely, we project annotations from an English annotated resource to its French counterpart, which are both extracted from the MEDLINE corpus of biomedical literature. We use multilingual BERT to compute contextual word embeddings and a nearest neighbor search method to find alignments between source and target sentences. The final resource contains 1,000 abstracts, 10,000 sentences and 250,000 tokens. We conduct a manual and an automatic evaluation of the projected annotations. The results show that the annotation projection approach is effective for creating new annotated resources for low-resource languages. The resource is freely available on GitHub."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0450575,
+        "input_tokens": 3024,
+        "output_tokens": 1629
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.10770"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "MEDIA",
+        "Link": "https://huggingface.co/datasets/camel-space/MEDIA",
+        "HF Link": "https://huggingface.co/datasets/camel-space/MEDIA",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "commentary"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "We introduce a new semantic task for the French Spoken Language Understanding (SLU) benchmark MEDIA. This task focuses on identifying the semantic role of each word in a spoken utterance, providing a more granular understanding of the utterance's meaning.",
+        "Volume": 11866.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "CAMeL Space"
+        ],
+        "Derived From": [],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2311.16471",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing",
+            "language identification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "L\u00e9o Dureau",
+            "Annelise Fabr\u00e8gue",
+            "Julien Plu",
+            "Yannick Est\u00e8ve"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 de Poitiers",
+            "CNRS",
+            "LIUM"
+        ],
+        "Abstract": "Spoken Language Understanding (SLU) is a core task in spoken dialogue systems. Existing French SLU benchmarks focus on intent detection and slot filling, but lack a fine-grained semantic analysis of utterances. In this paper, we introduce a new semantic task for the French SLU benchmark MEDIA. This task focuses on identifying the semantic role of each word in a spoken utterance, providing a more granular understanding of the utterance's meaning. We provide a detailed description of the task, the annotation process, and the baseline results. We show that our task is challenging and can be used to improve the performance of SLU systems."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00049126,
+        "input_tokens": 3028,
+        "output_tokens": 530
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

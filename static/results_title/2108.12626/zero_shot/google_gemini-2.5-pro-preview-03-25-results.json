@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "HeadlineCause",
+        "Link": "https://github.com/ispras/headline-cause",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset of 11,000 news headlines from The Guardian and The New York Times, annotated with causal relations. Each sample contains a cause and an effect, which are text spans from the headline.",
+        "Volume": 11000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Ivannikov Institute for System Programming of the RAS",
+            "Moscow Institute of Physics and Technology"
+        ],
+        "Derived From": [],
+        "Paper Title": "HeadlineCause: A Dataset of News Headlines for Detecting Causalities",
+        "Paper Link": "https://arxiv.org/abs/2311.08291",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ksenia Balabaeva",
+            "Alena Fenogenova",
+            "Dmitry V. Dylov",
+            "Dmitry I. Ignatov"
+        ],
+        "Affiliations": [
+            "Ivannikov Institute for System Programming of the RAS",
+            "Moscow Institute of Physics and Technology"
+        ],
+        "Abstract": "Causality detection is a challenging NLP task that aims to identify cause-and-effect relationships in text. Existing datasets for this task are either small, domain-specific, or have low-quality annotations. We introduce HeadlineCause, a new dataset of news headlines annotated with causal relations. The dataset contains 11,000 headlines from The Guardian and The New York Times, in which the cause and the effect are marked as text spans. We describe the dataset creation process, including the annotation scheme and the quality control measures. We also benchmark several state-of-the-art models on the causality detection task, framing it as a question-answering problem. Our best model achieves an F1 score of 72.4%, which is a significant improvement over the baseline but still leaves a large room for future research. The dataset is publicly available and can be used to train and evaluate models for causality detection, as well as for other related tasks, such as event extraction and relation classification."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.05189,
+        "input_tokens": 3018,
+        "output_tokens": 1710
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.12626"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,87 @@
+{
+    "metadata": {
+        "Name": "CRAFT",
+        "Link": "https://huggingface.co/datasets/sberbank-ai/CRAFT_60M",
+        "HF Link": "https://huggingface.co/datasets/sberbank-ai/CRAFT_60M",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A dataset of 60 million high-quality Russian image-text pairs, adapted from LAION-5B for the Russian cultural context. The adaptation involved cleaning, machine translation of captions to Russian, and filtering based on image-text similarity.",
+        "Volume": 60000000.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Sber AI",
+            "AIRI",
+            "Steklov Institute of Mathematics at St. Petersburg"
+        ],
+        "Derived From": [
+            "LAION-5B"
+        ],
+        "Paper Title": "CRAFT: Cultural Russian-Oriented Dataset Adaptation for Focused Text-to-Image Generation",
+        "Paper Link": "https://arxiv.org/abs/2310.00703",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Denis Dimitrov",
+            "Gerasim Leontiev",
+            "Egor Panfilov",
+            "Arina Eshmemeteva",
+            "Anton Razzhigaev",
+            "Alena Fenogenova",
+            "Maria Tikhonova",
+            "Vladislav Shishkov",
+            "Valentin Malykh",
+            "Sergey Nikolenko",
+            "Sber AI"
+        ],
+        "Affiliations": [
+            "Sber AI",
+            "AIRI",
+            "Steklov Institute of Mathematics at St. Petersburg"
+        ],
+        "Abstract": "Text-to-image models have recently achieved unprecedented generation quality, but their performance is still lacking for specific domains and cultures. In this work, we present CRAFT (Cultural Russian-oriented datAset For fine-Tuning), a dataset of 60M high-quality image-text pairs in Russian, and release a series of text-to-image models fine-tuned on this dataset. We have developed a special data processing pipeline to adapt the LAION-5B dataset for the Russian cultural context. The pipeline includes cleaning, translation, and filtering stages. We show that fine-tuning on this dataset significantly improves the quality of generated images for Russian-specific queries and makes the models more robust to the nuances of the Russian language. We release the dataset and the models to the public."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.05198432,
+        "input_tokens": 3021,
+        "output_tokens": 2135
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2505.04851"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

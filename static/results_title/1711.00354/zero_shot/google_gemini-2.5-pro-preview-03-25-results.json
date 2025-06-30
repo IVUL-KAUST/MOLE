@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "JSUT",
+        "Link": "https://github.com/sarulab-speech/jsut-corpus",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "books",
+            "news articles"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "A free, large-scale Japanese speech corpus for end-to-end speech synthesis. It consists of approximately 10 hours of speech data from a single female speaker. The text is sourced from various books and a newspaper.",
+        "Volume": 10.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Shizuoka University",
+            "Kobe University"
+        ],
+        "Derived From": [],
+        "Paper Title": "JSUT corpus: free large-scale Japanese speech corpus for end-to-end speech synthesis",
+        "Paper Link": "https://arxiv.org/abs/1711.00354",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ryosuke Sonobe",
+            "Takaaki Takiguchi",
+            "Yasuo Ariki"
+        ],
+        "Affiliations": [
+            "Graduate School of Engineering, Shizuoka University",
+            "Graduate School of Science and Technology, Kobe University"
+        ],
+        "Abstract": "In this paper, we introduce a new Japanese speech corpus for end-to-end speech synthesis. Recently, many end-to-end speech synthesis systems, which can directly generate a speech waveform from a text, have been proposed. These systems require a large amount of speech and text pairs for training. Although some open-source English speech corpora are available, there are no publicly available Japanese speech corpora that are sufficiently large for this purpose. To address this problem, we have constructed a new Japanese speech corpus, which we call the 'Japanese speech corpus of versatile text for end-to-end speech synthesis (JSUT)'. This corpus is composed of approximately 10 hours of speech data from a single female speaker. The text data are sourced from various books and online text. This corpus is available under the Creative Commons Attribution-ShareAlike 4.0 license (CC BY-SA 4.0). We also provide a recipe for building a speech synthesis system based on the Tacotron model using this corpus."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.05154375,
+        "input_tokens": 3084,
+        "output_tokens": 1776
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1711.00354"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

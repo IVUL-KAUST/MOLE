@@ -1,0 +1,69 @@
+{
+    "metadata": {
+        "Name": "Statutory Article Retrieval Dataset",
+        "Link": "https://huggingface.co/datasets/florian-doyen/statutory-article-retrieval",
+        "HF Link": "https://huggingface.co/datasets/florian-doyen/statutory-article-retrieval",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "This dataset contains a collection of articles from the French statutory code.",
+        "Volume": 15488.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Florian Doyen"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Statutory Article Retrieval Dataset in French",
+        "Paper Link": "https://arxiv.org/abs/2311.16591",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "information retrieval",
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Florian Doyen"
+        ],
+        "Affiliations": [],
+        "Abstract": "We introduce a new dataset for statutory article retrieval in French. The dataset contains 15,488 sentences extracted from the French statutory code, covering a wide range of legal domains. We provide a detailed analysis of the dataset, including its size, distribution of legal domains, and the average length of sentences. We also present baseline results on the task of statutory article retrieval using a simple information retrieval model. The dataset is publicly available on the Hugging Face Hub."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00040574,
+        "input_tokens": 3012,
+        "output_tokens": 437
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.11792"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

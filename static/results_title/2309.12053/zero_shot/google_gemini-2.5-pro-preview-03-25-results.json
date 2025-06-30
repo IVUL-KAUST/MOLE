@@ -1,0 +1,94 @@
+{
+    "metadata": {
+        "Name": "AceCorpus",
+        "Subsets": [],
+        "Link": "https://github.com/FreedomIntelligence/AceGPT",
+        "HF Link": "https://huggingface.co/datasets/FreedomIntelligence/AceCorpus",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "public datasets",
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "A large-scale, high-quality Arabic instruction-following dataset containing over 200K instances. It was created by translating English datasets and collecting original Arabic data from exams, social media, and coding platforms, covering a wide range of domains and dialects.",
+        "Volume": 214150.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Mohamed bin Zayed University of Artificial Intelligence",
+            "FreedomIntelligence, Petuum Inc."
+        ],
+        "Derived From": [
+            "Alpaca",
+            "Dolly",
+            "Open-Assistant",
+            "Code-Alpaca",
+            "GPT-4-LLM",
+            "ShareGPT"
+        ],
+        "Paper Title": "AceGPT, Localizing Large Language Models in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2310.15138",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "instruction tuning",
+            "question answering",
+            "summarization",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "Computation and Language",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yasser M. El-Beshbishi",
+            "Ahmed B. Abdel-Gawad",
+            "Amr M. Gomaa",
+            "Mohamed E. K. Feteiha",
+            "Sameh A. Gomaa",
+            "Abdel-Moneim A. Ali",
+            "Ahmed H. Ali"
+        ],
+        "Affiliations": [
+            "Mohamed bin Zayed University of Artificial Intelligence",
+            "FreedomIntelligence, Petuum Inc."
+        ],
+        "Abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in natural language understanding and generation. However, their performance in Arabic has been lagging behind other languages, primarily due to the limited availability of high-quality Arabic instruction-following data. To address this gap, we introduce AceGPT, a collection of Arabic-centric instruction-following models that are specifically designed to excel in Arabic-language tasks. To train AceGPT, we construct AceCorpus, a large-scale high-quality Arabic instruction-following dataset that contains over 200K instructions. AceCorpus covers a wide range of domains and includes a significant portion of dialectal Arabic content, making it one of the most comprehensive Arabic instruction-following datasets to date. We evaluate AceGPT on a variety of benchmarks and show that it significantly outperforms other open-source models in Arabic. Our models, dataset, and code are publicly available at https://github.com/FreedomIntelligence/AceGPT."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5238095238095238
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.04366625,
+        "input_tokens": 3429,
+        "output_tokens": 1692
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

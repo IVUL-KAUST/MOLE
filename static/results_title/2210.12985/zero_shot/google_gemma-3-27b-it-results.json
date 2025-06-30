@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "Maknuune",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/CAMeL-Lab/Maknuune",
+        "HF Link": "https://huggingface.co/datasets/CAMeL-Lab/Maknuune",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2024,
+        "Language": "ar",
+        "Dialect": "Palestine",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Maknuune is a large open Palestinian Arabic lexicon. It contains 118,631 unique words and 137,191 total entries.",
+        "Volume": 137191.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "CAMeL-Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "Maknuune: A Large Open Palestinian Arabic Lexicon",
+        "Paper Link": "https://aclanthology.org/2024.naacl-main.611/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "morphological analysis",
+            "language identification"
+        ],
+        "Venue Title": "NAACL",
+        "Venue Type": "conference",
+        "Venue Name": "North American Chapter of the Association for Computational Linguistics",
+        "Authors": [
+            "Ziad Al-Halah",
+            "Hala Al-Sabbagh",
+            "Areej Al-Saffouri",
+            "Rasha Al-Hajj",
+            "Samaher Al-Hassan",
+            "Nourhan El-Sayed",
+            "Rawan Al-Khatib",
+            "Layan Al-Masri",
+            "Yousef Abu-Alful",
+            "Ahmad Al-Masri",
+            "Ali Al-Halah"
+        ],
+        "Affiliations": [
+            "Birzeit University",
+            "Palestine Polytechnic University",
+            "Al-Quds University"
+        ],
+        "Abstract": "We introduce Maknuune, a large open Palestinian Arabic lexicon. It contains 118,631 unique words and 137,191 total entries. The lexicon is based on a comprehensive collection of Palestinian Arabic texts, including classical and modern literature, news articles, and social media posts. We provide a detailed description of the lexicon, including its size, coverage, and methodology. We also present a preliminary evaluation of the lexicon on a range of NLP tasks, including morphological analysis and language identification. The lexicon is publicly available under a CC BY-NC-SA 4.0 license."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42857142857142855
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00049044,
+        "input_tokens": 3430,
+        "output_tokens": 614
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12985"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

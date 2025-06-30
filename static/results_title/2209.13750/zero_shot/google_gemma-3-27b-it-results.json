@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "RuDSI",
+        "Link": "https://github.com/alexander-polyakov/ruds",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "RuDSI is a graph-based word sense induction dataset for Russian.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Alexander Polyakov"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuDSI: graph-based word sense induction dataset for Russian",
+        "Paper Link": "https://arxiv.org/abs/2310.04999",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "word prediction",
+            "morphological analysis"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Alexander Polyakov",
+            "Ekaterina Artemova",
+            "Sergey Nikolenko"
+        ],
+        "Affiliations": [
+            "Saint Petersburg State University",
+            "Yandex"
+        ],
+        "Abstract": "We present RuDSI, a new graph-based dataset for word sense induction (WSI) in Russian. RuDSI consists of 10,000 sentences annotated with word senses from the Russian Open Thesaurus. The dataset is designed to facilitate the development and evaluation of WSI algorithms for the Russian language. We provide a detailed description of the dataset, including its construction process, statistics, and baseline results. We hope that RuDSI will be a valuable resource for researchers in the field of natural language processing."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004622,
+        "input_tokens": 3015,
+        "output_tokens": 439
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2209.13750"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

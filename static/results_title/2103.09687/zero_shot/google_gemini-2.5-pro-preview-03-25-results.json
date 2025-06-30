@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "Darija Open Dataset",
+        "Subsets": [
+            {
+                "Name": "Moroccan Darija",
+                "Volume": 25328,
+                "Unit": "sentences",
+                "Dialect": "Morocco"
+            }
+        ],
+        "Link": "https://github.com/darija-open-dataset/darija-open-dataset",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2020,
+        "Language": "ar",
+        "Dialect": "Morocco",
+        "Domain": [
+            "social media",
+            "news articles",
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "An open-source dataset for the Moroccan Arabic dialect (Darija). It contains over 25,000 sentences collected from various sources like social media and news articles. A portion of the dataset is labeled for sentiment analysis.",
+        "Volume": 25328.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "darija-open-dataset"
+        ],
+        "Derived From": [],
+        "Paper Title": "Moroccan Dialect -Darija- Open Dataset",
+        "Paper Link": "https://github.com/darija-open-dataset/darija-open-dataset",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis",
+            "language modeling"
+        ],
+        "Venue Title": "GitHub Repository",
+        "Venue Type": "preprint",
+        "Venue Name": "GitHub",
+        "Authors": [
+            "Aiman-Db",
+            "yassine-ouahidi",
+            "youness-bouchouia"
+        ],
+        "Affiliations": [],
+        "Abstract": "This repository contains an open source dataset for the Moroccan dialect, also known as Darija. The dataset is composed of sentences collected from various sources (social media comments, news articles, etc.). The dataset is available in two files: a labeled dataset of 5,164 sentences for sentiment analysis and an unlabeled dataset of 20,164 sentences."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.42857142857142855
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0380409,
+        "input_tokens": 3428,
+        "output_tokens": 1212
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.09687"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

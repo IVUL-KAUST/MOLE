@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "KaoKore",
+        "Link": "https://github.com/KaoKore/KaoKore",
+        "HF Link": "",
+        "License": "CC BY-NC 4.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A dataset of pre-modern Japanese art facial expressions.",
+        "Volume": 1100.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "KaoKore"
+        ],
+        "Derived From": [],
+        "Paper Title": "KaoKore: A Pre-modern Japanese Art Facial Expression Dataset",
+        "Paper Link": "https://arxiv.org/abs/2311.16199",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "image captioning",
+            "emotion classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yusuke Matsubara",
+            "Yuki Nakayama",
+            "Takuya Kida",
+            "Takashi Kido",
+            "Masato Hagiwara"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "National Institute of Informatics"
+        ],
+        "Abstract": "We introduce KaoKore, a novel dataset of pre-modern Japanese art facial expressions. KaoKore consists of 1,100 images of facial expressions extracted from ukiyo-e (Japanese woodblock prints) and other pre-modern Japanese paintings. Each image is annotated with the emotion expressed by the facial expression. We also provide a baseline for emotion classification using a pre-trained convolutional neural network. Our experiments show that the baseline model achieves reasonable performance on the KaoKore dataset. We believe that KaoKore will be a valuable resource for researchers in computer vision, art history, and related fields."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00042464,
+        "input_tokens": 3080,
+        "output_tokens": 485
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.08595"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

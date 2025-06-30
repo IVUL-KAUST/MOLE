@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "Massive Multitask Language Understanding",
+        "Link": "https://github.com/hendrycks/test",
+        "HF Link": "https://huggingface.co/datasets/hendrycks/test",
+        "License": "MIT License",
+        "Year": 2021,
+        "Language": "en",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A benchmark for massive multitask language understanding, consisting of multiple-choice questions from 57 subjects, ranging from elementary to professional levels, to measure knowledge acquired during pretraining.",
+        "Volume": 15908.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "UC Berkeley",
+            "Columbia University",
+            "University of Illinois at Urbana-Champaign",
+            "Anthropic"
+        ],
+        "Derived From": [],
+        "Paper Title": "Measuring Massive Multitask Language Understanding",
+        "Paper Link": "https://arxiv.org/abs/2009.03300",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "International Conference on Learning Representations",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [
+            "Dan Hendrycks",
+            "Collin Burns",
+            "Steven Basart",
+            "Andy Zou",
+            "Mantas Mazeika",
+            "Dawn Song",
+            "Jacob Steinhardt"
+        ],
+        "Affiliations": [
+            "UC Berkeley",
+            "Columbia University",
+            "University of Illinois at Urbana-Champaign",
+            "Anthropic"
+        ],
+        "Abstract": "We introduce a new benchmark to measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This makes our benchmark more challenging and closer to how humans are evaluated. Our benchmark covers 57 tasks, including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on our benchmark, models must possess extensive world knowledge and problem solving ability. We find that on our benchmark, the largest GPT-3 model only slightly outperforms random guessing. We also find that multitask pretraining on a sufficiently diverse set of tasks can improve performance. Furthermore, we provide a detailed analysis of our benchmark that reveals model weaknesses, including a breakdown of performance by subject area and an analysis of the effects of negative log-likelihood."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04241125,
+        "input_tokens": 3010,
+        "output_tokens": 1586
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2009.03300"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

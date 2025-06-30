@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "DaNetQA",
+        "Link": "https://huggingface.co/datasets/sberbank-ai/DaNetQA",
+        "HF Link": "https://huggingface.co/datasets/sberbank-ai/DaNetQA",
+        "License": "Apache-2.0",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A yes/no question answering dataset for the Russian language. It contains over 3,500 question-paragraph pairs from the news domain. The task is to determine if the answer to the question is 'yes' or 'no' based on the paragraph.",
+        "Volume": 3581.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sberbank"
+        ],
+        "Derived From": [
+            "PARus",
+            "RuCoS",
+            "CNN/DailyMail"
+        ],
+        "Paper Title": "DaNetQA: a yes/no Question Answering Dataset for the Russian Language",
+        "Paper Link": "https://arxiv.org/abs/2010.03209",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Analysis of Images, Social Networks and Texts",
+        "Venue Type": "conference",
+        "Venue Name": "9th International Conference on Analysis of Images, Social Networks and Texts (AIST)",
+        "Authors": [
+            "Alena Fenogenova",
+            "Maria Povolotskaya",
+            "Denis Teslenko"
+        ],
+        "Affiliations": [
+            "Sberbank"
+        ],
+        "Abstract": "This paper introduces DaNetQA, a question answering dataset for the Russian language. The task is to answer a yes/no question based on a given paragraph. The dataset is based on the PARus dataset, which was collected from the news domain and contains more than 3,500 question-paragraph pairs. We describe the process of creating the dataset and provide statistics on it. We also present several baselines, including a fine-tuned BERT-based model, and report their performance on the dataset. The dataset is publicly available."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0414225,
+        "input_tokens": 3018,
+        "output_tokens": 1387
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02605"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

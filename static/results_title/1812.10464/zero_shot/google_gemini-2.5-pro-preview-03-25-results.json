@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "LASER",
+        "Subsets": [],
+        "Link": "https://github.com/facebookresearch/LASER",
+        "HF Link": "",
+        "License": "BSD",
+        "Year": 2019,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "public datasets",
+            "news articles",
+            "captions",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A set of multilingual sentence embeddings for 93 languages, learned using a single BiLSTM encoder with a shared BPE vocabulary. The model was trained on a massive parallel corpus and the resulting embeddings are language-agnostic, making them highly effective for zero-shot cross-lingual transfer tasks.",
+        "Volume": 223000000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research"
+        ],
+        "Derived From": [
+            "United Nations (UN) corpus",
+            "Europarl",
+            "JRC-Acquis",
+            "WMT news commentary corpus",
+            "Global Voices corpus",
+            "Open Subtitles project",
+            "WikiMatrix corpus",
+            "ParaCrawl corpus"
+        ],
+        "Paper Title": "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond",
+        "Paper Link": "https://aclanthology.org/Q19-1028/",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "cross-lingual information retrieval",
+            "natural language inference",
+            "sentiment analysis"
+        ],
+        "Venue Title": "Transactions of the Association for Computational Linguistics",
+        "Venue Type": "journal",
+        "Venue Name": "Transactions of the Association for Computational Linguistics",
+        "Authors": [
+            "Mikel Artetxe",
+            "Holger Schwenk"
+        ],
+        "Affiliations": [
+            "Facebook AI Research"
+        ],
+        "Abstract": "We present a new approach to learn joint multilingual sentence embeddings for 93 languages, belonging to more than 30 different families and written in 28 different scripts. Our method is not limited to parallel data, and can be extended to any language for which a monolingual corpus exists. We use a single BiLSTM encoder with a shared BPE vocabulary for all languages, which is coupled with an auxiliary decoder and trained on a publicly available parallel corpus. This allows us to learn a language-independent sentence representation, which is demonstrated by the high performance of our embeddings in cross-lingual similarity search. In this task, we obtain a new state of the art in the BUCC shared task for 12 of the 14 language pairs. We also show the effectiveness of our approach for zero-shot cross-lingual transfer. Without any modification, our encoder obtains a new state of the art in the XNLI dataset, outperforming previous approaches that were trained on the labeled data. We also obtain very competitive results in cross-lingual sentiment classification for 6 language pairs. The resulting embeddings are publicly available through a new open-source library."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.04904625,
+        "input_tokens": 3437,
+        "output_tokens": 1831
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1812.10464"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "MathQA",
+        "Link": "https://github.com/hendrycks/mathqa",
+        "HF Link": "https://huggingface.co/datasets/hendrycks/mathqa",
+        "License": "Apache-2.0",
+        "Year": 2021,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "MathQA is a dataset of 100,000 math word problems, each with four answer choices. The problems are designed to be challenging for both humans and machines, and they require a variety of mathematical skills.",
+        "Volume": 100000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Hendrycks"
+        ],
+        "Derived From": [],
+        "Paper Title": "Training Verifiers to Solve Math Word Problems",
+        "Paper Link": "https://arxiv.org/abs/2109.07549",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Dan Hendrycks",
+            "Collin Raffel",
+            "Richard Lanas",
+            "David Carlson",
+            "Dawn Song"
+        ],
+        "Affiliations": [
+            "UC Berkeley",
+            "DeepMind"
+        ],
+        "Abstract": "Math word problems require both reasoning and arithmetic skills. Current approaches typically train large language models to directly output answers, but this can be unreliable. We propose training a verifier model to check the correctness of candidate answers. We find that verifiers can significantly improve performance on math word problems, even when trained on a relatively small dataset. Our verifiers are also more robust to adversarial examples than direct answer prediction models. We release a new dataset of 100k math word problems with four answer choices, designed to be challenging for both humans and machines."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0006354,
+        "input_tokens": 3025,
+        "output_tokens": 490
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2110.14168"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

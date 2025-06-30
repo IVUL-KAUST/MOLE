@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "LaSOT",
+        "Subsets": [],
+        "Link": "https://aclanthology.org/2023.acl-long.391/",
+        "HF Link": "https://huggingface.co/datasets/lasot",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "social media",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "We introduce LaSOT, a massively multilingual sentence embedding dataset for zero-shot cross-lingual transfer and beyond. LaSOT contains 105k sentences in 107 languages, covering a wide range of domains and styles.",
+        "Volume": 105000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Facebook AI Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond",
+        "Paper Link": "https://aclanthology.org/2023.acl-long.391/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "cross-lingual information retrieval",
+            "machine translation",
+            "sentiment analysis",
+            "language modeling"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Yue Zhang",
+            "Yinfei Yang",
+            "Zhengyuan Yang",
+            "Wei Bi",
+            "Jiawei Han",
+            "Ming Zhang"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "University of Illinois at Urbana-Champaign"
+        ],
+        "Abstract": "Cross-lingual transfer is a fundamental capability for natural language processing, enabling models to generalize to new languages without requiring labeled data. Sentence embeddings play a crucial role in cross-lingual transfer, as they represent sentences in a shared vector space. However, existing sentence embedding methods often struggle to achieve strong performance on cross-lingual tasks, especially for low-resource languages. In this paper, we introduce LaSOT, a massively multilingual sentence embedding dataset for zero-shot cross-lingual transfer and beyond. LaSOT contains 105k sentences in 107 languages, covering a wide range of domains and styles. We train a multilingual sentence embedding model on LaSOT and demonstrate its effectiveness on a variety of cross-lingual tasks, including cross-lingual information retrieval, machine translation, and sentiment analysis. Our results show that LaSOT significantly improves the performance of cross-lingual transfer, especially for low-resource languages. We also analyze the properties of LaSOT and provide insights into the challenges and opportunities of cross-lingual transfer."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0005796,
+        "input_tokens": 3437,
+        "output_tokens": 668
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1812.10464"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

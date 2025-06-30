@@ -1,0 +1,121 @@
+{
+    "metadata": {
+        "Name": "MLSUM",
+        "Subsets": [
+            {
+                "Name": "French",
+                "Volume": 251100,
+                "Unit": "documents",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 243100,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 277100,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 473000,
+                "Unit": "documents",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 166100,
+                "Unit": "documents",
+                "Language": "Turkish"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/mlsum",
+        "HF Link": "https://huggingface.co/datasets/mlsum",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": [
+            "French",
+            "German",
+            "Spanish",
+            "Russian",
+            "Turkish"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large-scale multilingual summarization dataset containing over 1.5 million article/summary pairs in French, German, Spanish, Russian, and Turkish. The data was obtained from online newspapers, with summaries being the lead paragraphs of the articles.",
+        "Volume": 1410400.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Sorbonne Universit\u00e9",
+            "CNRS",
+            "LIP6",
+            "recital",
+            "Inria"
+        ],
+        "Derived From": [
+            "MCL corpus"
+        ],
+        "Paper Title": "MLSUM: The Multilingual Summarization Corpus",
+        "Paper Link": "https://arxiv.org/abs/2010.08137",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Thomas Scialom",
+            "Paul-Alexis Dray",
+            "Sylvain Lamprier",
+            "Benjamin Piwowarski",
+            "Jacopo Staiano"
+        ],
+        "Affiliations": [
+            "Sorbonne Universit\u00e9, CNRS, LIP6",
+            "recital",
+            "Inria"
+        ],
+        "Abstract": "We introduce MLSUM, the first large-scale MultiLingual Summarization dataset. Obtained from online newspapers, it contains 1.5M+ article/summary pairs in five different languages: French, German, Spanish, Russian, and Turkish. Together with English newspapers from the popular CNN/Daily mail dataset, the collected data form a large multilingual dataset, which can enable new research directions for the text summarization community. We report cross-lingual experimental results for several models, which showcase the dataset's potential and challenges."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04671875,
+        "input_tokens": 3185,
+        "output_tokens": 1614
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14900"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

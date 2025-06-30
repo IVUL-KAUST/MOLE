@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "Shamela",
+        "Subsets": [],
+        "Link": "https://github.com/UBC-NLP/shamela",
+        "HF Link": "https://huggingface.co/datasets/ubc-nlp/shamela",
+        "License": "CC BY-SA 4.0",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Shamela is a large-scale historical Arabic corpus consisting of over 17,000 books. It covers a wide range of topics, including literature, history, and religion.",
+        "Volume": 17000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "UBC-NLP"
+        ],
+        "Derived From": [],
+        "Paper Title": "Shamela: A Large-Scale Historical Arabic Corpus",
+        "Paper Link": "https://aclanthology.org/2023.naacl-main.411/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "morphological analysis"
+        ],
+        "Venue Title": "NAACL",
+        "Venue Type": "conference",
+        "Venue Name": "North American Chapter of the Association for Computational Linguistics",
+        "Authors": [
+            "Mohammad Salameh",
+            "Ali El-Sawy",
+            "Hala Al-Sanjary",
+            "Mohamed Abdelbasset",
+            "Frank Rudzicz"
+        ],
+        "Affiliations": [
+            "University of British Columbia",
+            "Aalto University"
+        ],
+        "Abstract": "We introduce Shamela, a large-scale historical Arabic corpus consisting of over 17,000 books. The corpus spans multiple centuries and covers a wide range of topics, including literature, history, and religion. We provide a detailed description of the corpus, including its size, content, and characteristics. We also present preliminary results on several NLP tasks, demonstrating the potential of Shamela for a variety of applications. The corpus is publicly available to the research community."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00046735,
+        "input_tokens": 3429,
+        "output_tokens": 510
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1612.08989"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

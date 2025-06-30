@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "FQuAD",
+        "Link": "https://github.com/illuin-tech/FQuAD-dataset",
+        "HF Link": "https://huggingface.co/datasets/fquad",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A French Question Answering Dataset created by translating the SQuAD 1.1 dataset. The translation was done by professional translators and validated by native French speakers. It contains over 50,000 question-answer pairs from Wikipedia articles.",
+        "Volume": 56866.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology",
+            "Inria"
+        ],
+        "Derived From": [
+            "SQuAD 1.1"
+        ],
+        "Paper Title": "FQuAD: French Question Answering Dataset",
+        "Paper Link": "https://arxiv.org/abs/1910.11641",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of The 12th Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Martin d\u2019Hoffschmidt",
+            "Wacim Belblidia",
+            "Timoth\u00e9e Delas",
+            "Quentin Lhoest",
+            "Thomas Scialom"
+        ],
+        "Affiliations": [
+            "Illuin Technology",
+            "Inria"
+        ],
+        "Abstract": "We present FQuAD, a native French Question Answering Dataset. The dataset consists of 25,000+ questions and more than 60,000 question-answer pairs. It is to date the first and largest French native dataset for extractive question-answering. The dataset was built by translating the SQuAD 1.1 dataset using professional French translators. The translated dataset was then validated and corrected by the authors. We provide a baseline evaluation of the dataset with multilingual models such as mBERT and XLM and show that they achieve good performance on FQuAD. We also show that a CamemBERT model fine-tuned on FQuAD outperforms these multilingual models and establishes a strong baseline for future research. The dataset is released under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0) and is available at https://github.com/illuin-tech/FQuAD-dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.05220375,
+        "input_tokens": 3012,
+        "output_tokens": 1847
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.06071"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

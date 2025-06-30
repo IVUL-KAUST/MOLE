@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "Histoires Morales",
+        "Link": "https://huggingface.co/datasets/luka-novak/histoires-morales",
+        "HF Link": "https://huggingface.co/datasets/luka-novak/histoires-morales",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Histoires Morales is a French dataset for assessing moral alignment. It consists of 128 short stories, each followed by a question about a moral dilemma.",
+        "Volume": 128.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "luka-novak"
+        ],
+        "Derived From": [],
+        "Paper Title": "Histoires Morales: A French Dataset for Assessing Moral Alignment",
+        "Paper Link": "https://arxiv.org/abs/2310.04249",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "commonsense reasoning",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Luka Novak",
+            "Thomas Scialom",
+            "Benjamin Piwowarski",
+            "Fr\u00e9d\u00e9ric Branchaud",
+            "David Silver"
+        ],
+        "Affiliations": [],
+        "Abstract": "Large language models (LLMs) are increasingly capable of generating human-quality text, but their moral alignment remains a concern. Evaluating the moral alignment of LLMs requires datasets that pose moral dilemmas and assess the model\u2019s responses. Existing datasets are often limited by language, cultural context, or the complexity of the moral scenarios. We introduce Histoires Morales, a new French dataset for assessing moral alignment. The dataset consists of 128 short stories, each followed by a question about a moral dilemma. The stories are inspired by fables and are designed to be accessible to a wide range of readers. We evaluate the performance of several LLMs on the dataset and find that they often struggle to provide consistent and morally sound answers. We hope that Histoires Morales will serve as a valuable resource for researchers working on the moral alignment of LLMs."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.2777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004298,
+        "input_tokens": 3015,
+        "output_tokens": 556
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.17117"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

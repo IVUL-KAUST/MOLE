@@ -1,0 +1,102 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "MTOP",
+            "Subsets": [],
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/tatsu-lab/mtop",
+            "License": "CC BY-SA 4.0",
+            "Year": 2023,
+            "Language": "Multilingual",
+            "Domain": "Task-Oriented Dialogue",
+            "Form": "Semantic Parsing",
+            "Collection Style": "Human-annotated",
+            "Description": "A comprehensive multilingual task-oriented semantic parsing benchmark.",
+            "Volume": null,
+            "Unit": null,
+            "Ethical Risks": null,
+            "Provider": "Tatsu-Lab",
+            "Derived From": null,
+            "Paper Title": "MTOP: A Comprehensive Multilingual Task-Oriented Semantic Parsing Benchmark",
+            "Paper Link": null,
+            "Tokenized": null,
+            "Host": "Hugging Face Datasets",
+            "Access": "Public",
+            "Cost": "Free",
+            "Test Split": null,
+            "Tasks": [
+                "Semantic Parsing",
+                "Task-Oriented Dialogue"
+            ],
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": [],
+            "Affiliations": [],
+            "Abstract": null
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2008.09335",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.2631578947368421
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.0001556,
+        "input_tokens": 535,
+        "output_tokens": 289
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2008.09335"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

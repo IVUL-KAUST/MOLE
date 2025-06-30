@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "RACE",
+        "Link": "https://github.com/swag-team/race",
+        "HF Link": "https://huggingface.co/datasets/race",
+        "License": "CC BY-SA 4.0",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "RACE is a large-scale reading comprehension dataset consisting of English exams designed for Chinese middle and high school students. The questions require multi-step reasoning to answer.",
+        "Volume": 100000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [],
+        "Paper Title": "RACE: Large-scale ReAding Comprehension Dataset From Examinations",
+        "Paper Link": "https://arxiv.org/abs/1604.01188",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering",
+            "machine translation",
+            "question answering"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Qian Chen",
+            "Heng Ji",
+            "Liwei Wang"
+        ],
+        "Affiliations": [
+            "University of Michigan",
+            "University of Illinois at Urbana-Champaign"
+        ],
+        "Abstract": "We introduce a large-scale reading comprehension dataset, RACE, consisting of nearly 100,000 questions in the style of English exams for Chinese middle and high school students. The questions require multi-step reasoning to answer, and the dataset is challenging for existing machine reading comprehension models. We present a two-stage model that combines a memory network with a bidirectional attention flow to achieve state-of-the-art results on RACE. Our model outperforms previous methods by a significant margin, demonstrating the effectiveness of our approach."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004772,
+        "input_tokens": 3019,
+        "output_tokens": 478
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1704.04683"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

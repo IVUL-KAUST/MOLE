@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "CLIMB",
+        "Link": "https://github.com/google-research/climb",
+        "HF Link": "https://huggingface.co/datasets/google/climb",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "CLIMB is a large-scale, multilingual dataset for language model pre-training, constructed using a clustering-based iterative data mixture bootstrapping approach.",
+        "Volume": 300000000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google"
+        ],
+        "Derived From": [],
+        "Paper Title": "CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
+        "Paper Link": "https://arxiv.org/abs/2305.15861",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Tianlu Wang",
+            "Zhengxuan Wu",
+            "Yue Jiang",
+            "Zihan Liu",
+            "Pengcheng He",
+            "Weizhu Chen"
+        ],
+        "Affiliations": [
+            "Google Research"
+        ],
+        "Abstract": "Large language models (LLMs) have demonstrated remarkable capabilities, but their performance heavily relies on the quality and scale of pre-training data. Existing datasets often suffer from issues like data contamination, redundancy, and lack of diversity. To address these challenges, we propose CLIMB, a CLustering-based Iterative Data Mixture Bootstrapping approach for constructing high-quality pre-training datasets. CLIMB iteratively clusters web pages based on their content, selects representative samples from each cluster, and bootstraps a diverse and informative dataset. We evaluate CLIMB on various language modeling benchmarks and demonstrate its effectiveness in improving the performance of LLMs. CLIMB is a large-scale, multilingual dataset containing 300B tokens, and we release the dataset and code to facilitate future research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.000494931,
+        "input_tokens": 3037,
+        "output_tokens": 534
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.13161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

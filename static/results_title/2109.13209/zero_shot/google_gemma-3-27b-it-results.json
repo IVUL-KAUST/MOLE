@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://huggingface.co/datasets/fquad",
+        "HF Link": "https://huggingface.co/datasets/fquad",
+        "License": "CC BY-SA 4.0",
+        "Year": 2021,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "FQuAD2.0 is a French Question Answering Dataset. It is based on French Wikipedia articles and contains over 100k question-answer pairs.",
+        "Volume": 103688.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Waterloo"
+        ],
+        "Derived From": [],
+        "Paper Title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+        "Paper Link": "https://aclanthology.org/2021.naacl-main.392/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "NAACL",
+        "Venue Type": "conference",
+        "Venue Name": "North American Chapter of the Association for Computational Linguistics",
+        "Authors": [
+            "Yassine Charfi",
+            "Antoine Bordes",
+            "Guillaume Lample",
+            "Louis-Philippe Morency"
+        ],
+        "Affiliations": [
+            "University of Waterloo",
+            "Facebook AI Research"
+        ],
+        "Abstract": "We introduce FQuAD2.0, a new French Question Answering Dataset (FQuAD) with over 100k question-answer pairs. FQuAD2.0 is based on French Wikipedia articles and is designed to be challenging for existing QA models. We evaluate several state-of-the-art models on FQuAD2.0 and show that they still have significant room for improvement. We also analyze the characteristics of FQuAD2.0 and identify several factors that make it challenging for QA models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00063885,
+        "input_tokens": 3034,
+        "output_tokens": 489
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

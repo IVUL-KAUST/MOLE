@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "RefinedWeb",
+        "Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
+        "HF Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A massive English web dataset based on CommonCrawl, created with extensive filtering and deduplication to serve as a high-quality pre-training corpus for large language models. A 600 billion token extract is publicly available.",
+        "Volume": 600000000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Technology Innovation Institute"
+        ],
+        "Derived From": [
+            "CommonCrawl"
+        ],
+        "Paper Title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+        "Paper Link": "https://arxiv.org/abs/2306.01116",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Guilherme Penedo",
+            "Quentin Malartic",
+            "Daniel Hesslow",
+            "Ruxandra Cojocaru",
+            "Alessandro Raganato",
+            "Tommaso Fevola",
+            "Baptiste Pannier",
+            "Ebtesam Almazrouei",
+            "Julien Launay"
+        ],
+        "Affiliations": [
+            "Technology Innovation Institute"
+        ],
+        "Abstract": "Large language models are commonly trained on a mixture of curated and web data. The prevailing view is that the quality of web data is lower than that of curated sources, and that it must be carefully filtered and combined with 'high-quality' corpora to produce the best models. This has led to the development of complex ad-hoc filtering heuristics and dataset mixing strategies. In this work, we challenge this view and show that with sufficient filtering and deduplication, web data alone can lead to powerful models; we train a 7.5B parameter model on a 1.5T token subset of RefinedWeb that matches the performance of a model trained on The Pile, a well-known 'curated' dataset. We also show that further scaling the model and the data size leads to significant performance improvements. We release RefinedWeb, a massive English web-dataset of five trillion tokens based on CommonCrawl, and we provide evidence of its high quality through a series of ablation experiments. We also release Falcon-40B, a 40B parameter model trained on one trillion tokens of RefinedWeb, which is currently at the top of the Open LLM Leaderboard. We release the 600B-token extract of RefinedWeb used to train Falcon-40B on the HuggingFace Hub."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.9444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0434725,
+        "input_tokens": 3028,
+        "output_tokens": 1746
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.01116"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

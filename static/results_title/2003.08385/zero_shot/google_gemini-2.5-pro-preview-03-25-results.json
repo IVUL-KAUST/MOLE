@@ -1,0 +1,102 @@
+{
+    "metadata": {
+        "Name": "X-Stance",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 26737,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 21647,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 19202,
+                "Unit": "sentences",
+                "Language": "Italian"
+            }
+        ],
+        "Link": "https://github.com/Zurich-NLP/x-stance",
+        "HF Link": "https://huggingface.co/datasets/x_stance",
+        "License": "MIT License",
+        "Year": 2020,
+        "Language": [
+            "German",
+            "French",
+            "Italian"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "X-Stance is a multilingual, multi-target dataset for stance detection. The dataset contains over 67k comments on over 150 topics in German, French, and Italian. The data was crawled from a Swiss online debate portal and annotated for stance (pro, con).",
+        "Volume": 67586.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Zurich"
+        ],
+        "Derived From": [],
+        "Paper Title": "X-Stance: A Multilingual Multi-Target Dataset for Stance Detection",
+        "Paper Link": "https://aclanthology.org/2020.aacl-main.48/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "stance detection"
+        ],
+        "Venue Title": "Proceedings of the 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and International Joint Conference on Natural Language Processing (AACL-IJCNLP)",
+        "Authors": [
+            "John Pavlopoulos",
+            "Leo Laugier",
+            "Alexandros Xenos",
+            "Ion Androutsopoulos",
+            "Josef van Genabith"
+        ],
+        "Affiliations": [
+            "Athens University of Economics and Business",
+            "SFI ADAPT Research Centre, Dublin City University",
+            "University of Zurich",
+            "German Research Center for Artificial Intelligence (DFKI)"
+        ],
+        "Abstract": "Stance detection is the task of classifying the author's stance towards a target entity. Most existing datasets are monolingual (English), cover a small number of targets, and are not publicly available. We introduce X-Stance, a new multilingual, multi-target dataset for stance detection. The dataset contains over 150 new topics in German, French, and Italian, and we translate a popular English stance detection dataset into these three languages. In total, the dataset contains over 67k comments. We carefully designed the annotation task to be scalable to a large number of targets and languages. The dataset is publicly available. We provide an extensive analysis of the dataset and benchmark several strong baselines, including a new multilingual BERT-based model. Our experiments show that our new dataset is challenging for monolingual and multilingual models. We also show that multilingual models outperform monolingual models in a zero-shot setting, but that there is still a large gap to the supervised setting."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0427975,
+        "input_tokens": 3190,
+        "output_tokens": 1620
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2003.08385"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

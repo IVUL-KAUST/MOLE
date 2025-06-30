@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "RuCoLA",
+        "Link": "https://github.com/dkurkin/RuCoLA",
+        "HF Link": "https://huggingface.co/datasets/dkurkin/RuCoLA",
+        "License": "CC BY-SA 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "RuCoLA is a Russian corpus of linguistic acceptability judgments. It contains 1,234 sentences annotated for linguistic acceptability by native speakers.",
+        "Volume": 1234.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Denis Kurkin"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuCoLA: Russian Corpus of Linguistic Acceptability",
+        "Paper Link": "https://aclanthology.org/2023.lrec-1.411/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "linguistic acceptability"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "10th Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Denis Kurkin",
+            "Elena Klenova",
+            "Maria Kiseleva",
+            "Polina Popova"
+        ],
+        "Affiliations": [
+            "Saint Petersburg State University",
+            "Higher School of Economics"
+        ],
+        "Abstract": "We present RuCoLA, a new Russian corpus of linguistic acceptability judgments. The corpus contains 1,234 sentences annotated for acceptability by native speakers. The sentences cover a wide range of constructions and phenomena, including word order variations, agreement errors, and violations of subjacency constraints. We describe the annotation process and provide basic statistics of the corpus. We also demonstrate the usefulness of RuCoLA for evaluating the performance of Russian grammar checkers and language models. The corpus is publicly available at https://github.com/dkurkin/RuCoLA."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004781,
+        "input_tokens": 3014,
+        "output_tokens": 492
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.12814"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "Name": "JWeb",
+        "Link": "https://github.com/cyberagent-labs/JWeb",
+        "HF Link": "https://huggingface.co/datasets/cyberagent-labs/jweb",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "JWeb is a large-scale Japanese web corpus designed for training and evaluating large language models. It consists of 85 billion tokens collected from a diverse range of Japanese websites.",
+        "Volume": 0.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Building a Large Japanese Web Corpus for Large Language Models",
+        "Paper Link": "https://arxiv.org/abs/2311.16533",
+        "Script": "Hiragana",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Upon-Request",
+        "Cost": "Free",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "We introduce JWeb, a large-scale Japanese web corpus consisting of 85 billion tokens. JWeb is constructed by collecting text from a diverse set of Japanese websites, and is designed to be used for training and evaluating large language models. We provide details on the data collection process, data statistics, and baseline experimental results. JWeb is publicly available for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.2631578947368421
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.00024135,
+        "input_tokens": 545,
+        "output_tokens": 488
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.17733"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

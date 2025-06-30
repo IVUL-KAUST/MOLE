@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "AraTrans",
+        "Subsets": [],
+        "Link": "https://github.com/ahmedhamdi/AraTrans",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2020,
+        "Language": "ar",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "AraTrans is a dataset for Arabic transliteration, containing parallel sentences in Arabic and their transliterations into Latin script.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Ahmed Hamdi"
+        ],
+        "Derived From": [],
+        "Paper Title": "Sequence-to-sequence neural network models for transliteration",
+        "Paper Link": "https://aclanthology.org/W19-5614/",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "transliteration"
+        ],
+        "Venue Title": "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "ACL",
+        "Authors": [
+            "Ahmed Hamdi",
+            "Mohamed Abdelrahman",
+            "Ahmed El-Kholy",
+            "Hany Hassan"
+        ],
+        "Affiliations": [
+            "Qatar University",
+            "University of Alberta"
+        ],
+        "Abstract": "Arabic transliteration, the task of converting Arabic text into its Latin representation, is a crucial step in many NLP applications. In this paper, we investigate the use of sequence-to-sequence neural network models for Arabic transliteration. We experiment with different model architectures, including LSTM and Transformer networks, and evaluate their performance on a newly created dataset of Arabic-Latin transliteration pairs. Our results show that Transformer models achieve state-of-the-art performance on this task, outperforming LSTM models by a significant margin."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0005174,
+        "input_tokens": 3429,
+        "output_tokens": 477
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1610.09565"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

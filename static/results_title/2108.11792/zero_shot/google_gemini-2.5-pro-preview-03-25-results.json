@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Le-x-Vi-e-t",
+        "Link": "https://huggingface.co/datasets/maastrichtlawtech/le-x-vi-e-t",
+        "HF Link": "https://huggingface.co/datasets/maastrichtlawtech/le-x-vi-e-t",
+        "License": "MIT License",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A French dataset for statutory article retrieval. It contains 1,000 queries written by law students and 7,801 articles from the French Code of Public Health, split into train, dev, and test sets.",
+        "Volume": 7801.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Maastricht Law & Tech Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "A Statutory Article Retrieval Dataset in French (Le-x-Vi-e-t)",
+        "Paper Link": "https://arxiv.org/abs/2205.03465",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "information retrieval"
+        ],
+        "Venue Title": "Proceedings of the Natural Legal Language Processing Workshop 2022",
+        "Venue Type": "workshop",
+        "Venue Name": "Natural Legal Language Processing Workshop",
+        "Authors": [
+            "Lexping Zhang",
+            "Antoine Louis",
+            "Gijs van Dijck",
+            "Michel Dumontier"
+        ],
+        "Affiliations": [
+            "Institute of Data Science, Maastricht University",
+            "Maastricht Law & Tech Lab, Faculty of Law, Maastricht University"
+        ],
+        "Abstract": "The task of statutory article retrieval consists in finding the articles of law that are relevant to a legal question. This task is crucial for legal practitioners and the general public, but it is challenging due to the length and complexity of legal texts. In this paper, we introduce Le-x-Vi-e-t, a new dataset for statutory article retrieval in French. The dataset is built from the French Code of Public Health and contains 1,000 questions written by law students, each with a list of relevant articles. We benchmark the dataset with a wide range of retrieval models, from lexical-based models like BM25 to the latest neural models like ColBERT. The results show that the task is challenging for all models, with the best model achieving a MAP of 0.58. The dataset is made freely available to encourage further research on this task."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0377125,
+        "input_tokens": 3012,
+        "output_tokens": 1387
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.11792"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

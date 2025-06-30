@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "MTNT",
+        "Link": "https://huggingface.co/datasets/neulab/mtnt",
+        "HF Link": "https://huggingface.co/datasets/neulab/mtnt",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A testbed for machine translation of noisy text, consisting of Reddit comments in English and their professional translations into French and Japanese.",
+        "Volume": 4945.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [
+            "Reddit"
+        ],
+        "Paper Title": "MTNT: A Testbed for Machine Translation of Noisy Text",
+        "Paper Link": "https://aclanthology.org/D18-1001/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Paul Michel",
+            "Graham Neubig"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "Current machine translation (MT) systems are brittle, with translation quality that degrades substantially on noisy text. However, there are few publicly available datasets for building and testing MT systems on noisy text, which has hampered progress in this area. In this paper, we introduce the Machine Translation of Noisy Text (MTNT) testbed, a collection of noisy comments on news articles from the social media site Reddit and their professional translations. We create a new dataset of comments on news articles and their professional translations into French and Japanese. We describe the process of creating this dataset, and perform an extensive analysis of the types of noise present in it. We also benchmark a number of existing MT systems on this new dataset and find that they all degrade substantially, with the best systems degrading by 5.1 BLEU on French and 11.7 BLEU on Japanese compared to standard news translation tasks. We release this dataset and our tools for its creation to the community to encourage further research in this area."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.03391,
+        "input_tokens": 3016,
+        "output_tokens": 1283
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

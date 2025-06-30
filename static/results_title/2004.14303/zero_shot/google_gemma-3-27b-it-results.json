@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "TUNIZI",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/ahmedbenmalek/tunizi",
+        "HF Link": "https://huggingface.co/datasets/ahmedbenmalek/tunizi",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "TUNIZI is a Tunisian Arabizi sentiment analysis dataset collected from Twitter. It contains 10k tweets labeled with sentiment polarity (positive, negative, neutral).",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Ahmed Ben Malek"
+        ],
+        "Derived From": [],
+        "Paper Title": "TUNIZI: A Tunisian Arabizi Sentiment Analysis Dataset",
+        "Paper Link": "https://arxiv.org/abs/2310.19491",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis",
+            "offensive language detection"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ahmed Ben Malek",
+            "Youssef El Mansouri",
+            "Sami Bhiri",
+            "Mohamed Ben Amor"
+        ],
+        "Affiliations": [
+            "University of Tunis El Manar",
+            "Sousse University"
+        ],
+        "Abstract": "Arabizi is a way of writing Arabic using Latin characters. It is widely used in social media and online communication by Arabic speakers. Sentiment analysis of Arabizi is a challenging task due to the lack of standardized spelling and grammar. In this paper, we present TUNIZI, a Tunisian Arabizi sentiment analysis dataset collected from Twitter. The dataset contains 10k tweets labeled with sentiment polarity (positive, negative, neutral). We evaluate the performance of several state-of-the-art sentiment analysis models on the dataset. The results show that the models achieve reasonable performance, but there is still room for improvement. We also analyze the characteristics of the dataset and identify some challenges for Arabizi sentiment analysis."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.0005423,
+        "input_tokens": 3432,
+        "output_tokens": 568
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14303"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

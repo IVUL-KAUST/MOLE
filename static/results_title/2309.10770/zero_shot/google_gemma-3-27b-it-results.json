@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "FRASIMED",
+        "Link": "https://huggingface.co/datasets/camel-space/FRASIMED",
+        "HF Link": "https://huggingface.co/datasets/camel-space/FRASIMED",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "FRASIMED is a clinical French annotated resource produced through crosslingual BERT-based annotation projection.",
+        "Volume": 12384.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "CAMeL Space"
+        ],
+        "Derived From": [],
+        "Paper Title": "FRASIMED: a Clinical French Annotated Resource Produced through Crosslingual BERT-Based Annotation Projection",
+        "Paper Link": "https://aclanthology.org/2023.lrec1-1.411/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition",
+            "intent classification"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "10th Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Baptiste Witz",
+            "Antoine Blanc",
+            "Thomas Kober",
+            "Pierre Lemaire",
+            "David Schuller"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 de Lorraine",
+            "CNRS",
+            "Loria"
+        ],
+        "Abstract": "We introduce FRASIMED, a new French clinical dataset annotated with 21 clinical entities. FRASIMED is built using a cross-lingual annotation projection approach from the English clinical dataset CADEC. We evaluate the quality of the projected annotations and show that FRASIMED can be used to train a competitive NER model. We also provide a baseline for NER on FRASIMED using a multilingual BERT model."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0005343,
+        "input_tokens": 3038,
+        "output_tokens": 491
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.10770"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "LABR",
+        "Subsets": [],
+        "Link": "https://huggingface.co/datasets/aubmindlab/labr",
+        "HF Link": "https://huggingface.co/datasets/aubmindlab/labr",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2020,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "reviews",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "The Large-scale Arabic Book Reviews (LABR) dataset is a collection of 63,257 book reviews written in Arabic. Each review is rated on a scale of 1 to 5 stars, making it the largest sentiment analysis dataset for Arabic.",
+        "Volume": 63257.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "American University of Beirut"
+        ],
+        "Derived From": [
+            "Goodreads"
+        ],
+        "Paper Title": "LABR: A Large Scale Arabic Sentiment Analysis Benchmark",
+        "Paper Link": "https://aclanthology.org/2020.acl-main.691/",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "58th Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Tarek Naous",
+            "Wissam Antoun",
+            "Fady Baly"
+        ],
+        "Affiliations": [
+            "American University of Beirut"
+        ],
+        "Abstract": "In this paper, we introduce the Large-scale Arabic Book Reviews (LABR) dataset. It is a collection of 63,257 book reviews, written in Arabic. Each review is rated on a scale of 1 to 5 stars. This makes it the largest sentiment analysis dataset for Arabic to date. We describe the data collection process and the dataset statistics. We train multiple baseline models and report their performance. We also release a fine-tuned AraBERT model on the dataset. We use a held-out test set for all of our experiments. The dataset and the fine-tuned models are publicly available for research purposes."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.03871625,
+        "input_tokens": 3430,
+        "output_tokens": 1391
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2015",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1411.6718"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

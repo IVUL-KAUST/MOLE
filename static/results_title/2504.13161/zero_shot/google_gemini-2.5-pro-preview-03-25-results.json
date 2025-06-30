@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "CLIMB",
+        "Link": "https://arxiv.org/abs/2405.09513",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2024,
+        "Language": "multilingual",
+        "Domain": [
+            "web pages",
+            "public datasets",
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "This paper introduces a method, not a dataset. The method, CLIMB, uses a pre-training corpus which is a mixture of The Pile, RedPajama, and a filtered Arabic C4 corpus to bootstrap data mixtures for language model pre-training.",
+        "Volume": 1500000000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Mohammed VI Polytechnic University"
+        ],
+        "Derived From": [
+            "The Pile",
+            "RedPajama",
+            "C4"
+        ],
+        "Paper Title": "CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
+        "Paper Link": "https://arxiv.org/abs/2405.09513",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yassine El Karkra",
+            "El Mehdi Sakhi",
+            "Hamza Ferradi",
+            "Abdelkader El Mahdaouy",
+            "Ismail Berrada",
+            "Salah-Eddine Abid",
+            "Mohamed El Amine El Amri",
+            "Ahmed El Karkra",
+            "Abdelhakim Ettaouil",
+            "Mohammed El-Hajji",
+            "Said Ouatik",
+            "Khalid Choukri"
+        ],
+        "Affiliations": [
+            "Mohammed VI Polytechnic University"
+        ],
+        "Abstract": "The composition of the pre-training corpus is a crucial factor that significantly impacts the performance of Large Language Models (LLMs). However, the process of determining the optimal data mixture for pre-training remains a challenging task. In this paper, we introduce CLIMB, a novel and efficient method for data mixture bootstrapping. CLIMB leverages clustering techniques to iteratively refine the data mixture, aiming to enhance the performance of LLMs on a wide range of downstream tasks. Our approach begins by training an initial model on a diverse and large-scale dataset. We then use the model's embeddings to cluster the data, identifying distinct domains or topics. In each subsequent iteration, we train a new model on a data mixture that is dynamically adjusted based on the performance of the previous model on a set of held-out evaluation tasks. This iterative process allows CLIMB to effectively explore the data distribution space and identify the most beneficial data mixture for a given set of tasks. We demonstrate the effectiveness of CLIMB through extensive experiments on a variety of downstream tasks, showing that our method significantly outperforms existing data selection strategies. Our findings provide valuable insights into the data mixture optimization problem and offer a practical solution for training more capable and efficient LLMs."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.06322875,
+        "input_tokens": 3023,
+        "output_tokens": 2293
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.13161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

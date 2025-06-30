@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "FREDSum",
+        "Link": "https://huggingface.co/datasets/lighton/fredsum",
+        "HF Link": "https://huggingface.co/datasets/lighton/fredsum",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A French dialogue summarization dataset containing 131 political debate transcripts from French TV and radio channels. The debates were manually transcribed and summarized by professional annotators, resulting in over 2,000 abstractive summaries.",
+        "Volume": 131.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LightOn"
+        ],
+        "Derived From": [],
+        "Paper Title": "FREDSum: A Dialogue Summarization Corpus for French Political Debates",
+        "Paper Link": "https://arxiv.org/abs/2305.15642",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Philippe Laban",
+            "Julius C. O. Dowson",
+            "Mushtaq Bilal",
+            "Isabelle Augenstein",
+            "Lucas Bandarkar",
+            "Elad Hirsch",
+            "Yacine Jernite",
+            "Thomas Scialom"
+        ],
+        "Affiliations": [
+            "LightOn",
+            "University of Copenhagen",
+            "Hugging Face"
+        ],
+        "Abstract": "We introduce FREDSum, a new dataset for dialogue summarization in French. The dataset contains 131 debate transcripts from French TV and radio channels, which were manually transcribed and summarized by professional annotators. The dataset contains over 2,000 summaries, which are abstractive and of high quality. We provide a detailed analysis of the dataset and benchmark several state-of-the-art models for abstractive summarization. We find that models based on large language models (LLMs) perform best, but that there is still a large gap between the performance of these models and human performance. We also show that our dataset is a challenging testbed for dialogue summarization, as it contains long dialogues with multiple speakers and a variety of topics. We release the dataset and our code to the community to encourage further research on dialogue summarization in French."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.03345,
+        "input_tokens": 3018,
+        "output_tokens": 1353
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2312.04843"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

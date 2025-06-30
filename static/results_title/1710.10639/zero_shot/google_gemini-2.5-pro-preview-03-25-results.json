@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "JESC",
+        "Link": "https://github.com/odashi/jesc",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large-scale Japanese-English parallel corpus created from subtitles of TV shows. It contains 2.8 million sentence pairs, making it one of the largest freely available corpora for this language pair.",
+        "Volume": 2800000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [],
+        "Paper Title": "JESC: Japanese-English Subtitle Corpus",
+        "Paper Link": "http://www.lrec-conf.org/proceedings/lrec2018/pdf/1047.pdf",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)",
+        "Venue Type": "conference",
+        "Venue Name": "Eleventh International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Paul Michel",
+            "Graham Neubig"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "We introduce the Japanese-English Subtitle Corpus (JESC), a large-scale parallel corpus of Japanese and English subtitles. The corpus was built from scratch by crawling and aligning subtitles from a large variety of TV shows, resulting in 2.8 million high-quality sentence pairs. We describe the collection process, which is based on a novel method for aligning subtitles based on time-stamps and content-based features. We also present a number of baseline neural and phrase-based machine translation systems to demonstrate the usefulness of this new resource, which is, to the best of our knowledge, the largest freely available parallel corpus for Japanese and English."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.03446,
+        "input_tokens": 3075,
+        "output_tokens": 1221
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1710.10639"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

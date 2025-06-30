@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "https://zenodo.org/record/2630551",
+        "HF Link": "https://huggingface.co/datasets/lambada",
+        "License": "CC BY 4.0",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A dataset of narrative passages from books for a word prediction task. Passages are selected so the last word is predictable from the full context but not the last sentence, testing models' ability to use broad discourse context.",
+        "Volume": 10024.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Trento"
+        ],
+        "Derived From": [
+            "BookCorpus"
+        ],
+        "Paper Title": "The LAMBADA dataset: Word prediction requiring a broad discourse context",
+        "Paper Link": "https://arxiv.org/abs/1606.06031",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "word prediction"
+        ],
+        "Venue Title": "International Conference on Learning Representations",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [
+            "Denis Paperno",
+            "Germ\u00e1n Kruszewski",
+            "Angeliki Lazaridou",
+            "Quan Ngoc Pham",
+            "Raffaella Bernardi",
+            "Sandro Pezzelle",
+            "Marco Baroni",
+            "Gemma Boleda",
+            "Raquel Fern\u00e1ndez"
+        ],
+        "Affiliations": [
+            "University of Trento",
+            "Facebook AI Research",
+            "University of Amsterdam"
+        ],
+        "Abstract": "We present LAMBADA, a dataset to evaluate the capabilities of computational models for text understanding by means of a word prediction task. LAMBADA is a collection of narrative passages sharing the characteristic that human subjects are able to guess their last word if they are exposed to the whole passage, but not if they only see the last sentence preceding the target word. To succeed on LAMBADA, computational models cannot simply rely on local context, but must be able to keep track of information in the broader discourse. We show that state-of-the-art recurrent neural networks (even those equipped with a memory) perform poorly on LAMBADA, confirming that the dataset presents a new challenge for language models. At the same time, we show that the LAMBADA passages are not unnaturally difficult: humans achieve almost perfect accuracy on the prediction task. We make the full dataset, a total of 10,024 passages, available for research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.03644807,
+        "input_tokens": 3016,
+        "output_tokens": 1442
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

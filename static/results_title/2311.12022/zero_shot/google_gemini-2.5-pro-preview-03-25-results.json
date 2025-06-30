@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "Name": "GPQA",
+        "Link": "https://huggingface.co/datasets/idavidrein/gpqa",
+        "HF Link": "https://huggingface.co/datasets/idavidrein/gpqa",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A dataset of 448 graduate-level multiple-choice questions in biology, physics, and chemistry. The questions are designed to be difficult for both AI models and humans using search engines, requiring deep domain expertise.",
+        "Volume": 448.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google",
+            "New York University",
+            "Anthropic"
+        ],
+        "Derived From": [],
+        "Paper Title": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2311.12022",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "David Rein",
+            "Yifan Wu",
+            "Linyi Li",
+            "Adam Fisch",
+            "Soroush Vosoughi",
+            "Tomer Ullman",
+            "Yonatan Belinkov",
+            "David D. Cox",
+            "Andrew Lampinen",
+            "James L. McClelland",
+            "Samuel J. Gershman",
+            "Caiming Xiong",
+            "Danqi Chen",
+            "Ellie Pavlick",
+            "Richard Socher",
+            "Noah D. Goodman",
+            "Sanjiv Kumar"
+        ],
+        "Affiliations": [
+            "Google",
+            "New York University",
+            "Anthropic",
+            "MIT",
+            "Stanford University",
+            "Salesforce Research",
+            "Princeton University",
+            "you.com"
+        ],
+        "Abstract": "We introduce GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics, and chemistry. We designed GPQA to be a benchmark that is difficult for both state-of-the-art AI models and humans with access to search engines. We are a team of researchers from Google, New York University, and Anthropic, and we recruited domain experts (PhD students or higher) to write and validate the questions. We find that even the most advanced models struggle with GPQA, with the best model, GPT-4, achieving 39% accuracy. In contrast, experts who wrote the questions achieve 65% accuracy (or 74% if they are not allowed to use a search engine), while non-expert validators who are equipped with a search engine achieve only 34% accuracy. This suggests that GPQA is a 'Google-proof' benchmark, as finding the answers requires deep domain understanding rather than simple information retrieval. We make GPQA publicly available to spur research in developing advanced AI systems with deep expertise. The data and code are available at https://github.com/idavidrein/gpqa."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.05261125,
+        "input_tokens": 3015,
+        "output_tokens": 1766
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2311.12022"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

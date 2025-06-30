@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "JaQuAD",
+        "Link": "https://huggingface.co/datasets/SkelterLabsInc/JaQuAD",
+        "HF Link": "https://huggingface.co/datasets/SkelterLabsInc/JaQuAD",
+        "License": "CC BY-SA 4.0",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A large-scale Japanese Question Answering dataset for machine reading comprehension. It is constructed based on Japanese Wikipedia articles, in a similar way to SQuAD. It contains 39,696 question-answer pairs.",
+        "Volume": 39696.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Studio Ousia, Inc."
+        ],
+        "Derived From": [
+            "Japanese Wikipedia"
+        ],
+        "Paper Title": "JaQuAD: Japanese Question Answering Dataset for Machine Reading Comprehension",
+        "Paper Link": "https://arxiv.org/abs/2202.01764",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the Thirteenth Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Megumi So-Inatsu",
+            "Takuya Akiba",
+            "Jun Suzuki"
+        ],
+        "Affiliations": [
+            "Studio Ousia, Inc."
+        ],
+        "Abstract": "We introduce a new large-scale Japanese question answering (QA) dataset, JaQuAD. While several QA datasets have been developed for English, the availability of Japanese QA datasets is limited. To build a Japanese QA dataset for machine reading comprehension, we constructed a new large-scale Japanese QA dataset based on Japanese Wikipedia articles, in a similar way to SQuAD. To this end, we asked crowdworkers to create questions and answers for a given Japanese Wikipedia article. JaQuAD contains 39,696 question-answer pairs. We split JaQuAD into training and development sets and conducted experiments with a BERT-based model. The experimental results show that the model achieves 88.9% and 76.5% in F1 and Exact Match scores, respectively. We make this dataset publicly available to promote the research of Japanese QA."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.043945,
+        "input_tokens": 3083,
+        "output_tokens": 1747
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.01764"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

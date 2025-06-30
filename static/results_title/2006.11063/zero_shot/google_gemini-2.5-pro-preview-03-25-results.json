@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "Gazeta",
+        "Link": "https://github.com/IlyaGusev/gazeta",
+        "HF Link": "https://huggingface.co/datasets/IlyaGusev/gazeta",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A dataset of over 62,000 news articles and summaries from the Russian news website Gazeta.ru, intended for automatic text summarization. The repository also contains a preprocessed version of the Lenta.ru dataset.",
+        "Volume": 62301.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sberbank",
+            "National Research University Higher School of Economics",
+            "Steklov Institute of Mathematics at St. Petersburg"
+        ],
+        "Derived From": [
+            "Lenta.ru dataset"
+        ],
+        "Paper Title": "Dataset for Automatic Summarization of Russian News",
+        "Paper Link": "https://arxiv.org/abs/2006.01489",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ilya Gusev",
+            "Ivan Somov",
+            "Danil Kononenko",
+            "Akim Tsvigun",
+            "Sergey I. Nikolenko"
+        ],
+        "Affiliations": [
+            "Sberbank",
+            "National Research University Higher School of Economics",
+            "Steklov Institute of Mathematics at St. Petersburg"
+        ],
+        "Abstract": "Automatic text summarization is an important and actively developing area of natural language processing. For the Russian language, this area is underdeveloped, which is largely due to the lack of a large high-quality dataset for this task. In this work, we present a new dataset for automatic summarization of Russian news. We have collected a new dataset of 62,301 news articles with summaries from the Russian news website Gazeta.ru. We also release a preprocessed version of the Lenta.ru dataset, which has been used for the summarization task before. We describe the dataset creation process and present the statistics of the new dataset. Finally, we present the results of several state-of-the-art summarization models on the new dataset. The dataset and models are available at https://github.com/IlyaGusev/gazeta."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.03383375,
+        "input_tokens": 3012,
+        "output_tokens": 1231
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2006.11063"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

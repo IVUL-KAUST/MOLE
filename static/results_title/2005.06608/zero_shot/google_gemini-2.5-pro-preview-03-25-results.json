@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Dangerous Speech Dataset",
+        "Subsets": [],
+        "Link": "https://github.com/w-warner/dangerous-speech",
+        "HF Link": "https://huggingface.co/datasets/w-warner/dangerous_speech",
+        "License": "custom",
+        "Year": 2012,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset of 2,972 documents from a white supremacist forum (Stormfront) and a satirical wiki (Encyclopedia Dramatica). The documents are labeled for containing 'dangerous speech', defined as speech that can increase the risk of violence against a group of people.",
+        "Volume": 2972.0,
+        "Unit": "documents",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Columbia University"
+        ],
+        "Derived From": [],
+        "Paper Title": "Understanding and Detecting Dangerous Speech in Social Media",
+        "Paper Link": "https://aclanthology.org/N12-1093/",
+        "Script": "Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "offensive language detection"
+        ],
+        "Venue Title": "Proceedings of the 2012 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Venue Type": "conference",
+        "Venue Name": "Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "Authors": [
+            "William Warner",
+            "Julia Hirschberg"
+        ],
+        "Affiliations": [
+            "Columbia University"
+        ],
+        "Abstract": "We define the new category of 'dangerous speech' (DS), language that can increase the risk of violence by a group against another group. We create a lexicon of dangerous speech terms from a variety of sources and use it to create a new dataset of 2,972 documents from a white supremacist forum and a mainstream news source, which we label for DS. We find that our lexicon is a good indicator of DS, and that we can classify documents for DS with an accuracy of .78 using lexicon features. We make our lexicon and dataset freely available."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5714285714285714
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.061375,
+        "input_tokens": 3428,
+        "output_tokens": 2108
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.06608"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

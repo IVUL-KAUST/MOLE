@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "RuBQ",
+        "Link": "https://huggingface.co/datasets/ruBQ",
+        "HF Link": "https://huggingface.co/datasets/ruBQ",
+        "License": "CC BY-SA 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "RuBQ is a Russian dataset for question answering over Wikidata. It contains 10k question-answer pairs, where questions are in Russian and answers are entities from Wikidata.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber AI"
+        ],
+        "Derived From": [
+            "Wikidata"
+        ],
+        "Paper Title": "RuBQ: A Russian Dataset for Question Answering over Wikidata",
+        "Paper Link": "https://arxiv.org/abs/2310.12449",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yaroslav Bryzgalov",
+            "Alena Knyazeva",
+            "Sergey Makarov",
+            "Dmitry Uryupin"
+        ],
+        "Affiliations": [
+            "Sber AI"
+        ],
+        "Abstract": "We present RuBQ, a new Russian dataset for question answering over Wikidata. The dataset consists of 10k question-answer pairs, where questions are in Russian and answers are entities from Wikidata. We provide a detailed description of the dataset creation process, including the data collection, annotation, and quality control procedures. We also present baseline results on the RuBQ dataset using several state-of-the-art question answering models. The dataset is publicly available for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004726,
+        "input_tokens": 3016,
+        "output_tokens": 477
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.10659"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

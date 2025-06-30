@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "RuSemShift",
+        "Link": "https://github.com/juliarodina/rusemshift",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "books",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "RuSemShift is the first manually annotated dataset for lexical semantic change (LSC) in Russian. It features 98 target words, with sentences from pre-Soviet (18th-19th centuries) and Soviet (1918-1991) periods, annotated for semantic relatedness.",
+        "Volume": 4360.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "HSE University",
+            "Skolkovo Institute of Science and Technology",
+            "Artificial Intelligence Research Institute (AIRI)"
+        ],
+        "Derived From": [
+            "Russian National Corpus"
+        ],
+        "Paper Title": "RuSemShift: a dataset of historical lexical semantic change in Russian",
+        "Paper Link": "https://aclanthology.org/2021.emnlp-main.681/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Julia Rodina",
+            "Andrey Kutuzov",
+            "Alexander Panchenko",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "HSE University",
+            "Skolkovo Institute of Science and Technology",
+            "Artificial Intelligence Research Institute (AIRI)"
+        ],
+        "Abstract": "This paper introduces RuSemShift, the first manually annotated dataset for lexical semantic change (LSC) in Russian. It features 98 target words, for each of which we provide several sentences from two time-specific subcorpora of the Russian National Corpus (RNC): pre-Soviet (18th-19th centuries) and Soviet (1918-1991). The sentences were annotated for semantic relatedness in a graded way by multiple human judges. The resulting dataset can be used to evaluate both contextualized and type-based LSC models. We present the annotation study, the final dataset, and the results of several state-of-the-art LSC models on RuSemShift. The dataset is publicly available at https://github.com/juliarodina/rusemshift."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.03263,
+        "input_tokens": 3016,
+        "output_tokens": 1297
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.06436"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

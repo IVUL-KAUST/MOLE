@@ -1,0 +1,137 @@
+{
+    "metadata": {
+        "Name": "Calliar",
+        "Subsets": [
+            {
+                "Name": "Diwani",
+                "Volume": 1000,
+                "Unit": "images",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Naskh",
+                "Volume": 1000,
+                "Unit": "images",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Ruqaa",
+                "Volume": 1000,
+                "Unit": "images",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Thuluth",
+                "Volume": 1000,
+                "Unit": "images",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Maghribi",
+                "Volume": 1000,
+                "Unit": "images",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Muhaqqaq",
+                "Volume": 1000,
+                "Unit": "images",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Kufi",
+                "Volume": 1000,
+                "Unit": "images",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Ijaza",
+                "Volume": 1000,
+                "Unit": "images",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Musalsal",
+                "Volume": 1000,
+                "Unit": "images",
+                "Dialect": "Classical Arabic"
+            },
+            {
+                "Name": "Squar-Kufic",
+                "Volume": 1000,
+                "Unit": "images",
+                "Dialect": "Classical Arabic"
+            }
+        ],
+        "Link": "https://github.com/calliar-dataset/calliar",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2022,
+        "Language": "ar",
+        "Dialect": "Classical Arabic",
+        "Domain": [
+            "other"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "An online handwritten dataset for Arabic calligraphy containing 10,000 unique images of Arabic words written in 10 different calligraphy styles by a professional calligrapher.",
+        "Volume": 10000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "King Saud University"
+        ],
+        "Derived From": [],
+        "Paper Title": "Calliar: An Online Handwritten Dataset for Arabic Calligraphy",
+        "Paper Link": "https://arxiv.org/abs/2209.04852",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "optical character recognition",
+            "speaker identification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Bandar Al-Badr",
+            "Abdullah Al-Rajeh",
+            "Yousef Al-Ohali"
+        ],
+        "Affiliations": [
+            "College of Computer and Information Sciences, King Saud University"
+        ],
+        "Abstract": "Arabic calligraphy is a rich and diverse art form that has been practiced for centuries. However, there is a lack of publicly available datasets for Arabic calligraphy, which hinders the development of machine learning models for this domain. In this paper, we introduce Calliar, a new dataset for Arabic calligraphy. The dataset contains 10,000 unique images of Arabic words written in 10 different calligraphy styles. The images were collected from a professional calligrapher who wrote the words using a digital tablet. The dataset is annotated with the corresponding text and calligraphy style. We also provide a set of baseline experiments for two tasks: handwritten text recognition and writer identification. The dataset is publicly available at https://github.com/calliar-dataset/calliar."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.03916875,
+        "input_tokens": 3431,
+        "output_tokens": 1590
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.10745"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Arukikata Travelogue Dataset",
+        "Link": "https://alagin.nict.go.jp/resources/arupara/",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2020,
+        "Language": "multilingual",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A Japanese-English parallel corpus of travel conversations from the 'Chikyu no Arukikata' travelogue series. It contains approximately 1.1 million sentence pairs from 122 books and includes a document-aligned test set.",
+        "Volume": 1100000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Institute of Information and Communications Technology",
+            "Diamond-Big Co., Ltd."
+        ],
+        "Derived From": [
+            "Chikyu no Arukikata"
+        ],
+        "Paper Title": "Arukikata Travelogue Dataset",
+        "Paper Link": "http://www.lrec-conf.org/proceedings/lrec2020/pdf/2020.lrec-1.1.pdf",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 12th Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "12th Language Resources and Evaluation Conference",
+        "Authors": [
+            "Shohei Higashiyama",
+            "Hiroki Ouchi",
+            "Taro Watanabe",
+            "Eiichiro Sumita"
+        ],
+        "Affiliations": [
+            "National Institute of Information and Communications Technology",
+            "Nara Institute of Science and Technology"
+        ],
+        "Abstract": "We present the Arukikata Travelogue Dataset, a new, freely available Japanese-English parallel corpus of travel conversations. The corpus was created from a single-author travelogue series, Chikyu no Arukikata (Globe-Trotter Travel Guidebook), which has been published for 40 years. The corpus contains approximately 1.1 million sentence pairs from 122 books. We also provide a document-aligned test set for evaluating document-level machine translation. We conducted a baseline experiment on the corpus and found that it is a useful resource for training and evaluating machine translation systems. The corpus is available at http://www.kecl.ntt.co.jp/icl/lirg/aru."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.03851875,
+        "input_tokens": 3075,
+        "output_tokens": 1422
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.11444"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

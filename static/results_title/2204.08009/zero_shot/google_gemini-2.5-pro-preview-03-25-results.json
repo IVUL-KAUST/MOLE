@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "WikiOmnia",
+        "Link": "https://huggingface.co/datasets/airi-institute/WikiOmnia",
+        "HF Link": "https://huggingface.co/datasets/airi-institute/WikiOmnia",
+        "License": "CC BY-SA 4.0",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "LLM generated"
+        ],
+        "Description": "A large-scale generative QA dataset for Russian, created automatically from the whole Russian Wikipedia. It contains over 1.5M question-answer pairs, each with a context paragraph from a Wikipedia article that was used to generate the question and the answer.",
+        "Volume": 1583889.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Artificial Intelligence Research Institute (AIRI)",
+            "Skolkovo Institute of Science and Technology"
+        ],
+        "Derived From": [
+            "Russian Wikipedia",
+            "SberQuAD"
+        ],
+        "Paper Title": "WikiOmnia: generative QA corpus on the whole Russian Wikipedia",
+        "Paper Link": "https://arxiv.org/abs/2405.12471",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering",
+            "text generation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Alena Fenogenova",
+            "Maria Tikhonova",
+            "Denis Shevelev",
+            "Denis Dimitrov",
+            "Varvara Logacheva",
+            "Alexander Panchenko"
+        ],
+        "Affiliations": [
+            "Skolkovo Institute of Science and Technology",
+            "Artificial Intelligence Research Institute (AIRI)"
+        ],
+        "Abstract": "Generative Question Answering (QA) is a task of generating a free-form text answer to a given question. While there are many generative QA datasets for English, there are few for other languages, including Russian. In this paper, we present WikiOmnia, a new large-scale generative QA dataset for Russian. The dataset is created automatically from the whole Russian Wikipedia. It contains over 1.5M question-answer pairs. Each pair is accompanied by a context paragraph from a Wikipedia article that was used to generate the question and the answer. We describe the dataset creation pipeline, which includes context selection, question generation, and answer extraction. We also present the results of a human evaluation of the dataset quality. Finally, we train and evaluate several baseline models on WikiOmnia. The dataset is publicly available."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04401875,
+        "input_tokens": 3016,
+        "output_tokens": 1461
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.08009"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

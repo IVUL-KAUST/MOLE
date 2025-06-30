@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "RuBQ",
+        "Link": "https://huggingface.co/datasets/blinoff/rubq",
+        "HF Link": "https://huggingface.co/datasets/blinoff/rubq",
+        "License": "MIT License",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A Russian Question Answering (QA) dataset for Wikidata. The dataset consists of questions, SPARQL queries, and answers. The questions were generated automatically from Wikidata and then paraphrased by volunteers.",
+        "Volume": 5043.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Research University Higher School of Economics"
+        ],
+        "Derived From": [
+            "Wikidata"
+        ],
+        "Paper Title": "RuBQ: A Russian Dataset for Question Answering over Wikidata",
+        "Paper Link": "https://aclanthology.org/2020.aacl-main.39/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing",
+        "Authors": [
+            "Denis Korneyev",
+            "Ekaterina Artemova",
+            "Dmitry Ignatov",
+            "Valentin Malykh"
+        ],
+        "Affiliations": [
+            "National Research University Higher School of Economics"
+        ],
+        "Abstract": "We present RuBQ, a Russian Question Answering (QA) dataset for Wikidata. The dataset consists of 3,550 questions, SPARQL queries, and answers, as well as 1,493 question paraphrases. The questions were generated automatically from Wikidata and then paraphrased by volunteers. We provide a detailed description of the dataset creation process and the dataset statistics. We also report the results of several QA baselines on our dataset. The dataset is publicly available at https://github.com/hsedt/rubq."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0409375,
+        "input_tokens": 3016,
+        "output_tokens": 1303
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.10659"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

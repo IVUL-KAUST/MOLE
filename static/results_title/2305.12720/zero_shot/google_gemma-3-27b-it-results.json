@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "Name": "llm-japanese-dataset v0",
+        "Link": "",
+        "HF Link": "https://huggingface.co/datasets/cyberagent-hk/llm-japanese-dataset",
+        "License": "custom",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "Construction of Japanese Chat Dataset for Large Language Models and its Methodology",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "llm-japanese-dataset v0: Construction of Japanese Chat Dataset for Large Language Models and its Methodology",
+        "Paper Link": "https://arxiv.org/abs/2305.12720",
+        "Script": "Hiragana",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Upon-Request",
+        "Cost": "Free",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "This dataset is a Japanese chat dataset for large language models. It was constructed using crowdsourcing and provides a resource for training and evaluating LLMs in Japanese."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.21052631578947367
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0001598,
+        "input_tokens": 543,
+        "output_tokens": 316
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.12720"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

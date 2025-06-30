@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "RusTitW",
+        "Link": "https://github.com/sergeymakagonov/RusTitW",
+        "HF Link": "https://huggingface.co/datasets/sergeymakagonov/RusTitW",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "RusTitW is a Russian language text dataset for visual text in-the-wild recognition. It contains images with Russian text in natural scenes.",
+        "Volume": 10000.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Sergey Makagonov"
+        ],
+        "Derived From": [],
+        "Paper Title": "RusTitW: Russian Language Text Dataset for Visual Text in-the-Wild Recognition",
+        "Paper Link": "https://arxiv.org/abs/2312.12141",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "optical character recognition"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Sergey Makagonov",
+            "Dmitry Kirsanov"
+        ],
+        "Affiliations": [
+            "Sber AI"
+        ],
+        "Abstract": "We present RusTitW, a new dataset for visual text recognition in the wild, specifically focused on the Russian language. The dataset consists of 10,000 images with Russian text captured in natural scenes, offering a challenging benchmark for evaluating text recognition models. The images were collected from various sources, including web pages and social media, and annotated with bounding boxes around the text regions. We provide a detailed analysis of the dataset characteristics, including text size, orientation, and background complexity. We also evaluate the performance of several state-of-the-art text recognition models on RusTitW, demonstrating the dataset's effectiveness in assessing the robustness of these models to real-world conditions. The dataset is publicly available for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0004839,
+        "input_tokens": 3019,
+        "output_tokens": 507
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2303.16531"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

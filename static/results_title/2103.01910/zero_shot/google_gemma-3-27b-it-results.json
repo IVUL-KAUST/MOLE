@@ -1,0 +1,99 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "MultiSubs",
+            "Subsets": null,
+            "Link": null,
+            "HF Link": "https://huggingface.co/datasets/allenai/multi_subs",
+            "License": "CC-BY-4.0",
+            "Year": 2023,
+            "Language": "Multilingual",
+            "Domain": "Subtitles",
+            "Form": "Text",
+            "Collection Style": "Web-crawled",
+            "Description": "MultiSubs is a large-scale multimodal and multilingual dataset of movie subtitles. It contains 16,276 hours of speech in 162 languages, paired with corresponding video frames. The dataset is designed to facilitate research in multimodal machine learning, machine translation, and speech recognition.",
+            "Volume": "16,276 hours",
+            "Unit": "hours",
+            "Ethical Risks": "Potential biases in subtitles, copyright issues related to movie content.",
+            "Provider": "Allen AI",
+            "Derived From": "Movie Subtitles",
+            "Paper Title": "MultiSubs: A Large-scale Multimodal and Multilingual Dataset",
+            "Paper Link": null,
+            "Tokenized": null,
+            "Host": "Hugging Face Datasets",
+            "Access": "Public",
+            "Cost": "Free",
+            "Test Split": null,
+            "Tasks": "Multimodal Learning, Machine Translation, Speech Recognition",
+            "Venue Title": null,
+            "Venue Type": null,
+            "Venue Name": null,
+            "Authors": null,
+            "Affiliations": null,
+            "Abstract": "We introduce MultiSubs, a large-scale multimodal and multilingual dataset of movie subtitles. MultiSubs contains 16,276 hours of speech in 162 languages, paired with corresponding video frames. We present an analysis of the dataset and demonstrate its potential for a variety of multimodal tasks."
+        },
+        "Name": "",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2103.01910",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.10526315789473684
+    },
+    "length_forcing": 0.8666666666666666,
+    "cost": {
+        "cost": 0.0001912,
+        "input_tokens": 535,
+        "output_tokens": 405
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.01910"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

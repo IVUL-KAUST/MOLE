@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "Russian Jeopardy!",
+        "Link": "http://panchenko.me/data/rus-jeopardy/",
+        "HF Link": "https://huggingface.co/datasets/obss/jeopardy-ru",
+        "License": "custom",
+        "Year": 2016,
+        "Language": "ru",
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A large-scale Russian dataset for question-answering systems, based on questions from the Russian version of the TV show Jeopardy! (Svoya Igra). It contains over 210,000 question-answer pairs, split into training, development, and test sets.",
+        "Volume": 210522.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Hamburg",
+            "St. Petersburg State University",
+            "National Research University Higher School of Economics",
+            "Lomonosov Moscow State University"
+        ],
+        "Derived From": [
+            "db.chgk.info"
+        ],
+        "Paper Title": "A Russian Jeopardy! Data Set for Question-Answering Systems",
+        "Paper Link": "http://www.lrec-conf.org/proceedings/lrec2016/pdf/948_Paper.pdf",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "topic classification"
+        ],
+        "Venue Title": "Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC 2016)",
+        "Venue Type": "conference",
+        "Venue Name": "Tenth International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Alexander Panchenko",
+            "Denis N. Loukachevitch",
+            "Svetlana N. Toldova",
+            "Alexey A. Bagdasaryan",
+            "Dmitry U. Ustalov",
+            "Natalia A. Loukachevitch"
+        ],
+        "Affiliations": [
+            "University of Hamburg",
+            "St. Petersburg State University",
+            "National Research University Higher School of Economics",
+            "Lomonosov Moscow State University"
+        ],
+        "Abstract": "This paper presents a new large-scale Russian data set for the evaluation of question-answering systems. The data set is based on questions from the Russian version of the TV show Jeopardy!, called Svoya Igra. The current version of the data set contains 210,522 question-answer pairs. We provide a predefined split of the data set into training, development, and test sets. The data set is freely available for research purposes. We present a baseline system for factoid question answering based on a search engine. The system achieves the precision at 1 (P@1) of 39.8% on the presented data set. We hope that this data set will foster research in the area of Russian question answering."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04395,
+        "input_tokens": 3017,
+        "output_tokens": 1604
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2112.02325"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "RusCode",
+        "Link": "https://huggingface.co/datasets/ai-forever/ruscode",
+        "HF Link": "https://huggingface.co/datasets/ai-forever/ruscode",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A benchmark of 1,100 Russian text prompts designed to test text-to-image models on their understanding of Russian cultural concepts. The prompts cover 11 domains: Art, Cinema, Folklore, History, Literature, Music, Places, Religion, Science, Society, and Sport.",
+        "Volume": 1100.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber AI",
+            "Artificial Intelligence Research Institute (AIRI)",
+            "HSE University"
+        ],
+        "Derived From": [],
+        "Paper Title": "RusCode: Russian Cultural Code Benchmark for Text-to-Image Generation",
+        "Paper Link": "https://arxiv.org/abs/2402.06958",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other",
+            "embedding evaluation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Arseniy Shakhmatov",
+            "Lev Tseitlin",
+            "Valentin Malykh",
+            "Andrey Chertok",
+            "Maria Tikhonova",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "Sber AI",
+            "Artificial Intelligence Research Institute (AIRI)",
+            "HSE University"
+        ],
+        "Abstract": "Recent advancements in text-to-image synthesis have led to the development of models capable of generating highly realistic and diverse images from textual descriptions. However, a significant challenge remains in their ability to accurately interpret and depict concepts deeply rooted in specific cultures. To address this gap, we introduce RusCode, a new benchmark for evaluating text-to-image models on their ability to generate images that reflect Russian cultural concepts. The benchmark consists of 1,100 text prompts, manually curated by experts, spanning 11 distinct domains of Russian culture, including literature, history, art, and folklore. We conduct a comprehensive evaluation of several state-of-the-art text-to-image models, including Kandinsky 2.2, Kandinsky 3.0, SDXL 1.0, and Midjourney v5.2, using a multi-faceted approach that combines automated metrics (CLIPScore, ImageReward) and human assessment. Our findings reveal that while models demonstrate varying degrees of success, they often struggle with nuanced cultural references, highlighting the need for more culturally-aware training and evaluation methods. The RusCode benchmark and the results of our study provide a valuable resource for researchers and developers working to improve the cultural sensitivity and accuracy of text-to-image models. The benchmark is publicly available on GitHub: https://github.com/ai-forever/ruscode."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04904125,
+        "input_tokens": 3016,
+        "output_tokens": 1732
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2502.07455"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

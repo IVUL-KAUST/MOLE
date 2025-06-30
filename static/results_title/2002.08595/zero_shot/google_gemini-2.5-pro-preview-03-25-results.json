@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "KaoKore",
+        "Link": "https://github.com/rois-codh/kaokore",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": "multilingual",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A dataset of 8,091 cropped facial images from pre-modern Japanese paintings. The faces are annotated with seven basic emotions, gender, social status, and age.",
+        "Volume": 8091.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "ROIS-DS Center for Open Data in the Humanities (CODH)"
+        ],
+        "Derived From": [
+            "ColBase",
+            "E-museum",
+            "Tokyo National Museum",
+            "21st Century Center of Excellence Program at the International Research Center for Japanese Studies"
+        ],
+        "Paper Title": "KaoKore: A Pre-modern Japanese Art Facial Expression Dataset",
+        "Paper Link": "https://doi.org/10.5281/zenodo.3897348",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "emotion classification"
+        ],
+        "Venue Title": "DH2020 Book of Abstracts",
+        "Venue Type": "conference",
+        "Venue Name": "Digital Humanities 2020",
+        "Authors": [
+            "Yuta Nakashima",
+            "Hao-Wen Wang",
+            "Ying-Hsueh Chen",
+            "Kuan-Ting Chen",
+            "Asanobu Kitamoto"
+        ],
+        "Affiliations": [
+            "ROIS-DS Center for Open Data in the Humanities (CODH)",
+            "National Institute of Informatics",
+            "The Graduate University for Advanced Studies, SOKENDAI",
+            "Osaka University"
+        ],
+        "Abstract": "We introduce KaoKore, a dataset of facial expressions from pre-modern Japanese art. The dataset consists of 8,091 cropped face images from 3,606 figures in 963 paintings. The paintings are part of the public domain and are available at four digital archives in Japan. The faces in the paintings were manually cropped by the authors. The facial expressions were annotated by crowd-sourcing with seven labels based on the basic emotions (neutral, happy, sad, disgust, surprise, fear, and anger). In addition to the facial expression labels, we also provide annotations for gender (male, female, androgynous), social status (noble, warrior, clergy, commoner), and age (child, young, middle-aged, old). We believe that our dataset will be useful for researchers in computer vision, digital humanities, and art history. The dataset is available at https://github.com/rois-codh/kaokore."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.046955,
+        "input_tokens": 3080,
+        "output_tokens": 1700
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.08595"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

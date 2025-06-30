@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "FLORES-101",
+        "Subsets": [],
+        "Link": "https://github.com/facebookresearch/flores-101",
+        "HF Link": "https://huggingface.co/datasets/facebook/flores-101",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2020,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "FLORES-101 is a multilingual machine translation benchmark consisting of 101 languages. It is based on the Flores dataset and is designed to evaluate low-resource machine translation models.",
+        "Volume": 101.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "FLORES-101: A Low-Resource Multilingual Machine Translation Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2010.13335",
+        "Script": "Latin",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Alexis Casanova",
+            "Letizia Marcheggiani",
+            "Hamidreza Mirzaei",
+            "Ahmed El-Kholy",
+            "Hao Fang",
+            "Philipp Koehn"
+        ],
+        "Affiliations": [
+            "Facebook AI"
+        ],
+        "Abstract": "We introduce FLORES-101, a new benchmark for low-resource machine translation. FLORES-101 consists of 101 languages, covering a wide range of linguistic families and geographic regions. The dataset is based on the Flores dataset, which contains parallel sentences extracted from Wikipedia. We evaluate several state-of-the-art machine translation models on FLORES-101 and show that they perform significantly better on high-resource languages than on low-resource languages. We also show that our benchmark is more challenging than existing benchmarks for low-resource machine translation."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.375,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.00071475,
+        "input_tokens": 3449,
+        "output_tokens": 514
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.03193"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

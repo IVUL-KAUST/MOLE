@@ -1,0 +1,115 @@
+{
+    "metadata": {
+        "Name": "RELX",
+        "Subsets": [
+            {
+                "Name": "RELX-EN",
+                "Volume": 480189,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "RELX-DE",
+                "Volume": 300189,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "RELX-ES",
+                "Volume": 213189,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "RELX-FR",
+                "Volume": 164189,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "RELX-ZH",
+                "Volume": 86393,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://github.com/norakassner/relx",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "German",
+            "Spanish",
+            "French",
+            "Chinese"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "RELX is a multilingual dataset for cross-lingual relation classification. It was automatically created by aligning relations from the English Wikidata knowledge base with Wikipedia articles in English, German, Spanish, French, and Chinese. It contains over 1.2 million sentences.",
+        "Volume": 1244149.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LMU Munich"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Wikidata"
+        ],
+        "Paper Title": "The RELX Dataset and Matching the Multilingual Blanks for Cross-Lingual Relation Classification",
+        "Paper Link": "https://aclanthology.org/2021.emnlp-main.59/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing (EMNLP 2021)",
+        "Authors": [
+            "Nora Kassner",
+            "Patrik Siess",
+            "S\u00f6ren Preibusch",
+            "Hinrich Sch\u00fctze"
+        ],
+        "Affiliations": [
+            "Center for Information and Language Processing, LMU Munich, Germany"
+        ],
+        "Abstract": "We present RELX, a new dataset for cross-lingual relation classification, and MMLB, a simple and effective baseline. RELX is automatically created by aligning relations in the English Wikidata knowledge base with Wikipedia articles in five languages: English (EN), German (DE), Spanish (ES), French (FR) and Chinese (ZH). It contains over 1.2M sentences. We use a state-of-the-art multilingual sentence embedder to embed sentences from all languages in a single vector space. We then train a single classifier on the union of the EN training data and a small number of training examples from the other four languages. This simple baseline, Matching the Multilingual Blanks (MMLB), is effective. It outperforms a competitive baseline by 10 F1 points on average. We also show that MMLB is competitive with zero-shot cross-lingual transfer models while using as few as eight training examples in the target language."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04911,
+        "input_tokens": 3193,
+        "output_tokens": 1769
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.09381"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

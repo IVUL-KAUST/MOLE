@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "Vibravox",
+        "Link": "https://zenodo.org/records/10806911",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A dataset of French speech captured simultaneously with a regular microphone and three body-conduction sensors (throat, temple, mastoid). It contains over 11 hours of recordings from 50 speakers with transcriptions, timestamps, and speaker characteristics.",
+        "Volume": 11.33,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Inria",
+            "Universit\u00e9 de Lorraine",
+            "CNRS",
+            "LORIA"
+        ],
+        "Derived From": [
+            "Common Voice",
+            "SIWIS"
+        ],
+        "Paper Title": "Vibravox: A Dataset of French Speech Captured with Body-conduction Audio Sensors",
+        "Paper Link": "https://aclanthology.org/2024.lrec-main.1215/",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "other"
+        ],
+        "Venue Title": "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+        "Venue Type": "conference",
+        "Venue Name": "Joint International Conference on Computational Linguistics, Language Resources and Evaluation",
+        "Authors": [
+            "Robin An",
+            "Anis Lammouchi",
+            "Juliette Dromard",
+            "Benjamin Elie",
+            "Laurianne Delacroix",
+            "Beno\u00eet Sagot",
+            "Emmanuel Vincent"
+        ],
+        "Affiliations": [
+            "Inria",
+            "Universit\u00e9 de Lorraine",
+            "CNRS",
+            "LORIA"
+        ],
+        "Abstract": "Body-conduction audio sensors, such as accelerometers or contact microphones, offer a promising alternative to traditional air-conduction microphones for capturing speech in noisy environments. However, the scarcity of publicly available, multi-sensor datasets has hindered research in this area. To address this gap, we introduce Vibravox, a new dataset of French speech captured simultaneously with a regular microphone and three body-conduction sensors placed on the throat, the temple, and the mastoid bone behind the ear. The dataset comprises over 11 hours of recordings from 50 speakers, with detailed annotations including transcriptions, timestamps, and speaker characteristics. We provide a comprehensive description of the dataset and the recording setup, and we report baseline results for three tasks: speech enhancement, voice activity detection, and automatic speech recognition. The dataset is made publicly available to encourage further research on body-conduction speech processing."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04615625,
+        "input_tokens": 3020,
+        "output_tokens": 1697
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.11828"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

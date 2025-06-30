@@ -1,0 +1,160 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "Estonian",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "French",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Quichua",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Eastern Apur\u00edmac Quechua"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            }
+        ],
+        "Link": "https://github.com/cambridgeltl/xcopa",
+        "HF Link": "https://huggingface.co/datasets/cambridgeltl/xcopa",
+        "License": "MIT License",
+        "Year": 2020,
+        "Language": [
+            "Estonian",
+            "French",
+            "German",
+            "Chinese",
+            "Hindi",
+            "Indonesian",
+            "Italian",
+            "Eastern Apur\u00edmac Quechua",
+            "Swahili",
+            "Thai",
+            "Turkish"
+        ],
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "XCOPA is a multilingual dataset for causal commonsense reasoning, covering 11 languages. It is a translation and re-annotation of the English COPA dataset and is used to evaluate the commonsense reasoning capabilities of multilingual models.",
+        "Volume": 11000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://arxiv.org/abs/2005.00333",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Edoardo M. Ponti",
+            "Goran Glava\u0161",
+            "Olga Majewska",
+            "Qian Liu",
+            "Ivan Vuli\u0107",
+            "Theresa Blevins"
+        ],
+        "Affiliations": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Abstract": "Recent work has demonstrated the surprising cross-lingual abilities of multilingual pretrained language models such as Multilingual BERT and XLM-RoBERTa. Probing the exact nature of their cross-lingual capabilities is an active area of research. In this work, we introduce a new benchmark, the Cross-lingual Choice of Plausible Alternatives (XCOPA), to provide a stronger test for evaluating the commonsense reasoning capabilities of multilingual models in a zero-shot cross-lingual setting. We present the Cross-lingual Choice of Plausible Alternatives (XCOPA), a typologically diverse multilingual dataset for causal commonsense reasoning. XCOPA includes 11 languages: Estonian, French, German, Chinese, Hindi, Indonesian, Italian, Quichua, Swahili, Thai, and Turkish; 10 of which are translations of the English COPA dataset. We use XCOPA to benchmark a number of recent multilingual models and find that they struggle with this new task, underperforming their monolingual counterparts. The dataset is available at https://github.com/cambridgeltl/xcopa."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.06221375,
+        "input_tokens": 3189,
+        "output_tokens": 2524
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

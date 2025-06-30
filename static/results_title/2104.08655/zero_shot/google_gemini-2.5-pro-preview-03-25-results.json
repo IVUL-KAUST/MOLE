@@ -1,0 +1,94 @@
+{
+    "metadata": {
+        "Name": "DiS-ReX",
+        "Subsets": [
+            {
+                "Name": "DiS-ReX-English",
+                "Volume": 1811191,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "DiS-ReX-German",
+                "Volume": 725813,
+                "Unit": "sentences",
+                "Language": "German"
+            }
+        ],
+        "Link": "https://github.com/bhartiya-yash/DiS-ReX",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "German"
+        ],
+        "Domain": [
+            "wikipedia",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A multilingual dataset for distantly supervised relation extraction created by aligning relations from Wikidata with text from Wikipedia in English and German. It contains over 2.5M sentences and 5M relation instances for 1,201 relations.",
+        "Volume": 2537004.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Indian Institute of Technology Delhi"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Wikidata"
+        ],
+        "Paper Title": "DiS-ReX: A Multilingual Dataset for Distantly Supervised Relation Extraction",
+        "Paper Link": "https://aclanthology.org/2021.emnlp-main.691",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction"
+        ],
+        "Venue Title": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Abhyuday Bhartiya",
+            "Kartikeya Badola",
+            "Mausam"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology Delhi"
+        ],
+        "Abstract": "We present DiS-ReX, a multilingual dataset for distantly supervised relation extraction. DiS-ReX has been created by aligning relations from Wikidata with text from Wikipedia in two languages - English and German. It contains over 2.5M sentences and 5M relation instances for 1,201 relations. We also release our code for dataset creation, which can be used to create DiS-ReX in any of the 100+ languages available in Wikipedia. We create DiS-ReX by improving upon the existing alignment methods, and show that our method extracts 2.5x more relation instances than the previous state-of-the-art method. We also create distant supervision benchmarks for evaluating relation extraction systems. We find that the models trained on DiS-ReX perform better than the models trained on previous datasets. The dataset and code are available at https://github.com/bhartiya-yash/DiS-ReX."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.04473875,
+        "input_tokens": 3192,
+        "output_tokens": 1665
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2104.08655"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

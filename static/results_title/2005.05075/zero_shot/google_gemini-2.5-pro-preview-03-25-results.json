@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "French COVID19 Lockdown Twitter",
+        "Link": "https://doi.org/10.5281/zenodo.4569429",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A dataset of over 25 million French tweet IDs collected via the Twitter streaming API during the first COVID-19 lockdown in France (March-May 2020). The data was gathered using a keyword-based approach.",
+        "Volume": 25033190.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Universit\u00e9 d'Orl\u00e9ans",
+            "INSA Centre Val de Loire",
+            "Universit\u00e9 de Tours"
+        ],
+        "Derived From": [],
+        "Paper Title": "The First French COVID19 Lockdown Twitter Dataset",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.155/",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis",
+            "topic classification",
+            "fake news detection",
+            "information retrieval"
+        ],
+        "Venue Title": "Proceedings of the Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Lo\u00efc Grobol",
+            "Isabelle Tellier",
+            "Marco Dinarelli",
+            "Fr\u00e9d\u00e9ric B\u00e9chet"
+        ],
+        "Affiliations": [
+            "Univ. Orl\u00e9ans, INSA Centre Val de Loire, LIFO EA 4022",
+            "Univ. de Tours, INSA Centre Val de Loire, LIFAT EA 6300"
+        ],
+        "Abstract": "This paper presents the first French COVID-19 lockdown Twitter dataset. It has been collected from the 15th of March 2020 to the 15th of May 2020 using the Twitter streaming API and a keyword-based approach. The dataset contains 25,033,190 tweet IDs. We describe the data collection process and the resulting dataset. We also provide some preliminary analyses of the dataset, including the most frequent hashtags, mentions and a word frequency analysis. Finally, we discuss the potential uses of this dataset for the NLP community and the ethical considerations that should be taken into account when using it."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.038665,
+        "input_tokens": 3012,
+        "output_tokens": 1364
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.05075"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,194 @@
+{
+    "metadata": {
+        "Name": "XNLI",
+        "Subsets": [
+            {
+                "Name": "XNLI-fr",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "XNLI-es",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "XNLI-de",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "XNLI-el",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Greek"
+            },
+            {
+                "Name": "XNLI-bg",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Bulgarian"
+            },
+            {
+                "Name": "XNLI-ru",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "XNLI-tr",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "XNLI-ar",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "XNLI-vi",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "XNLI-th",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "XNLI-zh",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "XNLI-hi",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "XNLI-sw",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "XNLI-ur",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "Urdu"
+            },
+            {
+                "Name": "XNLI-en",
+                "Volume": 7500,
+                "Unit": "sentences",
+                "Language": "English"
+            }
+        ],
+        "Link": "https://github.com/facebookresearch/XNLI",
+        "HF Link": "https://huggingface.co/datasets/xnli",
+        "License": "CC BY-NC 4.0",
+        "Year": 2018,
+        "Language": [
+            "French",
+            "Spanish",
+            "German",
+            "Greek",
+            "Bulgarian",
+            "Russian",
+            "Turkish",
+            "Arabic",
+            "Vietnamese",
+            "Thai",
+            "Chinese",
+            "Hindi",
+            "Swahili",
+            "Urdu",
+            "English"
+        ],
+        "Domain": [
+            "news articles",
+            "books",
+            "web pages",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "XNLI is a dataset for evaluating cross-lingual sentence representations. It is an extension of the Multi-Genre Natural Language Inference (MultiNLI) corpus, with its development and test sets professionally translated into 14 languages, in addition to the original English.",
+        "Volume": 7500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research",
+            "New York University"
+        ],
+        "Derived From": [
+            "MultiNLI"
+        ],
+        "Paper Title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+        "Paper Link": "https://arxiv.org/abs/1809.05053",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference",
+            "embedding evaluation"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Alexis Conneau",
+            "Ruty Rinott",
+            "Guillaume Lample",
+            "Adina Williams",
+            "Samuel R. Bowman",
+            "Holger Schwenk",
+            "Veselin Stoyanov"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "New York University",
+            "Sorbonne Universit\u00e9"
+        ],
+        "Abstract": "The recent success of multilingual BERT (Devlin et al., 2018) has shown that deep bidirectional models trained on a concatenation of monolingual corpora can learn useful cross-lingual representations. In this paper, we introduce a new dataset, the Cross-lingual Natural Language Inference (XNLI) corpus, to evaluate how to best learn such representations. XNLI is a crowd-sourced collection of 112.5k sentence pairs, each annotated with a textual entailment label (contradiction, neutral, entailment). The English data is a subset of the Multi-Genre NLI Corpus (Williams et al., 2018), and the data in 14 other languages\u2014including low-resource languages like Swahili and Urdu\u2014is a professional human translation of this English data. We use the dataset to conduct a comprehensive empirical evaluation of two leading approaches to cross-lingual representation learning: one based on a shared vocabulary and joint training, and one based on offline translation of the training data. We find that the former approach, as instantiated by multilingual BERT, performs remarkably well, even on languages with no labeled data. The latter approach performs better on average, but it fails on languages for which no machine translation systems are available. We release the new dataset, our code, and the pretrained models."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.06719,
+        "input_tokens": 3188,
+        "output_tokens": 2566
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.05053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "20min-XD",
+        "Link": "https://huggingface.co/datasets/swissnews",
+        "HF Link": "https://huggingface.co/datasets/swissnews",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "20min-XD is a comparable corpus of Swiss news articles.",
+        "Volume": 14488.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Fribourg"
+        ],
+        "Derived From": [],
+        "Paper Title": "20min-XD: A Comparable Corpus of Swiss News Articles",
+        "Paper Link": "https://aclanthology.org/2023.lrec-1.411/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "topic classification",
+            "named entity recognition",
+            "sentiment analysis"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "10th Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Simon Weber",
+            "Adrian Siebert",
+            "Patrick Schwitter",
+            "Christian Brodbeck",
+            "Daniel Preuss"
+        ],
+        "Affiliations": [
+            "University of Fribourg"
+        ],
+        "Abstract": "We present 20min-XD, a new comparable corpus of Swiss news articles from the online news platform 20min.ch. The corpus contains articles from 2018 to 2022, covering a wide range of topics. We provide the corpus in a clean and structured format, making it suitable for a variety of NLP tasks. The corpus is available under a permissive license, encouraging its use by the research community. We demonstrate the usefulness of the corpus by conducting several baseline experiments on topic classification and named entity recognition."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00041841,
+        "input_tokens": 3016,
+        "output_tokens": 480
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.21677"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

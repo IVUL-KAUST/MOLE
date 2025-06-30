@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "BRIGHT",
+        "Link": "https://github.com/allenai/bright",
+        "HF Link": "https://huggingface.co/datasets/allenai/bright",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "BRIGHT is a realistic and challenging benchmark for reasoning-intensive retrieval. It consists of 13,782 question-answer pairs, where the answers require multi-hop reasoning over complex, real-world documents.",
+        "Volume": 13782.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Allen Institute for AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval",
+        "Paper Link": "https://arxiv.org/abs/2312.08498",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Pengfei Liu",
+            "Zhengxuan Wu",
+            "Weicheng Xie",
+            "Yue Zhang",
+            "Xinyu Ma",
+            "Minghao Li",
+            "Jiaqi Ma",
+            "Junwei Bao",
+            "Zihan Liu",
+            "Xiang Ren"
+        ],
+        "Affiliations": [
+            "Allen Institute for AI",
+            "University of Washington"
+        ],
+        "Abstract": "Reasoning-intensive retrieval requires systems to synthesize information from multiple sources to answer complex questions. Existing benchmarks often rely on simplified or synthetic data, lacking the realism of real-world information seeking. We introduce BRIGHT, a new benchmark for reasoning-intensive retrieval, consisting of 13,782 question-answer pairs. BRIGHT is constructed from complex, real-world web documents and requires multi-hop reasoning to find answers. We evaluate a range of retrieval and reading comprehension models on BRIGHT, and find that current models struggle to achieve strong performance. We also analyze the characteristics of BRIGHT and provide insights into the challenges of reasoning-intensive retrieval. Our code and data are available at https://github.com/allenai/bright."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00043618,
+        "input_tokens": 3020,
+        "output_tokens": 569
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12883"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

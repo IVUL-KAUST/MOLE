@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "JMultiWOZ",
+        "Link": "https://huggingface.co/datasets/jmultiwoz",
+        "HF Link": "https://huggingface.co/datasets/jmultiwoz",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "commentary",
+            "other",
+            "captions",
+            "captions",
+            "captions",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "JMultiWOZ is a large-scale, Japanese multi-domain task-oriented dialogue dataset. It is based on the MultiWOZ dataset and contains dialogues in multiple domains, such as restaurants, hotels, attractions, trains, taxis, and hospitals.",
+        "Volume": 12000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Tokyo",
+            "Sony Research"
+        ],
+        "Derived From": [
+            "MultiWOZ"
+        ],
+        "Paper Title": "JMultiWOZ: A Large-Scale Japanese Multi-Domain Task-Oriented Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2305.14493",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speaker identification",
+            "text generation",
+            "information retrieval"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yusuke Kashioka",
+            "Kentaro Inui",
+            "Hiroki Ouchi",
+            "Tatsuya Kawahara"
+        ],
+        "Affiliations": [
+            "University of Tokyo",
+            "Sony Research"
+        ],
+        "Abstract": "We present JMultiWOZ, a large-scale Japanese multi-domain task-oriented dialogue dataset. JMultiWOZ is created based on the MultiWOZ dataset and contains 12,000 dialogues in six domains: restaurants, hotels, attractions, trains, taxis, and hospitals. We introduce a new annotation scheme for Japanese dialogue and provide detailed statistics of the dataset. We also conduct preliminary experiments on dialogue state tracking and dialogue policy learning to demonstrate the usefulness of JMultiWOZ. The dataset is publicly available at https://huggingface.co/datasets/jmultiwoz."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00044576,
+        "input_tokens": 3086,
+        "output_tokens": 577
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.17319"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

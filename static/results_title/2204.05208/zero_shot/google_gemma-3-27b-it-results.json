@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "FIJO",
+        "Link": "https://huggingface.co/datasets/florentine/fijo",
+        "HF Link": "https://huggingface.co/datasets/florentine/fijo",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "We introduce FIJO, a new dataset for French soft skill detection in insurance claims. It consists of 1,283 claims annotated with 11 soft skills, and is designed to facilitate research in this area.",
+        "Volume": 1283.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Florentine"
+        ],
+        "Derived From": [],
+        "Paper Title": "FIJO: a French Insurance Soft Skill Detection Dataset",
+        "Paper Link": "https://arxiv.org/abs/2402.04113",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "offensive language detection",
+            "intent classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Baptiste Wernery",
+            "Antoine Doucet",
+            "Thomas Lorenzi",
+            "Romain Laroche"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 de Rouen Normandie",
+            "Universit\u00e9 Laval"
+        ],
+        "Abstract": "We introduce FIJO, a new dataset for French soft skill detection in insurance claims. It consists of 1,283 claims annotated with 11 soft skills, and is designed to facilitate research in this area. The dataset is publicly available and licensed under CC BY-NC-SA 4.0. We provide baseline results on the task and discuss potential applications and future work."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00063045,
+        "input_tokens": 3028,
+        "output_tokens": 473
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.05208"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
