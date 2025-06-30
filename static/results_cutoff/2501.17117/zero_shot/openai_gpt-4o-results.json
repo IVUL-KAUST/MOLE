@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "HistoiresMorales",
+        "Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "HF Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "manual curation"
+        ],
+        "Description": "HistoiresMorales is a French dataset derived from MoralStories, created through translation and refined with native speakers to ensure grammatical accuracy and adaptation to the French cultural context. It covers a wide range of social situations, including differences in tipping practices, expressions of honesty in relationships, and responsibilities toward animals.",
+        "Volume": 12000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Laboratoire Hubert Curien",
+            "Universit\u00e9 Lumi\u00e8re Lyon 2",
+            "T\u00e9l\u00e9com Paris"
+        ],
+        "Derived From": [
+            "MoralStories"
+        ],
+        "Paper Title": "HistoiresMorales: A French Dataset for Assessing Moral Alignment",
+        "Paper Link": "https://github.com/upunaprosk/histoires-morales",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "commonsense reasoning",
+            "language modeling"
+        ],
+        "Venue Title": "ACL 2023",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Thibaud Leteno",
+            "Irina Proskurina",
+            "Antoine Gourru",
+            "Julien Velcin",
+            "Charlotte Laclau",
+            "Guillaume Metzler",
+            "Christophe Gravier"
+        ],
+        "Affiliations": [
+            "Laboratoire Hubert Curien, UMR CNRS 5516, Saint-Etienne, France",
+            "Universit\u00e9 Lumi\u00e8re Lyon 2, Universit\u00e9 Claude Bernard Lyon 1, ERIC, 69007, Lyon, France",
+            "T\u00e9l\u00e9com Paris, Institut Polytechnique de Paris, Paris, France"
+        ],
+        "Abstract": "Aligning language models with human values is crucial, especially as they become more integrated into everyday life. While models are often adapted to user preferences, it is equally important to ensure they align with moral norms and behaviours in real-world social situations. Despite significant progress in languages like English and Chinese, French has seen little attention in this area, leaving a gap in understanding how LLMs handle moral reasoning in this language. To address this gap, we introduce HistoiresMorales, a French dataset derived from MoralStories, created through translation and subsequently refined with the assistance of native speakers to guarantee grammatical accuracy and adaptation to the French cultural context. We also rely on annotations of the moral values within the dataset to ensure their alignment with French norms. HistoiresMorales covers a wide range of social situations, including differences in tipping practices, expressions of honesty in relationships, and responsibilities toward animals. To foster future research, we also conduct preliminary experiments on the alignment of multilingual models on French and English data and the robustness of the alignment. We find that while LLMs are generally aligned with human moral norms by default, they can be easily influenced with user-preference optimization for both moral and immoral data."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0761575,
+        "input_tokens": 27628,
+        "output_tokens": 717
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.17117"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

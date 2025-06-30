@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "CLIMB",
+        "Link": "https://huggingface.co/datasets/nvidia/ClimbMix",
+        "HF Link": "https://huggingface.co/datasets/nvidia/ClimbMix",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "CLIMB is a framework for optimizing data mixtures in pre-training settings. It embeds and clusters large-scale datasets in a semantic space and iteratively searches for optimal mixtures using a smaller proxy model and a predictor. The dataset includes a filtered 1.2-trillion-token corpus with 20 clusters and a compact 400-billion-token dataset designed for efficient pre-training.",
+        "Volume": 400.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "NVIDIA"
+        ],
+        "Derived From": [
+            "Common Crawl",
+            "The Pile"
+        ],
+        "Paper Title": "CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
+        "Paper Link": "https://research.nvidia.com/labs/lpr/climb/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "topic classification"
+        ],
+        "Venue Title": "NVIDIA Technical Report",
+        "Venue Type": "preprint",
+        "Venue Name": "NVIDIA",
+        "Authors": [
+            "Shizhe Diao",
+            "Yu Yang",
+            "Yonggan Fu",
+            "Xin Dong",
+            "Dan Su",
+            "Markus Kliegl",
+            "Zijia Chen",
+            "Peter Belcak",
+            "Yoshi Suhara",
+            "Hongxu Yin",
+            "Mostofa Patwary",
+            "Yingyan (Celine) Lin",
+            "Jan Kautz",
+            "Pavlo Molchanov"
+        ],
+        "Affiliations": [
+            "NVIDIA"
+        ],
+        "Abstract": "Pre-training datasets are typically collected from web content and lack inherent domain divisions. For instance, widely used datasets like Common Crawl do not include explicit domain labels, while manually curating labeled datasets such as The Pile is labor-intensive. Consequently, identifying an optimal pre-training data mixture remains a challenging problem, despite its significant benefits for pre-training performance. To address these challenges, we propose CLustering-based Iterative Data Mixture Bootstrapping (CLIMB), an automated framework that discovers, evaluates, and refines data mixtures in a pre-training setting. Specifically, CLIMB embeds and clusters large-scale datasets in a semantic space and then iteratively searches for optimal mixtures using a smaller proxy model and a predictor. When continuously trained on 400B tokens with this mixture, our 1B model exceeds the state-of-the-art Llama-3.2-1B by 2.0%. Moreover, we observe that optimizing for a specific domain (e.g., Social Sciences) yields a 5% improvement over random sampling. Finally, we introduce ClimbLab, a filtered 1.2-trillion-token corpus with 20 clusters as a research playground, and ClimbMix, a compact yet powerful 400-billion-token dataset designed for efficient pre-training that delivers superior performance under an equal token budget. We analyze the final data mixture, elucidating the characteristics of an optimal data mixture."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0752925,
+        "input_tokens": 28738,
+        "output_tokens": 745
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.13161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
