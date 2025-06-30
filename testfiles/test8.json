@@ -11,7 +11,7 @@
 
     "Provider": ["ABCD"],
     "Host": "GitHub",
-    "Link": "https://github.com/zaidalyafeai/example-dataset",
+    "Link": "https://github.com",
     "HF Link": "",
     "License": "Apache-2.0",
     "Cost": "",

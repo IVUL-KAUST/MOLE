@@ -133,13 +133,5 @@ Example extracted metadata using Gemini 2.5 Pro
 ## Citation
 
 ```
-@misc{mole,
-      title={MOLE: Metadata Extraction and Validation in Scientific Papers Using LLMs}, 
-      author={Zaid Alyafeai and Maged S. Al-Shaibani and Bernard Ghanem},
-      year={2025},
-      eprint={2505.19800},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2505.19800}, 
-}
+
 ```

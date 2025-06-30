@@ -32,7 +32,7 @@ for schema in schemas:
 df = pd.concat(dfs, ignore_index=True)
 dataset = Dataset.from_pandas(df)
 
-dataset.push_to_hub("Zaid/mole", private = True)
+dataset.push_to_hub("hf-user/mole", private = True)
 
 
 
