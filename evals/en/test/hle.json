@@ -14,7 +14,7 @@
         "manual curation"
     ],
     "Description": "Humanity's Last Exam (HLE) is a dataset of 3,000 challenging questions designed to assess the capabilities of large language models (LLMs). The questions are diverse, covering a wide range of topics and requiring different reasoning abilities. The dataset is still under development and accepting new questions.",
-    "Volume": 3000.0,
+    "Volume": 2500.0,
     "Unit": "sentences",
     "Ethical Risks": "Low",
     "Provider": [

@@ -56,8 +56,8 @@
             "Language": "French"
         }
     ],
-    "Link": "https://github.com/punyajoy/DE-LIMIT",
     "HF Link": "",
+    "Link": "https://github.com/hate-alert/DE-LIMIT",
     "License": "MIT License",
     "Year": 2020,
     "Language": [
@@ -72,6 +72,7 @@
         "French"
     ],
     "Domain": [
+        "public datasets",
         "social media"
     ],
     "Form": "text",
@@ -85,7 +86,9 @@
     "Provider": [
         "Indian Institute of Technology Kharagpur"
     ],
-    "Derived From": [],
+    "Derived From": [
+
+    ],
     "Paper Title": "Deep Learning Models for Multilingual Hate Speech Detection",
     "Paper Link": "https://arxiv.org/pdf/2004.06465",
     "Tokenized": false,
