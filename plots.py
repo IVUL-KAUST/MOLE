@@ -23,6 +23,7 @@ args.add_argument("--browsing", action="store_true")
 args.add_argument("--errors", action="store_true")
 args.add_argument("--group_by", type = str, default = "evaluation_subsets")
 args.add_argument("--ignore_length", action="store_true")
+args.add_argument("--other_metrics", action="store_true")
 args = args.parse_args()
 
 # evaluation_subsets = schema[args.schema]['evaluation_subsets']
@@ -222,7 +223,11 @@ def plot_by_year():
         years, scores = zip(*sorted(zip(years, scores)))
         # plt.scatter(years, scores, label = model_name)
         # if model_name == "google_gemini-2.5-pro":
-        results.append([remap_names(model_name)] + list(scores)+[np.mean(scores)])
+        scores = [100 * score for score in scores]
+
+        # calcualte the correlation between the scores and the years
+        correlation = np.corrcoef(years, scores)[0, 1]
+        results.append([remap_names(model_name)] + list(scores)+[correlation])
         plt.plot(years, scores, label=model_name)
     plt.title("Average Score per Year")
     plt.xlabel("Year")
@@ -230,7 +235,7 @@ def plot_by_year():
     plt.show()
 
     # plot table of results
-    headers = ["Model"] + [str(year) for year in years] + ["Average"]
+    headers = ["Model"] + [str(year) for year in years] + ["Correlation"]
     print_table(results, headers)
 
 
@@ -438,7 +443,8 @@ def plot_fewshot():
 
             scores = evaluate_metadata(
                 gold_metadata, pred_metadata,
-                schema = get_schema_from_path(json_file)
+                schema = get_schema_from_path(json_file),
+                return_columns = True
             )
             scores = [scores["AVERAGE"]]
             if use_annotations_paper:
@@ -468,6 +474,64 @@ def plot_fewshot():
         print(
             "* Computed average by considering metadata exctracted from outside the paper."
         )
+def plot_table_by_other_metrics():
+    ignore_length = args.ignore_length
+    attributes = schemata['ar']["validation_columns"]
+    headers = ["Model", "Precision", "Recall", "F1"]
+    if args.use_annotations_paper:
+        headers += ["AVERAGE^*"]    
+    metric_results = {}
+    use_annotations_paper = args.use_annotations_paper
+    ids = get_all_ids()
+    for json_file in json_files:
+        results = json.load(open(json_file))
+        arxiv_id = get_id_from_path(json_file)
+        if arxiv_id not in ids:
+            continue
+        schema = get_schema_from_path(json_file)
+        model_name = results["config"]["model_name"]
+        pred_metadata = results["metadata"]
+        if model_name not in metric_results:
+            metric_results[model_name] = []
+        # human_json_path = human_json_path.replace(f"/{args.type}", "")
+        gold_metadata = get_metadata_from_path(json_file)
+        annotations_from_paper = gold_metadata["annotations_from_paper"]
+
+        scores = evaluate_metadata(
+            gold_metadata, pred_metadata,
+            schema = schema,
+            return_columns = True
+        )
+        attributes = schemata[schema]["validation_columns"]
+        precision = np.mean([scores[c] for c in attributes if c in scores])
+        recall = np.mean([scores[c] for c in attributes if annotations_from_paper[c] == 1])
+
+        if use_annotations_paper:
+            average_ignore_mistakes = evaluate_metadata(
+                gold_metadata, pred_metadata, use_annotations_paper=True, schema = schema
+            )["AVERAGE"]
+            scores += [average_ignore_mistakes]
+        f1 = 2 * precision * recall / (precision + recall)
+        metric_results[model_name].append([precision, recall, f1])
+    final_results = {}
+    for model_name in metric_results:
+        if "human" in model_name.lower():
+            continue
+        if len(metric_results[model_name]) == len(ids) or ignore_length:
+            final_results[model_name] = metric_results[model_name]
+
+    results = []
+    for model_name in final_results:
+        results.append(
+            [remap_names(model_name)] + (np.mean(final_results[model_name], axis=0) * 100).tolist()
+        )
+
+    print_table(results, headers, format = True)
+    if use_annotations_paper:
+        print(
+            "* Computed average by considering metadata exctracted from outside the paper."
+        )
+
 
 def plot_table():
     ignore_length = args.ignore_length
@@ -632,6 +696,8 @@ if __name__ == "__main__":
         plot_by_cost()
     elif args.group_by == 'language':
         plot_langs()
+    elif args.other_metrics:
+        plot_table_by_other_metrics()
     else:
         if args.subsets:
             plot_subsets()
