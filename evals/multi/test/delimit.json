@@ -1,21 +1,76 @@
 {
     "Name": "Multilingual Hate Speech Detection Dataset",
     "Subsets": [
-        {"Name": "Arabic", "Volume":5790.0, "Unit": "sentences", "Language": "Arabic"},
-        {"Name": "English", "Volume":96323.0, "Unit": "sentences", "Language": "English"},
-        {"Name": "German", "Volume":6155.0, "Unit": "sentences", "Language": "German"},
-        {"Name": "Indonesian", "Volume":13882.0, "Unit": "sentences", "Language": "Indonesian"},
-        {"Name": "Italian", "Volume":9560.0, "Unit": "sentences", "Language": "Italian"},
-        {"Name": "Polish", "Volume":9788.0, "Unit": "sentences", "Language": "Polish"},
-        {"Name": "Portuguese", "Volume":5670.0, "Unit": "sentences", "Language": "Portuguese"},
-        {"Name": "Spanish", "Volume":11365.0, "Unit": "sentences", "Language": "Spanish"},
-        {"Name": "French", "Volume":1220.0, "Unit": "sentences", "Language": "French"}
+        {
+            "Name": "Arabic",
+            "Volume": 5790.0,
+            "Unit": "sentences",
+            "Language": "Arabic"
+        },
+        {
+            "Name": "English",
+            "Volume": 96323.0,
+            "Unit": "sentences",
+            "Language": "English"
+        },
+        {
+            "Name": "German",
+            "Volume": 6155.0,
+            "Unit": "sentences",
+            "Language": "German"
+        },
+        {
+            "Name": "Indonesian",
+            "Volume": 13882.0,
+            "Unit": "sentences",
+            "Language": "Indonesian"
+        },
+        {
+            "Name": "Italian",
+            "Volume": 9560.0,
+            "Unit": "sentences",
+            "Language": "Italian"
+        },
+        {
+            "Name": "Polish",
+            "Volume": 9788.0,
+            "Unit": "sentences",
+            "Language": "Polish"
+        },
+        {
+            "Name": "Portuguese",
+            "Volume": 5670.0,
+            "Unit": "sentences",
+            "Language": "Portuguese"
+        },
+        {
+            "Name": "Spanish",
+            "Volume": 11365.0,
+            "Unit": "sentences",
+            "Language": "Spanish"
+        },
+        {
+            "Name": "French",
+            "Volume": 1220.0,
+            "Unit": "sentences",
+            "Language": "French"
+        }
     ],
     "HF Link": "",
     "Link": "https://github.com/hate-alert/DE-LIMIT",
     "License": "MIT License",
     "Year": 2020,
-    "Language": ["Arabic", "English", "German", "Indonesian", "Italian", "Polish", "Portuguese", "Spanish", "French"],
+    "Language": [
+        "Arabic",
+        "English",
+        "German",
+        "Indonesian",
+        "Italian",
+        "Polish",
+        "Portuguese",
+        "Spanish",
+        "French"
+    ],
     "Domain": [
         "public datasets",
         "social media"
@@ -57,7 +112,7 @@
     "Affiliations": [
         "Indian Institute of Technology Kharagpur"
     ],
-    "Abstract": "Hate speech detection is a challenging problem with most of the datasets available in only one language: English. In this paper, we conduct a large scale analysis of multilingual hate speech in 9 languages from 16 different sources. We observe that in low resource setting, simple models such as LASER embedding with logistic regression performs the best, while in high resource setting BERT based models perform better. In case of zero-shot classification, languages such as Italian and Portuguese achieve good results. Our proposed framework could be used as an efficient solution for low-resource languages. These models could also act as good baselines for future multilingual hate speech detection tasks. We have made our code and experimental settings public for other researchers at this https URL.",
+    "Abstract": "Hate speech detection is a challenging problem with most of the datasets available in only one language: English. In this paper, we conduct a large scale analysis of multilingual hate speech in 9 languages from 16 different sources. We observe that in low resource setting, simple models such as LASER embedding with logistic regression performs the best, while in high resource setting BERT based models perform better. In case of zero-shot classification, languages such as Italian and Portuguese achieve good results. Our proposed framework could be used as an efficient solution for low-resource languages. These models could also act as good baselines for future multilingual hate speech detection tasks. We have made our code and experimental settings public for other researchers at https://github.com/punyajoy/DE-LIMIT.",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,

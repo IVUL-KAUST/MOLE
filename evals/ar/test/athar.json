@@ -35,7 +35,6 @@
         "machine translation"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -46,8 +45,7 @@
         "Independent Researcher",
         "ADAPT/DCU"
     ],
-    "Abstract": "ATHAR is a dataset comprising 66,000 high-quality translation pairs from Classical Arabic to English, aimed at improving NLP and machine translation systems. The dataset covers a broad range of Classical Arabic texts, including science, philosophy, and history. Evaluations on state-of-the-art language models indicate that fine-tuning with this dataset significantly improves translation accuracy.",
-    
+    "Abstract": "Classical Arabic represents a significant era, encompassing the golden age of Arab culture, philosophy, and scientific literature. With a broad consensus on the importance of translating these literatures to enrich knowledge dissemination across communities, the advent of large language models (LLMs) and translation systems offers promising tools to facilitate this goal. However, we have identified a scarcity of translation datasets in Classical Arabic, which are often limited in scope and topics, hindering the development of high-quality translation systems. In response, we present the ATHAR dataset, comprising 66,000 high-quality Classical Arabic to English translation samples that cover a wide array of subjects including science, culture, and philosophy. Furthermore, we assess the performance of current state-of-the-art LLMs under various settings, concluding that there is a need for such datasets in current systems. Our findings highlight how models can benefit from fine-tuning or incorporating this dataset into their pretraining pipelines. The dataset is publicly available on the HuggingFace Data Hub at \\url{https://huggingface.co/datasets/mohamed-khalil/ATHAR}.",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -81,5 +79,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

@@ -45,7 +45,7 @@
         "Ural Federal University",
         "JetBrains Research"
     ],
-    "Abstract": "SberQuAD\u2014a large scale analog of Stanford SQuAD in the Russian language\u2014is a valuable resource that has not been properly presented to the scientific community. We fill this gap by providing a description, a thorough analysis, and baseline experimental results.",
+    "Abstract": "SberQuAD -- a large scale analog of Stanford SQuAD in the Russian language - is a valuable resource that has not been properly presented to the scientific community. We fill this gap by providing a description, a thorough analysis, and baseline experimental results.",
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,

@@ -37,7 +37,6 @@
         "speech recognition"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -48,8 +47,7 @@
     "Affiliations": [
         "University of Tokyo"
     ],
-    "Abstract": "Thanks to improvements in machine learning techniques including deep learning, a free large-scale speech corpus that\ncan be shared between academic institutions and commercial\ncompanies has an important role. However, such a corpus for\nJapanese speech synthesis does not exist. In this paper, we\ndesigned a novel Japanese speech corpus, named the \u201cJSUT\ncorpus,\u201d that is aimed at achieving end-to-end speech synthesis. The corpus consists of 10 hours of reading-style speech\ndata and its transcription and covers all of the main pronunciations of daily-use Japanese characters. In this paper, we\ndescribe how we designed and analyzed the corpus. The corpus is freely available online",
-    
+    "Abstract": "Thanks to improvements in machine learning techniques including deep learning, a free large-scale speech corpus that can be shared between academic institutions and commercial companies has an important role. However, such a corpus for Japanese speech synthesis does not exist. In this paper, we designed a novel Japanese speech corpus, named the \"JSUT corpus,\" that is aimed at achieving end-to-end speech synthesis. The corpus consists of 10 hours of reading-style speech data and its transcription and covers all of the main pronunciations of daily-use Japanese characters. In this paper, we describe how we designed and analyzed the corpus. The corpus is freely available online.",
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
@@ -81,5 +79,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

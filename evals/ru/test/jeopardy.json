@@ -40,7 +40,7 @@
     "Affiliations": [
         "Tyumen State University"
     ],
-    "Abstract": "Question answering (QA) is one of the most common NLP tasks that relates to named entity recognition, fact extraction, semantic search and some other fields. In industry, it is much valued in chat-bots and corporate information systems. It is also a challenging task that attracted the attention of a very general audience at the quiz show Jeopardy! In this article we describe a Jeopardy!-like Russian QA dataset collected from the official Russian quiz database Chgk che-ge-\u2018ka:. The data set includes 379,284 quiz-like questions with 29,375 from the Russian analogue of Jeopardy! \u2013 'Own Game'. We observe its linguistic features and the related QA-task. We conclude about perspectives of a QA challenge based on the collected dataset.",
+    "Abstract": "Question answering (QA) is one of the most common NLP tasks that relates to named entity recognition, fact extraction, semantic search and some other fields. In industry, it is much appreciated in chatbots and corporate information systems. It is also a challenging task that attracted the attention of a very general audience at the quiz show Jeopardy! In this article we describe a Jeopardy!-like Russian QA data set collected from the official Russian quiz database Chgk (che ge ka). The data set includes 379,284 quiz-like questions with 29,375 from the Russian analogue of Jeopardy! - \"Own Game\". We observe its linguistic features and the related QA-task. We conclude about perspectives of a QA competition based on the data set collected from this database.",
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,

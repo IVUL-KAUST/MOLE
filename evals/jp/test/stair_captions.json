@@ -47,7 +47,7 @@
         "The University of Tokyo",
         "National Institute of Informatics"
     ],
-    "Abstract": "We introduce a new, large-scale image caption dataset in Japanese, which we call STAIR Captions. While several caption datasets have been developed for English, there are currently no large-scale caption datasets for other languages such as Japanese. Our new dataset is based on the COCO dataset, which is a standard benchmark for image captioning, and it contains 820,310 Japanese captions for 164,062 images. We collected the captions using crowdsourcing. We describe the details of our dataset and the collection process. We also report the performance of baseline image captioning models on our dataset. The dataset is freely available at http://captions.stair.center/.",
+    "Abstract": "In recent years, automatic generation of image descriptions (captions), that is, image captioning, has attracted a great deal of attention. In this paper, we particularly consider generating Japanese captions for images. Since most available caption datasets have been constructed for English language, there are few datasets for Japanese. To tackle this problem, we construct a large-scale Japanese image caption dataset based on images from MS-COCO, which is called STAIR Captions. STAIR Captions consists of 820,310 Japanese captions for 164,062 images. In the experiment, we show that a neural network trained using STAIR Captions can generate more natural and better Japanese captions, compared to those generated using English-Japanese machine translation after generating English captions.",
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,

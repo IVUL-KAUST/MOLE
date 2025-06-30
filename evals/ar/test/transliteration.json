@@ -35,7 +35,6 @@
         "machine translation"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -45,8 +44,7 @@
     "Affiliations": [
         "Google"
     ],
-    "Abstract": "Transliteration is a key component of machine\ntranslation systems and software internationalization. This paper demonstrates that neural\nsequence-to-sequence models obtain state of\nthe art or close to state of the art results on existing datasets. In an effort to make machine\ntransliteration accessible, we open source a\nnew Arabic to English transliteration dataset\nand our trained models.",
-    
+    "Abstract": "Transliteration is a key component of machine translation systems and software internationalization. This paper demonstrates that neural sequence-to-sequence models obtain state of the art or close to state of the art results on existing datasets. In an effort to make machine transliteration accessible, we open source a new Arabic to English transliteration dataset and our trained models.",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -80,5 +78,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }

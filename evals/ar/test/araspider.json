@@ -40,7 +40,6 @@
         "text to SQL"
     ],
     "Venue Title": "arXiv",
-    
     "Venue Type": "preprint",
     "Venue Name": "",
     "Authors": [
@@ -53,8 +52,7 @@
         "Egypt-Japan University of Science and Technology",
         "Egypt-Japan University of Science and Technology"
     ],
-    "Abstract": "The AraSpider dataset is an Arabic version of the Spider dataset, designed for text-to-SQL tasks in natural language processing. Four multilingual translation models were evaluated for translating the Spider dataset from English to Arabic, and two models were tested for their ability to generate SQL queries from Arabic text. The study highlights the effectiveness of back translation strategies, and proposes methodologies for democratizing NLP resources and enhancing collaboration within the Arabic-speaking research community.",
-    
+    "Abstract": "This study presents AraSpider, the first Arabic version of the Spider dataset, aimed at improving natural language processing (NLP) in the Arabic-speaking community. Four multilingual translation models were tested for their effectiveness in translating English to Arabic. Additionally, two models were assessed for their ability to generate SQL queries from Arabic text. The results showed that using back translation significantly improved the performance of both ChatGPT 3.5 and SQLCoder models, which are considered top performers on the Spider dataset. Notably, ChatGPT 3.5 demonstrated high-quality translation, while SQLCoder excelled in text-to-SQL tasks. The study underscores the importance of incorporating contextual schema and employing back translation strategies to enhance model performance in Arabic NLP tasks. Moreover, the provision of detailed methodologies for reproducibility and translation of the dataset into other languages highlights the research's commitment to promoting transparency and collaborative knowledge sharing in the field. Overall, these contributions advance NLP research, empower Arabic-speaking researchers, and enrich the global discourse on language comprehension and database interrogation.",
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
@@ -88,5 +86,5 @@
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
-        }
+    }
 }
