@@ -19,15 +19,15 @@ if __name__ == "__main__":
         links = []
         if args.masader_validate:
             use_split = "valid"
-            dataset = eval_datasets[args.schema][use_split]
+            dataset = eval_datasets[args.schema_name][use_split]
         else:
             use_split = "test"
-            dataset = eval_datasets[args.schema][use_split]
+            dataset = eval_datasets[args.schema_name][use_split]
         
         for x in dataset:
-            titles.append(str(x["Paper Title"]))
+            titles.append(str(x["Paper_Title"]))
             data_names.append(str(x["Name"]))
-            paper_links.append(str(x["Paper Link"]))
+            paper_links.append(str(x["Paper_Link"]))
             years.append(str(x["Year"]))
             links.append(x["Link"])
     else:
@@ -50,7 +50,6 @@ if __name__ == "__main__":
         if paper_link != "":
             paper_link = fix_arxiv_link(paper_link)
             model_results = run(
-                mode="api",
                 link=paper_link,
                 year=year,
                 month=None,
@@ -61,7 +60,7 @@ if __name__ == "__main__":
                 repo_link=link,
                 summarize = args.summarize,
                 curr_idx= curr_idx,
-                schema = args.schema,
+                schema_name = args.schema_name,
                 few_shot = args.few_shot,
                 results_path = args.results_path,
                 pdf_mode = args.pdf_mode,
@@ -70,34 +69,15 @@ if __name__ == "__main__":
                 use_title = args.use_title
             )
         else:
-            model_results = run(
-                mode="api",
-                keywords=args.keywords,
-                year=None,
-                month=None,
-                models=args.models.split(","),
-                browse_web=args.browse_web,
-                overwrite=args.overwrite,
-                use_split=use_split,
-                repo_link=link,
-                summarize = args.summarize,
-                curr_idx = curr_idx,
-                schema = args.schema,
-                few_shot = args.few_shot,
-                results_path = args.results_path,
-                pdf_mode = args.pdf_mode,
-                repeat_on_error = args.repeat_on_error,
-                context_size = args.context_size,
-                use_title = args.use_title
-            )
-
+            raise()
+        metrics = ['precision', 'recall', 'f1', 'length']
         for model_name in model_results:
             results = model_results[model_name]
 
             if model_name not in metric_results:
                 metric_results[model_name] = []
             metric_results[model_name].append(
-                [results["validation"][m] for m in results["validation"]]
+                [results["validation"][m] for m in results["validation"] if m in metrics]
             )
     results = []
     for model_name in metric_results:
@@ -106,7 +86,7 @@ if __name__ == "__main__":
                 [model_name]
                 + (np.mean(metric_results[model_name], axis=0) * 100).tolist()
             )
-    headers = ["MODEL"] + list(schemata[args.schema]["evaluation_subsets"].keys()) + ["AVERAGE"]
+    headers = ["MODEL"] + metrics 
     print(
         tabulate(
             sorted(results, key=lambda x: x[-1]),

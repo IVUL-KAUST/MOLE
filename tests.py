@@ -1,5 +1,6 @@
 import json
 from utils import validate, fix_options, cast, fill_missing, evaluate_metadata, postprocess, fetch_repository_metadata, evaluate_lengths
+from schema import Schema
 from constants import *
 from pages.search import get_metadatav2
 
