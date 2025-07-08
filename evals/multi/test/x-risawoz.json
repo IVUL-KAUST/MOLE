@@ -33,7 +33,7 @@
         }
     ],
     "Link": "https://github.com/stanford-oval/dialogues",
-    "HF Link": "https://huggingface.co/datasets/DeepPavlov/XRISAWOZ",
+    "HF_Link": "https://huggingface.co/datasets/DeepPavlov/XRISAWOZ",
     "License": "custom",
     "Year": 2023,
     "Language": [
@@ -47,33 +47,33 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "machine annotation",
         "human annotation"
     ],
     "Description": "A multi-domain, large-scale, and high-quality task-oriented dialogue benchmark, produced by translating the Chinese RiSAWOZ data to four diverse languages: English, French, Hindi, and Korean; and one code-mixed English-Hindi language. It is an end-to-end dataset for building fully-functioning agents.",
     "Volume": 90000.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "Stanford University"
     ],
-    "Derived From": [
+    "Derived_From": [
         "RiSAWOZ"
     ],
-    "Paper Title": "X-RiSAWOZ: High-Quality End-to-End Multilingual Dialogue Datasets and Few-shot Agents",
-    "Paper Link": "https://arxiv.org/pdf/2306.17674",
+    "Paper_Title": "X-RiSAWOZ: High-Quality End-to-End Multilingual Dialogue Datasets and Few-shot Agents",
+    "Paper_Link": "https://arxiv.org/pdf/2306.17674",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": true,
+    "Test_Split": true,
     "Tasks": [
         "instruction tuning"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Mehrad Moradshahi",
         "Tianhao Shen",
@@ -109,30 +109,30 @@
         "Name": 1,
         "Subsets": 1,
         "Link": 1,
-        "HF Link": 0,
+        "HF_Link": 0,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

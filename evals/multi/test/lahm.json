@@ -39,7 +39,7 @@
         }
     ],
     "Link": "",
-    "HF Link": "",
+    "HF_Link": "",
     "License": "unknown",
     "Year": 2023,
     "Language": [
@@ -56,34 +56,34 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "crawling",
         "machine annotation"
     ],
     "Description": "A large-scale, semi-supervised dataset for multilingual and multi-domain hate speech identification. It contains nearly 300k tweets across 6 languages (English, Hindi, Arabic, French, German, Spanish) and 5 domains (Abuse, Racism, Sexism, Religious Hate, Extremism), created using a 3-layer annotation pipeline.",
     "Volume": 227836.0,
     "Unit": "sentences",
-    "Ethical Risks": "High",
+    "Ethical_Risks": "High",
     "Provider": [
         "Logically.ai"
     ],
-    "Derived From": [
+    "Derived_From": [
         "HateBase",
         "MLMA"
     ],
-    "Paper Title": "LAHM : Large Annotated Dataset for Multi-Domain and Multilingual Hate Speech Identification",
-    "Paper Link": "https://arxiv.org/pdf/2304.00913",
+    "Paper_Title": "LAHM : Large Annotated Dataset for Multi-Domain and Multilingual Hate Speech Identification",
+    "Paper_Link": "https://arxiv.org/pdf/2304.00913",
     "Tokenized": false,
     "Host": "other",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "offensive language detection"
     ],
-    "Venue Title": "De-Factify",
-    "Venue Type": "workshop",
-    "Venue Name": "Workshop on Multimodal Fact Checking and Hate Speech Detection",
+    "Venue_Title": "De-Factify",
+    "Venue_Type": "workshop",
+    "Venue_Name": "Workshop on Multimodal Fact Checking and Hate Speech Detection",
     "Authors": [
         "Ankit Yadav",
         "Shubham Chandel",
@@ -98,30 +98,30 @@
         "Name": 1,
         "Subsets": 1,
         "Link": 0,
-        "HF Link": 0,
+        "HF_Link": 0,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 0,
         "Access": 0,
         "Cost": 0,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

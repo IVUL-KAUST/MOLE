@@ -2,7 +2,7 @@
     "Name": "CIDAR",
     "Subsets": [],
     "Link": "https://hf.co/datasets/arbml/CIDAR",
-    "HF Link": "https://hf.co/datasets/arbml/CIDAR",
+    "HF_Link": "https://hf.co/datasets/arbml/CIDAR",
     "License": "CC BY-NC 4.0",
     "Year": 2024,
     "Language": "ar",
@@ -12,7 +12,7 @@
         "LLM"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "crawling",
         "LLM generated",
         "manual curation"
@@ -20,29 +20,29 @@
     "Description": "CIDAR contains 10,000 instructions and their output. The dataset was created by selecting around 9,109 samples from Alpagasus dataset then translating it to Arabic using ChatGPT. In addition, we append that with around 891 Arabic grammar instructions from the webiste Ask the teacher.",
     "Volume": 10000,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "ARBML"
     ],
-    "Derived From": [
+    "Derived_From": [
         "AlpaGasus"
     ],
-    "Paper Title": "CIDAR: Culturally Relevant Instruction Dataset For Arabic",
-    "Paper Link": "https://arxiv.org/pdf/2402.03177",
+    "Paper_Title": "CIDAR: Culturally Relevant Instruction Dataset For Arabic",
+    "Paper_Link": "https://arxiv.org/pdf/2402.03177",
     "Script": "Arab",
     "Tokenized": false,
     "Host": "HuggingFace",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "instruction tuning",
         "question answering"
     ],
-    "Venue Title": "arXiv",
+    "Venue_Title": "arXiv",
     
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Zaid Alyafeai",
         "Khalid Almubarak",
@@ -63,7 +63,7 @@
     "annotations_from_paper":{
         "Name": 1,
         "Subsets": 1,
-        "HF Link": 1,
+        "HF_Link": 1,
         "Link": 1,
         "License": 0,
         "Year": 1,
@@ -71,25 +71,25 @@
         "Dialect": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Script": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

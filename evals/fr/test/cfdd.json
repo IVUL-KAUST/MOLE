@@ -1,7 +1,7 @@
 {
     "Name": "CFDD",
     "Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
-    "HF Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
+    "HF_Link": "https://huggingface.co/datasets/OpenLLM-France/Claire-Dialogue-French-0.1",
     "License": "CC BY-NC-SA 4.0",
     "Year": 2023,
     "Language": "fr",
@@ -11,18 +11,18 @@
         "web pages"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "manual curation",
         "crawling"
     ],
     "Description": "The Claire French Dialogue Dataset (CFDD) is a corpus containing roughly 160 million words from transcripts and stage plays in French.",
     "Volume": 160000000.0,
     "Unit": "tokens",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "LINAGORA Labs"
     ],
-    "Derived From": [
+    "Derived_From": [
         "ACSYNT",
         "Assembl\u00e9e Nationale",
         "Orf\u00e9o-CEFC",
@@ -43,20 +43,20 @@
         "Th\u00e9\u00e2tre Classique",
         "Th\u00e9\u00e2tre Gratuit"
     ],
-    "Paper Title": "The Claire French Dialogue Dataset",
-    "Paper Link": "https://arxiv.org/pdf/2311.16840",
+    "Paper_Title": "The Claire French Dialogue Dataset",
+    "Paper_Link": "https://arxiv.org/pdf/2311.16840",
     "Tokenized": false,
     "Host": "HuggingFace",
     "Access": "Free",
     "Cost": "",
-    "Test Split": true,
+    "Test_Split": true,
     "Tasks": [
         "language modeling",
         "text generation"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Julie Hunter",
         "J\u00e9r\u00f4me Louradour",
@@ -72,30 +72,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
-        "HF Link": 1,
+        "HF_Link": 1,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

@@ -1,7 +1,7 @@
 {
     "Name": "BRIGHT",
     "Link": "https://github.com/xlang-ai/BRIGHT",
-    "HF Link": "https://huggingface.co/datasets/xlangai/BRIGHT",
+    "HF_Link": "https://huggingface.co/datasets/xlangai/BRIGHT",
     "License": "CC BY 4.0",
     "Year": 2025,
     "Language": "en",
@@ -11,7 +11,7 @@
         "LLM"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "manual curation",
         "human annotation",
         "crawling"
@@ -19,7 +19,7 @@
     "Description": "BRIGHT is a new benchmark for reasoning-intensive retrieval. It consists of 12 datasets from diverse and advanced domains where relevance between queries and documents requires intensive reasoning beyond simple keyword or semantic matching.",
     "Volume": 1384.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "The University of Hong Kong",
         "Princeton University",
@@ -27,27 +27,27 @@
         "University of Washington",
         "Google Cloud AI Research"
     ],
-    "Derived From": [
+    "Derived_From": [
         "TheoremQA",
         "CAMEL-Math",
         "GSM8K",
         "AQuA-RAT",
         "GSM8K-RFT"
     ],
-    "Paper Title": "BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval",
-    "Paper Link": "https://arxiv.org/pdf/2407.12883",
+    "Paper_Title": "BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval",
+    "Paper_Link": "https://arxiv.org/pdf/2407.12883",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "information retrieval",
         "question answering"
     ],
-    "Venue Title": "ICLR",
-    "Venue Type": "conference",
-    "Venue Name": "International Conference on Learning Representations",
+    "Venue_Title": "ICLR",
+    "Venue_Type": "conference",
+    "Venue_Name": "International Conference on Learning Representations",
     "Authors": [
         "Hongjin Su",
         "Howard Yen",
@@ -76,30 +76,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
-        "HF Link": 1,
+        "HF_Link": 1,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

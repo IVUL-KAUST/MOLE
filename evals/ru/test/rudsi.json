@@ -1,7 +1,7 @@
 {
     "Name": "RuDSI",
     "Link": "https://github.com/kategavrishina/RuDSI",
-    "HF Link": "",
+    "HF_Link": "",
     "License": "unknown",
     "Year": 2022,
     "Language": "ru",
@@ -10,34 +10,34 @@
         "wikipedia"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "human annotation",
         "machine annotation"
     ],
     "Description": "A benchmark dataset for word sense induction (WSI) in Russian. It was created using manual annotation and semi-automatic clustering of Word Usage Graphs (WUGs) from the Russian National Corpus. The sense inventories are data-driven, not based on predefined dictionaries.",
     "Volume": 840.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "HSE University"
     ],
-    "Derived From": [
+    "Derived_From": [
         "RNC",
         "RuWordNet"
     ],
-    "Paper Title": "RuDSI: graph-based word sense induction dataset for Russian",
-    "Paper Link": "https://arxiv.org/pdf/2209.13750",
+    "Paper_Title": "RuDSI: graph-based word sense induction dataset for Russian",
+    "Paper_Link": "https://arxiv.org/pdf/2209.13750",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "other"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Anna Aksenova",
         "Ekaterina Gavrishina",
@@ -52,30 +52,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
-        "HF Link": 0,
+        "HF_Link": 0,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

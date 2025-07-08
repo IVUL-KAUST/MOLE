@@ -1,7 +1,7 @@
 {
     "Name": "FrenchToxicityPrompts",
     "Link": "https://download.europe.naverlabs.com/FrenchToxicityPrompts/",
-    "HF Link": "",
+    "HF_Link": "",
     "License": "CC BY-SA 4.0",
     "Year": 2024,
     "Language": "fr",
@@ -10,32 +10,32 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "machine annotation"
     ],
     "Description": "A dataset of 50,000 naturally occurring French prompts and their continuations, annotated with toxicity scores from a widely used toxicity classifier. It is designed to evaluate and mitigate toxicity in French language models.",
     "Volume": 50000.0,
     "Unit": "sentences",
-    "Ethical Risks": "High",
+    "Ethical_Risks": "High",
     "Provider": [
         "NAVER LABS Europe"
     ],
-    "Derived From": [
+    "Derived_From": [
         "L\u00e9lu"
     ],
-    "Paper Title": "FrenchToxicityPrompts: a Large Benchmark for Evaluating and Mitigating Toxicity in French Texts",
-    "Paper Link": "https://arxiv.org/pdf/2406.17566",
+    "Paper_Title": "FrenchToxicityPrompts: a Large Benchmark for Evaluating and Mitigating Toxicity in French Texts",
+    "Paper_Link": "https://arxiv.org/pdf/2406.17566",
     "Tokenized": false,
     "Host": "other",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "offensive language detection"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Caroline Brun",
         "Vassilina Nikoulina"
@@ -47,30 +47,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
-        "HF Link": 1,
+        "HF_Link": 1,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

@@ -33,7 +33,7 @@
         }
     ],
     "Link": "https://huggingface.co/datasets/KushanH/m2ds",
-    "HF Link": "https://huggingface.co/datasets/KushanH/m2ds",
+    "HF_Link": "https://huggingface.co/datasets/KushanH/m2ds",
     "License": "unknown",
     "Year": 2024,
     "Language": [
@@ -48,34 +48,34 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "crawling",
         "manual curation"
     ],
     "Description": "M2DS is a multilingual multi-document summarization (MDS) dataset. It contains 180,000 news articles from the BBC, organized into 51,500 clusters across five languages: English, Japanese, Korean, Tamil, and Sinhala. The data covers the period from 2010 to 2023.",
     "Volume": 180000.0,
     "Unit": "documents",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "University of Moratuwa",
         "ConscientAI"
     ],
-    "Derived From": [
+    "Derived_From": [
         "M3LS"
     ],
-    "Paper Title": "M2DS: Multilingual Dataset for Multi-document Summarisation",
-    "Paper Link": "https://arxiv.org/pdf/2407.12336",
+    "Paper_Title": "M2DS: Multilingual Dataset for Multi-document Summarisation",
+    "Paper_Link": "https://arxiv.org/pdf/2407.12336",
     "Tokenized": false,
     "Host": "HuggingFace",
     "Access": "Free",
     "Cost": "",
-    "Test Split": true,
+    "Test_Split": true,
     "Tasks": [
         "summarization"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Kushan Hewapathirana",
         "Nisansa de Silva",
@@ -90,30 +90,30 @@
         "Name": 1,
         "Subsets": 1,
         "Link": 1,
-        "HF Link": 1,
+        "HF_Link": 1,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

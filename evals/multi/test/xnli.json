@@ -92,7 +92,7 @@
             "Language": "Urdu"
         }
     ],
-    "HF Link": "https://hf.co/datasets/facebook/xnli",
+    "HF_Link": "https://hf.co/datasets/facebook/xnli",
     "Link": "https://github.com/facebookresearch/XNLI",
     "License": "CC BY-NC 4.0",
     "Year": 2018,
@@ -117,32 +117,32 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "human annotation"
     ],
     "Description": "Evaluation set for NLI by extending the development and test sets of the Multi-Genre Natural Language Inference Corpus (MultiNLI) to 15 languages",
     "Volume": 112500.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "Facebook"
     ],
-    "Derived From": [
+    "Derived_From": [
         "MultiNLI"
     ],
-    "Paper Title": "XNLI: Evaluating Cross-lingual Sentence Representations",
-    "Paper Link": "https://arxiv.org/pdf/1809.05053",
+    "Paper_Title": "XNLI: Evaluating Cross-lingual Sentence Representations",
+    "Paper_Link": "https://arxiv.org/pdf/1809.05053",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "natural language inference"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Alexis Conneau",
         "Guillaume Lample",
@@ -160,31 +160,31 @@
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
-        "HF Link": 0,
+        "HF_Link": 0,
         "Link": 0,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 0,
         "Access": 0,
         "Cost": 0,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

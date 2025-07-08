@@ -51,7 +51,7 @@
         }
     ],
     "Link": "",
-    "HF Link": "",
+    "HF_Link": "",
     "License": "unknown",
     "Year": 2022,
     "Language": [
@@ -68,33 +68,33 @@
         "wikipedia"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "crawling",
         "human annotation"
     ],
     "Description": "MINION is a large-scale, multilingual dataset for Event Detection (ED). It contains over 50,000 manually annotated event triggers in 8 languages (English, Spanish, Portuguese, Polish, Turkish, Hindi, Japanese, Korean) sourced from Wikipedia articles. The annotation schema is a pruned version of the ACE 2005 ontology.",
     "Volume": 31226.0,
     "Unit": "documents",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "University of Oregon"
     ],
-    "Derived From": [
+    "Derived_From": [
         "ACE 2005"
     ],
-    "Paper Title": "MINION: a Large-Scale and Diverse Dataset for Multilingual Event Detection",
-    "Paper Link": "https://arxiv.org/pdf/2211.05958",
+    "Paper_Title": "MINION: a Large-Scale and Diverse Dataset for Multilingual Event Detection",
+    "Paper_Link": "https://arxiv.org/pdf/2211.05958",
     "Tokenized": false,
     "Host": "other",
     "Access": "Free",
     "Cost": "",
-    "Test Split": true,
+    "Test_Split": true,
     "Tasks": [
         "other"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "AmirPouranBenVeyseh",
         "MinhVanNguyen",
@@ -110,30 +110,30 @@
         "Name": 1,
         "Subsets": 1,
         "Link": 0,
-        "HF Link": 0,
+        "HF_Link": 0,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 0,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

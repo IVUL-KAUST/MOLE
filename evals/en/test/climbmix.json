@@ -1,7 +1,7 @@
 {
     "Name": "ClimbMix",
     "Link": "https://huggingface.co/datasets/nvidia/ClimbMix",
-    "HF Link": "https://huggingface.co/datasets/nvidia/ClimbMix",
+    "HF_Link": "https://huggingface.co/datasets/nvidia/ClimbMix",
     "License": "CC BY-NC 4.0",
     "Year": 2025,
     "Language": "en",
@@ -11,34 +11,34 @@
         "other"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "crawling",
         "machine annotation"
     ],
     "Description": "ClimbMix is a compact 400-billion-token dataset designed for efficient language model pre-training. It was created by applying the CLIMB framework to find an optimal mixture from the ClimbLab corpus (derived from Nemotron-CC and smollm-corpus), delivering superior performance under an equal token budget.",
     "Volume": 400000000000.0,
     "Unit": "tokens",
-    "Ethical Risks": "Medium",
+    "Ethical_Risks": "Medium",
     "Provider": [
         "NVIDIA"
     ],
-    "Derived From": [
+    "Derived_From": [
         "Nemotron-CC",
         "smollm-corpus"
     ],
-    "Paper Title": "CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
-    "Paper Link": "https://arxiv.org/pdf/2504.13161",
+    "Paper_Title": "CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
+    "Paper_Link": "https://arxiv.org/pdf/2504.13161",
     "Tokenized": true,
     "Host": "HuggingFace",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "language modeling"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Shizhe Diao",
         "Yu Yang",
@@ -62,30 +62,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
-        "HF Link": 1,
+        "HF_Link": 1,
         "License": 1,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

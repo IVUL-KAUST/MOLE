@@ -33,7 +33,7 @@
         }
     ],
     "Link": "https://github.com/boun-tabi/RELX",
-    "HF Link": "",
+    "HF_Link": "",
     "License": "MIT License",
     "Year": 2020,
     "Language": [
@@ -47,32 +47,32 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "human annotation"
     ],
     "Description": "A public benchmark dataset for cross-lingual relation classification in English, French, German, Spanish, and Turkish. It contains 502 parallel sentences created by selecting a subset from the KBP-37 test set and having them professionally translated and annotated.",
     "Volume": 2510.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "Bo\u011fazi\u00e7i University"
     ],
-    "Derived From": [
+    "Derived_From": [
         "KBP-37"
     ],
-    "Paper Title": "The RELX Dataset and Matching the Multilingual Blanks for Cross-Lingual Relation Classification",
-    "Paper Link": "https://arxiv.org/pdf/2010.09381",
+    "Paper_Title": "The RELX Dataset and Matching the Multilingual Blanks for Cross-Lingual Relation Classification",
+    "Paper_Link": "https://arxiv.org/pdf/2010.09381",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "cross-lingual information retrieval"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Abdullatif K\u00f6ksal",
         "Arzucan \u00d6zg\u00fcr"
@@ -85,30 +85,30 @@
         "Name": 1,
         "Subsets": 1,
         "Link": 1,
-        "HF Link": 1,
+        "HF_Link": 1,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

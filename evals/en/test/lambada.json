@@ -1,7 +1,7 @@
 {
     "Name": "LAMBADA",
     "Link": "https://huggingface.co/datasets/cimec/lambada",
-    "HF Link": "https://huggingface.co/datasets/cimec/lambada",
+    "HF_Link": "https://huggingface.co/datasets/cimec/lambada",
     "License": "unknown",
     "Year": 2016,
     "Language": "en",
@@ -10,33 +10,33 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "human annotation"
     ],
     "Description": "A dataset of narrative passages designed for a word prediction task. The key characteristic is that human subjects can easily guess the final word of a passage when given the full context, but find it nearly impossible when only shown the last sentence.",
     "Volume": 10022.0,
     "Unit": "documents",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "University of Trento",
         "University of Amsterdam"
     ],
-    "Derived From": [
+    "Derived_From": [
         "Book Corpus"
     ],
-    "Paper Title": "The LAMBADA dataset: Word prediction requiring a broad discourse context",
-    "Paper Link": "https://arxiv.org/pdf/1606.06031",
+    "Paper_Title": "The LAMBADA dataset: Word prediction requiring a broad discourse context",
+    "Paper_Link": "https://arxiv.org/pdf/1606.06031",
     "Tokenized": false,
     "Host": "HuggingFace",
     "Access": "Free",
     "Cost": "",
-    "Test Split": true,
+    "Test_Split": true,
     "Tasks": [
         "word prediction"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Denis Paperno",
         "Germ\u00e1n Kruszewski",
@@ -56,30 +56,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 0,
-        "HF Link": 0,
+        "HF_Link": 0,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 0,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

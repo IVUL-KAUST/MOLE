@@ -1,7 +1,7 @@
 {
     "Name": "RefinedWeb",
     "Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
-    "HF Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
+    "HF_Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
     "License": "ODC-By",
     "Year": 2023,
     "Language": "en",
@@ -9,32 +9,32 @@
         "web pages"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "crawling"
     ],
     "Description": "A large-scale, five trillion token English pretraining dataset derived from CommonCrawl. It was created using extensive filtering and deduplication to demonstrate that high-quality web data alone can produce models that outperform those trained on curated corpora. A 600 billion token extract is publicly available.",
     "Volume": 600000000000.0,
     "Unit": "tokens",
-    "Ethical Risks": "Medium",
+    "Ethical_Risks": "Medium",
     "Provider": [
         "Technology Innovation Institute"
     ],
-    "Derived From": [
+    "Derived_From": [
         "CommonCrawl"
     ],
-    "Paper Title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
-    "Paper Link": "https://arxiv.org/pdf/2306.01116",
+    "Paper_Title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+    "Paper_Link": "https://arxiv.org/pdf/2306.01116",
     "Tokenized": false,
     "Host": "HuggingFace",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "language modeling"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Guilherme Penedo",
         "Quentin Malartic",
@@ -55,30 +55,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
-        "HF Link": 1,
+        "HF_Link": 1,
         "License": 1,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

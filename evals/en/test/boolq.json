@@ -1,7 +1,7 @@
 {
     "Name": "BoolQ",
     "Link": "https://github.com/google-research-datasets/boolean-questions",
-    "HF Link": "https://huggingface.co/datasets/google/boolq",
+    "HF_Link": "https://huggingface.co/datasets/google/boolq",
     "License": "CC BY-SA 3.0",
     "Year": 2019,
     "Language": "en",
@@ -10,32 +10,32 @@
         "web pages"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "human annotation"
     ],
     "Description": "A reading comprehension dataset of 16,000 naturally occurring yes/no questions. Questions are gathered from unprompted Google search queries and paired with a Wikipedia paragraph containing the answer. The dataset is designed to be challenging, requiring complex, non-factoid inference.",
     "Volume": 16000.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "Google AI"
     ],
-    "Derived From": [
+    "Derived_From": [
         "Natural Questions"
     ],
-    "Paper Title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
-    "Paper Link": "https://arxiv.org/pdf/1905.10044",
+    "Paper_Title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+    "Paper_Link": "https://arxiv.org/pdf/1905.10044",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": true,
+    "Test_Split": true,
     "Tasks": [
         "question answering"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Christopher Clark",
         "Kenton Lee",
@@ -52,30 +52,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
-        "HF Link": 0,
+        "HF_Link": 0,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

@@ -1,7 +1,7 @@
 {
     "Name": "LASER",
     "Subsets": [],
-    "HF Link": "",
+    "HF_Link": "",
     "Link": "https://github.com/facebookresearch/LASER",
     "License": "BSD",
     "Year": 2019,
@@ -11,17 +11,17 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "manual curation"
     ],
     "Description": "Aligned sentences in 112 languages extracted from Tatoeba",
     "Volume": 8200000.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "Facebook"
     ],
-    "Derived From": [
+    "Derived_From": [
         "Europarl",
         "United Nations",
         "OpenSubtitles2018",
@@ -29,21 +29,21 @@
         "Tanzil",
         "Tatoeba"
     ],
-    "Paper Title": "Massively Multilingual Sentence Embeddings for Zero-Shot\r\nCross-Lingual Transfer and Beyond",
-    "Paper Link": "https://arxiv.org/pdf/1812.10464",
+    "Paper_Title": "Massively Multilingual Sentence Embeddings for Zero-Shot\r\nCross-Lingual Transfer and Beyond",
+    "Paper_Link": "https://arxiv.org/pdf/1812.10464",
     "Script": "Arab",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": true,
+    "Test_Split": true,
     "Tasks": [
         "machine translation",
         "embedding evaluation"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Mikel Artetxe",
         "Holger Schwenk"
@@ -56,7 +56,7 @@
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
-        "HF Link": 0,
+        "HF_Link": 0,
         "Link": 1,
         "License": 0,
         "Year": 1,
@@ -64,25 +64,25 @@
         "Dialect": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Script": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

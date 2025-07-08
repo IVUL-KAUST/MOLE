@@ -27,7 +27,7 @@
         }
     ],
     "Link": "https://github.com/umanlp/Multi2WOZ",
-    "HF Link": "",
+    "HF_Link": "",
     "License": "MIT License",
     "Year": 2022,
     "Language": [
@@ -40,33 +40,33 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "machine annotation",
         "human annotation"
     ],
     "Description": "A multilingual, multi-domain task-oriented dialog (TOD) dataset in Arabic, Chinese, German, and Russian. It was created by translating and manually post-editing the 2,000 development and test dialogs from the English MultiWOZ 2.1 dataset, enabling reliable cross-lingual transfer evaluation.",
     "Volume": 118000.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "University of Mannheim"
     ],
-    "Derived From": [
+    "Derived_From": [
         "MultiWOZ 2.1"
     ],
-    "Paper Title": "Multi2WOZ: A Robust Multilingual Dataset and Conversational Pretraining for Task-Oriented Dialog",
-    "Paper Link": "https://arxiv.org/pdf/2205.10400",
+    "Paper_Title": "Multi2WOZ: A Robust Multilingual Dataset and Conversational Pretraining for Task-Oriented Dialog",
+    "Paper_Link": "https://arxiv.org/pdf/2205.10400",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "instruction tuning"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Chia-Chien Hung",
         "Anne Lauscher",
@@ -85,30 +85,30 @@
         "Name": 1,
         "Subsets": 1,
         "Link": 1,
-        "HF Link": 0,
+        "HF_Link": 0,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

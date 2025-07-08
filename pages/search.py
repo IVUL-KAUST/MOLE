@@ -847,17 +847,17 @@ def run(
                     results = {}
                     results["metadata"] = metadata
                     if use_split is not None:
-                        validation_results = validate(
+                        validation_results = evaluate(
                             metadata,
                             use_split=use_split,
                             link=article_url,
                             title=title,
-                            schema=schema,
+                            schema=schema
                         )
                         results["validation"] = validation_results
                         results["length_forcing"] = evaluate_lengths(metadata, schema = schema)
                         show_info(
-                            f"📊 Validation Score: {validation_results['AVERAGE']*100:.2f} %",
+                            f"📊 precision: {validation_results['precision']*100:.2f} %, recall: {validation_results['recall']*100:.2f} %, f1: {validation_results['f1']*100:.2f} %",
                             st_context=st_context,
                         )
                         show_info(

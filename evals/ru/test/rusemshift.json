@@ -1,7 +1,7 @@
 {
     "Name": "RuSemShift",
     "Link": "https://github.com/juliarodina/RuSemShift",
-    "HF Link": "",
+    "HF_Link": "",
     "License": "CC BY-SA 4.0",
     "Year": 2020,
     "Language": "ru",
@@ -9,34 +9,34 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "manual curation",
         "human annotation"
     ],
     "Description": "A large-scale manually annotated test set for the task of semantic change modeling in Russian for two long-term time period pairs: from the pre-Soviet through the Soviet times and from the Soviet through the post-Soviet times.",
     "Volume": 7846.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "National Research University Higher School of Economics",
         "University of Oslo"
     ],
-    "Derived From": [
+    "Derived_From": [
         "Russian National Corpus"
     ],
-    "Paper Title": "RuSemShift: a dataset of historical lexical semantic change in Russian",
-    "Paper Link": "https://arxiv.org/pdf/2010.06436",
+    "Paper_Title": "RuSemShift: a dataset of historical lexical semantic change in Russian",
+    "Paper_Link": "https://arxiv.org/pdf/2010.06436",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "word similarity"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Julia Rodina",
         "Andrey Kutuzov"
@@ -49,30 +49,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
-        "HF Link": 0,
+        "HF_Link": 0,
         "License": 1,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

@@ -1,7 +1,7 @@
 {
     "Name": "FQuAD1.1",
     "Link": "https://fquad.illuin.tech",
-    "HF Link": "https://huggingface.co/datasets/illuin/fquad",
+    "HF_Link": "https://huggingface.co/datasets/illuin/fquad",
     "License": "CC BY-NC-SA 3.0",
     "Year": 2020,
     "Language": "fr",
@@ -9,33 +9,33 @@
         "wikipedia"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "human annotation",
         "manual curation"
     ],
     "Description": "FQuAD is a French Question Answering dataset composed of 10,000 question-answer pairs extracted from news articles. The dataset is designed to be used for training and evaluating question answering models in French.",
     "Volume": 62003.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "Illuin Technology"
     ],
-    "Derived From": [
+    "Derived_From": [
         "FQuAD1.0"
     ],
-    "Paper Title": "FQuAD: French Question Answering Dataset",
-    "Paper Link": "https://arxiv.org/pdf/2002.06071",
+    "Paper_Title": "FQuAD: French Question Answering Dataset",
+    "Paper_Link": "https://arxiv.org/pdf/2002.06071",
     "Tokenized": false,
     "Host": "other",
     "Access": "Free",
     "Cost": "",
-    "Test Split": true,
+    "Test_Split": true,
     "Tasks": [
         "question answering"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Martin d'Hoffschmidt",
         "Wacim Belblidia",
@@ -51,30 +51,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 0,
-        "HF Link": 0,
+        "HF_Link": 0,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 0,
         "Access": 1,
         "Cost": 0,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

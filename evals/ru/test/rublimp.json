@@ -1,7 +1,7 @@
 {
     "Name": "RuBLiMP",
     "Link": "https://github.com/RussianNLP/RuBLiMP",
-    "HF Link": "https://hf.co/datasets/RussianNLP/rublimp",
+    "HF_Link": "https://hf.co/datasets/RussianNLP/rublimp",
     "License": "Apache-2.0",
     "Year": 2024,
     "Language": "ru",
@@ -11,7 +11,7 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "crawling",
         "machine annotation",
         "human annotation"
@@ -19,7 +19,7 @@
     "Description": "The Russian Benchmark of Linguistic Minimal Pairs (RuBLiMP) includes 45,000 pairs of sentences that differ in grammaticality and isolate a morphological, syntactic, or semantic phenomenon. It is created by applying linguistic perturbations to automatically annotated sentences from open text corpora and decontaminating test data.",
     "Volume": 45000.0,
     "Unit": "sentences",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "University of Edinburgh",
         "HSE University",
@@ -29,23 +29,23 @@
         "Toloka AI",
         "University of Oslo"
     ],
-    "Derived From": [
+    "Derived_From": [
         "Librusec"
     ],
-    "Paper Title": "RuBLiMP: Russian Benchmark of Linguistic Minimal Pairs",
-    "Paper Link": "https://arxiv.org/pdf/2406.19232",
+    "Paper_Title": "RuBLiMP: Russian Benchmark of Linguistic Minimal Pairs",
+    "Paper_Link": "https://arxiv.org/pdf/2406.19232",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "linguistic acceptability",
         "morphological analysis"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Ekaterina Taktasheva",
         "Maxim Bazhukov",
@@ -67,30 +67,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 0,
-        "HF Link": 1,
+        "HF_Link": 1,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

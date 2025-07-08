@@ -1,7 +1,7 @@
 {
     "Name": "FRASIMED",
     "Link": "https://doi.org/10.5281/zenodo.8355629",
-    "HF Link": "",
+    "HF_Link": "",
     "License": "CC BY 4.0",
     "Year": 2024,
     "Language": "fr",
@@ -9,34 +9,34 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "machine annotation"
     ],
     "Description": "A French annotated corpus comprising 2,051 synthetic clinical cases for Named Entity Recognition (NER) and Entity Linking. It was created by projecting annotations from two Spanish corpora, CANTEMIST and DISTEMIST, using a crosslingual BERT-based method, followed by manual correction. The annotations are linked to medical terminologies like ICD-O and SNOMED-CT.",
     "Volume": 24037.0,
     "Unit": "tokens",
-    "Ethical Risks": "Low",
+    "Ethical_Risks": "Low",
     "Provider": [
         "University Hospitals of Geneva",
         "University of Geneva"
     ],
-    "Derived From": [
+    "Derived_From": [
         "CANTEMIST",
         "DISTEMIST"
     ],
-    "Paper Title": "FRASIMED: a Clinical French Annotated Resource Produced through Crosslingual BERT-Based Annotation Projection",
-    "Paper Link": "https://arxiv.org/pdf/2309.10770",
+    "Paper_Title": "FRASIMED: a Clinical French Annotated Resource Produced through Crosslingual BERT-Based Annotation Projection",
+    "Paper_Link": "https://arxiv.org/pdf/2309.10770",
     "Tokenized": false,
     "Host": "zenodo",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "named entity recognition"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Jamil Zaghir",
         "Mina Bjelogrlic",
@@ -53,30 +53,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
-        "HF Link": 0,
+        "HF_Link": 0,
         "License": 1,
         "Year": 0,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 0,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 0,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 0,
-        "Venue Type": 0,
-        "Venue Name": 0,
+        "Venue_Title": 0,
+        "Venue_Type": 0,
+        "Venue_Name": 0,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

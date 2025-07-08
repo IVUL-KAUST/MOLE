@@ -1,7 +1,7 @@
 {
     "Name": "HISTOIRESMORALES",
     "Link": "https://github.com/upunaprosk/histoires-morales",
-    "HF Link": "https://hf.co/datasets/LabHC/histoires_morales",
+    "HF_Link": "https://hf.co/datasets/LabHC/histoires_morales",
     "License": "MIT License",
     "Year": 2025,
     "Language": "fr",
@@ -9,7 +9,7 @@
         "public datasets"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "machine annotation",
         "LLM generated",
         "human annotation"
@@ -17,28 +17,28 @@
     "Description": "A French dataset for assessing moral alignment in LLMs, derived from the English MORALSTORIES dataset. It consists of 12,000 short narratives describing social situations, moral norms, intentions, and corresponding moral/immoral actions and consequences, adapted to the French cultural context.",
     "Volume": 12000.0,
     "Unit": "sentences",
-    "Ethical Risks": "High",
+    "Ethical_Risks": "High",
     "Provider": [
         "Laboratoire Hubert Curien"
     ],
-    "Derived From": [
+    "Derived_From": [
         "MORALSTORIES"
     ],
-    "Paper Title": "HISTOIRESMORALES: A French Dataset for Assessing Moral Alignment",
-    "Paper Link": "https://arxiv.org/pdf/2501.17117",
+    "Paper_Title": "HISTOIRESMORALES: A French Dataset for Assessing Moral Alignment",
+    "Paper_Link": "https://arxiv.org/pdf/2501.17117",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": true,
+    "Test_Split": true,
     "Tasks": [
         "topic classification",
         "natural language inference",
         "linguistic acceptability"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Thibaud Leteno",
         "Irina Proskurina",
@@ -60,30 +60,30 @@
     "annotations_from_paper": {
         "Name": 1,
         "Link": 1,
-        "HF Link": 1,
+        "HF_Link": 1,
         "License": 1,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

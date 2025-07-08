@@ -1,7 +1,7 @@
 {
     "Name": "101 Billion Arabic Words Dataset",
     "Subsets": [],
-    "HF Link": "https://hf.co/datasets/ClusterlabAi/101_billion_arabic_words_dataset",
+    "HF_Link": "https://hf.co/datasets/ClusterlabAi/101_billion_arabic_words_dataset",
     "Link": "https://hf.co/datasets/ClusterlabAi/101_billion_arabic_words_dataset",
     "License": "Apache-2.0",
     "Year": 2024,
@@ -11,35 +11,35 @@
         "web pages"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "crawling"
     ],
     "Description": "The 101 Billion Arabic Words Dataset is curated by the Clusterlab team and consists of 101 billion words extracted and cleaned from web content, specifically targeting Arabic text. This dataset is intended for use in natural language processing applications, particularly in training and fine-tuning Large Language Models (LLMs)",
     "Volume": 101000000000,
     "Unit": "tokens",
-    "Ethical Risks": "High",
+    "Ethical_Risks": "High",
     "Provider": [
         "Clusterlab"
     ],
-    "Derived From": [
+    "Derived_From": [
         "Common Crawl"
     ],
-    "Paper Title": "101 Billion Arabic Words Dataset",
-    "Paper Link": "https://arxiv.org/pdf/2405.01590v1",
+    "Paper_Title": "101 Billion Arabic Words Dataset",
+    "Paper_Link": "https://arxiv.org/pdf/2405.01590v1",
     "Script": "Arab",
     "Tokenized": false,
     "Host": "HuggingFace",
     "Access": "Free",
     "Cost": "",
-    "Test Split": false,
+    "Test_Split": false,
     "Tasks": [
         "text generation",
         "language modeling"
     ],
-    "Venue Title": "arXiv",
+    "Venue_Title": "arXiv",
     
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Manel Aloui",
         "Hasna Chouikhi",
@@ -55,7 +55,7 @@
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
-        "HF Link": 1,
+        "HF_Link": 1,
         "Link": 1,
         "License": 1,
         "Year": 1,
@@ -63,25 +63,25 @@
         "Dialect": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Script": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 0,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1

@@ -56,7 +56,7 @@
             "Language": "French"
         }
     ],
-    "HF Link": "",
+    "HF_Link": "",
     "Link": "https://github.com/hate-alert/DE-LIMIT",
     "License": "MIT License",
     "Year": 2020,
@@ -76,33 +76,33 @@
         "social media"
     ],
     "Form": "text",
-    "Collection Style": [
+    "Collection_Style": [
         "manual curation"
     ],
     "Description": "Combined MLMA and L-HSAB datasets",
     "Volume": 159753.0,
     "Unit": "sentences",
-    "Ethical Risks": "High",
+    "Ethical_Risks": "High",
     "Provider": [
         "Indian Institute of Technology Kharagpur"
     ],
-    "Derived From": [
+    "Derived_From": [
         "L-HSAB",
         "MLMA"
     ],
-    "Paper Title": "Deep Learning Models for Multilingual Hate\r\nSpeech Detection",
-    "Paper Link": "https://arxiv.org/pdf/2004.06465",
+    "Paper_Title": "Deep Learning Models for Multilingual Hate\r\nSpeech Detection",
+    "Paper_Link": "https://arxiv.org/pdf/2004.06465",
     "Tokenized": false,
     "Host": "GitHub",
     "Access": "Free",
     "Cost": "",
-    "Test Split": true,
+    "Test_Split": true,
     "Tasks": [
         "offensive language detection"
     ],
-    "Venue Title": "arXiv",
-    "Venue Type": "preprint",
-    "Venue Name": "",
+    "Venue_Title": "arXiv",
+    "Venue_Type": "preprint",
+    "Venue_Name": "",
     "Authors": [
         "Sai Saket Aluru",
         "Binny Mathew",
@@ -116,31 +116,31 @@
     "annotations_from_paper": {
         "Name": 1,
         "Subsets": 1,
-        "HF Link": 0,
+        "HF_Link": 0,
         "Link": 1,
         "License": 0,
         "Year": 1,
         "Language": 1,
         "Domain": 1,
         "Form": 1,
-        "Collection Style": 1,
+        "Collection_Style": 1,
         "Description": 1,
         "Volume": 1,
         "Unit": 1,
-        "Ethical Risks": 1,
+        "Ethical_Risks": 1,
         "Provider": 1,
-        "Derived From": 1,
-        "Paper Title": 1,
-        "Paper Link": 1,
+        "Derived_From": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
         "Tokenized": 1,
         "Host": 1,
         "Access": 1,
         "Cost": 1,
-        "Test Split": 1,
+        "Test_Split": 1,
         "Tasks": 1,
-        "Venue Title": 1,
-        "Venue Type": 1,
-        "Venue Name": 1,
+        "Venue_Title": 1,
+        "Venue_Type": 1,
+        "Venue_Name": 1,
         "Authors": 1,
         "Affiliations": 1,
         "Abstract": 1
