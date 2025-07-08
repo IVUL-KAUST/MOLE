@@ -2,5 +2,6 @@
     "Name": "ahmad",
     "Age": 20,
     "Gender": "male",
-    "Hobbies": ["reading", "swimming"]
+    "Hobbies": ["reading", "swimming"],
+    "Cars": []
 }
