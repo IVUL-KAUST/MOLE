@@ -38,45 +38,10 @@ ethical_risks = ['Low', 'Medium', 'High'] # use lower case instead
 access = ['Free', 'Upon-Request', 'With-Fee']
 venue_types = ['preprint', 'workshop', 'conference', 'journal']
 
-class Subset(BaseModel):
-    Name: Annotated[str, Constraints(answer_min=1, answer_max=5)]
-    Volume: float
-    Unit: Annotated[str, Constraints(answer_min=1, answer_max=1, options=units)]
+def Field(type: Union[str, int, float, bool, list[str]], answer_min: int, answer_max: int = ANSWER_MAX, options: list[str] = None, pattern: str = None):
+    return Annotated[type, Constraints(answer_min=answer_min, answer_max=answer_max, options=options, pattern=pattern)]
 
-class ArSubset(Subset):
-    Dialect: Annotated[str, Constraints(answer_min=1, answer_max=1, options=dialects)]
-
-class MultiSubset(Subset):
-    Language: Annotated[str, Constraints(answer_min=2, answer_max=30, options=languages)]
-
-class BaseSchema(Subset):
-    model_config = ConfigDict(extra='forbid', strict=False)
-    License: Annotated[str, Constraints(answer_min=1, answer_max=15, options=licenses)]
-    Link: Annotated[str, Constraints(pattern=r'^https?://.*$', answer_min=1, answer_max=1)]
-    HF_Link: Annotated[str, Constraints(pattern=r'^https?://.*$', answer_min=0, answer_max=1)]
-    Year: year
-    Domain: Annotated[list[str], Constraints(answer_min=1, answer_max=len(domains), options=domains)]
-    Form: Annotated[str, Constraints(answer_min=1, answer_max=1, options=form)]
-    Collection_Style: Annotated[list[str], Constraints(answer_min=1, answer_max=len(collection_styles), options=collection_styles)]
-    Description: Annotated[str, Constraints(answer_min=0, answer_max=50)]
-    Ethical_Risks: Annotated[str, Constraints(answer_min=1, answer_max=1, options=ethical_risks)]
-    Provider: Annotated[list[str], Constraints(answer_min=0)]
-    Derived_From: Annotated[list[str], Constraints(answer_min=0)]
-    Paper_Title: Annotated[str, Constraints(answer_min=1)]
-    Paper_Link: Annotated[str, Constraints(pattern=r'^https?://.*$', answer_min=1, answer_max=1)]
-    Tokenized: bool
-    Host: Annotated[str, Constraints(answer_min=1, answer_max=1, options=hosts)]
-    Access: Annotated[str, Constraints(answer_min=1, answer_max=1, options=access)]
-    Cost: Annotated[str, Constraints(answer_min=0, answer_max=1)]
-    Test_Split: bool
-    Tasks: Annotated[list[str], Constraints(answer_min=1, answer_max=len(tasks), options = tasks)]
-    Venue_Title: Annotated[str, Constraints(answer_min=1, answer_max=1)]
-    Venue_Type: Annotated[str, Constraints(answer_min=1, answer_max=1, options=venue_types)]
-    Venue_Name: Annotated[str, Constraints(answer_min=0)]
-    Authors: Annotated[list[str], Constraints(answer_min=1)]
-    Affiliations: Annotated[list[str], Constraints(answer_min=1)]
-    Abstract: Annotated[str, Constraints(answer_min = 1)]
-
+class MainSchema(BaseModel):
     @model_validator(mode='before') # validate based on the type of the field
     def not_null(cls, data):
         # data is the metadata from the json file
@@ -104,44 +69,107 @@ class BaseSchema(Subset):
                 raise ValueError(f"Invalid type: {t}")
         return data
 
+class Subset(MainSchema):
+    Name: Field(str, 1, 5) # type: ignore
+    Volume: Field(float, 0, 1) # type: ignore
+    Unit: Field(str, 1, 1, units) # type: ignore
+
+class ArSubset(Subset):
+    Dialect: Field(str, 1, 1, dialects) # type: ignore
+
+class MultiSubset(Subset):
+    Language: Field(str, 2, 30, languages) # type: ignore
+
+class BaseSchema(Subset):
+    model_config = ConfigDict(extra='forbid', strict=False)
+    License: Field(str, 1, 15, licenses) # type: ignore
+    Link: Field(str, 0, 1, pattern=r"^https?://.*$") # type: ignore
+    HF_Link: Field(str, 0, 1, pattern=r"^https?://.*$") # type: ignore
+    Year: year
+    Domain: Field(list[str], 1, len(domains), domains) # type: ignore
+    Form: Field(str, 1, 1, form) # type: ignore
+    Collection_Style: Field(list[str], 1, len(collection_styles), collection_styles) # type: ignore
+    Description: Field(str, 0, 50) # type: ignore
+    Ethical_Risks: Field(str, 1, 1, ethical_risks) # type: ignore
+    Provider: Field(list[str], 0) # type: ignore
+    Derived_From: Field(list[str], 0) # type: ignore
+    Paper_Title: Field(str, 1) # type: ignore
+    Paper_Link: Field(str, 1, 1, pattern=r"^https?://.*$") # type: ignore
+    Tokenized: bool
+    Host: Field(str, 1, 1, hosts) # type: ignore
+    Access: Field(str, 1, 1, access) # type: ignore
+    Cost: Field(str, 0, 1) # type: ignore
+    Test_Split: bool
+    Tasks: Field(list[str], 1, len(tasks), tasks) # type: ignore
+    Venue_Title: Field(str, 1) # type: ignore
+    Venue_Type: Field(str, 1, 1, venue_types) # type: ignore
+    Venue_Name: Field(str, 0) # type: ignore
+    Authors: Field(list[str], 1) # type: ignore
+    Affiliations: Field(list[str], 0) # type: ignore
+    Abstract: Field(str, 1) # type: ignore
+
     @model_validator(mode='after') # not sure what to do here
     def validate_after(self):
         return self
 
 class ArSchema(BaseSchema):
     """ar"""
-    Subsets: Annotated[list[ArSubset], Constraints(answer_min=0, answer_max=29)]
-    Dialect: Annotated[str, Constraints(answer_min=1, answer_max=1, options=dialects)]
-    Language: Annotated[str, Constraints(answer_min=1, answer_max=1, options=['ar', 'multilingual'])]
-    Script: Annotated[str, Constraints(answer_min=1, answer_max=1, options=['Arab', 'Latin', 'Arab-Latin'])]
+    Subsets: Field(list[ArSubset], 0, 29) # type: ignore
+    Dialect: Field(str, 1, 1, dialects) # type: ignore
+    Language: Field(str, 1, 1, ['ar', 'multilingual']) # type: ignore
+    Script: Field(str, 1, 1, ['Arab', 'Latin', 'Arab-Latin']) # type: ignore
 
 class EnSchema(BaseSchema):
-    Language: Annotated[str, Constraints(answer_min=1, answer_max=1, options=['en', 'multilingual'])]
+    Language: Field(str, 1, 1, ['en', 'multilingual']) # type: ignore
 
 class JpSchema(BaseSchema):
-    Language: Annotated[str, Constraints(answer_min=1, answer_max=1, options=['jp', 'multilingual'])]
-    Script: Annotated[str, Constraints(answer_min=1, answer_max=1, options=['Hiragana', 'Katakana', 'Kanji', 'mixed'])]
+    Language: Field(str, 1, 1, ['jp', 'multilingual']) # type: ignore
+    Script: Field(str, 1, 1, ['Hiragana', 'Katakana', 'Kanji', 'mixed']) # type: ignore
 
 class RuSchema(BaseSchema):
-    Language: Annotated[str, Constraints(answer_min=1, answer_max=1, options=['ru', 'multilingual'])]
+    Language: Field(str, 1, 1, ['ru', 'multilingual']) # type: ignore
 
 class FrSchema(BaseSchema):
-    Language: Annotated[str, Constraints(answer_min=1, answer_max=1, options=['fr', 'multilingual'])]
+    Language: Field(str, 1, 1, ['fr', 'multilingual']) # type: ignore
 
 class MultiSchema(BaseSchema):
-    Subsets: Annotated[list[MultiSubset], Constraints(answer_min=0, answer_max=30)]
-    Language: Annotated[list[str], Constraints(answer_min=2, answer_max=30, options=languages)]
+    Subsets: Field(list[MultiSubset], 0, 30) # type: ignore 
+    Language: Field(list[str], 2, len(languages), languages) # type: ignore
 
-def match_lists(list1, list2):
-    if type(list1) in [str, int, float, year, bool]:
-        if list1 == list2:
+class TestSubset(MainSchema):
+    Model: Field(str, 1, 1, ['kia', 'toyota', 'honda']) # type: ignore
+    Color: Field(str, 1, 1, ['red', 'blue', 'green']) # type: ignore
+
+class TestSchema(MainSchema):
+    Name: Field(str, 1, 3) # type: ignore   
+    Age: int
+    Gender: Field(str, 1, 1, ['male', 'female']) # type: ignore
+    Hobbies: Field(list[str], 1, 4, ['reading', 'swimming', 'coding', 'other']) # type: ignore
+    Cars: Field(list[TestSubset], 0, 3) # type: ignore
+
+def match_attributes(attr1, attr2):
+    if type(attr1) in [str, int, float, year, bool]:
+        return attr1 == attr2
+    elif type(attr1) == dict:
+        for key in attr1.keys():
+            if not match_attributes(attr1[key], attr2[key]):
+                return False
+        return True
+    elif type(attr1) == list:
+        if len(attr1) != len(attr2):
+            return False
+        elif len(attr1) == 0:
             return True
         else:
-            return False
-    for item in list1:
-        if item not in list2:
-            return False
-    return True
+            if type(attr1[0]) == dict:
+                for item1, item2 in zip(attr1, attr2):
+                    if not match_attributes(item1, item2):
+                        return False
+                return True
+            else:
+                return set(attr1) == set(attr2)
+    else:
+        raise ValueError(f"Invalid type: {type(attr1)}")
 
 def evaluate_metadata(gold_metadata, predicted_metadata, schema_name = 'ar', return_metrics_only = False):
     schema = Schema(schema_name)
@@ -149,11 +177,11 @@ def evaluate_metadata(gold_metadata, predicted_metadata, schema_name = 'ar', ret
     for key in gold_metadata.keys():
         if key in ['annotations_from_paper']:
             continue
-        
-        if match_lists(gold_metadata[key], predicted_metadata[key]):
-            results[key] = 1
-        else:
-            results[key] = 0
+        try:
+            results[key] = int(match_attributes(gold_metadata[key], predicted_metadata[key]))
+        except:
+            print(key, gold_metadata[key], predicted_metadata[key])
+            raise ValueError(f"Invalid type: {type(gold_metadata[key])}")
     annotations_from_paper = gold_metadata['annotations_from_paper']
     annotated_attributes = [key for key in gold_metadata.keys() if key in annotations_from_paper and annotations_from_paper[key]]
     precision = sum(results.values()) / len(results)
@@ -212,7 +240,15 @@ class Schema:
             return schema[key]['options']
         else:
             return None
-        
+    
+    def get_answer_min(self, key):
+        schema = self.dict()
+        return schema[key]['answer_min']
+    
+    def get_answer_max(self, key):
+        schema = self.dict()
+        return schema[key]['answer_max']
+    
     def get_system_prompt(self):
         return f"""You are a professional research paper reader. You will be provided 'Input schema' and 'Paper Text' and you must respond with an 'Output JSON'.
         The 'Output JSON' is a JSON with key:answer where the answer represents an answer to a 'question' provided in the 'Input Schema'. 
@@ -243,9 +279,20 @@ class Schema:
     def evaluate_length(self, metadata):
         accuracy = 0
         for key, value in self.schema.model_fields.items():
-            if value.annotation.__name__ == 'list':
-                if len(metadata[key]) >= value.metadata[0].answer_min and len(metadata[key]) <= value.metadata[0].answer_max:
+            type  = self.get_answer_type(key)
+            if type == 'list':
+                if len(metadata[key]) >= self.get_answer_min(key) and len(metadata[key]) <= self.get_answer_max(key):
                     accuracy += 1
+                # else:
+                #     print(key,metadata[key], len(metadata[key]), self.get_answer_min(key), self.get_answer_max(key))
+                #     raise()
+            elif type == 'str':
+                length_metric = len(metadata[key].split(' ')) 
+                if self.get_options(key) or length_metric >= self.get_answer_min(key) and length_metric <= self.get_answer_max(key):
+                    accuracy += 1
+                # else:
+                #     print(key,metadata[key], length_metric, self.get_answer_min(key), self.get_answer_max(key))
+                #     raise()
             else:
                 accuracy += 1
         return accuracy / len(self.columns)
@@ -286,6 +333,8 @@ def get_schema(schema_name):
         return FrSchema
     elif schema_name == 'multi':
         return MultiSchema
+    elif schema_name == 'test':
+        return TestSchema
     else:
         raise ValueError(f"Invalid schema name: {schema_name}")
 

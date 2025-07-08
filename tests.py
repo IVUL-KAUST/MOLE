@@ -1,134 +1,47 @@
 import json
-from utils import validate, fix_options, cast, fill_missing, evaluate_metadata, postprocess, fetch_repository_metadata, evaluate_lengths
 from schema import Schema
-from constants import *
-from pages.search import get_metadatav2
+from schema import validate_metadata, evaluate_metadata
 
 
-# no mistakes
-with open('testfiles/test1.json', 'r') as f:
-    metadata = json.load(f)
+gold_metadata = {
+    "Name": "ahmad",
+    "Age": 20,
+    "Gender": "male",
+    "Hobbies": ["reading"],
+    "Cars":[],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Age": 1,
+        "Gender": 1,
+        "Hobbies": 1,
+        "Cars": 1
+    }
+}
 
-results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/2402.03177')
+validated_metadata = validate_metadata(path = 'testfiles/test1.json', schema_name = 'test')
+evaluation_results = evaluate_metadata(gold_metadata, validated_metadata, schema_name = 'test')
 
-for m in results:
-    assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
+for m in evaluation_results:
+    assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
 print('✅ passed test1 [validation 1]')
 
-# one mistake in the volume column
-with open('testfiles/test2.json', 'r') as f:
-    metadata = json.load(f)
 
-results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/2402.03177')
-evaluation_subsets = schemata['ar']['evaluation_subsets']
-NUM_VALIDATION_COLUMNS = len(schemata['ar']['validation_columns'])
+validated_metadata = validate_metadata(path = 'testfiles/test2.json', schema_name = 'test')
+evaluation_results = evaluate_metadata(gold_metadata, validated_metadata, schema_name = 'test', return_metrics_only=True)
 
-for m in results:
-    if m == 'CONTENT':
-        assert results[m] == 1- (1/len(evaluation_subsets['CONTENT'])), f'❌ {m} value should be {1- (1/len(evaluation_subsets["CONTENT"]))} but got {results[m]}'
-    elif m == 'AVERAGE':
-        assert results[m] == 1- (1/NUM_VALIDATION_COLUMNS), f'❌ {m} value should be {1- (1/NUM_VALIDATION_COLUMNS)} but got {results[m]}'
+for m in evaluation_results:
+    if m in ['precision', 'recall', 'f1']:
+        assert abs(evaluation_results[m] - 0.8) < 0.01, f'❌ {m} value should be 0.8 but got {evaluation_results[m]}'
     else:
-        assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
+        assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
+
 print('✅ passed test2 [validation 2]')
 
-# overlapping tasks
-with open('testfiles/test3.json', 'r') as f:
-    metadata = json.load(f)
-
-results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/2402.03177')
-
-for m in results:
-    assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
+validated_metadata = validate_metadata(path = 'testfiles/test3.json', schema_name = 'test')
+assert validated_metadata['Age'] == 0, '❌ Age should be 0 but got {validated_metadata["Age"]}'
 print('✅ passed test3 [validation 3]')
 
-# fix options
-with open('testfiles/test4.json', 'r') as f:
-    metadata = json.load(f)
-new_metadata = fix_options(metadata)
-for c in metadata:
-    if c == 'Dialect':
-        assert new_metadata['Dialect'] == 'Modern Standard Arabic', '❌ Modern Standard Arabic != ' + new_metadata['Dialect']
-    elif c == 'Collection Style':
-        assert new_metadata['Collection Style'] == ['crawling', 'LLM generated', 'manual curation'], f"❌ ['crawling', 'LLM generated', 'manual curation'] != {new_metadata['Collection Style']}"
-    else:
-        assert new_metadata[c] == metadata[c], f'❌ {c} should be {metadata[c]} but got {new_metadata[c]}'
-print('✅ passed test4 [fix options]')
-
-# cast
-with open('testfiles/test5.json', 'r') as f:
-    metadata = json.load(f)
-
-new_metadata = cast(metadata)
-
-for c in metadata:
-    if c == 'Year':
-        assert new_metadata['Year'] == 2021, "❌ 2021 != " + new_metadata['Year']
-    else:
-        assert new_metadata[c] == metadata[c], f'❌ {c} should be {metadata[c]} but got {new_metadata[c]}'
-
-print('✅ passed test5 [casting]')
-
-# fill missing
-with open('testfiles/test6.json', 'r') as f:
-    metadata = json.load(f)
-
-new_metadata = fill_missing(metadata)
-columns = schemata['ar']['columns']
-for c in columns:
-    assert c in new_metadata, f'❌ {c} should be in the metadata but it is not'
-
-print('✅ passed test6 [fill missing]')
-
-# with open('testfiles/example.tex', 'r') as f:
-#     paper_text = f.read()
-
-# msg, pred_metadata, cost =  get_metadatav2(paper_text, model_name = 'google/gemini-flash-1.5')
-# pred_metadata = postprocess(pred_metadata)
-
-# with open('testfiles/test7.json', 'r') as f:
-#     gold_metadata = json.load(f)
-# results = evaluate_metadata(pred_metadata, gold_metadata)
-# print(results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}')
-# print('✅ passed test7 [extract metadata]')
-
-# with open('testfiles/example2.tex', 'r') as f:
-#     paper_text = f.read()
-
-# _,pred_metadata, cost =  get_metadatav2(paper_text, model_name = 'google/gemini-flash-1.5')
-# readme = fetch_repository_metadata(pred_metadata['Link'])
-# _,pred_metadata, cost =  get_metadatav2(metadata = pred_metadata,  model_name = 'google/gemini-flash-1.5', readme = readme)
-# pred_metadata = postprocess(pred_metadata)
-
-# with open('testfiles/test8.json', 'r') as f:
-#     gold_metadata = json.load(f)
-# results = evaluate_metadata(pred_metadata, gold_metadata)
-# print(results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}')
-# print('✅ passed test8 [browsing]')
-
-pred_metadata = postprocess({})
-
-with open('testfiles/test9.json', 'r') as f:
-    gold_metadata = json.load(f)
-results = evaluate_metadata(pred_metadata, gold_metadata)
-assert results['AVERAGE'] == 1, f'❌ AVERAGE value should be 1 but got {results["AVERAGE"]}'
-print('✅ passed test9 [empty metadata]')
-
-# different tasks
-with open('testfiles/test10.json', 'r') as f:
-    metadata = json.load(f)
-
-results = validate(metadata, use_split='valid', link = 'https://arxiv.org/abs/2402.03177')
-
-for m in results:
-    assert results[m] == 1, f'❌ {m} value should be 1 but got {results[m]}'
-print('✅ passed test10 [different tasks]')
-
-with open('testfiles/test11.json', 'r') as f:
-    metadata = json.load(f)
-
-results = evaluate_lengths(metadata, schema = "ar")
-
-assert results == 0.96875, f'❌ results should be 0.96875 but got {results}'
-print('✅ passed test11 [evaluate lengths]')
-
+validated_metadata = validate_metadata(path = 'testfiles/test4.json', schema_name = 'test')
+evaluation_results = evaluate_metadata(gold_metadata, validated_metadata, schema_name = 'test', return_metrics_only=True)
+assert abs(evaluation_results['length'] - 0.8) < 0.01, f'❌ length should be 0.8 but got {evaluation_results["length"]}'
+print('✅ passed test4 [validation 4]')
