@@ -84,7 +84,7 @@ class BaseSchema(Subset):
     Venue_Title: Field(Str, 1) # type: ignore
     Venue_Type: Field(Str, 1, 1, venue_types) # type: ignore
     Venue_Name: Field(Str, 0) # type: ignore
-    Authors: Field(list[Str], 1) # type: ignore
+    Authors: Field(list[Str], 0) # type: ignore
     Affiliations: Field(list[Str], 0) # type: ignore
     Abstract: Field(Str, 1) # type: ignore
 
@@ -241,16 +241,16 @@ class Schema:
             if type == List:
                 if len(metadata[key]) >= self.get_answer_min(key) and len(metadata[key]) <= self.get_answer_max(key):
                     accuracy += 1
-                # else:
-                #     print(key,metadata[key], len(metadata[key]), self.get_answer_min(key), self.get_answer_max(key))
-                #     raise()
+                else:
+                    print(key,metadata[key], len(metadata[key]), self.get_answer_min(key), self.get_answer_max(key))
+                    raise()
             elif type == Str:
                 length_metric = len(metadata[key].split(' ')) 
                 if self.get_options(key) or length_metric >= self.get_answer_min(key) and length_metric <= self.get_answer_max(key):
                     accuracy += 1
-                # else:
-                #     print(key,metadata[key], length_metric, self.get_answer_min(key), self.get_answer_max(key))
-                #     raise()
+                else:
+                    print(key,metadata[key], length_metric, self.get_answer_min(key), self.get_answer_max(key))
+                    raise()
             else:
                 accuracy += 1
         return accuracy / len(self.columns)
