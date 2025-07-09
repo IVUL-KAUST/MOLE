@@ -352,7 +352,9 @@ def get_metadatav2(
             print(error)
             logger.warning(f"Failed to get predictions for {model_name}, retrying ...")
             time.sleep(3)
-    time.sleep(3) # sleep before next prediction       
+    time.sleep(3) # sleep before next prediction
+    if predictions == {}:
+        predictions = schema.generate_metadata(method = 'default')
     return message, predictions, cost, error
 
 def clean_latex(path):

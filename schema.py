@@ -3,12 +3,13 @@ from pydantic import BaseModel, ConfigDict, computed_field
 from pydantic_core import CoreSchema, core_schema
 from dataclasses import dataclass
 import datetime as dt
-from pydantic import GetCoreSchemaHandler, TypeAdapter, ValidationError
+from pydantic import GetCoreSchemaHandler
 import re
-from pydantic import field_validator, model_validator
+from pydantic import model_validator
 import json
 import random
-
+from type_classes import *
+random.seed(42)
 ANSWER_MAX = 1000
 
 @dataclass(frozen=True)
@@ -17,13 +18,6 @@ class Constraints:
     answer_max: int = ANSWER_MAX
     pattern: str = None
     options: list[str] = None
-
-class year(int):
-    @classmethod
-    def __get_pydantic_core_schema__(
-        cls, source_type: Any, handler: GetCoreSchemaHandler
-    ) -> CoreSchema:
-        return core_schema.no_info_after_validator_function(cls, handler(int))
 
 units = ['tokens', 'sentences', 'documents', 'images', 'videos', 'hours']
 dialects = ["Classical Arabic","Modern Standard Arabic","United Arab Emirates","Bahrain","Djibouti","Algeria","Egypt","Iraq","Jordan","Comoros","Kuwait","Lebanon","Libya","Morocco","Mauritania","Oman","Palestine","Qatar","Saudi Arabia","Sudan","Somalia","South Sudan","Syria","Tunisia","Yemen","Levant","North Africa","Gulf","mixed"]
@@ -38,8 +32,8 @@ ethical_risks = ['Low', 'Medium', 'High'] # use lower case instead
 access = ['Free', 'Upon-Request', 'With-Fee']
 venue_types = ['preprint', 'workshop', 'conference', 'journal']
 
-def Field(type: Union[str, int, float, bool, list[str]], answer_min: int, answer_max: int = ANSWER_MAX, options: list[str] = None, pattern: str = None):
-    return Annotated[type, Constraints(answer_min=answer_min, answer_max=answer_max, options=options, pattern=pattern)]
+def Field(type: Union[str, int, float, bool, list[str]], answer_min: int, answer_max: int = ANSWER_MAX, options: list[str] = None):
+    return Annotated[type, Constraints(answer_min=answer_min, answer_max=answer_max, options=options)]
 
 class MainSchema(BaseModel):
     @model_validator(mode='before') # validate based on the type of the field
@@ -47,66 +41,52 @@ class MainSchema(BaseModel):
         # data is the metadata from the json file
         for key, value in cls.model_fields.items(): # get the annotations from the data class 
             t = value.annotation.__name__ # original annotation type
-            if t == 'list':
+            
+            if get_type(t) in PRIMITIVE_TYPES:
                 if data[key] is None:
-                    data[key] = []
-            elif t == 'str':
-                if data[key] is None:
-                    data[key] = ''
-            elif t == 'int':
-                if data[key] is None:
-                    data[key] = 0
-            elif t == 'float':
-                if data[key] is None:
-                    data[key] = 0.0
-            elif t == 'bool':
-                if data[key] is None:
-                    data[key] = False
-            elif t == 'year':
-                if data[key] is None:
-                    data[key] = 2025
+                    data[key] = get_type(t).default
             else:
                 raise ValueError(f"Invalid type: {t}")
         return data
 
 class Subset(MainSchema):
-    Name: Field(str, 1, 5) # type: ignore
-    Volume: Field(float, 0, 1) # type: ignore
-    Unit: Field(str, 1, 1, units) # type: ignore
+    Name: Field(Str, 1, 5) # type: ignore
+    Volume: Field(Float, 0, 1) # type: ignore
+    Unit: Field(Str, 1, 1, units) # type: ignore
 
 class ArSubset(Subset):
-    Dialect: Field(str, 1, 1, dialects) # type: ignore
+    Dialect: Field(Str, 1, 1, dialects) # type: ignore
 
 class MultiSubset(Subset):
-    Language: Field(str, 2, 30, languages) # type: ignore
+    Language: Field(Str, 2, 30, languages) # type: ignore
 
 class BaseSchema(Subset):
     model_config = ConfigDict(extra='forbid', strict=False)
-    License: Field(str, 1, 15, licenses) # type: ignore
-    Link: Field(str, 0, 1, pattern=r"^https?://.*$") # type: ignore
-    HF_Link: Field(str, 0, 1, pattern=r"^https?://.*$") # type: ignore
-    Year: year
-    Domain: Field(list[str], 1, len(domains), domains) # type: ignore
-    Form: Field(str, 1, 1, form) # type: ignore
-    Collection_Style: Field(list[str], 1, len(collection_styles), collection_styles) # type: ignore
-    Description: Field(str, 0, 50) # type: ignore
-    Ethical_Risks: Field(str, 1, 1, ethical_risks) # type: ignore
-    Provider: Field(list[str], 0) # type: ignore
-    Derived_From: Field(list[str], 0) # type: ignore
-    Paper_Title: Field(str, 1) # type: ignore
-    Paper_Link: Field(str, 1, 1, pattern=r"^https?://.*$") # type: ignore
-    Tokenized: bool
-    Host: Field(str, 1, 1, hosts) # type: ignore
-    Access: Field(str, 1, 1, access) # type: ignore
-    Cost: Field(str, 0, 1) # type: ignore
-    Test_Split: bool
-    Tasks: Field(list[str], 1, len(tasks), tasks) # type: ignore
-    Venue_Title: Field(str, 1) # type: ignore
-    Venue_Type: Field(str, 1, 1, venue_types) # type: ignore
-    Venue_Name: Field(str, 0) # type: ignore
-    Authors: Field(list[str], 1) # type: ignore
-    Affiliations: Field(list[str], 0) # type: ignore
-    Abstract: Field(str, 1) # type: ignore
+    License: Field(Str, 1, 15, licenses) # type: ignore
+    Link: Field(URL, 0, 1) # type: ignore
+    HF_Link: Field(URL, 0, 1) # type: ignore
+    Year: Year
+    Domain: Field(list[Str], 1, len(domains), domains) # type: ignore
+    Form: Field(Str, 1, 1, form) # type: ignore
+    Collection_Style: Field(list[Str], 1, len(collection_styles), collection_styles) # type: ignore
+    Description: Field(Str, 0, 50) # type: ignore
+    Ethical_Risks: Field(Str, 1, 1, ethical_risks) # type: ignore
+    Provider: Field(list[Str], 0) # type: ignore
+    Derived_From: Field(list[Str], 0) # type: ignore
+    Paper_Title: Field(Str, 1) # type: ignore
+    Paper_Link: Field(URL, 1, 1) # type: ignore
+    Tokenized: Bool
+    Host: Field(Str, 1, 1, hosts) # type: ignore
+    Access: Field(Str, 1, 1, access) # type: ignore
+    Cost: Field(Str, 0, 1) # type: ignore
+    Test_Split: Bool
+    Tasks: Field(list[Str], 1, len(tasks), tasks) # type: ignore
+    Venue_Title: Field(Str, 1) # type: ignore
+    Venue_Type: Field(Str, 1, 1, venue_types) # type: ignore
+    Venue_Name: Field(Str, 0) # type: ignore
+    Authors: Field(list[Str], 1) # type: ignore
+    Affiliations: Field(list[Str], 0) # type: ignore
+    Abstract: Field(Str, 1) # type: ignore
 
     @model_validator(mode='after') # not sure what to do here
     def validate_after(self):
@@ -115,61 +95,39 @@ class BaseSchema(Subset):
 class ArSchema(BaseSchema):
     """ar"""
     Subsets: Field(list[ArSubset], 0, 29) # type: ignore
-    Dialect: Field(str, 1, 1, dialects) # type: ignore
-    Language: Field(str, 1, 1, ['ar', 'multilingual']) # type: ignore
-    Script: Field(str, 1, 1, ['Arab', 'Latin', 'Arab-Latin']) # type: ignore
+    Dialect: Field(Str, 1, 1, dialects) # type: ignore
+    Language: Field(Str, 1, 1, ['ar', 'multilingual']) # type: ignore
+    Script: Field(Str, 1, 1, ['Arab', 'Latin', 'Arab-Latin']) # type: ignore
 
 class EnSchema(BaseSchema):
-    Language: Field(str, 1, 1, ['en', 'multilingual']) # type: ignore
+    Language: Field(Str, 1, 1, ['en', 'multilingual']) # type: ignore
 
 class JpSchema(BaseSchema):
-    Language: Field(str, 1, 1, ['jp', 'multilingual']) # type: ignore
-    Script: Field(str, 1, 1, ['Hiragana', 'Katakana', 'Kanji', 'mixed']) # type: ignore
+    Language: Field(Str, 1, 1, ['jp', 'multilingual']) # type: ignore
+    Script: Field(Str, 1, 1, ['Hiragana', 'Katakana', 'Kanji', 'mixed']) # type: ignore
 
 class RuSchema(BaseSchema):
-    Language: Field(str, 1, 1, ['ru', 'multilingual']) # type: ignore
+    Language: Field(Str, 1, 1, ['ru', 'multilingual']) # type: ignore
 
 class FrSchema(BaseSchema):
-    Language: Field(str, 1, 1, ['fr', 'multilingual']) # type: ignore
+    Language: Field(Str, 1, 1, ['fr', 'multilingual']) # type: ignore
 
 class MultiSchema(BaseSchema):
     Subsets: Field(list[MultiSubset], 0, 30) # type: ignore 
-    Language: Field(list[str], 2, len(languages), languages) # type: ignore
+    Language: Field(list[Str], 2, len(languages), languages) # type: ignore
 
 class TestSubset(MainSchema):
-    Model: Field(str, 1, 1, ['kia', 'toyota', 'honda']) # type: ignore
-    Color: Field(str, 1, 1, ['red', 'blue', 'green']) # type: ignore
+    Model: Field(Str, 1, 1, ['kia', 'toyota', 'honda']) # type: ignore
+    Color: Field(Str, 1, 1, ['red', 'blue', 'green']) # type: ignore
 
 class TestSchema(MainSchema):
-    Name: Field(str, 1, 3) # type: ignore   
-    Age: int
-    Gender: Field(str, 1, 1, ['male', 'female']) # type: ignore
-    Hobbies: Field(list[str], 1, 4, ['reading', 'swimming', 'coding', 'other']) # type: ignore
-    Cars: Field(list[TestSubset], 0, 3) # type: ignore
+    Name: Field(Str, 1, 3) # type: ignore   
+    Age: Int
+    Website: URL
+    Hobbies: Field(list[Str], 1, 4, ['reading', 'swimming', 'coding', 'other']) # type: ignore
+    Cars: Field(list[Str], 0, 3) # type: ignore
+    Married: Bool
 
-def match_attributes(attr1, attr2):
-    if type(attr1) in [str, int, float, year, bool]:
-        return attr1 == attr2
-    elif type(attr1) == dict:
-        for key in attr1.keys():
-            if not match_attributes(attr1[key], attr2[key]):
-                return False
-        return True
-    elif type(attr1) == list:
-        if len(attr1) != len(attr2):
-            return False
-        elif len(attr1) == 0:
-            return True
-        else:
-            if type(attr1[0]) == dict:
-                for item1, item2 in zip(attr1, attr2):
-                    if not match_attributes(item1, item2):
-                        return False
-                return True
-            else:
-                return set(attr1) == set(attr2)
-    else:
-        raise ValueError(f"Invalid type: {type(attr1)}")
 
 def evaluate_metadata(gold_metadata, predicted_metadata, schema_name = 'ar', return_metrics_only = False):
     schema = Schema(schema_name)
@@ -178,7 +136,7 @@ def evaluate_metadata(gold_metadata, predicted_metadata, schema_name = 'ar', ret
         if key in ['annotations_from_paper']:
             continue
         try:
-            results[key] = int(match_attributes(gold_metadata[key], predicted_metadata[key]))
+            results[key] = int(schema.match_attributes(key, gold_metadata[key], predicted_metadata[key]))
         except:
             print(key, gold_metadata[key], predicted_metadata[key])
             raise ValueError(f"Invalid type: {type(gold_metadata[key])}")
@@ -264,7 +222,7 @@ class Schema:
         The 'Output JSON' has ONLY the keys: '{self.columns}'. The value for each key is the answer to the 'question' that represents the same key in the 'Input Schema'."""
 
     def get_answer_type(self, key):
-        return self.schema.model_fields[key].annotation.__name__
+        return get_type(self.schema.model_fields[key].annotation.__name__)
     
     def get_default_schema(self):
         metadata = {}
@@ -280,13 +238,13 @@ class Schema:
         accuracy = 0
         for key, value in self.schema.model_fields.items():
             type  = self.get_answer_type(key)
-            if type == 'list':
+            if type == List:
                 if len(metadata[key]) >= self.get_answer_min(key) and len(metadata[key]) <= self.get_answer_max(key):
                     accuracy += 1
                 # else:
                 #     print(key,metadata[key], len(metadata[key]), self.get_answer_min(key), self.get_answer_max(key))
                 #     raise()
-            elif type == 'str':
+            elif type == Str:
                 length_metric = len(metadata[key].split(' ')) 
                 if self.get_options(key) or length_metric >= self.get_answer_min(key) and length_metric <= self.get_answer_max(key):
                     accuracy += 1
@@ -296,6 +254,31 @@ class Schema:
             else:
                 accuracy += 1
         return accuracy / len(self.columns)
+
+    def match_attributes(self, key, attr1, attr2):
+        t = self.get_answer_type(key)
+        if t in PRIMITIVE_TYPES:
+            return attr1 == attr2
+        elif type(attr1) == dict:
+            for key in attr1.keys():
+                if not self.match_attributes(key, attr1[key], attr2[key]):
+                    return False
+            return True
+        elif type(attr1) == list:
+            if len(attr1) != len(attr2):
+                return False
+            elif len(attr1) == 0:
+                return True
+            else:
+                if type(attr1[0]) == dict:
+                    for item1, item2 in zip(attr1, attr2):
+                        if not self.match_attributes(key, item1, item2):
+                            return False
+                    return True
+                else:
+                    return set(attr1) == set(attr2)
+        else:
+            raise ValueError(f"Invalid type: {type(attr1)}")
     
     def fill_missing(self, metadata):
         print('Warning: fill_missing is not implemented for schema', self.schema_name)
@@ -309,11 +292,13 @@ class Schema:
             if options is not None:
 
                 if method == 'random':
-                    metadata[key] = random.sample(options, random.randint(value.metadata[0].answer_min, value.metadata[0].answer_max)) if type == 'list' else random.choice(options)
+                    metadata[key] = random.sample(options, random.randint(value.metadata[0].answer_min, value.metadata[0].answer_max)) if type == List else random.choice(options)
                 elif method == 'last':
-                    metadata[key] = [options[-1]] if type == 'list' else options[-1]
+                    metadata[key] = [options[-1]] if type == List else options[-1]
                 elif method == 'first':
-                    metadata[key] = [options[0]] if type == 'list' else options[0]
+                    metadata[key] = [options[0]] if type == List else options[0]
+                elif method == 'default':
+                    metadata[key] = self.get_default_value(key)
                 else:
                     raise ValueError(f"Invalid method: {method}")
             else:
