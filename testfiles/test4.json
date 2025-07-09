@@ -1,7 +1,8 @@
 {
     "Name": "ahmad mahmoud khalid ali abdelrahman",
     "Age": 20,
-    "Gender": "male",
+    "Website": "https://www.google.com",
     "Hobbies": ["reading"],
-    "Cars": []
+    "Cars": [],
+    "Married": true
 }
