@@ -1,7 +1,8 @@
 {
     "Name": "ahmad",
     "Age": null,
-    "Gender": "male",
+    "Website": "https://www.google.com",
     "Hobbies": ["reading"],
-    "Cars": []
+    "Cars": [],
+    "Married": true
 }
