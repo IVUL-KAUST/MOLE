@@ -209,17 +209,18 @@ class Schema:
     
     def get_system_prompt(self):
         return f"""You are a professional research paper reader. You will be provided 'Input schema' and 'Paper Text' and you must respond with an 'Output JSON'.
-        The 'Output JSON' is a JSON with key:answer where the answer represents an answer to a 'question' provided in the 'Input Schema'. 
+        The 'Output JSON' is a JSON with key:answer where the answer represents an attribute of the 'Input Schema'. 
         The 'Input Schema' has the following main fields:
-        'question': A question that needs to be answered.
-        'options' : If the 'question' has 'options' then the question can be answered by choosing one or more options depending on 'answer_min' and 'answer_max'
-        'options_description': A description of the 'options' that might be unclear. Use the descriptions to understand the options. 
+        'options' : If the 'question' has 'options' then the question can be answered by choosing one or more options depending on 'answer_min' and 'answer_max'.
         'answer_type': The output type of the answer to the 'question'. The answer must follow the type of the answer. 
         'answer_min' : If the 'answer_type' is a List, then it defines the minimum number of list items in the answer. Otherwise it defines the minimum number of words in the answer.
         'answer_max' : If the 'answer_type' is a List, then it defines the maximum number of list items in the answer. Otherwise it defines the maximum number of words in the answer.
         The answer must be the same type as 'answer_type' and its length must be in the range ['answer_min', 'answer_max']. If 'answer_min' = 'answer_max' then the length of answer MUST be 'answer_min'. 
         The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
-        The 'Output JSON' has ONLY the keys: '{self.columns}'. The value for each key is the answer to the 'question' that represents the same key in the 'Input Schema'."""
+        The 'Output JSON' has ONLY the keys: '{self.columns}'. The value for each key is the answer to the 'question' that represents the same key in the 'Input Schema'.
+        Use the following guidlines:
+        {open('GUIDELINES.md').read()}
+        """
 
     def get_answer_type(self, key):
         return get_type(self.schema.model_fields[key].annotation.__name__)

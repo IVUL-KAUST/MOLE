@@ -741,8 +741,11 @@ def run(
                             }
                         else:
                             message = None
-
-                metadata = validate_metadata(metadata, schema_name=schema_name)
+                try:
+                    metadata = validate_metadata(metadata, schema_name=schema_name)
+                except Exception as e:
+                    print(metadata)
+                    raise('Metadata is not valid')
 
                 show_info("🔍 Evaluating Metadata ...")
                 results = {}
