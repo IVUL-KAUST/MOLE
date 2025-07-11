@@ -11,7 +11,7 @@
         "social media",
         "captions"
     ],
-    "Form": "spoken",
+    "Form": "audio",
     "Collection_Style": [
         "crawling",
         "manual curation"

@@ -11,7 +11,7 @@
         "TV Channels",
         "captions"
     ],
-    "Form": "spoken",
+    "Form": "audio",
     "Collection_Style": [
         "human annotation"
     ],

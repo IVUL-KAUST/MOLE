@@ -8,7 +8,7 @@
     "Domain": [
         "public datasets"
     ],
-    "Form": "spoken",
+    "Form": "audio",
     "Collection_Style": [
         "machine annotation",
         "human annotation"

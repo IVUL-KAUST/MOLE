@@ -8,7 +8,7 @@
     "Domain": [
         "books"
     ],
-    "Form": "spoken",
+    "Form": "audio",
     "Collection_Style": [
         "manual curation",
         "human annotation"

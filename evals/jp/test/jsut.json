@@ -9,7 +9,7 @@
         "wikipedia",
         "public datasets"
     ],
-    "Form": "spoken",
+    "Form": "audio",
     "Collection_Style": [
         "manual curation",
         "human annotation"

@@ -8,7 +8,7 @@
     "Domain": [
         "other"
     ],
-    "Form": "spoken",
+    "Form": "audio",
     "Collection_Style": [
         "human annotation",
         "manual curation"
