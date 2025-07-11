@@ -1,11 +1,11 @@
 ## Annotation Guidlines
 For each attribute, you label the attribute and a binary value {0,1} to say if this attribute can be extracted from the paper or not
-1. **Name** We prefer shortcuts to names, for example, instead of “Stanford Question Answering Dataset,” we say (SQuAD).
-2. Subsets: this attribute exists in ‘ar’ and ‘multi’ schemas. It lists the dialects in Arabic and the languages in multilingual datasets. 
+1. **Name** The name of the dataset. We prefer shortcuts to names, for example, instead of “Stanford Question Answering Dataset,” we say (SQuAD).
+2. **Subsets**: this attribute exists in ‘ar’ and ‘multi’ schemas. It lists the dialects in Arabic and the languages in multi schema. 
 3. **Link**: direct link to the dataset. If the dataset is hosted in HuggingFace, we can use the same link in both the Link and HF Link fields. If there is a link from GitHub and a link from HuggingFace, put the link from GitHub. 
 4. **HF Link**: The Huggingface link is most likely extracted from external resources, so set the binary value to 0.
 5. **License** mostly doesn’t exist in the paper. We search the web. 
-6. **Year** the year the dataset was published.
+6. **Year** the year the paper was published.
 7. **Language** this attribute highlights if the dataset is multilingual or not for [ar,ru,jp,fr,en] and the languages for multi.
 8. **Dialect:** only for Arabic, the value is mixed if there are multiple dialects.
 9. **Domain** is the source or the content  of the data; for example, Domain=Wikipedia means the dataset is extracted from Wikipedia and news articles, if the dataset is extracted from news outlets
