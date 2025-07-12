@@ -22,12 +22,17 @@ class BaseType:
         self.answer_max = answer_max
         self.options = options
         self.field_names = field_names
+    
     @classmethod
     def __get_pydantic_core_schema__(
         cls, source_type: Any, handler: GetCoreSchemaHandler
     ) -> CoreSchema:
         # Return the handler for int directly, don't wrap in cls
         return handler(cls.base_type)
+    
+    @classmethod
+    def compare(cls, attr1, attr2):
+        return attr1 == attr2
 
 class Float(BaseType):
     base_type = float

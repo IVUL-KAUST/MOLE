@@ -223,25 +223,20 @@ class Schema:
                 if len(metadata[key]) >= self.get_answer_min(key) and len(metadata[key]) <= self.get_answer_max(key):
                     accuracy += 1
                 else:
-                    print(key,metadata[key], len(metadata[key]), self.get_answer_min(key), self.get_answer_max(key))
                     raise()
             elif type == Str:
                 length_metric = len(metadata[key].split(' ')) 
                 if self.get_options(key) or length_metric >= self.get_answer_min(key) and length_metric <= self.get_answer_max(key):
                     accuracy += 1
                 else:
-                    print(key,metadata[key], length_metric, self.get_answer_min(key), self.get_answer_max(key))
                     raise()
             else:
                 accuracy += 1
         return accuracy / len(self.columns)
 
     def match_attributes(self, key, attr1, attr2):
-        t = self.get_answer_type(key)
-        if t in PRIMITIVE_TYPES:
-            return attr1 == attr2
-        else:
-            return t.compare(attr1, attr2)
+        t = self.get_answer_type(key)   
+        return t.compare(attr1, attr2)
     
     def fill_missing(self, metadata):
         print('Warning: fill_missing is not implemented for schema', self.schema_name)
