@@ -138,6 +138,16 @@ class List(BaseType):
         else:
             return f'list[{self._inner_type().get_type() if hasattr(self._inner_type(), "get_type") else self._inner_type}]'
     
+    @classmethod
+    def compare(cls, attr1, attr2):
+        if len(attr1) != len(attr2):
+            return False
+        else:
+            for item in attr1:
+                if item not in attr2:
+                    return False
+            return True
+    
     
 class Cars(BaseModel):
     Model: Field(Str) # type: ignore
@@ -160,7 +170,7 @@ class Person(BaseModel):
         
         return data
 
-PRIMITIVE_TYPES = [Int, Float, Bool, Year, URL, Str, List]
+PRIMITIVE_TYPES = [Int, Float, Bool, Year, URL, Str]
 
 if __name__ == '__main__':
     test = {

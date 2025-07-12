@@ -1,10 +1,4 @@
-from typing import Annotated, Any, Union, Callable
-from pydantic import BaseModel, ConfigDict, computed_field
-from pydantic_core import CoreSchema, core_schema
-from dataclasses import dataclass
-import datetime as dt
-from pydantic import GetCoreSchemaHandler
-import re
+from pydantic import BaseModel, ConfigDict
 from pydantic import model_validator
 import json
 import random
@@ -100,16 +94,16 @@ class MultiSchema(BaseSchema):
     Subsets: Field(List[MultiSubset], 0, len(languages)) # type: ignore 
     Language: Field(List[Str], 2, len(languages), languages) # type: ignore
 
-class Cars(MainSchema):
-    Model: Field(Str, 1, 1, ['kia', 'toyota', 'honda']) # type: ignore
-    Color: Field(Str, 1, 1, ['red', 'blue', 'green']) # type: ignore
+class Sons(MainSchema):
+    Name: Field(Str, 1, 1) # type: ignore
+    Age: Field(Int, 1, 100) # type: ignore
 
 class TestSchema(MainSchema):
     Name: Field(Str, 1, 5) # type: ignore   
     Age: Field(Int, 1, 100) # type: ignore
     Website: Field(URL, 1, 1) # type: ignore
     Hobbies: Field(List[Str], 1, 4, ['reading', 'swimming', 'coding', 'other']) # type: ignore
-    Cars: Field(List[Cars], 0, 3) # type: ignore
+    Sons: Field(List[Sons], 0, 3) # type: ignore
     Married: Field(Bool, 1, 1) # type: ignore
 
 
@@ -246,26 +240,8 @@ class Schema:
         t = self.get_answer_type(key)
         if t in PRIMITIVE_TYPES:
             return attr1 == attr2
-        elif type(attr1) == dict:
-            for key in attr1.keys():
-                if not self.match_attributes(key, attr1[key], attr2[key]):
-                    return False
-            return True
-        elif type(attr1) in [List, list]:
-            if len(attr1) != len(attr2):
-                return False
-            elif len(attr1) == 0:
-                return True
-            else:
-                if type(attr1[0]) == dict:
-                    for item1, item2 in zip(attr1, attr2):
-                        if not self.match_attributes(key, item1, item2):
-                            return False
-                    return True
-                else:
-                    return set(attr1) == set(attr2)
         else:
-            raise ValueError(f"Invalid type: {type(attr1)}")
+            return t.compare(attr1, attr2)
     
     def fill_missing(self, metadata):
         print('Warning: fill_missing is not implemented for schema', self.schema_name)
@@ -320,29 +296,3 @@ def validate_metadata(metadata = None, path = None, schema_name = 'ar'):
         results['annotations_from_paper'] = remove_spaces_keys(annotations_from_paper)
         
     return results
-
-# example of casting data
-
-"""
-from __future__ import annotations
-
-from pydantic import BaseModel
-
-
-class UserIn(BaseModel):
-    favorite_number: int | str
-
-
-class UserOut(BaseModel):
-    favorite_number: int
-
-
-def my_api(user: UserIn) -> UserOut:
-    favorite_number = user.favorite_number
-    if isinstance(favorite_number, str):
-        favorite_number = int(user.favorite_number.strip())
-
-    return UserOut(favorite_number=favorite_number)
-
-
-"""
