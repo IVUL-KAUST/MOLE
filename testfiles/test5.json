@@ -1,27 +1,8 @@
 {
-    "Name": "CIDAR",
-    "Volume": 10000,
-    "Unit": "sentences",
-    "Tokenized": false,  
-    "Script": "Arab",
-    "Form": "text",
-    "Collection Style": ["crawling", "annotation"],
-    "Domain": ["other"],
-    "Ethical Risks": "",
-
-    "Provider": ["ARBML"],
-    "Host": "HuggingFace",
-    "Link": "https://huggingface.co/datasets/arbml/CIDAR",
-    "HF Link": "https://hf.co/datasets/arbml/CIDAR",
-    "License": "CC BY-NC 4.0",
-    "Cost": "",
-    "Access": "Free",
-
-    "Language": "ar",
-    "Subsets": [],
-    "Dialect": "Modern Standard Arabic",
-    "Year": "2021",
-    "Test Split": false,
-    "Tasks": ["instruction tuning"],
-    "Derived From": ["AlpaGasus"]   
+    "Name": "ahmad",
+    "Age": 20,
+    "Website": "https://www.google.com",
+    "Hobbies": ["reading"],
+    "Married": true,
+    "Sons":[]
 }
