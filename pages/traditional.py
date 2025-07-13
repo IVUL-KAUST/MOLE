@@ -116,5 +116,5 @@ def get_metadata_keyword(
         else:
             predictions[c] = default
         
-    return schema(metadata = predictions)
+    return predictions
 
