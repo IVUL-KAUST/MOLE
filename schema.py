@@ -131,7 +131,7 @@ class Schema(BaseModel):
             if key in ['annotations_from_paper']:
                 continue
             try:
-                results[key] = int(self.match_attributes(key, gold_metadata[key], self.model_dump()[key]))
+                results[key] = self.match_attributes(key, gold_metadata[key], self.model_dump()[key])
             except:
                 print(key, gold_metadata[key], self.model_dump()[key])
                 raise ValueError(f"Invalid type: {type(gold_metadata[key])}")

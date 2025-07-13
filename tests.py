@@ -4,7 +4,7 @@ from schema import Schema
 from pydantic import Field
 from type_classes import *
 
-gold_metadata = {
+gold_metadata1  = {
     "Name": "ahmad",
     "Age": 20,
     "Website": "https://www.google.com",
@@ -34,50 +34,46 @@ print(Parent.schema())
 predicted_metadata = Parent(
     path = 'testfiles/test1.json'
 )
-evaluation_results = predicted_metadata.compare_with(gold_metadata)
+evaluation_results = predicted_metadata.compare_with(gold_metadata1)
 
 for m in evaluation_results:
     assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
 print('✅ passed test1')
 
 
+# [reading] - > [reading, swimming]
 validated_metadata = Parent(
     path = 'testfiles/test2.json'
 )
-evaluation_results = validated_metadata.compare_with(gold_metadata, return_metrics_only=True)
-
-for m in evaluation_results:
-    if m in ['precision', 'recall', 'f1']:
-        assert abs(evaluation_results[m] - 0.83) < 0.01, f'❌ {m} value should be 0.83 but got {evaluation_results[m]}'
-    else:
-        assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
+evaluation_results = validated_metadata.compare_with(gold_metadata1)
+assert evaluation_results['Hobbies'] == 0.5, f'❌ Hobbies value should be 0.5 but got {evaluation_results["Hobbies"]}'
 
 print('✅ passed test2')
 
 validated_metadata = Parent(
     path = 'testfiles/test3.json'
 )
-assert validated_metadata.model_dump()['Age'] == 0, '❌ Age should be 0 but got {validated_metadata["Age"]}'
+assert validated_metadata.json()['Age'] == 0, '❌ Age should be 0 but got {validated_metadata["Age"]}'
 print('✅ passed test3')
 
 validated_metadata = Parent(
     path = 'testfiles/test4.json'
 )
-evaluation_results = validated_metadata.compare_with(gold_metadata, return_metrics_only=True)
+evaluation_results = validated_metadata.compare_with(gold_metadata1, return_metrics_only=True)
 assert abs(evaluation_results['length'] - 0.83) < 0.01, f'❌ length should be 0.83 but got {evaluation_results["length"]}'
 print('✅ passed test4')
 
 validated_metadata = Parent(
     path = 'testfiles/test5.json'
 )
-evaluation_results = validated_metadata.compare_with(gold_metadata)
+evaluation_results = validated_metadata.compare_with(gold_metadata1)
 
 for m in evaluation_results:
     assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
 print('✅ passed test5')
 
 
-gold_metadata = {
+gold_metadata2 = {
     "Name": "ahmad",
     "Age": 20,
     "Website": "https://www.google.com",
@@ -101,7 +97,7 @@ gold_metadata = {
 validated_metadata = Parent(
     path = 'testfiles/test6.json'
 )
-evaluation_results = validated_metadata.compare_with(gold_metadata)
+evaluation_results = validated_metadata.compare_with(gold_metadata2)
 
 for m in evaluation_results:
     assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
