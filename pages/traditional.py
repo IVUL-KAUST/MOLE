@@ -1,4 +1,4 @@
-from schema import Schema
+from schema import get_schema
 import re
 
 def get_metadata_keyword(
@@ -6,17 +6,17 @@ def get_metadata_keyword(
     schema_name = "ar",
 ):
     predictions = {}
-    schema = Schema(schema_name)
-    columns = schema.columns
+    schema = get_schema(schema_name)
+    attributes = schema.get_attributes()
     url_pattern = r'(https?://[^\s]+|www\.[^\s]+)'
     all_urls = re.findall(url_pattern, paper_text)
-    for c in columns:
-        default = schema.generate_metadata(method="random")[c]
+    for c in attributes:
+        default = schema.get_default(c)
         if c == "Link":
-            predictions[c] = all_urls[0] if len(all_urls) > 0 else default
+            predictions[c] = all_urls[0].replace('}', '') if len(all_urls) > 0 else default
         elif c == "HF_Link":
             hf_url = [url for url in all_urls if "huggingface.co" in url or "hf.co" in url]
-            predictions[c] = hf_url[0] if len(hf_url) > 0 else default
+            predictions[c] = hf_url[0].replace('}', '') if len(hf_url) > 0 else default
         elif c == "License":
             predictions[c] = default
         elif c == "Domain":
@@ -39,7 +39,7 @@ def get_metadata_keyword(
             if len(value) > 0:
                 predictions[c] = value
             else:
-                predictions[c] = default
+                predictions[c] = ['other']
         elif c == "Collection_Style":
             value = []
             if 'crawling' in paper_text.lower():
@@ -49,19 +49,17 @@ def get_metadata_keyword(
             if len(value) > 0:  
                 predictions[c] = value
             else:
-                predictions[c] = default
+                predictions[c] = ['other']
         elif c == "Form":
             value = ''
-            if 'text' in paper_text.lower():
-                value = "text"
-            elif 'speech' in paper_text.lower():
+            if 'speech' in paper_text.lower():
                 value = "audio"
             elif 'image' in paper_text.lower():
                 value = "images"
             elif 'videos' in paper_text.lower():
                 value = "videos"
             else:
-                value = default
+                value = "text"
             predictions[c] = value
 
             if value == "text":
@@ -71,6 +69,8 @@ def get_metadata_keyword(
                     value = "sentences"
                 elif 'documents' in paper_text.lower():
                     value = "documents"
+                else:
+                    value = "sentences"
             elif value == "spoken":
                 value = "hours"
             elif value == "images":
@@ -90,9 +90,9 @@ def get_metadata_keyword(
         elif c == "Host":
             options = schema.get_options(c)
             value = [option for option in options if any([option in url for url in all_urls])]
-            predictions[c] = value[0] if len(value) > 0 else default
+            predictions[c] = value[0] if len(value) > 0 else 'GitHub'
         elif c == "Access":
-            if 'public' in paper_text.lower():
+            if 'public' in paper_text.lower() or 'released' in paper_text.lower():
                 value = "Free"
             else:
                 value = default
@@ -116,5 +116,5 @@ def get_metadata_keyword(
         else:
             predictions[c] = default
         
-    return predictions
+    return schema(metadata = predictions)
 

@@ -1,3 +1,5 @@
+# type: ignore
+
 from pydantic import BaseModel, ConfigDict
 from pydantic import model_validator
 import json
@@ -21,139 +23,27 @@ ethical_risks = ['Low', 'Medium', 'High']
 access = ['Free', 'Upon-Request', 'With-Fee']
 venue_types = ['preprint', 'workshop', 'conference', 'journal']
 
-
-class MainSchema(BaseModel):
-    @model_validator(mode='before') # validate based on the type of the field
-    def validate_a(cls, data):
-        for key, value in cls.model_fields.items():
-            metadata = value.metadata[0]      
-            data[key] = metadata.get_default() if data[key] is None else data[key]
-        
-        return data
-
-class Subset(MainSchema):
-    Name: Field(Str, 1, 5) # type: ignore
-    Volume: Field(Float, 0) # type: ignore
-    Unit: Field(Str, 1, 1, units) # type: ignore
-
-class ArSubset(Subset):
-    Dialect: Field(Str, 1, 1, dialects) # type: ignore
-
-class MultiSubset(Subset):
-    Language: Field(Str, 2, 30, languages) # type: ignore
-
-class BaseSchema(Subset):
+class Schema(BaseModel):
     model_config = ConfigDict(extra='forbid', strict=False)
-    License: Field(Str, 1, 1, licenses) # type: ignore
-    Link: Field(URL, 0, 1) # type: ignore
-    HF_Link: Field(URL, 0, 1) # type: ignore
-    Year: Field(Year, 1900, 2025) # type: ignore
-    Domain: Field(List[Str], 1, len(domains), domains) # type: ignore
-    Form: Field(Str, 1, 1, form) # type: ignore
-    Collection_Style: Field(List[Str], 1, len(collection_styles), collection_styles) # type: ignore
-    Description: Field(Str, 0, 50) # type: ignore
-    Ethical_Risks: Field(Str, 1, 1, ethical_risks) # type: ignore
-    Provider: Field(List[Str], 0) # type: ignore
-    Derived_From: Field(List[Str], 0) # type: ignore
-    Paper_Title: Field(Str, 1) # type: ignore
-    Paper_Link: Field(URL, 1, 1) # type: ignore
-    Tokenized: Field(Bool, 1, 1) # type: ignore
-    Host: Field(Str, 1, 1, hosts) # type: ignore
-    Access: Field(Str, 1, 1, access) # type: ignore
-    Cost: Field(Str, 0, 1) # type: ignore
-    Test_Split: Field(Bool, 1, 1) # type: ignore
-    Tasks: Field(List[Str], 1, 5, tasks) # type: ignore
-    Venue_Title: Field(Str, 1) # type: ignore
-    Venue_Type: Field(Str, 1, 1, venue_types) # type: ignore
-    Venue_Name: Field(Str, 0) # type: ignore
-    Authors: Field(List[Str], 0) # type: ignore
-    Affiliations: Field(List[Str], 0) # type: ignore
-    Abstract: Field(Str, 1) # type: ignore
+    def __init__(self, path = None, metadata = None):
+        if path is not None:
+            metadata = json.load(open(path))
+        elif metadata is not None:
+            metadata = metadata
+        else:
+            raise ValueError('Either path or metadata must be provided')
+        super().__init__(**metadata)
 
+    @classmethod
+    def get_attributes(cls):
+        return [key for key in cls.model_fields.keys() if key not in ['annotations_from_paper']]
 
-class ArSchema(BaseSchema):
-    Subsets: Field(List[ArSubset], 0, len(dialects)) # type: ignore
-    Dialect: Field(Str, 1, 1, dialects) # type: ignore
-    Language: Field(Str, 1, 1, ['ar', 'multilingual']) # type: ignore
-    Script: Field(Str, 1, 1, ['Arab', 'Latin', 'Arab-Latin']) # type: ignore
-
-class EnSchema(BaseSchema):
-    Language: Field(Str, 1, 1, ['en', 'multilingual']) # type: ignore
-
-class JpSchema(BaseSchema):
-    Language: Field(Str, 1, 1, ['jp', 'multilingual']) # type: ignore
-    Script: Field(Str, 1, 1, ['Hiragana', 'Katakana', 'Kanji', 'mixed']) # type: ignore
-
-class RuSchema(BaseSchema):
-    Language: Field(Str, 1, 1, ['ru', 'multilingual']) # type: ignore
-
-class FrSchema(BaseSchema):
-    Language: Field(Str, 1, 1, ['fr', 'multilingual']) # type: ignore
-
-class MultiSchema(BaseSchema):
-    Subsets: Field(List[MultiSubset], 0, len(languages)) # type: ignore 
-    Language: Field(List[Str], 2, len(languages), languages) # type: ignore
-
-class Sons(MainSchema):
-    Name: Field(Str, 1, 1) # type: ignore
-    Age: Field(Int, 1, 100) # type: ignore
-
-class TestSchema(MainSchema):
-    Name: Field(Str, 1, 5) # type: ignore   
-    Age: Field(Int, 1, 100) # type: ignore
-    Website: Field(URL, 1, 1) # type: ignore
-    Hobbies: Field(List[Str], 1, 4, ['reading', 'swimming', 'coding', 'other']) # type: ignore
-    Sons: Field(List[Sons], 0, 3) # type: ignore
-    Married: Field(Bool, 1, 1) # type: ignore
-
-
-def evaluate_metadata(gold_metadata, predicted_metadata, schema_name = 'ar', return_metrics_only = False):
-    schema = Schema(schema_name)
-    results = {}
-    for key in gold_metadata.keys():
-        if key in ['annotations_from_paper']:
-            continue
-        try:
-            results[key] = int(schema.match_attributes(key, gold_metadata[key], predicted_metadata[key]))
-        except:
-            print(key, gold_metadata[key], predicted_metadata[key])
-            raise ValueError(f"Invalid type: {type(gold_metadata[key])}")
-    annotations_from_paper = gold_metadata['annotations_from_paper']
-    annotated_attributes = [key for key in gold_metadata.keys() if key in annotations_from_paper and annotations_from_paper[key]]
-    precision = sum(results.values()) / len(results)
-    recall = sum([value for key, value in results.items() if key in annotated_attributes]) / len(annotated_attributes)
-    f1 = 2 * precision * recall / (precision + recall)
-    results['precision'] = precision
-    results['recall'] = recall
-    results['f1'] = f1
-    results['length'] = schema.evaluate_length(predicted_metadata)
-    if return_metrics_only:
-        return {'precision': precision, 'recall': recall, 'f1': f1, 'length': results['length']}
-    return results
-
-def remove_spaces_keys(metadata):
-    new_metadata = {}
-    for key in metadata.keys():
-        new_metadata[key.replace(' ', '_')] = metadata[key]
-    return new_metadata
-
-class Schema:
-    def __init__(self, schema_name = "ar"):
-        self.schema_name = schema_name
-        self.schema = get_schema(schema_name)
-        self.columns = list(self.schema.model_fields.keys())
-
-    def validate(self, metadata):
-        return json.loads(self.schema.model_validate(metadata).model_dump_json())
-    
-    def evaluate(self, gold_metadata, predicted_metadata):
-        return evaluate_metadata(gold_metadata, predicted_metadata)
-    
-    def json(self):
+    @classmethod
+    def schema(cls):    
         schema_json = {}
-        for key in self.columns:
+        for key in cls.get_attributes():
             values = {}
-            ob = self.schema.model_fields[key].metadata[0]
+            ob = cls.model_fields[key].metadata[0]
             values['answer_type'] = ob.get_type()
             for constrain in ['answer_min', 'answer_max', 'options']:
                 attr =  getattr(ob, constrain)
@@ -163,22 +53,29 @@ class Schema:
             
         return json.dumps(schema_json, indent=4)
     
-    def dict(self):
-        return json.loads(self.json())
+    @classmethod
+    def dict(cls):
+        return json.loads(cls.schema())
     
-    def get_options(self, key):
-        schema = self.dict()
+    def json(self):
+        return json.loads(self.model_dump_json())
+    
+    @classmethod
+    def get_options(cls, key):
+        schema = cls.dict()
         if 'options' in schema[key]:
             return schema[key]['options']
         else:
             return None
     
-    def get_answer_min(self, key):
-        schema = self.dict()
+    @classmethod
+    def get_answer_min(cls, key):
+        schema = cls.dict()
         return schema[key]['answer_min']
     
-    def get_answer_max(self, key):
-        schema = self.dict()
+    @classmethod
+    def get_answer_max(cls, key):
+        schema = cls.dict()
         return schema[key]['answer_max']
     
     def get_system_prompt(self):
@@ -198,64 +95,159 @@ class Schema:
         """
 
     def get_answer_type(self, key):
-        return self.schema.model_fields[key].annotation
+        return self.model_fields[key].annotation
     
-    def get_answer_object(self, key):
-        object = self.schema.model_fields[key].metadata[0]
+
+    @classmethod
+    def get_answer_object(cls, key):
+        object = cls.model_fields[key].metadata[0]
         return object
     
-    def get_default_schema(self):
+    @classmethod
+    def get_default_schema(cls):
         metadata = {}
-        for key in self.columns:
+        for key in cls.get_attributes():
             metadata[key] = None
-        schema = self.schema.model_validate(metadata)
+        schema = cls.model_validate(metadata)
         return schema.model_dump()
     
-    def get_default(self, key):
-        type = self.get_answer_object(key)
+    @classmethod
+    def get_default(cls, key):
+        type = cls.get_answer_object(key)
         return type.get_default()
     
-    def evaluate_length(self, metadata):
+    def evaluate_length(self):
         accuracy = 0
-        for key, value in self.schema.model_fields.items():
-            type  = self.get_answer_type(key)
-            if type == List:
-                if len(metadata[key]) >= self.get_answer_min(key) and len(metadata[key]) <= self.get_answer_max(key):
-                    accuracy += 1
-                else:
-                    raise()
-            elif type == Str:
-                length_metric = len(metadata[key].split(' ')) 
-                if self.get_options(key) or length_metric >= self.get_answer_min(key) and length_metric <= self.get_answer_max(key):
-                    accuracy += 1
-                else:
-                    raise()
-            else:
-                accuracy += 1
-        return accuracy / len(self.columns)
+        metadata = self.model_dump()
+        for key in self.get_attributes():
+            type  = self.get_answer_object(key)
+            length = type.validate_length(metadata[key])
+            accuracy += length
+        return accuracy / len(self.get_attributes())
+    
+    def compare_with(self, gold_metadata, return_metrics_only = False):
+        results = {}
+        for key in gold_metadata.keys():
+            if key in ['annotations_from_paper']:
+                continue
+            try:
+                results[key] = int(self.match_attributes(key, gold_metadata[key], self.model_dump()[key]))
+            except:
+                print(key, gold_metadata[key], self.model_dump()[key])
+                raise ValueError(f"Invalid type: {type(gold_metadata[key])}")
+        annotations_from_paper = gold_metadata['annotations_from_paper']
+        annotated_attributes = [key for key in gold_metadata.keys() if key in annotations_from_paper and annotations_from_paper[key]]
+        precision = sum(results.values()) / len(results)
+        recall = sum([value for key, value in results.items() if key in annotated_attributes]) / len(annotated_attributes)
+        f1 = 2 * precision * recall / (precision + recall)
+        results['precision'] = precision
+        results['recall'] = recall
+        results['f1'] = f1
+        if return_metrics_only:
+            return {'precision': precision, 'recall': recall, 'f1': f1, 'length': self.evaluate_length()}
+        return results
 
     def match_attributes(self, key, attr1, attr2):
         t = self.get_answer_type(key)   
         return t.compare(attr1, attr2)
     
-    def fill_missing(self, metadata):
-        print('Warning: fill_missing is not implemented for schema', self.schema_name)
-        return metadata
-    
-    def get_random(self, key):
-        object = self.get_answer_object(key)
+    @classmethod
+    def get_random(cls, key):
+        object = cls.get_answer_object(key)
         return object.get_random()
     
-    def generate_metadata(self, method = 'random'):
+    @classmethod
+    def generate_metadata(cls, method = 'random'):
         metadata = {}
-        for key, value in self.schema.model_fields.items():
+        for key in cls.get_attributes():
             if method == 'random':
-                metadata[key] = self.get_random(key)
+                metadata[key] = cls.get_random(key)
             elif method == 'default':
-                metadata[key] = self.get_default(key)
+                metadata[key] = cls.get_default(key)
             else:
                 raise ValueError(f"Invalid method: {method}")
-        return metadata
+        return cls(metadata = metadata)
+
+    
+    @model_validator(mode='before') # validate based on the type of the field
+    def validate_a(cls, data):
+        for key, value in cls.model_fields.items():
+            type = value.metadata[0]
+            data[key] = type.get_default() if data[key] is None else data[key]
+        
+        return data
+       
+
+class Subset(Schema):
+    Name: Field(Str, 1, 5)
+    Volume: Field(Float, 0)
+    Unit: Field(Str, 1, 1, units)
+
+class ArSubset(Subset):
+    Dialect: Field(Str, 1, 1, dialects)
+
+class MultiSubset(Subset):
+    Language: Field(Str, 2, 30, languages)
+
+class DatasetSchema(Subset):
+    model_config = ConfigDict(extra='forbid', strict=False)
+    License: Field(Str, 1, 1, licenses)
+    Link: Field(URL, 0, 1)
+    HF_Link: Field(URL, 0, 1)
+    Year: Field(Year, 1900, 2025)
+    Domain: Field(List[Str], 1, len(domains), domains)
+    Form: Field(Str, 1, 1, form)
+    Collection_Style: Field(List[Str], 1, len(collection_styles), collection_styles)
+    Description: Field(Str, 0, 50)
+    Ethical_Risks: Field(Str, 1, 1, ethical_risks)
+    Provider: Field(List[Str], 0, 10)
+    Derived_From: Field(List[Str], 0, 10)
+    Paper_Title: Field(Str, 1, 100)
+    Paper_Link: Field(URL, 1, 1)
+    Tokenized: Field(Bool, 1, 1)
+    Host: Field(Str, 1, 1, hosts)
+    Access: Field(Str, 1, 1, access)
+    Cost: Field(Str, 0, 1)
+    Test_Split: Field(Bool, 1, 1)
+    Tasks: Field(List[Str], 1, 5, tasks)
+    Venue_Title: Field(Str, 1, 1)
+    Venue_Type: Field(Str, 1, 1, venue_types)
+    Venue_Name: Field(Str, 0, 10)
+    Authors: Field(List[Str], 0, 100)
+    Affiliations: Field(List[Str], 0, 100)
+    Abstract: Field(Str, 1, 1000)
+
+
+class ArSchema(DatasetSchema):
+    Subsets: Field(List[ArSubset], 0, len(dialects))
+    Dialect: Field(Str, 1, 1, dialects)
+    Language: Field(Str, 1, 1, ['ar', 'multilingual'])
+    Script: Field(Str, 1, 1, ['Arab', 'Latin', 'Arab-Latin'])
+
+class EnSchema(DatasetSchema):
+    Language: Field(Str, 1, 1, ['en', 'multilingual'])
+
+class JpSchema(DatasetSchema):
+    Language: Field(Str, 1, 1, ['jp', 'multilingual'])
+    Script: Field(Str, 1, 1, ['Hiragana', 'Katakana', 'Kanji', 'mixed'])
+
+class RuSchema(DatasetSchema):
+    Language: Field(Str, 1, 1, ['ru', 'multilingual'])
+
+class FrSchema(DatasetSchema):
+    Language: Field(Str, 1, 1, ['fr', 'multilingual'])
+
+class MultiSchema(DatasetSchema):
+    Subsets: Field(List[MultiSubset], 0, len(languages))
+    Language: Field(List[Str], 2, len(languages), languages)
+
+
+def remove_spaces_keys(metadata):
+    new_metadata = {}
+    for key in metadata.keys():
+        new_metadata[key.replace(' ', '_')] = metadata[key]
+    return new_metadata
+
 
 def get_schema(schema_name):
     if schema_name == 'ar':
@@ -274,20 +266,3 @@ def get_schema(schema_name):
         return TestSchema
     else:
         raise ValueError(f"Invalid schema name: {schema_name}")
-
-def validate_metadata(metadata = None, path = None, schema_name = 'ar'):
-    if metadata is None and path is None:
-        raise ValueError('Either metadata or path must be provided')
-    if metadata is None:
-        metadata = json.load(open(path))
-    annotations_from_paper = None
-    if 'annotations_from_paper' in metadata:
-        annotations_from_paper = metadata['annotations_from_paper']
-        del metadata['annotations_from_paper']
-    schema = Schema(schema_name)
-    # assert len(schema.columns) == 32
-    results = schema.validate(metadata)
-    if annotations_from_paper is not None:
-        results['annotations_from_paper'] = remove_spaces_keys(annotations_from_paper)
-        
-    return results

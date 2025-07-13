@@ -13,7 +13,7 @@ from base64 import b64decode
 from datetime import date
 from functools import wraps
 from glob import glob
-from schema import validate_metadata, evaluate_metadata, Schema
+from schema import get_schema
 
 # Third-party imports
 import pandas as pd
@@ -238,17 +238,16 @@ def get_dummy_results():
     return results
 
 
-def get_metadata_human(paper_id, schema_name="ar"):
+def get_metadata_human(paper_id, schema_name="ar", remove_annotations_from_paper=False):
     dataset = eval_datasets[schema_name]["test"]
     for row in dataset:
         if paper_id in row["Paper_Link"]:
-            return row.copy()
+            row = row.copy()
+            if remove_annotations_from_paper:
+                if 'annotations_from_paper' in row:
+                    del row['annotations_from_paper']
+            return row
     raise ()
-
-def get_random_metadata(schema_name="ar"):
-    schema = Schema(schema_name)
-    random_metadata = schema.generate_random_metadata()
-    return random_metadata
 
 def compare_results(rs, show_diff=False, schema="ar"):
     results = {}

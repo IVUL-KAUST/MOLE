@@ -19,6 +19,7 @@ from .utils import get_paper_content_from_docling
 import torch
 from transformers import pipeline
 from .traditional import get_metadata_keyword
+from schema import get_schema
 
 load_dotenv()
 
@@ -146,7 +147,7 @@ def get_metadatav2(
         "output_tokens": 0,
         "cost": 0,
     }
-    schema = Schema(schema_name)
+    schema = get_schema(schema_name)
     for i in range(max_retries):
         predictions = {}
         error = None
@@ -168,7 +169,7 @@ def get_metadatav2(
             else:
                 prompt = f"""
                         Schema Name: {schema_name}
-                        Input Schema: {schema.json()}
+                        Input Schema: {schema.schema()}
                         Paper Text: {paper_text},
                         Output JSON:
                         """
@@ -406,6 +407,8 @@ def run(
         title = get_title_from_link(link)
     else:
         title = ""
+
+    schema = get_schema(schema_name)
     
     if paper_pdf is not None and pdf_mode is None:
         pdf_mode = "plumber"
@@ -569,7 +572,9 @@ def run(
                     metadata = get_metadata_human(
                         paper_id=paper_id,
                         schema_name=schema_name,
+                        remove_annotations_from_paper=True
                     )
+                    metadata = schema(metadata = metadata)
                 elif "keyword" in model_name.lower():
                     metadata = get_metadata_keyword(
                         paper_text, schema_name=schema_name
@@ -579,7 +584,7 @@ def run(
                         paper_text, schema_name=schema_name
                     )
                 elif "baseline" in model_name.lower():
-                    metadata = Schema(schema_name).generate_metadata(method=model_name.split("-")[-1])
+                    metadata = schema.generate_metadata(method=model_name.split("-")[-1])
                 else:
                     base_model_path = save_path.replace("-browsing", "")
                     if browse_web and os.path.exists(base_model_path):
@@ -622,22 +627,12 @@ def run(
                             }
                         else:
                             message = None
-                try:
-                    metadata = validate_metadata(metadata, schema_name=schema_name)
-                except Exception as e:
-                    print(metadata)
-                    raise('Metadata is not valid')
 
                 show_info("🔍 Evaluating Metadata ...")
                 results = {}
-                results["metadata"] = metadata
+                results["metadata"] = metadata.json()
                 gold_metadata = get_metadata_human(paper_id=paper_id, schema_name=schema_name)
-                evaluation_results = evaluate_metadata(
-                    gold_metadata,
-                    metadata,
-                    schema_name=schema_name,
-                    return_metrics_only=True
-                )
+                evaluation_results = metadata.compare_with(gold_metadata, return_metrics_only=True)
                 results["validation"] = evaluation_results
                 show_info(
                     f"📊 precision: {evaluation_results['precision']*100:.2f} %, recall: {evaluation_results['recall']*100:.2f} %, f1: {evaluation_results['f1']*100:.2f} %",
@@ -663,7 +658,6 @@ def run(
                     "keywords": keywords,
                     "link": article_url,
                 }
-                results["ratio_filling"] = compute_filling(metadata)
                 results["error"] = error
                 try:
                     with open(save_path, "w") as outfile:

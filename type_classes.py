@@ -1,3 +1,5 @@
+# type: ignore
+
 from pydantic import BaseModel, GetCoreSchemaHandler, model_validator
 from pydantic_core import CoreSchema
 from typing import Any, Annotated
@@ -5,19 +7,20 @@ from dataclasses import dataclass
 import random
 import string
 
+MAX_INT = 1000000000000000000
 @dataclass(frozen=True)
 class Constraints:
     answer_min: int
-    answer_max: int = 1000
+    answer_max: int = MAX_INT
     pattern: str = None
     options: list[str] = None
 
-def Field(field_type, answer_min=0, answer_max=1000, options=None):
+def Field(field_type, answer_min=0, answer_max=MAX_INT, options=None):
     return Annotated[field_type, field_type(answer_min=answer_min, answer_max=answer_max, options=options)]
 
 class BaseType:
     base_type = None
-    def __init__(self, answer_min=0, answer_max=1000, options=None, field_names=None):
+    def __init__(self, answer_min=0, answer_max=MAX_INT, options=None, field_names=None):
         self.answer_min = answer_min
         self.answer_max = answer_max
         self.options = options
@@ -50,6 +53,15 @@ class Float(BaseType):
     def get_type(self):
         return 'float'
     
+    def cast(self, value):
+        return float(value)
+    
+    def validate_length(self, value):
+        if value >= self.answer_min and value <= self.answer_max:
+            return 1
+        else:
+            return 0
+    
 class Int(BaseType):
     base_type = int
 
@@ -62,6 +74,12 @@ class Int(BaseType):
     def get_type(self):
         return 'int'
     
+    def validate_length(self, value):
+        if value >= self.answer_min and value <= self.answer_max:
+            return 1
+        else:
+            return 0
+    
 class Bool(BaseType):
     base_type = bool
 
@@ -73,6 +91,10 @@ class Bool(BaseType):
 
     def get_type(self):
         return 'bool'
+
+    def validate_length(self, value):
+        return 1
+    
     
 class Year(BaseType):
     base_type = int
@@ -86,6 +108,9 @@ class Year(BaseType):
     def get_type(self):
         return 'year'
     
+    def validate_length(self, value):
+        return value >= self.answer_min and value <= self.answer_max
+    
 class URL(BaseType):
     base_type = str
 
@@ -97,6 +122,10 @@ class URL(BaseType):
     
     def get_type(self):
         return 'url'
+    
+    def validate_length(self, value):
+        metric = value.split(' ')
+        return len(metric) >= self.answer_min and len(metric) <= self.answer_max
     
 class Str(BaseType):
     base_type = str
@@ -113,6 +142,10 @@ class Str(BaseType):
     
     def get_type(self):
         return 'str'
+    
+    def validate_length(self, value):
+        metric = value.split(' ')
+        return len(metric) >= self.answer_min and len(metric) <= self.answer_max or self.options is not None
     
 class List(BaseType):
     base_type = list
@@ -153,19 +186,22 @@ class List(BaseType):
                     return False
             return True
     
+    def validate_length(self, value):
+        return len(value) >= self.answer_min and len(value) <= self.answer_max
     
 class Cars(BaseModel):
-    Model: Field(Str) # type: ignore
-    Color: Field(Str, options=['Red', 'Blue', 'Green']) # type: ignore
+    Model: Field(Str)
+    Color: Field(Str, options=['Red', 'Blue', 'Green'])
 
 class Person(BaseModel):
-    Age: Field(Int) # type: ignore
-    Name: Field(Str, 1, 5) # type: ignore
-    Hobbies: Field(List[Str], 1, 2, options=['reading', 'swimming', 'coding', 'other']) # type: ignore
-    Cars: Field(List[Cars]) # type: ignore
-    Married: Field(Bool) # type: ignore
-    Website: Field(URL) # type: ignore
-    Salary: Field(Float, 1000, 100000) # type: ignore
+    Age: Field(Int)
+    Name: Field(Str, 1, 5)
+    Hobbies: Field(List[Str], 1, 2, options=['reading', 'swimming', 'coding', 'other'])
+    Cars: Field(List[Cars])
+    Married: Field(Bool)
+    Website: Field(URL)
+    Salary: Field(Float, 1000, 100000)
+    
     @model_validator(mode='before') # validate based on the type of the field
     def validate_a(cls, data):
         for key, value in cls.model_fields.items():

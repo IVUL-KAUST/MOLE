@@ -1,10 +1,8 @@
-import json
-from schema import Schema
-from schema import validate_metadata, evaluate_metadata
+# type: ignore
 
-# schema = Schema(schema_name = 'ar')
-# print(schema.json())
-# raise()
+from schema import Schema
+from pydantic import Field
+from type_classes import *
 
 gold_metadata = {
     "Name": "ahmad",
@@ -22,19 +20,31 @@ gold_metadata = {
         "Married": 1
     }
 }
-schema = Schema(schema_name = 'test')
-print(schema.json())
+class Person(Schema):
+    Name: Field(Str, 1, 1)
+    Age: Field(Int, 1, 100)
 
-validated_metadata = validate_metadata(path = 'testfiles/test1.json', schema_name = 'test')
-evaluation_results = evaluate_metadata(gold_metadata, validated_metadata, schema_name = 'test')
+class Parent(Person):
+    Website: Field(URL, 1, 1)
+    Hobbies: Field(List[Str], 1, 4)
+    Married: Field(Bool, 1, 1)
+    Sons: Field(List[Person], 0, 3)
+
+print(Parent.schema())
+predicted_metadata = Parent(
+    path = 'testfiles/test1.json'
+)
+evaluation_results = predicted_metadata.compare_with(gold_metadata)
 
 for m in evaluation_results:
     assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
 print('✅ passed test1')
 
 
-validated_metadata = validate_metadata(path = 'testfiles/test2.json', schema_name = 'test')
-evaluation_results = evaluate_metadata(gold_metadata, validated_metadata, schema_name = 'test', return_metrics_only=True)
+validated_metadata = Parent(
+    path = 'testfiles/test2.json'
+)
+evaluation_results = validated_metadata.compare_with(gold_metadata, return_metrics_only=True)
 
 for m in evaluation_results:
     if m in ['precision', 'recall', 'f1']:
@@ -44,17 +54,23 @@ for m in evaluation_results:
 
 print('✅ passed test2')
 
-validated_metadata = validate_metadata(path = 'testfiles/test3.json', schema_name = 'test')
-assert validated_metadata['Age'] == 0, '❌ Age should be 0 but got {validated_metadata["Age"]}'
+validated_metadata = Parent(
+    path = 'testfiles/test3.json'
+)
+assert validated_metadata.model_dump()['Age'] == 0, '❌ Age should be 0 but got {validated_metadata["Age"]}'
 print('✅ passed test3')
 
-validated_metadata = validate_metadata(path = 'testfiles/test4.json', schema_name = 'test')
-evaluation_results = evaluate_metadata(gold_metadata, validated_metadata, schema_name = 'test', return_metrics_only=True)
-assert abs(evaluation_results['length'] - 1.0) < 0.01, f'❌ length should be 1.0 but got {evaluation_results["length"]}'
+validated_metadata = Parent(
+    path = 'testfiles/test4.json'
+)
+evaluation_results = validated_metadata.compare_with(gold_metadata, return_metrics_only=True)
+assert abs(evaluation_results['length'] - 0.83) < 0.01, f'❌ length should be 0.83 but got {evaluation_results["length"]}'
 print('✅ passed test4')
 
-validated_metadata = validate_metadata(path = 'testfiles/test5.json', schema_name = 'test')
-evaluation_results = evaluate_metadata(gold_metadata, validated_metadata, schema_name = 'test')
+validated_metadata = Parent(
+    path = 'testfiles/test5.json'
+)
+evaluation_results = validated_metadata.compare_with(gold_metadata)
 
 for m in evaluation_results:
     assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
@@ -82,8 +98,10 @@ gold_metadata = {
 }
 
 
-validated_metadata = validate_metadata(path = 'testfiles/test6.json', schema_name = 'test')
-evaluation_results = evaluate_metadata(gold_metadata, validated_metadata, schema_name = 'test')
+validated_metadata = Parent(
+    path = 'testfiles/test6.json'
+)
+evaluation_results = validated_metadata.compare_with(gold_metadata)
 
 for m in evaluation_results:
     assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
@@ -106,8 +124,12 @@ default_metadata = {
         "Married": 1
     }
 }
-predicted_metadata = schema.generate_metadata(method = 'default')
-evaluation_results = evaluate_metadata(default_metadata, predicted_metadata, schema_name = 'test', return_metrics_only=True)
+
+predicted_metadata = Parent.generate_metadata(method = 'default')
+evaluation_results = predicted_metadata.compare_with(default_metadata, return_metrics_only=True)
 for m in evaluation_results:
-    assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
+    if m == 'length':
+        assert abs(evaluation_results[m] - 0.66) < 0.01, f'❌ {m} value should be 0.66 but got {evaluation_results[m]}'
+    else:
+        assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
 print('✅ passed test7')
