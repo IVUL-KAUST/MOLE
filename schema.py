@@ -78,7 +78,7 @@ class Schema(BaseModel):
         schema = cls.dict()
         return schema[key]['answer_max']
     
-    def get_system_prompt(self):
+    def get_system_prompt():
         return f"""
         You are a professional metadata extractor of datasets from research papers. 
         You will be provided 'Paper Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
@@ -148,7 +148,7 @@ class Schema(BaseModel):
         return results
 
     def match_attributes(self, key, attr1, attr2):
-        t = self.get_answer_type(key)   
+        t = self.get_answer_object(key)   
         return t.compare(attr1, attr2)
     
     @classmethod
