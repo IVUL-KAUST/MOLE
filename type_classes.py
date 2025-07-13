@@ -6,6 +6,7 @@ from typing import Any, Annotated
 from dataclasses import dataclass
 import random
 import string
+from Levenshtein import distance as levenshtein_distance
 
 MAX_INT = 1000000000000000000
 @dataclass(frozen=True)
@@ -61,6 +62,9 @@ class Float(BaseType):
             return 1
         else:
             return 0
+        
+    def compare(self, attr1, attr2):
+        return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2))
     
 class Int(BaseType):
     base_type = int
@@ -80,6 +84,12 @@ class Int(BaseType):
         else:
             return 0
     
+    def compare(self, attr1, attr2):
+        if attr1 == attr2: 
+            return 1
+        else:
+            return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2))
+    
 class Bool(BaseType):
     base_type = bool
 
@@ -96,36 +106,12 @@ class Bool(BaseType):
         return 1
     
     
-class Year(BaseType):
-    base_type = int
-
-    def get_random(self):
-        return random.randint(self.answer_min, self.answer_max)
-    
+class Year(Int):
     def get_default(self):
         return 2025
     
     def get_type(self):
         return 'year'
-    
-    def validate_length(self, value):
-        return value >= self.answer_min and value <= self.answer_max
-    
-class URL(BaseType):
-    base_type = str
-
-    def get_random(self):
-        return 'https://www.{}.com'.format(random.choice(string.ascii_letters))
-
-    def get_default(self):
-        return ''
-    
-    def get_type(self):
-        return 'url'
-    
-    def validate_length(self, value):
-        metric = value.split(' ')
-        return len(metric) >= self.answer_min and len(metric) <= self.answer_max
     
 class Str(BaseType):
     base_type = str
@@ -146,6 +132,20 @@ class Str(BaseType):
     def validate_length(self, value):
         metric = value.split(' ')
         return len(metric) >= self.answer_min and len(metric) <= self.answer_max or self.options is not None
+    
+    def compare(self, attr1, attr2):
+        if len(attr1) == len(attr2) == 0:
+            return 1
+        else:
+            return 1 - levenshtein_distance(attr1, attr2) / max(len(attr1), len(attr2))
+    
+class URL(Str):
+    def get_random(self):
+        return 'https://www.{}.com'.format(random.choice(string.ascii_letters))
+    
+    def get_type(self):
+        return 'url'
+    
     
 class List(BaseType):
     base_type = list
@@ -178,13 +178,13 @@ class List(BaseType):
     
     @classmethod
     def compare(cls, attr1, attr2):
-        if len(attr1) != len(attr2):
-            return False
-        else:
-            for item in attr1:
-                if item not in attr2:
-                    return False
-            return True
+        len_match = 0
+        if len(attr1) == len(attr2) == 0:
+            return 1
+        for item in attr1:
+            if item in attr2:
+                len_match += 1
+        return len_match / max(len(attr1), len(attr2))
     
     def validate_length(self, value):
         return len(value) >= self.answer_min and len(value) <= self.answer_max
