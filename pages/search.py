@@ -574,7 +574,6 @@ def run(
                         schema_name=schema_name,
                         remove_annotations_from_paper=True
                     )
-                    metadata = schema(metadata = metadata)
                 elif "keyword" in model_name.lower():
                     metadata = get_metadata_keyword(
                         paper_text, schema_name=schema_name
@@ -584,7 +583,7 @@ def run(
                         paper_text, schema_name=schema_name
                     )
                 elif "baseline" in model_name.lower():
-                    metadata = schema.generate_metadata(method=model_name.split("-")[-1])
+                    metadata = schema.generate_metadata(method=model_name.split("-")[-1]).json()
                 else:
                     base_model_path = save_path.replace("-browsing", "")
                     if browse_web and os.path.exists(base_model_path):
@@ -627,18 +626,15 @@ def run(
                             }
                         else:
                             message = None
-
-                show_info("🔍 Evaluating Metadata ...")
+                show_info("🔍 Validating Metadata ...")
+                metadata = schema(metadata = metadata)
                 results = {}
                 results["metadata"] = metadata.json()
                 gold_metadata = get_metadata_human(paper_id=paper_id, schema_name=schema_name)
                 evaluation_results = metadata.compare_with(gold_metadata, return_metrics_only=True)
                 results["validation"] = evaluation_results
                 show_info(
-                    f"📊 precision: {evaluation_results['precision']*100:.2f} %, recall: {evaluation_results['recall']*100:.2f} %, f1: {evaluation_results['f1']*100:.2f} %",
-                )
-                show_info(
-                    f"📊 Lengths Score: {evaluation_results['length']*100:.2f} %",
+                    f"📊 precision: {evaluation_results['precision']*100:.2f} %, recall: {evaluation_results['recall']*100:.2f} %, f1: {evaluation_results['f1']*100:.2f} %, length: {evaluation_results['length']*100:.2f} %",
                 )
                 try:
                     results["cost"] = cost
