@@ -26,7 +26,7 @@ class Person(Schema):
 
 class Parent(Person):
     Website: Field(URL, 1, 1)
-    Hobbies: Field(List[Str], 1, 4)
+    Hobbies: Field(List[Str], 1, 4, options = ['reading', 'swimming', 'coding'])
     Married: Field(Bool, 1, 1)
     Sons: Field(List[Person], 0, 3)
 
