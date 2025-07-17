@@ -54,6 +54,42 @@ class Schema(BaseModel):
         return json.dumps(schema_json, indent=4)
     
     @classmethod
+    def schema_to_template(cls):
+        # https://github.com/numindai/nuextract/tree/main
+        type_mapper = {
+            "str": "string",
+            "int": "integer",
+            "float": "number",
+            "list[str]": "multi-label"
+        }
+        schema_json = json.loads(cls.schema())
+        template = {}
+        for key in schema_json.keys():
+            type = schema_json[key]['answer_type']
+            if 'options' in schema_json[key]:
+                options = schema_json[key]['options']
+            else:
+                options = None
+            if type in ['str']:
+                template[key] = options if options is not None else type_mapper[type]
+            if type == 'int':
+                template[key] = "integer"
+            if type == 'float':
+                template[key] = "number"
+            if type == 'list[str]':
+                template[key] = [options] if options is not None else type_mapper[type]
+            if 'dict' in type:
+                columns = type.split('dict[')[1].split(']')[0].split(',')
+                columns = [column.strip() for column in columns]
+                results = {}
+                for column in columns:
+                    if column in schema_json:
+                        results[column] = type_mapper[schema_json[column]['answer_type']]
+                template[key] = [results]
+                    
+        return json.dumps(template, indent=4)
+    
+    @classmethod
     def dict(cls):
         return json.loads(cls.schema())
     

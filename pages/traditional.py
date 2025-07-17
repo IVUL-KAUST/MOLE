@@ -1,5 +1,9 @@
 from schema import get_schema
 import re
+import json
+from openai import OpenAI
+from dotenv import load_dotenv
+load_dotenv()
 
 def get_metadata_keyword(
     paper_text,
@@ -118,3 +122,40 @@ def get_metadata_keyword(
         
     return predictions
 
+
+def convert_to_schema(
+    num_template,
+    schema_name = "ar",
+):
+    schema_json = get_schema(schema_name).schema() 
+    
+    
+
+def get_metadata_nu_extract(
+    paper_text,
+    schema_name = "ar",
+):
+    schema = get_schema(schema_name)
+    openai_api_key = "EMPTY"
+    openai_api_base = "http://localhost:8000/v1"
+    client = OpenAI(
+    api_key=openai_api_key,
+    base_url=openai_api_base,
+    )
+
+    chat_response = client.chat.completions.create(
+        model="numind/NuExtract-2.0-8B",
+        temperature=0,
+        messages=[
+            {
+                "role": "user", 
+                "content": [{"type": "text", "text": paper_text}],
+            },
+        ],
+        extra_body={
+            "chat_template_kwargs": {
+                "template": json.dumps(json.loads("""{\"store\": \"verbatim-string\"}"""), indent=4)
+            },
+        }
+    )
+    return chat_response
