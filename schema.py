@@ -60,6 +60,8 @@ class Schema(BaseModel):
             "str": "string",
             "int": "integer",
             "float": "number",
+            "url": "string",
+            "year": "integer",
             "list[str]": "multi-label"
         }
         schema_json = json.loads(cls.schema())
@@ -70,12 +72,14 @@ class Schema(BaseModel):
                 options = schema_json[key]['options']
             else:
                 options = None
-            if type in ['str']:
+            if type in ['str', 'url', 'year']:
                 template[key] = options if options is not None else type_mapper[type]
             if type == 'int':
                 template[key] = "integer"
             if type == 'float':
                 template[key] = "number"
+            if type == 'bool':
+                template[key] = [True, False]
             if type == 'list[str]':
                 template[key] = [options] if options is not None else type_mapper[type]
             if 'dict' in type:
