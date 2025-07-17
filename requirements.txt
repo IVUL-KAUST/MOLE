@@ -12,4 +12,5 @@ plotext==5.3.2
 uvicorn==0.34.2
 fastapi==0.115.12
 python-multipart==0.0.20
-Levenshtein==0.27.1 
+Levenshtein==0.27.1
+acl-anthology
