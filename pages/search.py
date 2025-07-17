@@ -18,7 +18,7 @@ from openai import OpenAI
 from .utils import get_paper_content_from_docling
 import torch
 from transformers import pipeline
-from .traditional import get_metadata_keyword
+from .traditional import get_metadata_keyword, get_metadata_nu_extract
 from schema import get_schema
 
 load_dotenv()
@@ -584,6 +584,10 @@ def run(
                     )
                 elif "baseline" in model_name.lower():
                     metadata = schema.generate_metadata(method=model_name.split("-")[-1]).json()
+                elif "nu" in model_name.lower():
+                    metadata = get_metadata_nu_extract(
+                        paper_text, model_name=model_name, schema_name=schema_name
+                    )   
                 else:
                     base_model_path = save_path.replace("-browsing", "")
                     if browse_web and os.path.exists(base_model_path):

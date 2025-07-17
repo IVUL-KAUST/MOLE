@@ -3,6 +3,7 @@ import re
 import json
 from openai import OpenAI
 from dotenv import load_dotenv
+from utils import read_json
 load_dotenv()
 
 def get_metadata_keyword(
@@ -132,10 +133,13 @@ def convert_to_schema(
     
 
 def get_metadata_nu_extract(
-    paper_text,
+    paper_text = "",
+    model_name = "numind/NuExtract-2.0-8B",
     schema_name = "ar",
 ):
-    schema = get_schema(schema_name)
+    model_name = model_name.replace("_", "/")
+    model_name = model_name.replace("-browsing", "")
+    template = get_schema(schema_name).schema_to_template()
     openai_api_key = "EMPTY"
     openai_api_base = "http://localhost:8000/v1"
     client = OpenAI(
@@ -144,7 +148,7 @@ def get_metadata_nu_extract(
     )
 
     chat_response = client.chat.completions.create(
-        model="numind/NuExtract-2.0-8B",
+        model=model_name,
         temperature=0,
         messages=[
             {
@@ -154,8 +158,10 @@ def get_metadata_nu_extract(
         ],
         extra_body={
             "chat_template_kwargs": {
-                "template": json.dumps(json.loads("""{\"store\": \"verbatim-string\"}"""), indent=4)
+                "template": json.dumps(json.loads(template), indent=4)
             },
         }
     )
-    return chat_response
+
+    predictions = read_json(chat_response.choices[0].message.content)
+    return predictions
