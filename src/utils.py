@@ -198,20 +198,11 @@ def setup_logger() -> logging.Logger:
 
 def get_schema_from_path(json_path):
     id = get_id_from_path(json_path)
-    if id in eval_datasets_ids["ar"]["test"]:
-        return "ar"
-    elif id in eval_datasets_ids["en"]["test"]:
-        return "en"
-    elif id in eval_datasets_ids["jp"]["test"]:
-        return "jp"
-    elif id in eval_datasets_ids["fr"]["test"]:
-        return "fr"
-    elif id in eval_datasets_ids["ru"]["test"]:
-        return "ru"
-    elif id in eval_datasets_ids["multi"]["test"]:
-        return "multi"
-    else:
-        raise Exception(f"Schema not found for {id}")
+    for schema in ['ar', 'en', 'jp', 'fr', 'ru', 'multi']:
+        if id in get_schema(schema).get_eval_datasets():
+            return schema
+    raise Exception(f"Schema not found for {id}")
+
 
 
 from collections import Counter
@@ -343,7 +334,8 @@ def get_dummy_results():
 
 
 def get_metadata_human(paper_id, schema_name="ar", remove_annotations_from_paper=False):
-    dataset = eval_datasets[schema_name]["test"]
+    schema = get_schema(schema_name)
+    dataset = schema.get_eval_datasets(split = 'test')
     for row in dataset:
         if paper_id in row["Paper_Link"]:
             row = row.copy()

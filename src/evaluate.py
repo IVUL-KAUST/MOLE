@@ -3,7 +3,7 @@ from tabulate import tabulate  # type: ignore
 from utils import fix_arxiv_link
 from constants import *
 import numpy as np
-
+from schema import get_schema
 if __name__ == "__main__":
     args = create_args()
     metric_results = {}
@@ -17,12 +17,13 @@ if __name__ == "__main__":
         paper_links = []
         years = []
         links = []
+        
         if args.masader_validate:
-            use_split = "valid"
-            dataset = eval_datasets[args.schema_name][use_split]
-        else:
-            use_split = "test"
-            dataset = eval_datasets[args.schema_name][use_split]
+            use_split = 'valid'
+            dataset = get_schema(args.schema_name).get_eval_datasets(split = 'valid')
+        else: 
+            use_split = 'test'
+            dataset = get_schema(args.schema_name).get_eval_datasets(split = 'test')
         
         for x in dataset:
             titles.append(str(x["Paper_Title"]))

@@ -5,6 +5,7 @@ from pydantic import model_validator
 import json
 import random
 from type_classes import *
+from glob import glob
 random.seed(42)
 ANSWER_MAX = 1000
 
@@ -34,6 +35,18 @@ class Schema(BaseModel):
             raise ValueError('Either path or metadata must be provided')
         super().__init__(**metadata)
 
+    @classmethod
+    def get_schema_name(cls):
+        return cls.__name__.replace('Schema', '').lower()
+    
+    @classmethod
+    def get_eval_datasets(cls, split = 'test'):
+        datasets = []
+        for file in glob(f'evals/{cls.get_schema_name()}/{split}/**.json'):
+            data = json.load(open(file))
+            datasets.append(data)
+        return datasets
+    
     @classmethod
     def get_attributes(cls):
         return [key for key in cls.model_fields.keys() if key not in ['annotations_from_paper']]
