@@ -2,7 +2,7 @@
 import os
 from glob import glob
 from plots import remap_names
-from utils import get_id_from_path
+from src.utils import get_id_from_path
 import shutil
 
 files = glob('static/results_latex/**/**/**.json')

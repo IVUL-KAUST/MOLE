@@ -15,10 +15,10 @@ import json
 import shutil
 from litellm import completion
 from openai import OpenAI
-from .utils import get_paper_content_from_docling
+from utils import get_paper_content_from_docling
 import torch
 from transformers import pipeline
-from .traditional import get_metadata_keyword, get_metadata_nu_extract
+from traditional import get_metadata_keyword, get_metadata_nu_extract
 from schema import get_schema
 
 load_dotenv()

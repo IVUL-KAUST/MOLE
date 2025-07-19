@@ -1,7 +1,7 @@
 #type: ignore
 import json
 from openai import OpenAI
-from schema import Schema, Field, Str, Int, URL, Bool, List, ArSchema, RuSchema
+from src.schema import Schema, Field, Str, Int, URL, Bool, List, ArSchema, RuSchema
 from pages.search import extract_paper_text
 openai_api_key = "EMPTY"
 openai_api_base = "http://localhost:8000/v1"

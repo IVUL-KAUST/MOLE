@@ -1,5 +1,5 @@
 from fastapi import FastAPI, UploadFile, File, Form # type: ignore
-from pages.search import run
+from src.search import run
 import json
 
 app = FastAPI()

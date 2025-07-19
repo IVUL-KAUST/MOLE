@@ -1,7 +1,7 @@
 from glob import glob
 import os
 import json
-from utils import get_arxiv_id
+from src.utils import get_arxiv_id
 
 files = glob("MagedAnnotations/*.json")
 os.makedirs("MagedAnnotations_updated", exist_ok=True)

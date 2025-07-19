@@ -1,4 +1,4 @@
-from pages.search import run, create_args
+from search import run, create_args
 from tabulate import tabulate  # type: ignore
 from utils import fix_arxiv_link
 from constants import *

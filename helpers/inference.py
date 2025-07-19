@@ -1,6 +1,6 @@
-from  pages.search import run
-from schema import Schema, Attribute
-from schema import Str, URL, Int, Float, Bool, List, Dict
+from  src.search import run
+from src.schema import Schema, Attribute
+from src.schema import Str, URL, Int, Float, Bool, List, Dict
 
 link = 'https://arxiv.org/pdf/2402.03177'
 custom_schema = Schema(schema_name='custom', schema_path='schema/custom.json')

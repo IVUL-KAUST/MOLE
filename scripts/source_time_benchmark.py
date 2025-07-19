@@ -19,12 +19,12 @@ from dotenv import load_dotenv
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import necessary functions from the project
-from utils import setup_logger
-from constants import eval_datasets_ids
+from src.utils import setup_logger
+from src.constants import eval_datasets_ids
 
 # Import the extract_paper_text function directly from process.py
-from pages.search import extract_paper_text
-from pages.utils import get_paper_content_from_docling
+from src.search import extract_paper_text
+from src.utils import get_paper_content_from_docling
 
 # Load environment variables and set up logger
 load_dotenv()
@@ -74,7 +74,7 @@ def parse_arguments():
 
 def download_paper(paper_id, download_path="static/papers/"):
     """Download paper from arXiv if not already downloaded"""
-    from search_arxiv import ArxivSourceDownloader
+    from src.search_arxiv import ArxivSourceDownloader
     
     # Check if paper already exists
     paper_path = f"{download_path}/{paper_id}"

@@ -1,7 +1,7 @@
 import argparse
 import glob
 import os
-from constants import eval_datasets_ids
+from src.constants import eval_datasets_ids
 
 
 def main():

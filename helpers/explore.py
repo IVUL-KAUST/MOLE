@@ -3,9 +3,9 @@ import os
 import json
 from glob import glob
 import pandas as pd
-from utils import *
+from src.utils import *
 import numpy as np
-from constants import TEST_DATASETS_IDS, VALID_DATASETS_IDS
+from src.constants import TEST_DATASETS_IDS, VALID_DATASETS_IDS
 
 st.set_page_config(layout="wide")
 
