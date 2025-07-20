@@ -123,15 +123,6 @@ def get_metadata_keyword(
         
     return predictions
 
-
-def convert_to_schema(
-    num_template,
-    schema_name = "ar",
-):
-    schema_json = get_schema(schema_name).schema() 
-    
-    
-
 def get_metadata_nu_extract(
     paper_text = "",
     model_name = "numind/NuExtract-2.0-8B",
