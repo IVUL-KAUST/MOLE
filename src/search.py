@@ -5,19 +5,13 @@ from search_arxiv import ArxivSearcher, ArxivSourceDownloader
 import json
 import pdfplumber
 from dotenv import load_dotenv
-from utils import *
+from constants import non_browsing_models
 import argparse
-import streamlit as st  # type: ignore
-from constants import *
 from datetime import datetime
 import time
-import json
 import shutil
-from litellm import completion
 from openai import OpenAI
-from utils import get_paper_content_from_docling
-import torch
-from transformers import pipeline
+from utils import setup_logger, read_json, get_metadata_human
 from traditional import get_metadata_keyword, get_metadata_nu_extract
 from schema import get_schema
 
