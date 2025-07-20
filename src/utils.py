@@ -28,10 +28,10 @@ random.seed(0)
 import os
 import base64
 import requests
-from docling.document_converter import DocumentConverter
-from docling.datamodel.base_models import InputFormat
-from docling.datamodel.pipeline_options import PdfPipelineOptions, TableFormerMode
-from docling.document_converter import PdfFormatOption
+# from docling.document_converter import DocumentConverter
+# from docling.datamodel.base_models import InputFormat
+# from docling.datamodel.pipeline_options import PdfPipelineOptions, TableFormerMode
+# from docling.document_converter import PdfFormatOption
 
 
 def get_paper_content_from_docling(paper_path, output_mode="markdown"):
