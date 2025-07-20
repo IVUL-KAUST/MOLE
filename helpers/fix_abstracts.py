@@ -9,6 +9,8 @@ files = glob("evals/**/test/*.json")
 
 def get_arxiv_abstract_from_pdf_link(pdf_url):
     # Extract arXiv ID from the PDF link
+    if '.pdf' not in pdf_url:
+        pdf_url = pdf_url + ".pdf"
     match = re.search(r'arxiv\.org/pdf/(\d{4}\.\d{4,5})(v\d+)?\.pdf', pdf_url)
     if not match:
         raise ValueError("Invalid arXiv PDF URL")
@@ -28,15 +30,16 @@ def get_arxiv_abstract_from_pdf_link(pdf_url):
     return abstract
 
 
-for file in files:
-    with open(file, "r") as f:
-        data = json.load(f)
-    arxiv_link = data["Paper Link"]
-    if '.pdf' not in arxiv_link:
-        arxiv_link = arxiv_link + ".pdf"
-    # get the abstract from the arxiv link
-    abstract = get_arxiv_abstract_from_pdf_link(arxiv_link)
-    abstract = abstract.replace("\n", " ")
-    data["Abstract"] = abstract
-    with open(file, "w") as f:
-        json.dump(data, f, indent=4)
+if __name__ == "__main__":
+    for file in files:
+        with open(file, "r") as f:
+            data = json.load(f)
+        arxiv_link = data["Paper Link"]
+        if '.pdf' not in arxiv_link:
+            arxiv_link = arxiv_link + ".pdf"
+        # get the abstract from the arxiv link
+        abstract = get_arxiv_abstract_from_pdf_link(arxiv_link)
+        abstract = abstract.replace("\n", " ")
+        data["Abstract"] = abstract
+        with open(file, "w") as f:
+            json.dump(data, f, indent=4)
