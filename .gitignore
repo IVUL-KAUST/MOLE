@@ -10,7 +10,13 @@ __pycache__
 *playground*
 pages/__pycache__/*.pyc
 static/**/**/**/paper_text.txt
+static/** 
 custom.bib
 
 .vscode
-static/*
+static/
+results/
+static/
+wandb/
+evals/resource/test/
+*.csv
