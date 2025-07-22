@@ -11,14 +11,11 @@ from datetime import datetime
 import time
 import shutil
 from openai import OpenAI
-from utils import setup_logger, read_json, get_metadata_human
+from utils import read_json, get_metadata_human, show_info, show_warning
 from traditional import get_metadata_keyword, get_metadata_nu_extract
 from schema import get_schema
 
 load_dotenv()
-
-logger = setup_logger()
-
 
 def compute_filling(metadata):
     return len([m for m in metadata if m != ""]) / len(metadata)
@@ -134,7 +131,6 @@ def get_metadatav2(
     use_cot=True,
     few_shot = 0,
     max_retries = 3,
-    title = ""
 ):
     cost = {
         "input_tokens": 0,
@@ -147,18 +143,6 @@ def get_metadatav2(
         error = None
         if paper_text != "":
             if few_shot > 0 :
-                # examples  = ""
-                
-                # for example in schemata[schema]['examples'][:few_shot]:
-                #     examples += example + "\n"
-                # prompt = f"""
-                #         Input Schema: {schema.json()}
-                #         Here are some examples:
-                #         {examples}
-                #         Now, predict for the following paper:
-                #         Paper Text: {paper_text}
-                #         Output JSON:
-                #         """
                 raise Exception("Not implemented")
             else:
                 prompt = f"""
@@ -167,9 +151,6 @@ def get_metadatav2(
                         Paper Text: {paper_text},
                         Output JSON:
                         """
-                # schemata[schema]["system_prompt_with_cot"]
-                # if use_cot
-                # else schemata[schema]["system_prompt"]
                 sys_prompt = schema.get_system_prompt()
             
         elif readme != "":
@@ -179,12 +160,6 @@ def get_metadatav2(
                         Output JSON:
                         """
             sys_prompt = schema.get_system_prompt()
-        elif title != "":
-            prompt = f"""
-                        You have the following Schema: {schema.json()} and the following Title: {title}
-                        Output JSON:
-                        """
-            sys_prompt = schema.get_system_prompt().replace("Paper Text", "Title")
         else:
             raise ValueError("No input provided")
         messages = []
@@ -226,7 +201,7 @@ def get_metadatav2(
             break
         else:
             print(error)
-            logger.warning(f"Failed to get predictions for {model_name}, retrying ...")
+            show_warning(f"Failed to get predictions for {model_name}, retrying ...")
             time.sleep(3)
     time.sleep(3) # sleep before next prediction
     if predictions == {}:
@@ -246,14 +221,6 @@ def get_search_results(keywords, month, year):
         year=year,
         sort_by=arxiv.SortCriterion.SubmittedDate,
     )
-
-
-def show_info(text):
-    logger.info(text)
-
-
-def show_warning(text):
-    logger.warning(text)
 
 
 import hashlib
@@ -283,38 +250,33 @@ def generate_fake_arxiv_pdf(paper_pdf):
     return f"{year}{month}.{generate_pdf_hash(paper_pdf)}"
 
 
-def extract_paper_text(path, use_pdf = False, pdf_mode = "plumber", context_size = "all", use_cached_docling=True):
-    if use_pdf:
-        source_files = glob(f"{path}/paper.pdf")
-    else:
+def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached_docling=True):
+    if format == "tex":
         source_files = glob(f"{path}/**/**.tex", recursive=True)
+    else:
+        source_files = glob(f"{path}/**/paper.pdf", recursive=True)
 
-    if len(source_files) == 0:
-        source_files = glob(f"{path}/paper.pdf")
+    if len(source_files) == 0:  
+        source_files = glob(f"{path}/**/paper.pdf", recursive=True)
+        show_warning(f"🚧 No source files found, using {source_files}")
     
     paper_text = ""
-    if len(source_files) == 0:
-        return paper_text
-
-    if any([file.endswith(".tex") for file in source_files]):
-        source_files = [file for file in source_files if file.endswith(".tex")]
-    else:
-        source_files = [file for file in source_files if file.endswith(".pdf")]
 
     show_info(
         f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...")
+
     paper_text = ""
     for source_file in source_files:
         if source_file.endswith(".tex"):
             paper_text += open(source_file, "r").read()
         elif source_file.endswith(".pdf"):
-            if pdf_mode == "plumber" or pdf_mode is None:
+            if format == "pdf_plumber" or format == "tex":
                 with pdfplumber.open(source_file) as pdf:
                     text_pages = []
                     for page in pdf.pages:
                         text_pages.append(page.extract_text())
                     paper_text += " ".join(text_pages)
-            elif pdf_mode == "docling":
+            elif format == "pdf_docling":
                 # If we need to extract (either no existing file or reading failed)
                 pdf_dir = os.path.dirname(source_file)
                 docling_file_path = os.path.join(pdf_dir, "paper_text_docling.txt")
@@ -350,9 +312,9 @@ def extract_paper_text(path, use_pdf = False, pdf_mode = "plumber", context_size
                             f"⚠️ Failed to save docling extracted text: {str(e)}",
                         )
             else:
-                raise ValueError(f"Invalid pdf_mode: {pdf_mode}")
+                raise ValueError(f"Invalid format: {format}")
         else:
-            logger.error("Not acceptable source file")
+            show_warning("Not acceptable source file")
             continue
     approximate_token_size = len(paper_text.split(" ")) * 1.6
 
@@ -362,314 +324,189 @@ def extract_paper_text(path, use_pdf = False, pdf_mode = "plumber", context_size
         )
         paper_text = paper_text[:150_000]
     # print(len(paper_text))
-    if context_size == "all":
+    if context == "all":
         return paper_text
-    elif context_size == "half":
+    elif context == "half":
         paper_text = paper_text[:len(paper_text)//2]
         print(len(paper_text))
         return paper_text
-    elif context_size == "quarter":
+    elif context == "quarter":
         paper_text = paper_text[:len(paper_text)//4]
         print(len(paper_text))
         return paper_text
     else:
-        raise ValueError(f"Invalid context_size: {context_size}")
+        raise ValueError(f"Invalid context: {context}")
 
 def run(
-    year=None,
-    month=None,
-    keywords="",
-    link="",
-    repo_link="",
-    check_abstract=False,
-    models=["gemini-1.5-flash"],
+    paper_link,
+    model_name,
     overwrite=False,
     browse_web=False,
-    paper_pdf=None,
-    use_split=None,
-    summarize=False,
-    curr_idx=[0, 0],
     schema_name="ar",
     few_shot = 0,
-    results_path = "results_latex",
-    pdf_mode = None,
+    results_path = "results",
     repeat_on_error = False,
-    context_size = "all",
-    use_title = False, 
+    context = "all",
+    format = "pdf_plumber",
 ):
-    if use_title:
-        title = get_title_from_link(link)
-    else:
-        title = ""
 
-    schema = get_schema(schema_name)
-    
-    if paper_pdf is not None and pdf_mode is None:
-        pdf_mode = "plumber"
-    use_pdf = False if pdf_mode is None else True
-
-    if 'dummy' in models:
-        return get_dummy_results()
-    
-
-    keywords = keywords.split(" ")
-
-    if "all" in models:
-        models = MODEL_NAMES.copy()
-
-    if "jury" in models:
-        models.remove("jury")
-        models = models + ["jury"]  # judge is last to be computed
-    elif "composer" in models:
-        models.remove("composer")
-        models = models + ["composer"]  # composer is last to be computed
     model_results = {}
+    schema = get_schema(schema_name)
+    show_info(f"🔍 Using link {paper_link} ...")
 
-    if link != "":
-        show_info(f"🔍 Using arXiv link {link} ...")
-        search_results = [
-            {"summary": "", "article_url": link, "title": title, "published": year}
-        ]
-    elif paper_pdf != None:
-        show_info("🔍 Using uploaded PDF ...")
-        search_results = [
-            {
-                "summary": "",
-                "article_url": "",
-                "title": "",
-                "published": "",
-                "pdf": paper_pdf,
-            }
-        ]
+    downloader = ArxivSourceDownloader(download_path="static/papers/")
+    success, paper_path = downloader.download_paper(paper_link, verbose=True)
+
+    save_path = paper_path.replace("papers", results_path)
+    if few_shot > 0:
+        save_path = f"{save_path}/few_shot/{few_shot}"
+        os.makedirs(save_path, exist_ok=True)
     else:
-        show_info("🔍 Searching arXiv ...")
-        search_results = get_search_results(keywords, month, year)
+        save_path = f"{save_path}/zero_shot"
+        os.makedirs(save_path, exist_ok=True)
+    
+    paper_text = ""
+    start_time = time.time()
+    model_name = model_name.replace("/", "_")
+    paper_text = extract_paper_text(paper_path, context = context, format = format)
+    open(f"{save_path}/paper_text.txt", "w").write(paper_text)
+    show_info(f"Paper is being processed")
+    if browse_web and (model_name in non_browsing_models):
+        show_info(f"Can't browse the web for {model_name}")
 
-    for r in search_results:
-        abstract = r["summary"]
-        article_url = r["article_url"]
-        title = r["title"]
-        arxiv_resource = not ("pdf" in r)
 
-        if arxiv_resource:
-            paper_id = article_url.split("/")[-1]
-            paper_id_no_version = (
-                paper_id.replace("v1", "").replace("v2", "").replace("v3", "")
+    if browse_web and not(model_name in non_browsing_models):
+        model_name = f"{model_name}-browsing"
+    save_path = f"{save_path}/{model_name}-results.json"
+    
+    if (
+        os.path.exists(save_path)
+        and not overwrite
+        and model_name not in ["jury", "composer"]
+    ):
+        show_info(
+            f"📂 Loading saved results {save_path} ...",
+        )
+        results = json.load(open(save_path))
+        model_results[model_name] = results
+        if results["error"] == None or not repeat_on_error:
+            return model_results
+    show_info(
+        f"🧠 {model_name} is extracting Metadata ...",
+    )
+    error = None
+    if "jury" in model_name.lower() or "composer" in model_name.lower():
+        all_results = []
+        base_dir = "/".join(save_path.split("/")[:-1])
+        for file in glob(f"{base_dir}/**.json"):
+            if not any([m in file for m in non_browsing_models]):
+                all_results.append(json.load(open(file)))
+        message, metadata = get_metadata_judge(
+            all_results, type=model_name, schema_name=schema_name
+        )
+    elif "human" in model_name.lower():
+        metadata = get_metadata_human(
+            paper_link=paper_link,
+            schema_name=schema_name,
+            remove_annotations_from_paper=True
+        )
+    elif "keyword" in model_name.lower():
+        metadata = get_metadata_keyword(
+            paper_text, schema_name=schema_name
+        )
+    elif "qa" in model_name.lower():
+        metadata = get_metadata_qa(
+            paper_text, schema_name=schema_name
+        )
+    elif "baseline" in model_name.lower():
+        metadata = schema.generate_metadata(method=model_name.split("-")[-1]).json()
+    elif "nu" in model_name.lower():
+        metadata = get_metadata_nu_extract(
+            paper_text, model_name=model_name, schema_name=schema_name
+        )   
+    else:
+        base_model_path = save_path.replace("-browsing", "")
+        if browse_web and os.path.exists(base_model_path):
+            show_info(
+                "📂 Loading saved results ...",
             )
+            results = json.load(open(base_model_path))
+            metadata = results["metadata"]
+            cost = results["cost"]
         else:
-            paper_id_no_version = generate_fake_arxiv_pdf(paper_pdf)
-            os.makedirs(f"static/papers/{paper_id_no_version}", exist_ok=True)
+            message, metadata, cost, error = get_metadatav2(
+                paper_text, model_name, schema_name=schema_name, few_shot = few_shot
+            )
+        if browse_web:
+            browsing_link = get_repo_link(
+                metadata, repo_link=repo_link
+            )
+            show_info(
+                f"📖 Extracting readme from {browsing_link}",
+            )
+            readme = fetch_repository_metadata(browsing_link)
 
-        re_check = not os.path.isdir(f"static/papers/{paper_id_no_version}")
-        _is_resource = True
-
-        if arxiv_resource:
-            if check_abstract:
-                if re_check:
-                    show_info("🚧 Checking Abstract ...")
-                    _is_resource = is_resource(abstract)
-        else:
-            _is_resource = True
-
-        if _is_resource:
-            if re_check and arxiv_resource:
-                downloader = ArxivSourceDownloader(download_path="static/papers/")
-
-                # Download and extract source files
-                success, paper_path = downloader.download_paper(paper_id, verbose=True)
-                show_info("✨ Cleaning Latex ...")
-                clean_latex(paper_path)
-                shutil.copy(f"{paper_path}/paper.pdf", f"{paper_path}_arXiv/paper.pdf")
-            elif not arxiv_resource:
-                paper_path = f"static/papers/{paper_id_no_version}"
-                with open(f"{paper_path}/paper.pdf", "wb") as temp_file:
-                    shutil.copyfileobj(paper_pdf, temp_file)
-                success = True
-            else:
-                success = True
-                paper_path = f"static/papers/{paper_id_no_version}"
-
-            if not success:
-                continue
-
-            if len(glob(f"{paper_path}_arXiv/*.tex")) > 0 and not use_pdf:
-                paper_path = f"{paper_path}_arXiv"
-            
-            
-
-            save_path = paper_path.replace("papers", results_path).replace("_arXiv", "")
-            if few_shot > 0:
-                save_path = f"{save_path}/few_shot/{few_shot}"
-                os.makedirs(save_path, exist_ok=True)
-            else:
-                save_path = f"{save_path}/zero_shot"
-                os.makedirs(save_path, exist_ok=True)
-            paper_text = ""
-            for model_name in models:
-                start_time = time.time()
-                model_name = model_name.replace("/", "_")
-                if paper_text == "" and not use_title:
-                    paper_text = extract_paper_text(paper_path, use_pdf = use_pdf, pdf_mode = pdf_mode, context_size = context_size)
-                    open(f"{save_path}/paper_text.txt", "w").write(paper_text)
-                curr_idx[0] += 1
-                if curr_idx[1]:
-                    show_info(
-                        f"{curr_idx[0]}/{curr_idx[1]}. paper is being processed"
-                    )
-                else:
-                    show_info(f"Paper is being processed")
-                if browse_web and (model_name in non_browsing_models):
-                    show_info(f"Can't browse the web for {model_name}")
-
-
-                if browse_web and not(model_name in non_browsing_models):
-                    model_name = f"{model_name}-browsing"
-                save_path = f"{save_path}/{model_name}-results.json"
-                
-                if (
-                    os.path.exists(save_path)
-                    and not overwrite
-                    and model_name not in ["jury", "composer"]
-                ):
-                    show_info(
-                        f"📂 Loading saved results {save_path} ...",
-                    )
-                    results = json.load(open(save_path))
-                    if results["error"] == None:
-                        model_results[model_name] = results
-                        continue
-                    else:
-                        if not repeat_on_error:
-                            model_results[model_name] = results
-                            continue
-
-                if model_name not in non_browsing_models:
-                    if summarize:
-                        show_info(f"🗒️  Summarizing the paper ...")
-                        message, paper_text = summarize_paper(paper_text)
-
+            if readme != "":
                 show_info(
-                    f"🧠 {model_name} is extracting Metadata ...",
+                    f"🧠🌐 {model_name} is extracting data using metadata and web ...", 
                 )
-                error = None
-                if "jury" in model_name.lower() or "composer" in model_name.lower():
-                    all_results = []
-                    base_dir = "/".join(save_path.split("/")[:-1])
-                    for file in glob(f"{base_dir}/**.json"):
-                        if not any([m in file for m in non_browsing_models]):
-                            all_results.append(json.load(open(file)))
-                    message, metadata = get_metadata_judge(
-                        all_results, type=model_name, schema_name=schema_name
-                    )
-                elif "human" in model_name.lower():
-                    assert use_split is not None
-                    metadata = get_metadata_human(
-                        paper_id=paper_id,
-                        schema_name=schema_name,
-                        remove_annotations_from_paper=True
-                    )
-                elif "keyword" in model_name.lower():
-                    metadata = get_metadata_keyword(
-                        paper_text, schema_name=schema_name
-                    )
-                elif "qa" in model_name.lower():
-                    metadata = get_metadata_qa(
-                        paper_text, schema_name=schema_name
-                    )
-                elif "baseline" in model_name.lower():
-                    metadata = schema.generate_metadata(method=model_name.split("-")[-1]).json()
-                elif "nu" in model_name.lower():
-                    metadata = get_metadata_nu_extract(
-                        paper_text, model_name=model_name, schema_name=schema_name
-                    )   
-                else:
-                    base_model_path = save_path.replace("-browsing", "")
-                    if browse_web and os.path.exists(base_model_path):
-                        show_info(
-                            "📂 Loading saved results ...",
-                        )
-                        results = json.load(open(base_model_path))
-                        metadata = results["metadata"]
-                        cost = results["cost"]
-                    else:
-                        message, metadata, cost, error = get_metadatav2(
-                            paper_text, model_name, schema_name=schema_name, few_shot = few_shot, title = title
-                        )
-                    if browse_web:
-                        browsing_link = get_repo_link(
-                            metadata, repo_link=repo_link
-                        )
-                        show_info(
-                            f"📖 Extracting readme from {browsing_link}",
-                        )
-                        readme = fetch_repository_metadata(browsing_link)
-
-                        if readme != "":
-                            show_info(
-                                f"🧠🌐 {model_name} is extracting data using metadata and web ...", 
-                            )
-                            message, metadata, browsing_cost, error = get_metadatav2(
-                                model_name=model_name,
-                                readme=readme,
-                                metadata=metadata,
-                                schema_name=schema_name,
-                            )
-                            cost = {
-                                "cost": browsing_cost["cost"]
-                                + cost["cost"],
-                                "input_tokens": cost["input_tokens"]
-                                + browsing_cost["input_tokens"],
-                                "output_tokens": cost["output_tokens"]
-                                + browsing_cost["output_tokens"],
-                            }
-                        else:
-                            message = None
-                show_info("🔍 Validating Metadata ...")
-                metadata = schema(metadata = metadata)
-                results = {}
-                results["metadata"] = metadata.json()
-                gold_metadata = get_metadata_human(paper_id=paper_id, schema_name=schema_name)
-                evaluation_results = metadata.compare_with(gold_metadata, return_metrics_only=True)
-                results["validation"] = evaluation_results
-                show_info(
-                    f"📊 precision: {evaluation_results['precision']*100:.2f} %, recall: {evaluation_results['recall']*100:.2f} %, f1: {evaluation_results['f1']*100:.2f} %, length: {evaluation_results['length']*100:.2f} %",
+                message, metadata, browsing_cost, error = get_metadatav2(
+                    model_name=model_name,
+                    readme=readme,
+                    metadata=metadata,
+                    schema_name=schema_name,
                 )
-                try:
-                    results["cost"] = cost
-                except:
-                    results["cost"] = {
-                        "cost": 0,
-                        "input_tokens": 0,
-                        "output_tokens": 0,
-                    }
-
-
-                results["config"] = {
-                    "model_name": model_name,
-                    "few_shot": few_shot,
-                    "month": month,
-                    "year": year,
-                    "keywords": keywords,
-                    "link": article_url,
+                cost = {
+                    "cost": browsing_cost["cost"]
+                    + cost["cost"],
+                    "input_tokens": cost["input_tokens"]
+                    + browsing_cost["input_tokens"],
+                    "output_tokens": cost["output_tokens"]
+                    + browsing_cost["output_tokens"],
                 }
-                results["error"] = error
-                try:
-                    with open(save_path, "w") as outfile:
-                        logger.info(f"📥 Results saved to: {save_path}")
-                        # print(results)
-                        json.dump(results, outfile, indent=4)
-                        # add emoji for time
-                        logger.info(f"⏰ Inference finished in {time.time() - start_time:.2f} seconds")
-                        model_results[model_name] = results
-                except Exception as e:
-                    logger.info(f"Error saving results to {save_path}")
-                    logger.info(e)
-                    logger.info(results)
-                    if os.path.exists(save_path):
-                        os.remove(save_path)
-                
-        else:
-            show_info("Abstract indicates resource: False")
+            else:
+                message = None
+    show_info("🔍 Validating Metadata ...")
+    metadata = schema(metadata = metadata)
+    results = {}
+    results["metadata"] = metadata.json()
+    gold_metadata = get_metadata_human(paper_link=paper_link, schema_name=schema_name)
+    evaluation_results = metadata.compare_with(gold_metadata, return_metrics_only=True)
+    results["validation"] = evaluation_results
+    show_info(
+        f"📊 precision: {evaluation_results['precision']*100:.2f} %, recall: {evaluation_results['recall']*100:.2f} %, f1: {evaluation_results['f1']*100:.2f} %, length: {evaluation_results['length']*100:.2f} %",
+    )
+    try:
+        results["cost"] = cost
+    except:
+        results["cost"] = {
+            "cost": 0,
+            "input_tokens": 0,
+            "output_tokens": 0,
+        }
+
+
+    results["config"] = {
+        "model_name": model_name,
+        "few_shot": few_shot,
+        "link": paper_link,
+    }
+    results["error"] = error
+    try:
+        with open(save_path, "w") as outfile:
+            show_info(f"📥 Results saved to: {save_path}")
+            # print(results)
+            json.dump(results, outfile, indent=4)
+            # add emoji for time
+            show_info(f"⏰ Inference finished in {time.time() - start_time:.2f} seconds")
+            model_results[model_name] = results
+    except Exception as e:
+        show_error(f"Error saving results to {save_path}")
+        show_error(e)
+        show_error(results)
+        if os.path.exists(save_path):
+            os.remove(save_path)
+
     return model_results
 
 
@@ -678,48 +515,18 @@ def create_args():
         description="Process keywords, month, and year parameters"
     )
 
-    # Add arguments
     parser.add_argument(
-        "-k",
-        "--keywords",
-        type=str,
-        required=False,
-        default="CIDAR",
-        help="space separated keywords",
-    )
+        "-l", "--link", type=str, required=False, default="", help="paper link"
+    )   
 
     parser.add_argument(
-        "-l", "--link", type=str, required=False, default="", help="arxiv link"
-    )
-
-    parser.add_argument(
-        "-m", "--month", type=int, required=False, default=2, help="Month (1-12)"
-    )
-
-    parser.add_argument(
-        "-y",
-        "--year",
-        type=int,
-        required=False,
-        default=2024,
-        help="Year (4-digit format)",
-    )
-
-    parser.add_argument(
-        "-n",
-        "--models",
+        "--model",
         type=str,
         required=False,
         default="gemini-1.5-flash",
         help="Name of the models to use",
     )
 
-    parser.add_argument(
-        "-c",
-        "--check_abstract",
-        action="store_true",
-        help="whether to check the abstract",
-    )
 
     parser.add_argument(
         "-b", "--browse_web", action="store_true", help="whether to browse the web"
@@ -732,26 +539,16 @@ def create_args():
         help="overwrite the extracted metadata",
     )
 
-    parser.add_argument(
-        "-mv",
-        "--masader_validate",
-        action="store_true",
-        help="validate on masader datasets",
-    )
-
-    parser.add_argument(
-        "-mt", "--masader_test", action="store_true", help="test on masader datasets"
-    )
-
-    parser.add_argument(
-        "-s",
-        "--summarize",
-        action="store_true",
-        help="summarize the paper before extracting metadata",
-    )
+    parser.add_argument("--split", type=str, default="test")
 
     parser.add_argument("--schema_name", type=str, default="ar")
 
+    parser.add_argument(
+        "--format",
+        type=str,
+        default="pdf_plumber",
+        help="format to use",
+    )
     parser.add_argument(
         "--few_shot",
         type=int,
@@ -762,14 +559,8 @@ def create_args():
     parser.add_argument(
         "--results_path",
         type=str,
-        default="results_latex",
+        default="results",
         help="path to save the results",
-    )
-    parser.add_argument(
-        "--pdf_mode",
-        type=str,
-        default=None,
-        help="pdf mode to use",
     )
 
     parser.add_argument(
@@ -779,15 +570,10 @@ def create_args():
     )
 
     parser.add_argument(
-        "--context_size",
+        "--context",
         type=str,
         default="all",
         help="context size to use",
-    )
-    parser.add_argument(
-        "--use_title",
-        action="store_true",
-        help="use title instead of paper text",
     )
 
     # Parse arguments

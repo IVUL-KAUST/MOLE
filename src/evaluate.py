@@ -4,73 +4,30 @@ from utils import fix_arxiv_link
 from constants import *
 import numpy as np
 from schema import get_schema
+from utils import show_info
+
 if __name__ == "__main__":
     args = create_args()
     metric_results = {}
-    data_names = []
-    len_data = 0
-    use_split = None
-
-    if args.masader_validate or args.masader_test:
-        titles = []
-        data_names = []
-        paper_links = []
-        years = []
-        links = []
+    paper_links = []
         
-        if args.masader_validate:
-            use_split = 'valid'
-            dataset = get_schema(args.schema_name).get_eval_datasets(split = 'valid')
-        else: 
-            use_split = 'test'
-            dataset = get_schema(args.schema_name).get_eval_datasets(split = 'test')
-        
-        for x in dataset:
-            titles.append(str(x["Paper_Title"]))
-            data_names.append(str(x["Name"]))
-            paper_links.append(str(x["Paper_Link"]))
-            years.append(str(x["Year"]))
-            links.append(x["Link"])
-    else:
-        data_names = args.keywords.split(",")
-        titles = ["" for _ in data_names]
-        paper_links = ["" for _ in data_names]
-        years = ["" for _ in data_names]
-        links = ["" for _ in data_names]
-    models = args.models.split(",")
-    len_data = len(data_names)
-    curr_idx = [0,len(data_names) * len(models)]
-    for data_name, title, paper_link, year, link in zip(data_names, titles, paper_links, years, links):
-        if title != "":
-            title = title.replace("\r\n", " ")
-            title = title.replace(":", "")
-            args.keywords = title
-        else:
-            args.keywords = data_name
+    dataset = get_schema(args.schema_name).get_eval_datasets(split = args.split)
+    
+    for idx, data in enumerate(dataset):
+        show_info(f"Processing paper {idx+1}/{len(dataset)}")
+        model_results = run(
+            data['Paper_Link'],
+            args.model,
+            browse_web=args.browse_web,
+            overwrite=args.overwrite,
+            schema_name = args.schema_name,
+            few_shot = args.few_shot,
+            results_path = args.results_path,
+            repeat_on_error = args.repeat_on_error,
+            context = args.context,
+            format = args.format,
+        )
 
-        if paper_link != "":
-            paper_link = fix_arxiv_link(paper_link)
-            model_results = run(
-                link=paper_link,
-                year=year,
-                month=None,
-                models=args.models.split(","),
-                browse_web=args.browse_web,
-                overwrite=args.overwrite,
-                use_split=use_split,
-                repo_link=link,
-                summarize = args.summarize,
-                curr_idx= curr_idx,
-                schema_name = args.schema_name,
-                few_shot = args.few_shot,
-                results_path = args.results_path,
-                pdf_mode = args.pdf_mode,
-                repeat_on_error = args.repeat_on_error,
-                context_size = args.context_size,
-                use_title = args.use_title
-            )
-        else:
-            raise()
         metrics = ['precision', 'recall', 'f1', 'length']
         for model_name in model_results:
             results = model_results[model_name]
@@ -82,7 +39,7 @@ if __name__ == "__main__":
             )
     results = []
     for model_name in metric_results:
-        if len(metric_results[model_name]) == len_data:
+        if len(metric_results[model_name]) == len(dataset):
             results.append(
                 [model_name]
                 + (np.mean(metric_results[model_name], axis=0) * 100).tolist()

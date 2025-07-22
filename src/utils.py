@@ -28,11 +28,37 @@ random.seed(0)
 import os
 import base64
 import requests
+
+
 # from docling.document_converter import DocumentConverter
 # from docling.datamodel.base_models import InputFormat
 # from docling.datamodel.pipeline_options import PdfPipelineOptions, TableFormerMode
 # from docling.document_converter import PdfFormatOption
 
+def setup_logger() -> logging.Logger:
+    """Set up logging configuration."""
+    logger = logging.getLogger("results")
+    logger.setLevel(logging.INFO)
+
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+
+    return logger
+
+def show_info(text):
+    logger = setup_logger()
+    logger.info(text)
+
+def show_warning(text):
+    logger = setup_logger()
+    logger.warning(text)
+
+def show_error(text):
+    logger = setup_logger()
+    logger.error(text)
 
 def get_paper_content_from_docling(paper_path, output_mode="markdown"):
     pipeline_options = PdfPipelineOptions()
@@ -183,19 +209,6 @@ def get_metadata_from_path(json_path):
             return metadata
     return None
 
-def setup_logger() -> logging.Logger:
-    """Set up logging configuration."""
-    logger = logging.getLogger("results")
-    logger.setLevel(logging.INFO)
-
-    if not logger.handlers:
-        handler = logging.StreamHandler()
-        formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
-
-    return logger
-
 def get_schema_from_path(json_path):
     id = get_id_from_path(json_path)
     for schema in ['ar', 'en', 'jp', 'fr', 'ru', 'multi']:
@@ -333,11 +346,11 @@ def get_dummy_results():
     return results
 
 
-def get_metadata_human(paper_id, schema_name="ar", remove_annotations_from_paper=False):
+def get_metadata_human(paper_link, schema_name="ar", remove_annotations_from_paper=False):
     schema = get_schema(schema_name)
-    dataset = schema.get_eval_datasets(split = 'test')
+    dataset = schema.get_eval_datasets(split = 'test')+schema.get_eval_datasets(split = 'valid')
     for row in dataset:
-        if paper_id in row["Paper_Link"]:
+        if paper_link == row["Paper_Link"]:
             row = row.copy()
             if remove_annotations_from_paper:
                 if 'annotations_from_paper' in row:
