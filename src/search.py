@@ -63,27 +63,7 @@ def get_metadatav2(
     for i in range(max_retries):
         predictions = {}
         error = None
-        if paper_text != "":
-            if few_shot > 0 :
-                raise Exception("Not implemented")
-            else:
-                prompt = f"""
-                        Schema Name: {schema_name}
-                        Input Schema: {schema.schema()}
-                        Paper Text: {paper_text},
-                        Output JSON:
-                        """
-                sys_prompt = schema.get_system_prompt()
-            
-        elif readme != "":
-            prompt = f"""
-                        You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
-                        Given the following Input schema: {schema.json()}, then update the metadata in the Input schema with the information from the readme.
-                        Output JSON:
-                        """
-            sys_prompt = schema.get_system_prompt()
-        else:
-            raise ValueError("No input provided")
+        prompt, sys_prompt = schema.get_prompts(paper_text, readme, metadata)
         messages = []
         messages.append({"role": "system", "content": sys_prompt})
         messages.append({"role": "user", "content": prompt})
