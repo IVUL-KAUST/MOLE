@@ -43,7 +43,7 @@ def get_cost(message):
             "output_tokens": stats['tokens_completion'],
         }
 
-def get_metadatav2(
+def get_metadata(
     paper_text="",
     model_name="gemini-1.5-flash",
     readme="",
@@ -53,6 +53,7 @@ def get_metadatav2(
     use_cot=True,
     few_shot = 0,
     max_retries = 3,
+    backend = "openrouter",
 ):
     cost = {
         "input_tokens": 0,
@@ -68,26 +69,40 @@ def get_metadatav2(
         messages.append({"role": "system", "content": sys_prompt})
         messages.append({"role": "user", "content": prompt})
 
-        api_key = os.environ.get("OPENROUTER_API_KEY")
-        client = OpenAI(
-            api_key=api_key,
-            base_url="https://openrouter.ai/api/v1"
-        )
+        if backend == "openrouter":
+            show_info(f"🔑 Using OpenRouter backend")
+            api_key = os.environ.get("OPENROUTER_API_KEY")
+            base_url = "https://openrouter.ai/api/v1"
+            client = OpenAI(
+                api_key=api_key,
+                base_url=base_url
+            )
+        elif backend == "vllm":
+            show_info(f"🔑 Using VLLM backend")
+            # Support custom base URL from environment variable for SLURM jobs
+            base_url = "http://localhost:8787/v1"
+            client = OpenAI(
+                base_url=base_url
+            )
+        else:
+            raise ValueError(f"Invalid backend: {backend}")
 
         model_name = model_name.replace("_", "/")
         model_name = model_name.replace("-browsing", "")
-
-        
         message = client.chat.completions.create(
                     model=model_name,
                     messages=messages,
                     temperature=0.0,
                 )
-        try: 
-            # if "qwen" in model_name and len(paper_text) == 95618:
-            #     raise Exception("Timeout")
-            # else:
-            cost = get_cost(message)
+        try:
+            if backend == "openrouter":
+                cost = get_cost(message)
+            else:
+                cost = {
+                    "cost": 0,
+                    "input_tokens": 0,
+                    "output_tokens": 0,
+                }
             response =  message.choices[0].message.content
             predictions = read_json(response)
         except json.JSONDecodeError as e:
@@ -213,12 +228,12 @@ def run(
     repeat_on_error = False,
     context = "all",
     format = "pdf_plumber",
+    backend = "openrouter",
+    paper_extra_args = {},
 ):
 
     model_results = {}
     schema = get_schema(schema_name)
-    show_info(f"🔍 Using link {paper_link} ...")
-
     downloader = ArxivSourceDownloader(download_path="static/papers/")
     success, paper_path = downloader.download_paper(paper_link, verbose=True)
 
@@ -233,9 +248,13 @@ def run(
     paper_text = ""
     start_time = time.time()
     model_name = model_name.replace("/", "_")
-    paper_text = extract_paper_text(paper_path, context = context, format = format)
+    if context == "title":
+        paper_text = paper_extra_args["title"]  
+    elif context == "abstract":
+        paper_text = paper_extra_args["abstract"]
+    else:
+        paper_text = extract_paper_text(paper_path, context = context, format = format)
     open(f"{save_path}/paper_text.txt", "w").write(paper_text)
-    show_info(f"Paper is being processed")
     if browse_web and (model_name in non_browsing_models):
         show_info(f"Can't browse the web for {model_name}")
 
@@ -299,8 +318,8 @@ def run(
             metadata = results["metadata"]
             cost = results["cost"]
         else:
-            message, metadata, cost, error = get_metadatav2(
-                paper_text, model_name, schema_name=schema_name, few_shot = few_shot
+            message, metadata, cost, error = get_metadata(
+                paper_text, model_name, schema_name=schema_name, few_shot = few_shot, backend = backend
             )
         if browse_web:
             browsing_link = get_repo_link(
@@ -426,6 +445,12 @@ def create_args():
         type=str,
         default="results",
         help="path to save the results",
+    )
+    parser.add_argument(
+        "--backend",
+        type=str,
+        default="openrouter",
+        help="backend to use",
     )
 
     parser.add_argument(
