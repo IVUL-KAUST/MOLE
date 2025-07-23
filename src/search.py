@@ -17,54 +17,6 @@ from schema import get_schema
 
 load_dotenv()
 
-def compute_filling(metadata):
-    return len([m for m in metadata if m != ""]) / len(metadata)
-
-
-def is_resource(abstract):
-    prompt = f" You are given the following abstract: {abstract}, does the abstract indicate there is a published Arabic dataset or multilingual dataset that contains Arabic? please answer 'yes' or 'no' only"
-    model = GenerativeModel(
-        "gemini-1.5-flash",
-        system_instruction="You are a prefoessional research paper reader",
-    )
-
-    message = model.generate_content(
-        prompt,
-        generation_config=GenerationConfig(
-            max_output_tokens=1000,
-            temperature=0.0,
-        ),
-    )
-
-    return True if "yes" in message.text.lower() else False
-
-
-def summarize_paper(paper_text):
-    model_name = "gemini-1.5-flash"
-    prompt = f"""Given the following paper: '{paper_text}'. Create a summary that contains the follwoing information:
-    Title,Authors,Affiliations,Abstract,Link,HuggingFace link,License,Dialects,Languages,Collection Style,Domain,Form,Size,Ethical Risks,Script,Tokenization,Host of the dataset,Accessability,Test Split,Tasks,Venue Type,
-    """
-    model = GenerativeModel(model_name)
-
-    message = model.generate_content(
-        prompt,
-        generation_config=GenerationConfig(
-            temperature=0.0,
-        ),
-    )
-    response = message.text.strip()
-    return message, response
-
-def get_openrouter_model(model_name):
-    if model_name == "DeepSeek-V3":
-        return "deepseek/deepseek-chat:free"
-    elif model_name == "DeepSeek-R1":
-        return "deepseek/deepseek-reasoner:free"
-    for model in OPENROUTER_MODELS:
-        if model_name.lower() in model.lower():
-            return model
-    return None
-
 def get_cost(message):
     import requests
     while True:
@@ -90,36 +42,6 @@ def get_cost(message):
             "input_tokens": stats['tokens_prompt'],
             "output_tokens": stats['tokens_completion'],
         }
-
-def get_metadata_qa(
-    paper_text,
-    schema_name = "ar",
-):
-    device = "cuda:0" if torch.cuda.is_available() else "cpu"
-    print('running on', device)
-    pl = pipeline(
-        task="text2text-generation",
-        model="google-t5/t5-base",
-        torch_dtype=torch.float16,
-        device=device
-    )
-    schema = Schema(schema_name)
-    # types = schemata[schema]["answer_types"]
-    predictions = {}
-    for c in schema:
-        question = schema[c]["question"]    
-        if 'options' in schema[c]:
-            options = schema[c]["options"]
-            output = pl(f"answer the following question: {question} in the following paper: {paper_text}, options: {options}")
-        else:
-            output = pl(f"answer the following question: {question} in the following paper: {paper_text}")
-        
-        predictions[c] = output
-        print(c)
-        print(question)
-        print(output)
-        raise Exception("stop")
-    return predictions
 
 def get_metadatav2(
     paper_text="",
@@ -211,43 +133,6 @@ def get_metadatav2(
 def clean_latex(path):
     os.system(f"arxiv_latex_cleaner {path}")
 
-
-def get_search_results(keywords, month, year):
-    searcher = ArxivSearcher(max_results=10)
-    return searcher.search(
-        keywords=keywords,
-        categories=["cs.AI", "cs.LG", "cs.CL"],
-        month=month,
-        year=year,
-        sort_by=arxiv.SortCriterion.SubmittedDate,
-    )
-
-
-import hashlib
-
-
-def generate_pdf_hash(paper_pdf, hash_algorithm="sha1"):
-    # Select the hashing algorithm
-    hash_object = hashlib.new(hash_algorithm)
-
-    # Read and hash the file in chunks
-    while True:
-        chunk = paper_pdf.read(8192)  # Adjust chunk size as needed
-        if not chunk:
-            break
-        hash_object.update(chunk)
-
-    # Reset the pointer
-    paper_pdf.seek(0)
-
-    # Return the hash digest in hexadecimal format
-    return hash_object.hexdigest()[:5]
-
-
-def generate_fake_arxiv_pdf(paper_pdf):
-    year = datetime.now().year
-    month = datetime.now().month
-    return f"{year}{month}.{generate_pdf_hash(paper_pdf)}"
 
 
 def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached_docling=True):

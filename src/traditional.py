@@ -6,6 +6,36 @@ from dotenv import load_dotenv
 from utils import read_json
 load_dotenv()
 
+def get_metadata_qa(
+    paper_text,
+    schema_name = "ar",
+):
+    device = "cuda:0" if torch.cuda.is_available() else "cpu"
+    print('running on', device)
+    pl = pipeline(
+        task="text2text-generation",
+        model="google-t5/t5-base",
+        torch_dtype=torch.float16,
+        device=device
+    )
+    schema = Schema(schema_name)
+    # types = schemata[schema]["answer_types"]
+    predictions = {}
+    for c in schema:
+        question = schema[c]["question"]    
+        if 'options' in schema[c]:
+            options = schema[c]["options"]
+            output = pl(f"answer the following question: {question} in the following paper: {paper_text}, options: {options}")
+        else:
+            output = pl(f"answer the following question: {question} in the following paper: {paper_text}")
+        
+        predictions[c] = output
+        print(c)
+        print(question)
+        print(output)
+        raise Exception("stop")
+    return predictions
+    
 def get_metadata_keyword(
     paper_text,
     schema_name = "ar",
