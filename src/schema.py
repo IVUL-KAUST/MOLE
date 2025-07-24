@@ -132,20 +132,7 @@ class Schema(BaseModel):
         return schema[key]['answer_max']
     
     def get_system_prompt():
-        return f"""
-        You are a professional metadata extractor of datasets from research papers. 
-        You will be provided 'Paper Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
-        The 'Output JSON' is a JSON with key:answer where the answer retrieves an attribute of the 'Input Schema' from the 'Paper Text'. 
-        Each attribute in the 'Input Schema' has the following fields:
-        'options' : If the attribute has 'options' then the answer must be at least one of the options.
-        'answer_type': The output type represents the type of the answer.
-        'answer_min' : The minimum length of the answer depending on the 'answer_type'.
-        'answer_max' : The maximum length of the answer depending on the 'answer_type'.
-        The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
-        The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
-        Use the following guidlines to extract the answer from the 'Paper Text':
-        {open('GUIDELINES.md').read()}
-        """
+        raise NotImplementedError("get_system_prompt is not implemented for this schema")
 
     def get_answer_type(self, key):
         return self.model_fields[key].annotation
@@ -230,8 +217,68 @@ class Schema(BaseModel):
         
         return data
        
+class DatasetSchema(Schema):
+    @classmethod
+    def get_prompts(cls, paper_text, readme, metadata = None):
+        if readme != "":
+            prompt = f"""
+                    You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
+                    Given the following Input schema: {cls.schema()}, then update the metadata in the Input schema with the information from the readme.
+                    Output JSON:
+                    """
+        else:  
+            prompt = f"""Schema Name: {cls.get_schema_name()}
+                        Input Schema: {cls.schema()}
+                        Paper Text: {paper_text},
+                        Output JSON:
+                    """
+        system_prompt = f"""
+            You are a professional metadata extractor of datasets from research papers. 
+            You will be provided 'Paper Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
+            The 'Output JSON' is a JSON with key:answer where the answer retrieves an attribute of the 'Input Schema' from the 'Paper Text'. 
+            Each attribute in the 'Input Schema' has the following fields:
+            'options' : If the attribute has 'options' then the answer must be at least one of the options.
+            'answer_type': The output type represents the type of the answer.
+            'answer_min' : The minimum length of the answer depending on the 'answer_type'.
+            'answer_max' : The maximum length of the answer depending on the 'answer_type'.
+            The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
+            The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
+            Use the following guidlines to extract the answer from the 'Paper Text':
+            {open('GUIDELINES.md').read()}
+        """
+        return prompt, system_prompt
 
-class Subset(Schema):
+class ResourceSchema(Schema):
+    Name: Field(Str, 1, 5)
+    Category: Field(Str, 1, 1, ['ar', 'en', 'jp', 'ru', 'fr', 'multi', 'other'])
+    Paper_Title: Field(Str, 1, 100)
+    Paper_Link: Field(URL, 1, 1)
+    Year: Field(Year, 1900, 2025)
+    Link: Field(URL, 0, 1)
+    
+    @classmethod
+    def get_system_prompt(cls):
+        return f"""
+        You are a professional metadata extractor of resources from research papers. 
+        You will be provided 'Paper Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
+        The 'Output JSON' is a JSON with key:answer where the answer retrieves an attribute of the 'Input Schema' from the 'Paper Text'. 
+        Each attribute in the 'Input Schema' has the following fields:
+        'options' : If the attribute has 'options' then the answer must be at least one of the options.
+        'answer_type': The output type represents the type of the answer.
+        'answer_min' : The minimum length of the answer depending on the 'answer_type'.
+        'answer_max' : The maximum length of the answer depending on the 'answer_type'.
+        The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
+        The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
+        Use the following guidlines to extract the answer from the 'Paper Text':
+        1. Name: what is the name of the resource.
+        2. Category: what is the language of the resource. Answer other if the resource is not in the list of categories.
+        3. Paper_Title: what is the title of the paper.
+        4. Paper_Link: what is the link of the paper.
+        5. Year: what is the year of the paper.
+        6. Link: what is the link of the resource.
+        """
+
+class Subset(DatasetSchema):
     Name: Field(Str, 1, 5)
     Volume: Field(Float, 0)
     Unit: Field(Str, 1, 1, units)
@@ -242,7 +289,7 @@ class ArSubset(Subset):
 class MultiSubset(Subset):
     Language: Field(Str, 2, 30, languages)
 
-class DatasetSchema(Subset):
+class Dataset(Subset):
     model_config = ConfigDict(extra='forbid', strict=False)
     License: Field(Str, 1, 1, licenses)
     Link: Field(URL, 0, 1)
@@ -271,36 +318,33 @@ class DatasetSchema(Subset):
     Abstract: Field(Str, 1, 1000)
 
 
-class ArSchema(DatasetSchema):
+class ArSchema(Dataset):
     Subsets: Field(List[ArSubset], 0, len(dialects))
     Dialect: Field(Str, 1, 1, dialects)
     Language: Field(Str, 1, 1, ['ar', 'multilingual'])
     Script: Field(Str, 1, 1, ['Arab', 'Latin', 'Arab-Latin'])
 
-class EnSchema(DatasetSchema):
+class EnSchema(Dataset):
     Language: Field(Str, 1, 1, ['en', 'multilingual'])
+    # Accent: Field(Str, 1, 1, ['US', 'UK', 'African', 'mixed'])
 
-class JpSchema(DatasetSchema):
+
+class JpSchema(Dataset):
     Language: Field(Str, 1, 1, ['jp', 'multilingual'])
     Script: Field(Str, 1, 1, ['Hiragana', 'Katakana', 'Kanji', 'mixed'])
 
-class RuSchema(DatasetSchema):
+class RuSchema(Dataset):
     Language: Field(Str, 1, 1, ['ru', 'multilingual'])
+    # Script: Field(Str, 1, 1, ['Cyrillic', 'Latin', 'mixed'])
 
-class FrSchema(DatasetSchema):
+class FrSchema(Dataset):
     Language: Field(Str, 1, 1, ['fr', 'multilingual'])
+    # Dialect: Field(Str, 1, 1, ['Standard', 'Quebec', 'Acadian', 'Belgian', 'Swiss', 'African', 'Maghrebi', 'Antillean'])
 
-class MultiSchema(DatasetSchema):
+
+class MultiSchema(Dataset):
     Subsets: Field(List[MultiSubset], 0, len(languages))
     Language: Field(List[Str], 2, len(languages), languages)
-
-
-def remove_spaces_keys(metadata):
-    new_metadata = {}
-    for key in metadata.keys():
-        new_metadata[key.replace(' ', '_')] = metadata[key]
-    return new_metadata
-
 
 def get_schema(schema_name):
     if schema_name == 'ar':
@@ -317,5 +361,7 @@ def get_schema(schema_name):
         return MultiSchema
     elif schema_name == 'test':
         return TestSchema
+    elif schema_name == 'resource':
+        return ResourceSchema
     else:
         raise ValueError(f"Invalid schema name: {schema_name}")
