@@ -9,12 +9,11 @@ from utils import show_info
 if __name__ == "__main__":
     args = create_args()
     metric_results = {}
-    paper_links = []
-        
+    paper_links = []           
     dataset = get_schema(args.schema_name).get_eval_datasets(split = args.split)
     
     for idx, data in enumerate(dataset):
-        show_info(f"Processing paper {idx+1}/{len(dataset)}")
+        show_info(f"🔍 Processing paper {idx+1}/{len(dataset)}")
         model_results = run(
             data['Paper_Link'],
             args.model,
@@ -26,6 +25,11 @@ if __name__ == "__main__":
             repeat_on_error = args.repeat_on_error,
             context = args.context,
             format = args.format,
+            backend = args.backend,
+            paper_extra_args = {
+                "title": data["Paper_Title"],
+                "abstract": data["Abstract"],
+            }
         )
 
         metrics = ['precision', 'recall', 'f1', 'length']
