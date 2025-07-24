@@ -78,6 +78,9 @@ class Int(BaseType):
     def get_type(self):
         return 'int'
     
+    def cast(self, value):
+        return int(value)
+    
     def validate_length(self, value):
         if value >= self.answer_min and value <= self.answer_max:
             return 1
@@ -105,6 +108,16 @@ class Bool(BaseType):
     def validate_length(self, value):
         return 1
     
+    def cast(self, value):
+        if isinstance(value, str):
+            value = value.lower()
+            if value in ['true', 'yes']:
+                return True
+            elif value in ['false', 'no']:
+                return False
+            else:
+                return False
+        return bool(value)
     
 class Year(Int):
     def get_default(self):
@@ -112,6 +125,9 @@ class Year(Int):
     
     def get_type(self):
         return 'year'
+    
+    def cast(self, value):
+        return int(value)
     
 class Str(BaseType):
     base_type = str
@@ -128,6 +144,9 @@ class Str(BaseType):
     
     def get_type(self):
         return 'str'
+    
+    def cast(self, value):
+        return str(value)
     
     def validate_length(self, value):
         metric = value.split(' ')
@@ -146,6 +165,8 @@ class URL(Str):
     def get_type(self):
         return 'url'
     
+    def cast(self, value):
+        return str(value)
     
 class List(BaseType):
     base_type = list
@@ -166,6 +187,9 @@ class List(BaseType):
     def get_default(self):
         return []
 
+    def cast(self, value):            
+        return list(value)
+    
     def get_type(self):
         # Check if inner type is a Pydantic model
         if hasattr(self._inner_type, 'model_fields'):

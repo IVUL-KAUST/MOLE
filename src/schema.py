@@ -212,9 +212,11 @@ class Schema(BaseModel):
     @model_validator(mode='before') # validate based on the type of the field
     def validate_a(cls, data):
         for key, value in cls.model_fields.items():
-            type = value.metadata[0]
-            data[key] = type.get_default() if data[key] is None else data[key]
-        
+            t = value.metadata[0]
+            try:
+                data[key] = t.cast(data[key])
+            except:
+                data[key] = t.get_default()
         return data
        
 class DatasetSchema(Schema):

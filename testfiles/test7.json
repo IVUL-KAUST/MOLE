@@ -1,31 +1,8 @@
 {
-    "Name": "CIDAR",
-    "Volume": 10000,
-    "Unit": "sentences",
-    "Tokenized": false,
-    "Script": "Arab",
-    "Form": "text",
-    "Collection Style": ["crawling"],
-    "Domain": ["web pages"],
-    "Ethical Risks": "Low",
-
-    "Provider": ["ARBML"],
-    "Host": "HuggingFace",
-    "Link": "https://hf.co/datasets/arbml/CIDAR",
-    "HF Link": "https://hf.co/datasets/arbml/CIDAR",
-    "License": "CC BY-NC 4.0",
-    "Cost": "",
-    "Access": "Free",
-
-    "Language": "ar",
-    "Subsets": [
-        {"Name": "Syrian", "Volume": 4000, "Unit": "sentences", "Dialect": "Syria"},
-        {"Name": "Iraqi",  "Volume": 4000, "Unit": "sentences", "Dialect": "Iraq"}, 
-        {"Name": "Lebanese", "Volume": 2000, "Unit": "sentences", "Dialect": "Lebanon"}
-    ],
-    "Dialect": "mixed",
-
-    "Test Split": false,
-    "Tasks": ["instruction tuning"],
-    "Derived From": ["AlpaGasus"]   
+    "Name": "ahmad",
+    "Age": 20,
+    "Website": "https://www.google.com",
+    "Hobbies": ["reading"],
+    "Sons": 0,
+    "Married": true
 }

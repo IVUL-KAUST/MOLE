@@ -30,7 +30,6 @@ class Parent(Person):
     Married: Field(Bool, 1, 1)
     Sons: Field(List[Person], 0, 3)
 
-print(Parent.schema())
 predicted_metadata = Parent(
     path = 'testfiles/test1.json'
 )
@@ -104,6 +103,15 @@ for m in evaluation_results:
 print('✅ passed test6')
 
 
+validated_metadata = Parent(
+    path = 'testfiles/test7.json'
+)
+evaluation_results = validated_metadata.compare_with(gold_metadata1)
+
+for m in evaluation_results:
+    assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
+print('✅ passed test7')
+
 default_metadata = {
     "Name": "",
     "Age": 0,
@@ -128,4 +136,4 @@ for m in evaluation_results:
         assert abs(evaluation_results[m] - 0.66) < 0.01, f'❌ {m} value should be 0.66 but got {evaluation_results[m]}'
     else:
         assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
-print('✅ passed test7')
+print('✅ passed test8')
