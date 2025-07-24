@@ -271,13 +271,10 @@ class ArxivSourceDownloader:
         
         return success, paper_dir
 
-    def create_hash(self, paper_id: str) -> str:
-        """Create a hash for a given paper ID."""
-        return hashlib.sha256(paper_id.encode()).hexdigest()[:8]
 
     def _create_download_dir(self, paper_id: str) -> str:
         """Create and return the download directory path."""
-        paper_dir = os.path.join(self.download_path, self.create_hash(paper_id))
+        paper_dir = os.path.join(self.download_path, create_hash(paper_id))
         os.makedirs(paper_dir, exist_ok=True)
         return paper_dir
 

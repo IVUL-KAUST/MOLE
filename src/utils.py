@@ -14,7 +14,7 @@ from datetime import date
 from functools import wraps
 from glob import glob
 from schema import get_schema
-
+import hashlib
 # Third-party imports
 import pandas as pd
 import requests
@@ -47,6 +47,11 @@ def setup_logger() -> logging.Logger:
         logger.addHandler(handler)
 
     return logger
+
+
+def create_hash(paper_id: str) -> str:
+    """Create a hash for a given paper ID."""
+    return hashlib.sha256(paper_id.encode()).hexdigest()[:8]
 
 def show_info(text):
     logger = setup_logger()
@@ -356,7 +361,7 @@ def get_metadata_human(paper_link, schema_name="ar", remove_annotations_from_pap
                 if 'annotations_from_paper' in row:
                     del row['annotations_from_paper']
             return row
-    raise ()
+    return None
 
 def compare_results(rs, show_diff=False, schema="ar"):
     results = {}

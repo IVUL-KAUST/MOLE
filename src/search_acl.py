@@ -3,6 +3,10 @@ from acl_anthology import Anthology
 import argparse
 import pandas as pd
 from tqdm import tqdm
+from utils import create_hash
+import os
+import requests
+from typing import Tuple
 
 top_100_languages =[
     "afrikaans", "albanian", "amharic", "arabic", "armenian", "aymara", "azerbaijani", "bengali",
@@ -20,6 +24,22 @@ top_100_languages =[
 arabic_dialects = ["moroccan", "egyptian", "levantine", "palestinian", "syrian", "lebanese", "jordanian", "iraqi", "palestinian", "syrian", "lebanese", "jordanian", "iraqi", "palestinian", "syrian", "lebanese", "jordanian", "iraqi"]
 id2lang = { 'ar': 'arabic', 'en': 'english', 'fr': 'french', 'jp': 'japanese', 'ru': 'russian', 'multi': 'multilingual', 'other': 'other'}
 lang2id = {v: k for k, v in id2lang.items()}
+
+class ACLDownloader:
+    def __init__(self, download_path: str = "static/papers/"):
+        self.download_path = download_path
+
+    def download_paper(self, identifier: str, download_pdf: bool = True, verbose: bool = True) -> Tuple[bool, str]:
+        paper_dir = os.path.join(self.download_path, create_hash(identifier))
+        os.makedirs(paper_dir, exist_ok=True)
+
+        # download the pdf
+        if download_pdf:
+            response = requests.get(identifier)
+            if response.status_code == 200:
+                with open(os.path.join(paper_dir, f"{identifier}.pdf"), "wb") as f:
+                    f.write(response.content)
+        return True, paper_dir
 
 def get_words_from_paper(title, abstract, title_only=False):
     words = [] 

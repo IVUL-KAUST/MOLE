@@ -15,6 +15,8 @@ from utils import read_json, get_metadata_human, show_info, show_warning
 from traditional import get_metadata_keyword, get_metadata_nu_extract
 from schema import get_schema
 from transformers import AutoTokenizer
+from search_acl import ACLDownloader
+
 load_dotenv()
 
 def get_cost(message):
@@ -263,8 +265,15 @@ def run(
 ):
     model_results = {}
     schema = get_schema(schema_name)
-    downloader = ArxivSourceDownloader(download_path="static/papers/")
-    success, paper_path = downloader.download_paper(paper_link, verbose=True)
+    if "arxiv" in paper_link:
+        downloader = ArxivSourceDownloader(download_path="static/papers/")
+        success, paper_path = downloader.download_paper(paper_link, verbose=True)
+    elif "acl" in paper_link:
+        # download the paper from acl anthology
+        downloader = ACLDownloader(download_path="static/papers/")
+        success, paper_path = downloader.download_paper(paper_link, verbose=True)
+    else:
+        raise ValueError(f"Invalid paper link: {paper_link}")
 
     save_path = paper_path.replace("papers", results_path)
     if few_shot > 0:
@@ -386,11 +395,16 @@ def run(
     results = {}
     results["metadata"] = metadata.json()
     gold_metadata = get_metadata_human(paper_link=paper_link, schema_name=schema_name)
-    evaluation_results = metadata.compare_with(gold_metadata, return_metrics_only=True)
-    results["validation"] = evaluation_results
-    show_info(
-        f"📊 precision: {evaluation_results['precision']*100:.2f} %, recall: {evaluation_results['recall']*100:.2f} %, f1: {evaluation_results['f1']*100:.2f} %, length: {evaluation_results['length']*100:.2f} %",
-    )
+    if gold_metadata is not None:
+        evaluation_results = metadata.compare_with(gold_metadata, return_metrics_only=True)
+        results["validation"] = evaluation_results
+        show_info(
+            f"📊 precision: {evaluation_results['precision']*100:.2f} %, recall: {evaluation_results['recall']*100:.2f} %, f1: {evaluation_results['f1']*100:.2f} %, length: {evaluation_results['length']*100:.2f} %",
+        )
+    else:
+        show_info("🚧 No gold metadata found")
+        results["validation"] = {}
+
     try:
         results["cost"] = cost
     except:
