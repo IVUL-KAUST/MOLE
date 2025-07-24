@@ -160,7 +160,7 @@ def get_metadata(
             time.sleep(3)
     time.sleep(3) # sleep before next prediction
     if predictions == {}:
-        predictions = schema.generate_metadata(method = 'default')
+        predictions = schema.generate_metadata(method = 'default').json()
     return message, predictions, cost, error
 
 def clean_latex(path):
