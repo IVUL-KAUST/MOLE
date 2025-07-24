@@ -14,7 +14,7 @@ from openai import OpenAI
 from utils import read_json, get_metadata_human, show_info, show_warning
 from traditional import get_metadata_keyword, get_metadata_nu_extract
 from schema import get_schema
-
+from transformers import AutoTokenizer
 load_dotenv()
 
 def get_cost(message):
@@ -43,6 +43,40 @@ def get_cost(message):
             "output_tokens": stats['tokens_completion'],
         }
 
+def get_input_tokens(messages, model_name):
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    output = tokenizer.apply_chat_template(
+        messages, add_generation_prompt=True, tokenize=True
+    )
+    return len(output)
+
+def get_text_tokens(text, model_name):
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    return len(tokenizer.encode(text))
+
+def calculate_max_output_tokens(model_name):
+    max_output_tokens = 0
+    for file in glob(f"evals/**/test/**.json"):
+        results = json.load(open(file))
+        del results["annotations_from_paper"]
+        num_tokens = get_text_tokens(json.dumps(results), model_name)
+        if max_output_tokens < num_tokens:
+            max_output_tokens = num_tokens
+    return max_output_tokens
+
+def truncate_prompt(prompt, sys_prompt, model_name, max_tokens):
+    MAX_OUTPUT_TOKENS = 1024
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    num_prompt_tokens = len(tokenizer.encode(prompt))
+    num_system_tokens = get_text_tokens(sys_prompt, model_name)
+    input_length = num_system_tokens+num_prompt_tokens + 10 + MAX_OUTPUT_TOKENS # 10 is the margin of tokens used for the role and content tokens
+    if input_length > max_tokens:
+        remaining_tokens = max_tokens-num_system_tokens - 10 - MAX_OUTPUT_TOKENS
+        show_warning(f"⚠️ Truncating prompt {num_prompt_tokens} -> {remaining_tokens} tokens")
+        truncated_prompt = tokenizer.decode(tokenizer.encode(prompt)[:remaining_tokens], skip_special_tokens=True)
+        return truncated_prompt
+    return prompt
+
 def get_metadata(
     paper_text="",
     model_name="gemini-1.5-flash",
@@ -54,6 +88,7 @@ def get_metadata(
     few_shot = 0,
     max_retries = 3,
     backend = "openrouter",
+    max_tokens = 32768,
 ):
     cost = {
         "input_tokens": 0,
@@ -65,9 +100,8 @@ def get_metadata(
         predictions = {}
         error = None
         prompt, sys_prompt = schema.get_prompts(paper_text, readme, metadata)
-        messages = []
-        messages.append({"role": "system", "content": sys_prompt})
-        messages.append({"role": "user", "content": prompt})
+        messages = [{"role": "system", "content": sys_prompt}, {"role": "user", "content": prompt}]
+
 
         if backend == "openrouter":
             show_info(f"🔑 Using OpenRouter backend")
@@ -78,14 +112,18 @@ def get_metadata(
                 base_url=base_url
             )
         elif backend == "vllm":
-            show_info(f"🔑 Using VLLM backend")
+            
             # Support custom base URL from environment variable for SLURM jobs
             base_url = "http://localhost:8787/v1"
             client = OpenAI(
                 base_url=base_url
             )
+            show_info(f"🔑 Using VLLM backend")
+            prompt = truncate_prompt(prompt, sys_prompt, model_name, max_tokens)
+            messages[1]["content"] = prompt
         else:
             raise ValueError(f"Invalid backend: {backend}")
+
 
         model_name = model_name.replace("_", "/")
         model_name = model_name.replace("-browsing", "")
@@ -127,7 +165,6 @@ def get_metadata(
 
 def clean_latex(path):
     os.system(f"arxiv_latex_cleaner {path}")
-
 
 
 def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached_docling=True):
@@ -196,14 +233,7 @@ def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached
         else:
             show_warning("Not acceptable source file")
             continue
-    approximate_token_size = len(paper_text.split(" ")) * 1.6
 
-    if approximate_token_size > 30_000:
-        show_warning(
-            f"⚠️ The paper text is too long, trimming some content"
-        )
-        paper_text = paper_text[:150_000]
-    # print(len(paper_text))
     if context == "all":
         return paper_text
     elif context == "half":
@@ -231,7 +261,6 @@ def run(
     backend = "openrouter",
     paper_extra_args = {},
 ):
-
     model_results = {}
     schema = get_schema(schema_name)
     downloader = ArxivSourceDownloader(download_path="static/papers/")
@@ -245,16 +274,6 @@ def run(
         save_path = f"{save_path}/zero_shot"
         os.makedirs(save_path, exist_ok=True)
     
-    paper_text = ""
-    start_time = time.time()
-    model_name = model_name.replace("/", "_")
-    if context == "title":
-        paper_text = paper_extra_args["title"]  
-    elif context == "abstract":
-        paper_text = paper_extra_args["abstract"]
-    else:
-        paper_text = extract_paper_text(paper_path, context = context, format = format)
-    open(f"{save_path}/paper_text.txt", "w").write(paper_text)
     if browse_web and (model_name in non_browsing_models):
         show_info(f"Can't browse the web for {model_name}")
 
@@ -275,9 +294,21 @@ def run(
         model_results[model_name] = results
         if results["error"] == None or not repeat_on_error:
             return model_results
+    
+    paper_text = ""
+    start_time = time.time()
+    model_name = model_name.replace("/", "_")
+    if context == "title":
+        paper_text = paper_extra_args["title"]  
+    elif context == "abstract":
+        paper_text = paper_extra_args["abstract"]
+    else:
+        paper_text = extract_paper_text(paper_path, context = context, format = format)
+    
     show_info(
         f"🧠 {model_name} is extracting Metadata ...",
     )
+
     error = None
     if "jury" in model_name.lower() or "composer" in model_name.lower():
         all_results = []
