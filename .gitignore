@@ -20,3 +20,4 @@ static/
 wandb/
 evals/resource/test/
 *.csv
+gemma-3-27b-it
