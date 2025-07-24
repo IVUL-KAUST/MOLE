@@ -2,61 +2,105 @@
 from acl_anthology import Anthology
 import argparse
 import pandas as pd
+from tqdm import tqdm
 
-def search_acl_by_keyword(keywords, limit=10, venue_filter=None):
-    if venue_filter and venue_filter.lower() == "lrec":
-        venue_filter = "International Conference on Language Resources and Evaluation"
-    """
-    Search for papers in the ACL Anthology by keyword.
-    
-    Args:
-        keywords (list): A list of keywords to search for.
-        limit (int): The maximum number of papers to return.
-        venue_filter (str): The venue to filter by (e.g., 'LREC').
-        
-    Returns:
-        list: A list of dictionaries, where each dictionary contains the paper's information.
-    """
-    anthology = Anthology.from_repo()
+top_100_languages =[
+    "afrikaans", "albanian", "amharic", "arabic", "armenian", "aymara", "azerbaijani", "bengali",
+    "bosnian", "bulgarian", "burmese", "chinese", "croatian", "czech", "danish", "dari",
+    "dutch", "english", "estonian", "filipino", "finnish", "french", "georgian", "german",
+    "greek", "guarani", "hebrew", "hindi", "hungarian", "icelandic", "indonesian", "irish",
+    "italian", "japanese", "kazakh", "khmer", "kinyarwanda", "korean", "kurdish", "kyrgyz",
+    "lao", "latvian", "lithuanian", "luxembourgish", "macedonian", "malagasy", "malay",
+    "maltese", "mandarin", "maori", "mongolian", "montenegrin", "nepali", "norwegian",
+    "pashto", "persian", "polish", "portuguese", "quechua", "romanian", "romansh", "russian",
+    "serbian", "shona", "sinhala", "slovak", "slovene", "somali", "spanish", "swahili",
+    "swedish", "tagalog", "tajik", "tamil", "thai", "turkish", "turkmen", "ukrainian",
+    "urdu", "uzbek", "vietnamese", "xhosa", "zulu"
+]
+arabic_dialects = ["moroccan", "egyptian", "levantine", "palestinian", "syrian", "lebanese", "jordanian", "iraqi", "palestinian", "syrian", "lebanese", "jordanian", "iraqi", "palestinian", "syrian", "lebanese", "jordanian", "iraqi"]
+id2lang = { 'ar': 'arabic', 'en': 'english', 'fr': 'french', 'jp': 'japanese', 'ru': 'russian', 'multi': 'multilingual', 'other': 'other'}
+lang2id = {v: k for k, v in id2lang.items()}
 
+def get_words_from_paper(title, abstract, title_only=False):
+    words = [] 
+    if title_only:
+        paper = title
+    else:
+        paper = title + ' ' + abstract
+    for word in paper.split(' '):
+        word = word.lower().strip()
+        words.extend(word.split('-'))
+    return words
+
+def filter_schema(paper):
+    data_keywords = ['dataset', 'datasets', 'benchmark', 'corpus', 'corpora', 'collection', 'collections', 'data']
+    if paper.title is None or paper.abstract is None:
+        return 'discard'
+    paper_words = get_words_from_paper(str(paper.title), str(paper.abstract), title_only=False)
+    title_words = get_words_from_paper(str(paper.title), str(paper.abstract), title_only=True)
+    if not any(word in paper_words for word in data_keywords):
+        return 'other'
+
+    included_langs = []
+    for lang in top_100_languages+arabic_dialects:
+        if lang.lower() in paper_words:
+            included_langs.append(lang)
     
+    if len(included_langs) == 0 and any(word in title_words for word in data_keywords):
+        return 'en'
+    elif len(included_langs) == 1:
+        if included_langs[0] in lang2id:
+            return lang2id[included_langs[0]]
+    elif len(included_langs) > 2 and ('multilingual' in paper_words or 'cross-lingual' in paper_words):
+        return 'multi' 
+    else:
+        return 'discard'
+
+class Paper:
+    def __init__(self, id, title, year, url, abstract):
+        self.id = id
+        self.title = title
+        self.year = year
+        self.url = url
+        self.abstract = abstract
+
+def get_cached_papers():
+    data  = []
+    df = pd.read_csv('acl_anthology.csv')
+    for index, row in df.iterrows():
+        data.append(Paper(row['id'], row['title'], row['year'], row['url'], row['abstract']))
+    return data
+
+def annotate_schema(limit=None, redownload=False):
+    if not redownload:
+        papers = get_cached_papers()
+    else:
+        anthology = Anthology.from_repo()
+        papers = anthology.papers()
 
     results = []
-    for paper in anthology.papers():
-        paper_venue_names = []
-        if paper.venue_ids:
-            for v_id in paper.venue_ids:
-                if v_id in anthology.venues:
-                    paper_venue_names.append(anthology.venues[v_id].name)
-                else:
-                    print(f"Warning: Venue ID {v_id} not found in anthology.venues")
-        
-        current_paper_venue = ', '.join(paper_venue_names) if paper_venue_names else None
-
-        # Filter by venue first if venue_filter is provided
-        if venue_filter and (not current_paper_venue or venue_filter.lower() not in current_paper_venue.lower()):
+    # pbar = tqdm(total=limit, desc="Searching ACL Anthology")
+    if limit is None:
+        limit = len(papers)
+    bpar = tqdm(total=limit, desc="Annotating schema", position=0)
+    for paper in papers:
+        bpar.update(1)
+        if limit is not None and len(results) >= limit:
+            break
+        schema = filter_schema(paper)
+        if schema == 'discard':
             continue
-
-        # Filter by all keywords
-        match = True
-        paper_text = str(paper.title).lower() + " " + str(paper.abstract).lower()
-        for keyword in keywords:
-            if keyword.lower() not in paper_text:
-                match = False
-                break
+        # pbar.update(1)
+        results.append({
+            'id': paper.id,
+            'title': paper.title,
+            'year': paper.year,
+            'url': paper.url,
+            'abstract': paper.abstract,
+            'schema_name': schema
+        })
         
-        if match:
-            results.append({
-                'id': paper.id,
-                'title': paper.title,
-                'authors': [author.name for author in paper.authors],
-                'year': paper.year,
-                'pdf': paper.pdf.url if paper.pdf else None,
-                'abstract': paper.abstract,
-                'venue': current_paper_venue
-            })
-            if len(results) >= limit:
-                break
+    bpar.close()
     return results
 
 def count_all_papers():
@@ -76,7 +120,7 @@ def count_papers_per_venue():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Search the ACL Anthology or count all papers.')
-    parser.add_argument('--keyword', type=str, nargs='+', help='The keyword(s) to search for.')
+    parser.add_argument('--annotate_schema', action='store_true', help='Annotate the schema of the papers.')
     parser.add_argument('--limit', type=int, default=10, help='The maximum number of papers to return.')
     parser.add_argument('--venue', type=str, help='The venue to search for (e.g., LREC). Use "LREC" as a shortcut for "International Conference on Language Resources and Evaluation".')
     parser.add_argument('--count_all', action='store_true', help='Count all papers in the ACL Anthology.')
@@ -104,8 +148,8 @@ if __name__ == '__main__':
                 break
         if not found:
             print(f"Venue '{args.venue_name}' not found.")
-    elif args.keyword:
-        papers = search_acl_by_keyword(args.keyword, args.limit, args.venue)
+    elif args.annotate_schema:
+        papers = annotate_schema()
         
         if papers:
             df = pd.DataFrame(papers)
