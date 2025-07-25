@@ -15,7 +15,7 @@ from utils import read_json, get_metadata_human, show_info, show_warning
 from traditional import get_metadata_keyword, get_metadata_nu_extract
 from schema import get_schema
 from transformers import AutoTokenizer
-from search_acl import ACLDownloader
+from search_acl import ACLDownloader, Downloader
 
 load_dotenv()
 
@@ -263,6 +263,7 @@ def run(
     backend = "openrouter",
     paper_extra_args = {},
 ):
+    show_info(f"🔍 Running on {paper_link}")
     model_results = {}
     schema = get_schema(schema_name)
     if "arxiv" in paper_link:
@@ -271,6 +272,9 @@ def run(
     elif "acl" in paper_link:
         # download the paper from acl anthology
         downloader = ACLDownloader(download_path="static/papers/")
+        success, paper_path = downloader.download_paper(paper_link, verbose=True)
+    elif '.pdf' in paper_link:
+        downloader = Downloader(download_path="static/papers/")
         success, paper_path = downloader.download_paper(paper_link, verbose=True)
     else:
         raise ValueError(f"Invalid paper link: {paper_link}")
@@ -312,7 +316,11 @@ def run(
     elif context == "abstract":
         paper_text = paper_extra_args["abstract"]
     else:
-        paper_text = extract_paper_text(paper_path, context = context, format = format)
+        try:
+            paper_text = extract_paper_text(paper_path, context = context, format = format)
+        except Exception as e:
+            show_warning(f"Error extracting paper text: {e}")
+            return model_results
     
     show_info(
         f"🧠 {model_name} is extracting Metadata ...",
@@ -419,6 +427,7 @@ def run(
         "model_name": model_name,
         "few_shot": few_shot,
         "link": paper_link,
+        "schema_name": schema_name,
     }
     results["error"] = error
     try:

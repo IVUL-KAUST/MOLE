@@ -233,7 +233,7 @@ class ArxivSourceDownloader:
         # if verbose:
         #     self.logger.info(f"🔄 Processing paper ID: {paper_id} ...")
         
-        paper_dir = self._create_download_dir(paper_id)
+        paper_dir = self._create_download_dir(identifier)
         success = True
         
         if download_pdf:
