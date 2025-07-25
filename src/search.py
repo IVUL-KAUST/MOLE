@@ -255,6 +255,43 @@ def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached
     else:
         raise ValueError(f"Invalid context: {context}")
 
+def download_paper(paper_link, download_path="static/papers/", log = True):
+    if "arxiv" in paper_link:
+        downloader = ArxivSourceDownloader(download_path=download_path)
+        success, paper_path = downloader.download_paper(paper_link, verbose=log)
+    elif "acl" in paper_link:
+        # download the paper from acl anthology
+        downloader = ACLDownloader(download_path=download_path)
+        success, paper_path = downloader.download_paper(paper_link, verbose=log)
+    elif '.pdf' in paper_link:
+        downloader = Downloader(download_path=download_path)
+        success, paper_path = downloader.download_paper(paper_link, verbose=log)
+    else:
+        raise ValueError(f"Invalid paper link: {paper_link}")
+    return success, paper_path
+
+def extract_and_save_paper_text(paper_path, context = "all", format = "pdf_plumber", save_paper_text = True, log = True):
+    if os.path.exists(f"{paper_path}/paper_text.txt"):
+        show_info(f"📄 Found existing paper text at {paper_path}/paper_text.txt", log = log)
+        with open(f"{paper_path}/paper_text.txt", "r") as f:
+            return f.read()
+    
+    if context == "title":
+        paper_text = paper_extra_args["title"]  
+    elif context == "abstract":
+        paper_text = paper_extra_args["abstract"]
+    else:
+        try:
+            paper_text = extract_paper_text(paper_path, context = context, format = format, log = log)
+        except Exception as e:
+            show_warning(f"Error extracting paper text: {e}", log = log)
+            return None
+    if save_paper_text:
+        show_info(f"📄 Saving paper text to {paper_path}", log = log)
+        with open(f"{paper_path}/paper_text.txt", "w") as f:
+            f.write(paper_text)
+    return paper_text
+
 def run(
     paper_link,
     model_name,
@@ -274,20 +311,15 @@ def run(
     show_info(f"🔍 Running on {paper_link}", log = log)
     model_results = {}
     schema = get_schema(schema_name)
-    if "arxiv" in paper_link:
-        downloader = ArxivSourceDownloader(download_path="static/papers/")
-        success, paper_path = downloader.download_paper(paper_link, verbose=True)
-    elif "acl" in paper_link:
-        # download the paper from acl anthology
-        downloader = ACLDownloader(download_path="static/papers/")
-        success, paper_path = downloader.download_paper(paper_link, verbose=True)
-    elif '.pdf' in paper_link:
-        downloader = Downloader(download_path="static/papers/")
-        success, paper_path = downloader.download_paper(paper_link, verbose=True)
-    else:
-        raise ValueError(f"Invalid paper link: {paper_link}")
+    
 
+    success, paper_path = download_paper(paper_link)
+    if not success:
+        show_warning(f"Failed to download paper: {paper_link}", log = log)
+        return model_results
+    
     save_path = paper_path.replace("papers", results_path)
+     
     if few_shot > 0:
         save_path = f"{save_path}/few_shot/{few_shot}"
         os.makedirs(save_path, exist_ok=True)
@@ -321,21 +353,11 @@ def run(
     start_time = time.time()
     model_name = model_name.replace("/", "_")
 
-    if context == "title":
-        paper_text = paper_extra_args["title"]  
-    elif context == "abstract":
-        paper_text = paper_extra_args["abstract"]
-    else:
-        try:
-            paper_text = extract_paper_text(paper_path, context = context, format = format, log = log)
-        except Exception as e:
-            show_warning(f"Error extracting paper text: {e}", log = log)
-            return model_results
-    if save_paper_text:
-        paper_text_path = "/".join(save_path.split("/")[:-1])
-        show_info(f"📄 Saving paper text to {paper_text_path}", log = log)
-        with open(f"{paper_text_path}/paper_text.txt", "w") as f:
-            f.write(paper_text)
+    paper_text = extract_and_save_paper_text(paper_path, context = context, format = format, save_paper_text = save_paper_text, log = log)
+    if paper_text is None:
+        show_warning(f"Failed to extract paper text: {paper_link}", log = log)
+        return model_results
+    
     show_info(
         f"🧠 {model_name} is extracting Metadata ...", log = log
     )

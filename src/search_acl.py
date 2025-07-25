@@ -48,7 +48,7 @@ class Downloader:
             if response is not None and response.status_code == 200:
                 with open(os.path.join(paper_dir, f"paper.pdf"), "wb") as f:
                     f.write(response.content)
-                show_info(f"🔍 PDF downloaded successfully to {paper_dir}", log = self.log)
+                show_info(f"📄 PDF downloaded successfully to {paper_dir}", log = self.log)
             else:
                 show_warning(f"Failed to download PDF for {identifier}", log = self.log)
                 return False, paper_dir

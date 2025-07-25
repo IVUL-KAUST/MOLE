@@ -245,7 +245,7 @@ class ArxivSourceDownloader:
                 pdf_success = self._download_file(pdf_url, pdf_path)
                 if pdf_success:
                     if verbose:
-                        self.logger.info(f"📄 PDF downloaded successfully to {pdf_path}")
+                        self.logger.info(f"📄 PDF downloaded successfully to {paper_dir}")
                 else:
                     self.logger.warning("Failed to download PDF")
                     success = False
