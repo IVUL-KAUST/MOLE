@@ -213,10 +213,14 @@ class Schema(BaseModel):
     def validate_a(cls, data):
         for key, value in cls.model_fields.items():
             t = value.metadata[0]
-            try:
-                data[key] = t.cast(data[key])
-            except:
+            kd = data[key]
+            if kd is None:
                 data[key] = t.get_default()
+            else:
+                try:
+                    data[key] = t.cast(kd)
+                except:
+                    data[key] = t.get_default()
         return data
        
 class DatasetSchema(Schema):
