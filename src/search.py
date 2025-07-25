@@ -66,7 +66,7 @@ def calculate_max_output_tokens(model_name):
             max_output_tokens = num_tokens
     return max_output_tokens
 
-def truncate_prompt(prompt, sys_prompt, model_name, max_tokens):
+def truncate_prompt(prompt, sys_prompt, model_name, max_tokens, log = True):
     MAX_OUTPUT_TOKENS = 1024
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     num_prompt_tokens = len(tokenizer.encode(prompt))
@@ -74,7 +74,7 @@ def truncate_prompt(prompt, sys_prompt, model_name, max_tokens):
     input_length = num_system_tokens+num_prompt_tokens + 10 + MAX_OUTPUT_TOKENS # 10 is the margin of tokens used for the role and content tokens
     if input_length > max_tokens:
         remaining_tokens = max_tokens-num_system_tokens - 10 - MAX_OUTPUT_TOKENS
-        show_warning(f"⚠️ Truncating prompt {num_prompt_tokens} -> {remaining_tokens} tokens")
+        show_warning(f"⚠️ Truncating prompt {num_prompt_tokens} -> {remaining_tokens} tokens", log = log)
         truncated_prompt = tokenizer.decode(tokenizer.encode(prompt)[:remaining_tokens], skip_special_tokens=True)
         return truncated_prompt
     return prompt
@@ -91,6 +91,7 @@ def get_metadata(
     max_retries = 3,
     backend = "openrouter",
     max_tokens = 32768,
+    log = True
 ):
     cost = {
         "input_tokens": 0,
@@ -106,7 +107,7 @@ def get_metadata(
 
 
         if backend == "openrouter":
-            show_info(f"🔑 Using OpenRouter backend")
+            show_info(f"🔑 Using OpenRouter backend", log = log)
             api_key = os.environ.get("OPENROUTER_API_KEY")
             base_url = "https://openrouter.ai/api/v1"
             client = OpenAI(
@@ -120,8 +121,8 @@ def get_metadata(
             client = OpenAI(
                 base_url=base_url
             )
-            show_info(f"🔑 Using VLLM backend")
-            prompt = truncate_prompt(prompt, sys_prompt, model_name, max_tokens)
+            show_info(f"🔑 Using VLLM backend", log = log)
+            prompt = truncate_prompt(prompt, sys_prompt, model_name, max_tokens, log = log)
             messages[1]["content"] = prompt
         else:
             raise ValueError(f"Invalid backend: {backend}")
@@ -158,7 +159,7 @@ def get_metadata(
             break
         else:
             print(error)
-            show_warning(f"Failed to get predictions for {model_name}, retrying ...")
+            show_warning(f"Failed to get predictions for {model_name}, retrying ...", log = log)
             time.sleep(3)
     time.sleep(3) # sleep before next prediction
     if predictions == {}:
@@ -169,7 +170,7 @@ def clean_latex(path):
     os.system(f"arxiv_latex_cleaner {path}")
 
 
-def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached_docling=True):
+def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached_docling=True, log = True):
     if format == "tex":
         source_files = glob(f"{path}/**/**.tex", recursive=True)
     else:
@@ -177,12 +178,12 @@ def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached
 
     if len(source_files) == 0:  
         source_files = glob(f"{path}/**/paper.pdf", recursive=True)
-        show_warning(f"🚧 No source files found, using {source_files}")
+        show_warning(f"🚧 No source files found, using {source_files}", log = log)
     
     paper_text = ""
 
     show_info(
-        f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...")
+        f"📖 Reading source files {[src.split('/')[-1] for src in source_files]}, ...", log = log)
 
     paper_text = ""
     for source_file in source_files:
@@ -204,6 +205,7 @@ def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached
                 if os.path.exists(docling_file_path) and use_cached_docling:
                     show_info(
                         f"📄 Found existing docling extraction, reusing from {docling_file_path}",
+                        log = log
                     )
                     try:
                         with open(docling_file_path, "r", encoding="utf-8") as f:
@@ -212,10 +214,12 @@ def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached
                     except Exception as e:
                         show_warning(
                             f"⚠️ Failed to read existing docling extraction: {str(e)}. Will extract again.",
+                            log = log
                         )
                 else:
                     show_info(
                         f"📄 Extracting text using docling...",
+                        log = log
                     )
                     paper_text += get_paper_content_from_docling(source_file)
                     
@@ -225,26 +229,28 @@ def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached
                             f.write(paper_text)
                         show_info(
                             f"📄 Saved docling extracted text to {docling_file_path}",
+                            log = log
                         )
                     except Exception as e:
                         show_warning(
                             f"⚠️ Failed to save docling extracted text: {str(e)}",
+                            log = log
                         )
             else:
                 raise ValueError(f"Invalid format: {format}")
         else:
-            show_warning("Not acceptable source file")
+            show_warning("Not acceptable source file", log = log)
             continue
 
     if context == "all":
         return paper_text
     elif context == "half":
         paper_text = paper_text[:len(paper_text)//2]
-        print(len(paper_text))
+        show_info(f"📄 Paper text truncated to {len(paper_text)}", log = log)
         return paper_text
     elif context == "quarter":
         paper_text = paper_text[:len(paper_text)//4]
-        print(len(paper_text))
+        show_info(f"📄 Paper text truncated to {len(paper_text)}", log = log)
         return paper_text
     else:
         raise ValueError(f"Invalid context: {context}")
@@ -262,8 +268,10 @@ def run(
     format = "pdf_plumber",
     backend = "openrouter",
     paper_extra_args = {},
+    save_paper_text = True,
+    log = True,
 ):
-    show_info(f"🔍 Running on {paper_link}")
+    show_info(f"🔍 Running on {paper_link}", log = log)
     model_results = {}
     schema = get_schema(schema_name)
     if "arxiv" in paper_link:
@@ -288,7 +296,7 @@ def run(
         os.makedirs(save_path, exist_ok=True)
     
     if browse_web and (model_name in non_browsing_models):
-        show_info(f"Can't browse the web for {model_name}")
+        show_info(f"Can't browse the web for {model_name}", log = log)
 
 
     if browse_web and not(model_name in non_browsing_models):
@@ -302,6 +310,7 @@ def run(
     ):
         show_info(
             f"📂 Loading saved results {save_path} ...",
+            log = log
         )
         results = json.load(open(save_path))
         model_results[model_name] = results
@@ -311,19 +320,24 @@ def run(
     paper_text = ""
     start_time = time.time()
     model_name = model_name.replace("/", "_")
+
     if context == "title":
         paper_text = paper_extra_args["title"]  
     elif context == "abstract":
         paper_text = paper_extra_args["abstract"]
     else:
         try:
-            paper_text = extract_paper_text(paper_path, context = context, format = format)
+            paper_text = extract_paper_text(paper_path, context = context, format = format, log = log)
         except Exception as e:
-            show_warning(f"Error extracting paper text: {e}")
+            show_warning(f"Error extracting paper text: {e}", log = log)
             return model_results
-    
+    if save_paper_text:
+        paper_text_path = "/".join(save_path.split("/")[:-1])
+        show_info(f"📄 Saving paper text to {paper_text_path}", log = log)
+        with open(f"{paper_text_path}/paper_text.txt", "w") as f:
+            f.write(paper_text)
     show_info(
-        f"🧠 {model_name} is extracting Metadata ...",
+        f"🧠 {model_name} is extracting Metadata ...", log = log
     )
 
     error = None
@@ -361,6 +375,7 @@ def run(
         if browse_web and os.path.exists(base_model_path):
             show_info(
                 "📂 Loading saved results ...",
+                log = log
             )
             results = json.load(open(base_model_path))
             metadata = results["metadata"]
@@ -375,12 +390,14 @@ def run(
             )
             show_info(
                 f"📖 Extracting readme from {browsing_link}",
+                log = log
             )
             readme = fetch_repository_metadata(browsing_link)
 
             if readme != "":
                 show_info(
                     f"🧠🌐 {model_name} is extracting data using metadata and web ...", 
+                    log = log
                 )
                 message, metadata, browsing_cost, error = get_metadatav2(
                     model_name=model_name,
@@ -398,7 +415,9 @@ def run(
                 }
             else:
                 message = None
-    show_info("🔍 Validating Metadata ...")
+    show_info("🔍 Validating Metadata ...", log = log)
+    if log:
+        print(metadata)
     metadata = schema(metadata = metadata)
     results = {}
     results["metadata"] = metadata.json()
@@ -407,10 +426,10 @@ def run(
         evaluation_results = metadata.compare_with(gold_metadata, return_metrics_only=True)
         results["validation"] = evaluation_results
         show_info(
-            f"📊 precision: {evaluation_results['precision']*100:.2f} %, recall: {evaluation_results['recall']*100:.2f} %, f1: {evaluation_results['f1']*100:.2f} %, length: {evaluation_results['length']*100:.2f} %",
+            f"📊 precision: {evaluation_results['precision']*100:.2f} %, recall: {evaluation_results['recall']*100:.2f} %, f1: {evaluation_results['f1']*100:.2f} %, length: {evaluation_results['length']*100:.2f} %", log = log
         )
     else:
-        show_info("🚧 No gold metadata found")
+        show_info("🚧 No gold metadata found", log = log)
         results["validation"] = {}
 
     try:
@@ -432,16 +451,16 @@ def run(
     results["error"] = error
     try:
         with open(save_path, "w") as outfile:
-            show_info(f"📥 Results saved to: {save_path}")
+            show_info(f"📥 Results saved to: {save_path}", log = log)
             # print(results)
             json.dump(results, outfile, indent=4)
             # add emoji for time
-            show_info(f"⏰ Inference finished in {time.time() - start_time:.2f} seconds")
+            show_info(f"⏰ Inference finished in {time.time() - start_time:.2f} seconds", log = log)
             model_results[model_name] = results
     except Exception as e:
-        show_error(f"Error saving results to {save_path}")
-        show_error(e)
-        show_error(results)
+        show_error(f"Error saving results to {save_path}", log = log)
+        show_error(e, log = log)
+        show_error(results, log = log)
         if os.path.exists(save_path):
             os.remove(save_path)
 

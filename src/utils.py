@@ -53,17 +53,20 @@ def create_hash(paper_id: str) -> str:
     """Create a hash for a given paper ID."""
     return hashlib.sha256(paper_id.encode()).hexdigest()[:8]
 
-def show_info(text):
+def show_info(text, log = True):
     logger = setup_logger()
-    logger.info(text)
+    if log:
+        logger.info(text)
 
-def show_warning(text):
+def show_warning(text, log = True):
     logger = setup_logger()
-    logger.warning(text)
+    if log:
+        logger.warning(text)
 
-def show_error(text):
+def show_error(text, log = True):
     logger = setup_logger()
-    logger.error(text)
+    if log:
+        logger.error(text)
 
 def get_paper_content_from_docling(paper_path, output_mode="markdown"):
     pipeline_options = PdfPipelineOptions()

@@ -3,10 +3,11 @@ from acl_anthology import Anthology
 import argparse
 import pandas as pd
 from tqdm import tqdm
-from utils import create_hash
+from utils import create_hash, show_info, show_warning
 import os
 import requests
 from typing import Tuple
+import time
 
 top_100_languages =[
     "afrikaans", "albanian", "amharic", "arabic", "armenian", "aymara", "azerbaijani", "bengali",
@@ -25,9 +26,10 @@ arabic_dialects = ["moroccan", "egyptian", "levantine", "palestinian", "syrian",
 id2lang = { 'ar': 'arabic', 'en': 'english', 'fr': 'french', 'jp': 'japanese', 'ru': 'russian', 'multi': 'multilingual', 'other': 'other'}
 lang2id = {v: k for k, v in id2lang.items()}
 
-class ACLDownloader:
-    def __init__(self, download_path: str = "static/papers/"):
+class Downloader:
+    def __init__(self, download_path: str = "static/papers/", log = True):
         self.download_path = download_path
+        self.log = log
 
     def download_paper(self, identifier: str, download_pdf: bool = True, verbose: bool = True) -> Tuple[bool, str]:
         paper_dir = os.path.join(self.download_path, create_hash(identifier))
@@ -35,11 +37,26 @@ class ACLDownloader:
 
         # download the pdf
         if download_pdf:
-            response = requests.get(identifier)
-            if response.status_code == 200:
-                with open(os.path.join(paper_dir, f"{identifier}.pdf"), "wb") as f:
+            response = None
+            for i in range(3):
+                try:
+                    response = requests.get(identifier, timeout=10)
+                    break
+                except Exception as e:
+                    show_warning(f"Error downloading paper {identifier}: {e}", log = self.log)
+                    time.sleep(1)
+            if response is not None and response.status_code == 200:
+                with open(os.path.join(paper_dir, f"paper.pdf"), "wb") as f:
                     f.write(response.content)
+                show_info(f"🔍 PDF downloaded successfully to {paper_dir}", log = self.log)
+            else:
+                show_warning(f"Failed to download PDF for {identifier}", log = self.log)
+                return False, paper_dir
         return True, paper_dir
+
+class ACLDownloader(Downloader):
+    def __init__(self, download_path: str = "static/papers/", log = True):
+        super().__init__(download_path, log)
 
 def get_words_from_paper(title, abstract, title_only=False):
     words = [] 
