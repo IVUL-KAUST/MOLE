@@ -187,8 +187,14 @@ class List(BaseType):
     def get_default(self):
         return []
 
-    def cast(self, value):            
-        return list(value)
+    def cast(self, value):
+        if isinstance(value, str):
+            if len(value) > 0:
+                return list(value.split(','))
+            else:
+                return []
+        else:
+            return list(value)
     
     def get_type(self):
         # Check if inner type is a Pydantic model
