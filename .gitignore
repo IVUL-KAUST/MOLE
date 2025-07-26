@@ -22,3 +22,5 @@ evals/resource/test/
 *.csv
 gemma-3-27b-it
 gemma-3-12b-it
+unsloth_compiled_cache/
+slurm/
