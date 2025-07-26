@@ -17,7 +17,7 @@ class ArxivSourceDownloader:
     Handles multiple source formats including gzip, tar, pdf, and ps.
     """
     
-    def __init__(self, download_path: str = "resultsv2"):
+    def __init__(self, download_path: str = "resultsv2", log = True):
         """
         Initialize the downloader.
         
@@ -25,7 +25,7 @@ class ArxivSourceDownloader:
             download_path (str): Directory where files will be downloaded
         """
         self.download_path = download_path
-        self.logger = setup_logger()
+        self.log = log
         self.client = arxiv.Client()
 
     def _get_paper_id(self, identifier: str) -> str:
@@ -217,7 +217,7 @@ class ArxivSourceDownloader:
             self.logger.error(f"Error processing source file: {e}")
             return False
 
-    def download_paper(self, identifier: str, download_pdf: bool = True, download_source: bool = True, verbose: bool = True) -> Tuple[bool, str]:
+    def download_paper(self, identifier: str, download_pdf: bool = True, download_source: bool = True) -> Tuple[bool, str]:
         """
         Download paper files (PDF and/or source files).
         
@@ -242,15 +242,18 @@ class ArxivSourceDownloader:
             pdf_url = self._get_pdf_url(paper_id)
             if pdf_url:
                 pdf_path = os.path.join(paper_dir, f"paper.pdf")
-                pdf_success = self._download_file(pdf_url, pdf_path)
-                if pdf_success:
-                    if verbose:
-                        self.logger.info(f"📄 PDF downloaded successfully to {paper_dir}")
+                if os.path.exists(pdf_path):
+                    show_info(f"📄 PDF already exists at {paper_dir}", log = self.log)
+                    success = True
                 else:
-                    self.logger.warning("Failed to download PDF")
-                    success = False
+                    pdf_success = self._download_file(pdf_url, pdf_path)
+                    if pdf_success:
+                        show_info(f"📄 PDF downloaded successfully to {paper_dir}", log = self.log)
+                    else:
+                        show_warning("Failed to download PDF", log = self.log)
+                        success = False
             else:
-                self.logger.warning("PDF URL not found")
+                show_warning("PDF URL not found", log = self.log)
                 success = False
         
         if download_source:
@@ -263,10 +266,10 @@ class ArxivSourceDownloader:
                     os.remove(downloaded_file)
                 
                 if not source_success:
-                    self.logger.warning("Failed to process source files")
+                    show_warning("Failed to process source files", log = self.log)
                     success = False
             else:
-                self.logger.warning("Failed to download source files")
+                show_warning("Failed to download source files", log = self.log)
                 success = False
         
         return success, paper_dir

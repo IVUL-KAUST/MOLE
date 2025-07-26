@@ -257,15 +257,15 @@ def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached
 
 def download_paper(paper_link, download_path="static/papers/", log = True):
     if "arxiv" in paper_link:
-        downloader = ArxivSourceDownloader(download_path=download_path)
-        success, paper_path = downloader.download_paper(paper_link, verbose=log)
+        downloader = ArxivSourceDownloader(download_path=download_path, log= log)
+        success, paper_path = downloader.download_paper(paper_link)
     elif "acl" in paper_link:
         # download the paper from acl anthology
-        downloader = ACLDownloader(download_path=download_path)
-        success, paper_path = downloader.download_paper(paper_link, verbose=log)
+        downloader = ACLDownloader(download_path=download_path, log= log)
+        success, paper_path = downloader.download_paper(paper_link)
     elif '.pdf' in paper_link:
-        downloader = Downloader(download_path=download_path)
-        success, paper_path = downloader.download_paper(paper_link, verbose=log)
+        downloader = Downloader(download_path=download_path, log= log)
+        success, paper_path = downloader.download_paper(paper_link)
     else:
         raise ValueError(f"Invalid paper link: {paper_link}")
     return success, paper_path

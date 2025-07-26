@@ -31,13 +31,16 @@ class Downloader:
         self.download_path = download_path
         self.log = log
 
-    def download_paper(self, identifier: str, download_pdf: bool = True, verbose: bool = True) -> Tuple[bool, str]:
+    def download_paper(self, identifier: str, download_pdf: bool = True) -> Tuple[bool, str]:
         paper_dir = os.path.join(self.download_path, create_hash(identifier))
         os.makedirs(paper_dir, exist_ok=True)
 
         # download the pdf
         if download_pdf:
             response = None
+            if os.path.exists(os.path.join(paper_dir, f"paper.pdf")):
+                show_info(f"📄 PDF already exists at {paper_dir}", log = self.log)
+                return True, paper_dir
             for i in range(3):
                 try:
                     response = requests.get(identifier, timeout=10)
