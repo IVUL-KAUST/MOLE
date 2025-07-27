@@ -211,9 +211,10 @@ class Schema(BaseModel):
     
     @model_validator(mode='before') # validate based on the type of the field
     def validate_a(cls, data):
-        all_attributes = cls.get_attributes() + list(data.keys())
+        schema_attributes = cls.get_attributes()
+        all_attributes = schema_attributes + list(data.keys())
         for key in all_attributes:
-            if key not in cls.get_attributes(): # if the key is not in the schema, then delete it
+            if key not in schema_attributes: # if the key is not in the schema, then delete it
                 del data[key]
                 continue
             t = cls.get_answer_object(key)
