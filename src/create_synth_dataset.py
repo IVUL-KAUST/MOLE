@@ -4,6 +4,7 @@ import requests
 import time
 import sys
 from openai import OpenAI
+from tqdm import tqdm
 
 dataset = load_dataset('csv', data_files='train_dataset.csv', split='train')
 
@@ -35,14 +36,13 @@ if __name__ == "__main__":
         print("Server is not ready, waiting for 1 second")
         time.sleep(1)
     print("Server is ready")
-    for example in dataset:
-        url = example['url']
-        schema_name = example['schema_name']
-        result = run(url, model_name='gemma-3-12b-it', schema_name=schema_name, backend='vllm', results_path='synth_dataset', format='pdf_plumber')
-        print(result)
-        break
-
-
-
+    for example in tqdm(dataset):
+        try:
+            url = example['url']
+            schema_name = example['schema_name']
+            result = run(url, model_name=model_name, schema_name=schema_name, backend='vllm', results_path='synth_dataset', format='pdf_plumber')
+        except Exception as e:
+            print(f"Error: {e}")
+            continue
 
 
