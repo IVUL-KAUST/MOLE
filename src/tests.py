@@ -121,6 +121,15 @@ for m in evaluation_results:
     assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
 print('✅ passed test8')
 
+validated_metadata = Parent(
+    path = 'testfiles/test9.json'
+)
+evaluation_results = validated_metadata.compare_with(gold_metadata1)
+
+for m in evaluation_results:
+    assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
+print('✅ passed test9')
+
 default_metadata = {
     "Name": "",
     "Age": 0,

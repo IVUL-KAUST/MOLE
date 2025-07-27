@@ -1,27 +1,7 @@
 {
-    "Name": "",
-    "Volume": 0,
-    "Unit": "images",
-    "Tokenized": false,
-    "Script": "Arab-Latin",
-    "Form": "images",
-    "Collection Style": ["other"],
-    "Domain": ["other"],
-    "Ethical Risks": "High",
-
-    "Provider": [],
-    "Host": "other",
-    "Link": "",
-    "HF Link": "",
-    "License": "custom",
-    "Cost": "",
-    "Access": "With-Fee",
-
-    "Language": "multilingual",
-    "Subsets": [],
-    "Dialect": "mixed",
-
-    "Test Split": false,
-    "Tasks": ["other"],
-    "Derived From": []  
+    "Name": "ahmad",
+    "Age": 20,
+    "Website": "https://www.google.com",
+    "Hobbies": ["reading"],
+    "Married": true
 }
