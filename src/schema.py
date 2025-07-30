@@ -60,7 +60,7 @@ class Schema(BaseModel):
             values['answer_type'] = ob.get_type()
             for constrain in ['answer_min', 'answer_max', 'options']:
                 attr =  getattr(ob, constrain)
-                if attr is not None:
+                if attr is not None and attr != -1:
                     values[constrain] = attr
             schema_json[key] = values
             

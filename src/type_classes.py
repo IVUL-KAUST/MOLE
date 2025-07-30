@@ -8,20 +8,19 @@ import random
 import string
 from Levenshtein import distance as levenshtein_distance
 
-MAX_INT = 1000000000000000000
 @dataclass(frozen=True)
 class Constraints:
     answer_min: int
-    answer_max: int = MAX_INT
+    answer_max: int = -1
     pattern: str = None
     options: list[str] = None
 
-def Field(field_type, answer_min=0, answer_max=MAX_INT, options=None):
+def Field(field_type, answer_min=0, answer_max=-1, options=None):
     return Annotated[field_type, field_type(answer_min=answer_min, answer_max=answer_max, options=options)]
 
 class BaseType:
     base_type = None
-    def __init__(self, answer_min=0, answer_max=MAX_INT, options=None, field_names=None):
+    def __init__(self, answer_min=0, answer_max=-1, options=None, field_names=None):
         self.answer_min = answer_min
         self.answer_max = answer_max
         self.options = options
