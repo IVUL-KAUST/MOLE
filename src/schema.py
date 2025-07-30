@@ -269,10 +269,17 @@ class ResourceSchema(Schema):
     Paper_Link: Field(URL, 1, 1)
     Year: Field(Year, 1900, 2025)
     Link: Field(URL, 0, 1)
+    Abstract: Field(Str, 1, 1000)  
     
     @classmethod
-    def get_system_prompt(cls):
-        return f"""
+    def get_prompts(cls, paper_text, readme, metadata = None):
+        
+        prompt = f"""Schema Name: {cls.get_schema_name()}
+                    Input Schema: {cls.schema()}
+                    Paper Text: {paper_text},
+                    Output JSON:
+                """
+        system_prompt = f"""
         You are a professional metadata extractor of resources from research papers. 
         You will be provided 'Paper Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
         The 'Output JSON' is a JSON with key:answer where the answer retrieves an attribute of the 'Input Schema' from the 'Paper Text'. 
@@ -290,7 +297,9 @@ class ResourceSchema(Schema):
         4. Paper_Link: what is the link of the paper.
         5. Year: what is the year of the paper.
         6. Link: what is the link of the resource.
+        7. Abstract: what is the abstract of the paper.
         """
+        return prompt, system_prompt
 
 class Subset(DatasetSchema):
     Name: Field(Str, 1, 5)
