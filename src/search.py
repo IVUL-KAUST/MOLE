@@ -105,7 +105,9 @@ def get_metadata(
         prompt, sys_prompt = schema.get_prompts(paper_text, readme, metadata)
         messages = [{"role": "system", "content": sys_prompt}, {"role": "user", "content": prompt}]
 
-
+        model_name = model_name.replace("_", "/")
+        model_name = model_name.replace("-browsing", "")
+        
         if backend == "openrouter":
             show_info(f"🔑 Using OpenRouter backend", log = log)
             api_key = os.environ.get("OPENROUTER_API_KEY")
@@ -128,8 +130,6 @@ def get_metadata(
             raise ValueError(f"Invalid backend: {backend}")
 
 
-        model_name = model_name.replace("_", "/")
-        model_name = model_name.replace("-browsing", "")
         message = client.chat.completions.create(
                     model=model_name,
                     messages=messages,
