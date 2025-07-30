@@ -6,7 +6,7 @@ from glob import glob
 
 dfs = []
 manual_annotation = False
-base_dir = "../.cache/jql-**/"
+base_dir = "../.cache/jql-a**/"
 if manual_annotation:
     papers = annotate_schema()
     df = pd.DataFrame(papers)
