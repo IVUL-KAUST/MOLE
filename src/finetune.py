@@ -14,7 +14,11 @@ if hasattr(os, 'cpu_count'):
 MAX_TOKENS = 2048
 
 model_name = "unsloth/gemma-3-4b-it"
-dataset = load_dataset("IVUL-KAUST/mole_synth_dataset", split="train")
+train_dataset = load_dataset("IVUL-KAUST/mole_synth_dataset", split="train")
+train_dataset = train_dataset.shuffle(seed=42)
+
+test_dataset = load_dataset("IVUL-KAUST/mole_test_dataset", split="train")
+
 
 model, tokenizer = FastModel.from_pretrained(
             model_name = model_name,
@@ -41,8 +45,8 @@ model = FastLanguageModel.get_peft_model(
 trainer = SFTTrainer(
     model = model,
     tokenizer = tokenizer,
-    train_dataset = dataset,
-    eval_dataset = None, # Can set up evaluation!
+    train_dataset = train_dataset,
+    eval_dataset = test_dataset, # Can set up evaluation!
     dataset_num_proc= 2,
     args = SFTConfig(
         dataset_text_field = "formatted_chat",
@@ -50,9 +54,11 @@ trainer = SFTTrainer(
         gradient_accumulation_steps = 4, # Use GA to mimic batch size!
         warmup_steps = 5,
         num_train_epochs = 1, # Set this for 1 full training run.
-        max_steps = 15,
+        max_steps = 100,
         learning_rate = 2e-4, # Reduce to 2e-5 for long training runs
         logging_steps = 1,
+        eval_steps = 25,
+        eval_strategy = "steps",
         optim = "adamw_8bit",
         weight_decay = 0.01,
         lr_scheduler_type = "linear",
