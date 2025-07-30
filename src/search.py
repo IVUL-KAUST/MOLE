@@ -145,6 +145,7 @@ def get_metadata(
                     "output_tokens": 0,
                 }
             response =  message.choices[0].message.content
+            # print(response)
             predictions = read_json(response)
         except json.JSONDecodeError as e:
             error = str(e)  
@@ -312,6 +313,7 @@ def run(
     model_results = {}
     schema = get_schema(schema_name)
     
+    model_name = model_name.replace("/", "_")
 
     success, paper_path = download_paper(paper_link)
     if not success:
