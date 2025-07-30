@@ -5,42 +5,54 @@ from constants import *
 import numpy as np
 from schema import get_schema
 from utils import show_info
+import asyncio
+import concurrent.futures
 
-if __name__ == "__main__":
+async def main():
     args = create_args()
     metric_results = {}
     paper_links = []           
     dataset = get_schema(args.schema_name).get_eval_datasets(split = args.split)
     
-    for idx, data in enumerate(dataset):
-        show_info(f"🔍 Processing paper {idx+1}/{len(dataset)}")
-        model_results = run(
-            data['Paper_Link'],
-            args.model,
-            browse_web=args.browse_web,
-            overwrite=args.overwrite,
-            schema_name = args.schema_name,
-            few_shot = args.few_shot,
-            results_path = args.results_path,
-            repeat_on_error = args.repeat_on_error,
-            context = args.context,
-            format = args.format,
-            backend = args.backend,
-            paper_extra_args = {
-                "title": data["Paper_Title"],
-                "abstract": data["Abstract"],
-            }
-        )
-
-        metrics = ['precision', 'recall', 'f1', 'length']
-        for model_name in model_results:
-            results = model_results[model_name]
-
-            if model_name not in metric_results:
-                metric_results[model_name] = []
-            metric_results[model_name].append(
-                [results["validation"][m] for m in results["validation"] if m in metrics]
+    # Create a thread pool executor
+    with concurrent.futures.ThreadPoolExecutor(max_workers=len(dataset)) as executor:
+        loop = asyncio.get_event_loop()
+        tasks = []
+        
+        for idx, data in enumerate(dataset):
+            show_info(f"🔍 Processing paper {idx+1}/{len(dataset)}")
+            # Run the synchronous function in a thread
+            task = loop.run_in_executor(executor, run,
+                data['Paper_Link'],
+                args.model,
+                args.overwrite,
+                args.browse_web,
+                args.schema_name,
+                args.few_shot,
+                args.results_path,
+                args.repeat_on_error,
+                args.context,
+                args.format,
+                args.backend,
+                {   
+                    "title": data["Paper_Title"],
+                    "abstract": data["Abstract"],
+                }
             )
+            tasks.append(task)
+        
+        results = await asyncio.gather(*tasks)
+    
+    metrics = ['precision', 'recall', 'f1', 'length']
+    for r in results:
+        model_name = list(r.keys())[0]
+        results = r[model_name]
+
+        if model_name not in metric_results:
+            metric_results[model_name] = []
+        metric_results[model_name].append(
+            [results["validation"][m] for m in results["validation"] if m in metrics]
+        )
     results = []
     for model_name in metric_results:
         if len(metric_results[model_name]) == len(dataset):
@@ -57,3 +69,6 @@ if __name__ == "__main__":
             floatfmt=".2f",
         )
     )
+
+if __name__ == "__main__":
+    asyncio.run(main())
