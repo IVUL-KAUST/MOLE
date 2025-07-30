@@ -17,16 +17,17 @@ else:
         dfs.append(df)
     df = pd.concat(dfs)
     df.rename(columns={'category': 'schema_name'}, inplace=True)
-    print(df)
-    print(df['schema_name'].value_counts())
+    df.drop(columns= ['id'], inplace=True)
     
 
-acceptable_schemas = ['ar', 'en', 'ru', 'jp', 'fr', 'multi', 'other']
+acceptable_schemas = ['ar', 'en', 'ru', 'jp', 'fr', 'multi', 'other', 'none']
 df = df[df['schema_name'].isin(acceptable_schemas)]
 
 # choose schema randomly according to the schdema_name with the lower number of papers
 # Determine the minimum group size
 print(df['schema_name'].value_counts())
+
+df.to_csv('data/all_papers.csv', index=False, encoding='utf-8')
 
 min_group_size = df.groupby('schema_name').size().min()
 # Sample the same number of elements from each category
@@ -38,16 +39,16 @@ print(df['schema_name'].value_counts())
 
 # filter 
 print('filtering the test dataset')
-test_dataset = pd.read_csv('src/classification/test_dataset.csv')
+test_dataset = pd.read_csv('data/test_dataset.csv')
 train_df = df[~df['title'].isin(test_dataset['title'])]
 
 # print(train_df["schema_name"].value_counts())
 
-# train_df = train_df[train_df['schema_name'] != 'other']
-train_df.loc[train_df['schema_name'] == 'none', 'schema_name'] = 'other'
 
 print(train_df['schema_name'].value_counts())
 print(train_df.shape[0])
+
+print(train_df.head())
 train_df[['title', 'abstract', 'url', 'schema_name', 'reasoning']].to_csv('train_dataset.csv', index=False, encoding='utf-8')
 
     
