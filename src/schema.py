@@ -243,8 +243,7 @@ class DatasetSchema(Schema):
         else:  
             prompt = f"""Schema Name: {cls.get_schema_name()}
                         Input Schema: {cls.schema()}
-                        Paper Text: {paper_text},
-                        Output JSON:
+                        Paper Text: {paper_text}
                     """
         system_prompt = f"""
             You are a professional metadata extractor of datasets from research papers. 
@@ -276,8 +275,7 @@ class ResourceSchema(Schema):
         
         prompt = f"""Schema Name: {cls.get_schema_name()}
                     Input Schema: {cls.schema()}
-                    Paper Text: {paper_text},
-                    Output JSON:
+                    Paper Text: {paper_text}
                 """
         system_prompt = f"""
         You are a professional metadata extractor of resources from research papers. 
