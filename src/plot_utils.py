@@ -13,7 +13,7 @@ def remove_average(results, headers):
 
 def print_table(results, headers, title="", format=False):
     results, headers = remove_average(results, headers)
-    RED = "\033[103m"
+    RED = "\033[105m"
     UNDERLINE = "\033[4m"
     END = "\033[0m"
 
