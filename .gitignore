@@ -26,3 +26,6 @@ unsloth_compiled_cache/
 slurm/
 gemma-3-4b-it-sft/
 evals/resource/valid/
+resource/
+dcgm-*
+gemma-3-4b-it*
