@@ -213,7 +213,7 @@ def get_metadata_from_path(json_path):
     id = get_id_from_path(json_path)
     for path in glob("evals/**/**/*.json", recursive=True):
         metadata = json.load(open(path, "r"))
-        if id in metadata["Paper Link"]:
+        if id == create_hash(metadata["Paper_Link"]):
             return metadata
     return None
 
