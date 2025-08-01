@@ -8,10 +8,8 @@ from utils import get_metadata_from_path, get_id_from_path, get_schema_from_path
 import os
 
 args = argparse.ArgumentParser()
-args.add_argument("--eval", type=str, default="valid")
-args.add_argument("--subsets", action="store_true")
+args.add_argument("--split", type=str, default="valid")
 args.add_argument("--year", action="store_true")
-args.add_argument("--models", type=str, default="all")
 args.add_argument("--cost", action="store_true")
 args.add_argument("--schema_name", type = str, default = 'ar')
 args.add_argument("--type", type = str, default = "zero_shot")
@@ -22,7 +20,6 @@ args.add_argument("--browsing", action="store_true")
 args.add_argument("--errors", action="store_true")
 args.add_argument("--group_by", type = str, default = "evaluation_subsets")
 args.add_argument("--ignore_length", action="store_true")
-args.add_argument("--other_metrics", action="store_true")
 args = args.parse_args()
 
 categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
@@ -76,7 +73,7 @@ def get_all_ids():
 
     else:
         schema = get_schema(args.schema_name)
-        data = schema.get_eval_datasets()
+        data = schema.get_eval_datasets(args.split)
         ids = [create_hash(paper['Paper_Link']) for paper in data]
     print(len(ids))
     return ids
