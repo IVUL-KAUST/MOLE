@@ -52,32 +52,31 @@ def get_input_tokens(messages, model_name):
     )
     return len(output)
 
-def get_text_tokens(text, model_name):
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+def get_text_tokens(text, tokenizer):
     return len(tokenizer.encode(text))
 
-def calculate_max_output_tokens(model_name):
+def calculate_max_output_tokens(tokenizer):
     max_output_tokens = 0
     for file in glob(f"evals/**/test/**.json"):
         results = json.load(open(file))
         del results["annotations_from_paper"]
-        num_tokens = get_text_tokens(json.dumps(results), model_name)
+        num_tokens = get_text_tokens(json.dumps(results), tokenizer)
         if max_output_tokens < num_tokens:
             max_output_tokens = num_tokens
     return max_output_tokens
 
-def truncate_prompt(prompt, sys_prompt, model_name, max_tokens, log = True):
-    MAX_OUTPUT_TOKENS = 1024
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+def truncate_prompt(prompt, sys_prompt, tokenizer, max_model_len, max_output_len = 1024, log = True):
+    end_of_prompt = "\nOutput JSON: "
     num_prompt_tokens = len(tokenizer.encode(prompt))
-    num_system_tokens = get_text_tokens(sys_prompt, model_name)
-    input_length = num_system_tokens+num_prompt_tokens + 10 + MAX_OUTPUT_TOKENS # 10 is the margin of tokens used for the role and content tokens
-    if input_length > max_tokens:
-        remaining_tokens = max_tokens-num_system_tokens - 10 - MAX_OUTPUT_TOKENS
+    num_system_tokens = get_text_tokens(sys_prompt, tokenizer)
+    end_of_prompt_tokens = get_text_tokens(end_of_prompt, tokenizer)
+    input_length = num_system_tokens+num_prompt_tokens + 10 + end_of_prompt_tokens + max_output_len # 10 is the margin of tokens used for the role and content tokens
+    if input_length > max_model_len:
+        remaining_tokens = max_model_len-num_system_tokens - 10 - end_of_prompt_tokens - max_output_len
         show_warning(f"⚠️ Truncating prompt {num_prompt_tokens} -> {remaining_tokens} tokens", log = log)
         truncated_prompt = tokenizer.decode(tokenizer.encode(prompt)[:remaining_tokens], skip_special_tokens=True)
-        return truncated_prompt
-    return prompt
+        return truncated_prompt + end_of_prompt
+    return prompt + end_of_prompt
 
 def get_metadata(
     paper_text="",
@@ -90,7 +89,8 @@ def get_metadata(
     few_shot = 0,
     max_retries = 3,
     backend = "openrouter",
-    max_tokens = 32768,
+    max_model_len = 32768,
+    max_output_len = 1024,
     log = True
 ):
     cost = {
@@ -107,7 +107,7 @@ def get_metadata(
 
         model_name = model_name.replace("_", "/")
         model_name = model_name.replace("-browsing", "")
-        
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
         if backend == "openrouter":
             show_info(f"🔑 Using OpenRouter backend", log = log)
             api_key = os.environ.get("OPENROUTER_API_KEY")
@@ -124,7 +124,7 @@ def get_metadata(
                 base_url=base_url
             )
             show_info(f"🔑 Using VLLM backend", log = log)
-            prompt = truncate_prompt(prompt, sys_prompt, model_name, max_tokens, log = log)
+            prompt = truncate_prompt(prompt, sys_prompt, tokenizer, max_model_len, max_output_len = max_output_len, log = log)
             messages[1]["content"] = prompt
         else:
             raise ValueError(f"Invalid backend: {backend}")
@@ -145,7 +145,7 @@ def get_metadata(
                     "output_tokens": 0,
                 }
             response =  message.choices[0].message.content
-            # print(response)
+            print(response)
             predictions = read_json(response)
         except json.JSONDecodeError as e:
             error = str(e)  
@@ -305,6 +305,8 @@ def run(
     context = "all",
     format = "pdf_plumber",
     backend = "openrouter",
+    max_model_len = 32768,
+    max_output_len = 1024,
     paper_extra_args = {},
     save_paper_text = True,
     log = True,
@@ -406,7 +408,7 @@ def run(
             cost = results["cost"]
         else:
             message, metadata, cost, error = get_metadata(
-                paper_text, model_name, schema_name=schema_name, few_shot = few_shot, backend = backend
+                paper_text, model_name, schema_name=schema_name, few_shot = few_shot, backend = backend, max_model_len = max_model_len, max_output_len = max_output_len
             )
         if browse_web:
             browsing_link = get_repo_link(
@@ -423,11 +425,13 @@ def run(
                     f"🧠🌐 {model_name} is extracting data using metadata and web ...", 
                     log = log
                 )
-                message, metadata, browsing_cost, error = get_metadatav2(
+                message, metadata, browsing_cost, error = get_metadata(
                     model_name=model_name,
                     readme=readme,
                     metadata=metadata,
                     schema_name=schema_name,
+                    max_model_len = max_model_len,
+                    max_output_len = max_output_len
                 )
                 cost = {
                     "cost": browsing_cost["cost"]
@@ -563,6 +567,19 @@ def create_args():
         help="context size to use",
     )
 
+    parser.add_argument(
+        "--max_model_len",
+        type=int,
+        default=32768,
+        help="context size to use",
+    )
+
+    parser.add_argument(
+        "--max_output_len",
+        type=int,
+        default=1024,
+        help="max output length",
+    )
     # Parse arguments
     args = parser.parse_args()
     return args

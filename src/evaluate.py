@@ -34,6 +34,8 @@ async def main():
                 args.context,
                 args.format,
                 args.backend,
+                args.max_model_len,
+                args.max_output_len,
                 {   
                     "title": data["Paper_Title"],
                     "abstract": data["Abstract"],
