@@ -31,13 +31,11 @@ def get_all_ids():
         for lang in [ "ar", 'en', 'jp', 'fr', 'ru', 'multi']:
             schema = get_schema(lang)
             data = schema.get_eval_datasets()
-            print(data)
-
+            ids += [create_hash(paper['Paper_Link']) for paper in data]
     else:
         schema = get_schema(args.schema_name)
         data = schema.get_eval_datasets(args.split)
         ids = [create_hash(paper['Paper_Link']) for paper in data]
-    print(len(ids))
     return ids
 
 def get_openrouter_cost(model_name, input_tokens, output_tokens):
@@ -57,7 +55,6 @@ def plot_by_errors():
     ids = get_all_ids()
     metric_results = {}
     json_files = glob(f"static/results_**/**/**/**/*.json") + glob(f"static/results_**/**/**/*.json")
-    print(len(json_files))
     for json_file in json_files:
         results = json.load(open(json_file))
         arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
@@ -227,7 +224,7 @@ def plot_by_group():
     elif args.group_by == "category":
         headers += categories
     elif args.group_by == "year":
-        headers += [year for year in range(2010, 2025)]
+        headers += [year for year in range(2010, 2026)]
     elif args.group_by == "few_shot":
         headers += [0, 3, 5, 7]
 
@@ -298,10 +295,7 @@ if __name__ == "__main__":
     if args.browsing:
         json_files = [file for file in json_files if "-browsing" in file]
 
-    if args.schema_name == 'all':
-        langs = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
-    else:
-        langs = [args.schema_name]
+    assert args.group_by in ["attributes_few", "attributes_hard", "attributes", "all", "metric", "category", "year", "few_shot"]
 
     if args.errors:
         plot_by_errors()
