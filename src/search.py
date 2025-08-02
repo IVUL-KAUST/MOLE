@@ -171,7 +171,7 @@ def clean_latex(path):
     os.system(f"arxiv_latex_cleaner {path}")
 
 
-def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached_docling=True, log = True):
+def extract_paper_text(path, format = "pdf_plumber", use_cached_docling=True, log = True):
     if format == "tex":
         source_files = glob(f"{path}/**/**.tex", recursive=True)
     else:
@@ -243,18 +243,7 @@ def extract_paper_text(path, format = "pdf_plumber", context = "all", use_cached
             show_warning("Not acceptable source file", log = log)
             continue
 
-    if context == "all":
-        return paper_text
-    elif context == "half":
-        paper_text = paper_text[:len(paper_text)//2]
-        show_info(f"📄 Paper text truncated to {len(paper_text)}", log = log)
-        return paper_text
-    elif context == "quarter":
-        paper_text = paper_text[:len(paper_text)//4]
-        show_info(f"📄 Paper text truncated to {len(paper_text)}", log = log)
-        return paper_text
-    else:
-        raise ValueError(f"Invalid context: {context}")
+    return paper_text
 
 def download_paper(paper_link, download_path="static/papers/", log = True):
     if "arxiv" in paper_link:
@@ -271,19 +260,21 @@ def download_paper(paper_link, download_path="static/papers/", log = True):
         raise ValueError(f"Invalid paper link: {paper_link}")
     return success, paper_path
 
-def extract_and_save_paper_text(paper_path, context = "all", format = "pdf_plumber", save_paper_text = True, log = True):
+def extract_and_save_paper_text(paper_path, context = "all", format = "pdf_plumber", save_paper_text = True, paper_extra_args = {}, log = True):
+    paper_text = ""
     if os.path.exists(f"{paper_path}/paper_text.txt"):
         show_info(f"📄 Found existing paper text at {paper_path}/paper_text.txt", log = log)
         with open(f"{paper_path}/paper_text.txt", "r") as f:
-            return f.read()
+            paper_text = f.read()
     
     if context == "title":
-        paper_text = paper_extra_args["title"]  
+        return paper_extra_args["title"]  
     elif context == "abstract":
-        paper_text = paper_extra_args["abstract"]
+        return paper_extra_args["abstract"]
     else:
         try:
-            paper_text = extract_paper_text(paper_path, context = context, format = format, log = log)
+            if paper_text != "":
+                paper_text = extract_paper_text(paper_path, format = format, log = log)
         except Exception as e:
             show_warning(f"Error extracting paper text: {e}", log = log)
             return None
@@ -291,7 +282,19 @@ def extract_and_save_paper_text(paper_path, context = "all", format = "pdf_plumb
         show_info(f"📄 Saving paper text to {paper_path}", log = log)
         with open(f"{paper_path}/paper_text.txt", "w") as f:
             f.write(paper_text)
-    return paper_text
+    
+    if context == "all":
+        return paper_text
+    elif context == "half":
+        paper_text = paper_text[:len(paper_text)//2]
+        show_info(f"📄 Paper text truncated to {len(paper_text)}", log = log)
+        return paper_text
+    elif context == "quarter":
+        paper_text = paper_text[:len(paper_text)//4]
+        show_info(f"📄 Paper text truncated to {len(paper_text)}", log = log)
+        return paper_text
+    else:
+        raise ValueError(f"Invalid context: {context}")
 
 def run(
     paper_link,
