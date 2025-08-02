@@ -12,7 +12,7 @@ args = argparse.ArgumentParser()
 args.add_argument("--split", type=str, default="valid")
 args.add_argument("--year", action="store_true")
 args.add_argument("--cost", action="store_true")
-args.add_argument("--schema_name", type = str, default = 'ar')
+args.add_argument("--schema_name", type = str, default = 'all')
 args.add_argument("--results_path", type = str, default = "static/results")
 args.add_argument("--length", action="store_true")
 args.add_argument("--non_browsing", action="store_true")
@@ -28,9 +28,9 @@ categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
 def get_all_ids():
     ids = []
     if args.schema_name == 'all':
-        for lang in [ "ar", 'en', 'jp', 'fr', 'ru', 'multi']:
-            schema = get_schema(lang)
-            data = schema.get_eval_datasets()
+        for cat in categories:
+            schema = get_schema(cat)
+            data = schema.get_eval_datasets(args.split)
             ids += [create_hash(paper['Paper_Link']) for paper in data]
     else:
         schema = get_schema(args.schema_name)
@@ -130,6 +130,7 @@ def remap_names(model_name):
     else:
         browsing = ""
     model_name = model_name.replace("-browsing", "")
+    model_name = model_name.replace("google_", "")
     if model_name == "google_gemini-2.5-pro-preview-03-25":
         model_name = "Gemini 2.5 Pro" 
     elif model_name == "qwen_qwen-2.5-72b-instruct":
@@ -142,8 +143,9 @@ def remap_names(model_name):
         model_name = "GPT 4o"
     elif model_name == "anthropic_claude-3.5-sonnet":
         model_name = "Claude 3.5 Sonnet"
-    elif "google_gemma-3-27b-it" in model_name:
-        model_name = "Gemma 3 27B"
+    else:
+        model_name = model_name.replace("-", " ").title()
+
     return model_name + browsing
 
 
@@ -236,11 +238,8 @@ def plot_by_group():
         _id = get_id_from_path(json_file)
         if _id not in ids:
             continue
-        try:
-            schema_name = results["config"]["schema_name"]
-        except:
-            continue
         model_name = results["config"]["model_name"]
+        schema_name = results["config"]["schema_name"]
         schema = get_schema(schema_name)
         pred_metadata = schema(metadata = results["metadata"])
 
@@ -257,12 +256,7 @@ def plot_by_group():
             year = gold_metadata["Year"]
             metric_results[model_name][year].append(scores['f1'])
         elif args.group_by == "few_shot":
-            if "zero_shot" in json_file:
-                few_shot = 0
-            elif "few_shot" in json_file:
-                few_shot = int(json_file.split("few_shot/")[1].split("/")[0])
-            else:
-                raise ValueError("Invalid fewshot path")
+            few_shot = results["config"]["few_shot"]
             metric_results[model_name][few_shot].append(scores['f1'])
         else:
             for metric in scores:
@@ -288,7 +282,7 @@ def plot_by_group():
 
 
 if __name__ == "__main__":
-    json_files = glob(f"{args.results_path}/**/**/*.json")
+    json_files = glob(f"{args.results_path}/**/*.json")
 
     if args.non_browsing:
         json_files = [file for file in json_files if "-browsing" not in file]
