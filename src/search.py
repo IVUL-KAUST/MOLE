@@ -11,7 +11,7 @@ from datetime import datetime
 import time
 import shutil
 from openai import OpenAI
-from utils import read_json, get_metadata_human, show_info, show_warning
+from utils import read_json, get_metadata_human, show_info, show_warning, create_hash
 from traditional import get_metadata_keyword, get_metadata_nu_extract
 from schema import get_schema
 from transformers import AutoTokenizer
@@ -273,15 +273,15 @@ def extract_and_save_paper_text(paper_path, context = "all", format = "pdf_plumb
         return paper_extra_args["abstract"]
     else:
         try:
-            if paper_text != "":
+            if paper_text == "":
                 paper_text = extract_paper_text(paper_path, format = format, log = log)
+                if save_paper_text:
+                    show_info(f"📄 Saving paper text to {paper_path}", log = log)
+                    with open(f"{paper_path}/paper_text.txt", "w") as f:
+                        f.write(paper_text)
         except Exception as e:
             show_warning(f"Error extracting paper text: {e}", log = log)
             return None
-    if save_paper_text:
-        show_info(f"📄 Saving paper text to {paper_path}", log = log)
-        with open(f"{paper_path}/paper_text.txt", "w") as f:
-            f.write(paper_text)
     
     if context == "all":
         return paper_text
@@ -308,8 +308,8 @@ def run(
     context = "all",
     format = "pdf_plumber",
     backend = "openrouter",
-    max_model_len = 32768,
-    max_output_len = 1024,
+    max_model_len = None,
+    max_output_len = None,
     paper_extra_args = {},
     save_paper_text = True,
     log = True,
@@ -327,20 +327,15 @@ def run(
     
     save_path = paper_path.replace("papers", results_path)
      
-    if few_shot > 0:
-        save_path = f"{save_path}/few_shot/{few_shot}"
-        os.makedirs(save_path, exist_ok=True)
-    else:
-        save_path = f"{save_path}/zero_shot"
-        os.makedirs(save_path, exist_ok=True)
+    os.makedirs(save_path, exist_ok=True)
     
     if browse_web and (model_name in non_browsing_models):
         show_info(f"Can't browse the web for {model_name}", log = log)
-
-
-    if browse_web and not(model_name in non_browsing_models):
-        model_name = f"{model_name}-browsing"
-    save_path = f"{save_path}/{model_name}-results.json"
+    file_name = ""
+    for arg in [model_name, browse_web, schema_name, few_shot, context, format, backend, max_model_len, max_output_len, paper_extra_args]:
+        file_name += str(arg)
+    file_name = create_hash(file_name)
+    save_path = f"{save_path}/{file_name}.json"
     
     if (
         os.path.exists(save_path)
@@ -478,6 +473,12 @@ def run(
         "few_shot": few_shot,
         "link": paper_link,
         "schema_name": schema_name,
+        "context": context,
+        "format": format,
+        "max_model_len": max_model_len,
+        "max_output_len": max_output_len,
+        "browse_web": browse_web,
+        "backend": backend,
     }
     results["error"] = error
     try:
@@ -573,14 +574,14 @@ def create_args():
     parser.add_argument(
         "--max_model_len",
         type=int,
-        default=32768,
+        default=None,
         help="context size to use",
     )
 
     parser.add_argument(
         "--max_output_len",
         type=int,
-        default=1024,
+        default=None,
         help="max output length",
     )
     # Parse arguments
