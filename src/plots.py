@@ -6,13 +6,13 @@ import numpy as np
 from plot_utils import print_table
 from utils import get_metadata_from_path, get_id_from_path, get_schema_from_path, get_schema, create_hash
 import os
+from constants import *
 
 args = argparse.ArgumentParser()
 args.add_argument("--split", type=str, default="valid")
 args.add_argument("--year", action="store_true")
 args.add_argument("--cost", action="store_true")
 args.add_argument("--schema_name", type = str, default = 'ar')
-args.add_argument("--type", type = str, default = "zero_shot")
 args.add_argument("--results_path", type = str, default = "static/results")
 args.add_argument("--length", action="store_true")
 args.add_argument("--non_browsing", action="store_true")
@@ -25,44 +25,6 @@ args = args.parse_args()
 categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
 # evaluation_subsets = schema[args.schema_name]['evaluation_subsets']
 
-def plot_by_length():
-    if args.schema_name == 'all':
-        ids = []
-        for lang in ['ar', 'en', 'jp', 'fr', 'ru', 'multi']:
-            ids.extend(eval_datasets_ids[lang][args.eval])
-    else:
-        ids = eval_datasets_ids[args.schema_name][args.eval]
-    metric_results = {}
-    found_ids = []
-    for json_file in json_files:
-        results = json.load(open(json_file))
-        model_name = results["config"]["model_name"]
-
-        if model_name in non_browsing_models:
-            continue
-        arxiv_id = get_id_from_path(json_file)
-        schema = get_schema_from_path(json_file)
-        if arxiv_id not in ids:
-            continue
-        else:
-            found_ids.append(arxiv_id)
-        if model_name not in metric_results:
-            metric_results[model_name] = []
-        metric_results[model_name].append(evaluate_lengths(results["metadata"], schema = schema, columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]))
-    
-    final_results = {}
-
-    for model_name in metric_results:
-        if len(metric_results[model_name]) == len(ids):
-            final_results[model_name] = metric_results[model_name]
-    results = []
-    for model_name in final_results:
-        results.append(
-            [model_name] + [(np.mean(final_results[model_name], axis=0)).tolist()]
-        )
-    headers = ["MODEL", "LENGTH"]
-    print_table(results, headers)
-    
 def get_all_ids():
     ids = []
     if args.schema_name == 'all':
@@ -165,83 +127,6 @@ def plot_by_cost():
     print_table(results, headers)
 
 
-def plot_by_year():
-    metric_results = {}
-    ids = get_all_ids()
-    for json_file in json_files:
-        if 'human' in json_file:
-            continue
-        results = json.load(open(json_file))
-        arxiv_id = get_id_from_path(json_file)
-        if arxiv_id not in ids:
-            continue
-        schema = get_schema_from_path(json_file)
-        model_name = results["config"]["model_name"]
-        pred_metadata = results["metadata"]
-        if model_name not in metric_results:
-            metric_results[model_name] = []
-        # human_json_path = human_json_path.replace(f"/{args.type}", "")
-        gold_metadata = get_metadata_from_path(json_file)
-        scores = evaluate_metadata(
-            gold_metadata, pred_metadata,
-            schema = schema,
-            return_columns = True
-        )
-        
-        if args.use_annotations_paper:
-            average_ignore_mistakes = evaluate_metadata(
-                gold_metadata, pred_metadata, use_annotations_paper=True, schema = schema
-            )["AVERAGE"]
-            scores += [average_ignore_mistakes]
-        
-        # if gold_metadata["Year"] == 2025:
-        #     print(arxiv_id)
-        metric_results[model_name].append(
-            [gold_metadata["Year"], scores["AVERAGE"]]
-        )
-
-    final_results = {}
-    for model_name in metric_results:
-        if len(metric_results[model_name]) == len(ids) or args.ignore_length:
-            final_results[model_name] = metric_results[model_name]
-
-    results = []
-    for model_name in final_results:
-        years = [year for year, _ in metric_results[model_name]]
-        scores = [score for _, score in metric_results[model_name]]
-
-        # average score per year
-        avg_scores = {}
-        for year, score in zip(years, scores):
-            if year not in avg_scores:
-                avg_scores[year] = []
-            avg_scores[year].append(score)
-
-        avg_scores = {
-            year: sum(avg_scores[year]) / len(avg_scores[year]) for year in avg_scores
-        }
-        years = list(avg_scores.keys())
-        scores = list(avg_scores.values())
-
-        years, scores = zip(*sorted(zip(years, scores)))
-        # plt.scatter(years, scores, label = model_name)
-        # if model_name == "google_gemini-2.5-pro":
-        scores = [100 * score for score in scores]
-
-        # calcualte the correlation between the scores and the years
-        correlation = np.corrcoef(years, scores)[0, 1]
-        results.append([remap_names(model_name)] + list(scores)+[np.mean(scores)])
-        plt.plot(years, scores, label=model_name)
-    plt.title("Average Score per Year")
-    plt.xlabel("Year")
-    plt.ylabel("Average Score")
-    plt.show()
-
-    # plot table of results
-    headers = ["Model"] + [str(year) for year in years] + ["Average"]
-    print_table(results, headers)
-
-
 def remap_names(model_name):
     if "-browsing" in model_name:
         browsing = " Browsing"
@@ -269,7 +154,6 @@ def plot_context_length():
     headers = [ "MODEL"] + ["quarter", "half", "all"]
     ids = get_all_ids()
     metric_results = {}
-    use_annotations_paper = args.use_annotations_paper
 
     for json_file in json_files:
         results = json.load(open(json_file))
@@ -327,68 +211,9 @@ def plot_context_length():
             "* Computed average by considering metadata exctracted from outside the paper."
         )
 
-def plot_fewshot():
-    headers = [ "MODEL"] + [f'{idx}-fewshot' for idx in [0, 1, 3, 5]]
-    ids = get_all_ids()
-    metric_results = {}
-    use_annotations_paper = args.use_annotations_paper
-
-    for json_file in json_files:
-        results = json.load(open(json_file))
-        arxiv_id = get_id_from_path(json_file)
-        if arxiv_id not in ids:
-            continue
-        model_name = results["config"]["model_name"]
-        pred_metadata = results["metadata"]
-        if model_name not in metric_results:
-            metric_results[model_name] = {}
-        gold_metadata = get_metadata_from_path(json_file)
-        for i in [0, 1, 3, 5]:
-            if i not in metric_results[model_name]:
-                metric_results[model_name][i] = []
-
-            if i == 0:
-                pred_metadata = json.load(open(json_file))['metadata']
-            else:
-                few_shot_path = json_file.replace( f'zero_shot', f'few_shot/{i}').replace("results_latex", "results_fewshot")
-                if os.path.exists(few_shot_path):
-                    pred_metadata = json.load(open(few_shot_path))['metadata']
-                else:
-                    continue
-
-            scores = evaluate_metadata(
-                gold_metadata, pred_metadata,
-                schema = get_schema_from_path(json_file),
-                return_columns = True
-            )
-            scores = [scores["AVERAGE"]]
-            if use_annotations_paper:
-                average_ignore_mistakes = evaluate_metadata(
-                    gold_metadata, pred_metadata, use_annotations_paper=True
-                )["AVERAGE"]
-                scores = [average_ignore_mistakes]
-            metric_results[model_name][i].append(scores[0])
-    results = []
-    # print(metric_results)
-    for model_name in metric_results:
-        if "human" in model_name.lower():
-            continue
-        few_shot_scores = []
-        for i in [0, 1, 3, 5]:
-            print(i, len(metric_results[model_name][i]), len(ids))
-            try:
-                if len(metric_results[model_name][i]) == len(ids):
-                    few_shot_scores.append(float(np.mean(metric_results[model_name][i]) * 100))
-                else:
-                    few_shot_scores.append(0)
-            except:
-                few_shot_scores.append(0)
-        results.append([remap_names(model_name)] + few_shot_scores)
-    print_table(results, headers, format = False)
-
 def plot_by_group():
-    ignore_length = args.ignore_length
-    headers = ["Model"]
+
+    headers = []
     if args.group_by == "attributes_few":
         headers += ["Link", "License", "Tasks", "Domain", "Collection_Style", "Volume"]
     elif args.group_by == "attributes_hard":
@@ -397,13 +222,18 @@ def plot_by_group():
         headers += ["Link", "HF_Link", "License", "Language", "Domain", "Form", "Collection_Style", "Volume", "Unit", "Ethical_Risks", "Provider", "Derived_From", "Tokenized", "Host", "Access", "Cost", "Test_Split", "Tasks"]
     elif args.group_by == 'all':
         headers += ["Link", "HF_Link", "License", "Language", "Domain", "Form", "Collection_Style", "Volume", "Unit", "Ethical_Risks", "Provider", "Derived_From", "Tokenized", "Host", "Access", "Cost", "Test_Split", "Tasks", "Venue_Title", "Venue_Type", "Venue Name", "Authors", "Affiliations", "Abstract"]
-    elif args.group_by == "metrics":
+    elif args.group_by == "metric":
         headers += ["precision", "recall", "f1"]
     elif args.group_by == "category":
         headers += categories
+    elif args.group_by == "year":
+        headers += [year for year in range(2010, 2025)]
+    elif args.group_by == "few_shot":
+        headers += [0, 3, 5, 7]
 
     metric_results = {}
     ids = get_all_ids()
+    
     for json_file in json_files:
         results = json.load(open(json_file))
         _id = get_id_from_path(json_file)
@@ -422,17 +252,24 @@ def plot_by_group():
         scores = pred_metadata.compare_with(gold_metadata)
         
         if model_name not in metric_results:
-            if args.group_by == "category":
-                metric_results[model_name] = {category: [] for category in categories}
-            else:
-                metric_results[model_name] = {column: [] for column in headers[1:]}
+            metric_results[model_name] = {column: [] for column in headers}
 
         if args.group_by == "category":
-            scores = [scores[c] for c in scores]
-            metric_results[model_name][schema_name].append(scores[-2])
+            metric_results[model_name][schema_name].append(scores['f1'])
+        elif args.group_by == "year":
+            year = gold_metadata["Year"]
+            metric_results[model_name][year].append(scores['f1'])
+        elif args.group_by == "few_shot":
+            if "zero_shot" in json_file:
+                few_shot = 0
+            elif "few_shot" in json_file:
+                few_shot = int(json_file.split("few_shot/")[1].split("/")[0])
+            else:
+                raise ValueError("Invalid fewshot path")
+            metric_results[model_name][few_shot].append(scores['f1'])
         else:
             for metric in scores:
-                if metric in headers[1:]:
+                if metric in headers:
                     metric_results[model_name][metric].append(scores[metric])
        
     # final_results = {}
@@ -445,14 +282,16 @@ def plot_by_group():
     results = []
     for model_name in metric_results:
         row = [remap_names(model_name)]
-        for key in headers[1:]:
+        for key in headers:
             row.append(np.mean(metric_results[model_name][key]) * 100)
-        results.append(row)
+        average = np.mean([c for c in row[1:] if c  > 0 ])
+        results.append(row+ [average])
+    headers = ['Model'] + headers + ['Average']
     print_table(results, headers, format = True)
 
 
 if __name__ == "__main__":
-    json_files = glob(f"{args.results_path}/**/zero_shot/*.json")
+    json_files = glob(f"{args.results_path}/**/**/*.json")
 
     if args.non_browsing:
         json_files = [file for file in json_files if "-browsing" not in file]
@@ -464,16 +303,8 @@ if __name__ == "__main__":
     else:
         langs = [args.schema_name]
 
-    if args.type == 'fewshot':
-        plot_fewshot()
-    elif args.type == 'context_length':
-        plot_context_length()
-    elif args.errors:
+    if args.errors:
         plot_by_errors()
-    elif args.length:
-        plot_by_length()
-    elif args.year:
-        plot_by_year()
     elif args.cost:
         plot_by_cost()
     else:
