@@ -18,28 +18,37 @@ import glob
 import multiprocessing
 from unsloth.chat_templates import get_chat_template
 
+# create argparse parser
+import argparse
+parser = argparse.ArgumentParser(description="Fine-tune Gemma-3 model")
+parser.add_argument('--output_model_name', default = "gemma-3-4b-it-sft", type=str, help="Output directory for the fine-tuned model")
+parser.add_argument('--model_name', default = "unsloth/gemma-3-4b-it", type=str, help="Model name to fine-tune")
+parser.add_argument('--max_model_len', default = 8192, type=int, help="Maximum model length")
+parser.add_argument('--max_output_len', default = 2048, type=int, help="Maximum output length")
+args = parser.parse_args()
 multiprocessing.cpu_count = lambda: 1
 
 if hasattr(os, 'cpu_count'):
     os.cpu_count = lambda: 3
 
-max_model_len = 8192
-max_output_len = 2048
 
 model_name = "unsloth/gemma-3-4b-it"
 
 model, tokenizer = FastModel.from_pretrained(
-            model_name = model_name,
-            max_seq_length = max_model_len, # Choose any for long context!
+            model_name = args.model_name,
+            max_seq_length = args.max_model_len, # Choose any for long context!
             load_in_4bit = False,  # 4 bit quantization to reduce memory
             load_in_8bit = True, # [NEW!] A bit more accurate, uses 2x memory
             full_finetuning = False, # [NEW!] We have full finetuning now!
         )
 
-tokenizer = get_chat_template(
-    tokenizer,
-    chat_template = "gemma-3",
-)
+if "gemma-3" in model_name:
+    tokenizer = get_chat_template(
+        tokenizer,
+        chat_template = "gemma-3",
+    )
+else:
+    raise('Unsupported model name, please use a Gemma-3 model!')
 
 
 def get_files(distilled_model = "gemma-3-27b-it"):
@@ -83,7 +92,7 @@ def create_prompts(examples):
             except Exception as e:
                 raise e
         prompt,system_prompt = schema.get_prompts(paper_text,'')
-        prompt = truncate_prompt(prompt,system_prompt,tokenizer.tokenizer,max_model_len=max_model_len, max_output_len=max_output_len, log = False)
+        prompt = truncate_prompt(prompt,system_prompt,tokenizer.tokenizer,max_model_len=args.max_model_len, max_output_len=args.max_output_len, log = False)
         
         messages.append([{'role': 'system', 'content': system_prompt}, {'role': 'user', 'content': prompt}, {'role': 'assistant', 'content': json.dumps(metadata)}])
 
@@ -193,7 +202,7 @@ def evaluate():
         len_tokenized_text = len(tokenized_text['input_ids'][0])
         outputs = model.generate(
             **tokenized_text,
-            max_new_tokens = max_output_len, # Increase for longer outputs!
+            max_new_tokens = args.max_output_len, # Increase for longer outputs!
             temperature = 1.0, top_p = 0.95, top_k = 64,
         )
         path = example['path']
@@ -269,5 +278,5 @@ trainer = train_on_responses_only(
 trainer_stats = trainer.train()
 
 # evaluate()
-model.save_pretrained_merged("gemma-3-4b-it-sft", tokenizer, save_method = "merged_16bit", maximum_memory_usage=.9)
+model.save_pretrained_merged(f"{args.output_model_name}-{args.max_model_len}", tokenizer, save_method = "merged_16bit", maximum_memory_usage=.9)
         
