@@ -1,5 +1,5 @@
 from tabulate import tabulate  # type: ignore
-
+import numpy as np
 def remove_average(results, headers):
     # if both Weighted Average and Average are in the headers, remove the Average
     if "Weighted Average" in headers and "Average" in headers:
@@ -38,7 +38,7 @@ def print_table(results, headers, title="", format=False):
         formatted_row = [row[0]]  # Start with model name
         for i, value in enumerate(row[1:]):
             column_values = numeric_columns[i]
-            max_val = max(column_values)
+            max_val = max([val for val in column_values if val > 0])
             if len(sorted(column_values)) >= 2:
                 second_max = sorted(column_values)[-2]
             else:
