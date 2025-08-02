@@ -5,6 +5,6 @@
 #SBATCH --partition=batch
 #SBATCH --gres=gpu:a100:1
 #SBATCH --mem=32GB
-#SBATCH --time=12:00:00
+#SBATCH --time=10:00:00
 
-python src/finetune.py
+python src/finetune.py --max_model_len 4096
