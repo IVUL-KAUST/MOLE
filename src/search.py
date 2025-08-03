@@ -11,8 +11,8 @@ from datetime import datetime
 import time
 import shutil
 from openai import OpenAI
-from utils import read_json, get_metadata_human, show_info, show_warning, create_hash
-from traditional import get_metadata_keyword, get_metadata_nu_extract
+from utils import read_json, get_metadata_human, show_info, show_warning, create_hash, get_metadata_judge
+from traditional import get_metadata_keyword, get_metadata_qa
 from schema import get_schema
 from transformers import AutoTokenizer
 from search_acl import ACLDownloader, Downloader
@@ -129,12 +129,23 @@ def get_metadata(
         else:
             raise ValueError(f"Invalid backend: {backend}")
 
-
-        message = client.chat.completions.create(
-                    model=model_name,
-                    messages=messages,
-                    temperature=0.0,
-                )
+        if 'nuextract' in model_name.lower():
+            template = schema.schema_to_template()
+            message = client.chat.completions.create(
+                model=model_name,
+                messages=messages,
+                temperature=0.0,
+                extra_body={
+                "chat_template_kwargs": {
+                    "template": json.dumps(json.loads(template), indent=4)
+                },
+            })
+        else:
+            message = client.chat.completions.create(
+                        model=model_name,
+                        messages=messages,
+                        temperature=0.0,
+                    )
         try:
             if backend == "openrouter":
                 cost = get_cost(message)
@@ -389,11 +400,7 @@ def run(
             paper_text, schema_name=schema_name
         )
     elif "baseline" in model_name.lower():
-        metadata = schema.generate_metadata(method=model_name.split("-")[-1]).json()
-    elif "nu" in model_name.lower():
-        metadata = get_metadata_nu_extract(
-            paper_text, model_name=model_name, schema_name=schema_name
-        )   
+        metadata = schema.generate_metadata(method=model_name.split("-")[-1]).json() 
     else:
         base_model_path = save_path.replace("-browsing", "")
         if browse_web and os.path.exists(base_model_path):

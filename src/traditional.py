@@ -152,37 +152,3 @@ def get_metadata_keyword(
             predictions[c] = default
         
     return predictions
-
-def get_metadata_nu_extract(
-    paper_text = "",
-    model_name = "numind/NuExtract-2.0-8B",
-    schema_name = "ar",
-):
-    model_name = model_name.replace("_", "/")
-    model_name = model_name.replace("-browsing", "")
-    template = get_schema(schema_name).schema_to_template()
-    openai_api_key = "EMPTY"
-    openai_api_base = "http://localhost:8000/v1"
-    client = OpenAI(
-    api_key=openai_api_key,
-    base_url=openai_api_base,
-    )
-
-    chat_response = client.chat.completions.create(
-        model=model_name,
-        temperature=0,
-        messages=[
-            {
-                "role": "user", 
-                "content": [{"type": "text", "text": paper_text}],
-            },
-        ],
-        extra_body={
-            "chat_template_kwargs": {
-                "template": json.dumps(json.loads(template), indent=4)
-            },
-        }
-    )
-
-    predictions = read_json(chat_response.choices[0].message.content)
-    return predictions
