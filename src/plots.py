@@ -7,6 +7,7 @@ from plot_utils import print_table
 from utils import get_metadata_from_path, get_id_from_path, get_schema_from_path, get_schema, create_hash
 import os
 from constants import *
+from tqdm import tqdm
 
 args = argparse.ArgumentParser()
 args.add_argument("--split", type=str, default="valid")
@@ -233,7 +234,7 @@ def plot_by_group():
     metric_results = {}
     ids = get_all_ids()
     
-    for json_file in json_files:
+    for json_file in tqdm(json_files):
         results = json.load(open(json_file))
         _id = get_id_from_path(json_file)
         if _id not in ids:
