@@ -63,7 +63,7 @@ class Float(BaseType):
             return 0
         
     def compare(self, attr1, attr2):
-        return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2))
+        return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2)) # TODO: revise
     
 class Int(BaseType):
     base_type = int
@@ -90,7 +90,7 @@ class Int(BaseType):
         if attr1 == attr2: 
             return 1
         else:
-            return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2))
+            return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2)) # TODO: revise
     
 class Bool(BaseType):
     base_type = bool
@@ -117,6 +117,9 @@ class Bool(BaseType):
             else:
                 return False
         return bool(value)
+    
+    def compare(self, attr1, attr2):
+        return int(bool(attr1) == bool(attr2))
     
 class Year(Int):
     def get_default(self):
@@ -155,7 +158,7 @@ class Str(BaseType):
         if len(attr1) == len(attr2) == 0:
             return 1
         else:
-            return 1 - levenshtein_distance(attr1, attr2) / max(len(attr1), len(attr2))
+            return 1 - levenshtein_distance(attr1, attr2) / max(len(attr1), len(attr2)) # TODO: revise
     
 class URL(Str):
     def get_random(self):
@@ -213,7 +216,7 @@ class List(BaseType):
         for item in attr1:
             if item in attr2:
                 len_match += 1
-        return len_match / max(len(attr1), len(attr2))
+        return len_match / max(len(attr1), len(attr2)) # TODO: revise
     
     def validate_length(self, value):
         return len(value) >= self.answer_min and len(value) <= self.answer_max
