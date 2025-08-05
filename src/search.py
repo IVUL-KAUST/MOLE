@@ -156,7 +156,7 @@ def get_metadata(
                     "output_tokens": 0,
                 }
             response =  message.choices[0].message.content
-            print(response)
+            # print(response)
             predictions = read_json(response)
         except json.JSONDecodeError as e:
             error = str(e)  
@@ -170,10 +170,10 @@ def get_metadata(
         if predictions != {}:
             break
         else:
-            print(error)
+            show_warning(error, log = log)
             show_warning(f"Failed to get predictions for {model_name}, retrying ...", log = log)
-            time.sleep(3)
-    time.sleep(3) # sleep before next prediction
+            # time.sleep(3)
+    # time.sleep(3) # sleep before next prediction
     if predictions == {}:
         predictions = schema.generate_metadata(method = 'default').json()
     return message, predictions, cost, error
@@ -331,7 +331,7 @@ def run(
     
     model_name = model_name.replace("/", "_")
 
-    success, paper_path = download_paper(paper_link)
+    success, paper_path = download_paper(paper_link, log = log)
     if not success:
         show_warning(f"Failed to download paper: {paper_link}", log = log)
         return model_results
@@ -413,7 +413,7 @@ def run(
             cost = results["cost"]
         else:
             message, metadata, cost, error = get_metadata(
-                paper_text, model_name, schema_name=schema_name, few_shot = few_shot, backend = backend, max_model_len = max_model_len, max_output_len = max_output_len
+                paper_text, model_name, schema_name=schema_name, few_shot = few_shot, backend = backend, max_model_len = max_model_len, max_output_len = max_output_len, log = log
             )
         if browse_web:
             browsing_link = get_repo_link(
@@ -436,7 +436,8 @@ def run(
                     metadata=metadata,
                     schema_name=schema_name,
                     max_model_len = max_model_len,
-                    max_output_len = max_output_len
+                    max_output_len = max_output_len,
+                    log = log
                 )
                 cost = {
                     "cost": browsing_cost["cost"]
