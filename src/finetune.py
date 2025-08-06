@@ -52,8 +52,7 @@ else:
 
 
 def get_files(distilled_model = "gemma-3-27b-it"):
-    base_path = "static/synth_dataset/**/zero_shot"
-    train_files = glob.glob(f"{base_path}/{distilled_model}-results.json")
+    train_files = glob.glob("static/synth_datasetv2/**/**.json")
     test_files = []
     valid_files = []
     for schema_name in ['ar', 'en', 'fr', 'jp', 'ru', 'multi']:
@@ -64,8 +63,13 @@ def get_files(distilled_model = "gemma-3-27b-it"):
 
 def create_prompts(examples):
     messages = []
+    errors = []
     for path in examples['path']:
         data = json.load(open(path))
+        if "error" in data:
+            errors.append(data["error"])
+        else:
+            errors.append(None)
         if "metadata" in data:
             metadata = data['metadata']
             config = data['config'] 
@@ -96,11 +100,12 @@ def create_prompts(examples):
         
         messages.append([{'role': 'system', 'content': system_prompt}, {'role': 'user', 'content': prompt}, {'role': 'assistant', 'content': json.dumps(metadata)}])
 
-    return {"chat": messages}
+    return {"chat": messages, "error": errors}
 
 def prepare_dataset(files):
     dataset = Dataset.from_list([{"path": file} for file in files])
     dataset = dataset.map(create_prompts, batched=True, batch_size=1000, num_proc=2)
+    dataset = dataset.filter(lambda x: x["error"] is None)
     dataset = dataset.map(lambda x: {"formatted_chat": tokenizer.apply_chat_template(x["chat"], tokenize=False, add_generation_prompt=False).removeprefix('<bos>')})
     return dataset
 
@@ -114,10 +119,10 @@ print(f'train: {len(train_files)}, valid: {len(valid_files)}, test: {len(test_fi
 train_dataset = prepare_dataset(train_files)
 # test_dataset = prepare_dataset(test_files)
 valid_dataset = prepare_dataset(valid_files)
-
-print(train_dataset[0]['formatted_chat'])
-print(valid_dataset[0]['formatted_chat'])
-
+print(train_dataset)
+print(valid_dataset)
+# print(train_dataset[0]['formatted_chat'])
+# print(valid_dataset[0]['formatted_chat'])
 
 def get_gold_metadata(link):
     files = glob.glob("evals/**/**/*.json")
@@ -278,5 +283,5 @@ trainer = train_on_responses_only(
 trainer_stats = trainer.train()
 
 # evaluate()
-model.save_pretrained_merged(f"{args.output_model_name}-{args.max_model_len}", tokenizer, save_method = "merged_16bit", maximum_memory_usage=.9)
+model.save_pretrained_merged(f"{args.output_model_name}-{args.max_model_len}v2", tokenizer, save_method = "merged_16bit", maximum_memory_usage=.9)
         
