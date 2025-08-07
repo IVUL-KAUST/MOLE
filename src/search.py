@@ -338,7 +338,7 @@ def run(
     if browse_web and (model_name in non_browsing_models):
         show_info(f"Can't browse the web for {model_name}", log = log)
     file_name = ""
-    for arg in [model_name, browse_web, schema_name, few_shot, context, format, backend, max_model_len, max_output_len, paper_extra_args]:
+    for arg in [model_name, browse_web, schema_name, few_shot, context, format, backend, max_model_len, max_output_len, paper_link]:
         file_name += str(arg)
     file_name = create_hash(file_name)
     save_path = f"{save_path}/{file_name}.json"
@@ -396,7 +396,7 @@ def run(
         metadata = schema.generate_metadata(method=model_name.split("-")[-1]).json() 
     else:
         file_name = ""
-        for arg in [model_name, False, schema_name, few_shot, context, format, backend, max_model_len, max_output_len, paper_extra_args]:
+        for arg in [model_name, False, schema_name, few_shot, context, format, backend, max_model_len, max_output_len, paper_link]:
             file_name += str(arg)
         non_browsing_save_path = f"{'/'.join(save_path.split("/")[:-1])}/{create_hash(file_name)}.json"
         if browse_web and os.path.exists(non_browsing_save_path):
