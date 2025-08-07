@@ -89,7 +89,8 @@ def get_metadata(
     backend = "openrouter",
     max_model_len = 32768,
     max_output_len = 1024,
-    log = True
+    timeout = 3,
+    log = True,
 ):
     cost = {
         "input_tokens": 0,
@@ -169,7 +170,7 @@ def get_metadata(
             show_warning(error, log = log)
             show_warning(f"Failed to get predictions for {model_name}, retrying ...", log = log)
             # time.sleep(3)
-    # time.sleep(3) # sleep before next prediction
+    time.sleep(timeout)
     if predictions == {}:
         predictions = schema.generate_metadata(method = 'default').json()
     return message, predictions, cost, error
@@ -586,6 +587,17 @@ def create_args():
         type=int,
         default=None,
         help="max output length",
+    )
+    parser.add_argument(
+        "--timeout",
+        type=int,
+        default=0,
+        help="timeout for each prediction",
+    )
+    parser.add_argument(
+        "--log",
+        action="store_false",
+        help="log the progress",
     )
     # Parse arguments
     args = parser.parse_args()
