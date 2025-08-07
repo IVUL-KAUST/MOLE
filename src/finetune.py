@@ -32,7 +32,6 @@ if hasattr(os, 'cpu_count'):
     os.cpu_count = lambda: 3
 
 
-model_name = "unsloth/gemma-3-4b-it"
 
 model, tokenizer = FastModel.from_pretrained(
             model_name = args.model_name,
@@ -42,13 +41,18 @@ model, tokenizer = FastModel.from_pretrained(
             full_finetuning = False, # [NEW!] We have full finetuning now!
         )
 
-if "gemma-3" in model_name:
+if "gemma-3" in args.model_name.lower():
     tokenizer = get_chat_template(
         tokenizer,
         chat_template = "gemma-3",
     )
+elif "qwen2.5" in args.model_name.lower():
+    tokenizer = get_chat_template(
+        tokenizer,
+        chat_template = "qwen-2.5",
+    )
 else:
-    raise('Unsupported model name, please use a Gemma-3 model!')
+    raise(f'Unsupported model name: {args.model_name}')
 
 
 def get_files(distilled_model = "gemma-3-27b-it"):
@@ -96,9 +100,9 @@ def create_prompts(examples):
             except Exception as e:
                 raise e
         prompt,system_prompt = schema.get_prompts(paper_text,'')
-        if "gemma-3" in model_name:
+        try:
             native_tokenizer = tokenizer.tokenizer
-            else:
+        except:
             native_tokenizer = tokenizer
         prompt = truncate_prompt(prompt,system_prompt,native_tokenizer,max_model_len=args.max_model_len, max_output_len=args.max_output_len, log = False)
         
@@ -125,8 +129,8 @@ train_dataset = prepare_dataset(train_files)
 valid_dataset = prepare_dataset(valid_files)
 print(train_dataset)
 print(valid_dataset)
-# print(train_dataset[0]['formatted_chat'])
-# print(valid_dataset[0]['formatted_chat'])
+print(train_dataset[0]['formatted_chat'])
+print(valid_dataset[0]['formatted_chat'])
 
 def get_gold_metadata(link):
     files = glob.glob("evals/**/**/*.json")
@@ -272,17 +276,27 @@ trainer = SFTTrainer(
         report_to = "none", # Use this for WandB etc
     ),
 )
+
+if "gemma-3" in args.model_name.lower():
+    instruction_part = "<start_of_turn>user\n"
+    response_part = "<start_of_turn>model\n"
+    end_part = "<end_of_turn>"
+elif "qwen2.5" in args.model_name.lower():
+    instruction_part = "user\n"
+    response_part = "assistant\n"
+    end_part = "<|im_end|>"
+
 trainer = train_on_responses_only(
     trainer,
-    instruction_part = "<start_of_turn>user\n",
-    response_part = "<start_of_turn>model\n",
+    instruction_part = instruction_part,
+    response_part = response_part,
 )
 
-# example_input = tokenizer.decode(trainer.eval_dataset[0]["input_ids"])
-# example_output = tokenizer.decode([tokenizer.pad_token_id if x == -100 else x for x in trainer.eval_dataset[0]["labels"]]).replace(tokenizer.pad_token, "").replace("<end_of_turn>", "")
-# print("--------------------------------")
-# print('input', example_input)
-# print('output', json.loads(example_output))
+example_input = tokenizer.decode(trainer.eval_dataset[0]["input_ids"])
+example_output = tokenizer.decode([tokenizer.pad_token_id if x == -100 else x for x in trainer.eval_dataset[0]["labels"]]).replace(tokenizer.pad_token, "").replace(end_part, "")
+print("--------------------------------")
+print('input', example_input)
+print('output', json.loads(example_output))
 
 trainer_stats = trainer.train()
 
