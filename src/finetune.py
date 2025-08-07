@@ -96,7 +96,11 @@ def create_prompts(examples):
             except Exception as e:
                 raise e
         prompt,system_prompt = schema.get_prompts(paper_text,'')
-        prompt = truncate_prompt(prompt,system_prompt,tokenizer.tokenizer,max_model_len=args.max_model_len, max_output_len=args.max_output_len, log = False)
+        if "gemma-3" in model_name:
+            native_tokenizer = tokenizer.tokenizer
+            else:
+            native_tokenizer = tokenizer
+        prompt = truncate_prompt(prompt,system_prompt,native_tokenizer,max_model_len=args.max_model_len, max_output_len=args.max_output_len, log = False)
         
         messages.append([{'role': 'system', 'content': system_prompt}, {'role': 'user', 'content': prompt}, {'role': 'assistant', 'content': json.dumps(metadata)}])
 
@@ -283,5 +287,6 @@ trainer = train_on_responses_only(
 trainer_stats = trainer.train()
 
 # evaluate()
-model.save_pretrained_merged(f"{args.output_model_name}-{args.max_model_len}v2", tokenizer, save_method = "merged_16bit", maximum_memory_usage=.9)
+output_model_name = f"{args.model_name.split("/")[1]}-sft-{args.max_model_len}"
+model.save_pretrained_merged(output_model_name, tokenizer, save_method = "merged_16bit", maximum_memory_usage=.9)
         
