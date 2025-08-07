@@ -187,6 +187,8 @@ open_router_costs = {
     "x-ai/grok-4": {"input_tokens": 3, "output_tokens": 15},
     "moonshotai/kimi-k2": {"input_tokens": 0.14, "output_tokens": 2.49},
     "google/gemini-2.5-pro": {"input_tokens": 1.25, "output_tokens": 10},
+    "openai/gpt-5": {"input_tokens": 1.25, "output_tokens": 10},
+    "openai/gpt-5-chat": {"input_tokens": 1.25, "output_tokens": 10},
 
 }
 

@@ -201,10 +201,10 @@ def plot_by_group():
     ids = get_all_ids()
     
     for json_file in tqdm(json_files):
-        results = json.load(open(json_file))
         _id = get_id_from_path(json_file)
         if _id not in ids:
             continue
+        results = json.load(open(json_file))
         model_name = results["config"]["model_name"]
         if results["config"]["browse_web"]:
             model_name += " (Browsing)"
