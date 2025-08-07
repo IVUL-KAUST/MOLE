@@ -206,9 +206,9 @@ def plot_by_group():
             continue
         results = json.load(open(json_file))
         model_name = results["config"]["model_name"]
+        schema_name = results["config"]["schema_name"]
         if results["config"]["browse_web"]:
             model_name += " (Browsing)"
-        schema_name = results["config"]["schema_name"]
         schema = get_schema(schema_name)
         pred_metadata = schema(metadata = results["metadata"])
 
@@ -243,12 +243,19 @@ def plot_by_group():
         if args.ignore_length:
             final_results[model_name] = metric_results[model_name]
         elif args.group_by == "category":
-           if sum(len(metric_results[model_name][key]) for key in metric_results[model_name]) == len(ids):
+            if sum(len(metric_results[model_name][key]) for key in metric_results[model_name]) == len(ids):
                final_results[model_name] = metric_results[model_name]
+            else:
+                print(model_name)
+                print([(len(metric_results[model_name][key]), key) for key in metric_results[model_name]])
         else:
             sample_key = headers[1]
             if len(metric_results[model_name][sample_key]) == len(ids):
                 final_results[model_name] = metric_results[model_name]
+            else:
+                print(model_name)
+                print(len(metric_results[model_name][sample_key]))
+                print(len(ids))
 
     results = []
     for model_name in final_results:
