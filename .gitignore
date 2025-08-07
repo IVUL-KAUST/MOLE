@@ -30,3 +30,9 @@ resource/
 dcgm-*
 Qwen2.5-*
 Qwen3-*
+NuExtract-*
+unsloth*
+benchmark_results/
+dcgm/
+MagedAnnotations/
+.streamlit
