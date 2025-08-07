@@ -28,3 +28,5 @@ gemma-3-*
 evals/resource/valid/
 resource/
 dcgm-*
+Qwen2.5-*
+Qwen3-*
