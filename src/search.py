@@ -103,7 +103,7 @@ def get_metadata(
         prompt, sys_prompt = schema.get_prompts(paper_text, readme, metadata)
         messages = [{"role": "system", "content": sys_prompt}, {"role": "user", "content": prompt}]
 
-        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        
         if backend == "openrouter":
             show_info(f"🔑 Using OpenRouter backend", log = log)
             api_key = os.environ.get("OPENROUTER_API_KEY")
@@ -113,7 +113,7 @@ def get_metadata(
                 base_url=base_url
             )
         elif backend == "vllm":
-            
+            tokenizer = AutoTokenizer.from_pretrained(model_name)
             # Support custom base URL from environment variable for SLURM jobs
             base_url = "http://localhost:8787/v1"
             client = OpenAI(
