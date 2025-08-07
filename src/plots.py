@@ -266,18 +266,23 @@ def plot_by_group():
                 if metric in headers:
                     metric_results[model_name][metric].append(scores[metric])
        
-    # final_results = {}
-    # for model_name in metric_results:
-    #     if "human" in model_name.lower():
-    #         continue
-    #     if len(metric_results[model_name]) == len(ids) or ignore_length:
-    #         final_results[model_name] = metric_results[model_name]
+    final_results = {}
+    for model_name in metric_results:
+        if args.ignore_length:
+            final_results[model_name] = metric_results[model_name]
+        elif args.group_by == "category":
+           if sum(len(metric_results[model_name][key]) for key in metric_results[model_name]) == len(ids):
+               final_results[model_name] = metric_results[model_name]
+        else:
+            sample_key = headers[1]
+            if len(metric_results[model_name][sample_key]) == len(ids):
+                final_results[model_name] = metric_results[model_name]
 
     results = []
-    for model_name in metric_results:
+    for model_name in final_results:
         row = [remap_names(model_name)]
         for key in headers:
-            row.append(np.mean(metric_results[model_name][key]) * 100)
+            row.append(np.mean(final_results[model_name][key]) * 100)
         average = np.mean([c for c in row[1:] if c  > 0 ])
         results.append(row+ [average])
     headers = ['Model'] + headers + ['Average']
