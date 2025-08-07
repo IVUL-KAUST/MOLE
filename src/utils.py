@@ -508,16 +508,23 @@ def read_json(text_json):
     return fixed_json
 
 
+def get_non_empty_link(link):
+    if isinstance(link, str):
+        return link.strip() != ""
+    elif link is None:
+        return False 
+    else:
+        raise("Non empty link expected to be a string or None")
+
 def get_repo_link(metadata, repo_link=""):
     link = ""
 
     if repo_link != "":
         link = repo_link
-    elif "Link" in metadata:
-        link = metadata["Link"]
-    elif "HF Link" in metadata:
-        if metadata["HF Link"] != "":
-            link = metadata["Link"]
+    elif get_non_empty_link(metadata["Link"]):
+        link = metadata["Link"].strip()
+    elif get_non_empty_link(metadata["HF_Link"]):
+        link = metadata["HF_Link"].strip()
     return link
 
 
@@ -554,4 +561,4 @@ def fetch_repository_metadata(link):
 
         return f"License: {license_info}\nReadme: {readme_content}".strip()
     else:
-        return extract_and_generate_readme(link)
+        return ""

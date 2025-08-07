@@ -1,17 +1,15 @@
 from glob import glob
 import os
 import arxiv
-from search_arxiv import ArxivSearcher, ArxivSourceDownloader
+from search_arxiv import ArxivSourceDownloader
 import json
 import pdfplumber
 from dotenv import load_dotenv
 from constants import non_browsing_models
 import argparse
-from datetime import datetime
 import time
-import shutil
 from openai import OpenAI
-from utils import read_json, get_metadata_human, show_info, show_warning, create_hash, get_metadata_judge
+from utils import read_json, get_metadata_human, show_info, show_warning, create_hash, get_metadata_judge, get_repo_link, fetch_repository_metadata
 from traditional import get_metadata_keyword, get_metadata_qa
 from schema import get_schema
 from transformers import AutoTokenizer
@@ -105,8 +103,6 @@ def get_metadata(
         prompt, sys_prompt = schema.get_prompts(paper_text, readme, metadata)
         messages = [{"role": "system", "content": sys_prompt}, {"role": "user", "content": prompt}]
 
-        model_name = model_name.replace("_", "/")
-        model_name = model_name.replace("-browsing", "")
         tokenizer = AutoTokenizer.from_pretrained(model_name)
         if backend == "openrouter":
             show_info(f"🔑 Using OpenRouter backend", log = log)
@@ -329,8 +325,6 @@ def run(
     model_results = {}
     schema = get_schema(schema_name)
     
-    model_name = model_name.replace("/", "_")
-
     success, paper_path = download_paper(paper_link, log = log)
     if not success:
         show_warning(f"Failed to download paper: {paper_link}", log = log)
@@ -347,7 +341,6 @@ def run(
         file_name += str(arg)
     file_name = create_hash(file_name)
     save_path = f"{save_path}/{file_name}.json"
-    
     if (
         os.path.exists(save_path)
         and not overwrite
@@ -364,7 +357,6 @@ def run(
     
     paper_text = ""
     start_time = time.time()
-    model_name = model_name.replace("/", "_")
 
     paper_text = extract_and_save_paper_text(paper_path, context = context, format = format, save_paper_text = save_paper_text, log = log)
     if paper_text is None:
@@ -402,13 +394,16 @@ def run(
     elif "baseline" in model_name.lower():
         metadata = schema.generate_metadata(method=model_name.split("-")[-1]).json() 
     else:
-        base_model_path = save_path.replace("-browsing", "")
-        if browse_web and os.path.exists(base_model_path):
+        file_name = ""
+        for arg in [model_name, False, schema_name, few_shot, context, format, backend, max_model_len, max_output_len, paper_extra_args]:
+            file_name += str(arg)
+        non_browsing_save_path = f"{'/'.join(save_path.split("/")[:-1])}/{create_hash(file_name)}.json"
+        if browse_web and os.path.exists(non_browsing_save_path):
             show_info(
                 "📂 Loading saved results ...",
                 log = log
             )
-            results = json.load(open(base_model_path))
+            results = json.load(open(non_browsing_save_path))
             metadata = results["metadata"]
             cost = results["cost"]
         else:
@@ -417,7 +412,7 @@ def run(
             )
         if browse_web:
             browsing_link = get_repo_link(
-                metadata, repo_link=repo_link
+                metadata
             )
             show_info(
                 f"📖 Extracting readme from {browsing_link}",

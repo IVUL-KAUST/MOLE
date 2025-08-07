@@ -238,7 +238,6 @@ class DatasetSchema(Schema):
             prompt = f"""
                     You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
                     Given the following Input schema: {cls.schema()}, then update the metadata in the Input schema with the information from the readme.
-                    Output JSON:
                     """
         else:  
             prompt = f"""Schema Name: {cls.get_schema_name()}

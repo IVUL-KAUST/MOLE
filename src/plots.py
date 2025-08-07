@@ -240,6 +240,8 @@ def plot_by_group():
         if _id not in ids:
             continue
         model_name = results["config"]["model_name"]
+        if results["config"]["browse_web"]:
+            model_name += " (Browsing)"
         schema_name = results["config"]["schema_name"]
         schema = get_schema(schema_name)
         pred_metadata = schema(metadata = results["metadata"])
