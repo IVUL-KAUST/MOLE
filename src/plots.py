@@ -40,10 +40,10 @@ def get_all_ids():
     return ids
 
 def get_openrouter_cost(model_name, input_tokens, output_tokens):
-    model_name = model_name.split("_")[1]
-    if "-browsing" in model_name:
-        model_name = model_name.replace("-browsing", "")
-    return (open_router_costs[model_name]["input"] * input_tokens + open_router_costs[model_name]["output"] * output_tokens) / (1e6)
+    try:
+        return (open_router_costs[model_name]["input_tokens"] * input_tokens + open_router_costs[model_name]["output_tokens"] * output_tokens) / (1e6)
+    except:
+        return 0
 
 def map_error(error):
     if "Expecting value: line" in error:
@@ -86,42 +86,6 @@ def plot_by_errors():
         )
     print(types_of_errors)
     headers = ["Model", "Number of Errors"]
-    print_table(results, headers)
-
-def plot_by_cost():
-    ids = get_all_ids()
-    metric_results = {}
-    for json_file in json_files:
-        results = json.load(open(json_file))
-        arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
-        if arxiv_id not in ids:
-            continue
-        model_name = results["config"]["model_name"]
-        if model_name in non_browsing_models:
-            continue
-        if model_name not in metric_results:
-            metric_results[model_name] = []
-        metric_results[model_name].append(
-            [
-                results["cost"]["input_tokens"],
-                results["cost"]["output_tokens"],
-                results["cost"]["input_tokens"] + results["cost"]["output_tokens"],
-                results["cost"]["cost"],
-                get_openrouter_cost(model_name, results["cost"]["input_tokens"], results["cost"]["output_tokens"]),
-            ]
-        )
-    final_results = {}
-    for model_name in metric_results:
-        if len(metric_results[model_name]) == len(ids):
-            final_results[model_name] = metric_results[model_name]
-
-    results = []
-    for model_name in final_results:
-        results.append(
-            [remap_names(model_name)] + (np.sum(final_results[model_name], axis=0)).tolist()
-        )
-
-    headers = ["Model", "Input Tokens", "Output Tokens", "Total Tokens", "Cost (USD)", "Cost (OpenRouter)"]
     print_table(results, headers)
 
 
@@ -230,6 +194,8 @@ def plot_by_group():
         headers += [year for year in range(2010, 2026)]
     elif args.group_by == "few_shot":
         headers += [0, 3, 5, 7]
+    elif args.group_by == "cost":
+        headers += ["input_tokens", "output_tokens", "total_tokens", "cost"]
 
     metric_results = {}
     ids = get_all_ids()
@@ -261,6 +227,12 @@ def plot_by_group():
         elif args.group_by == "few_shot":
             few_shot = results["config"]["few_shot"]
             metric_results[model_name][few_shot].append(scores['f1'])
+        elif args.group_by == "cost":
+            if "cost" in results:
+                results["cost"]["total_tokens"] = results["cost"]["input_tokens"] + results["cost"]["output_tokens"]
+                for metric in results["cost"]:
+                    metric_results[model_name][metric].append(results["cost"][metric])
+        
         else:
             for metric in scores:
                 if metric in headers:
@@ -282,10 +254,19 @@ def plot_by_group():
     for model_name in final_results:
         row = [remap_names(model_name)]
         for key in headers:
-            row.append(np.mean(final_results[model_name][key]) * 100)
+            if args.group_by == "cost":
+                row.append(np.sum(final_results[model_name][key]))
+            else:
+                row.append(np.mean(final_results[model_name][key]) * 100)
         average = np.mean([c for c in row[1:] if c  > 0 ])
-        results.append(row+ [average])
-    headers = ['Model'] + headers + ['Average']
+        if args.group_by == "cost":
+            results.append(row)
+        else:
+            results.append(row + [average])
+    if args.group_by == "cost":
+        headers = ['Model'] + headers
+    else:
+        headers = ['Model'] + headers + ['Average']
     print_table(results, headers, format = True)
 
 
@@ -297,11 +278,9 @@ if __name__ == "__main__":
     if args.browsing:
         json_files = [file for file in json_files if "-browsing" in file]
 
-    assert args.group_by in ["attributes_few", "attributes_hard", "attributes", "all", "metric", "category", "year", "few_shot"]
+    assert args.group_by in ["attributes_few", "attributes_hard", "attributes", "all", "metric", "category", "year", "few_shot", "cost"]
 
     if args.errors:
         plot_by_errors()
-    elif args.cost:
-        plot_by_cost()
     else:
         plot_by_group()
