@@ -25,6 +25,7 @@ parser.add_argument('--output_model_name', default = "gemma-3-4b-it-sft", type=s
 parser.add_argument('--model_name', default = "unsloth/gemma-3-4b-it", type=str, help="Model name to fine-tune")
 parser.add_argument('--max_model_len', default = 8192, type=int, help="Maximum model length")
 parser.add_argument('--max_output_len', default = 2048, type=int, help="Maximum output length")
+parser.add_argument('--distilled_model', default = "moonshotai/kimi-k2", type=str, help="Distilled model name")
 args = parser.parse_args()
 multiprocessing.cpu_count = lambda: 1
 
@@ -55,7 +56,7 @@ else:
     raise(f'Unsupported model name: {args.model_name}')
 
 
-def get_files(distilled_model = "gemma-3-27b-it"):
+def get_files():
     train_files = glob.glob("static/synth_datasetv2/**/**.json")
     test_files = []
     valid_files = []
@@ -110,11 +111,29 @@ def create_prompts(examples):
 
     return {"chat": messages, "error": errors}
 
+def by_model(examples):
+    output = []
+    for path in examples['path']:
+        data = json.load(open(path))
+        if "config" in data :
+            if data['config']['model_name'] == args.distilled_model:
+                output.append(True)
+            else:
+                output.append(False)
+        else:
+            output.append(True)
+    return output
 def prepare_dataset(files):
     dataset = Dataset.from_list([{"path": file} for file in files])
+    print("num examples: ", len(dataset))
+    dataset = dataset.filter(by_model, batched = True, batch_size = 1000, num_proc = 2)
+    print("num examples after filtering by model: ", len(dataset))
     dataset = dataset.map(create_prompts, batched=True, batch_size=1000, num_proc=2)
+    print("num examples after creating prompts: ", len(dataset))
     dataset = dataset.filter(lambda x: x["error"] is None)
+    print("num examples after filtering errors: ", len(dataset))
     dataset = dataset.map(lambda x: {"formatted_chat": tokenizer.apply_chat_template(x["chat"], tokenize=False, add_generation_prompt=False).removeprefix('<bos>')})
+    print("num examples after formatting: ", len(dataset))
     return dataset
 
 def postprocess(output):
@@ -301,6 +320,6 @@ print('output', json.loads(example_output))
 trainer_stats = trainer.train()
 
 # evaluate()
-output_model_name = f"{args.model_name.split("/")[1]}-sft-{args.max_model_len}"
+output_model_name = f"{args.model_name.split("/")[1]}-{args.distilled_model.split("/")[1]}-sft-{args.max_model_len}"
 model.save_pretrained_merged(output_model_name, tokenizer, save_method = "merged_16bit", maximum_memory_usage=.9)
         
