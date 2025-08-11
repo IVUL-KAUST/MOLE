@@ -21,6 +21,7 @@ args.add_argument("--browsing", action="store_true")
 args.add_argument("--errors", action="store_true")
 args.add_argument("--group_by", type = str, default = "evaluation_subsets")
 args.add_argument("--ignore_length", action="store_true")
+args.add_argument("--show_examples", type = int, default = 0)
 args = args.parse_args()
 
 categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
@@ -175,8 +176,7 @@ def plot_context_length():
             "* Computed average by considering metadata exctracted from outside the paper."
         )
 
-def plot_by_group():
-
+def get_group():
     headers = []
     if args.group_by == "attributes_few":
         headers += ["Link", "License", "Tasks", "Domain", "Collection_Style", "Volume"]
@@ -198,6 +198,62 @@ def plot_by_group():
         headers += [0, 3, 5, 7]
     elif args.group_by == "cost":
         headers += ["input_tokens", "output_tokens", "total_tokens", "cost"]
+    else:
+        headers += args.group_by.split(",")
+    return headers
+
+def show_examples():
+
+    headers = []
+    attributes = get_group()
+
+    metric_results = {}
+    ids = get_all_ids()
+    added_gold = []
+    for json_file in tqdm(json_files):
+        _id = get_id_from_path(json_file)
+        if _id not in ids:
+            continue
+        results = json.load(open(json_file))
+        model_name = results["config"]["model_name"]
+        if results["config"]["browse_web"]:
+            model_name += " (Browsing)"
+        pred_metadata = results["metadata"]
+
+        gold_metadata = get_metadata_from_path(json_file)
+        if model_name not in metric_results:
+            metric_results[model_name] = {column: [] for column in attributes}
+        if 'Gold' not in metric_results:
+            metric_results['Gold'] = {column: [] for column in attributes}
+
+        for attr in attributes:
+            metric_results[model_name][attr].append(pred_metadata[attr])
+        
+        # add the gold to the results only once
+        if gold_metadata['Link'] not in added_gold:
+            added_gold.append(gold_metadata['Link'])
+            for attr in attributes:
+                metric_results['Gold'][attr].append(gold_metadata[attr])
+    
+    for i in range(args.show_examples):
+        results = []
+        for model_name in metric_results:
+            row = [remap_names(model_name)]
+            for attr in attributes:
+                value = metric_results[model_name][attr][i]
+                if isinstance(value, list):
+                    value = ",".join(value)
+                row.append(value)
+            results.append(row)
+        headers = ["Model"] + attributes
+        # make the Gold at the end
+        results = results[0:1] + results[2:]+ [[None for _ in range(len(attributes)+1)]]+ results[1:2]
+        print_table(results, headers, format = False)
+
+def plot_by_group():
+
+    headers = []
+    headers += get_group()
 
     metric_results = {}
     ids = get_all_ids()
@@ -287,9 +343,11 @@ if __name__ == "__main__":
     if args.browsing:
         json_files = [file for file in json_files if "-browsing" in file]
 
-    assert args.group_by in ["attributes_few", "attributes_hard", "attributes", "all", "metric", "category", "year", "few_shot", "cost", "generative"]
-
     if args.errors:
         plot_by_errors()
+    elif args.show_examples > 0:
+        show_examples()
     else:
+        assert args.group_by in ["attributes_few", "attributes_hard", "attributes", "all", "metric", "category", "year", "few_shot", "cost", "generative"]
+
         plot_by_group()

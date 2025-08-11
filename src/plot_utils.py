@@ -18,13 +18,10 @@ def print_table(results, headers, title="", format=False):
     END = "\033[0m"
 
     if not format:
+        # add horizontal line before the last row
         print(
             tabulate(
-                sorted(
-                    results,
-                    key=lambda x: x[-1],
-                    reverse=False,
-                ),
+                results,
                 headers=headers,
                 tablefmt="github",
                 floatfmt=".2f",
