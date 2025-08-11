@@ -186,6 +186,8 @@ def plot_by_group():
         headers += ["Link", "HF_Link", "License", "Language", "Domain", "Form", "Collection_Style", "Volume", "Unit", "Ethical_Risks", "Provider", "Derived_From", "Tokenized", "Host", "Access", "Cost", "Test_Split", "Tasks"]
     elif args.group_by == 'all':
         headers += ["Link", "HF_Link", "License", "Language", "Domain", "Form", "Collection_Style", "Volume", "Unit", "Ethical_Risks", "Provider", "Derived_From", "Tokenized", "Host", "Access", "Cost", "Test_Split", "Tasks", "Venue_Title", "Venue_Type", "Venue Name", "Authors", "Affiliations", "Abstract"]
+    elif args.group_by == 'generative':
+        headers += ["Name", "Description", "Abstract"]
     elif args.group_by == "metric":
         headers += ["precision", "recall", "f1"]
     elif args.group_by == "category":
@@ -285,7 +287,7 @@ if __name__ == "__main__":
     if args.browsing:
         json_files = [file for file in json_files if "-browsing" in file]
 
-    assert args.group_by in ["attributes_few", "attributes_hard", "attributes", "all", "metric", "category", "year", "few_shot", "cost"]
+    assert args.group_by in ["attributes_few", "attributes_hard", "attributes", "all", "metric", "category", "year", "few_shot", "cost", "generative"]
 
     if args.errors:
         plot_by_errors()
