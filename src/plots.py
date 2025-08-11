@@ -227,13 +227,20 @@ def show_examples():
             metric_results['Gold'] = {column: [] for column in attributes}
 
         for attr in attributes:
-            metric_results[model_name][attr].append(pred_metadata[attr])
+            metric_results[model_name][attr].append((gold_metadata['Paper_Link'], pred_metadata[attr])) # annotate by the dataset name
         
         # add the gold to the results only once
-        if gold_metadata['Link'] not in added_gold:
-            added_gold.append(gold_metadata['Link'])
+        if gold_metadata['Paper_Link'] not in added_gold:
+            added_gold.append(gold_metadata['Paper_Link'])
             for attr in attributes:
-                metric_results['Gold'][attr].append(gold_metadata[attr])
+                metric_results['Gold'][attr].append((gold_metadata['Paper_Link'], gold_metadata[attr])) # annotate by the dataset name
+    
+    # sort by the first element of the tuple
+    for model_name in metric_results:
+        for attr in attributes:
+            metric_results[model_name][attr] = sorted(metric_results[model_name][attr], key=lambda x: x[0])
+            metric_results[model_name][attr] = [x[1] for x in metric_results[model_name][attr]]
+            
     
     for i in range(args.show_examples):
         results = []
