@@ -5,6 +5,7 @@
 #SBATCH --partition=batch
 #SBATCH --gres=gpu:a100:2
 #SBATCH --mem=32GB
-#SBATCH --time=4:00:00
+#SBATCH --time=6:00:00
 
-python src/finetune.py --max_model_len 8192
+source /ibex/ai/home/alyafez/.mole/bin/activate
+python src/finetune.py --model_name unsloth/Qwen2.5-7B-Instruct --max_model_len 8192 --distilled_model moonshotai/kimi-k2
