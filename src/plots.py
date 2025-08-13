@@ -181,7 +181,7 @@ def get_group():
     if args.group_by == "attributes_few":
         headers += ["Link", "License", "Tasks", "Domain", "Collection_Style", "Volume"]
     elif args.group_by == "attributes_hard":
-        headers += ["Link","License", "HF_Link", "Volume", "Year", "Derived From", "Host", "Domain", "Collection_Style"]
+        headers += ["Link","License", "HF_Link", "Volume", "Year", "Derived_From", "Host", "Domain", "Collection_Style"]
     elif args.group_by == "attributes":
         headers += ["Link", "HF_Link", "License", "Language", "Domain", "Form", "Collection_Style", "Volume", "Unit", "Ethical_Risks", "Provider", "Derived_From", "Tokenized", "Host", "Access", "Cost", "Test_Split", "Tasks"]
     elif args.group_by == 'all':
@@ -224,7 +224,6 @@ def show_examples():
         schema = get_schema(schema_name)
         pred_metadata = schema(metadata = results["metadata"])
 
-        # human_json_path = human_json_path.replace(f"/{args.type}", "")
         gold_metadata = get_metadata_from_path(json_file)
         scores = pred_metadata.compare_with(gold_metadata)
 
@@ -364,6 +363,4 @@ if __name__ == "__main__":
     elif args.show_examples > 0:
         show_examples()
     else:
-        assert args.group_by in ["attributes_few", "attributes_hard", "attributes", "all", "metric", "category", "year", "few_shot", "cost", "generative", "length"]
-
         plot_by_group()
