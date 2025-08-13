@@ -9,7 +9,7 @@ import os
 from constants import *
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
-
+import random
 args = argparse.ArgumentParser()
 args.add_argument("--split", type=str, default="valid")
 args.add_argument("--year", action="store_true")
@@ -23,7 +23,10 @@ args.add_argument("--errors", action="store_true")
 args.add_argument("--group_by", type = str, default = "evaluation_subsets")
 args.add_argument("--ignore_length", action="store_true")
 args.add_argument("--show_examples", type = int, default = 0)
+args.add_argument("--seed", type = int, default = 42)
 args = args.parse_args()
+
+random.seed(args.seed)
 
 categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
 # evaluation_subsets = schema[args.schema_name]['evaluation_subsets']
@@ -170,43 +173,59 @@ def show_examples():
 
     metric_results = {}
     ids = get_all_ids()
-    added_gold = []
-    for json_file in tqdm(json_files):
-        _id = get_id_from_path(json_file)
-        if _id not in ids:
-            continue
-        results = json.load(open(json_file))
-        model_name = results["config"]["model_name"]
-        if results["config"]["browse_web"]:
-            model_name += " (Browsing)"
-        schema_name = results["config"]["schema_name"]
-        schema = get_schema(schema_name)
-        pred_metadata = schema(metadata = results["metadata"])
-
-        gold_metadata = get_metadata_from_path(json_file)
-        scores = pred_metadata.compare_with(gold_metadata)
-
-        if model_name not in metric_results:
-            metric_results[model_name] = {column: [] for column in attributes}
-        if 'Gold' not in metric_results:
-            metric_results['Gold'] = {column: [] for column in attributes}
-
-        for attr in attributes:
-            metric_results[model_name][attr].append((gold_metadata['Paper_Link'], [pred_metadata.json()[attr], scores[attr]])) # annotate by the dataset name
-        
-        # add the gold to the results only once
-        if gold_metadata['Paper_Link'] not in added_gold:
-            added_gold.append(gold_metadata['Paper_Link'])
-            for attr in attributes:
-                metric_results['Gold'][attr].append((gold_metadata['Paper_Link'], [gold_metadata[attr], 1])) # annotate by the dataset name
+    grouped_files = group_files_by_model_name(json_files, ids)
+    all_links = []
+    # get all links
+    for model_name in grouped_files:
+        for json_file in grouped_files[model_name]:
+            all_links.append(json.load(open(json_file))['config']['link'])
     
+    # extract unique links
+    all_links = list(set(all_links))
+
+    # shuffle and extract {args.show_examples} links
+    random.shuffle(all_links)
+    all_links = all_links[:args.show_examples]
+    
+    # filter files by links
+    for model_name in grouped_files:
+        grouped_files[model_name] = [json_file for json_file in grouped_files[model_name] if json.load(open(json_file))['config']['link'] in all_links]
+
+    added_gold = []
+    for model_name in tqdm(grouped_files):
+        files = grouped_files[model_name]
+        for json_file in files:
+            _id = get_id_from_path(json_file)
+            if _id not in ids:
+                continue
+            results = json.load(open(json_file))
+            model_name = results["config"]["model_name"]
+            if results["config"]["browse_web"]:
+                model_name += " (Browsing)"
+            schema_name = results["config"]["schema_name"]
+            schema = get_schema(schema_name)
+            pred_metadata = schema(metadata = results["metadata"])
+
+            gold_metadata = get_metadata_from_path(json_file)
+            scores = pred_metadata.compare_with(gold_metadata)
+            if model_name not in metric_results:
+                metric_results[model_name] = {column: [] for column in attributes}
+            if 'Gold' not in metric_results:
+                metric_results['Gold'] = {column: [] for column in attributes}
+
+            for attr in attributes:
+                metric_results[model_name][attr].append((gold_metadata['Paper_Link'], [pred_metadata.json()[attr], scores[attr]])) # annotate by the paper link
+            # add the gold to the results only once
+            if gold_metadata['Paper_Link'] not in added_gold:
+                added_gold.append(gold_metadata['Paper_Link'])
+                for attr in attributes:
+                    metric_results['Gold'][attr].append((gold_metadata['Paper_Link'], [gold_metadata[attr], 1])) # annotate by the paper link
     # sort by the first element of the tuple
     for model_name in metric_results:
         for attr in attributes:
             metric_results[model_name][attr] = sorted(metric_results[model_name][attr], key=lambda x: x[0])
             metric_results[model_name][attr] = [x[1] for x in metric_results[model_name][attr]]
             
-    
     for i in range(args.show_examples):
         results = []
         headers = ["Model"] 
