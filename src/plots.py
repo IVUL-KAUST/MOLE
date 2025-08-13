@@ -150,7 +150,7 @@ def get_group():
     elif args.group_by == "category":
         headers += categories
     elif args.group_by == "year":
-        headers += [year for year in range(2010, 2026)]
+        headers += [year for year in range(2014, 2026)]
     elif args.group_by == "few_shot":
         headers += [0, 3, 5, 7]
     elif args.group_by == "cost":
