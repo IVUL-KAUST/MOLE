@@ -35,7 +35,10 @@ def print_table(results, headers, title="", format=False):
         formatted_row = [row[0]]  # Start with model name
         for i, value in enumerate(row[1:]):
             column_values = numeric_columns[i]
-            max_val = max([val for val in column_values if val > 0])
+            try:
+                max_val = max([val for val in column_values if val > 0])
+            except:
+                max_val = 0
             if len(sorted(column_values)) >= 2:
                 second_max = sorted(column_values)[-2]
             else:

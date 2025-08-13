@@ -282,17 +282,20 @@ def plot_by_group():
     metric_results = {}
     ids = get_all_ids()
     grouped_files = group_files_by_model_name(json_files, ids)
+    all_files = []
+    for model_name in grouped_files:
+        all_files += grouped_files[model_name]
 
     # Process ALL files in parallel globally
     file_results = {}
-    print(f"Processing {len(json_files)} files across {len(grouped_files)} models in parallel...")
+    print(f"Processing {len(all_files)} files across {len(grouped_files)} models in parallel...")
     with ThreadPoolExecutor(max_workers=8) as executor:
         # Submit all extract_results tasks
         future_to_file = {executor.submit(extract_results, json_file, headers): json_file 
-                        for json_file in json_files}
+                        for json_file in all_files}
         
         # Collect results as they complete with progress bar
-        for future in tqdm(as_completed(future_to_file), total=len(json_files), desc="Extracting results"):
+        for future in tqdm(as_completed(future_to_file), total=len(all_files), desc="Extracting results"):
             json_file = future_to_file[future]
             try:
                 output = future.result()
@@ -300,6 +303,7 @@ def plot_by_group():
             except Exception as exc:
                 print(f'File {json_file} generated an exception: {exc}')
     
+
     # Group results by model
     for model_name in grouped_files:
         model_results = {column: [] for column in headers}
@@ -307,13 +311,16 @@ def plot_by_group():
             if json_file in file_results:
                 output = file_results[json_file]
                 for column in headers:
-                    model_results[column].append(output[column])
+                    if len(output[column]) == 0:
+                        continue
+                    model_results[column].append(output[column][0])
         metric_results[model_name] = model_results
+
     final_results = {}
     for model_name in metric_results:
         if args.ignore_length:
             final_results[model_name] = metric_results[model_name]
-        elif args.group_by == "category":
+        elif args.group_by == "category" or args.group_by == "year":
             if sum(len(metric_results[model_name][key]) for key in metric_results[model_name]) == len(ids):
                final_results[model_name] = metric_results[model_name]
             else:
