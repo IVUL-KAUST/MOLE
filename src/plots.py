@@ -46,50 +46,6 @@ def get_openrouter_cost(model_name, input_tokens, output_tokens):
     except:
         return 0
 
-def map_error(error):
-    if "Expecting value: line" in error:
-        return "JSON Reading Error"
-    else:
-        return error
-    
-def plot_by_errors():
-    types_of_errors = {}
-    ids = get_all_ids()
-    metric_results = {}
-    json_files = glob(f"static/results_**/**/**/**/*.json") + glob(f"static/results_**/**/**/*.json")
-    for json_file in json_files:
-        results = json.load(open(json_file))
-        arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
-        print(arxiv_id)
-        if arxiv_id not in ids:
-            continue
-        model_name = results["config"]["model_name"]
-        if "-browsing" in model_name:
-            model_name = model_name.replace("-browsing", "")
-        if model_name in non_browsing_models:
-            continue
-        if model_name not in metric_results:
-            metric_results[model_name] = []
-        is_error = 1 if results["error"] else 0
-        if results["error"] in types_of_errors:
-            types_of_errors[results["error"]] += 1
-        else:
-            types_of_errors[results["error"]] = 1
-        metric_results[model_name].append([is_error])
-    final_results = {}
-    for model_name in metric_results:
-        final_results[model_name] = metric_results[model_name]
-
-    results = []
-    for model_name in final_results:
-        results.append(
-            [remap_names(model_name)] + (np.sum(final_results[model_name], axis=0)).tolist()
-        )
-    print(types_of_errors)
-    headers = ["Model", "Number of Errors"]
-    print_table(results, headers)
-
-
 def remap_names(model_name):
     if "-browsing" in model_name:
         browsing = " Browsing"
@@ -200,6 +156,8 @@ def get_group():
         headers += ["input_tokens", "output_tokens", "total_tokens", "cost"]
     elif args.group_by == "length":
         headers += ["length"]
+    elif args.group_by == "error":
+        headers += ["error"]
     else:
         headers += args.group_by.split(",")
     return headers
@@ -305,7 +263,11 @@ def plot_by_group():
                 results["cost"]["total_tokens"] = results["cost"]["input_tokens"] + results["cost"]["output_tokens"]
                 for metric in results["cost"]:
                     metric_results[model_name][metric].append(results["cost"][metric])
-        
+        elif args.group_by == "error":
+            value = 1 if results["error"] is not None else 0
+            if value == 1:
+                print(results["error"])
+            metric_results[model_name]["error"].append(value)
         else:
             for metric in scores:
                 if metric in headers:
@@ -334,12 +296,12 @@ def plot_by_group():
     for model_name in final_results:
         row = [remap_names(model_name)]
         for key in headers:
-            if args.group_by == "cost":
+            if args.group_by == "cost" or args.group_by == "error":
                 row.append(np.sum(final_results[model_name][key]))
             else:
                 row.append(np.mean(final_results[model_name][key]) * 100)
         average = np.mean([c for c in row[1:] if c  > 0 ])
-        if args.group_by == "cost":
+        if args.group_by == "cost" or args.group_by == "error":
             results.append(row)
         else:
             results.append(row + [average])
