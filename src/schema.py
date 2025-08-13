@@ -320,11 +320,11 @@ class Dataset(Subset):
     Domain: Field(List[Str], 1, len(domains), domains)
     Form: Field(Str, 1, 1, form)
     Collection_Style: Field(List[Str], 1, len(collection_styles), collection_styles)
-    Description: Field(Str, 0, 50)
+    Description: Field(LongStr, 0, 50)
     Ethical_Risks: Field(Str, 1, 1, ethical_risks)
     Provider: Field(List[Str], 0, 10)
     Derived_From: Field(List[Str], 0, 10)
-    Paper_Title: Field(Str, 1, 100)
+    Paper_Title: Field(LongStr, 1, 100)
     Paper_Link: Field(URL, 1, 1)
     Tokenized: Field(Bool, 1, 1)
     Host: Field(Str, 1, 1, hosts)
@@ -337,7 +337,7 @@ class Dataset(Subset):
     Venue_Name: Field(Str, 0, 10)
     Authors: Field(List[Str], 0, 100)
     Affiliations: Field(List[Str], 0, 100)
-    Abstract: Field(Str, 1, 1000)
+    Abstract: Field(LongStr, 1, 1000)
 
 
 class ArSchema(Dataset):

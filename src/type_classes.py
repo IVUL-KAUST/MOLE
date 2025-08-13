@@ -7,6 +7,9 @@ from dataclasses import dataclass
 import random
 import string
 from Levenshtein import distance as levenshtein_distance
+from rouge_score import rouge_scorer
+
+scorer = rouge_scorer.RougeScorer(['rouge1'], use_stemmer=True)
 
 @dataclass(frozen=True)
 class Constraints:
@@ -87,10 +90,7 @@ class Int(BaseType):
             return 0
     
     def compare(self, attr1, attr2):
-        if attr1 == attr2: 
-            return 1
-        else:
-            return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2)) # TODO: revise
+        return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2)) # TODO: revise
     
 class Bool(BaseType):
     base_type = bool
@@ -131,6 +131,13 @@ class Year(Int):
     def cast(self, value):
         return int(value)
     
+    def compare(self, attr1, attr2):
+        # normalize by 2010
+        attr1 = abs(attr1 - 2010)
+        attr2 = abs(attr2 - 2010)
+        return super().compare(attr1, attr2)
+         
+    
 class Str(BaseType):
     base_type = str
 
@@ -159,6 +166,12 @@ class Str(BaseType):
             return 1
         else:
             return 1 - levenshtein_distance(attr1, attr2) / max(len(attr1), len(attr2)) # TODO: revise
+
+class LongStr(Str):
+    def compare(self, attr1, attr2):
+        # use rouge score
+        results = scorer.score(attr1, attr2)
+        return results['rouge1'].fmeasure
     
 class URL(Str):
     def get_random(self):
@@ -169,6 +182,12 @@ class URL(Str):
     
     def cast(self, value):
         return str(value)
+    
+    def compare(self, attr1, attr2):
+        if len(attr1) == len(attr2) == 0:
+            return 1
+        else:
+            return 1 - levenshtein_distance(attr1, attr2) / max(len(attr1), len(attr2)) # TODO: revise
     
 class List(BaseType):
     base_type = list
