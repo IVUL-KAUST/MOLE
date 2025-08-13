@@ -198,6 +198,8 @@ def get_group():
         headers += [0, 3, 5, 7]
     elif args.group_by == "cost":
         headers += ["input_tokens", "output_tokens", "total_tokens", "cost"]
+    elif args.group_by == "length":
+        headers += ["length"]
     else:
         headers += args.group_by.split(",")
     return headers
@@ -218,22 +220,27 @@ def show_examples():
         model_name = results["config"]["model_name"]
         if results["config"]["browse_web"]:
             model_name += " (Browsing)"
-        pred_metadata = results["metadata"]
+        schema_name = results["config"]["schema_name"]
+        schema = get_schema(schema_name)
+        pred_metadata = schema(metadata = results["metadata"])
 
+        # human_json_path = human_json_path.replace(f"/{args.type}", "")
         gold_metadata = get_metadata_from_path(json_file)
+        scores = pred_metadata.compare_with(gold_metadata)
+
         if model_name not in metric_results:
             metric_results[model_name] = {column: [] for column in attributes}
         if 'Gold' not in metric_results:
             metric_results['Gold'] = {column: [] for column in attributes}
 
         for attr in attributes:
-            metric_results[model_name][attr].append((gold_metadata['Paper_Link'], pred_metadata[attr])) # annotate by the dataset name
+            metric_results[model_name][attr].append((gold_metadata['Paper_Link'], [pred_metadata.json()[attr], scores[attr]])) # annotate by the dataset name
         
         # add the gold to the results only once
         if gold_metadata['Paper_Link'] not in added_gold:
             added_gold.append(gold_metadata['Paper_Link'])
             for attr in attributes:
-                metric_results['Gold'][attr].append((gold_metadata['Paper_Link'], gold_metadata[attr])) # annotate by the dataset name
+                metric_results['Gold'][attr].append((gold_metadata['Paper_Link'], [gold_metadata[attr], 1])) # annotate by the dataset name
     
     # sort by the first element of the tuple
     for model_name in metric_results:
@@ -244,15 +251,17 @@ def show_examples():
     
     for i in range(args.show_examples):
         results = []
+        headers = ["Model"] 
         for model_name in metric_results:
             row = [remap_names(model_name)]
             for attr in attributes:
-                value = metric_results[model_name][attr][i]
-                if isinstance(value, list):
-                    value = ",".join(value)
-                row.append(value)
+                attr_value, attr_score = metric_results[model_name][attr][i]
+                if isinstance(attr_value, list):
+                    attr_value = ",".join(attr_value)
+                row += [attr_value, attr_score]
+                headers += [attr, f"{attr}_score"]
             results.append(row)
-        headers = ["Model"] + attributes
+        
         # make the Gold at the end
         results = results[0:1] + results[2:]+ [[None for _ in range(len(attributes)+1)]]+ results[1:2]
         print_table(results, headers, format = False)
@@ -314,7 +323,7 @@ def plot_by_group():
                 print(model_name)
                 print([(len(metric_results[model_name][key]), key) for key in metric_results[model_name]])
         else:
-            sample_key = headers[1]
+            sample_key = headers[0]
             if len(metric_results[model_name][sample_key]) == len(ids):
                 final_results[model_name] = metric_results[model_name]
             else:
@@ -355,6 +364,6 @@ if __name__ == "__main__":
     elif args.show_examples > 0:
         show_examples()
     else:
-        assert args.group_by in ["attributes_few", "attributes_hard", "attributes", "all", "metric", "category", "year", "few_shot", "cost", "generative"]
+        assert args.group_by in ["attributes_few", "attributes_hard", "attributes", "all", "metric", "category", "year", "few_shot", "cost", "generative", "length"]
 
         plot_by_group()

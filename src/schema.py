@@ -180,11 +180,13 @@ class Schema(BaseModel):
         precision = sum(results.values()) / len(results)
         recall = sum([value for key, value in results.items() if key in annotated_attributes]) / len(annotated_attributes)
         f1 = 2 * precision * recall / (precision + recall)
+        length = self.evaluate_length()
         results['precision'] = precision
         results['recall'] = recall
         results['f1'] = f1
+        results['length'] = length
         if return_metrics_only:
-            return {'precision': precision, 'recall': recall, 'f1': f1, 'length': self.evaluate_length()}
+            return {'precision': precision, 'recall': recall, 'f1': f1, 'length': length}
         return results
 
     def match_attributes(self, key, attr1, attr2):
