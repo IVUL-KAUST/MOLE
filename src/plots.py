@@ -8,6 +8,7 @@ from utils import get_metadata_from_path, get_id_from_path, get_schema_from_path
 import os
 from constants import *
 from tqdm import tqdm
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 args = argparse.ArgumentParser()
 args.add_argument("--split", type=str, default="valid")
@@ -223,56 +224,91 @@ def show_examples():
         results = results[0:1] + results[2:]+ [[None for _ in range(len(attributes)+1)]]+ results[1:2]
         print_table(results, headers, format = False)
 
-def plot_by_group():
-
-    headers = []
-    headers += get_group()
-
-    metric_results = {}
-    ids = get_all_ids()
-    
-    for json_file in tqdm(json_files):
+def group_files_by_model_name(json_files, ids):
+    output = {}
+    for json_file in json_files:
         _id = get_id_from_path(json_file)
         if _id not in ids:
             continue
         results = json.load(open(json_file))
         model_name = results["config"]["model_name"]
-        schema_name = results["config"]["schema_name"]
-        if results["config"]["browse_web"]:
-            model_name += " (Browsing)"
-        schema = get_schema(schema_name)
-        pred_metadata = schema(metadata = results["metadata"])
+        if model_name not in output:
+            output[model_name] = []
+        output[model_name].append(json_file)
+    return output
 
-        # human_json_path = human_json_path.replace(f"/{args.type}", "")
-        gold_metadata = get_metadata_from_path(json_file)
-        scores = pred_metadata.compare_with(gold_metadata)
+def extract_results(json_file, headers):
+    output = {column: [] for column in headers}
+    results = json.load(open(json_file))
+    model_name = results["config"]["model_name"]
+    schema_name = results["config"]["schema_name"]
+    if results["config"]["browse_web"]:
+        model_name += " (Browsing)"
+    schema = get_schema(schema_name)
+    pred_metadata = schema(metadata = results["metadata"])
+
+    # human_json_path = human_json_path.replace(f"/{args.type}", "")
+    gold_metadata = get_metadata_from_path(json_file)
+    scores = pred_metadata.compare_with(gold_metadata)
+    
+    if args.group_by == "category":
+        output[schema_name].append(scores['f1'])
+    elif args.group_by == "year":
+        year = gold_metadata["Year"]
+        output[year].append(scores['f1'])
+    elif args.group_by == "few_shot":
+        few_shot = results["config"]["few_shot"]
+        output[few_shot].append(scores['f1'])
+    elif args.group_by == "cost":
+        if "cost" in results:
+            results["cost"]["total_tokens"] = results["cost"]["input_tokens"] + results["cost"]["output_tokens"]
+            for metric in results["cost"]:
+                output[metric].append(results["cost"][metric])
+    elif args.group_by == "error":
+        value = 1 if results["error"] is not None else 0
+        if value == 1:
+            print(results["error"])
+        output["error"].append(value)
+    else:
+        for metric in scores:
+            if metric in headers:
+                output[metric].append(scores[metric])
+    return output
+
+def plot_by_group():
+
+    headers = []
+    headers += get_group()
+    metric_results = {}
+    ids = get_all_ids()
+    grouped_files = group_files_by_model_name(json_files, ids)
+
+    # Process ALL files in parallel globally
+    file_results = {}
+    print(f"Processing {len(json_files)} files across {len(grouped_files)} models in parallel...")
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        # Submit all extract_results tasks
+        future_to_file = {executor.submit(extract_results, json_file, headers): json_file 
+                        for json_file in json_files}
         
-        if model_name not in metric_results:
-            metric_results[model_name] = {column: [] for column in headers}
-
-        if args.group_by == "category":
-            metric_results[model_name][schema_name].append(scores['f1'])
-        elif args.group_by == "year":
-            year = gold_metadata["Year"]
-            metric_results[model_name][year].append(scores['f1'])
-        elif args.group_by == "few_shot":
-            few_shot = results["config"]["few_shot"]
-            metric_results[model_name][few_shot].append(scores['f1'])
-        elif args.group_by == "cost":
-            if "cost" in results:
-                results["cost"]["total_tokens"] = results["cost"]["input_tokens"] + results["cost"]["output_tokens"]
-                for metric in results["cost"]:
-                    metric_results[model_name][metric].append(results["cost"][metric])
-        elif args.group_by == "error":
-            value = 1 if results["error"] is not None else 0
-            if value == 1:
-                print(results["error"])
-            metric_results[model_name]["error"].append(value)
-        else:
-            for metric in scores:
-                if metric in headers:
-                    metric_results[model_name][metric].append(scores[metric])
-       
+        # Collect results as they complete with progress bar
+        for future in tqdm(as_completed(future_to_file), total=len(json_files), desc="Extracting results"):
+            json_file = future_to_file[future]
+            try:
+                output = future.result()
+                file_results[json_file] = output
+            except Exception as exc:
+                print(f'File {json_file} generated an exception: {exc}')
+    
+    # Group results by model
+    for model_name in grouped_files:
+        model_results = {column: [] for column in headers}
+        for json_file in grouped_files[model_name]:
+            if json_file in file_results:
+                output = file_results[json_file]
+                for column in headers:
+                    model_results[column].append(output[column])
+        metric_results[model_name] = model_results
     final_results = {}
     for model_name in metric_results:
         if args.ignore_length:
