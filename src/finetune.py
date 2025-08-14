@@ -52,6 +52,11 @@ elif "qwen2.5" in args.model_name.lower():
         tokenizer,
         chat_template = "qwen-2.5",
     )
+elif "qwen3" in args.model_name.lower():
+    tokenizer = get_chat_template(
+        tokenizer,
+        chat_template = "qwen-3",
+    )
 else:
     raise(f'Unsupported model name: {args.model_name}')
 
@@ -300,10 +305,12 @@ if "gemma-3" in args.model_name.lower():
     instruction_part = "<start_of_turn>user\n"
     response_part = "<start_of_turn>model\n"
     end_part = "<end_of_turn>"
-elif "qwen2.5" in args.model_name.lower():
-    instruction_part = "user\n"
-    response_part = "assistant\n"
+elif "qwen" in args.model_name.lower():
+    instruction_part = "<|im_start|>user\n"
+    response_part = "<|im_start|>assistant\n"
     end_part = "<|im_end|>"
+else:
+    raise(f'Unsupported model name: {args.model_name}')
 
 trainer = train_on_responses_only(
     trainer,
@@ -313,6 +320,8 @@ trainer = train_on_responses_only(
 
 example_input = tokenizer.decode(trainer.eval_dataset[0]["input_ids"])
 example_output = tokenizer.decode([tokenizer.pad_token_id if x == -100 else x for x in trainer.eval_dataset[0]["labels"]]).replace(tokenizer.pad_token, "").replace(end_part, "")
+example_output = example_output.replace("<think>", "").replace("</think>", "").strip()
+print(example_output)
 print("--------------------------------")
 print('input', example_input)
 print('output', json.loads(example_output))
