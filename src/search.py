@@ -62,6 +62,7 @@ def calculate_max_output_tokens(tokenizer):
     return max_output_tokens
 
 def truncate_prompt(prompt, sys_prompt, tokenizer, max_model_len, max_output_len = 1024, log = True):
+    logger = TextLogger(log = log)
     end_of_prompt = "\nOutput JSON: "
     num_prompt_tokens = len(tokenizer.encode(prompt))
     num_system_tokens = get_text_tokens(sys_prompt, tokenizer)
@@ -69,7 +70,7 @@ def truncate_prompt(prompt, sys_prompt, tokenizer, max_model_len, max_output_len
     input_length = num_system_tokens+num_prompt_tokens + 10 + end_of_prompt_tokens + max_output_len # 10 is the margin of tokens used for the role and content tokens
     if input_length > max_model_len:
         remaining_tokens = max_model_len-num_system_tokens - 10 - end_of_prompt_tokens - max_output_len
-        show_warning(f"⚠️ Truncating prompt {num_prompt_tokens} -> {remaining_tokens} tokens", log = log)
+        logger.show_warning(f"⚠️ Truncating prompt {num_prompt_tokens} -> {remaining_tokens} tokens")
         truncated_prompt = tokenizer.decode(tokenizer.encode(prompt)[:remaining_tokens], skip_special_tokens=True)
         return truncated_prompt + end_of_prompt
     return prompt + end_of_prompt
