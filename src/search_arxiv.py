@@ -26,6 +26,7 @@ class ArxivSourceDownloader:
         """
         self.download_path = download_path
         self.log = log
+        self.logger = TextLogger(log = log)
         self.client = arxiv.Client()
 
     def _get_paper_id(self, identifier: str) -> str:
@@ -243,17 +244,17 @@ class ArxivSourceDownloader:
             if pdf_url:
                 pdf_path = os.path.join(paper_dir, f"paper.pdf")
                 if os.path.exists(pdf_path):
-                    show_info(f"📄 PDF already exists at {paper_dir}", log = self.log)
+                    self.logger.show_info(f"📄 PDF already exists at {paper_dir}")
                     success = True
                 else:
                     pdf_success = self._download_file(pdf_url, pdf_path)
                     if pdf_success:
-                        show_info(f"📄 PDF downloaded successfully to {paper_dir}", log = self.log)
+                        self.logger.show_info(f"📄 PDF downloaded successfully to {paper_dir}")
                     else:
-                        show_warning("Failed to download PDF", log = self.log)
+                        self.logger.show_warning("Failed to download PDF")
                         success = False
             else:
-                show_warning("PDF URL not found", log = self.log)
+                self.logger.show_warning("PDF URL not found")
                 success = False
         
         if download_source:
@@ -266,10 +267,10 @@ class ArxivSourceDownloader:
                     os.remove(downloaded_file)
                 
                 if not source_success:
-                    show_warning("Failed to process source files", log = self.log)
+                    self.logger.show_warning("Failed to process source files")
                     success = False
             else:
-                show_warning("Failed to download source files", log = self.log)
+                self.logger.show_warning("Failed to download source files")
                 success = False
         
         return success, paper_dir

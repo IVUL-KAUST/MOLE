@@ -3,7 +3,7 @@ from acl_anthology import Anthology
 import argparse
 import pandas as pd
 from tqdm import tqdm
-from utils import create_hash, show_info, show_warning
+from utils import create_hash, TextLogger
 import os
 import requests
 from typing import Tuple
@@ -30,6 +30,7 @@ class Downloader:
     def __init__(self, download_path: str = "static/papers/", log = True):
         self.download_path = download_path
         self.log = log
+        self.logger = TextLogger(log = log)
 
     def download_paper(self, identifier: str, download_pdf: bool = True) -> Tuple[bool, str]:
         paper_dir = os.path.join(self.download_path, create_hash(identifier))
@@ -39,21 +40,21 @@ class Downloader:
         if download_pdf:
             response = None
             if os.path.exists(os.path.join(paper_dir, f"paper.pdf")):
-                show_info(f"📄 PDF already exists at {paper_dir}", log = self.log)
+                self.logger.show_info(f"📄 PDF already exists at {paper_dir}")
                 return True, paper_dir
             for i in range(3):
                 try:
                     response = requests.get(identifier, timeout=10)
                     break
                 except Exception as e:
-                    show_warning(f"Error downloading paper {identifier}: {e}", log = self.log)
+                    self.logger.show_warning(f"Error downloading paper {identifier}: {e}")
                     time.sleep(1)
             if response is not None and response.status_code == 200:
                 with open(os.path.join(paper_dir, f"paper.pdf"), "wb") as f:
                     f.write(response.content)
-                show_info(f"📄 PDF downloaded successfully to {paper_dir}", log = self.log)
+                self.logger.show_info(f"📄 PDF downloaded successfully to {paper_dir}")
             else:
-                show_warning(f"Failed to download PDF for {identifier}", log = self.log)
+                self.logger.show_warning(f"Failed to download PDF for {identifier}")
                 return False, paper_dir
         return True, paper_dir
 

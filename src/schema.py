@@ -107,6 +107,11 @@ class Schema(BaseModel):
         return json.dumps(template, indent=4)
     
     @classmethod
+    def get_mole_schema(cls):
+        schema_name = cls.get_schema_name()
+        return json.load(open(f"schema/{schema_name}.json"))
+    
+    @classmethod
     def dict(cls):
         return json.loads(cls.schema())
     
@@ -235,15 +240,21 @@ class Schema(BaseModel):
        
 class DatasetSchema(Schema):
     @classmethod
-    def get_prompts(cls, paper_text, readme, metadata = None):
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+        if version == "2.0":
+            schema = cls.schema()
+        elif version == "1.0":
+            schema = cls.get_mole_schema()
+        else:
+            raise ValueError(f"Invalid version: {version}")
         if readme != "":
             prompt = f"""
                     You have the following Metadata: {metadata} extracted from a paper and the following Readme: {readme}
-                    Given the following Input schema: {cls.schema()}, then update the metadata in the Input schema with the information from the readme.
+                    Given the following Input schema: {schema}, then update the metadata in the Input schema with the information from the readme.
                     """
         else:  
             prompt = f"""Schema Name: {cls.get_schema_name()}
-                        Input Schema: {cls.schema()}
+                        Input Schema: {schema}
                         Paper Text: {paper_text}
                     """
         system_prompt = f"""
@@ -257,9 +268,11 @@ class DatasetSchema(Schema):
             'answer_max' : The maximum length of the answer depending on the 'answer_type'.
             The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
             The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
-            Use the following guidlines to extract the answer from the 'Paper Text':
-            {open('GUIDELINES.md').read()}
         """
+        if version == "2.0":
+            system_prompt += "Use the following guidlines to extract the answer from the 'Paper Text':\n\n"
+            system_prompt += open('GUIDELINES.md').read()
+
         return prompt, system_prompt
 
 class ResourceSchema(Schema):
