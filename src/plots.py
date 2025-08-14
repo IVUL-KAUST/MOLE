@@ -162,6 +162,8 @@ def get_group():
         headers += ["length"]
     elif args.group_by == "error":
         headers += ["error"]
+    elif args.group_by == "version":
+        headers += ["1.0", "2.0"]
     else:
         headers += args.group_by.split(",")
     return headers
@@ -283,6 +285,9 @@ def extract_results(json_file, headers):
             results["cost"]["total_tokens"] = results["cost"]["input_tokens"] + results["cost"]["output_tokens"]
             for metric in results["cost"]:
                 output[metric].append(results["cost"][metric])
+    elif args.group_by == "version":
+        version = results["config"]["version"]
+        output[version].append(scores['f1'])
     elif args.group_by == "error":
         value = 1 if results["error"] is not None else 0
         if value == 1:
