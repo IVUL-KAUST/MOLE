@@ -60,10 +60,14 @@ class Float(BaseType):
         return float(value)
     
     def validate_length(self, value):
-        if value >= self.answer_min and value <= self.answer_max:
-            return 1
-        else:
-            return 0
+        if value >= self.answer_min:
+            if self.answer_max < 0:
+                return 1
+            elif value <=self.answer_max:
+                return 1
+            else:
+                return 0
+        return 0
         
     def compare(self, attr1, attr2):
         return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2)) # TODO: revise
