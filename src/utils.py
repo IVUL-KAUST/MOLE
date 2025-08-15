@@ -35,27 +35,14 @@ import requests
 # from docling.datamodel.pipeline_options import PdfPipelineOptions, TableFormerMode
 # from docling.document_converter import PdfFormatOption
 
-def setup_logger() -> logging.Logger:
-    """Set up logging configuration."""
-    logger = logging.getLogger("results")
-    logger.setLevel(logging.INFO)
-
-    if not logger.handlers:
-        handler = logging.StreamHandler()
-        formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
-
-    return logger
-
-
 def create_hash(paper_id: str) -> str:
     """Create a hash for a given paper ID."""
     return hashlib.sha256(paper_id.encode()).hexdigest()[:8]
 
 class TextLogger:
     def __init__(self, log = True):
-        self.logger = setup_logger()
+        self.logger = logging.getLogger("results")
+        self.logger.setLevel(logging.INFO)
         self.log = log
     
     def show_info(self, text):
