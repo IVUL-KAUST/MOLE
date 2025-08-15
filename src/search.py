@@ -154,7 +154,6 @@ def get_metadata(
                     "output_tokens": 0,
                 }
             response =  message.choices[0].message.content
-            # print(response)
             predictions = read_json(response)
         except json.JSONDecodeError as e:
             error = str(e)  
@@ -330,7 +329,7 @@ def run(
         file_name += str(arg)
     file_name = create_hash(file_name)
     save_path = f"{save_path}/{file_name}.json"
-    print(save_path)
+    # print(save_path)
     
     if (
         os.path.exists(save_path)
