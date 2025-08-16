@@ -14,6 +14,7 @@ args = argparse.ArgumentParser()
 args.add_argument("--split", type=str, default="valid")
 args.add_argument("--year", action="store_true")
 args.add_argument("--cost", action="store_true")
+args.add_argument("--model", type=str, default=None)
 args.add_argument("--schema_name", type = str, default = 'all')
 args.add_argument("--results_path", type = str, default = "static/results")
 args.add_argument("--length", action="store_true")
@@ -381,6 +382,8 @@ def plot_by_group():
 
 if __name__ == "__main__":
     json_files = glob(f"{args.results_path}/**/*.json")
+    if args.model is not None:
+        json_files = [file for file in json_files if args.model in json.load(open(file))['config']['model_name']]
 
     if args.non_browsing:
         json_files = [file for file in json_files if "-browsing" not in file]
