@@ -10,6 +10,7 @@ from constants import *
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import random
+from plot_utils import get_max_per_row
 args = argparse.ArgumentParser()
 args.add_argument("--split", type=str, default="valid")
 args.add_argument("--year", action="store_true")
@@ -21,7 +22,8 @@ args.add_argument("--length", action="store_true")
 args.add_argument("--non_browsing", action="store_true")
 args.add_argument("--browsing", action="store_true")
 args.add_argument("--errors", action="store_true")
-args.add_argument("--group_by", type = str, default = "evaluation_subsets")
+args.add_argument("--group_by_x", type = str, default = "category")
+args.add_argument("--group_by_y", type = str, default = None)   
 args.add_argument("--ignore_length", action="store_true")
 args.add_argument("--show_examples", type = int, default = 0)
 args.add_argument("--seed", type = int, default = 42)
@@ -139,34 +141,34 @@ def plot_context_length():
 
 def get_group():
     headers = []
-    if args.group_by == "attributes_few":
+    if args.group_by_x == "attributes_few":
         headers += ["Link", "License", "Tasks", "Domain", "Collection_Style", "Volume"]
-    elif args.group_by == "attributes_hard":
+    elif args.group_by_x == "attributes_hard":
         headers += ["Link","License", "HF_Link", "Volume", "Year", "Derived_From", "Host", "Domain", "Collection_Style"]
-    elif args.group_by == "attributes":
+    elif args.group_by_x == "attributes":
         headers += ["Link", "HF_Link", "License", "Language", "Domain", "Form", "Collection_Style", "Volume", "Unit", "Ethical_Risks", "Provider", "Derived_From", "Tokenized", "Host", "Access", "Cost", "Test_Split", "Tasks"]
-    elif args.group_by == 'all':
+    elif args.group_by_x == 'all':
         headers += ["Link", "HF_Link", "License", "Language", "Domain", "Form", "Collection_Style", "Volume", "Unit", "Ethical_Risks", "Provider", "Derived_From", "Tokenized", "Host", "Access", "Cost", "Test_Split", "Tasks", "Venue_Title", "Venue_Type", "Venue Name", "Authors", "Affiliations", "Abstract"]
-    elif args.group_by == 'generative':
+    elif args.group_by_x == 'generative':
         headers += ["Name", "Description", "Abstract"]
-    elif args.group_by == "metric":
+    elif args.group_by_x == "metric":
         headers += ["precision", "recall", "f1"]
-    elif args.group_by == "category":
+    elif args.group_by_x == "category":
         headers += categories
-    elif args.group_by == "year":
+    elif args.group_by_x == "year":
         headers += [year for year in range(2014, 2026)]
-    elif args.group_by == "few_shot":
+    elif args.group_by_x == "few_shot":
         headers += [0, 3, 5, 7]
-    elif args.group_by == "cost":
+    elif args.group_by_x == "cost":
         headers += ["input_tokens", "output_tokens", "total_tokens", "cost"]
-    elif args.group_by == "length":
+    elif args.group_by_x == "length":
         headers += ["length"]
-    elif args.group_by == "error":
+    elif args.group_by_x == "error":
         headers += ["error"]
-    elif args.group_by == "version":
+    elif args.group_by_x == "version":
         headers += ["1.0", "2.0"]
     else:
-        headers += args.group_by.split(",")
+        headers += args.group_by_x.split(",")
     return headers
 
 def show_examples():
@@ -273,23 +275,23 @@ def extract_results(json_file, headers):
     gold_metadata = get_metadata_from_path(json_file)
     scores = pred_metadata.compare_with(gold_metadata)
     
-    if args.group_by == "category":
+    if args.group_by_x == "category":
         output[schema_name].append(scores['f1'])
-    elif args.group_by == "year":
+    elif args.group_by_x == "year":
         year = gold_metadata["Year"]
         output[year].append(scores['f1'])
-    elif args.group_by == "few_shot":
+    elif args.group_by_x == "few_shot":
         few_shot = results["config"]["few_shot"]
         output[few_shot].append(scores['f1'])
-    elif args.group_by == "cost":
+    elif args.group_by_x == "cost":
         if "cost" in results:
             results["cost"]["total_tokens"] = results["cost"]["input_tokens"] + results["cost"]["output_tokens"]
             for metric in results["cost"]:
                 output[metric].append(results["cost"][metric])
-    elif args.group_by == "version":
+    elif args.group_by_x == "version":
         version = results["config"]["version"]
         output[version].append(scores['f1'])
-    elif args.group_by == "error":
+    elif args.group_by_x == "error":
         value = 1 if results["error"] is not None else 0
         if value == 1:
             print(results["error"])
@@ -345,7 +347,7 @@ def plot_by_group():
     for model_name in metric_results:
         if args.ignore_length:
             final_results[model_name] = metric_results[model_name]
-        elif args.group_by == "category" or args.group_by == "year":
+        elif args.group_by_x == "category" or args.group_by_x == "year":
             if sum(len(metric_results[model_name][key]) for key in metric_results[model_name]) == len(ids):
                final_results[model_name] = metric_results[model_name]
             else:
@@ -364,20 +366,32 @@ def plot_by_group():
     for model_name in final_results:
         row = [remap_names(model_name)]
         for key in headers:
-            if args.group_by == "cost" or args.group_by == "error":
+            if args.group_by_x == "cost" or args.group_by_x == "error":
                 row.append(np.sum(final_results[model_name][key]))
             else:
                 row.append(np.mean(final_results[model_name][key]) * 100)
         average = np.mean([c for c in row[1:] if c  > 0 ])
-        if args.group_by == "cost" or args.group_by == "error":
+        if args.group_by_x == "cost" or args.group_by_x == "error":
             results.append(row)
         else:
             results.append(row + [average])
-    if args.group_by == "cost":
+    if args.group_by_x == "cost":
         headers = ['Model'] + headers
     else:
         headers = ['Model'] + headers + ['Average']
-    print_table(results, headers, format = True)
+    if args.group_by_y:
+        # split the results in case we can group by y axis
+        fgroup = [r for r in results if args.group_by_y.lower() not in r[0].lower()]
+        sgroup = [r for r in results if args.group_by_y.lower() in r[0].lower()]
+        max_space = get_max_per_row(results)
+        for i in range(len(max_space)):
+            headers[i] += ' '.join([''] * (max_space[i] - len(headers[i])))
+        print_table(fgroup, headers, format = True)
+        for i in range(len(max_space)):
+            headers[i] = ''.join([' '] * (len(headers[i])))
+        print_table(sgroup, headers, format = True)
+    else:
+        print_table(results, headers, format = True)
 
 
 if __name__ == "__main__":

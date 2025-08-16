@@ -11,8 +11,22 @@ def remove_average(results, headers):
     else:
         return results, headers
 
+def get_max_per_row(results):
+    max_per_row = []
+    row_len = len(results[0])
+    for i in range(row_len):
+        results_per_column = []
+        for j in range(len(results)):
+            value = results[j][i]
+            try:
+                value = float(value)
+                value = f"{value:.2f}"
+            except:
+                value = str(value)
+            results_per_column.append(value)
+        max_per_row.append(max([len(r) for r in results_per_column]))
+    return max_per_row
 def print_table(results, headers, title="", format=False):
-    results, headers = remove_average(results, headers)
     RED = "\033[105m"
     UNDERLINE = "\033[4m"
     END = "\033[0m"
@@ -54,15 +68,17 @@ def print_table(results, headers, title="", format=False):
     if title:
         print(f"\n{title}\n")
 
-    print(
-        tabulate(
-            sorted(
+    rows = sorted(
                 formatted_results,
                 key=lambda x: float(
                     x[-1].replace(RED, "").replace(UNDERLINE, "").replace(END, "")
                 ),
                 reverse=False,
-            ),
+            )
+
+    print(
+        tabulate(
+            rows,
             headers=headers,
             tablefmt="github",
             floatfmt=".2f"
