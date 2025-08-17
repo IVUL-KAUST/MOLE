@@ -385,7 +385,7 @@ def run(
         file_name = ""
         for arg in get_critical_args(paper_link, args):
             file_name += str(arg)
-        non_browsing_save_path = f"{'/'.join(save_path.split("/")[:-1])}/{create_hash(file_name)}.json"
+        non_browsing_save_path = f"{'/'.join(save_path.split('/')[:-1])}/{create_hash(file_name)}.json"
         if args.browse_web and os.path.exists(non_browsing_save_path):
             logger.show_info(
                 "📂 Loading saved results ..."

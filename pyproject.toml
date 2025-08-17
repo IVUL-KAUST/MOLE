@@ -1,0 +1,28 @@
+[project]
+name = "mole"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "acl-anthology>=0.5.3",
+    "arxiv==2.1.3",
+    "arxiv-latex-cleaner==1.0.8",
+    "beautifulsoup4==4.12.3",
+    "docling~=2.30",
+    "fastapi==0.115.12",
+    "levenshtein==0.27.1",
+    "litellm==1.65.4.post1",
+    "pandas==2.2.3",
+    "pdfplumber==0.11.4",
+    "peft>=0.17.0",
+    "plotext==5.3.2",
+    "python-dotenv==1.0.1",
+    "python-multipart==0.0.20",
+    "rouge-score>=0.1.2",
+    "streamlit==1.41.1",
+    "tabulate==0.9.0",
+    "trl>=0.21.0",
+    "unsloth>=2025.8.6",
+    "uvicorn==0.34.2",
+]
