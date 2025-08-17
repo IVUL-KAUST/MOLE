@@ -95,7 +95,7 @@ else:
     raise ValueError(f'Unsupported model name: {args.model_name}')
 
 def get_files():
-    prinT('getting synthetic data files')
+    print('getting synthetic data files')
     train_files = glob.glob("static/synth_datasetv2/**/**.json")
     test_files = []
     valid_files = []
@@ -141,7 +141,7 @@ def create_prompts(examples):
                 raise e
         
         prompt, system_prompt = schema.get_prompts(paper_text, '')
-        prompt = truncate_prompt(prompt,system_prompt,native_tokenizer,max_model_len=args.max_model_len, max_output_len=args.max_output_len, log = False)
+        prompt = truncate_prompt(prompt,system_prompt,tokenizer,max_model_len=args.max_model_len, max_output_len=args.max_output_len, log = False)
         
         messages.append([
             {'role': 'system', 'content': system_prompt}, 
