@@ -224,7 +224,7 @@ def extract_paper_text(path, format = "pdf_plumber", use_cached_docling=True, lo
                             f"⚠️ Failed to read existing docling extraction: {str(e)}. Will extract again.")
                 else:
                     logger.show_info(
-                        f"📄 Extracting text using docling...")
+                        "📄 Extracting text using docling...")
                     paper_text += get_paper_content_from_docling(source_file)
                     
                     # Save the docling extracted text

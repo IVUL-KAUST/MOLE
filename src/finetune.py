@@ -329,6 +329,6 @@ print('output', json.loads(example_output))
 trainer_stats = trainer.train()
 
 # evaluate()
-output_model_name = f"{args.model_name.split("/")[1]}-{args.distilled_model.split("/")[1]}-sft-{args.max_model_len}"
+output_model_name = f"{args.model_name.split('/')[1]}-{args.distilled_model.split('/')[1]}-sft-{args.max_model_len}"
 model.save_pretrained_merged(output_model_name, tokenizer, save_method = "merged_16bit", maximum_memory_usage=.9)
         

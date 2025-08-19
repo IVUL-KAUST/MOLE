@@ -270,7 +270,7 @@ class DatasetSchema(Schema):
             The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
         """
         if version == "2.0":
-            system_prompt += "Use the following guidlines to extract the answer from the 'Paper Text':\n\n"
+            system_prompt += "Use the following guidelines to extract the answer from the 'Paper Text':\n\n"
             system_prompt += open('GUIDELINES.md').read()
 
         return prompt, system_prompt
