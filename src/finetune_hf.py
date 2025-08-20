@@ -77,12 +77,36 @@ model = get_peft_model(model, lora_config)
 
 def get_files():
     print('getting synthetic data files')
-    train_files = glob.glob("static/synth_datasetv2/**/**.json")
+    all_train_files = glob.glob("static/synth_datasetv2/**/**.json")
     test_files = []
-    valid_files = []
+    # valid_files = []  # getting validation from valid files
     for schema_name in ['ar', 'en', 'fr', 'jp', 'ru', 'multi']:
         test_files += glob.glob(f"evals/{schema_name}/test/*.json")
-        valid_files += glob.glob(f"evals/{schema_name}/valid/*.json")
+        # valid_files += glob.glob(f"evals/{schema_name}/valid/*.json")
+    
+    # Split training files into train/validation (95%/5%) with reproducible seed
+    import random
+    rng = random.Random(42)  # Create specific random object with seed
+    
+    # Shuffle the training files
+    shuffled_train_files = all_train_files.copy()
+    rng.shuffle(shuffled_train_files)
+    
+    # Calculate split sizes
+    total_train = len(shuffled_train_files)
+    val_size = int(0.05 * total_train)
+    train_size = total_train - val_size
+    
+    # Split the files
+    train_files = shuffled_train_files[:train_size]
+    valid_files = shuffled_train_files[train_size:]
+    
+    print(f"Total training files: {total_train}")
+    print(f"Train split: {len(train_files)}, Validation split: {len(valid_files)}")
+    
+    # Old approach - uncomment to use separate validation files instead of splitting training
+    # return all_train_files, valid_files, test_files
+    
     return train_files, valid_files, test_files
 
 def create_prompts(examples):
@@ -122,8 +146,6 @@ def create_prompts(examples):
             except Exception as e:
                 print(e)
                 paper_text = ''
-        if not paper_text:
-            print('no paper text')
         prompt, system_prompt = schema.get_prompts(paper_text, '')
         prompt = truncate_prompt(prompt, system_prompt, tokenizer, max_model_len=args.max_model_len, max_output_len=args.max_output_len, log=False)
         messages.append([
@@ -240,9 +262,12 @@ def compute_metrics(prediction, compute_result: bool = True):
 
     return evaluation_results
 
-def evaluate():
+def evaluate(dataset, dataset_name="validation"):
     model.eval()
-    for example in valid_dataset:
+    print(f"\n=== Evaluating on {dataset_name} set ===")
+    
+    all_results = []
+    for i, example in enumerate(dataset):
         messages = [
             {"role": "system", "content": example['chat'][0]['content']},
             {"role": "user", "content": example['chat'][1]['content']}
@@ -267,19 +292,34 @@ def evaluate():
             )
         
         path = example['path']
-        print(path)
-        schema_name = path.split('/')[1]
         gold_metadata = json.load(open(path))
+        print(f"{dataset_name} example {i+1}/{len(dataset)}: {path}")
+        schema_name = path.split('/')[1]
         schema = get_schema(schema_name)
 
         output = tokenizer.batch_decode([outputs[0][len_tokenized_text:]], skip_special_tokens=True)[0]
+        # print('model output:')
+        # print(output)
         try:
             output = postprocess(output)
         except Exception as e:
             output = schema.generate_metadata(method='default').json()
         pred_metadata = schema(metadata=output)
         results = pred_metadata.compare_with(gold_metadata, return_metrics_only=True)
-        print(results)
+        print(f"Results: {results}")
+        all_results.append(results)
+    
+    # Calculate average results for the dataset
+    if all_results:
+        avg_results = {}
+        for key in all_results[0].keys():
+            avg_results[key] = sum(result[key] for result in all_results) / len(all_results)
+        print(f"\n=== Average {dataset_name} Results ===")
+        print(avg_results)
+        return avg_results
+    else:
+        print(f"No results found for {dataset_name} set")
+        return None
 
 # Prepare datasets
 train_files, valid_files, test_files = get_files()
@@ -287,17 +327,22 @@ print(f'train: {len(train_files)}, valid: {len(valid_files)}, test: {len(test_fi
 
 train_dataset = prepare_dataset(train_files)
 print('-'*120)
-test_dataset = prepare_dataset(test_files)
-print('-'*120)
 valid_dataset = prepare_dataset(valid_files)
 print('-'*120)
+test_dataset = prepare_dataset(test_files)
+print('-'*120)
 
+print('train dataset:')
 print(train_dataset)
+print('valid dataset:')
 print(valid_dataset)
-print(train_dataset[1]['text'])
-print(valid_dataset[1]['text'])
+print('test dataset:')
+print(test_dataset)
 
-# Training arguments using SFTConfig (new TRL API)
+# uncomment to print example texts
+# print(train_dataset[1]['text'])
+# print(valid_dataset[1]['text'])
+
 training_args = SFTConfig(
     output_dir=f"./{args.output_model_name}",
     per_device_train_batch_size=2,
@@ -307,10 +352,10 @@ training_args = SFTConfig(
     num_train_epochs=10,
     learning_rate=2e-4,
     logging_steps=1,
-    eval_steps=100,
+    eval_steps=50,
     eval_strategy="steps", 
     save_strategy="steps",
-    save_steps=100,
+    save_steps=50,
     optim="adamw_torch", 
     weight_decay=0.01,
     lr_scheduler_type="linear",
@@ -322,14 +367,15 @@ training_args = SFTConfig(
     load_best_model_at_end=True,
     metric_for_best_model="eval_loss",  # Use eval_loss as the metric to monitor
     greater_is_better=False,  # For loss, lower is better
-    max_length=args.max_model_len, 
+    save_total_limit=3,  # Only keep the best checkpoint
+    max_length=args.max_model_len+args.max_output_len+100, # margin of 100 
     dataset_text_field="text", 
     packing=False, 
 )
 
 # Create early stopping callback with good patience and threshold
 early_stopping_callback = EarlyStoppingCallback(
-    early_stopping_patience=10,  # Stop if no improvement for 5 evaluation steps
+    early_stopping_patience=10,  # Stop if no improvement for 10 evaluation steps
     early_stopping_threshold=0.01  # Minimum improvement threshold (1%)
 )
 
@@ -343,20 +389,25 @@ trainer = SFTTrainer(
 )
 
 # Print example to verify formatting
-if len(trainer.train_dataset) > 0:
-    print("Example formatted text:")
-    print(trainer.train_dataset[0]["text"])
-    print("=" * 50)
+# if len(trainer.train_dataset) > 0:
+#     print("Example formatted text:")
+#     print(trainer.train_dataset[0]["text"])
+#     print("=" * 50)
 
 # Train the model
-trainer_stats = trainer.train()
+# trainer_stats = trainer.train()
 
 # # Save the model
-output_model_name = f"{args.model_name.split('/')[-1]}-{args.distilled_model.split('/')[-1]}-sft-{args.max_model_len}"
-model.save_pretrained(output_model_name)
-tokenizer.save_pretrained(output_model_name)
+# output_model_name = f"{args.model_name.split('/')[-1]}-{args.distilled_model.split('/')[-1]}-sft-{args.max_model_len}"
+# model.save_pretrained(output_model_name)
+# tokenizer.save_pretrained(output_model_name)
 
-print(f"Model saved to {output_model_name}")
+# print(f"Model saved to {output_model_name}")
 
-# Run evaluation
-evaluate()
+# Run evaluation on both validation and test sets
+print("\n" + "="*80)
+print("RUNNING EVALUATIONS")
+print("="*80)
+
+# validation_results = evaluate(valid_dataset, "validation")
+test_results = evaluate(test_dataset, "test")
