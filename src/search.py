@@ -119,7 +119,8 @@ def get_metadata(
             # Support custom base URL from environment variable for SLURM jobs
             base_url = "http://localhost:8787/v1"
             client = OpenAI(
-                base_url=base_url
+                base_url=base_url,
+                api_key='local'
             )
             logger.show_info(f"🔑 Using VLLM backend")
             prompt = truncate_prompt(prompt, sys_prompt, tokenizer, max_model_len, max_output_len = max_output_len, log = log)
