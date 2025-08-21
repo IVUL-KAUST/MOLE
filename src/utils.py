@@ -494,6 +494,8 @@ def fix_json(json_str: str) -> str:
 def read_json(text_json):
     text_json = text_json.replace("```json", "").replace("```", "")
     fixed_json = fix_json(text_json)
+    if 'answer' in fixed_json:
+        fixed_json = fixed_json['answer']
     return fixed_json
 
 
