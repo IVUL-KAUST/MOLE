@@ -8,7 +8,7 @@ from constants import non_browsing_models
 import time
 from openai import OpenAI
 from utils import read_json, get_metadata_human, create_hash, get_metadata_judge, get_repo_link, fetch_repository_metadata, TextLogger
-from traditional import get_metadata_keyword, get_metadata_qa
+from traditional import get_metadata_keyword, get_metadata_qa, get_metadata_langextract
 from schema import get_schema
 from transformers import AutoTokenizer
 from search_acl import ACLDownloader, Downloader
@@ -355,7 +355,6 @@ def run(
     logger.show_info(
         f"🧠 {args.model_name} is extracting Metadata ..."
     )
-
     error = None
     if "jury" in args.model_name.lower() or "composer" in args.model_name.lower():
         all_results = []
@@ -378,6 +377,10 @@ def run(
         )
     elif "qa" in args.model_name.lower():
         metadata = get_metadata_qa(
+            paper_text, schema_name=args.schema_name
+        )
+    elif "langextract" in args.model_name.lower():
+        metadata = get_metadata_langextract(
             paper_text, schema_name=args.schema_name
         )
     elif "baseline" in args.model_name.lower():

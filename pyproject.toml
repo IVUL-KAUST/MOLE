@@ -12,6 +12,7 @@ dependencies = [
     "cachetools>=5.5.2",
     "docling~=2.30",
     "fastapi==0.115.12",
+    "langextract>=1.0.8",
     "levenshtein==0.27.1",
     "litellm==1.65.4.post1",
     "pandas==2.2.3",
@@ -28,3 +29,6 @@ dependencies = [
     "uvicorn==0.34.2",
     "vllm>=0.10.1",
 ]
+
+[tool.uv.sources]
+langextract = { git = "https://github.com/google/langextract" }
