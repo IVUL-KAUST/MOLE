@@ -14,4 +14,4 @@ ENV_DIR="/ibex/ai/home/alyafez/.mole"
 cd ${WORK_DIR}
 source ${ENV_DIR}/bin/activate
 
-python  src/create_synth_dataset.py --model_name ${MODEL_NAME} --backend openrouter
+uv run  src/create_synth_dataset.py --model_name ${MODEL_NAME} --backend openrouter
