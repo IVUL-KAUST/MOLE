@@ -13,3 +13,16 @@ static/**/**/**/paper_text.txt
 custom.bib
 
 .vscode
+.venv
+wandb/
+qwen*
+dcgm/
+Qwen*
+unsloth*
+gemma-3*
+output*
+static/results_versions
+static/synth_datasetv2
+resource/
+slurm/
+train_dataset.csv
