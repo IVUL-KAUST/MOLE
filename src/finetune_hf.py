@@ -242,8 +242,13 @@ def predict(examples):
         pred_text = tokenizer.decode(preds[i][input_lengths[i]:], skip_special_tokens=True)
         
         gold_data = json.load(open(path))
-        gold_metadata = gold_data['metadata']
-        schema_name = gold_data['config']['schema_name']
+        if "metadata" in gold_data:
+            gold_metadata = gold_data['metadata']
+            schema_name = gold_data['config']['schema_name']
+        else:
+            gold_metadata = gold_data.copy()
+            schema_name = path.split('/')[1]
+        
         schema = get_schema(schema_name)
         try:
             metadata = postprocess(pred_text)
