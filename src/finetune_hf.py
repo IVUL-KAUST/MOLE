@@ -1,8 +1,6 @@
 from transformers import (
-    AutoModelForCausalLM, 
+    AutoModelForCausalLM,
     AutoTokenizer, 
-    TrainingArguments, 
-    BitsAndBytesConfig,
     EarlyStoppingCallback,
 )
 from peft import LoraConfig, get_peft_model, TaskType
@@ -13,41 +11,36 @@ from search import extract_paper_text
 from utils import create_hash
 from search import truncate_prompt
 from search import download_paper
+from rich import print
+from tqdm import tqdm
 import numpy as np
 import torch
 import json
 import glob
 import os
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '6,7'
+
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 # Create argparse parser
 import argparse
 parser = argparse.ArgumentParser(description="Fine-tune model with HuggingFace")
 parser.add_argument('--output_model_name', default="qwen2.5-0.5b-instruct-sft", type=str, help="Output directory for the fine-tuned model")
 parser.add_argument('--model_name', default="/hdd/shared_models/Qwen2.5-0.5B-Instruct", type=str, help="Model name to fine-tune")
-# parser.add_argument('--model_name', default="/hdd/shared_models/Qwen2.5-1.5B-Instruct", type=str, help="Model name to fine-tune")
+parser.add_argument('--output_dir', default="output", type=str, help="Output directory for the fine-tuned model")
 parser.add_argument('--max_model_len', default=8192, type=int, help="Maximum model length")
 parser.add_argument('--max_output_len', default=2048, type=int, help="Maximum output length")
 parser.add_argument('--distilled_model', default="moonshotai/kimi-k2", type=str, help="Distilled model name")
 args = parser.parse_args()
 
-# Configure quantization for 8-bit loading
-# quantization_config = BitsAndBytesConfig(
-#     load_in_8bit=True,
-#     llm_int8_threshold=6.0,
-#     llm_int8_has_fp16_weight=False,
-#     llm_int8_enable_fp32_cpu_offload=True,
-# )
-
-# Load model and tokenizer
 model = AutoModelForCausalLM.from_pretrained(
     args.model_name,
-    # quantization_config=quantization_config,
     device_map="auto",
-    torch_dtype=torch.float16,
     trust_remote_code=True,
+    torch_dtype=torch.bfloat16,
+    max_length=args.max_model_len, 
 )
+
 
 # print(model)
 
@@ -74,10 +67,12 @@ lora_config = LoraConfig(
 
 # Apply LoRA to model
 model = get_peft_model(model, lora_config)
+print(model.device)
 
 def get_files():
     print('getting synthetic data files')
     all_train_files = glob.glob("static/synth_datasetv2/**/**.json")
+    all_train_files = [file for file in all_train_files if args.distilled_model in json.load(open(file))["config"]["model_name"]]
     test_files = []
     # valid_files = []  # getting validation from valid files
     for schema_name in ['ar', 'en', 'fr', 'jp', 'ru', 'multi']:
@@ -172,8 +167,6 @@ def by_model(examples):
 def prepare_dataset(files):
     dataset = Dataset.from_list([{"path": file} for file in files])
     print("num examples: ", len(dataset))
-    dataset = dataset.filter(by_model, batched=True, batch_size=10, num_proc=2)
-    print("num examples after filtering by model: ", len(dataset))
     dataset = dataset.map(create_prompts, batched=True, batch_size=10, num_proc=16)
     print("num examples after creating prompts: ", len(dataset))
     dataset = dataset.filter(lambda x: not bool(x["error"]))
@@ -205,110 +198,89 @@ def get_gold_metadata(link):
             return json.load(open(file)), schema_name
     return None
 
-def compute_metrics(prediction, compute_result: bool = True):
-    logits, labels = prediction
+# forward -> [t1, t2, t3, t4, ...., tN]
+def predict(examples):
+    model.eval()
+    tokenized_text = []
+    for example in examples['chat']:
+        messages = [
+            {"role": "system", "content": example[0]['content']},
+            {"role": "user", "content": example[1]['content']}
+        ]
+        tokenized_text.append(tokenizer.apply_chat_template(
+        messages,
+        add_generation_prompt=True,
+        tokenize=False,))
+    tokenized_text = tokenizer(tokenized_text, return_tensors="pt", padding=True).to(model.device)
+    generation_config_path = args.model_name + "/generation_config.json"
+    if os.path.exists(generation_config_path):
+        generation_config = json.load(open(generation_config_path))
+    else:
+        generation_config = {
+            "temperature": 1.0,
+            "top_p": 0.95,
+            "top_k": 64,
+            "repetition_penalty": 1.0
+        }
+    with torch.no_grad():
+        preds = model.generate(
+            **tokenized_text,
+            max_new_tokens = args.max_output_len, # Increase for longer outputs!
+            temperature = generation_config['temperature'], 
+            top_p = generation_config['top_p'],
+            top_k = generation_config['top_k'],
+            repetition_penalty = generation_config['repetition_penalty'],
+        )
+    # Get the length of input tokens to extract only generated text
+    input_lengths = [len(tokenized_text['input_ids'][i]) for i in range(len(tokenized_text['input_ids']))]
+    
+    results = []
+    output_examples = []
+    for i, path in enumerate(examples['path']):
+        # Extract only the generated part (after input)
+        output_example = {}
+        pred_text = tokenizer.decode(preds[i][input_lengths[i]:], skip_special_tokens=True)
+        
+        gold_data = json.load(open(path))
+        gold_metadata = gold_data['metadata']
+        schema_name = gold_data['config']['schema_name']
+        schema = get_schema(schema_name)
+        try:
+            metadata = postprocess(pred_text)
+        except Exception as e:
+            metadata = schema.generate_metadata(method='default').json()
+        pred_metadata = schema(metadata=metadata)
+        result = pred_metadata.compare_with(gold_metadata, return_precision_only=True)
+        results.append(result)
+        output_example['metadata'] = pred_metadata.json()
+        output_example['result'] = result
+        output_examples.append(output_example)
+    return {"metrics": results, "examples": output_examples}
+
+def preprocess_logits_for_metrics(logits, labels):
     if isinstance(logits, tuple):
         logits = logits[0]
+    return logits.argmax(dim=-1)
 
-    if isinstance(logits, np.ndarray):
-        logits = torch.from_numpy(logits)
-    if isinstance(labels, np.ndarray):
-        labels = torch.from_numpy(labels)
 
-    preds = torch.argmax(logits, dim=-1)
+# Custom callback for generation evaluation
+from transformers import TrainerCallback
 
-    preds = preds.detach().cpu()
-    labels = labels.detach().cpu()
-
-    # Keep original labels to identify response positions
-    original_labels = labels.clone()
-    labels[labels == -100] = tokenizer.pad_token_id
-        
-    # Extract only the response tokens (where original_labels != -100)
-    decoded_preds = []
-    decoded_labels = []
-    
-    for i in range(len(preds)):
-        # Find positions where labels are not -100 (these are response tokens)
-        response_mask = original_labels[i] != -100
-        response_mask = torch.cat([response_mask[1:], torch.tensor([False])]) # shift the response mask by 1
-        
-        pred_response_tokens = preds[i][response_mask].tolist()
-        label_response_tokens = labels[i][response_mask].tolist()
-        
-        decoded_pred = tokenizer.decode(pred_response_tokens, skip_special_tokens=True)
-        decoded_label = tokenizer.decode(label_response_tokens, skip_special_tokens=True)
-        decoded_preds.append(decoded_pred)
-        decoded_labels.append(decoded_label)
-
-    evaluation_results = {"precision": 0, "recall": 0, "f1": 0, "length": 0}
-    num_preds = len(decoded_preds)
-    for i in range(num_preds):
-        paper_link = json.loads(str(decoded_labels[i]).strip())['Paper_Link']
-        gold_metadata, schema_name = get_gold_metadata(paper_link)
-        schema = get_schema(schema_name)
-        try:
-            print(str(decoded_preds[i]).strip())
-            pred_metadata = json.loads(str(decoded_preds[i]).strip())
-        except Exception as e:
-            print(e)
-            pred_metadata = schema.generate_metadata(method='default').json()
-        
-        pred_metadata = schema(metadata=pred_metadata)
-        results = pred_metadata.compare_with(gold_metadata, return_metrics_only=True)
-        print(results)
-        for key in evaluation_results:
-            evaluation_results[key] += results[key]/num_preds
-
-    return evaluation_results
-
-def evaluate(dataset, dataset_name="validation"):
+def evaluate(dataset, step, dataset_name = "validation"):
     model.eval()
-    print(f"\n=== Evaluating on {dataset_name} set ===")
+    print(f"\n=== Evaluating on {dataset_name} size: {len(dataset)} ===")
+    results = {"metrics": [], "examples": []}
+    batch_size = 8
+    for i in tqdm(range(0, len(dataset), batch_size)):
+        batch = dataset[i:i+batch_size]
+        batch_results = predict(batch)
+        results['metrics'].extend(batch_results['metrics'])
+        results['examples'].extend(batch_results['examples'])
     
-    all_results = []
-    for i, example in enumerate(dataset):
-        messages = [
-            {"role": "system", "content": example['chat'][0]['content']},
-            {"role": "user", "content": example['chat'][1]['content']}
-        ]
-        text = tokenizer.apply_chat_template(
-            messages,
-            add_generation_prompt=True,
-            tokenize=False,
-        )
-        tokenized_text = tokenizer([text], return_tensors="pt").to(model.device)
-        len_tokenized_text = len(tokenized_text['input_ids'][0])
-        
-        with torch.no_grad():
-            outputs = model.generate(
-                **tokenized_text,
-                max_new_tokens=args.max_output_len,
-                temperature=1.0,
-                top_p=0.95,
-                top_k=64,
-                do_sample=True,
-                pad_token_id=tokenizer.pad_token_id
-            )
-        
-        path = example['path']
-        gold_metadata = json.load(open(path))
-        print(f"{dataset_name} example {i+1}/{len(dataset)}: {path}")
-        schema_name = path.split('/')[1]
-        schema = get_schema(schema_name)
-
-        output = tokenizer.batch_decode([outputs[0][len_tokenized_text:]], skip_special_tokens=True)[0]
-        # print('model output:')
-        # print(output)
-        try:
-            output = postprocess(output)
-        except Exception as e:
-            output = schema.generate_metadata(method='default').json()
-        pred_metadata = schema(metadata=output)
-        results = pred_metadata.compare_with(gold_metadata, return_metrics_only=True)
-        print(f"Results: {results}")
-        all_results.append(results)
-    
+    save_dir = f"{args.output_dir}/evals"
+    os.makedirs(save_dir, exist_ok=True)
+    json.dump(results['examples'], open(save_dir + f'/examples_{step}.json', 'w'), indent=4)
+    all_results = results['metrics']
     # Calculate average results for the dataset
     if all_results:
         avg_results = {}
@@ -320,6 +292,7 @@ def evaluate(dataset, dataset_name="validation"):
     else:
         print(f"No results found for {dataset_name} set")
         return None
+
 
 # Prepare datasets
 train_files, valid_files, test_files = get_files()
@@ -340,22 +313,42 @@ print('test dataset:')
 print(test_dataset)
 
 # uncomment to print example texts
-# print(train_dataset[1]['text'])
-# print(valid_dataset[1]['text'])
+print(train_dataset[1]['text'])
+print(valid_dataset[1]['text'])
+
+
+per_device_train_batch_size = 2
+gradient_accumulation_steps = 4
+num_epochs = 10
+num_train_steps = num_epochs * len(train_dataset) // (per_device_train_batch_size * gradient_accumulation_steps)
+eval_steps = num_train_steps // (4 * num_epochs)
+save_steps = num_train_steps // (4 * num_epochs)
+
+print('num_train_steps: ', num_train_steps)
+print('per_device_train_batch_size: ', per_device_train_batch_size)
+print('gradient_accumulation_steps: ', gradient_accumulation_steps)
+print('max_steps: ', num_train_steps)
+print('eval_steps: ', eval_steps)
+print('save_steps: ', save_steps)
+
+class GenerationEvalCallback(TrainerCallback):
+    def on_evaluate(self, args, state, control, **kwargs):
+        if state.global_step % eval_steps == 0:  # Every 2 steps
+            results = evaluate(valid_dataset, state.global_step)
+            print(results)
 
 training_args = SFTConfig(
-    output_dir=f"./{args.output_model_name}",
-    per_device_train_batch_size=2,
+    per_device_train_batch_size=per_device_train_batch_size,
     per_device_eval_batch_size=2,
-    gradient_accumulation_steps=4,
+    gradient_accumulation_steps=gradient_accumulation_steps,
     warmup_steps=5,
-    num_train_epochs=10,
+    max_steps=num_train_steps,
     learning_rate=2e-4,
     logging_steps=1,
-    eval_steps=50,
+    eval_steps=eval_steps,
     eval_strategy="steps", 
     save_strategy="steps",
-    save_steps=50,
+    save_steps=save_steps,
     optim="adamw_torch", 
     weight_decay=0.01,
     lr_scheduler_type="linear",
@@ -368,9 +361,9 @@ training_args = SFTConfig(
     metric_for_best_model="eval_loss",  # Use eval_loss as the metric to monitor
     greater_is_better=False,  # For loss, lower is better
     save_total_limit=3,  # Only keep the best checkpoint
-    max_length=args.max_model_len+args.max_output_len+100, # margin of 100 
     dataset_text_field="text", 
     packing=False, 
+    output_dir=f"./{args.output_dir}",
 )
 
 # Create early stopping callback with good patience and threshold
@@ -388,14 +381,19 @@ trainer = SFTTrainer(
     callbacks=[early_stopping_callback],  # Add early stopping callback
 )
 
+trainer.add_callback(GenerationEvalCallback())
+
 # Print example to verify formatting
 # if len(trainer.train_dataset) > 0:
 #     print("Example formatted text:")
 #     print(trainer.train_dataset[0]["text"])
 #     print("=" * 50)
 
+# initial_validation_results = evaluate(valid_dataset, "validation")
+# print(initial_validation_results)
+
 # Train the model
-# trainer_stats = trainer.train()
+trainer_stats = trainer.train()
 
 # # Save the model
 # output_model_name = f"{args.model_name.split('/')[-1]}-{args.distilled_model.split('/')[-1]}-sft-{args.max_model_len}"
