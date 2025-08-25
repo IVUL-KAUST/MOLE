@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "FQuAD",
+        "Link": "https://fquad.illuin.tech/",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 3.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "FQuAD: French Question Answering Dataset. It contains 25,000+ question and answer pairs.",
+        "Volume": 25000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [],
+        "Paper Title": "FQuAD: French Question Answering Dataset",
+        "Paper Link": "https://arxiv.org/abs/2002.06071",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Martin, d'Hoffschmidt",
+            "Maxime, Vidal",
+            "Wacim, Belblidia",
+            "Tom, Brendl\u00e9"
+        ],
+        "Affiliations": [
+            "Illuin Technology"
+        ],
+        "Abstract": "This paper introduces FQuAD, a native French Question Answering Dataset. FQuAD contains 25,000+ question and answer pairs. Finetuning CamemBERT on FQuAD yields a F1 score of 88% and an exact match of 77.9%. Developed to provide a SQuAD equivalent in the French language. Questions are original and based on high quality Wikipedia articles."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00407,
+        "input_tokens": 20409,
+        "output_tokens": 791
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

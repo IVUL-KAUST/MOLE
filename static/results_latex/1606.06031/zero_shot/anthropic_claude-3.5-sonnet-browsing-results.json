@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "https://zenodo.org/record/2630551#.X8UP76pKiIa",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset for word prediction requiring broad discourse context, extracted from novels.",
+        "Volume": 12684.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [
+            "bookcorpus"
+        ],
+        "Paper Title": "The LAMBADA dataset: Word prediction requiring a broad discourse context",
+        "Paper Link": "https://www.aclweb.org/anthology/P16-1144.pdf",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "word prediction"
+        ],
+        "Venue Title": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "ACL",
+        "Authors": [
+            "Denis Paperno",
+            "Germ\u00e1n Kruszewski",
+            "Angeliki Lazaridou",
+            "Ngoc Quan Pham",
+            "Raffaella Bernardi",
+            "Sandro Pezzelle",
+            "Marco Baroni",
+            "Gemma Boleda",
+            "Raquel Fernandez"
+        ],
+        "Affiliations": [],
+        "Abstract": "The LAMBADA evaluates the capabilities of computational models for text understanding by means of a word prediction task. LAMBADA is a collection of narrative passages sharing the characteristic that human subjects are able to guess their last word if they are exposed to the whole passage, but not if they only see the last sentence preceding the target word. To succeed on LAMBADA, computational models cannot simply rely on local context, but must be able to keep track of information in the broader discourse."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.086445,
+        "input_tokens": 20205,
+        "output_tokens": 1031
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
