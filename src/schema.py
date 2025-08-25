@@ -170,7 +170,7 @@ class Schema(BaseModel):
             accuracy += length
         return accuracy / len(self.get_attributes())
     
-    def compare_with(self, gold_metadata, return_metrics_only = False):
+    def compare_with(self, gold_metadata, return_metrics_only = False, return_precision_only = False):
         results = {}
         for key in gold_metadata.keys():
             if key in ['annotations_from_paper']:
@@ -180,9 +180,11 @@ class Schema(BaseModel):
             except:
                 print(key, gold_metadata[key], self.model_dump()[key])
                 raise ValueError(f"Invalid type: {type(gold_metadata[key])}")
+        precision = sum(results.values()) / len(results)
+        if return_precision_only:
+            return {'precision': precision}
         annotations_from_paper = gold_metadata['annotations_from_paper']
         annotated_attributes = [key for key in gold_metadata.keys() if key in annotations_from_paper and annotations_from_paper[key]]
-        precision = sum(results.values()) / len(results)
         recall = sum([value for key, value in results.items() if key in annotated_attributes]) / len(annotated_attributes)
         f1 = 2 * precision * recall / (precision + recall)
         length = self.evaluate_length()
