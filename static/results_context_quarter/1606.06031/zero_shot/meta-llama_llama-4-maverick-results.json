@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "https://zenodo.org/record/2630551#.XcRcgS2BQBJ",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "LAMBADA is a dataset for language modeling and broad discourse understanding.",
+        "Volume": 2662.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Trento"
+        ],
+        "Derived From": [
+            "BookCorpus"
+        ],
+        "Paper Title": "The LAMBADA dataset",
+        "Paper Link": "https://arxiv.org/abs/1606.06031",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Paperno, Denis",
+            "Gong, Germ\u00e1n Kruszewski",
+            "Marco Baroni"
+        ],
+        "Affiliations": [
+            "University of Trento",
+            "CIMeC",
+            "University of Trento",
+            "CIMeC",
+            "ICREA",
+            "University of Trento",
+            "CIMeC"
+        ],
+        "Abstract": "We introduce the LAMBADA dataset, a collection of narrative passages with a missing word. The task is to predict the missing word, which is difficult to guess from the sentence alone but becomes easy when the broader context is considered. The dataset is designed to test language models' ability to understand broad discourse context."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00133578,
+        "input_tokens": 6297,
+        "output_tokens": 394
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

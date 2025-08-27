@@ -1,0 +1,156 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "EN",
+                "Volume": 57.6,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "ET",
+                "Volume": 59.8,
+                "Unit": "sentences",
+                "Language": "Ethiopian"
+            },
+            {
+                "Name": "HT",
+                "Volume": 49.4,
+                "Unit": "sentences",
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "ID",
+                "Volume": 58,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "IT",
+                "Volume": 56,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "QU",
+                "Volume": 50.7,
+                "Unit": "sentences",
+                "Language": "Eastern Apur\u00edmac Quechua"
+            },
+            {
+                "Name": "SW",
+                "Volume": 57.2,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "TA",
+                "Volume": 56.6,
+                "Unit": "sentences",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "TH",
+                "Volume": 52.8,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "TR",
+                "Volume": 56.2,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "VI",
+                "Volume": 58.5,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "ZH",
+                "Volume": 56.6,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://github.com/cambridgeltl/xcopa",
+        "HF Link": "https://huggingface.co/bert-base-multilingual-cased",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": [
+            "English",
+            "Estonian",
+            "Haitian Creole",
+            "Indonesian",
+            "Italian",
+            "Eastern Apur\u00edmac Quechua",
+            "Swahili",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Chinese"
+        ],
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The dataset consists of scenarios and questions about causal relationships, translated into multiple languages. It is based on the COPA dataset and aims to evaluate cross-lingual understanding.",
+        "Volume": 57.6,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "CAMeL Resources"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "unknown",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "natural language inference"
+        ],
+        "Venue Title": "unknown",
+        "Venue Type": "journal",
+        "Venue Name": "unknown",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "The scenarios included in COPA refer to events that took place in the past and are formulated in what can be described as a narrative register: one of the sources from which question topics were drawn was a corpus of personal stories published online. This is grammatically rendered exclusively by means of past simple (preterite) or past continuous (imperfect) verb forms. Temporal anteriority of a hypothesis sentence with respect to the premise is not grammatically marked and can only be deduced based on the prompt. The dataset aims to evaluate cross-lingual understanding."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0012668,
+        "input_tokens": 8078,
+        "output_tokens": 946
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,66 @@
+{
+    "metadata": {
+        "Name": "Russian Financial Statements Dataset",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": "ru",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A dataset containing financial statements of Russian firms, including balance sheets, profit and loss statements, and statements of changes in equity.",
+        "Volume": 0.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2501.05841",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "morphological analysis",
+            "named entity recognition",
+            "information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.8965517241379307,
+    "cost": {
+        "cost": 0.00311498,
+        "input_tokens": 11093,
+        "output_tokens": 234
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

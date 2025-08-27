@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "MEDIA Benchmark Intent Annotations",
+        "Link": "https://github.com/Ala-Na/media_benchmark_intent_annotations",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "web pages",
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "An enhanced version of the MEDIA dataset annotated with intents using a semi-automatic approach",
+        "Volume": 1258.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Paris-Saclay",
+            "CNRS",
+            "LISN",
+            "Avignon Universit\u00e9",
+            "LIA"
+        ],
+        "Derived From": [
+            "MEDIA SLU dataset"
+        ],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2403.19727",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "intent classification",
+            "semantic parsing"
+        ],
+        "Venue Title": "LREC-COLING 2024",
+        "Venue Type": "conference",
+        "Venue Name": "LREC-COLING",
+        "Authors": [
+            "Nad\u00e8ge Alavoine",
+            "Ga\u00eblle Laperri\u00e8re",
+            "Christophe Servan",
+            "Sahar Ghannay",
+            "Sophie Rosset"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris-Saclay, CNRS, LISN",
+            "Avignon Universit\u00e9, LIA"
+        ],
+        "Abstract": "Intent classification and slot-filling are essential tasks of Spoken Language Understanding (SLU). This paper presents an updated version of the MEDIA dataset enhanced with intent annotations using a semi-automatic approach and the first results of SLU experiments on this enhanced dataset using joint models for intent classification and slot-filling."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00180738,
+        "input_tokens": 8244,
+        "output_tokens": 424
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

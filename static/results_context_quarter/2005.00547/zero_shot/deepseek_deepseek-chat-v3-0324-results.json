@@ -1,0 +1,69 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://github.com/dewarim/reddit-data-tools",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset of 58K Reddit comments labeled for 27 emotions or Neutral, curated to reduce bias and profanity.",
+        "Volume": 58000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://arxiv.org/abs/2005.00547",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "emotion classification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "Our dataset is composed of 58K Reddit comments, labeled for one or more of 27 emotion(s) or Neutral. We use a Reddit data dump originating in the reddit-data-tools project, which contains comments from 2005 (the start of Reddit) to January 2019. We select subreddits with at least 10k comments and remove deleted and non-English comments. Reddit is known for a demographic bias leaning towards young male users, which is not reflective of a globally diverse population. The platform also introduces a skew towards toxic, offensive language. Thus, Reddit content has been used to study depression, microaggressions, and the effect of using biased Reddit data by training a 'psychopath' bot. To address these concerns, and enable building broadly representative emotion models using GoEmotions, we take a series of data curation measures to ensure our data does not reinforce general, nor emotion-specific, language biases."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00265266,
+        "input_tokens": 7583,
+        "output_tokens": 459
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

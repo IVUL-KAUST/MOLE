@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "MTOP",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 22288,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "German",
+                "Volume": 18788,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 16584,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 15459,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 16131,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 15195,
+                "Unit": "sentences",
+                "Language": "Thai"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "German",
+            "French",
+            "Spanish",
+            "Hindi",
+            "Thai"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A multilingual task-oriented semantic parsing dataset covering 6 languages across 11 domains with nested intents and compositional structures",
+        "Volume": 104445.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "MTOP: A Comprehensive Multilingual Task-Oriented Semantic Parsing Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2008.09335",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing",
+            "intent classification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9333333333333332,
+    "cost": {
+        "cost": 0.036747,
+        "input_tokens": 8371,
+        "output_tokens": 423
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2008.09335"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

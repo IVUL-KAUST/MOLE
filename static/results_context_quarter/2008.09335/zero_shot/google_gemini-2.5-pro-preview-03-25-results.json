@@ -1,0 +1,128 @@
+{
+    "metadata": {
+        "Name": "MTOP",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 22288,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "German",
+                "Volume": 18788,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 16584,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 15459,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 16131,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 15195,
+                "Unit": "sentences",
+                "Language": "Thai"
+            }
+        ],
+        "Link": "https://github.com/google-research-datasets/mtop",
+        "HF Link": "https://huggingface.co/datasets/facebook/mtop",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "German",
+            "French",
+            "Spanish",
+            "Hindi",
+            "Thai"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A multilingual semantic parsing benchmark for task-oriented assistants in six languages (EN, DE, ES, FR, HI, TH). It contains over 100k anonymized user queries annotated by professional linguists with intents and slots, extending the English-only TOP dataset.",
+        "Volume": 104455.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [
+            "TOP dataset"
+        ],
+        "Paper Title": "MTOP: A Comprehensive Multilingual Task-Oriented Semantic Parsing Benchmark",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.549/",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing",
+            "intent classification",
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Haoran Li",
+            "Yiran Chen",
+            "Abhinav Arora",
+            "Shuohui Chen",
+            "Anchit Gupta",
+            "Sonal Gupta",
+            "Ankur Bapna",
+            "Orhan Firat",
+            "Melvin Johnson"
+        ],
+        "Affiliations": [
+            "Google Research"
+        ],
+        "Abstract": "We present the Multilingual Task-Oriented-Parsing (MTOP) dataset, a comprehensive semantic parsing benchmark for task-oriented assistants in six languages. This dataset extends the English-only TOP dataset (Gupta et al., 2018) and features a substantially larger and more comprehensive set of domains, intents, and slots. The dataset is annotated by professional linguists on real-world, anonymized user queries. It contains over 100k utterances in English, German, Spanish, French, Hindi, and Thai, with a near-parallel translation of the English data in the other five languages. We provide two different representations of the annotations: a 'flat' representation that is simple and easy to parse, and a 'compositional' one that is more expressive. We establish strong baselines for both representations using state-of-the-art multilingual pre-trained models. Our results show that while we achieve strong performance for English, there is a significant gap in performance for other languages, especially in a zero-shot setting. We also show that using a language-agnostic representation of the output can improve zero-shot performance. The dataset is available at https://github.com/google-research-datasets/mtop."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.06260875,
+        "input_tokens": 8371,
+        "output_tokens": 1988
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2008.09335"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

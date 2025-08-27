@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://github.com/google-research/google-research/tree/master/goemotions",
+        "HF Link": "https://huggingface.co/datasets/go_emotions",
+        "License": "Apache-2.0",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A large-scale, human-annotated dataset of 58,000 Reddit comments, labeled for 27 fine-grained emotion categories or Neutral. The data is extracted from popular English subreddits and carefully curated to reduce biases and offensive content.",
+        "Volume": 58000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google Research",
+            "Stanford University",
+            "University of California, Berkeley"
+        ],
+        "Derived From": [
+            "Reddit"
+        ],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://aclanthology.org/2020.acl-main.372/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "emotion classification",
+            "sentiment analysis"
+        ],
+        "Venue Title": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Dorottya Demszky",
+            "Dana Movshovitz-Attias",
+            "Jeongwoo Ko",
+            "Alan Cowen",
+            "Gaurav Nemade",
+            "Sujith Ravi"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Google Research",
+            "University of California, Berkeley"
+        ],
+        "Abstract": "Emotion expression and detection are central to the human experience and social interaction. With as many as a handful of words we are able to express a wide variety of subtle and complex emotions, and it has thus been a long-term goal to enable machines to understand affect and emotion. In the past decade, NLP researchers made available several datasets for language-based emotion classification for a variety of domains and applications, including for news headlines, tweets, and narrative sequences, to name just a few. However, existing available datasets are (1) mostly small, containing up to several thousand instances, and (2) cover a limited emotion taxonomy, with coarse classification into Ekman or Plutchik emotions. Recent work highlights the need for a large-scale, consistently labeled emotion dataset over a fine-grained taxonomy, with demonstrated high-quality annotations. To this end, we compiled GoEmotions, the largest human annotated dataset of 58k carefully selected Reddit comments, labeled for 27 emotion categories or Neutral, with comments extracted from popular English subreddits. We design our emotion taxonomy considering related work in psychology and coverage in our data. In contrast to Ekman's taxonomy, which includes only one positive emotion (joy), our taxonomy includes a large number of positive, negative, and ambiguous emotion categories, making it suitable for downstream conversation understanding tasks that require a subtle understanding of emotion expression, such as the analysis of customer feedback or the enhancement of chatbots. We include a thorough analysis of the annotated data and the quality of the annotations. We provide a strong baseline for modeling fine-grained emotion classification over GoEmotions. By fine-tuning a BERT-base model, we achieve an average F1-score of .46 over our taxonomy, .64 over an Ekman-style grouping into six coarse categories and .69 over a sentiment grouping. These results leave much room for improvement, showcasing this task is not yet fully addressed by current state-of-the-art NLU models. We conduct transfer learning experiments with existing emotion benchmarks to show that our data can generalize to different taxonomies and domains, such as tweets and personal narratives."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.06275875,
+        "input_tokens": 11204,
+        "output_tokens": 2008
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "JCoLA",
+        "Link": "https://github.com/osekilab/JCoLA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "books",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "JCoLA is a Japanese Corpus of Linguistic Acceptability consisting of 10,020 sentences annotated with binary acceptability judgments.",
+        "Volume": 10020.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo"
+        ],
+        "Derived From": [
+            "linguistics textbooks",
+            "handbooks",
+            "journal articles"
+        ],
+        "Paper Title": "JCoLA: Japanese Corpus of Linguistic Acceptability",
+        "Paper Link": "https://arxiv.org/abs/2309.12676",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "linguistic acceptability"
+        ],
+        "Venue Title": "EMNLP2023",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Taiga Someya",
+            "Yushi Sugimoto",
+            "Yohei Oseki"
+        ],
+        "Affiliations": [
+            "The University of Tokyo"
+        ],
+        "Abstract": "This paper introduces JCoLA, a Japanese Corpus of Linguistic Acceptability, consisting of 10,020 sentences annotated with binary acceptability judgments. The sentences are manually extracted from linguistics textbooks, handbooks, and journal articles. JCoLA is split into in-domain data and out-of-domain data, the latter categorized by 12 linguistic phenomena. The paper evaluates the syntactic knowledge of 9 different types of Japanese language models on JCoLA, finding that while several models surpass human performance on in-domain data, none exceed human performance on out-of-domain data."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8947368421052632
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00133371,
+        "input_tokens": 5591,
+        "output_tokens": 430
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12676"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

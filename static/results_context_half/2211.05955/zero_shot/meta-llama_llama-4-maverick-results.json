@@ -1,0 +1,139 @@
+{
+    "metadata": {
+        "Name": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 190592,
+                "Unit": "entities",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 48001,
+                "Unit": "entities",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 25463,
+                "Unit": "entities",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 62971,
+                "Unit": "entities",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 38469,
+                "Unit": "entities",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 18797,
+                "Unit": "entities",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 19174,
+                "Unit": "entities",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 12508,
+                "Unit": "entities",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "https://github.com/apouranben/mee-dataset",
+        "HF Link": "",
+        "License": "CC BY-NC 4.0",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "Polish",
+            "Turkish",
+            "Hindi",
+            "Japanese",
+            "Korean"
+        ],
+        "Domain": [
+            "news articles",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A novel multilingual event extraction dataset for 8 typologically different languages",
+        "Volume": 415975.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Derived From": [
+            "ACE2005"
+        ],
+        "Paper Title": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Paper Link": "https://aclanthology.org/doi/10.48550/2022.emnlp1662",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "irony detection",
+            "relation extraction"
+        ],
+        "Venue Title": "EMNLP2022",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP",
+        "Authors": [
+            "Amir Pouran Ben Veyseh",
+            "Javid Ebrahimi",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, University of Oregon, Eugene, OR, USA",
+            "Adobe Research, Seattle, WA, USA"
+        ],
+        "Abstract": "Event Extraction (EE) is one of the fundamental tasks in Information Extraction (IE) that aims to recognize event mentions and their arguments (i.e., participants) from text. Due to its importance, extensive methods and resources have been developed for Event Extraction. However, one limitation of current research for EE involves the under-exploration for non-English languages in which the lack of high-quality multilingual EE datasets for model training and evaluation has been the main hindrance. To address this limitation, we propose a novelultilingual Event Extraction dataset (MEE) that provides annotation for more than50K event mentions in8 typologically different languages. MEE comprehensively annotates data for entity mentions, event triggers and event arguments. We conduct extensive experiments on the proposed dataset to reveal challenges and opportunities for multilingual EE."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.00400605,
+        "input_tokens": 8861,
+        "output_tokens": 883
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05955"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

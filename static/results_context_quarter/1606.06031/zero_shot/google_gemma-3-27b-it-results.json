@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "https://github.com/facebookresearch/lambada",
+        "HF Link": "https://huggingface.co/datasets/lambada",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The LAMBADA dataset proposes a word prediction task where the target item is difficult to guess when only the sentence in which it appears is available, but becomes easy when a broader context is presented.",
+        "Volume": 10000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "LAMBADA: A challenging benchmark for language modeling",
+        "Paper Link": "https://arxiv.org/abs/1602.02400",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "word prediction"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Papadimitriou, Christos",
+            "Kiela, Douwe",
+            "Clark, Jason"
+        ],
+        "Affiliations": [
+            "Facebook AI Research"
+        ],
+        "Abstract": "The recent spurt of powerful end-to-end-trained neural networks for Natural Language Processing has sparked interest in tasks to measure the progress they are bringing about in genuine language understanding. Special care must be taken in evaluating such systems, since their effectiveness at picking statistical generalizations from large corpora can lead to the illusion that they are reaching a deeper degree of understanding than they really are. In this paper, we introduce the LAMBADA dataset (LAnguage Modeling Broadened to Account for Discourse Aspects). LAMBADA proposes a word prediction task where the target item is difficult to guess (for English speakers) when only the sentence in which it appears is available, but becomes easy when a broader context is presented. LAMBADA casts language understanding in the classic word prediction framework of language modeling. We can thus use it to test several existing language modeling architectures, including systems with capacity to hold longer-term contextual memories. In our preliminary experiments, none of these models came even remotely close to human performance, confirming that LAMBADA is a challenging benchmark for research on automated models of natural language understanding."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0008397,
+        "input_tokens": 6297,
+        "output_tokens": 583
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

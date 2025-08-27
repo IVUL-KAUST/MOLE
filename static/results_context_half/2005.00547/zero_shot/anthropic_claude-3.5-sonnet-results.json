@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://github.com/google-research/google-research/tree/master/goemotions",
+        "HF Link": "https://huggingface.co/datasets/go_emotions",
+        "License": "MIT License",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset of 58k Reddit comments labeled for 27 emotion categories and Neutral, with high-quality human annotations.",
+        "Volume": 58000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [
+            "Reddit"
+        ],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://arxiv.org/abs/2005.00547",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "emotion classification",
+            "sentiment analysis"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Dorottya Demszky",
+            "Dana Movshovitz-Attias",
+            "Jeongwoo Ko",
+            "Alan Cowen",
+            "Gaurav Nemade",
+            "Sujith Ravi"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Google Research"
+        ],
+        "Abstract": "Understanding emotion expression and detection is central to the human experience and social interaction. We present GoEmotions, the largest manually annotated dataset of 58k Reddit comments labeled for 27 emotion categories or Neutral. We demonstrate the reliability of the annotations via Principal Preserved Component Analysis and show that our dataset can be effectively used to predict emotions in text. We conduct transfer learning experiments with existing emotion benchmarks to show that our dataset generalizes well to other domains and taxonomies. The GoEmotions taxonomy and dataset will be useful for downstream conversational AI and sentiment analysis applications."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.046791,
+        "input_tokens": 11204,
+        "output_tokens": 471
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

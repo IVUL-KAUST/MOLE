@@ -4,6 +4,9 @@ uv run plots.py --eval test --schema all --results_path static/results_maged --i
 # main results by language
 uv run plots.py --eval test --schema all  --group_by language --non_browsing
 
+# context length
+uv run plots.py --eval test --schema all  --group_by language --type context_length --non_browsing
+
 # results each year
 uv run plots.py --eval test --schema all  --year  --non_browsing
 

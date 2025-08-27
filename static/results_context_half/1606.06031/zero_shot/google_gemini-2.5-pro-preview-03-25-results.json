@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "https://zenodo.org/record/2630551",
+        "HF Link": "https://huggingface.co/datasets/lambada",
+        "License": "CC BY 4.0",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A word prediction dataset where the target word is difficult to guess from the sentence alone but becomes easy with a broader discourse context. It is sourced from novels and designed to test a model's ability to understand narrative context and discourse.",
+        "Volume": 10022.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Trento",
+            "Pompeu Fabra University",
+            "University of Amsterdam"
+        ],
+        "Derived From": [
+            "BookCorpus"
+        ],
+        "Paper Title": "The LAMBADA dataset: Word prediction requiring a broad discourse context",
+        "Paper Link": "https://aclanthology.org/P16-1144/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "word prediction"
+        ],
+        "Venue Title": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics (ACL)",
+        "Authors": [
+            "Denis Paperno",
+            "Germ\u00e1n Kruszewski",
+            "Angeliki Lazaridou",
+            "Quan Ngoc Pham",
+            "Raffaella Bernardi",
+            "Sandro Pezzelle",
+            "Marco Baroni",
+            "Gemma Boleda",
+            "Raquel Fern\u00e1ndez"
+        ],
+        "Affiliations": [
+            "University of Trento",
+            "Pompeu Fabra University",
+            "University of Amsterdam"
+        ],
+        "Abstract": "In this paper, we introduce the LAMBADA dataset (LAnguage Modeling Broadened to Account for Discourse Aspects). LAMBADA proposes a word prediction task where the target item is difficult to guess (for English speakers) when only the sentence in which it appears is available, but becomes easy when a broader context is presented. Consider Example 1 in Figure 1. The sentence 'Do you honestly think that I would want you to have a ___?' has a multitude of possible continuations, but the broad context clearly indicates that the missing word is 'miscarriage'. LAMBADA casts language understanding in the classic word prediction framework of language modeling. We can thus use it to test several existing language modeling architectures, including systems with capacity to hold longer-term contextual memories. In our preliminary experiments, none of these models came even remotely close to human performance, confirming that LAMBADA is a challenging benchmark for research on automated models of natural language understanding."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0570775,
+        "input_tokens": 9415,
+        "output_tokens": 1505
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

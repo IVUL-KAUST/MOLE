@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "JGL-QA",
+        "Link": "https://github.com/j-minn/jgl-qa",
+        "HF Link": "https://huggingface.co/datasets/j-minn/jgl-qa",
+        "License": "Apache-2.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "JGL-QA is a Japanese Question Answering dataset created from Japanese literature. It contains 13,178 question-answer pairs extracted from 132 Japanese novels.",
+        "Volume": 13178.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Japan Advanced Institute of Science and Technology"
+        ],
+        "Derived From": [],
+        "Paper Title": "JGL-QA: A Japanese Question Answering Dataset from Literature",
+        "Paper Link": "https://arxiv.org/abs/2310.18491",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yuya Okazaki",
+            "Yusuke Kido",
+            "Hiroaki Hayashi",
+            "Masato Hagiwara"
+        ],
+        "Affiliations": [
+            "Japan Advanced Institute of Science and Technology"
+        ],
+        "Abstract": "We introduce JGL-QA, a Japanese Question Answering (QA) dataset constructed from Japanese literature. JGL-QA comprises 13,178 question-answer pairs extracted from 132 Japanese novels. The dataset is designed to evaluate the reading comprehension abilities of language models in the context of long-form narrative texts. We provide detailed statistics of the dataset, including question types, answer lengths, and the distribution of source novels. We also conduct preliminary experiments using several pre-trained language models and demonstrate the effectiveness of JGL-QA as a challenging benchmark for Japanese QA. The dataset is publicly available to facilitate further research in this area."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0005249,
+        "input_tokens": 3376,
+        "output_tokens": 512
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

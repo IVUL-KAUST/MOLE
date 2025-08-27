@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://huggingface.co/datasets/go_emotions",
+        "HF Link": "https://huggingface.co/datasets/go_emotions",
+        "License": "Apache-2.0",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A dataset of 58,000 Reddit comments manually labeled for 27 fine-grained emotion categories or Neutral. The data was curated to reduce profanity and bias, and personal information like names and religion terms were masked. It is split into train, dev, and test sets.",
+        "Volume": 58000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [
+            "Reddit"
+        ],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://aclanthology.org/2020.acl-main.372/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "emotion classification",
+            "sentiment analysis"
+        ],
+        "Venue Title": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Dorottya Demszky",
+            "Dana Movshovitz-Attias",
+            "Jeongwoo Ko",
+            "Alan Cowen",
+            "Gaurav Nemade",
+            "Sujith Ravi"
+        ],
+        "Affiliations": [
+            "Google Research"
+        ],
+        "Abstract": "Understanding emotion is a key step towards more human-like AI. While emotion is a nuanced and complex topic, most work in NLP has been limited to classifying text into a few coarse-grained emotion categories, such as 'positive' and 'negative', or a handful of 'basic' emotions, such as 'joy' and 'anger'. In this work, we introduce GoEmotions, a new dataset of 58k carefully curated Reddit comments labeled for 27 emotion categories. We show that the fine-grained labels in our dataset enable a detailed analysis of the emotion landscape in a large text corpus. We also present a strong BERT-based baseline model, and demonstrate that our dataset can be used to transfer learn to 9 other emotion and sentiment analysis benchmarks, with performance gains in most cases. We open-source our dataset and model to encourage more research on fine-grained emotion understanding."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.05610625,
+        "input_tokens": 7583,
+        "output_tokens": 1606
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

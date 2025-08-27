@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "JDocQA",
+        "Link": "https://arxiv.org/abs/2404.04692",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "web pages",
+            "news articles",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "JDocQA is a Japanese Document Question Answering dataset for generative language models, comprising 5,504 documents in PDF format and annotated 11,600 question-and-answer instances in Japanese.",
+        "Volume": 11500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Nara Institute of Science and Technology",
+            "RIKEN",
+            "ATR"
+        ],
+        "Derived From": [],
+        "Paper Title": "JDocQA: Japanese Document Question Answering Dataset for Generative Language Models",
+        "Paper Link": "https://arxiv.org/abs/2404.04692",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "LREC-COLING 2024",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Eri Onami",
+            "Shuhei Kurita",
+            "Taiki Miyanishi",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "Nara Institute of Science and Technology",
+            "RIKEN",
+            "ATR"
+        ],
+        "Abstract": "Document question answering is a task of question answering on given documents such as reports, slides, pamphlets, and websites. JDocQA is a large-scale document-based QA dataset, essentially requiring both visual and textual information to answer questions, which comprises 5,504 documents in PDF format and annotated 11,600 question-and-answer instances in Japanese."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00182364,
+        "input_tokens": 9176,
+        "output_tokens": 407
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19454"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

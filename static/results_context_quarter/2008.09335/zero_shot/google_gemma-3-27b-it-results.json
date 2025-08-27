@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "Name": "MTOP",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 22288,
+                "Unit": "utterances",
+                "Language": "English"
+            },
+            {
+                "Name": "German",
+                "Volume": 18788,
+                "Unit": "utterances",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 16584,
+                "Unit": "utterances",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 15459,
+                "Unit": "utterances",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 16131,
+                "Unit": "utterances",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 15195,
+                "Unit": "utterances",
+                "Language": "Thai"
+            }
+        ],
+        "Link": "https://github.com/facebookresearch/mt5/tree/main/recipes/mt5_mt_top",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "German",
+            "French",
+            "Spanish",
+            "Hindi",
+            "Thai"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "The MTOP dataset is a multilingual dataset for task-oriented dialogue, containing utterances from various domains like alarm, calling, event, messaging, music, news, people, recipes, reminder, timer, and weather.",
+        "Volume": 22288.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Facebook Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "Few-Shot Multilingual Task-Oriented Dialogue with Compositional Generalization",
+        "Paper Link": "https://arxiv.org/abs/2008.09335",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "intent classification",
+            "semantic parsing",
+            "speaker identification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "We present a new multilingual task-oriented dialogue dataset, MTOP, with 117 intents and 78 slots across 6 languages. We study compositional generalization in a few-shot setting, where we train on a subset of languages and evaluate on the remaining languages. We find that compositional generalization is challenging for current models, and that a simple approach of translating the English training data to the target language can significantly improve performance. We also show that using a masked language model can further improve performance."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.001217698,
+        "input_tokens": 8383,
+        "output_tokens": 652
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2008.09335"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

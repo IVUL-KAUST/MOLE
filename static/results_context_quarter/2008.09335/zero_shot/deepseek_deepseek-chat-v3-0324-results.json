@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "MTOP dataset",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 22288,
+                "Unit": "utterances",
+                "Language": "English"
+            },
+            {
+                "Name": "German",
+                "Volume": 18788,
+                "Unit": "utterances",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 16584,
+                "Unit": "utterances",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 15459,
+                "Unit": "utterances",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 16131,
+                "Unit": "utterances",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 15195,
+                "Unit": "utterances",
+                "Language": "Thai"
+            }
+        ],
+        "Link": "unknown",
+        "HF Link": "unknown",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": [
+            "English",
+            "German",
+            "French",
+            "Spanish",
+            "Hindi",
+            "Thai"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "The MTOP dataset is a multilingual dataset for intent detection and slot filling, covering six languages with nested intent frames.",
+        "Volume": 22288.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "unknown",
+        "Paper Link": "unknown",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Upon-Request",
+        "Cost": "unknown",
+        "Test Split": true,
+        "Tasks": [
+            "intent classification",
+            "semantic parsing"
+        ],
+        "Venue Title": "unknown",
+        "Venue Type": "journal",
+        "Venue Name": "unknown",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "unknown"
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.8999999999999999,
+    "cost": {
+        "cost": 0.0031569,
+        "input_tokens": 8371,
+        "output_tokens": 471
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2008.09335"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

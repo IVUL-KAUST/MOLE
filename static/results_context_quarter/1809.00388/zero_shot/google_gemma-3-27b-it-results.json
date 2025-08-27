@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "MTNT",
+        "Link": "http://www.cs.cmu.edu/~pmichel1/mtnt/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "The dataset contains noisy sentences collected from Reddit in English, French, and Japanese, along with manual translations for a subset of the data. It is designed to be a more challenging benchmark for machine translation systems when dealing with non-standard text.",
+        "Volume": 15000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [
+            "WMT 2017 News",
+            "WMT 2015",
+            "KFTT",
+            "JESC",
+            "TED talks"
+        ],
+        "Paper Title": "MTNT: A Noisy Text Benchmark for Machine Translation",
+        "Paper Link": "https://arxiv.org/abs/1809.00388",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Paul Michel",
+            "Graham Neubig"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "We introduce MTNT, a new benchmark for machine translation of noisy text. MTNT is a parallel corpus of approximately 15k sentence pairs in English, French and Japanese, collected from Reddit. We show that MTNT contains more noise than existing MT benchmarks, and that it is more representative of naturally occurring noise. We also provide monolingual corpora for each language, which can be used for language modeling or semi-supervised training."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0010217,
+        "input_tokens": 7654,
+        "output_tokens": 459
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

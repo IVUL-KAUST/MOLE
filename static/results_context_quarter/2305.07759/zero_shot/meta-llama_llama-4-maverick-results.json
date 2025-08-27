@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "TinyStories",
+        "Link": "https://huggingface.co/datasets/roneneldan/TinyStories",
+        "HF Link": "https://huggingface.co/datasets/roneneldan/TinyStories",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A synthetic dataset of short stories for training and evaluating language models.",
+        "Volume": 2.4,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Microsoft Research"
+        ],
+        "Derived From": [
+            "GPT-3.5",
+            "GPT-4"
+        ],
+        "Paper Title": "TinyStories: How Small Can Language Models Be and Still Speak Coherent English?",
+        "Paper Link": "https://arxiv.org/abs/2305.07759",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "ICLR 2024",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [
+            "Ronen Eldan",
+            "Yuanzhi Li"
+        ],
+        "Affiliations": [
+            "Microsoft Research"
+        ],
+        "Abstract": "This paper introduces TinyStories, a synthetic dataset of short stories for training and evaluating language models. The dataset is generated using GPT-3.5 and GPT-4 and contains stories that are coherent, diverse, and have almost perfect grammar. The authors show that TinyStories can be used to train language models that are much smaller than state-of-the-art models and still produce fluent and consistent stories."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.002016,
+        "input_tokens": 10298,
+        "output_tokens": 376
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.07759"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

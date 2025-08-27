@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "FIJO",
+        "Link": "https://github.com/iid-ulaval/FIJO-dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A French dataset for insurance soft skill detection",
+        "Volume": 867.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Laval"
+        ],
+        "Derived From": [],
+        "Paper Title": "FIJO: a French Insurance Soft Skill Detection Dataset",
+        "Paper Link": "https://arxiv.org/abs/2204.05208",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "David Beauchemin",
+            "Julien Laumonier",
+            "Yvan Le Ster",
+            "Marouane Yassine"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Laval"
+        ],
+        "Abstract": "This paper presents FIJO, a new public dataset for French insurance soft skill detection. The dataset contains 867 de-identified job postings with soft skill annotations. The authors detail the construction of the dataset, its statistics, and the results of skill detection algorithms using named entity recognition approaches."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0017688,
+        "input_tokens": 8485,
+        "output_tokens": 329
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.05208"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

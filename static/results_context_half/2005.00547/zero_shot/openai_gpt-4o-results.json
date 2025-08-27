@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://github.com/dewarim/reddit-data-tools",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "GoEmotions is a dataset composed of 58K Reddit comments, labeled for one or more of 27 emotions or Neutral. The dataset was curated to ensure it does not reinforce general or emotion-specific language biases.",
+        "Volume": 58.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://github.com/dewarim/reddit-data-tools",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "emotion classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Google Research Team"
+        ],
+        "Affiliations": [
+            "Google Research"
+        ],
+        "Abstract": "GoEmotions is a dataset composed of 58K Reddit comments, labeled for one or more of 27 emotions or Neutral. The dataset was curated to ensure it does not reinforce general or emotion-specific language biases."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0275125,
+        "input_tokens": 11204,
+        "output_tokens": 352
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

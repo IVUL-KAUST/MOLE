@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "MS MARCO",
+        "Link": "https://huggingface.co/datasets/msmarco",
+        "HF Link": "https://huggingface.co/datasets/msmarco",
+        "License": "Apache-2.0",
+        "Year": 2019,
+        "Language": "multilingual",
+        "Domain": [
+            "news articles",
+            "web pages",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "The MS MARCO dataset is a large-scale dataset for machine learning research in information retrieval and question answering. It consists of real user queries and corresponding passages from the web.",
+        "Volume": 0.0,
+        "Unit": "tokens",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "MS MARCO: A Human Generated Dataset for Training Passage Re-rankers",
+        "Paper Link": "https://arxiv.org/abs/1703.03932",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Upon-Request",
+        "Cost": "Free",
+        "Test Split": false,
+        "Tasks": [
+            "question answering",
+            "information retrieval",
+            "image captioning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Bajaj, Rahul",
+            "Khattar, Rohan",
+            "Sharma, Varun",
+            "Gupta, Nikhil",
+            "Singh, Aman"
+        ],
+        "Affiliations": [
+            "Microsoft"
+        ],
+        "Abstract": "We present MS MARCO, a new large-scale dataset for training passage re-rankers. The dataset consists of 500K queries and corresponding human-generated relevance judgments for 10K documents each. The queries are real user queries from the Bing search engine, and the relevance judgments are based on human assessments of the relevance of passages to the queries. We also provide a set of baseline models for passage re-ranking, and show that our dataset can be used to train models that outperform existing state-of-the-art models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00071657676,
+        "input_tokens": 8366,
+        "output_tokens": 478
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2302.07738"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

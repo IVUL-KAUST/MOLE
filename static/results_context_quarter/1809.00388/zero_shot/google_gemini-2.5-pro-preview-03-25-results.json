@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "MTNT",
+        "Link": "https://github.com/pmichel31415/mtnt",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "MTNT is a testbed for machine translation of noisy text. It consists of Reddit comments and their professional translations in two language pairs, French-English and Japanese-English. Noisy comments were identified using language models and then professionally translated. The dataset also includes a large number of monolingual noisy comments.",
+        "Volume": 88484.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [
+            "Reddit",
+            "WMT 2017",
+            "WMT 2015",
+            "KFTT",
+            "JESC",
+            "TED talks"
+        ],
+        "Paper Title": "MTNT: A Testbed for Machine Translation of Noisy Text",
+        "Paper Link": "https://aclanthology.org/D18-1001/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Paul Michel",
+            "Graham Neubig"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "Machine Translation (MT) is seeing increasingly widespread use, which brings it into contact with a wide variety of domains and genres of text. One particularly challenging and increasingly prominent domain is that of noisy user-generated text, for example from social media or online forums. Most standard MT systems, which are trained on clean, edited text, perform poorly on such data. In this paper, we introduce the MTNT dataset, a new testbed for machine translation of noisy text. The dataset consists of 2k Reddit comments and their professional translations in two language pairs, French-English and Japanese-English. We use this dataset to test the robustness of a state-of-the-art NMT system, as well as a phrase-based system. We find that both systems' performance degrades, and that the NMT system is particularly sensitive to noise. We also perform a detailed analysis of the types of noise present in the data and their effect on translation quality. Finally, we show that fine-tuning on a small amount of in-domain data can recover some of the loss in performance. The dataset is publicly available at https://github.com/pmichel31415/mtnt."
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.05235625,
+        "input_tokens": 7642,
+        "output_tokens": 1529
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,90 @@
+{
+    "metadata": {
+        "Name": "CLIMB",
+        "Link": "https://research.nvidia.com/labs/lpr/climb/",
+        "HF Link": "https://huggingface.co/datasets/nvidia/ClimbMix",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "CLIMB is a dataset for language model pre-training, created using a novel framework that discovers, evaluates, and refines data mixtures.",
+        "Volume": 1.2,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "NVIDIA"
+        ],
+        "Derived From": [
+            "Nemotron-CC",
+            "smollm-corpus"
+        ],
+        "Paper Title": "CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
+        "Paper Link": "https://arxiv.org/abs/XXXXXXX",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Shizhe Diao",
+            "Yu Yang",
+            "Yonggan Fu",
+            "Xin Dong",
+            "Dan Su",
+            "Markus Kliegl",
+            "Zijia Chen",
+            "Peter Belcak",
+            "Yoshi Suhara",
+            "Hongxu Yin",
+            "Mostofa Patwary",
+            "Yingyan (Celine) Lin",
+            "Jan Kautz",
+            "Pavlo Molchanov"
+        ],
+        "Affiliations": [
+            "NVIDIA",
+            "Other Institutions"
+        ],
+        "Abstract": "Pre-training datasets are typically collected from web content and lack inherent domain divisions. To address these challenges, we propose CLIMB, an automated framework that discovers, evaluates, and refines data mixtures in a pre-training setting."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00426947,
+        "input_tokens": 15241,
+        "output_tokens": 467
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.13161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://github.com/illuin-tech/fquad",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "FQuAD2.0 is a French Question Answering dataset with adversarial questions.",
+        "Volume": 60222.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "FQuAD1.1"
+        ],
+        "Paper Title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+        "Paper Link": "https://github.com/illuin-tech/fquad",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Quentin Heinrich",
+            "Gautier Viaud",
+            "Wacim Belblidia"
+        ],
+        "Affiliations": [
+            "Illuin Technology"
+        ],
+        "Abstract": "FQuAD2.0 is a French Question Answering dataset with adversarial questions. The dataset is an extension of FQuAD1.1, adding unanswerable questions to test the robustness of QA models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.001675058508,
+        "input_tokens": 7100,
+        "output_tokens": 356
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

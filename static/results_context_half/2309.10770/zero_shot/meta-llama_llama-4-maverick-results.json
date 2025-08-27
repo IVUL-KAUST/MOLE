@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "FRASIMED",
+        "Link": "https://zenodo.org/record/8355629",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "public datasets",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "FRASIMED is a French annotated corpus for medical entity detection and linking, created using crosslingual annotation projection from Spanish datasets.",
+        "Volume": 2051.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Geneva",
+            "University Hospitals of Geneva"
+        ],
+        "Derived From": [
+            "CANTEMIST",
+            "DISTEMIST"
+        ],
+        "Paper Title": "FRASIMED: a Clinical French Annotated Resource Produced through Crosslingual BERT-Based Annotation Projection",
+        "Paper Link": "https://arxiv.org/abs/2309.10770",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "semantic parsing"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Jamil Zaghir",
+            "Mina Bjelogrlic",
+            "Jean-Philippe Goldman",
+            "Souka\u00efna Aananou",
+            "Christophe Gaudet-Blavignac",
+            "Christian Lovis"
+        ],
+        "Affiliations": [
+            "Division of Medical Information Sciences (SIMED), University Hospitals of Geneva",
+            "Department of Radiology and Medical Informatics, University of Geneva"
+        ],
+        "Abstract": "This paper introduces FRASIMED, a French annotated corpus for medical entity detection and linking. FRASIMED was created using a crosslingual annotation projection approach, leveraging existing Spanish annotated datasets. The corpus comprises 2,051 synthetic clinical cases in French, making it the largest open annotated corpus for oncological concepts in French."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0017682,
+        "input_tokens": 7852,
+        "output_tokens": 437
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.10770"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

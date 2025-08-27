@@ -1,0 +1,106 @@
+{
+    "metadata": {
+        "Name": "X-RiSAWOZ",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 8116,
+                "Unit": "utterances",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 8116,
+                "Unit": "utterances",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 8116,
+                "Unit": "utterances",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 8116,
+                "Unit": "utterances",
+                "Language": "Korean"
+            },
+            {
+                "Name": "English-Hindi",
+                "Volume": 8116,
+                "Unit": "utterances",
+                "Language": "Hindi"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": [
+            "English",
+            "French",
+            "Hindi",
+            "Korean"
+        ],
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A multi-domain, large-scale, and high-quality task-oriented dialogue benchmark produced by translating the Chinese RiSAWOZ data to four diverse languages: English, French, Hindi, and Korean; and one code-mixed English-Hindi language.",
+        "Volume": 8116.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [
+            "RiSAWOZ"
+        ],
+        "Paper Title": "X-RiSAWOZ: A Multilingual Task-Oriented Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2306.17674",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "text generation",
+            "transliteration"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "In recent years, tremendous effort has been put into the research and development of task-oriented dialogue agents; yet, it has been mainly focused on only a handful of popular languages, hindering the adoption of dialogue technology around the globe. We created X-RiSAWOZ, a multi-domain, large-scale, and high-quality task-oriented dialogue benchmark, produced by translating the Chinese RiSAWOZ data to four diverse languages: English, French, Hindi, and Korean; and one code-mixed English-Hindi language."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.00173489,
+        "input_tokens": 18171,
+        "output_tokens": 618
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,90 @@
+{
+    "metadata": {
+        "Name": "CLIMB",
+        "Link": "https://research.nvidia.com/labs/lpr/climb/",
+        "HF Link": "https://huggingface.co/datasets/nvidia/ClimbMix",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A dataset for language model pre-training, created using CLIMB, an automated framework that discovers, evaluates, and refines data mixtures.",
+        "Volume": 1200000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "NVIDIA"
+        ],
+        "Derived From": [
+            "Common Crawl",
+            "The Pile"
+        ],
+        "Paper Title": "CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
+        "Paper Link": "https://arxiv.org/abs/2406.07481",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "NeurIPS",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Neural Information Processing Systems",
+        "Authors": [
+            "Shizhe Diao",
+            "Yu Yang",
+            "Yonggan Fu",
+            "Xin Dong",
+            "Dan Su",
+            "Markus Kliegl",
+            "Zijia Chen",
+            "Peter Belcak",
+            "Yoshi Suhara",
+            "Hongxu Yin",
+            "Mostofa Patwary",
+            "Yingyan (Celine) Lin",
+            "Jan Kautz",
+            "Pavlo Molchanov"
+        ],
+        "Affiliations": [
+            "NVIDIA",
+            "University of California, Santa Barbara",
+            "MIT",
+            "University of Edinburgh"
+        ],
+        "Abstract": "Pre-training datasets are typically collected from web content and lack inherent domain divisions. For instance, widely used datasets like Common Crawl do not include explicit domain labels, while manually curating labeled datasets such as The Pile is labor-intensive. Consequently, identifying an optimal pre-training data mixture remains a challenging problem, despite its significant benefits for pre-training performance. To address these challenges, we propose CLIMB, an automated framework that discovers, evaluates, and refines data mixtures in a pre-training setting."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0017484,
+        "input_tokens": 8390,
+        "output_tokens": 527
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.13161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://github.com/dewarim/reddit-data-tools",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "GoEmotions is a dataset composed of 58K Reddit comments, labeled for one or more of 27 emotions or Neutral. The dataset was curated to address demographic biases and reduce toxic language, with comments filtered for offensive content and manually reviewed for identity offensiveness. It includes a taxonomy of emotions and is annotated by native English speakers from India.",
+        "Volume": 58000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://github.com/dewarim/reddit-data-tools",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "emotion classification"
+        ],
+        "Venue Title": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP",
+        "Authors": [
+            "Amit Sharma",
+            "Lisa Feldman Barrett",
+            "Maarten Bosma",
+            "Margaret Mitchell"
+        ],
+        "Affiliations": [
+            "Google Research"
+        ],
+        "Abstract": "Our dataset is composed of 58K Reddit comments, labeled for one or more of 27 emotion(s) or Neutral. We use a Reddit data dump originating in the reddit-data-tools project, which contains comments from 2005 to January 2019. We select subreddits with at least 10k comments and remove deleted and non-English comments. To address concerns of demographic bias and toxic language, we take a series of data curation measures to ensure our data does not reinforce general, nor emotion-specific, language biases. We identify harmful comments using pre-defined lists containing offensive/adult, vulgar, identity, and religion terms. We remove subreddits that are not safe for work and where 10%+ of comments include offensive/adult and vulgar tokens. We manually review identity comments and remove those offensive towards a particular ethnicity, gender, sexual orientation, or disability. We apply NLTK's word tokenizer and select comments 3-30 tokens long. We reduce sentiment bias by removing subreddits with little representation of positive, negative, ambiguous, or neutral sentiment. We assign a predicted emotion to each comment using a pilot model. We perform downsampling to avoid over representation of popular subreddits. We mask proper names referring to people with a [NAME] token, using a BERT-based Named Entity Tagger. We mask religion terms with a [RELIGION] token. The final set of selected emotions is listed in Table 1, and Figure 1. We assigned three raters to each example. All raters are native English speakers from India."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0220525,
+        "input_tokens": 7583,
+        "output_tokens": 710
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

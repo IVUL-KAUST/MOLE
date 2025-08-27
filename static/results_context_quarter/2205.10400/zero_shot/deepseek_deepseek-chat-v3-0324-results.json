@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "MultiWOZ",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "unknown",
+        "HF Link": "unknown",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A multilingual task-oriented dialog dataset translated from MultiWOZ 2.1 to Arabic, Chinese, German, and Russian.",
+        "Volume": 2000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "MultiWOZ: A Multilingual Multi-Domain Task-Oriented Dialog Dataset",
+        "Paper Link": "unknown",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Upon-Request",
+        "Cost": "unknown",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "unknown",
+        "Venue Type": "conference",
+        "Venue Name": "unknown",
+        "Authors": [
+            "Goran Glava\u0161",
+            "Simone Paolo Ponzetto",
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107"
+        ],
+        "Affiliations": [
+            "University of Mannheim",
+            "University of Cambridge"
+        ],
+        "Abstract": "The work presents MultiWOZ, a multilingual task-oriented dialog dataset translated from MultiWOZ 2.1 to Arabic, Chinese, German, and Russian. The dataset is used to evaluate cross-lingual transfer for dialog state tracking and response retrieval tasks."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.14285714285714285,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3684210526315789
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00687686,
+        "input_tokens": 7978,
+        "output_tokens": 520
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

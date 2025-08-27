@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "RefinedWeb",
+        "Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
+        "HF Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A high-quality five trillion tokens web-only English pretraining dataset",
+        "Volume": 5000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Technology Innovation Institute",
+            "LightOn"
+        ],
+        "Derived From": [
+            "CommonCrawl"
+        ],
+        "Paper Title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+        "Paper Link": "https://arxiv.org/abs/2306.01116",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "ICML 2023",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Machine Learning",
+        "Authors": [
+            "Guilherme Penedo",
+            "Quentin Malartic",
+            "Daniel Hesslow",
+            "Ruxandra Cojocaru",
+            "Alessandro Cappelli",
+            "Hamza Alobeidli",
+            "Baptiste Pannier",
+            "Ebtesam Almazrouei",
+            "Julien Launay"
+        ],
+        "Affiliations": [
+            "LightOn",
+            "Technology Innovation Institute, 9639 Masdar City, Abu Dhabi, United Arab Emirates",
+            "LPENS, \u00c9cole normale sup\u00e9rieure"
+        ],
+        "Abstract": "Large language models are commonly trained on a mixture of filtered web data and curated 'high-quality' corpora. We show that properly filtered and deduplicated web data alone can lead to powerful models, outperforming models trained on curated corpora. We publicly release an extract of 600 billion tokens from our RefinedWeb dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0022614,
+        "input_tokens": 10665,
+        "output_tokens": 486
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.01116"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

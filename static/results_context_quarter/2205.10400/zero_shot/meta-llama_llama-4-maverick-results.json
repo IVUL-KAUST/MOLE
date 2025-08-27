@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "Name": "Multi$^3$WOZ",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian",
+            "English"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A multilingual task-oriented dialog dataset created by translating the English MultiWOZ 2.1 dataset to Arabic, Chinese, German, and Russian.",
+        "Volume": 10000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "Huawei"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "Multi$^3$WOZ: A Multilingual, Multi-Domain, Multi-Parallel Dataset for Dialogue State Tracking and Response Retrieval",
+        "Paper Link": "https://arxiv.org/abs/2205.10400",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Goran Glava\u0161",
+            "Simone Paolo Ponzetto",
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan",
+            "Vuli\u0107"
+        ],
+        "Affiliations": [
+            "University of Cambridge",
+            "University of Mannheim",
+            "Huawei"
+        ],
+        "Abstract": "The 'abstract' field is not directly extractable; however, the paper discusses the creation of Multi$^3$WOZ, a multilingual task-oriented dialog dataset. It is created by translating the English MultiWOZ 2.1 dataset to Arabic, Chinese, German, and Russian, aiming to facilitate cross-lingual transfer for dialog state tracking and response retrieval tasks."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0015246,
+        "input_tokens": 7978,
+        "output_tokens": 612
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

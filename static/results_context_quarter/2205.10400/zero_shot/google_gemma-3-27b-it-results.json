@@ -1,0 +1,104 @@
+{
+    "metadata": {
+        "Name": "MultiWOZ-ZH",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The dataset contains 2,000 dialogs from the development and test portions of the English MultiWOZ 2.1 dataset translated to Arabic, Chinese, German, and Russian.",
+        "Volume": 2000.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "MWK Baden-W\u00fcrttemberg",
+            "Deutsche Forschungsgemeinschaft",
+            "European Research Council",
+            "University of Cambridge",
+            "Huawei"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2205.10400",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "The work presents a multilingual task-oriented dialog dataset created by translating the English MultiWOZ 2.1 dataset to Arabic, Chinese, German, and Russian. The dataset is used to evaluate cross-lingual transfer performance for dialog state tracking and response retrieval tasks."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3157894736842105
+    },
+    "length_forcing": 0.9333333333333332,
+    "cost": {
+        "cost": 0.00112161,
+        "input_tokens": 7990,
+        "output_tokens": 523
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

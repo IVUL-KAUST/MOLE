@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://github.com/declare-lab/goemotions",
+        "HF Link": "https://huggingface.co/datasets/go_emotions",
+        "License": "CC BY-NC 4.0",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "GoEmotions is a large dataset of Reddit comments labeled for 27 emotions or Neutral, designed for fine-grained emotion classification.",
+        "Volume": 58000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "declare-lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://arxiv.org/abs/1908.09460",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "emotion classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Saif Mohammad",
+            "Ali Hutto",
+            "Vivek Kulkarni",
+            "Suhas Roy",
+            "Srijan Kumar",
+            "Joanne Boakye",
+            "Dipanjan Das",
+            "Sameer Singh"
+        ],
+        "Affiliations": [
+            "Amazon",
+            "University of Michigan"
+        ],
+        "Abstract": "Our dataset is composed of 58K Reddit comments, labeled for one or more of 27 emotion(s) or Neutral. We identify harmful comments using pre-defined lists containing offensive/adult, vulgar, identity, and religion terms. We assign three raters to each example, and for those examples where no raters agree on at least one emotion label, we assign two additional raters. We present a strong baseline emotion prediction model for GoEmotions, and conduct transfer learning experiments on existing emotion benchmarks to show that our data generalizes well to different domains and taxonomies."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0013881,
+        "input_tokens": 11216,
+        "output_tokens": 519
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

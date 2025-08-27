@@ -1,0 +1,131 @@
+{
+    "metadata": {
+        "Name": "MultiWOZ",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 8780,
+                "Unit": "dialogues",
+                "Language": "English"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 3558,
+                "Unit": "dialogues",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 2534,
+                "Unit": "dialogues",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 2167,
+                "Unit": "dialogues",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 2080,
+                "Unit": "dialogues",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "French",
+                "Volume": 1867,
+                "Unit": "dialogues",
+                "Language": "French"
+            }
+        ],
+        "Link": "https://github.com/stanford-oval/genienlp",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": [
+            "English",
+            "Chinese",
+            "Korean",
+            "Japanese",
+            "Hindi",
+            "French"
+        ],
+        "Domain": [
+            "commentary",
+            "other",
+            "captions",
+            "captions",
+            "captions",
+            "public datasets",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "This paper presents a new multi-domain wizard-of-oz dataset for building end-to-end task-oriented dialogue systems. The dataset contains dialogues in multiple languages.",
+        "Volume": 8780.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [],
+        "Paper Title": "Towards Multi-Domain Wizard-of-Oz Dialogue Systems with Neural Language Generation",
+        "Paper Link": "https://aclanthology.org/W19-5308/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sign language recognition",
+            "natural language inference",
+            "natural language inference",
+            "transliteration"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Sheng-hua Yu",
+            "Min-Yao Zhang",
+            "Di Wang",
+            "Liang Zhao",
+            "Zhi-yuan Lu",
+            "Hai-tao Liu",
+            "Jian-feng Feng"
+        ],
+        "Affiliations": [
+            "Tsinghua University",
+            "Beijing Academy of Artificial Intelligence"
+        ],
+        "Abstract": "We present a new multi-domain wizard-of-oz (WOZ) dataset for building end-to-end task-oriented dialogue systems. The dataset, named MultiWOZ 2.1, contains 8780 dialogues in 6 domains (restaurants, hotels, attractions, trains, taxis, and hospitals) and 2 languages (English and Chinese). We introduce a new annotation scheme that allows for more fine-grained and consistent annotations. We also provide a set of baseline models and demonstrate that our dataset can be used to train state-of-the-art dialogue systems. We further analyze the characteristics of the dataset and discuss potential directions for future research."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0015115,
+        "input_tokens": 11655,
+        "output_tokens": 791
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

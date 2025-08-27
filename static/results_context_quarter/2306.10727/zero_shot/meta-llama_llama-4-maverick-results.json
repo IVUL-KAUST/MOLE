@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "Jamp",
+        "Link": "https://github.com/tomo-ut/temporalNLI_dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "A Japanese NLI dataset for temporal inference",
+        "Volume": 0.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo",
+            "The University of Texas at Austin"
+        ],
+        "Derived From": [
+            "JSeM"
+        ],
+        "Paper Title": "Jamp: Controlled Japanese Temporal Inference Dataset for Evaluating Generalization Capacity of Language Models",
+        "Paper Link": "https://arxiv.org/abs/2306.10727",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Tomoki Sugimoto",
+            "Yasumasa Onoe",
+            "Hitomi Yanaka"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "The University of Texas at Austin"
+        ],
+        "Abstract": "This paper presents Jamp, a Japanese NLI dataset for temporal inference, and evaluates the generalization capacity of several language models on this dataset. The dataset is constructed using a template-based approach to ensure diversity and control over the vocabulary and inference patterns. The authors evaluate several pre-trained language models on the dataset in zero-shot and fine-tuning settings."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0019492,
+        "input_tokens": 7719,
+        "output_tokens": 368
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.10727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "Name": "mWoZ",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "https://github.com/uds-lsv/mWoZ",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The mWoZ dataset is a multilingual task-oriented dialog dataset created by translating 2,000 dialogs from the English MultiWOZ 2.1 dataset into Arabic, Chinese, German, and Russian. It serves as a benchmark for evaluating cross-lingual transfer for task-oriented dialog systems.",
+        "Volume": 2000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "Multi2ConvAI project",
+            "JOIN-T 2 project"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "Cross-Lingual Transfer for Task-Oriented Dialogue Systems: The mWoZ Dataset",
+        "Paper Link": "https://arxiv.org/abs/2301.12345",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2023",
+        "Authors": [
+            "Goran Glava\u0161",
+            "Simone Paolo Ponzetto",
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107"
+        ],
+        "Affiliations": [
+            "University of Cambridge",
+            "Multi2ConvAI project",
+            "JOIN-T 2 project",
+            "European Research Council"
+        ],
+        "Abstract": "We introduce mWoZ, a multilingual task-oriented dialog dataset created by translating 2,000 dialogs from the English MultiWOZ 2.1 dataset into Arabic, Chinese, German, and Russian. mWoZ serves as a benchmark for evaluating cross-lingual transfer for task-oriented dialog systems. We provide extensive experiments on cross-lingual transfer for dialog state tracking (DST) and response retrieval (RR) tasks, demonstrating the challenges and potential of multilingual transfer in task-oriented dialog systems."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0228525,
+        "input_tokens": 7978,
+        "output_tokens": 707
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

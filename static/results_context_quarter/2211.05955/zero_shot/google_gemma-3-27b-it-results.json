@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "Sinhala"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "This paper introduces MEE, a novel multilingual event extraction dataset. It aims to address the lack of high-quality datasets for multilingual event extraction. The dataset contains annotations for event triggers and arguments in multiple languages.",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Paper Link": "https://arxiv.org/abs/2211.05955",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "relation extraction",
+            "named entity recognition"
+        ],
+        "Venue Title": "EMNLP2022",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Amir Pouran Veyseh",
+            "Javid Ebrahimi",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+        ],
+        "Affiliations": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Abstract": "This paper introduces MEE, a novel multilingual event extraction dataset. It aims to address the lack of high-quality datasets for multilingual event extraction. The dataset contains annotations for event triggers and arguments in multiple languages."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9333333333333332,
+    "cost": {
+        "cost": 0.0005336366724,
+        "input_tokens": 6087,
+        "output_tokens": 377
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05955"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

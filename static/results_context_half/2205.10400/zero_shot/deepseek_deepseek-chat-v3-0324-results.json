@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "MultiWOZ 2.1",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "https://pypi.org/project/googletrans",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A multilingual dataset derived from MultiWOZ 2.1, translated to Arabic, Chinese, German, and Russian for task-oriented dialog research.",
+        "Volume": 2000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "Multilingual Task-Oriented Dialog Dataset: MultiWOZ 2.1",
+        "Paper Link": "https://arxiv.org/abs/2205.10400",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Goran Glava\u0161",
+            "Simone Paolo Ponzetto",
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107"
+        ],
+        "Affiliations": [
+            "University of Mannheim",
+            "University of Cambridge"
+        ],
+        "Abstract": "This paper introduces a multilingual dataset derived from MultiWOZ 2.1, translated to Arabic, Chinese, German, and Russian. The dataset is designed for task-oriented dialog research, focusing on dialog state tracking and response retrieval. The translation process involved automatic translation followed by manual post-editing, ensuring high quality and alignment between utterances and slot values."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00446536,
+        "input_tokens": 11932,
+        "output_tokens": 545
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

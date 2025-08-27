@@ -1,0 +1,156 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "Haitian Creole",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Eastern Apur\u00edmac Quechua",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Eastern Apur\u00edmac Quechua"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://github.com/cambridgeltl/xcopa",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Estonian",
+            "Haitian Creole",
+            "Indonesian",
+            "Italian",
+            "Eastern Apur\u00edmac Quechua",
+            "Swahili",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Chinese"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "XCOPA is a multilingual extension of the COPA dataset, covering 11 languages. It focuses on causal reasoning and includes translated validation and test sets.",
+        "Volume": 100.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://github.com/cambridgeltl/xcopa",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "language modeling"
+        ],
+        "Venue Title": "Conference",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "XCOPA is a multilingual extension of the COPA dataset, covering 11 languages. It focuses on causal reasoning and includes translated validation and test sets. The dataset was created by translating the English COPA validation and test sets into 11 languages, ensuring the preservation of causal relations and cultural context."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.00321248,
+        "input_tokens": 8066,
+        "output_tokens": 852
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

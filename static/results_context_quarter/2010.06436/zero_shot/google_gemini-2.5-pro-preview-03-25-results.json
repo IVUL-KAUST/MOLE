@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "RuSemShift",
+        "Link": "https://github.com/juliarodina/RuSemShift",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A large-scale manually annotated test set for semantic change modeling in Russian. It covers two time periods: pre-Soviet to Soviet and Soviet to post-Soviet. Annotation was done by crowd-sourcing, following the DURel framework, using sentence contexts from the Russian National Corpus.",
+        "Volume": 98.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Research University Higher School of Economics",
+            "University of Oslo"
+        ],
+        "Derived From": [
+            "Kutuzov and Kuzmenko (2017) test set",
+            "Fomin et al. (2018) test set",
+            "Russian National Corpus"
+        ],
+        "Paper Title": "RuSemShift: a dataset of historical lexical semantic change in Russian",
+        "Paper Link": "https://aclanthology.org/2020.coling-main.315",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "embedding evaluation",
+            "other"
+        ],
+        "Venue Title": "Proceedings of the 28th International Conference on Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Computational Linguistics",
+        "Authors": [
+            "Julia Rodina",
+            "Andrey Kutuzov"
+        ],
+        "Affiliations": [
+            "National Research University Higher School of Economics",
+            "University of Oslo"
+        ],
+        "Abstract": "We present RuSemShift, a large-scale manually annotated test set for the task of semantic change modeling in Russian for two long-term time period pairs: from the pre-Soviet through the Soviet times and from the Soviet through the post-Soviet times. Target words were annotated by multiple crowd-source workers. The annotation process was organized following the DURel framework and was based on sentence contexts extracted from the Russian National Corpus. Additionally, we report the performance of several distributional approaches on RuSemShift, achieving promising results, which at the same time leave room for other researchers to improve."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0455875,
+        "input_tokens": 5414,
+        "output_tokens": 1511
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.06436"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

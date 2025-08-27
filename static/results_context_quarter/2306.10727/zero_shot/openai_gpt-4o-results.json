@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Jamp",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "Jamp is a Japanese NLI dataset for temporal inference, designed to evaluate the generalization capacity of language models. It consists of problems generated from templates based on tense fragments, ensuring diverse sentence patterns and temporal inference patterns.",
+        "Volume": 0.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo",
+            "The University of Texas at Austin"
+        ],
+        "Derived From": [
+            "JSeM",
+            "FraCaS"
+        ],
+        "Paper Title": "Jamp: Controlled Japanese Temporal Inference Dataset for Evaluating Generalization Capacity of Language Models",
+        "Paper Link": "https://arxiv.org/abs/2306.10727",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Tomoki Sugimoto",
+            "Yasumasa Onoe",
+            "Hitomi Yanaka"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "The University of Texas at Austin"
+        ],
+        "Abstract": "Natural Language Inference (NLI) is the task of determining whether a set of premises entail a hypothesis. NLI involving temporal inference is a challenging task and remains a significant problem for pre-trained language models (LMs). One line of research has investigated the temporal inference abilities of LMs. However, existing datasets and analyses primarily focus on English, and more analysis and datasets are required for other languages, including Japanese. Therefore, it is still unclear to what extent current LMs can perform various types of temporal inference across languages. In this paper, we construct Jamp, which is a Japanese NLI dataset for temporal inference, and evaluate the generalization capacity of several LMs on our dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.019785,
+        "input_tokens": 7719,
+        "output_tokens": 465
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.10727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

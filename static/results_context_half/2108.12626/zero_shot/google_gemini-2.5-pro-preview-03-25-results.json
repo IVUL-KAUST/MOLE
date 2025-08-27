@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "HeadlineCause",
+        "Link": "https://huggingface.co/datasets/IlyaGusev/headline_cause",
+        "HF Link": "https://huggingface.co/datasets/IlyaGusev/headline_cause",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A dataset for detecting implicit causal relations between pairs of news headlines. It includes over 5000 headline pairs from English news and over 9000 from Russian news, labeled through crowdsourcing. The pairs range from unrelated to having causation or refutation relations.",
+        "Volume": 11649.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Moscow Institute of Physics and Technology",
+            "Yandex"
+        ],
+        "Derived From": [
+            "Lenta.Ru-News-Dataset",
+            "Telegram Data Clustering Contest"
+        ],
+        "Paper Title": "HeadlineCause: A Dataset of News Headlines for Detecting Causalities",
+        "Paper Link": "https://arxiv.org/abs/2110.08322",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "natural language inference",
+            "text generation"
+        ],
+        "Venue Title": "NeurIPS 2021 Datasets and Benchmarks Track",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Neural Information Processing Systems",
+        "Authors": [
+            "Ilya Gusev",
+            "Alexey Tikhonov"
+        ],
+        "Affiliations": [
+            "Moscow Institute of Physics and Technology",
+            "Yandex"
+        ],
+        "Abstract": "Detecting implicit causal relations in texts is a task that requires both common sense and world knowledge. Existing datasets are focused either on commonsense causal reasoning or explicit causal relations. In this work, we present HeadlineCause, a dataset for detecting implicit causal relations between pairs of news headlines. The dataset includes over 5000 headline pairs from English news and over 9000 headline pairs from Russian news labeled through crowdsourcing. The pairs vary from totally unrelated or belonging to the same general topic to the ones including causation and refutation relations. We also present a set of models and experiments that demonstrates the dataset validity, including a multilingual XLM-RoBERTa based model for causality detection and a GPT-2 based model for possible effects prediction."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.03443625,
+        "input_tokens": 7552,
+        "output_tokens": 1265
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.12626"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

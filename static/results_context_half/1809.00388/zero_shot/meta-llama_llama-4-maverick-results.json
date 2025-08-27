@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "MTNT Dataset",
+        "Link": "https://github.com/pmichel31415/mtnt",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset for evaluating machine translation models on noisy text from social media.",
+        "Volume": 36058.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Reddit"
+        ],
+        "Derived From": [],
+        "Paper Title": "MTNT: A Testbed for Machine Translation of Noisy Text",
+        "Paper Link": "https://arxiv.org/abs/1809.00388",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "EMNLP 2018",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Paul Michel",
+            "Kenton Murray",
+            "Graham Neubig",
+            "Matt Post"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University",
+            "Johns Hopkins University"
+        ],
+        "Abstract": "This paper presents a new dataset for evaluating machine translation models on noisy text from social media. The dataset contains parallel training and test data in both directions for two language pairs, English-French and English-Japanese, as well as monolingual data in those three languages."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00225396,
+        "input_tokens": 11826,
+        "output_tokens": 369
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

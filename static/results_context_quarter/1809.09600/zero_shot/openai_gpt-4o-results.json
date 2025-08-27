@@ -1,0 +1,64 @@
+{
+    "metadata": {
+        "Name": "Multi-hop QA Dataset",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The dataset contains 113k Wikipedia-based question-answer pairs requiring multi-hop reasoning over multiple documents. It includes diverse questions not constrained to pre-existing knowledge bases, with sentence-level supporting facts for reasoning and factoid comparison questions.",
+        "Volume": 113000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "A New Dataset for Multi-hop Question Answering",
+        "Paper Link": "https://arxiv.org/abs/1809.09600",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Preprint",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "Existing question answering (QA) datasets fail to train QA systems to perform complex reasoning and provide explanations for answers. We introduce a new dataset with 113k Wikipedia-based question-answer pairs with four key features: (1) the questions require finding and reasoning over multiple supporting documents to answer; (2) the questions are diverse and not constrained to any pre-existing knowledge bases or knowledge schemas; (3) we provide sentence-level supporting facts required for reasoning, allowing QA systems to reason with strong supervision and explain the predictions; (4) we offer a new type of factoid comparison questions to test QA systems' ability to extract relevant facts and perform necessary comparison. We show that the dataset is challenging for the latest QA systems, and the supporting facts enable models to improve performance and make explainable predictions."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.016385,
+        "input_tokens": 6440,
+        "output_tokens": 429
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.09600"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

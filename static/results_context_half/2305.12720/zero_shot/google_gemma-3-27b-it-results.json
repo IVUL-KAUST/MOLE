@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "Name": "Japanese Question Answering Dataset",
+        "Link": "",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2025,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "This dataset is a Japanese question answering dataset. It is used for training and evaluating language models.",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2305.12720",
+        "Script": "Hiragana",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.21052631578947367
+    },
+    "length_forcing": 0.8999999999999999,
+    "cost": {
+        "cost": 0.000567274248,
+        "input_tokens": 7089,
+        "output_tokens": 262
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.12720"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

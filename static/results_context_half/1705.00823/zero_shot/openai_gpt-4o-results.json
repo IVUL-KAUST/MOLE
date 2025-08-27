@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "https://github.com/stair-lab-cmu/stair-captions",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "STAIR Captions is a large-scale Japanese image caption dataset, constructed to facilitate research in image captioning and related fields.",
+        "Volume": 1.2,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "STAIR Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://arxiv.org/abs/1705.00823",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "image captioning"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yoshitaka Ushiku",
+            "Tatsuya Harada"
+        ],
+        "Affiliations": [
+            "The University of Tokyo"
+        ],
+        "Abstract": "We present STAIR Captions, a large-scale Japanese image caption dataset. The dataset contains over 1.2 million Japanese captions for 164,062 images, which are manually created by native Japanese speakers. This dataset is designed to facilitate research in image captioning and related fields. We also provide a baseline model and evaluation metrics for future research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0082275,
+        "input_tokens": 3396,
+        "output_tokens": 390
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

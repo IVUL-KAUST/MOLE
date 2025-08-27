@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "WikiOmnia",
+        "Link": "https://huggingface.co/datasets/RussianNLP/wikiomnia",
+        "HF Link": "https://huggingface.co/datasets/RussianNLP/wikiomnia",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A QA dataset for Russian, obtained in a fully-automated way, containing QA pairs for every article of Russian Wikipedia.",
+        "Volume": 15900000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SberDevices",
+            "AIRI"
+        ],
+        "Derived From": [
+            "Russian Wikipedia"
+        ],
+        "Paper Title": "WikiOmnia: filtration and evaluation of the generated QA corpus on the whole Russian Wikipedia",
+        "Paper Link": "https://arxiv.org/pdf/2107.00215.pdf",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Dina Pisarevskaya",
+            "Tatiana Shavrina"
+        ],
+        "Affiliations": [
+            "Independent Researcher",
+            "Artificial Intelligence Research Institute (AIRI)",
+            "SberDevices"
+        ],
+        "Abstract": "The paper presents WikiOmnia, a new publicly available set of QA pairs and corresponding Russian Wikipedia article summary sections, composed with a fully automated generation and filtration pipeline. The dataset contains 2 parts: the voluminous, automatically generated part and the filtered part. The pipeline is available open-source and is also tested for creating SQuAD-formatted QA on other domains."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00121374,
+        "input_tokens": 5528,
+        "output_tokens": 410
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.08009"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

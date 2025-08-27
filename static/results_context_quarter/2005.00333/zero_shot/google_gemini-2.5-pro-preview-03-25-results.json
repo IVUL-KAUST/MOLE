@@ -1,0 +1,171 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "Haitian Creole",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Quechua",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Eastern Apur\u00edmac Quechua"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 600,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/xcopa",
+        "HF Link": "https://huggingface.co/datasets/xcopa",
+        "License": "Apache-2.0",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Estonian",
+            "Haitian Creole",
+            "Indonesian",
+            "Italian",
+            "Eastern Apur\u00edmac Quechua",
+            "Swahili",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Chinese"
+        ],
+        "Domain": [
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "The Cross-lingual Choice of Plausible Alternatives (XCOPA) is a typologically diverse multilingual dataset for causal commonsense reasoning. It is a translation and re-annotation of the English COPA dataset and covers 11 languages from 11 different language families, plus the original English.",
+        "Volume": 7200.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "University of Mannheim",
+            "University of Zurich"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.49",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Edoardo M. Ponti",
+            "Goran Glava\u0161",
+            "Olga Majewska",
+            "Qianchu Liu",
+            "Ivan Vuli\u0107",
+            "Anna Korhonen"
+        ],
+        "Affiliations": [
+            "University of Cambridge",
+            "University of Mannheim",
+            "University of Zurich"
+        ],
+        "Abstract": "The Cross-lingual Choice of Plausible Alternatives (XCOPA) is a typologically diverse multilingual dataset for causal commonsense reasoning. It is a translation and re-annotation of the English COPA and covers 11 languages from 11 different language families. We provide a detailed analysis of the dataset creation process, including the discussion of the main translation and cultural adaptation challenges. We use XCOPA to evaluate the zero-shot cross-lingual transfer capabilities of a range of massively multilingual transformers. We find that their performance substantially lags behind the monolingual performance of a comparable English model. The results suggest that XCOPA is a challenging benchmark for future research in cross-lingual transfer."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.08342125,
+        "input_tokens": 8066,
+        "output_tokens": 2614
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "http://clic.cimec.unitn.it/lambada/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "LAMBADA is a dataset designed to evaluate the ability of models to predict a target word in a sentence when given a broader context. The task is challenging as the target word is difficult to guess with only the sentence but becomes easy with the context.",
+        "Volume": 10022.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Trento"
+        ],
+        "Derived From": [],
+        "Paper Title": "LAMBADA: A Benchmark for Open-Ended Language Modeling",
+        "Paper Link": "http://clic.cimec.unitn.it/lambada/",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "word prediction"
+        ],
+        "Venue Title": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "ACL",
+        "Authors": [
+            "Anonymous"
+        ],
+        "Affiliations": [
+            "University of Trento"
+        ],
+        "Abstract": "In this paper, we introduce the LAMBADA dataset (Language Modeling Broadened to Account for Discourse Aspects). LAMBADA proposes a word prediction task where the target item is difficult to guess for English speakers when only the sentence in which it appears is available, but becomes easy when a broader context is presented. LAMBADA casts language understanding in the classic word prediction framework of language modeling. We can thus use it to test several existing language modeling architectures, including systems with capacity to hold longer-term contextual memories. In our preliminary experiments, none of these models came even remotely close to human performance, confirming that LAMBADA is a challenging benchmark for research on automated models of natural language understanding."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0241225,
+        "input_tokens": 9415,
+        "output_tokens": 464
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

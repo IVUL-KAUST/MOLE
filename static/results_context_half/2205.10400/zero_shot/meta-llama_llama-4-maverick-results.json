@@ -1,0 +1,112 @@
+{
+    "metadata": {
+        "Name": "Multi2ConvAI",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "https://github.com/multi2convai/multi2convai.github.io/blob/main/data/mz2.json",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "Multilingual MultiWOZ 2.1 dataset, translated to Arabic, Chinese, German, and Russian",
+        "Volume": 4000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "Heidelberg University"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "Multi2ConvAI: Multilingual and Cross-lingual Conversational AI",
+        "Paper Link": "https://arxiv.org/abs/2207.00528",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "EMNLP 2022",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Ivan Vuli\u0107",
+            "Goran Glava\u0161",
+            "Simone Paolo Ponzetto",
+            "Chia-Chien Hung",
+            "Anne Lauscher"
+        ],
+        "Affiliations": [
+            "University of Cambridge",
+            "Heidelberg University",
+            "University of Mannheim"
+        ],
+        "Abstract": "This paper presents Multi2ConvAI, a multilingual and cross-lingual conversational AI dataset for task-oriented dialog (TOD) systems. The dataset is created by translating the MultiWOZ 2.1 dataset to four languages: Arabic, Chinese, German, and Russian. The paper evaluates the performance of several state-of-the-art models on the dataset and demonstrates the challenges of cross-lingual transfer for TOD tasks."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0024324,
+        "input_tokens": 11932,
+        "output_tokens": 648
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

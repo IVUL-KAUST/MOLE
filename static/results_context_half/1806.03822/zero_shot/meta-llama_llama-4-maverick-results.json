@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "SQuAD with unanswerable questions",
+        "Link": "https://bit.ly/2rDHBgY",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "SQuAD with unanswerable questions",
+        "Volume": 130319.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "SQuAD 1.1"
+        ],
+        "Paper Title": "Know What You Don't Know: Unanswerable Questions for SQuAD",
+        "Paper Link": "https://arxiv.org/abs/1806.03822",
+        "Tokenized": false,
+        "Host": "CodaLab",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2018",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Robin Jia",
+            "Percy Liang"
+        ],
+        "Affiliations": [
+            "Stanford University"
+        ],
+        "Abstract": "Existing reading comprehension datasets"
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0018136,
+        "input_tokens": 8523,
+        "output_tokens": 312
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1806.03822"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

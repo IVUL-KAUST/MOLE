@@ -1,0 +1,150 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "Haitian Creole",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Simplified Chinese"
+            }
+        ],
+        "Link": "https://github.com/cambridgeltl/xcopa",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Estonian",
+            "Haitian Creole",
+            "Indonesian",
+            "Italian",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Chinese"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Volume": 11000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Cambridge LT"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://github.com/cambridgeltl/xcopa",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Maxime Ferrari",
+            "Shima Asaadi",
+            "Hanyu Jiang",
+            "Camillo Scarton",
+            "Ekaterina Vylomova"
+        ],
+        "Affiliations": [
+            "University of Melbourne",
+            "University of Cambridge"
+        ],
+        "Abstract": "The Cross-lingual Choice of Plausible Alternatives (XCOPA) dataset is a benchmark to evaluate the performance of cross-lingual pretrained models for causal commonsense reasoning in 11 typologically diverse languages. The dataset consists of 11000 questions in the test and validation sets, split across 11 languages. Each question contains a premise and two alternatives, where the task is to choose the alternative that is more plausible as a cause or effect of the premise. The questions are translated from the English COPA dataset, and the translation process is described in detail."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0020104,
+        "input_tokens": 8066,
+        "output_tokens": 740
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

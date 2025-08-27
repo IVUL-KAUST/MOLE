@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "MTNT",
+        "Link": "http://www.cs.cmu.edu/~pmichel1/mtnt/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "MTNT is a dataset collected from Reddit, containing noisy text in English, French, and Japanese. It is designed to provide a benchmark for machine translation of noisy or non-standard text, with a focus on naturally occurring noise such as spelling errors, grammar errors, emojis, and profanities.",
+        "Volume": 26485.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [],
+        "Paper Title": "MTNT: A Testbed for Machine Translation of Noisy Text",
+        "Paper Link": "https://github.com/pmichel31415/mtnt",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP",
+        "Authors": [
+            "Paul Michel",
+            "Graham Neubig"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "We introduce MTNT, a machine translation test set that contains noisy user-generated content with a focus on evaluating the robustness of machine translation models. MTNT is collected from Reddit and contains English, French, and Japanese data. We show that MTNT is more challenging than existing test sets and that it contains a variety of naturally occurring noise phenomena such as spelling errors, grammatical errors, and the use of emojis and profanities."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.019695,
+        "input_tokens": 7642,
+        "output_tokens": 460
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

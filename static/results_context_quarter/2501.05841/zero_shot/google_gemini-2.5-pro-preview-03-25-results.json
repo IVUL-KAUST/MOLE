@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "Russian Firms\u2019 Financial Statements Dataset (RFSD)",
+        "Link": "https://github.com/sonrac/rfsd",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large-scale panel dataset of Russian firms\u2019 financial statements for 2012-2021. The dataset is based on data from the Federal Tax Service of Russia\u2019s State Information Resource of Financial Statements (GIR BO) and contains over 43 million firm-year observations for eligible firms.",
+        "Volume": 43048385.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "New Economic School",
+            "HSE University"
+        ],
+        "Derived From": [],
+        "Paper Title": "The Russian Firms\u2019 Financial Statements Dataset (RFSD)",
+        "Paper Link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4308181",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "SSRN Electronic Journal",
+        "Venue Type": "preprint",
+        "Venue Name": "Social Science Research Network",
+        "Authors": [
+            "Maria Petrova",
+            "Andrei V. Potapov",
+            "Stepan M. Ipatov",
+            "Andrei M. Tinkov"
+        ],
+        "Affiliations": [
+            "IRES, New Economic School",
+            "HSE University",
+            "New Economic School"
+        ],
+        "Abstract": "We present the Russian Firms\u2019 Financial Statements Dataset (RFSD), a new large-scale panel dataset of Russian firms\u2019 financial statements for 2012-2021. The dataset is based on the data from the Federal Tax Service of Russia\u2019s State Information Resource of Financial Statements (GIR BO). The dataset contains financial statements for over 240,000 unique firms, resulting in over 1.2 million firm-year observations. In addition to the raw data, we provide a set of variables that can be used to assess the quality of the data and to identify potential data issues. We also provide a set of scripts that can be used to replicate the dataset and to perform some basic data analysis. We believe that the RFSD will be a valuable resource for researchers studying the Russian economy."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.05400375,
+        "input_tokens": 11093,
+        "output_tokens": 1486
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "M2DS",
+        "Subsets": [],
+        "Link": "https://example.com/not-provided",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "Japanese",
+            "Korean",
+            "Tamil",
+            "Sinhala"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A multilingual dataset for multi-document summarization (MDS), featuring document-summary pairs in five languages (English, Japanese, Korean, Tamil, and Sinhala) sourced from BBC articles published between 2010 and 2023. It is presented as the first dataset of its kind to address the gap in multilingual MDS resources.",
+        "Volume": 0.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Moratuwa",
+            "ConscientAI"
+        ],
+        "Derived From": [],
+        "Paper Title": "M2DS: Multilingual Dataset for Multi-document Summarisation",
+        "Paper Link": "https://example.com/not-provided",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "Not specified in the document",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Kushan Hewapathirana",
+            "Nisansa de Silva",
+            "C.D. Athuraliya"
+        ],
+        "Affiliations": [
+            "Dept. of Computer Science & Engineering, University of Moratuwa, Sri Lanka",
+            "ConscientAI, Sri Lanka"
+        ],
+        "Abstract": "In the rapidly evolving digital era, there is an increasing demand for concise information as individuals seek to distil key insights from various sources. Recent attention from researchers on Multi-document Summarisation (MDS) has resulted in diverse datasets covering customer reviews, academic papers, medical and legal documents, and news articles. However, the English-centric nature of these datasets has created a conspicuous void for multilingual datasets in today\u2019s globalised digital landscape, where linguistic diversity is celebrated. Media platforms such as British Broadcasting Corporation (BBC) have disseminated news in 20+ languages for decades. With only 380 million people speaking English natively as their first language, accounting for less than 5% of the global population, the vast majority primarily relies on other languages. These facts underscore the need for inclusivity in MDS research, utilising resources from diverse languages. Recognising this gap, we present the Multilingual Dataset for Multi-document Summarisation (M2DS), which, to the best of our knowledge, is the first dataset of its kind. It includes document-summary pairs in five languages from BBC articles published during the 2010-2023 period. This paper introduces M2DS, emphasising its unique multilingual aspect, and includes baseline scores from state-of-the-art MDS models evaluated on our dataset."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.05722118,
+        "input_tokens": 5772,
+        "output_tokens": 1747
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12336"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,93 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [],
+        "Link": "https://github.com/cambridgeltl/xcopa",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Estonian",
+            "Haitian Creole",
+            "Indonesian",
+            "Italian",
+            "Eastern Apur\u00edmac Quechua",
+            "Swahili",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Chinese"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A multilingual extension of the COPA (Choice of Plausible Alternatives) dataset for causal reasoning, covering 12 languages with translation guidelines and cultural adaptations.",
+        "Volume": 500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Cambridge LTL"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://arxiv.org/abs/2005.00333",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning"
+        ],
+        "Venue Title": "EMNLP 2020",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Edoardo M. Ponti",
+            "Goran Glava\u0161",
+            "Olga Majewska",
+            "Qianchu Liu",
+            "Ivan Vuli\u0107",
+            "Anna Korhonen"
+        ],
+        "Affiliations": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Abstract": "The ability to reason about causes and effects in complex situations is a cornerstone of intelligent behavior. To facilitate research in this direction, we introduce XCOPA: a multilingual dataset for causal commonsense reasoning in 12 languages, including resource-poor languages like Eastern Apur\u00edmac Quechua and Haitian Creole. The dataset is a translation and reannotation of the English COPA following a carefully designed procedure, which employs several translator guidelines and automatic quality checks to preserve the nuanced semantics of the original dataset. We evaluate a range of multilingual transfer learning models on this novel dataset and analyze the factors that bode well for transfer. Our results indicate that current multilingual models are still far from achieving parity with humans on this task. Moreover, our experiments demonstrate the utility of our dataset as a gauge for crosslingual transfer and as a resource to reveal shortcomings of state-of-the-art multilingual models."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.038874,
+        "input_tokens": 8066,
+        "output_tokens": 588
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

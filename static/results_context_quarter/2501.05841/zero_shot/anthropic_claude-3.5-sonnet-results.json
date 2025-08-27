@@ -1,0 +1,66 @@
+{
+    "metadata": {
+        "Name": "RFSD",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A comprehensive dataset of Russian firms' financial statements containing balance sheets, profit and loss statements, and equity changes",
+        "Volume": 43048385.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Russian Federal Tax Service"
+        ],
+        "Derived From": [],
+        "Paper Title": "Russian Firms' Financial Statements Dataset",
+        "Paper Link": "https://arxiv.org/abs/2501.05841",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "morphological analysis"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "A dataset containing financial statements from Russian firms including balance sheets, profit and loss statements, and statements of changes in equity. The dataset covers over 43 million firm-year observations with detailed financial line items and firm metadata."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.04149,
+        "input_tokens": 11093,
+        "output_tokens": 278
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

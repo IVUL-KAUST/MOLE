@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "SQuAD 2.0",
+        "Link": "https://bit.ly/2rDHBgY",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "SQuAD 2.0 combines existing SQuAD data with over 50,000 unanswerable questions written adversarially by crowdworkers to look similar to answerable ones",
+        "Volume": 130319.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "SQuAD 1.1"
+        ],
+        "Paper Title": "Know What You Don't Know: Unanswerable Questions for SQuAD",
+        "Paper Link": "https://bit.ly/2rDHBgY",
+        "Tokenized": false,
+        "Host": "CodaLab",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Robin Jia",
+            "Percy Liang"
+        ],
+        "Affiliations": [
+            "Computer Science Department, Stanford University"
+        ],
+        "Abstract": "Extractive reading comprehension systems can often locate the correct answer to a question in a context document, but they also tend to make unreliable guesses on questions for which the correct answer is not stated in the context. Existing datasets either focus exclusively on answerable questions, or use automatically generated unanswerable questions that are easy to identify. To address these weaknesses, we present SQuAD 2.0, the latest version of the Stanford Question Answering Dataset. SQuAD 2.0 combines existing SQuAD data with over 50,000 unanswerable questions written adversarially by crowdworkers to look similar to answerable ones. To do well on SQuAD 2.0, systems must not only answer questions when possible, but also determine when no answer is supported by the paragraph and abstain from answering. SQuAD 2.0 is a challenging natural language understanding task for existing models: a strong neural system that gets 86% F1 on SQuAD 1.1 achieves only 66% F1 on SQuAD 2.0."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.039552,
+        "input_tokens": 8523,
+        "output_tokens": 554
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1806.03822"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
