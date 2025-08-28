@@ -1,13 +1,11 @@
 {
     "metadata": {
         "Name": "",
-        "Subsets": [],
         "Link": "",
         "HF Link": "",
         "License": "custom",
         "Year": 2025,
         "Language": "multilingual",
-        "Dialect": "mixed",
         "Domain": [
             "other"
         ],
@@ -22,8 +20,7 @@
         "Provider": [],
         "Derived From": [],
         "Paper Title": "",
-        "Paper Link": "https://arxiv.org/abs/2309.12053",
-        "Script": "Arab-Latin",
+        "Paper Link": "https://arxiv.org/abs/2406.01574",
         "Tokenized": false,
         "Host": "other",
         "Access": "With-Fee",
@@ -40,27 +37,27 @@
         "Abstract": ""
     },
     "validation": {
-        "DIVERSITY": 0.3333333333333333,
         "ACCESSABILITY": 0.14285714285714285,
-        "CONTENT": 0.125,
-        "EVALUATION": 0.6666666666666666,
-        "AVERAGE": 0.23809523809523808
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.1111111111111111
     },
-    "length_forcing": 0.90625,
+    "length_forcing": 0.8965517241379307,
     "cost": {
-        "cost": 0,
-        "input_tokens": 53194,
-        "output_tokens": 0
+        "cost": 0.130218,
+        "input_tokens": 31574,
+        "output_tokens": 755
     },
     "config": {
-        "model_name": "qwen_qwen-2.5-72b-instruct",
+        "model_name": "anthropic_claude-3.5-sonnet",
         "few_shot": 0,
         "month": null,
-        "year": "2023",
+        "year": "2024",
         "keywords": [
             ""
         ],
-        "link": "https://arxiv.org/abs/2309.12053"
+        "link": "https://arxiv.org/abs/2406.01574"
     },
     "ratio_filling": 1.0,
     "error": "Expecting value: line 1 column 1 (char 0)"

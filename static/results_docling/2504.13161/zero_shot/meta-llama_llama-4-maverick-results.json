@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "CLIMB",
+        "Link": "https://huggingface.co/datasets/NovaSearch/ClimbMix",
+        "HF Link": "https://huggingface.co/datasets/NovaSearch/ClimbMix",
+        "License": "Apache-2.0",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A filtered 400-billion-token dataset for efficient pre-training, constructed using CLIMB, a novel clustering-based iterative mixture bootstrapping framework.",
+        "Volume": 400.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "NVIDIA",
+            "HuggingFace"
+        ],
+        "Derived From": [
+            "Nemotron-CC",
+            "smollm-corpus"
+        ],
+        "Paper Title": "CLIMB: CLustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
+        "Paper Link": "https://arxiv.org/abs/2406.03476",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "text generation"
+        ],
+        "Venue Title": "NeurIPS",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Neural Information Processing Systems",
+        "Authors": [
+            "Shizhe Diao",
+            "Yu Yang",
+            "Yonggan Fu"
+        ],
+        "Affiliations": [
+            "NVIDIA",
+            "University of Technology"
+        ],
+        "Abstract": "Pre-training datasets are typically collected from web content and lack inherent domain divisions. This work proposes CLIMB, an automated framework that discovers, evaluates, and refines data mixtures in a pre-training setting."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00432876,
+        "input_tokens": 22992,
+        "output_tokens": 419
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.13161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

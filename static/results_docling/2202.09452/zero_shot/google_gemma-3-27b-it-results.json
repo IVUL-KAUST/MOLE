@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "Name": "FREEM",
+        "Link": "https://github.com/LoicGrobol/zelda",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "crawling"
+        ],
+        "Description": "A large corpus and a language model for Early Modern French, aiming to digitise and analyse old textual sources.",
+        "Volume": 185643482.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Inria",
+            "Sorbonne Universit\u00b4e",
+            "Universit\u00b4e de Gen`eve",
+            "LIGM",
+            "Universit\u00b4e Gustave Eiffel",
+            "CNRS"
+        ],
+        "Derived From": [
+            "FRANTEXT int\u00b4egral",
+            "Electronic Enlightenment",
+            "Corpus Middelnederlands",
+            "Base Geste",
+            "Reference corpus of historical Slovene",
+            "Presto",
+            "CamemBERT",
+            "FlauBERT"
+        ],
+        "Paper Title": "From FREEM to D'AlemBERT: a Large Corpus and a Language Model for Early Modern French",
+        "Paper Link": "https://arxiv.org/abs/2202.09452",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "part of speech tagging"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Simon Gabay",
+            "Pedro Ortiz Suarez",
+            "Alexandre Bartz",
+            "Alix Chagu\u00b4e",
+            "Rachel Bawden",
+            "Philippe Gambette",
+            "Beno\u02c6\u0131t Sagot"
+        ],
+        "Affiliations": [
+            "Inria",
+            "Sorbonne Universit\u00b4e",
+            "Universit\u00b4e de Gen`eve",
+            "LIGM",
+            "Universit\u00b4e Gustave Eiffel",
+            "CNRS"
+        ],
+        "Abstract": "Language models for historical states of language are becoming increasingly important to allow the optimal digitisation and analysis of old textual sources. Because these historical states are at the same time more complex to process and more scarce in the corpora available, specific efforts are necessary to train natural language processing (NLP) tools adapted to the data. In this paper, we present our efforts to develop NLP tools for Early Modern French (historical French from the 16 th to the 18 th centuries). We present the FREEM max corpus of Early Modern French and D'AlemBERT, a RoBERTa-based language model trained on FREEM max . We evaluate the usefulness of D'AlemBERT by fine-tuning it on a part-of-speech tagging task, outperforming previous work on the test set. Importantly, we find evidence for the transfer learning capacity of the language model, since its performance on lesser-resourced time periods appears to have been boosted by the more resourced ones. We release D'AlemBERT and the open-sourced subpart of the FREEM max corpus."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0017824,
+        "input_tokens": 14400,
+        "output_tokens": 724
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.09452"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,125 @@
+{
+    "metadata": {
+        "Name": "MLSUM",
+        "Subsets": [
+            {
+                "Name": "French",
+                "Volume": 424763,
+                "Unit": "articles",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 242982,
+                "Unit": "articles",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 290645,
+                "Unit": "articles",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 27063,
+                "Unit": "articles",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 273617,
+                "Unit": "articles",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "English",
+                "Volume": 311971,
+                "Unit": "articles",
+                "Language": "English"
+            }
+        ],
+        "Link": "https://github.com/recitalAI/MLSUM",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": [
+            "French",
+            "German",
+            "Spanish",
+            "Russian",
+            "Turkish",
+            "English"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "The MLSUM dataset contains over 1.5M article/summary pairs in French, German, Spanish, Russian, and Turkish, complementing the CNN/Daily Mail dataset for English.",
+        "Volume": 1500000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "CNRS",
+            "Sorbonne Universit\u00b4e",
+            "reciTAL"
+        ],
+        "Derived From": [
+            "CNN/Daily Mail"
+        ],
+        "Paper Title": "MLSUM: The Multilingual Summarization Corpus",
+        "Paper Link": "https://arxiv.org/abs/2004.14900",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Thomas Scialom",
+            "Paul-Alexis Dray",
+            "Sylvain Lamprier",
+            "Benjamin Piwowarski",
+            "Jacopo Staiano"
+        ],
+        "Affiliations": [
+            "CNRS, France",
+            "Sorbonne Universit\u00b4e, CNRS, LIP6, F-75005 Paris, France",
+            "reciTAL, Paris, France"
+        ],
+        "Abstract": "We present MLSUM, the first large-scale MultiLingual SUMmarization dataset. Obtained from online newspapers, it contains 1.5M+ article/summary pairs in five different languages - namely, French, German, Spanish, Russian, Turkish. Together with English newspapers from the popular CNN/Daily mail dataset, the collected data form a large scale multilingual dataset which can enable new research directions for the text summarization community. We report cross-lingual comparative analyses based on state-of-the-art systems. These highlight existing biases which motivate the use of a multi-lingual dataset."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0023556,
+        "input_tokens": 19040,
+        "output_tokens": 751
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14900"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

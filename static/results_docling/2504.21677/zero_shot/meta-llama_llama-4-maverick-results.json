@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "20min-XD",
+        "Link": "https://huggingface.co/datasets/ZurichNLP/20min-XD",
+        "HF Link": "https://huggingface.co/datasets/ZurichNLP/20min-XD",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A French-German document-level comparable corpus of news articles from 20 Minuten / 20 minutes, containing 15,000 article pairs and 117,126 sentence pairs.",
+        "Volume": 15000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "20 Minuten",
+            "University of Zurich"
+        ],
+        "Derived From": [],
+        "Paper Title": "20min-XD: A Comparable Corpus of Swiss News Articles",
+        "Paper Link": "https://arxiv.org/abs/XXXX.XXXXX",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "cross-lingual information retrieval"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Michelle Wastl",
+            "Jannis Vamvas",
+            "Selena Calleri",
+            "Rico Sennrich"
+        ],
+        "Affiliations": [
+            "University of Zurich",
+            "20 Minuten"
+        ],
+        "Abstract": "This paper presents 20min-XD, a French-German document-level comparable corpus of news articles sourced from 20 Minuten / 20 minutes. The dataset comprises around 15,000 article pairs spanning 2015 to 2024, automatically aligned based on semantic similarity. The corpus is valuable for various NLP applications and linguistically motivated studies."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00239972,
+        "input_tokens": 12125,
+        "output_tokens": 443
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.21677"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

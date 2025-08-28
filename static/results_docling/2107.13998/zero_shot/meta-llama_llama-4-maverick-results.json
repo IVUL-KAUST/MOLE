@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "JAFFE",
+        "Link": "https://zenodo.org/record/3551521#.YcQlMOjMKhc",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 1998,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A dataset of facial expressions posed by Japanese women, used for studying facial expression perception.",
+        "Volume": 213.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Ritsumeikan University",
+            "Kyushu University"
+        ],
+        "Derived From": [],
+        "Paper Title": "Excavating AI Re-excavated: Debunking a Fallacious Account of the JAFFE Dataset",
+        "Paper Link": "https://arxiv.org/abs/2201.10601",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "optical character recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Michael J. Lyons"
+        ],
+        "Affiliations": [
+            "Ritsumeikan University",
+            "Kyushu University"
+        ],
+        "Abstract": "The paper discusses the creation and misuse of the JAFFE dataset, a set of facial expression images intended for use in a study of face perception. The dataset was created by the authors and their colleagues in 1996 and was made available for non-commercial scientific research. However, it was later used without permission in art exhibitions and publications, with a misleading account of its creation and purpose."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00376464,
+        "input_tokens": 15611,
+        "output_tokens": 390
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2107.13998"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,182 @@
+{
+    "metadata": {
+        "Name": "SEAHORSE",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 3359,
+                "Unit": "articles",
+                "Language": "German"
+            },
+            {
+                "Name": "German",
+                "Volume": 2999,
+                "Unit": "articles",
+                "Language": "German"
+            },
+            {
+                "Name": "English",
+                "Volume": 894,
+                "Unit": "articles",
+                "Language": "English"
+            },
+            {
+                "Name": "English",
+                "Volume": 2433,
+                "Unit": "articles",
+                "Language": "English"
+            },
+            {
+                "Name": "English",
+                "Volume": 2383,
+                "Unit": "articles",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 2231,
+                "Unit": "articles",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 2235,
+                "Unit": "articles",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 2183,
+                "Unit": "articles",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 3298,
+                "Unit": "articles",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2948,
+                "Unit": "articles",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 2186,
+                "Unit": "articles",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 770,
+                "Unit": "articles",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 2497,
+                "Unit": "articles",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 1951,
+                "Unit": "articles",
+                "Language": "Vietnamese"
+            }
+        ],
+        "Link": "https://goo.gle/seahorse",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "German",
+            "English",
+            "Spanish",
+            "Russian",
+            "Turkish",
+            "Vietnamese"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A large-scale dataset for multilingual, multifaceted summarization evaluation consisting of 96K summaries with human ratings along 6 dimensions of text quality.",
+        "Volume": 96645.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google DeepMind",
+            "Google Research"
+        ],
+        "Derived From": [
+            "XSum",
+            "XL-Sum",
+            "MLSum",
+            "WikiLingua"
+        ],
+        "Paper Title": "SEAHORSE: A Multilingual, Multifaceted Dataset for Summarization Evaluation",
+        "Paper Link": "https://arxiv.org/abs/2305.13194",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization",
+            "machine translation",
+            "sentiment analysis"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Elizabeth Clark",
+            "Shruti Rijhwani",
+            "Sebastian Gehrmann",
+            "Joshua Maynez",
+            "Thibault Sellam",
+            "Aditya Siddhant",
+            "Ankur P. Parikh",
+            "Roee Aharoni",
+            "Vitaly Nikolaev",
+            "Dipanjan Das"
+        ],
+        "Affiliations": [
+            "Google DeepMind",
+            "Google Research"
+        ],
+        "Abstract": "Reliable automatic evaluation of summarization systems is challenging due to the multifaceted and subjective nature of the task. This is especially the case for languages other than English, where human evaluations are scarce. In this work, we introduce SEAHORSE, a dataset for multilingual, multifaceted summarization evaluation. SEAHORSE consists of 96K summaries with human ratings along 6 dimensions of text quality: comprehensibility, repetition, grammar, attribution, main ideas, and conciseness. SEAHORSE covers 6 languages, 9 systems (including the reference text), and 4 summarization datasets. As a result of its size and scope, SEAHORSE can serve both as a benchmark to evaluate learnt metrics, as well as a large-scale resource for training such metrics. We show that metrics trained with SEAHORSE achieve strong performance on two out-ofdomain meta-evaluation benchmarks: TRUE (Honovich et al., 2022) and mFACE (Aharoni et al., 2023). We make the SEAHORSE dataset and metrics publicly available for future research on multilingual and multifaceted summarization evaluation."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.002175155892,
+        "input_tokens": 25428,
+        "output_tokens": 1154
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.13194"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

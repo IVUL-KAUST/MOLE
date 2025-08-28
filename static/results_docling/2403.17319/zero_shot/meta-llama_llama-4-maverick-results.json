@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "JMultiWOZ",
+        "Link": "https://github.com/atsumoto/JMultiWOZ",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A large-scale Japanese multi-domain task-oriented dialogue dataset",
+        "Volume": 4246.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Nagoya University"
+        ],
+        "Derived From": [
+            "MultiWOZ"
+        ],
+        "Paper Title": "JMultiWOZ: A Large-Scale Japanese Multi-Domain Task-Oriented Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2307.10197",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "text generation"
+        ],
+        "Venue Title": "ACL 2023",
+        "Venue Type": "conference",
+        "Venue Name": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Atsumoto Ohashi",
+            "Ryu Hirai",
+            "Shinya Iizuka",
+            "Ryuichiro Higashinaka"
+        ],
+        "Affiliations": [
+            "Graduate School of Informatics, Nagoya University"
+        ],
+        "Abstract": "This paper presents JMultiWOZ, the first large-scale Japanese multi-domain task-oriented dialogue dataset. The dataset contains 4,246 dialogues spanning six travel-related domains and provides benchmarks for dialogue state tracking and response generation."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00326281,
+        "input_tokens": 17425,
+        "output_tokens": 396
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.17319"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

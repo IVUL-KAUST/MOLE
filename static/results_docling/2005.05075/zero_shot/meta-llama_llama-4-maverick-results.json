@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "The First French COVID19 Lockdown Twitter Dataset",
+        "Link": "https://github.com/calciu/COVID19-LockdownFr",
+        "HF Link": "",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A Twitter dataset collected during the COVID-19 lockdown in France",
+        "Volume": 2598249.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "IAE Amiens, University of Picardie",
+            "Department of Management Science, Paris-Nanterre University",
+            "IAE Lille, Lille University"
+        ],
+        "Derived From": [],
+        "Paper Title": "The First French COVID19 Lockdown Twitter Dataset",
+        "Paper Link": "https://arxiv.org/abs/2005.05075",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "sentiment analysis",
+            "emotion classification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Sophie Balech",
+            "Christophe Benavent",
+            "Mihai Calciu"
+        ],
+        "Affiliations": [
+            "IAE Amiens, University of Picardie, France",
+            "Department of Management Science, Paris-Nanterre University, France",
+            "IAE Lille, Lille University, France"
+        ],
+        "Abstract": "In this paper, we present a mainly French coronavirus Twitter dataset that we have been continuously collecting since lockdown restrictions have been enacted in France (in March 17, 2020). We offer our datasets and sentiment analysis annotations to the research community at https://github.com/calciu/COVID19-LockdownFr."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00202642,
+        "input_tokens": 7600,
+        "output_tokens": 414
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.05075"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

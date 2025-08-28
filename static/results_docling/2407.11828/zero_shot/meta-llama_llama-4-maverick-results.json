@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Vibravox",
+        "Link": "https://huggingface.co/datasets/Cnam-LMSSC/vibravox",
+        "HF Link": "https://huggingface.co/datasets/Cnam-LMSSC/vibravox",
+        "License": "CC BY 4.0",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "other"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "human annotation",
+            "other"
+        ],
+        "Description": "Vibravox is a dataset of French speech captured with body-conduction audio sensors. It contains 45 hours per sensor of speech samples and physiological sounds recorded by 188 participants under different acoustic conditions.",
+        "Volume": 45.62,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Conservatoire national des arts et m\u00e9tiers",
+            "French-German Research Institute of Saint-Louis"
+        ],
+        "Derived From": [],
+        "Paper Title": "Vibravox: A Dataset of French Speech Captured with Body-conduction Audio Sensors",
+        "Paper Link": "https://arxiv.org/abs/2406.12345",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "speech recognition",
+            "speaker identification"
+        ],
+        "Venue Title": "IEEE Transactions on Audio, Speech, and Language Processing",
+        "Venue Type": "journal",
+        "Venue Name": "IEEE Transactions on Audio, Speech, and Language Processing",
+        "Authors": [
+            "Julien Hauret",
+            "Malo Olivier",
+            "Thomas Joubaud",
+            "Christophe Langrenne",
+            "Sarah Poir\u00e9e",
+            "V\u00e9ronique Zimpfer",
+            "Eric Bavu"
+        ],
+        "Affiliations": [
+            "Conservatoire national des arts et m\u00e9tiers",
+            "French-German Research Institute of Saint-Louis"
+        ],
+        "Abstract": "Vibravox is a dataset compliant with the General Data Protection Regulation (GDPR) containing audio recordings using five different body-conduction audio sensors: two in-ear microphones, two bone conduction vibration pickups, and a laryngophone. The dataset also includes audio data from an airborne microphone used as a reference."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00510017,
+        "input_tokens": 27814,
+        "output_tokens": 496
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.11828"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

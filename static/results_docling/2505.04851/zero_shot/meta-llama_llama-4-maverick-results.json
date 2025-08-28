@@ -1,0 +1,87 @@
+{
+    "metadata": {
+        "Name": "CRAFT",
+        "Link": "https://example.com/dataset-link",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "social media",
+            "news articles",
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "CRAFT is a dataset for cultural Russian-oriented dataset adaptation for focused text-to-image generation.",
+        "Volume": 200000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "CRAFT: CULTURAL RUSSIAN-ORIENTED DATASET ADAPTATION FOR FOCUSED TEXT-TO-IMAGE GENERATION",
+        "Paper Link": "https://example.com/paper-link",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "text generation"
+        ],
+        "Venue Title": "EMNLP 2024",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Viacheslav Vasilev",
+            "Vladimir Arkhipkin",
+            "Julia Agafonova",
+            "Tatiana Nikulina",
+            "Evelina Mironova",
+            "Alisa Shichanina",
+            "Nikolai Gerasimenko",
+            "Mikhail Shoytov",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "Sber AI, Moscow, Russia",
+            "Moscow Institute of Physics and Technology (MIPT), Moscow, Russia",
+            "Information Technologies, Mechanics and Optics University (ITMO University), Saint-Petersburg, Russia",
+            "Artificial Intelligence Research Institute (AIRI), Moscow, Russia"
+        ],
+        "Abstract": "The abstract of the paper discusses the lack of cultural awareness in text-to-image generation models and proposes a methodology for collecting and processing data to form a dataset based on cultural code, specifically Russian culture. The authors analyze the effectiveness of their approach using the Kandinsky 3.1 text-to-image model and report human evaluation results demonstrating an increase in the level of awareness of Russian culture in the model."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00353298,
+        "input_tokens": 14047,
+        "output_tokens": 525
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2505.04851"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

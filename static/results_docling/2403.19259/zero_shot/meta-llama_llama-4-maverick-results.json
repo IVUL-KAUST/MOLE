@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "J-CRe3",
+        "Link": "https://github.com/riken-grp/J-CRe3",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A Japanese Conversation dataset for Real-world Reference Resolution",
+        "Volume": 2.13,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Kyoto University",
+            "RIKEN"
+        ],
+        "Derived From": [],
+        "Paper Title": "J-CRe3: A Japanese Conversation Dataset for Real-world Reference Resolution",
+        "Paper Link": "https://arxiv.org/abs/2403.19259",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "meter classification",
+            "text generation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Nobuhiro Ueda",
+            "Hideko Habe",
+            "Yoko Matsui",
+            "Akishige Yuguchi",
+            "Seiya Kawano",
+            "Yasutomo Kawanishi",
+            "Sadao Kurohashi",
+            "Koichiro Yoshino"
+        ],
+        "Affiliations": [
+            "Kyoto University",
+            "RIKEN",
+            "Tokyo University of Science",
+            "Nara Institute of Science and Technology",
+            "National Institute of Informatics"
+        ],
+        "Abstract": "Understanding expressions that refer to the physical world is crucial for human-assisting systems. This paper proposes a multimodal reference resolution task and constructs a Japanese Conversation dataset for Real-world Reference Resolution (J-CRe3)."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0028917,
+        "input_tokens": 17909,
+        "output_tokens": 398
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19259"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

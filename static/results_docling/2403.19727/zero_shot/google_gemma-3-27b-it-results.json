@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "MEDIA 2022",
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "The MEDIA dataset is a collection of utterances for building conversational systems, focusing on hotel booking. It involves intent recognition and slot filling.",
+        "Volume": 3122.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Samu-xlsr: Semantically-aligned multimodal utterance-level cr",
+        "Paper Link": "https://arxiv.org/abs/2403.19727",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Upon-Request",
+        "Cost": "Unknown",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition",
+            "semantic parsing"
+        ],
+        "Venue Title": "IEEE Transactions on Audio, Speech, and Language Processing",
+        "Venue Type": "journal",
+        "Venue Name": "IEEE",
+        "Authors": [
+            "Sameer Khurana",
+            "Antoine Laurent",
+            "James Glass"
+        ],
+        "Affiliations": [
+            "Unknown"
+        ],
+        "Abstract": "This paper presents the MEDIA 2022 dataset, a collection of utterances for building conversational systems, focusing on hotel booking. It involves intent recognition and slot filling."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.16666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0018048495348,
+        "input_tokens": 23578,
+        "output_tokens": 346
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

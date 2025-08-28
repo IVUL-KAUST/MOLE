@@ -1,0 +1,139 @@
+{
+    "metadata": {
+        "Name": "Mintaka",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 20000,
+                "Unit": "questions",
+                "Language": "English"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 20000,
+                "Unit": "questions",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "French",
+                "Volume": 20000,
+                "Unit": "questions",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 20000,
+                "Unit": "questions",
+                "Language": "German"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 20000,
+                "Unit": "questions",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 20000,
+                "Unit": "questions",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 20000,
+                "Unit": "questions",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 20000,
+                "Unit": "questions",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 20000,
+                "Unit": "questions",
+                "Language": "Spanish"
+            }
+        ],
+        "Link": "https://github.com/amazon-research/mintaka",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "Arabic",
+            "French",
+            "German",
+            "Hindi",
+            "Italian",
+            "Japanese",
+            "Portuguese",
+            "Spanish"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A complex, natural, and multilingual dataset for end-to-end question-answering",
+        "Volume": 20000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Amazon Alexa AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "Mintaka: A Complex, Natural, and Multilingual Dataset for End-to-End Question Answering",
+        "Paper Link": "https://arxiv.org/abs/2305.06845",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "EMNLP 2023",
+        "Venue Type": "conference",
+        "Venue Name": "The 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Priyanka Sen",
+            "Amir Saffari",
+            "Alham Fikri Aji"
+        ],
+        "Affiliations": [
+            "Amazon Alexa AI, Cambridge, UK"
+        ],
+        "Abstract": "We introduce MINTAKA, a complex, natural, and multilingual dataset designed for experimenting with end-to-end question-answering models. Mintaka is composed of 20,000 question-answer pairs collected in English, annotated with Wikidata entities, and translated into Arabic, French, German, Hindi, Italian, Japanese, Portuguese, and Spanish for a total of 180,000 samples."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0039699,
+        "input_tokens": 19669,
+        "output_tokens": 771
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2210.01613"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

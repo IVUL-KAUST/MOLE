@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "Japanese Web Corpus",
+        "Link": "https://huggingface.co/datasets/tokyotech-llm/japanese-web-corpus",
+        "HF Link": "https://huggingface.co/datasets/tokyotech-llm/japanese-web-corpus",
+        "License": "CC BY-SA 4.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large Japanese web corpus extracted from Common Crawl archives between 2020 and 2023, containing 312.1 billion characters.",
+        "Volume": 312.1,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Tokyo Institute of Technology"
+        ],
+        "Derived From": [
+            "Common Crawl"
+        ],
+        "Paper Title": "Building a Large Japanese Web Corpus for Large Language Models",
+        "Paper Link": "https://arxiv.org/abs/2402.14473",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Naoaki Okazaki",
+            "Kakeru Hattori",
+            "Hirai Shota",
+            "Hiroki Iida",
+            "Masanari Ohi",
+            "Kazuki Fujii",
+            "Taishi Nakamura",
+            "Mengsay Loem",
+            "Rio Yokota",
+            "Sakae Mizuki"
+        ],
+        "Affiliations": [
+            "Tokyo Institute of Technology"
+        ],
+        "Abstract": "This paper describes the construction of a large Japanese web corpus for training large language models (LLMs). The corpus was created by extracting and refining text from the Common Crawl archive, resulting in approximately 312.1 billion characters. The quality of the corpus was confirmed through continual pre-training experiments on various LLMs, showing consistent improvements on Japanese benchmark datasets."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00437526,
+        "input_tokens": 22803,
+        "output_tokens": 467
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.17733"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

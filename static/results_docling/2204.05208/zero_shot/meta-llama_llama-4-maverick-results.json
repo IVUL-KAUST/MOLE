@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "FIJO",
+        "Link": "https://github.com/david-beauchemin/FIJO",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A French Insurance Soft Skill Detection Dataset containing insurance job offers with soft skill annotations.",
+        "Volume": 867.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Laval",
+            "four Canadian insurance companies"
+        ],
+        "Derived From": [],
+        "Paper Title": "FIJO: a French Insurance Soft Skill Detection Dataset",
+        "Paper Link": "https://arxiv.org/abs/2203.06670",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "David Beauchemin",
+            "Julien Laumonier",
+            "Yvan Le Ster",
+            "Marouane Yassine"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Laval",
+            "Institute Intelligence and Data"
+        ],
+        "Abstract": "Understanding the evolution of job requirements is becoming more important for workers, companies and public organizations to follow the fast transformation of the employment market. This article proposes a new public dataset, FIJO, containing insurance job offers, including many soft skill annotations. The dataset consists of non-annotated and annotated French job ads published by four Canadian insurance companies between 2009 and 2020."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00241094,
+        "input_tokens": 12399,
+        "output_tokens": 392
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.05208"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

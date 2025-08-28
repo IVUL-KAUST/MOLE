@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "RefinedWeb",
+        "Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
+        "HF Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
+        "License": "ODC-By",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A high-quality five trillion tokens web-only English pretraining dataset",
+        "Volume": 5000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Technology Innovation Institute"
+        ],
+        "Derived From": [
+            "CommonCrawl"
+        ],
+        "Paper Title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+        "Paper Link": "https://arxiv.org/abs/2306.01116",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "arXiv preprint",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Guilherme Penedo",
+            "Quentin Malartic",
+            "Daniel Hesslow",
+            "Ruxandra Cojocaru",
+            "Alessandro Cappelli",
+            "Hamza Alobeidli",
+            "Baptiste Pannier",
+            "Ebtesam Almazrouei",
+            "Julien Launay"
+        ],
+        "Affiliations": [
+            "LightOn",
+            "Technology Innovation Institute",
+            "LPENS"
+        ],
+        "Abstract": "Large language models are commonly trained on a mixture of filtered web data and curated 'high-quality' corpora. We show that properly filtered and deduplicated web data alone can lead to powerful models. We introduce REFINEDWEB, a high-quality five trillion tokens web-only English pretraining dataset, and demonstrate that it can result in models outperforming both public and private curated corpora."
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8888888888888888
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00676324,
+        "input_tokens": 29156,
+        "output_tokens": 472
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.01116"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
