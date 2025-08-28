@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "RuDSI",
+        "Link": "https://github.com/annaksenova/rudsi",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "news articles",
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A graph-based word sense induction dataset for Russian, created using manual annotation and semi-automatic clustering of Word Usage Graphs (WUGs).",
+        "Volume": 840.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Research University Higher School of Economics",
+            "University of Oslo"
+        ],
+        "Derived From": [
+            "Russian National Corpus"
+        ],
+        "Paper Title": "RuDSI: graph-based word sense induction dataset for Russian",
+        "Paper Link": "https://arxiv.org/abs/2305.12308",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "word prediction"
+        ],
+        "Venue Title": "ACL 2023",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Anna Aksenova",
+            "Ekaterina Gavrishina",
+            "Elisey Rykov",
+            "Andrey Kutuzov"
+        ],
+        "Affiliations": [
+            "National Research University Higher School of Economics",
+            "University of Oslo"
+        ],
+        "Abstract": "This paper presents RuDSI, a novel graph-based word sense induction dataset for Russian. The dataset was created using manual annotation and semi-automatic clustering of Word Usage Graphs (WUGs). The paper describes the dataset creation process, its characteristics, and baseline results for word sense induction tasks."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00284322,
+        "input_tokens": 14637,
+        "output_tokens": 422
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2209.13750"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

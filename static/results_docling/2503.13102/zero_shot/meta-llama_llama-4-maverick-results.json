@@ -1,0 +1,92 @@
+{
+    "metadata": {
+        "Name": "REPA",
+        "Link": "https://huggingface.co/datasets/ina-fmt/repa",
+        "HF Link": "https://huggingface.co/datasets/ina-fmt/repa",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "social media",
+            "news articles",
+            "wikipedia",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A dataset for evaluating text generation in Russian based on fine-grained criteria",
+        "Volume": 2003.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "HSE University",
+            "SaluteDevices",
+            "University of Oslo",
+            "Toloka AI"
+        ],
+        "Derived From": [
+            "Chatbot Arena Conversations",
+            "ru_instruct_gpt4",
+            "Veles-2.5",
+            "Tagengo",
+            "Aya"
+        ],
+        "Paper Title": "Russian Error Types Annotation for Evaluating Text Generation",
+        "Paper Link": "https://arxiv.org/abs/2407.00063",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "language modeling",
+            "named entity recognition",
+            "question answering"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Alexander Pugachev",
+            "Vladislav Mikhailov",
+            "Alena Fenogenova",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "HSE University",
+            "SaluteDevices",
+            "University of Oslo",
+            "Toloka AI"
+        ],
+        "Abstract": "This paper introduces REPA, a dataset for evaluating text generation in Russian. REPA consists of 1k user queries and 2k LLM-generated responses annotated across ten error types. The dataset aims to assess the performance of LLMs in fine-grained evaluation settings."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0043674,
+        "input_tokens": 20906,
+        "output_tokens": 459
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2503.13102"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

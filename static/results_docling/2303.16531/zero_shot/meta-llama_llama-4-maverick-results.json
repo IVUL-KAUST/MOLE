@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "RusTitW",
+        "Link": "https://github.com/markovivl/SynthText",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "social media",
+            "news articles",
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A large-scale human-labeled dataset for Russian text recognition in-the-wild, along with a synthetic dataset and code to reproduce the generation process.",
+        "Volume": 10000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber AI",
+            "AIRI"
+        ],
+        "Derived From": [
+            "LAION dataset"
+        ],
+        "Paper Title": "RusTitW: Russian Language Text Dataset for Visual Text in-the-Wild Recognition",
+        "Paper Link": "https://arxiv.org/abs/2303.16531",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "speech recognition",
+            "stance detection"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Igor Markov",
+            "Sergey Nesteruk",
+            "Andrey Kuznetsov",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "AIRI",
+            "Sber AI"
+        ],
+        "Abstract": "The paper presents a large-scale human-labeled dataset for Russian text recognition in-the-wild, along with a synthetic dataset and code to reproduce the generation process. The dataset contains over 13K images with paragraph-level annotations and more than 900K synthetically generated images."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00180984,
+        "input_tokens": 8805,
+        "output_tokens": 394
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2303.16531"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

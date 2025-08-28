@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "RusCode",
+        "Link": "https://github.com/sber-ai/RusCode",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "commentary",
+            "news articles",
+            "commentary",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A benchmark dataset for evaluating the quality of text-to-image generation models containing elements of Russian cultural code.",
+        "Volume": 1250.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber AI",
+            "MIPT",
+            "ITMO University",
+            "SberDevices",
+            "AIRI"
+        ],
+        "Derived From": [],
+        "Paper Title": "RusCode: Russian Cultural Code Benchmark for Text-to-Image Generation",
+        "Paper Link": "https://arxiv.org/abs/2407.00263",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation"
+        ],
+        "Venue Title": "EMNLP 2024",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Viacheslav Vasilev",
+            "Julia Agafonova",
+            "Nikolai Gerasimenko",
+            "Alexander Kapitanov",
+            "Polina Mikhailova",
+            "Evelina Mironova",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "Sber AI",
+            "MIPT",
+            "ITMO University",
+            "SberDevices",
+            "AIRI"
+        ],
+        "Abstract": "This paper presents the RusCode benchmark dataset for evaluating the quality of text-to-image generation models containing elements of Russian cultural code. The dataset consists of 1250 text prompts in Russian and their translations into English, covering a wide range of topics related to Russian culture."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0031954,
+        "input_tokens": 15390,
+        "output_tokens": 445
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2502.07455"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "WikiOmnia",
+        "Link": "https://huggingface.co/datasets/sberbank-ai/wiki_omnia_filtered",
+        "HF Link": "https://huggingface.co/datasets/sberbank-ai/wiki_omnia_filtered",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "LLM generated",
+            "machine annotation"
+        ],
+        "Description": "WikiOmnia is a large-scale Russian question-answering dataset automatically generated from Russian Wikipedia summaries. It was created using ruGPT-3 XL and ruT5-large models and includes both raw (15.9M pairs) and filtered (3.5M pairs) versions for training QA systems.",
+        "Volume": 15921913.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Artificial Intelligence Research Institute (AIRI)",
+            "SberDevices"
+        ],
+        "Derived From": [
+            "Russian Wikipedia",
+            "SberQuAD"
+        ],
+        "Paper Title": "WikiOmnia: filtration and evaluation of the generated QA corpus on the whole Russian Wikipedia",
+        "Paper Link": "https://aclanthology.org/2022.afrinic-1.1/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "Proceedings of the 1st Workshop on AFRINLP",
+        "Venue Type": "workshop",
+        "Venue Name": "1st Workshop on AFRINLP",
+        "Authors": [
+            "Dina Pisarevskaya",
+            "Tatiana Shavrina"
+        ],
+        "Affiliations": [
+            "Independent Researcher",
+            "Artificial Intelligence Research Institute (AIRI)",
+            "SberDevices"
+        ],
+        "Abstract": "The General QA field has been developing the methodology referencing the Stanford Question answering dataset (SQuAD) as the significant benchmark. Compiling factual questions datasets requires manual annotations, limiting the training data's potential size. We present the WikiOmnia dataset, a new publicly available set of QA pairs and corresponding Russian Wikipedia article summary sections, composed with a fully automated generation and filtration pipeline. To ensure high quality of generated QA pairs, diverse manual and automated evaluation techniques were applied. The WikiOmnia pipeline is available opensource and is also tested for creating SQuADformatted QA on other domains, like news texts, fiction, and social media. The resulting dataset includes two parts: raw data on the whole Russian Wikipedia (7,930,873 QA pairs with paragraphs for ruGPT-3 XL and 7,991,040 QA pairs with paragraphs for ruT5large) and cleaned data with strict automatic verification (over 160,000 QA pairs with paragraphs for ruGPT-3 XL and over 3,400,000 QA pairs with paragraphs for ruT5-large)."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.058995,
+        "input_tokens": 14641,
+        "output_tokens": 1740
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.08009"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,124 @@
+{
+    "metadata": {
+        "Name": "LAHM",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 105120,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 32734,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 5394,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "French",
+                "Volume": 20809,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 8631,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 55148,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "Hindi",
+            "Arabic",
+            "French",
+            "German",
+            "Spanish"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large scale semi-supervised training dataset for multilingual and multi-domain hate speech identification across 6 languages and 5 domains.",
+        "Volume": 227836.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Logically.ai"
+        ],
+        "Derived From": [
+            "HateBase",
+            "BBC Monitoring",
+            "Counterextremism Database"
+        ],
+        "Paper Title": "LAHM : Large Annotated Dataset for Multi-Domain and Multilingual Hate Speech Identification",
+        "Paper Link": "https://ceur-ws.org/Vol-2936/paper-106.pdf",
+        "Tokenized": false,
+        "Host": "sourceforge",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fake news detection",
+            "sentiment analysis"
+        ],
+        "Venue Title": "De-Factify: Workshop on Multimodal Fact Checking and Hate Speech Detection",
+        "Venue Type": "workshop",
+        "Venue Name": "AAAI 2022",
+        "Authors": [
+            "Ankit Yadav",
+            "Shubham Chandel",
+            "Sushant Chatufale",
+            "Anil Bandhakavi"
+        ],
+        "Affiliations": [
+            "Logically.ai"
+        ],
+        "Abstract": "Current research on hate speech analysis is typically oriented towards monolingual and single classification tasks. This paper presents a new multilingual hate speech analysis dataset for English, Hindi, Arabic, French, German, and Spanish languages for multiple domains across hate speech - Abuse, Racism, Sexism, Religious Hate, and Extremism."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0026634,
+        "input_tokens": 14204,
+        "output_tokens": 650
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2304.00913"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

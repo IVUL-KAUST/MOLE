@@ -1,0 +1,91 @@
+{
+    "metadata": {
+        "Name": "llm-japanese-dataset",
+        "Link": "https://huggingface.co/datasets/izumi-lab/llm-japanese-dataset",
+        "HF Link": "https://huggingface.co/datasets/izumi-lab/llm-japanese-dataset",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "wikipedia",
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A Japanese chat dataset for tuning large language models, containing 8.4 million data points.",
+        "Volume": 8.4,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo"
+        ],
+        "Derived From": [
+            "Coursera Corpus",
+            "ParaNatCom",
+            "Tab-delimited Bilingual Sentence Pairs",
+            "Asian Language Treebank",
+            "Tanaka Corpus",
+            "Japanese-English Subtitle Corpus",
+            "Japanese WordNet",
+            "Easy Japanese Corpus",
+            "Japanese-Alpaca-LoRA",
+            "databricks-dolly-15k-ja"
+        ],
+        "Paper Title": "llm-japanese-dataset v0: Construction of Japanese Chat Dataset for Large Language Models and its Methodology",
+        "Paper Link": "https://arxiv.org/abs/2303.08774",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "question answering",
+            "text generation"
+        ],
+        "Venue Title": "llm-japanese-dataset v0: Construction of Japanese Chat Dataset for Large Language Models and its Methodology",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Masanori HIRANO",
+            "Masahiro SUZUKI",
+            "Hiroki SAKAJI"
+        ],
+        "Affiliations": [
+            "The University of Tokyo"
+        ],
+        "Abstract": "This study constructed a Japanese chat dataset for tuning large language models, which consists of about 8.4 million records. The dataset contains various tasks such as translation and knowledge tasks. The dataset and trained models are open-sourced and publicly available."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00213216,
+        "input_tokens": 10255,
+        "output_tokens": 522
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.12720"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

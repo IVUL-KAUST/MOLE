@@ -1,0 +1,121 @@
+{
+    "metadata": {
+        "Name": "MTOP",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 22.288,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "German",
+                "Volume": 18.788,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 16.584,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 15.459,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 16.131,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 15.195,
+                "Unit": "sentences",
+                "Language": "Thai"
+            }
+        ],
+        "Link": "https://fb.me/mtop_dataset",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "German",
+            "French",
+            "Spanish",
+            "Hindi",
+            "Thai"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "MTOP is a multilingual task-oriented semantic parsing dataset covering 6 languages and 11 domains.",
+        "Volume": 22.288,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook"
+        ],
+        "Derived From": [],
+        "Paper Title": "MTOP: A Comprehensive Multilingual Task-Oriented Semantic Parsing Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2008.09335",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "2020 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Haoran Li",
+            "Abhinav Arora",
+            "Shuohui Chen",
+            "Sonal Gupta",
+            "Yashar Mehdad",
+            "Anchit Gupta"
+        ],
+        "Affiliations": [
+            "Facebook"
+        ],
+        "Abstract": "Scaling semantic parsing models for task-oriented dialog systems to new languages is often expensive and time-consuming due to the lack of available datasets. This paper presents a new multilingual dataset, called MTOP, comprising of 100k annotated utterances in 6 languages across 11 domains."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00337896,
+        "input_tokens": 16730,
+        "output_tokens": 654
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2008.09335"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

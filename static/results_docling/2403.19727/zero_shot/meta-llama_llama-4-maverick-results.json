@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "MEDIA 2022",
+        "Link": "https://huggingface.co/datasets/ElanTechMEDIA/MEDIA_2022",
+        "HF Link": "https://huggingface.co/datasets/ElanTechMEDIA/MEDIA_2022",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "commentary",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "The MEDIA SLU dataset is a French dataset for Spoken Language Understanding, containing recorded phone calls for hotel booking.",
+        "Volume": 70.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Paris-Saclay",
+            "CNRS",
+            "LISN",
+            "Avignon Universit\u00e9",
+            "LIA",
+            "QWANT"
+        ],
+        "Derived From": [
+            "MEDIA"
+        ],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2206.06252",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "intent classification",
+            "semantic parsing"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Nad\u00e8ge Alavoine",
+            "Ga\u00eblle Laperri\u00e8re",
+            "Christophe Servan",
+            "Sahar Ghannay",
+            "Sophie Rosset"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris-Saclay, CNRS, LISN",
+            "Avignon Universit\u00e9, LIA",
+            "QWANT"
+        ],
+        "Abstract": "This paper presents an enhanced version of the MEDIA dataset annotated with intents using a semi-automatic approach. The MEDIA SLU dataset is a French dataset distributed since 2005 by ELRA, mainly used by the French research community and free for academic research since 2020. Unfortunately, it is annotated only in slots but not intents. An enhanced version of MEDIA annotated with intents has been built to extend its use to more tasks and use cases."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00381735,
+        "input_tokens": 23566,
+        "output_tokens": 500
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

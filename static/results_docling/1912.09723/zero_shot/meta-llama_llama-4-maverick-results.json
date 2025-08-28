@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "SberQuAD",
+        "Link": "https://github.com/sberbank-ai/data-science-journey-2017/tree/master/problem_B",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A large-scale Russian reading comprehension dataset similar to SQuAD.",
+        "Volume": 50364.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sberbank",
+            "Toloka"
+        ],
+        "Derived From": [
+            "SQuAD"
+        ],
+        "Paper Title": "SberQuAD - Russian Reading Comprehension Dataset: Description and Analysis",
+        "Paper Link": "https://www.google.com/search?q=SberQuAD+-+Russian+Reading+Comprehension+Dataset%3A+Description+and+Analysis",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Pavel Efimov",
+            "Andrey Chertok",
+            "Leonid Boytsov",
+            "Pavel Braslavski"
+        ],
+        "Affiliations": [
+            "Saint Petersburg State University",
+            "Sberbank",
+            "Ural Federal University",
+            "JetBrains Research"
+        ],
+        "Abstract": "SberQuAD-a large scale analog of Stanford SQuAD in the Russian language-is a valuable resource that has not been properly presented to the scientific community. We fill this gap by providing a description, a thorough analysis, and baseline experimental results."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00267165,
+        "input_tokens": 16474,
+        "output_tokens": 400
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1912.09723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "TinyStories",
+        "Link": "https://huggingface.co/datasets/roneneldan/TinyStories",
+        "HF Link": "https://huggingface.co/datasets/roneneldan/TinyStories",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "books",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "LLM generated"
+        ],
+        "Description": "A synthetic dataset of short stories for training small language models.",
+        "Volume": 2.1,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Microsoft Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "TinyStories: How Small Can Language Models Be and Still Speak Coherent English?",
+        "Paper Link": "https://arxiv.org/abs/2303.12712",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "language modeling"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ronen Eldan",
+            "Yuanzhi Li"
+        ],
+        "Affiliations": [
+            "Microsoft Research"
+        ],
+        "Abstract": "This paper introduces TinyStories, a synthetic dataset of short stories for training small language models. The dataset is generated using GPT-3.5 and GPT-4 and contains stories that are coherent, diverse, and have almost perfect grammar."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0061726,
+        "input_tokens": 31837,
+        "output_tokens": 358
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.07759"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

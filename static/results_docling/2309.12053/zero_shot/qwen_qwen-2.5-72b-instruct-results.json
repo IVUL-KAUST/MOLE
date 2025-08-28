@@ -11,13 +11,13 @@
         "Domain": [
             "other"
         ],
-        "Form": "images",
+        "Form": "videos",
         "Collection Style": [
             "other"
         ],
         "Description": "",
         "Volume": 0.0,
-        "Unit": "images",
+        "Unit": "videos",
         "Ethical Risks": "High",
         "Provider": [],
         "Derived From": [],
@@ -48,9 +48,9 @@
     },
     "length_forcing": 0.90625,
     "cost": {
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "cost": 0
+        "cost": 0,
+        "input_tokens": 53194,
+        "output_tokens": 0
     },
     "config": {
         "model_name": "qwen_qwen-2.5-72b-instruct",

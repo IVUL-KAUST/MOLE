@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "JDocQA",
+        "Link": "https://github.com/riken-agr/JDocQA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "public datasets",
+            "news articles",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A large-scale Japanese document-based QA dataset requiring both visual and textual information to answer questions.",
+        "Volume": 11600.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Nara Institute of Science and Technology",
+            "RIKEN",
+            "ATR"
+        ],
+        "Derived From": [],
+        "Paper Title": "JDocQA: Japanese Document Question Answering Dataset for Generative Language Models",
+        "Paper Link": "https://arxiv.org/abs/2309.11206",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "text generation"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Eri Onami",
+            "Shuhei Kurita",
+            "Taiki Miyanishi",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "Nara Institute of Science and Technology",
+            "RIKEN",
+            "ATR"
+        ],
+        "Abstract": "Document question answering is a task of question answering on given documents such as reports, slides, pamphlets, and websites. This paper introduces JDocQA, a large-scale document-based QA dataset in Japanese, comprising 5,504 documents and 11,600 question-and-answer instances. The dataset requires both visual and textual information to answer questions and includes unanswerable questions to mitigate hallucination in generative language models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.004285,
+        "input_tokens": 20315,
+        "output_tokens": 428
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19454"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

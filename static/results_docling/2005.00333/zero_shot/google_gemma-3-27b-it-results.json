@@ -1,0 +1,279 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "English",
+                "Volume": 400,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "German",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Greek",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Greek"
+            },
+            {
+                "Name": "Bulgarian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Bulgarian"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "Simplified Chinese",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Urdu",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Urdu"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Bengali"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Finnish"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Telugu"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "Haitian Creole",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "Eastern Apur\u00edmac Quechua",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            }
+        ],
+        "Link": "github.com/cambridgeltl/xcopa",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "English",
+            "French",
+            "Spanish",
+            "German",
+            "Greek",
+            "Bulgarian",
+            "Russian",
+            "Turkish",
+            "Vietnamese",
+            "Thai",
+            "Chinese",
+            "Simplified Chinese",
+            "Hindi",
+            "Swahili",
+            "Urdu",
+            "Bengali",
+            "Finnish",
+            "Japanese",
+            "Korean",
+            "Telugu",
+            "Indonesian",
+            "Italian",
+            "Polish",
+            "Portuguese",
+            "Estonian",
+            "Haitian Creole",
+            "Eastern Apur\u00edmac Quechua"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A typologically diverse multilingual dataset for causal commonsense reasoning in 11 languages, which includes resource-poor languages like Eastern Apur\u00edmac Quechua and Haitian Creole.",
+        "Volume": 1000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://arxiv.org/abs/2005.00333",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Edoardo M. Ponti",
+            "Goran Glava\u02c7 s",
+            "Olga Majewska",
+            "Qianchu Liu",
+            "Ivan Vuli\u00b4 c",
+            "Anna Korhonen"
+        ],
+        "Affiliations": [
+            "Language Technology Lab, TAL, University of Cambridge, UK",
+            "Data and Web Science Group, University of Mannheim, Germany"
+        ],
+        "Abstract": "In order to simulate human language capacity, natural language processing systems must be able to reason about the dynamics of everyday situations, including their possible causes and effects. Moreover, they should be able to generalise the acquired world knowledge to new languages, modulo cultural differences. Advances in machine reasoning and cross-lingual transfer depend on the availability of challenging evaluation benchmarks. Motivated by both demands, we introduce Cross-lingual Choice of Plausible Alternatives ( XCOPA ), a typologically diverse multilingual dataset for causal commonsense reasoning in 11 languages, which includes resource-poor languages like Eastern Apur\u00b4 \u0131mac Quechua and Haitian Creole. We evaluate a range of state-of-the-art models on this novel dataset, revealing that the performance of current methods based on multilingual pretraining and zero-shot fine-tuning falls short compared to translation-based transfer. Finally, we propose strategies to adapt multilingual models to out-of-sample resource-lean languages where only a small corpus or a bilingual dictionary is available, and report substantial improvements over the random baseline. The XCOPA dataset is freely available at github.com/cambridgeltl/xcopa ."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.003044219,
+        "input_tokens": 20874,
+        "output_tokens": 1748
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
