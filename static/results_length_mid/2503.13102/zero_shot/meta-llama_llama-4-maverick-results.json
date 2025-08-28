@@ -1,0 +1,90 @@
+{
+    "metadata": {
+        "Name": "REPA",
+        "Link": "https://huggingface.co/datasets/RussianNLP/repa",
+        "HF Link": "https://huggingface.co/datasets/RussianNLP/repa",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "social media",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A dataset for evaluating LLM judge performance in Russian, containing 1k user queries and 2k LLM-generated responses annotated across ten error types.",
+        "Volume": 1003.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "HSE University",
+            "SaluteDevices",
+            "University of Oslo",
+            "Toloka AI"
+        ],
+        "Derived From": [
+            "Chatbot Arena Conversations",
+            "ru_instruct_gpt4",
+            "Veles-2.5",
+            "Tagengo",
+            "Aya"
+        ],
+        "Paper Title": "REPA: Russian Error Types Annotation for Evaluating Text Generation and Judgment Capabilities",
+        "Paper Link": "https://github.com/RussianNLP/repa/blob/main/paper.pdf",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "language modeling",
+            "named entity recognition",
+            "question answering"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Alexander Pugachev",
+            "Alena Fenogenova",
+            "Vladislav Mikhailov",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "HSE University",
+            "SaluteDevices",
+            "University of Oslo",
+            "Toloka AI"
+        ],
+        "Abstract": "This paper introduces REPA, a dataset for evaluating LLM judges in Russian, consisting of 1k user queries and 2k LLM-generated responses annotated across ten error types and overall preference. The study evaluates eight LLM judges and their alignment with human preferences, revealing a performance gap between LLM judges in Russian and English."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.004582,
+        "input_tokens": 23005,
+        "output_tokens": 490
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2503.13102"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,64 @@
+{
+    "metadata": {
+        "Name": "COVID-19 Tweet Dataset",
+        "Link": "https://github.com/manueltonelli/covid19-tweets",
+        "HF Link": "",
+        "License": "CC BY-NC 4.0",
+        "Year": 2020,
+        "Language": "multilingual",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "This dataset contains tweets related to the COVID-19 pandemic, collected to study public sentiment and information spread during the crisis.",
+        "Volume": 0.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2005.05075",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Upon-Request",
+        "Cost": "Free",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.8965517241379307,
+    "cost": {
+        "cost": 0.0005648754816,
+        "input_tokens": 6756,
+        "output_tokens": 263
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.05075"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

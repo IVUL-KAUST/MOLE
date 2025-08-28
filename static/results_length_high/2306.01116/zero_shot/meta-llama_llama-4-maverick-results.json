@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "RefinedWeb",
+        "Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
+        "HF Link": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
+        "License": "ODbl-1.0",
+        "Year": 2023,
+        "Language": "en",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large-scale dataset for pretraining large language models",
+        "Volume": 5000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Technology Innovation Institute"
+        ],
+        "Derived From": [
+            "CommonCrawl"
+        ],
+        "Paper Title": "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+        "Paper Link": "https://arxiv.org/abs/2306.01116",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "ICML 2023",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Machine Learning",
+        "Authors": [
+            "Guilherme Penedo",
+            "Quentin Malartic",
+            "Daniel Hesslow",
+            "Ruxandra Cojocaru",
+            "Alessandro Cappelli",
+            "Hamza Alobeidli",
+            "Baptiste Pannier",
+            "Ebtesam Almazrouei",
+            "Julien Launay"
+        ],
+        "Affiliations": [
+            "LightOn",
+            "Technology Innovation Institute",
+            "LPENS, \u00c9cole normale sup\u00e9rieure"
+        ],
+        "Abstract": "Large language models are commonly trained on a mixture of filtered web data and curated 'high-quality' corpora. This paper introduces RefinedWeb, a high-quality five trillion tokens web-only English pretraining dataset. The dataset is created using the Macrodata Refinement pipeline, which combines content extraction, filtering heuristics, and deduplication. The paper demonstrates that models trained on RefinedWeb alone can outperform models trained on curated corpora."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8888888888888888
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00493125,
+        "input_tokens": 33088,
+        "output_tokens": 489
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.01116"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

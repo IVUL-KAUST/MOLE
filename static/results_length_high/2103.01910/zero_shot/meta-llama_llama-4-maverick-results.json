@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "Name": "MultiSubs",
+        "Subsets": [
+            {
+                "Name": "English-Spanish",
+                "Volume": 2159675,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "English-Portuguese",
+                "Volume": 1796095,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "English-French",
+                "Volume": 1063071,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "English-German",
+                "Volume": 384480,
+                "Unit": "sentences",
+                "Language": "German"
+            }
+        ],
+        "Link": "https://doi.org/10.5281/zenodo.5034604",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "French",
+            "German"
+        ],
+        "Domain": [
+            "reviews",
+            "reviews",
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large-scale multimodal and multilingual dataset for grounding words to images in context.",
+        "Volume": 38000000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Imperial College London",
+            "Federal University of Mato Grosso"
+        ],
+        "Derived From": [
+            "OpenSubtitles 2016"
+        ],
+        "Paper Title": "MultiSubs: A Large-scale Multimodal and Multilingual Dataset",
+        "Paper Link": "https://doi.org/10.1007/s10579-023-09670-w",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "machine translation"
+        ],
+        "Venue Title": "Natural Language Engineering",
+        "Venue Type": "journal",
+        "Venue Name": "",
+        "Authors": [
+            "Josiah Wang",
+            "Pranava Madhyastha",
+            "Josiel Figueiredo",
+            "Chiraag Lala",
+            "Lucia Specia"
+        ],
+        "Affiliations": [
+            "Imperial College London",
+            "Federal University of Mato Grosso"
+        ],
+        "Abstract": "This paper introduces a large-scale multimodal and multilingual dataset for grounding words to images in context. The dataset consists of images selected to unambiguously illustrate concepts expressed in sentences from movie subtitles. The dataset is a valuable resource for research on visual grounding of words, especially in the context of free-form sentences."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9333333333333332,
+    "cost": {
+        "cost": 0.00394073,
+        "input_tokens": 19252,
+        "output_tokens": 640
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.01910"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

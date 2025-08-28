@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "http://captions.stair.center/",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "public datasets",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A large-scale Japanese image caption dataset constructed by crowdsourcing 820,360 Japanese captions for 164,062 images from the MS-COCO dataset.",
+        "Volume": 820360.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo",
+            "Preferred Networks, Inc."
+        ],
+        "Derived From": [
+            "MS-COCO"
+        ],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://aclanthology.org/P17-2061/",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation"
+        ],
+        "Venue Title": "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Yuya Yoshikawa",
+            "Yutaro Shigeto",
+            "Akikazu Takeuchi"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "Preferred Networks, Inc."
+        ],
+        "Abstract": "We introduce a new, large-scale image caption dataset in Japanese, which we call STAIR Captions. While several image caption datasets have been constructed for English, there are no such datasets for Japanese. Our dataset was constructed by crowdsourcing 820,360 Japanese captions for the 164,062 images in the COCO dataset. We describe the details of the dataset construction and statistics. We also build a standard image captioning model and evaluate it on our dataset to show its learnability. The dataset is freely available at http://captions.stair.center/."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.03786125,
+        "input_tokens": 3353,
+        "output_tokens": 1405
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

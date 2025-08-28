@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://github.com/illuin-technology/FQuAD2.0",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2021,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "FQuAD2.0 is a French Question Answering dataset that extends FQuAD1.1 with 17,000+ unanswerable questions.",
+        "Volume": 80000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "FQuAD1.1"
+        ],
+        "Paper Title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+        "Paper Link": "https://arxiv.org/abs/2109.12733",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "2020 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Quentin Heinrich",
+            "Gautier Viaud",
+            "Wacim Belblidia"
+        ],
+        "Affiliations": [
+            "Illuin Technology"
+        ],
+        "Abstract": "This paper introduces FQuAD2.0, a French Question Answering dataset that extends FQuAD1.1 with 17,000+ unanswerable questions."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00243715,
+        "input_tokens": 14823,
+        "output_tokens": 383
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

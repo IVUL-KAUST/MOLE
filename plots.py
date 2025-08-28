@@ -44,15 +44,17 @@ def plot_by_length():
         if model_name in non_browsing_models:
             continue
         arxiv_id = get_id_from_path(json_file)
-        schema = get_schema_from_path(json_file)
+        # schema = get_schema_from_path(json_file)
         if arxiv_id not in ids:
             continue
         else:
             found_ids.append(arxiv_id)
         if model_name not in metric_results:
             metric_results[model_name] = []
-        metric_results[model_name].append(evaluate_lengths(results["metadata"], schema = schema, columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]))
-    
+        # metric_results[model_name].append(evaluate_lengths(results["metadata"], schema = schema, columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]))
+        if "length_forcing" not in results:
+            continue
+        metric_results[model_name].append(results["length_forcing"])
     final_results = {}
 
     for model_name in metric_results:

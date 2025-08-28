@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "Name": "CRAFT",
+        "Link": "https://github.com/ai-forever/CRAFT",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "books",
+            "news articles",
+            "reviews",
+            "commentary",
+            "social media",
+            "captions",
+            "news articles",
+            "other",
+            "TV Channels",
+            "commentary",
+            "public datasets",
+            "news articles",
+            "TV Channels",
+            "TV Channels",
+            "public datasets",
+            "commentary",
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "CRAFT is a dataset for cultural adaptation of text-to-image generation models, focusing on Russian culture.",
+        "Volume": 200000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SberDevices"
+        ],
+        "Derived From": [],
+        "Paper Title": "CRAFT: Cultural Russian-Oriented Dataset Adaptation for Focused Text-to-Image Generation",
+        "Paper Link": "https://arxiv.org/abs/2403.03865",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation"
+        ],
+        "Venue Title": "CRAFT: Cultural Russian-Oriented Dataset Adaptation for Focused Text-to-Image Generation",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Viacheslav Vasilev",
+            "Vladimir Arkhipkin",
+            "Julia Agafonova",
+            "Tatiana Nikulina",
+            "Evelina Mironova",
+            "Alisa Shichanina",
+            "Nikolai Gerasimenko",
+            "Mikhail Shoytov",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "SberDevices",
+            "AIRI"
+        ],
+        "Abstract": "The paper discusses the lack of cultural awareness in text-to-image generation models and proposes a methodology for collecting and processing a dataset to adapt the model to better understand Russian culture. The authors created a dataset of 200,000 text-image pairs and fine-tuned the Kandinsky 3.1 model, resulting in improved generation quality in the Russian cultural domain."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00243198,
+        "input_tokens": 12383,
+        "output_tokens": 505
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2505.04851"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

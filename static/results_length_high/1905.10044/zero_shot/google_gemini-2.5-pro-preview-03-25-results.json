@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "BoolQ",
+        "Link": "https://github.com/google-research-datasets/boolean-questions",
+        "HF Link": "https://huggingface.co/datasets/google/boolq",
+        "License": "CC BY-SA 3.0",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "BoolQ is a reading comprehension dataset for yes/no questions. It contains 16,000 examples, where each example is a question, a paragraph from Wikipedia, and a yes/no answer. The questions are naturally occurring, gathered from unprompted Google search queries, making them challenging and often requiring complex inference.",
+        "Volume": 16000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google AI Language",
+            "University of Washington"
+        ],
+        "Derived From": [
+            "Natural Questions"
+        ],
+        "Paper Title": "BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions",
+        "Paper Link": "https://aclanthology.org/N19-1245",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "NAACL-HLT 2019",
+        "Authors": [
+            "Christopher Clark",
+            "Kenton Lee",
+            "Ming-Wei Chang",
+            "Tom Kwiatkowski",
+            "Michael Collins",
+            "Kristina Toutanova"
+        ],
+        "Affiliations": [
+            "Paul G. Allen School of CSE, University of Washington",
+            "Google AI Language",
+            "Columbia University"
+        ],
+        "Abstract": "In this paper we study yes/no questions that are 'naturally occurring' --- meaning that they are generated in unprompted and unconstrained settings. We build a reading comprehension dataset, BoolQ, of such questions, and show that they are unexpectedly challenging. They often query for complex, non-factoid information, and require difficult entailment-like inference to solve. We also explore the effectiveness of a range of transfer learning baselines. We find that transferring from entailment data is more effective than transferring from paraphrase or extractive QA data, and that it, surprisingly, continues to be very beneficial even when starting from massive pre-trained language models such as BERT. Our best method trains BERT on MultiNLI and then re-trains it on our train set. It achieves 80.4% accuracy compared to 90% accuracy of human annotators (and 62% majority-baseline), leaving a significant gap for future work."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8888888888888888
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0537675,
+        "input_tokens": 16800,
+        "output_tokens": 1302
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2019",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1905.10044"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

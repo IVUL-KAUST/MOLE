@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "RuSemShift",
+        "Link": "https://github.com/juliarodina/RuSemShift",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2020,
+        "Language": "ru",
+        "Domain": [
+            "books",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "RuSemShift is a large-scale manually annotated test set for the task of semantic change modeling in Russian for two long-term time period pairs: from the pre-Soviet through the Soviet times and from the Soviet through the post-Soviet times.",
+        "Volume": 140.0,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "National Research University Higher School of Economics",
+            "University of Oslo"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuSemShift: a dataset of historical lexical semantic change in Russian",
+        "Paper Link": "https://arxiv.org/abs/2010.06436",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "sentiment analysis"
+        ],
+        "Venue Title": "COLING",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Julia Rodina",
+            "Andrey Kutuzov"
+        ],
+        "Affiliations": [
+            "National Research University Higher School of Economics",
+            "University of Oslo"
+        ],
+        "Abstract": "We present RuSemShift, a large-scale manually annotated test set for the task of semantic change modeling in Russian for two long-term time period pairs: from the pre-Soviet through the Soviet times and from the Soviet through the post-Soviet times. Target words were annotated by multiple crowd-source workers. The annotation process was organized following the DURel framework and was based on sentence contexts extracted from the Russian National Corpus. Additionally, we report the performance of several distributional approaches on RuSemShift, achieving promising results, which at the same time leave room for other researchers to improve."
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0014643,
+        "input_tokens": 12345,
+        "output_tokens": 492
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.06436"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

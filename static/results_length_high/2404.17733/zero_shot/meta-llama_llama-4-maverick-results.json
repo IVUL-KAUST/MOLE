@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "Japanese Web Corpus",
+        "Link": "https://huggingface.co/datasets/tokyotech-llm/japanese-web-corpus",
+        "HF Link": "https://huggingface.co/datasets/tokyotech-llm/japanese-web-corpus",
+        "License": "CC BY-SA 4.0",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A large Japanese web corpus for training large language models",
+        "Volume": 312.093428689,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Tokyo Institute of Technology"
+        ],
+        "Derived From": [
+            "Common Crawl"
+        ],
+        "Paper Title": "Building a Large Japanese Web Corpus for Large Language Models",
+        "Paper Link": "https://example.com/paper-link",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "COLM 2024",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Naoaki Okazaki",
+            "Kakeru Hattori",
+            "Hirai Shota",
+            "Hiroki Iida",
+            "Masanari Ohi",
+            "Kazuki Fujii",
+            "Taishi Nakamura",
+            "Mengsay Loem",
+            "Rio Yokota",
+            "Sakae Mizuki"
+        ],
+        "Affiliations": [
+            "Tokyo Institute of Technology"
+        ],
+        "Abstract": "This paper presents a method to construct a large-scale, high-quality Japanese web corpus for training Japanese large language models (LLMs). The corpus is extracted and refined from the Common Crawl archive, resulting in approximately 312.1 billion characters. Experiments show that continual pre-training on popular LLMs with the presented corpus improves their performance on Japanese benchmark datasets."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0038511,
+        "input_tokens": 22303,
+        "output_tokens": 450
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.17733"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

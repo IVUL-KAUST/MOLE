@@ -1,0 +1,69 @@
+{
+    "metadata": {
+        "Name": "Russian Jeopardy! Data Set",
+        "Link": "https://github.com/evrog/Russian-QA-Jeopardy",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "A dataset of Russian Jeopardy! questions and answers collected from the official Russian quiz database Chgk",
+        "Volume": 29375.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Russian Jeopardy! Data Set for Question-Answering Systems",
+        "Paper Link": "https://arxiv.org/abs/2206.06127",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "LREC 2022",
+        "Venue Type": "conference",
+        "Venue Name": "LREC",
+        "Authors": [
+            "Elena Mikhalkova",
+            "Alexander Khlyupin"
+        ],
+        "Affiliations": [
+            "Tyumen State University"
+        ],
+        "Abstract": "The paper describes a Jeopardy!-like Russian QA data set collected from the official Russian quiz database Chgk. The data set includes 379,284 quiz-like questions with 29,375 from the Russian analogue of Jeopardy! -- ``Own Game''. We observe its linguistic features and the related QA-task."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00214122,
+        "input_tokens": 11116,
+        "output_tokens": 382
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2112.02325"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

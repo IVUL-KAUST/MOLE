@@ -1,0 +1,111 @@
+{
+    "metadata": {
+        "Name": "RiSAWOZ",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "Chinese",
+            "English",
+            "French",
+            "Hindi",
+            "Korean"
+        ],
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A multilingual task-oriented dialogue dataset created by translating Chinese RiSAWOZ to English, French, Hindi, Korean and English-Hindi code-mixed languages",
+        "Volume": 18000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University",
+            "Tianjin University",
+            "Microsoft",
+            "CEA List",
+            "IIIT Hyderabad",
+            "Hanyang University",
+            "Karya Inc"
+        ],
+        "Derived From": [
+            "RiSAWOZ"
+        ],
+        "Paper Title": "X-RiSAWOZ: High-Quality End-to-End Multilingual Dialogue Datasets and Few-shot Agents",
+        "Paper Link": "https://arxiv.org/abs/2306.17674",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language modeling",
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Mehrad Moradshahi",
+            "Tianhao Shen",
+            "Kalika Bali",
+            "Monojit Choudhury",
+            "Ga\u00ebl de Chalendar",
+            "Anmol Goel",
+            "Sungkyun Kim",
+            "Prashant Kodali",
+            "Ponnurangam Kumaraguru",
+            "Nasredine Semmar",
+            "Sina J. Semnani",
+            "Jiwon Seo",
+            "Vivek Seshadri",
+            "Manish Shrivastava",
+            "Michael Sun",
+            "Aditya Yadavalli",
+            "Chaobin You",
+            "Deyi Xiong",
+            "Monica S. Lam"
+        ],
+        "Affiliations": [
+            "Computer Science Department, Stanford University",
+            "College of Intelligence and Computing, Tianjin University",
+            "Microsoft",
+            "Universit\u00e9 Paris-Saclay, CEA, List",
+            "International Institute of Information Technology, Hyderabad",
+            "Computer Science Department, Hanyang University",
+            "Karya Inc"
+        ],
+        "Abstract": "Task-oriented dialogue research has mainly focused on a few popular languages like English and Chinese, due to the high dataset creation cost for a new language. To reduce the cost, we apply manual editing to automatically translated data. We create a new multilingual benchmark, X-RiSAWOZ, by translating the Chinese RiSAWOZ to 4 languages: English, French, Hindi, Korean; and a code-mixed English-Hindi language. X-RiSAWOZ has more than 18,000 human-verified dialogue utterances for each language, and unlike most multilingual prior work, is an end-to-end dataset for building fully-functioning agents."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.115602,
+        "input_tokens": 30449,
+        "output_tokens": 640
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

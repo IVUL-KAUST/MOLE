@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "Russian Jeopardy! Data Set",
+        "Link": "https://github.com/evrog/Russian-QA-Jeopardy",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "reviews",
+            "wikipedia",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset of Russian Jeopardy! questions and answers collected from the ChGK database",
+        "Volume": 29375.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Tyumen State University"
+        ],
+        "Derived From": [
+            "ChGK database"
+        ],
+        "Paper Title": "Russian Jeopardy! Data Set for Question-Answering Systems",
+        "Paper Link": "https://arxiv.org/abs/2203.06383",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "LREC 2022",
+        "Venue Type": "conference",
+        "Venue Name": "LREC",
+        "Authors": [
+            "Elena Mikhalkova",
+            "Alexander Khlyupin"
+        ],
+        "Affiliations": [
+            "Tyumen State University"
+        ],
+        "Abstract": "The paper describes a Jeopardy!-like Russian QA dataset collected from the official Russian quiz database Chgk. The dataset includes 379,284 quiz-like questions with 29,375 from the Russian analogue of Jeopardy! -- ``Own Game''. The authors observe its linguistic features and the related QA-task, and conclude about perspectives of a QA challenge based on the collected dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9310344827586203,
+    "cost": {
+        "cost": 0.00268422,
+        "input_tokens": 11116,
+        "output_tokens": 396
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2112.02325"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

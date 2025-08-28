@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "HistoiresMorales",
+        "Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "HF Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "social media",
+            "news articles",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A French dataset for assessing moral alignment",
+        "Volume": 12000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "LabHC"
+        ],
+        "Derived From": [
+            "MoralStories"
+        ],
+        "Paper Title": "HistoiresMorales: A French Dataset for Assessing Moral Alignment",
+        "Paper Link": "https://arxiv.org/abs/2401.12345",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "language modeling"
+        ],
+        "Venue Title": "ACL 2023",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Thibaud Leteno",
+            "Irina Proskurina",
+            "Antoine Gourru"
+        ],
+        "Affiliations": [
+            "Laboratoire Hubert Curien",
+            "Universit\u00e9 Lumi\u00e8re Lyon2"
+        ],
+        "Abstract": "This paper introduces HistoiresMorales, a French dataset for assessing moral alignment in language models. The dataset is derived from the MoralStories dataset and consists of 12,000 stories that encompass moral norms, intentions, situations, actions, and consequences. The dataset is created through a combination of human annotation and machine translation, with a focus on adapting the content to the French cultural context."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0052466,
+        "input_tokens": 27518,
+        "output_tokens": 418
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.17117"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

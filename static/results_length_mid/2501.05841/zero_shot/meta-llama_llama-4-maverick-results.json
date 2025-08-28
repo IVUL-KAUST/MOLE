@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Russian Financial Statements Database",
+        "Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "HF Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "social media",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A comprehensive dataset of Russian financial statements from 2011 to 2023, including balance sheets, income statements, and cash flow statements.",
+        "Volume": 56.6,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "European University at Saint Petersburg"
+        ],
+        "Derived From": [
+            "Uniform State Register of Legal Entities (EGRUL)",
+            "Federal State Statistics Service of Russia (Rosstat)"
+        ],
+        "Paper Title": "Russian Financial Statements Database: A firm-level collection of the universe of financial statements",
+        "Paper Link": "https://doi.org/10.5281/zenodo.14622209",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": false,
+        "Tasks": [
+            "morphological analysis",
+            "information retrieval"
+        ],
+        "Venue Title": "Zenodo",
+        "Venue Type": "preprint",
+        "Venue Name": "Zenodo",
+        "Authors": [
+            "Sergey Bondarkov",
+            "Viktor Ledenev",
+            "Dmitry Skougarevskiy"
+        ],
+        "Affiliations": [
+            "European University at Saint Petersburg"
+        ],
+        "Abstract": "The Russian Financial Statements Database (RFSD) is an open, harmonized collection of annual unconsolidated financial statements of the universe of Russian firms in 2011--2023. It features multiple end-user quality-of-life improvements such as data imputation, statement articulation, harmonization across data providers and formats, and data enrichment."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0048218,
+        "input_tokens": 25321,
+        "output_tokens": 449
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

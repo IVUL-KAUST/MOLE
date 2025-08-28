@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://etiquette.illuin.tech/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "FQuAD2.0 is a French Question Answering dataset extending FQuAD1.1 with 17,000+ unanswerable questions, making it the first French adversarial QA dataset with almost 80,000 questions.",
+        "Volume": 80222.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "FQuAD1.1"
+        ],
+        "Paper Title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+        "Paper Link": "https://arxiv.org/abs/2109.13209",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "EMNLP 2020",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP",
+        "Authors": [
+            "Quentin Heinrich",
+            "Gautier Viaud",
+            "Wacim Belblidia"
+        ],
+        "Affiliations": [
+            "Illuin Technology"
+        ],
+        "Abstract": "Question Answering (QA) is a central task in Natural Language Understanding (NLU), with numerous industrial applications such as searching information in large corpus, extracting information from conversations or form filling. Amongst this domain, Reading Comprehension has gained a lot of traction in the past years thanks to two main factors. First, the release of numerous datasets such as SQuAD1.1, SQuAD2.0, BoolQ, CoQA, Natural Questions, only to cite a few. Second, the progress in Language Modeling with the introduction of transformers model, leveraging self-supervised training on very large text corpus, followed by fine-tuning on a downstream task. This process has now become a de-facto standard for most of Natural Language Processing (NLP) tasks and also contributed to the progress of state-of-the-art for most of these tasks, including Question Answering. Whilst most of these recent transformers models are English models, French language models have also been released, in particular CamemBERT and FlauBERT, as well as multilingual models such as mBERT or XLM-RoBERTa. These models fostered the state-of-the-art in NLP for French language, allowing to benefit from this large-scale transfer learning mechanism. However, native French resources for Question Answering remain scarcer than English resources. Nonetheless, in 2020, FQuAD1.1 was introduced by Illuin Technology. With 60,000+ question-answer pairs, it enabled the development of QA models surpassing the human performance in the Reading Comprehension task. Although, the introduction of this resource was a major leap forward for French QA, the obtained models suffered from an important weakness, as they were trained to consistently find an answer to the specified question by reading the associated context. In real-life applications however, it is often the case that asked questions do not have an answer in the associated context. For example, let us imagine that we are building a system designed to automatically fill a form with relevant information from property advertisements. We could be interested in the type of property, its surface area and its number of rooms. By asking questions such as 'How many rooms does the property have?' to a QA model, we would be able to extract this information. But it would also be important that our model is able to predict when such a question does not find an answer in the provided text advertisement, as this situation often arises. As FQuAD1.1 contains solely answerable questions, the models trained on this dataset did not learn to determine when a question is unanswerable with the associated context. To overcome this difficulty, we extended FQuAD with unanswerable questions, annotated adversarially, in order to be close to answerable ones."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.042095,
+        "input_tokens": 14823,
+        "output_tokens": 888
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

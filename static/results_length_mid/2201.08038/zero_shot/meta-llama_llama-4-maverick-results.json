@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "Japanese Quality Estimation Dataset",
+        "Link": "https://github.com/tmu-nlp/ Japanese-GEC-QE-Dataset",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A dataset for quality estimation of Japanese grammatical error correction",
+        "Volume": 2042.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Tokyo Metropolitan University",
+            "RIKEN"
+        ],
+        "Derived From": [
+            "Lang-8",
+            "TEC-JL",
+            "FLUTEC"
+        ],
+        "Paper Title": "Construction of a Quality Estimation Dataset for Automatic Evaluation of Japanese Grammatical Error Correction",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.24.pdf",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "transliteration",
+            "irony detection"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Daisuke Suzuki",
+            "Yujin Takahashi",
+            "Ikumi Yamashita",
+            "Taichi Aida",
+            "Tosho Hirasawa",
+            "Michitaka Nakatsuji",
+            "Masato Mita",
+            "Mamoru Komachi"
+        ],
+        "Affiliations": [
+            "Tokyo Metropolitan University",
+            "RIKEN"
+        ],
+        "Abstract": "This paper describes the construction of a quality estimation dataset for Japanese grammatical error correction. The dataset includes source text, corrected text, and human ratings. The human ratings are annotated by native Japanese university students. The dataset is used to build a quality estimation model by fine-tuning BERT."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9333333333333332,
+    "cost": {
+        "cost": 0.00805662,
+        "input_tokens": 12194,
+        "output_tokens": 444
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.08038"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

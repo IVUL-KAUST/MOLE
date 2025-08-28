@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "MEDIA 2022",
+        "Link": "https://github.com/Ala-Na/media_benchmark_intent_annotations",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "web pages",
+            "TV Channels",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "The MEDIA SLU dataset is a French dataset for Spoken Language Understanding, specifically for intent classification and slot-filling tasks. It is based on recorded phone calls for hotel booking and is distributed by ELRA.",
+        "Volume": 70.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Paris-Saclay",
+            "CNRS",
+            "LISN",
+            "Avignon Universit\u00e9",
+            "LIA"
+        ],
+        "Derived From": [
+            "MEDIA"
+        ],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://hal.science/hal-04198588",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "meter classification",
+            "language modeling"
+        ],
+        "Venue Title": "LREC-COLING 2024",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Nad\u00e8ge Alavoine",
+            "Ga\u00eblle Laperri\u00e8re",
+            "Christophe Servan",
+            "Sahar Ghannay",
+            "Sophie Rosset"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris-Saclay, CNRS, LISN",
+            "Avignon Universit\u00e9, LIA",
+            "QWANT"
+        ],
+        "Abstract": "This paper presents an updated version of the MEDIA dataset enhanced with intent annotations using a semi-automatic approach. The MEDIA SLU dataset is a French dataset distributed since 2005 by ELRA, mainly used by the French research community and free for academic research since 2020. Unfortunately, it is annotated only in slots but not intents. The paper presents the semi-automatic methodology used to obtain this enhanced version and the first results of SLU experiments on this enhanced dataset using joint models for intent classification and slot-filling."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00452964,
+        "input_tokens": 25059,
+        "output_tokens": 511
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

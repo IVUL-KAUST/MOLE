@@ -1,0 +1,67 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://huggingface.co/datasets/fquad",
+        "HF Link": "https://huggingface.co/datasets/fquad",
+        "License": "Apache-2.0",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "news articles",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "FQuAD2.0 is a French Question Answering Dataset with 17k questions, including 8k unanswerable questions. It is designed to evaluate the ability of models to distinguish between answerable and unanswerable questions.",
+        "Volume": 17000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "FQuAD2.0: A French Question Answering Dataset with Adversarially Constructed Unanswerable Questions",
+        "Paper Link": "https://aclanthology.org/2020.naacl-main.388/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "free",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "machine translation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.8965517241379307,
+    "cost": {
+        "cost": 0.0011077290504,
+        "input_tokens": 14835,
+        "output_tokens": 314
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

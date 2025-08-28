@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "J-CRe3",
+        "Link": "https://github.com/riken-grp/J-CRe3",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "other"
+        ],
+        "Description": "A Japanese Conversation dataset for Real-world Reference Resolution",
+        "Volume": 2.652,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Kyoto University",
+            "RIKEN"
+        ],
+        "Paper Title": "J-CRe3: A Japanese Conversation Dataset for Real-world Reference Resolution",
+        "Paper Link": "https://arxiv.org/abs/2403.11458",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Test Split": true,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "LREC-COLING 2024",
+        "Venue Type": "conference",
+        "Venue Name": "LREC-COLING",
+        "Authors": [
+            "Nobuhiro Ueda",
+            "Hideko Habe",
+            "Yoko Matsui",
+            "Akishige Yuguchi",
+            "Seiya Kawano",
+            "Yasutomo Kawanishi",
+            "Sadao Kurohashi",
+            "Koichiro Yoshino"
+        ],
+        "Affiliations": [
+            "Kyoto University",
+            "RIKEN",
+            "Tokyo University of Science",
+            "Nara Institute of Science and Technology",
+            "National Institute of Informatics"
+        ],
+        "Abstract": "Understanding expressions that refer to the physical world is crucial for human-assisting systems. We propose a multimodal reference resolution task and construct J-CRe3, a Japanese Conversation dataset for Real-world Reference Resolution. The dataset contains egocentric video and dialogue audio of real-world conversations between two people acting as a master and an assistant robot at home, annotated with crossmodal tags between phrases in the utterances and object bounding boxes in the video frames.",
+        "HF Link": "",
+        "Derived From": [],
+        "Cost": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00323562,
+        "input_tokens": 17291,
+        "output_tokens": 479
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19259"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://etiquette.illuin.tech/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A French Question Answering dataset with both answerable and unanswerable questions, containing almost 80,000 questions total",
+        "Volume": 17765.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "FQuAD1.1"
+        ],
+        "Paper Title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+        "Paper Link": "https://arxiv.org/abs/2109.13209",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "EMNLP2020",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Quentin Heinrich",
+            "Gautier Viaud",
+            "Wacim Belblidia"
+        ],
+        "Affiliations": [
+            "Illuin Technology"
+        ],
+        "Abstract": "In this paper, we introduced FQuAD2.0, a QA dataset with both answerable questions (coming from FQuAD1.1) and 17,000+ newly annotated unanswerable questions, for a total of almost 80,000 questions. To the best of our knowledge, this is the first French (and, perhaps most importantly, non-English) adversarial Question Answering dataset. We trained various baseline models using CamemBERT architectures. Our best model, a fine-tuned CamemBERT LARGE, achieves a F1 score of 82.3% on this classification task, and a F1 score of 83% on the Reading Comprehension task."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.059565,
+        "input_tokens": 14823,
+        "output_tokens": 452
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

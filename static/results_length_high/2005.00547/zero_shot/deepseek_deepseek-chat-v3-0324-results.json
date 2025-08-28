@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://github.com/google-research/google-research/tree/master/goemotions",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset of 58K Reddit comments labeled for 27 emotions or Neutral, curated to reduce bias and offensive content.",
+        "Volume": 58000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://github.com/google-research/google-research/tree/master/goemotions",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Dorottya Demszky",
+            "Dana Movshovitz-Attias",
+            "Jeongwoo Ko",
+            "Alan Cowen",
+            "Gaurav Nemade",
+            "Sujith Ravi"
+        ],
+        "Affiliations": [
+            "Stanford Linguistics",
+            "Google Research",
+            "Amazon Alexa"
+        ],
+        "Abstract": "Understanding emotion expressed in language has a wide range of applications, from building empathetic chatbots to detecting harmful online behavior. Advancement in this area can be improved using large-scale datasets with a fine-grained typology, adaptable to multiple downstream tasks. We introduce GoEmotions, the largest manually annotated dataset of 58k English Reddit comments, labeled for 27 emotion categories or Neutral. We demonstrate the high quality of the annotations via Principal Preserved Component Analysis. We conduct transfer learning experiments with existing emotion benchmarks to show that our dataset generalizes well to other domains and different emotion taxonomies. Our BERT-based model achieves an average F1-score of .46 across our proposed taxonomy, leaving much room for improvement."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00682206,
+        "input_tokens": 19087,
+        "output_tokens": 497
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
