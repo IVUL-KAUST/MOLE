@@ -1,0 +1,131 @@
+{
+    "metadata": {
+        "answer": {
+            "Name": "CLIMB",
+            "Link": "https://huggingface.co/datasets/nvidia/ClimbMix",
+            "HF Link": "https://huggingface.co/datasets/nvidia/ClimbMix",
+            "License": "CC BY-NC 4.0",
+            "Year": 2025,
+            "Language": "multilingual",
+            "Domain": [
+                "social media",
+                "news articles",
+                "reviews",
+                "commentary",
+                "books",
+                "wikipedia",
+                "web pages"
+            ],
+            "Form": "text",
+            "Collection Style": [
+                "crawling",
+                "manual curation"
+            ],
+            "Description": "An automated framework that discovers, evaluates, and refines data mixtures in a pre-training setting. Includes ClimbMix and ClimbLab datasets.",
+            "Volume": 400000000000.0,
+            "Unit": "tokens",
+            "Ethical Risks": "Medium",
+            "Provider": [
+                "NVIDIA"
+            ],
+            "Derived From": [
+                "Nemotron-CC",
+                "smollm-corpus"
+            ],
+            "Paper Title": "CLIMB: Clustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training",
+            "Paper Link": "https://arxiv.org/abs/2504.13161",
+            "Tokenized": true,
+            "Host": "HuggingFace",
+            "Access": "Free",
+            "Cost": "",
+            "Test Split": false,
+            "Tasks": [
+                "language modeling",
+                "text generation",
+                "sentiment analysis",
+                "question answering"
+            ],
+            "Venue Title": "arXiv preprint",
+            "Venue Type": "preprint",
+            "Venue Name": "Unknown",
+            "Authors": [
+                "Shizhe Diao",
+                "Yu Yang",
+                "Yonggan Fu",
+                "Xin Dong",
+                "Dan Su",
+                "Markus Kliegl",
+                "Zijia Chen",
+                "Peter Belcak",
+                "Yoshi Suhara",
+                "Hongxu Yin",
+                "Mostofa Patwary",
+                "Yingyan (Celine) Lin",
+                "Jan Kautz",
+                "Pavlo Molchanov"
+            ],
+            "Affiliations": [],
+            "Abstract": "Pre-training datasets are typically collected from web content and lack inherent domain divisions. For instance, widely used datasets like Common Crawl do not include explicit domain labels, while manually curating labeled datasets such as The Pile is labor-intensive. Consequently, identifying an optimal pre-training data mixture remains a challenging problem, despite its significant benefits for pre-training performance. To address these challenges, we propose CL (Clustering-based) I (Iterative) M (Mixture) B (Bootstrapping) (CLIMB), an automated framework that discovers, evaluates, and refines data mixtures in a pre-training setting. Specifically, CLIMB embeds and clusters large-scale datasets in a semantic space and then iteratively searches for optimal mixtures using a smaller proxy model and a predictor. When continuously trained on 400B tokens with this mixture, our 1B model exceeds the state-of-the-art Llama-3.2-1B by 2.0%. Moreover, we observe that optimizing for a specific domain (e.g., Social Sciences) yields a 5% improvement over random sampling. Finally, we introduce climblab, a filtered 1.2-trillion-token corpus with 20 clusters as a research playground, and finaldatamix, a compact yet powerful 400-billion-token dataset designed for efficient pre-training that delivers superior performance under an equal token budget. We analyze the final data mixture, elucidating the characteristics of an optimal data mixture."
+        },
+        "Name": "",
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "other"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "",
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2504.13161",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.0,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.1111111111111111
+    },
+    "length_forcing": 0.8965517241379307,
+    "cost": {
+        "cost": 0.003988336,
+        "input_tokens": 33965,
+        "output_tokens": 1598
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.13161"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

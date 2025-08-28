@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "Name": "MultiWOZ-X",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "https://github.com/gglavas/MultiWOZ-X",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "MultiWOZ-X is a large-scale multilingual dataset for task-oriented dialog (TOD). It contains 2,000 human-written dialogs from MultiWOZ 2.1, translated and re-annotated by professional translators into Arabic, Chinese, German, and Russian, enabling evaluation of cross-lingual transfer for tasks like Dialog State Tracking and Response Retrieval.",
+        "Volume": 2000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Mannheim",
+            "University of Cambridge",
+            "Bocconi University"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "MultiWOZ-X: A Large-Scale Multilingual Cross-Lingual Task-Oriented Dialogue Dataset",
+        "Paper Link": "https://aclanthology.org/2021.emnlp-main.783/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "information retrieval",
+            "intent classification",
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2021",
+        "Authors": [
+            "Goran Glava\u0161",
+            "Simone Paolo Ponzetto",
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107"
+        ],
+        "Affiliations": [
+            "University of Mannheim",
+            "University of Cambridge",
+            "Bocconi University"
+        ],
+        "Abstract": "Current research in task-oriented dialog (TOD) is severely limited by the lack of multilingual datasets. This has two main negative effects: 1) it prevents the development of truly multilingual TOD systems, and 2) it makes it impossible to reliably evaluate the cross-lingual transfer capabilities of state-of-the-art pretrained language models (PrLMs) for TOD tasks. In this work, we introduce MultiWOZ-X, the first large-scale multilingual dataset for cross-lingual and multilingual fine-tuning and evaluation in TOD. It is a collection of 2,000 human-written dialogs from the original English MultiWOZ 2.1, translated and re-annotated by professional translators into 4 new languages: Arabic, Chinese, German, and Russian. We provide a thorough analysis of the new dataset and its properties. We then establish a series of strong baselines for two main TOD tasks, Dialog State Tracking (DST) and Response Retrieval (RR), in two cross-lingual transfer setups: zero-shot and few-shot. Our results indicate that 1) conversational pretraining on target languages is crucial for effective cross-lingual transfer, and 2) few-shot learning with only a handful of target-language dialogs is a viable and data-efficient alternative to full-scale data collection and annotation in new languages. We release the new dataset and the code to the public."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.06804375,
+        "input_tokens": 7978,
+        "output_tokens": 2216
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

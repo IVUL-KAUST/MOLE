@@ -1,0 +1,112 @@
+{
+    "metadata": {
+        "Name": "MultiWOZ",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "German",
+            "Arabic",
+            "Chinese",
+            "Russian"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A multilingual task-oriented dialog dataset created by translating MultiWOZ 2.1 development and test portions to Arabic, Chinese, German and Russian.",
+        "Volume": 2000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Deutsche Forschungsgemeinschaft",
+            "University of Cambridge"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "Sample Efficient Cross-lingual Transfer for Task-oriented Dialog through Intermediate Specialization",
+        "Paper Link": "https://arxiv.org/abs/2205.10400",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Goran Glava\u0161",
+            "Simone Paolo Ponzetto",
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107"
+        ],
+        "Affiliations": [
+            "MWK Baden-W\u00fcrttemberg",
+            "Deutsche Forschungsgemeinschaft",
+            "University of Cambridge"
+        ],
+        "Abstract": "We present a new multilingual task-oriented dialog (TOD) dataset, MultiWOZ-X, created by translating the development and test portions of the English MultiWOZ dataset to four typologically diverse languages: Arabic, Chinese, German, and Russian. We use MultiWOZ-X as a testbed for investigating cross-lingual transfer for two core TOD tasks: Dialog State Tracking (DST) and Response Retrieval (RR). We first establish that zero-shot cross-lingual transfer with state-of-the-art multilingual transformers yields poor performance, especially for DST. We then demonstrate that intermediate conversational specialization of multilingual transformers for the target languages - through masked language modeling, translation language modeling, and response selection pretraining - dramatically improves their zero-shot transfer. Most importantly, we show that such intermediate specialization makes the models much more sample-efficient in few-shot transfer setups: they achieve much stronger performance even with a small number of target-language dialogs."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.040467,
+        "input_tokens": 7978,
+        "output_tokens": 658
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

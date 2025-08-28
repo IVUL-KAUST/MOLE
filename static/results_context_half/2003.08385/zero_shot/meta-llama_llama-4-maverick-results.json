@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "Name": "Xstance",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 39850,
+                "Unit": "comments",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 14099,
+                "Unit": "comments",
+                "Language": "French"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 6966,
+                "Unit": "comments",
+                "Language": "Italian"
+            }
+        ],
+        "Link": "http://doi.org/10.5281/zenodo.3831317",
+        "HF Link": "",
+        "License": "CC BY-NC 4.0",
+        "Year": 2020,
+        "Language": [
+            "German",
+            "French",
+            "Italian"
+        ],
+        "Domain": [
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A multilingual dataset for stance detection in political comments",
+        "Volume": 67000.0,
+        "Unit": "documents",
+        "Ethical Risks": "High",
+        "Provider": [
+            "University of Zurich",
+            "University of Edinburgh"
+        ],
+        "Derived From": [],
+        "Paper Title": "Xstance: A Multilingual Multi-Target Dataset for Stance Detection",
+        "Paper Link": "https://arxiv.org/abs/2003.08385",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "stance detection"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Jannis Vamvas",
+            "Rico Sennrich"
+        ],
+        "Affiliations": [
+            "Department of Computational Linguistics, University of Zurich",
+            "School of Informatics, University of Edinburgh"
+        ],
+        "Abstract": "We extract a large-scale stance detection dataset from comments written by candidates of elections in Switzerland. The dataset consists of German, French and Italian text, allowing for a cross-lingual evaluation of stance detection. It contains 67 000 comments on more than 150 political issues (targets). Unlike stance detection models that have specific target issues, we use the dataset to train a single model on all the issues. To make learning across targets possible, we prepend to each instance a natural question that represents the target (e.g. ``Do you support X?''). Baseline results from multilingual BERT show that zero-shot cross-lingual and cross-target transfer of stance detection is moderately successful with this approach."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.001758,
+        "input_tokens": 8258,
+        "output_tokens": 550
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2003.08385"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

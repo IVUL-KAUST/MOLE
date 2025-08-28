@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "HeadlineCause",
+        "Link": "https://aclanthology.org/2021.neurips-data.1/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "HeadlineCause is a dataset for detecting implicit causal relations between pairs of news headlines. It includes over 5000 English and 9000 Russian headline pairs labeled through crowdsourcing.",
+        "Volume": 14000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Moscow Institute of Physics and Technology",
+            "Yandex"
+        ],
+        "Derived From": [],
+        "Paper Title": "HeadlineCause: A Dataset of News Headlines for Detecting Causalities",
+        "Paper Link": "https://aclanthology.org/2021.neurips-data.1/",
+        "Tokenized": false,
+        "Host": "ResearchGate",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "relation extraction",
+            "text generation"
+        ],
+        "Venue Title": "NeurIPS Data",
+        "Venue Type": "workshop",
+        "Venue Name": "",
+        "Authors": [
+            "Ilya Gusev",
+            "Alexey Tikhonov"
+        ],
+        "Affiliations": [
+            "Moscow Institute of Physics and Technology",
+            "Yandex"
+        ],
+        "Abstract": "Detecting implicit causal relations in texts is a task that requires both common sense and world knowledge. Existing datasets are focused either on commonsense causal reasoning or explicit causal relations. In this work, we present HeadlineCause, a dataset for detecting implicit causal relations between pairs of news headlines. The dataset includes over 5000 headline pairs from English news and over 9000 headline pairs from Russian news labeled through crowdsourcing. The pairs vary from totally unrelated or belonging to the same general topic to the ones including causation and refutation relations. We also present a set of models and experiments that demonstrates the dataset validity, including a multilingual XLM-RoBERTa based model for causality detection and a GPT-2 based model for possible effects prediction."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0007209,
+        "input_tokens": 5335,
+        "output_tokens": 529
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.12626"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,115 @@
+{
+    "metadata": {
+        "Name": "MultiWOZ-X",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2000,
+                "Unit": "documents",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "https://github.com/gucorpling/multiwoz-x",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian",
+            "English"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "MultiWOZ-X is a large-scale multilingual dataset for multi-domain and multi-task task-oriented dialogues (TOD). It is a professionally translated and manually curated corpus of 2,000 dialogues from the original MultiWOZ, spanning Arabic, Chinese, German, and Russian across 7 domains. It is designed for evaluating models on tasks like dialogue state tracking (DST) and response retrieval (RR).",
+        "Volume": 2000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Mannheim",
+            "University of Hamburg",
+            "University of Cambridge"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "MultiWOZ-X: A Multilingual, Multi-Domain, and Multi-Task Benchmark for Task-Oriented Dialogues",
+        "Paper Link": "https://aclanthology.org/2022.findings-emnlp.313",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "information retrieval",
+            "named entity recognition",
+            "text generation"
+        ],
+        "Venue Title": "Findings of the Association for Computational Linguistics: EMNLP 2022",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107",
+            "Simone Paolo Ponzetto",
+            "Goran Glava\u0161"
+        ],
+        "Affiliations": [
+            "University of Mannheim",
+            "University of Hamburg",
+            "University of Cambridge"
+        ],
+        "Abstract": "Research in task-oriented dialogue (TOD) systems has been recently advanced by the availability of large-scale datasets such as MultiWOZ. However, such datasets are monolingual (English-only), which limits the development of multilingual TOD systems. In this work, we introduce MultiWOZ-X, a new large-scale multilingual dataset for multi-domain and multi-task TOD. It is a professionally translated and manually curated corpus of 2,000 dialogues from the original MultiWOZ, spanning 4 languages (Arabic, Chinese, German, and Russian) and 7 domains. We provide a comprehensive empirical study of state-of-the-art multilingual models on two key TOD tasks, dialogue state tracking (DST) and response retrieval (RR), in both zero-shot and few-shot cross-lingual transfer setups. Our results indicate that 1) conversational pre-training on target languages substantially improves the sample efficiency in few-shot transfer, and 2) the performance of cross-lingual transfer for TOD is heavily dependent on the linguistic proximity between the source and target languages. We hope that MultiWOZ-X will foster future research in multilingual TOD."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.06277625,
+        "input_tokens": 11932,
+        "output_tokens": 1812
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

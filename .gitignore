@@ -14,4 +14,16 @@ custom.bib
 
 .vscode
 
+.venv
+wandb/
+dcgm/
+unsloth*
+gemma-3*
+output*
+static/results_versions
+static/synth_datasetv2
+resource/
+slurm/
+train_dataset.csv
+
 [qQ]wen*

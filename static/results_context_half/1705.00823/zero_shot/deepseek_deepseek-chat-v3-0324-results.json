@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "unknown",
+        "HF Link": "unknown",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A large-scale Japanese image caption dataset constructed for tasks involving image captioning and related NLP tasks.",
+        "Volume": 0.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "unknown",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "unknown",
+        "Test Split": false,
+        "Tasks": [
+            "image captioning"
+        ],
+        "Venue Title": "unknown",
+        "Venue Type": "journal",
+        "Venue Name": "unknown",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "unknown"
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9333333333333332,
+    "cost": {
+        "cost": 0.0008983366452,
+        "input_tokens": 3396,
+        "output_tokens": 257
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

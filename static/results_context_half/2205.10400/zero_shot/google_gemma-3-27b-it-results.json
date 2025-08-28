@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "MultiWOZ",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "https://github.com/budzianowski/MultiWOZ",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian"
+        ],
+        "Domain": [
+            "wikipedia",
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "A multilingual dataset created by translating the MultiWOZ 2.1 dataset to Arabic, Chinese, German, and Russian. It contains 2000 dialogs in each language, focusing on task-oriented dialog in multiple domains.",
+        "Volume": 2000.0,
+        "Unit": "images",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Cambridge"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "mz: A Multilingual Task-Oriented Dialog Dataset",
+        "Paper Link": "https://arxiv.org/abs/2205.10400",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Goran Glava\u0161",
+            "Simone Paolo Ponzetto",
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107"
+        ],
+        "Affiliations": [
+            "University of Cambridge"
+        ],
+        "Abstract": "Research in task-oriented dialog has been, for a long time, limited by the existence of only monolingual English datasets. We introduce mz, a multilingual, multi-domain task-oriented dialog dataset in four languages (Arabic, Chinese, German, and Russian), created by translating the English MultiWOZ 2.1 dataset. We present extensive experiments on zero-shot and few-shot cross-lingual transfer for dialog state tracking (DST) and response retrieval (RR), demonstrating that intermediate conversational specialization for the target language substantially improves the sample efficiency in the downstream few-shot transfer."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.001605103,
+        "input_tokens": 11944,
+        "output_tokens": 603
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

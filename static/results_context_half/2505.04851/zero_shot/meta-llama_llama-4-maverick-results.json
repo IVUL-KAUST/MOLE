@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "CRAFT",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "social media",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "CRAFT is a dataset for cultural adaptation of text-to-image models for Russian culture.",
+        "Volume": 8000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sber AI Lab",
+            "AIRI"
+        ],
+        "Derived From": [],
+        "Paper Title": "CRAFT: Cultural Russian-Oriented Dataset Adaptation for Focused Text-to-Image Generation",
+        "Paper Link": "https://arxiv.org/abs/2404.13233",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Viacheslav Vasilev",
+            "Vladimir Arkhipkin",
+            "Julia Agafonova",
+            "Tatiana Nikulina",
+            "Evelina Mironova",
+            "Alisa Shichanina",
+            "Nikolai Gerasimenko",
+            "Mikhail Shoytov",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "Sber AI Lab",
+            "AIRI",
+            "Moscow Institute of Physics and Technology"
+        ],
+        "Abstract": "This paper proposes a methodology for collecting and processing a dataset to adapt text-to-image models to understand Russian cultural code. The dataset is created by collecting images from the web and manually annotating them with captions. The resulting dataset is used to fine-tune the Kandinsky 3.1 model, improving its cultural awareness and generation quality for Russian cultural entities."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0017546,
+        "input_tokens": 7732,
+        "output_tokens": 443
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2505.04851"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

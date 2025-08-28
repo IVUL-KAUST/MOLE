@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "MTNT",
+        "Link": "https://github.com/pmichel31415/mtnt",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "MTNT is a dataset designed to test machine translation models for robustness to noise encountered in natural language on the Internet. It includes parallel training and test data for English-French and English-Japanese language pairs, as well as monolingual data in these languages.",
+        "Volume": 26485.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [],
+        "Paper Title": "MTNT: A Testbed for Machine Translation of Noisy Text",
+        "Paper Link": "http://www.cs.cmu.edu/~pmichel1/mtnt/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP",
+        "Authors": [
+            "Paul Michel",
+            "Graham Neubig"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "We propose a new dataset to test machine translation models for robustness to the types of noise encountered in natural language on the Internet. We contribute parallel training and test data in both directions for two language pairs, English-French and English-Japanese, as well as monolingual data in those three languages. We show that this dataset contains more noise than existing machine translation test sets and poses a challenge to models trained on standard machine translation corpora. We further demonstrate that these challenges cannot be overcome by a simple domain adaptation approach alone. We intend this contribution to provide a standard benchmark for robustness to noise in machine translation and foster research on models, dataset and evaluation metrics tailored for this specific problem."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.03038,
+        "input_tokens": 11826,
+        "output_tokens": 483
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

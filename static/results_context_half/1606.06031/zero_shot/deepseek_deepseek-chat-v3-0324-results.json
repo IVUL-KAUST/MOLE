@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "https://huggingface.co/datasets/lambada",
+        "HF Link": "https://huggingface.co/datasets/lambada",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "LAMBADA is a dataset designed to test language models' ability to understand broader discourse context by predicting the final word in passages from novels.",
+        "Volume": 203000000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Trento"
+        ],
+        "Derived From": [],
+        "Paper Title": "LAMBADA: Language Modeling Broadened to Account for Discourse Aspects",
+        "Paper Link": "https://arxiv.org/abs/1606.06031",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "word prediction"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Denis Paperno",
+            "Germ\u00e1n Kruszewski",
+            "Angeliki Lazaridou",
+            "Quan Ngoc Pham",
+            "Raffaella Bernardi",
+            "Sandro Pezzelle",
+            "Marco Baroni",
+            "Gemma Boleda",
+            "Raquel Fern\u00e1ndez"
+        ],
+        "Affiliations": [
+            "University of Trento",
+            "Pompeu Fabra University",
+            "University of Amsterdam"
+        ],
+        "Abstract": "The recent spurt of powerful end-to-end-trained neural networks for Natural Language Processing has sparked interest in tasks to measure the progress they are bringing about in genuine language understanding. Special care must be taken in evaluating such systems, since their effectiveness at picking statistical generalizations from large corpora can lead to the illusion that they are reaching a deeper degree of understanding than they really are. For example, the end-to-end system of Vinyals & Le (2015), trained on large conversational datasets, produces dialogues such as the following: Human: what is your job? Machine: i'm a lawyer Human: what do you do? Machine: i'm a doctor Separately, the system responses are appropriate for the respective questions. However, when taken together, they are incoherent. The system behaviour is somewhat parrot-like. It can locally produce perfectly sensible language fragments, but it fails to take the meaning of the broader discourse context into account. Much research effort has consequently focused on designing systems able to keep information from the broader context into memory, and possibly even perform simple forms of reasoning about it. In this paper, we introduce the LAMBADA dataset (Language Modeling Broadened to Account for Discourse Aspects). LAMBADA proposes a word prediction task where the target item is difficult to guess (for English speakers) when only the sentence in which it appears is available, but becomes easy when a broader context is presented. Consider Example 1 in Figure 1. The sentence 'Do you honestly think that I would want you to have a ___?' has a multitude of possible continuations, but the broad context clearly indicates that the missing word is 'miscarriage'. LAMBADA casts language understanding in the classic word prediction framework of language modeling. We can thus use it to test several existing language modeling architectures, including systems with capacity to hold longer-term contextual memories. In our preliminary experiments, none of these models came even remotely close to human performance, confirming that LAMBADA is a challenging benchmark for research on automated models of natural language understanding."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0058435,
+        "input_tokens": 9415,
+        "output_tokens": 795
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

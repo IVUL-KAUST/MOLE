@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "https://github.com/facebookresearch/lambada",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2015,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The LAMBADA dataset is a word prediction task where the target item is difficult to guess from the sentence alone, but easy with broader context.",
+        "Volume": 10022.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "LAMBADA: Evaluating Language Models with Broad Context",
+        "Paper Link": "https://arxiv.org/abs/1511.02783",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Samy Bengio",
+            "Oriol Vinyals",
+            "Navdeep Jaitly",
+            "Oriol Vinyals",
+            "Illia Polosukhin"
+        ],
+        "Affiliations": [],
+        "Abstract": "The recent spurt of powerful end-to-end-trained neural networks for Natural Language Processing has sparked interest in tasks to measure the progress they are bringing about in genuine language understanding. We introduce the LAMBADA dataset (LAnguage Modeling Broadened to Account for Discourse Aspects). LAMBADA proposes a word prediction task where the target item is difficult to guess (for English speakers) when only the sentence in which it appears is available, but becomes easy when a broader context is presented."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0011667,
+        "input_tokens": 9427,
+        "output_tokens": 443
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

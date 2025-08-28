@@ -1,0 +1,125 @@
+{
+    "metadata": {
+        "Name": "X-RiSAWOZ",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 8122,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 8116,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 8116,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 8116,
+                "Unit": "sentences",
+                "Language": "Korean"
+            },
+            {
+                "Name": "English-Hindi",
+                "Volume": 9286,
+                "Unit": "sentences",
+                "Language": "English"
+            }
+        ],
+        "Link": "https://github.com/stanford-oval/X-RiSAWOZ",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "French",
+            "Hindi",
+            "Korean"
+        ],
+        "Domain": [
+            "TV Channels"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "X-RISEWOZ is a multilingual task-oriented dialogue dataset, created by translating the Chinese RiSAWOZ dataset into four diverse languages and one code-mixed language.",
+        "Volume": 8122.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University",
+            "QCRI"
+        ],
+        "Derived From": [
+            "RiSAWOZ"
+        ],
+        "Paper Title": "X-RiSAWOZ: A Large-Scale Multilingual Task-Oriented Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2303.08391",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "text generation"
+        ],
+        "Venue Title": "EMNLP 2023",
+        "Venue Type": "conference",
+        "Venue Name": "The 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Moradshahi, Mehrad",
+            "Liang, Tian",
+            "Saeidi, Marzieh",
+            "Toral, Antonio",
+            "Kallus, Nathan",
+            "Liang, Percy",
+            "Campbell, Mark",
+            "Haffari, Gholamreza",
+            "Mori, Masato"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "University of Edinburgh",
+            "QCRI",
+            "University of Groningen",
+            "Cornell University",
+            "University of Melbourne"
+        ],
+        "Abstract": "This paper presents X-RiSAWOZ, a large-scale multilingual task-oriented dialogue dataset, created by translating the Chinese RiSAWOZ dataset into four diverse languages and one code-mixed language. The dataset is designed to enable zero-shot and few-shot training of task-oriented dialogue agents in low-resource languages."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0028218,
+        "input_tokens": 18171,
+        "output_tokens": 682
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

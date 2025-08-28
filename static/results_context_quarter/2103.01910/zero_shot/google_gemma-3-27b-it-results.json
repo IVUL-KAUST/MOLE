@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "MultiSubs",
+        "Subsets": [],
+        "Link": "https://doi.org/10.5281/zenodo.5034604",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2025,
+        "Language": [
+            "English"
+        ],
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This paper introduces a large-scale multimodal and multilingual dataset that aims to facilitate research on grounding words to images in their contextual usage in language. The dataset consists of images selected to unambiguously illustrate concepts expressed in sentences from movie subtitles.",
+        "Volume": 16000000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Imperial College London",
+            "Federal University of Mato Grosso"
+        ],
+        "Derived From": [
+            "OpenSubtitles 2016 (OPUS)"
+        ],
+        "Paper Title": "MultiSubs: A Large-scale Multimodal and Multilingual Dataset",
+        "Paper Link": "https://arxiv.org/abs/2103.01910",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "fill-in-the blank",
+            "machine translation"
+        ],
+        "Venue Title": "svjour3",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Josiah Wang",
+            "Pranava Madhyastha",
+            "Josiel Figueiredo",
+            "Chiraag Lala",
+            "Lucia Specia"
+        ],
+        "Affiliations": [
+            "Imperial College London",
+            "Federal University of Mato Grosso"
+        ],
+        "Abstract": "This paper introduces a large-scale multimodal and multilingual dataset that aims to facilitate research on grounding words to images in the context of their corresponding sentences (Figure~ref{fig:overview}). In contrast to previous datasets, ours ground words not only to images but also to their contextual usage in language, potentially giving rise to deeper insights into real-world human language learning. More specifically, (i) text fragments and images in multisubs have a tighter emph{local} correspondence, facilitating the learning of associations between text fragments and their corresponding visual representations; (ii) the images are more general and diverse in scope and not constrained to particular domains, in contrast to image captioning datasets; (iii) multiple images are possible for each given text fragment and sentence; (iv) the text comprises a grammar or syntax similar to free-form, real-world text; and (v) the texts are multilingual and not just monolingual or bilingual. Starting from a parellel corpus of movie subtitles ($S$ref{sec:subtitles}), we propose a textbf{crosslingual multimodal disambiguation method} to illustrate text fragments by exploiting the parallel multilingual texts % to disambiguate the meanings of words in the text (Figure~ref{fig:framework})  ($S$ref{sec:phrase-illustration}). To the best of our knowledge, this has not been previously explored in the context of text illustration. % We also evaluate the quality of the dataset and illustrated text fragments via human judgment by casting it as a game ($S$ref{sec:gapfilling-human})."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0010485,
+        "input_tokens": 7113,
+        "output_tokens": 741
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2103.01910"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

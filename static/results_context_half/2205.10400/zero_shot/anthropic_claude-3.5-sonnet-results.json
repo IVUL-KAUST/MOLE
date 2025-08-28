@@ -1,0 +1,87 @@
+{
+    "metadata": {
+        "Name": "MultiWOZ",
+        "Subsets": [],
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": [
+            "English",
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A multilingual task-oriented dialog dataset created by translating MultiWOZ 2.1 development and test portions to Arabic, Chinese, German, and Russian.",
+        "Volume": 2000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "Sample-Efficient Cross-Lingual Transfer of Task-Oriented Dialog Systems",
+        "Paper Link": "https://arxiv.org/abs/2205.10400",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Goran Glava\u0161",
+            "Simone Paolo Ponzetto",
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107"
+        ],
+        "Affiliations": [
+            "MWK Baden-W\u00fcrttemberg",
+            "Deutsche Forschungsgemeinschaft",
+            "European Research Council",
+            "University of Cambridge"
+        ],
+        "Abstract": "Research in task-oriented dialog has been limited by the existence of only monolingual English datasets. We present MultiWOZ-X, a parallel corpus of task-oriented dialogs in four major languages. We evaluate cross-lingual transfer for dialog state tracking and response retrieval, showing that intermediate conversational specialization for target languages drastically improves sample efficiency in few-shot transfer."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.049236,
+        "input_tokens": 11932,
+        "output_tokens": 405
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

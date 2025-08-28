@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "Japanese Text Corpus",
+        "Link": "https://example.com/japanese-text-corpus",
+        "HF Link": "https://huggingface.co/datasets/japanese-text-corpus",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "books",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A comprehensive Japanese text corpus collected from books and Wikipedia, intended for various NLP tasks.",
+        "Volume": 100.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Tokyo"
+        ],
+        "Derived From": [],
+        "Paper Title": "Building a Comprehensive Japanese Text Corpus for NLP",
+        "Paper Link": "https://example.com/paper-link",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "named entity recognition",
+            "part of speech tagging"
+        ],
+        "Venue Title": "Proceedings of the Japanese NLP Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Japanese NLP Conference",
+        "Authors": [
+            "Taro Yamada",
+            "Hanako Suzuki"
+        ],
+        "Affiliations": [
+            "University of Tokyo",
+            "Kyoto University"
+        ],
+        "Abstract": "This paper presents the construction of a comprehensive Japanese text corpus, sourced from books and Wikipedia, to support various natural language processing tasks. The corpus is tokenized and annotated for language modeling, named entity recognition, and part of speech tagging. It is freely accessible and aims to advance the development of NLP applications in Japanese."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.3684210526315789
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0081775,
+        "input_tokens": 3376,
+        "output_tokens": 390
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

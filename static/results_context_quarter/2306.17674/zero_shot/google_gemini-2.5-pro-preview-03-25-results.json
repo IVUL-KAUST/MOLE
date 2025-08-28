@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Multi-BiToD",
+        "Subsets": [],
+        "Link": "https://example.com/dataset-not-yet-released",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "French",
+            "Hindi",
+            "Korean",
+            "Chinese"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A multilingual task-oriented dialogue dataset created by translating a Chinese dataset into French, Hindi, and Korean. The process involved machine translation followed by human post-editing to ensure quality. It supports tasks like dialogue state tracking and response generation.",
+        "Volume": 0.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "BiToD"
+        ],
+        "Paper Title": "A Multilingual Task-Oriented Dialogue Dataset with Human Post-Editing",
+        "Paper Link": "https://example.com/paper-not-yet-released",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Upon-Request",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "relation extraction",
+            "intent classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Anonymous"
+        ],
+        "Affiliations": [
+            "Stanford University"
+        ],
+        "Abstract": "This paper introduces a new multilingual task-oriented dialogue dataset, created by translating an existing Chinese dataset into French, Hindi, and Korean. The translation process involved using large pre-trained models followed by human post-editing to ensure accuracy and fluency. The paper details the data collection process, provides an in-depth error analysis for each target language, and establishes baseline performance using state-of-the-art sequence-to-sequence models. The dataset covers multiple dialogue subtasks, including dialogue state tracking, API call prediction, and response generation."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.09162,
+        "input_tokens": 11643,
+        "output_tokens": 2557
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

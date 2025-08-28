@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "Name": "unknown",
+        "Link": "unknown",
+        "HF Link": "unknown",
+        "License": "unknown",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "other"
+        ],
+        "Form": "spoken",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "unknown",
+        "Volume": 0.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "unknown",
+        "Paper Link": "unknown",
+        "Script": "Kanji",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Upon-Request",
+        "Cost": "unknown",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "unknown",
+        "Venue Type": "journal",
+        "Venue Name": "unknown",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "unknown"
+    },
+    "validation": {
+        "ACCESSABILITY": 0.0,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.375,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.21052631578947367
+    },
+    "length_forcing": 0.8999999999999999,
+    "cost": {
+        "cost": 0.0010548,
+        "input_tokens": 3376,
+        "output_tokens": 230
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

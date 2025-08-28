@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "RuSemShift",
+        "Description": "RuSemShift is a dataset for semantic shift detection in Russian.",
+        "Domain": [
+            "other"
+        ],
+        "Tasks": [
+            "other"
+        ],
+        "Type": "dataset",
+        "Provider": [],
+        "Size": "varies",
+        "Split": "varies",
+        "Format": "varies",
+        "Style": "varies",
+        "Genre": "varies",
+        "Language": "ru",
+        "Year": 2025,
+        "License": "MIT License",
+        "Cost": "varies",
+        "Citations": "varies",
+        "Links": "varies",
+        "References": "varies",
+        "Papers With Code": "varies",
+        "DataLoader": "varies",
+        "NLP": "varies",
+        "Link": "",
+        "HF Link": "",
+        "Form": "videos",
+        "Collection Style": [
+            "other"
+        ],
+        "Volume": 0.0,
+        "Unit": "videos",
+        "Ethical Risks": "High",
+        "Derived From": [],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2010.06436",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Test Split": false,
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.14285714285714285,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.2222222222222222
+    },
+    "length_forcing": 0.8965517241379307,
+    "cost": {
+        "cost": 0.00312621,
+        "input_tokens": 15932,
+        "output_tokens": 688
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.06436"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

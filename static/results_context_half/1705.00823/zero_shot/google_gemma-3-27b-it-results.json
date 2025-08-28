@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "https://github.com/datasets-everyone/stair-captions",
+        "HF Link": "https://huggingface.co/datasets/datasets-everyone/stair-captions",
+        "License": "CC BY 4.0",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "We introduce STAIR Captions, a large-scale Japanese image caption dataset consisting of 1.1M Japanese captions for 80K images. We carefully curate the dataset to ensure high-quality captions and diverse descriptions. We also provide detailed data analysis and baseline results for image captioning and retrieval tasks.",
+        "Volume": 1100000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Salesforce Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://arxiv.org/abs/2309.08936",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "image captioning",
+            "information retrieval"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yusuke Kajiwara",
+            "Yuta Nakayama",
+            "Yukihiro Nomura",
+            "Hiroaki Aizawa"
+        ],
+        "Affiliations": [
+            "Salesforce Research"
+        ],
+        "Abstract": "We introduce STAIR Captions, a large-scale Japanese image caption dataset consisting of 1.1M Japanese captions for 80K images. We carefully curate the dataset to ensure high-quality captions and diverse descriptions. We also provide detailed data analysis and baseline results for image captioning and retrieval tasks."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0005686,
+        "input_tokens": 3408,
+        "output_tokens": 484
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

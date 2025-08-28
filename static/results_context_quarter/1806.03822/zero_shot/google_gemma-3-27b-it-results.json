@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "SQuAD 2.0",
+        "Link": "https://rajpurkar.github.io/SQuAD-explorer/",
+        "HF Link": "https://huggingface.co/datasets/squad",
+        "License": "CC BY-SA 4.0",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "SQuAD 2.0 is a challenging natural language understanding task for existing models. It combines existing SQuAD data with over 50,000 unanswerable questions written adversarially by crowdworkers to look similar to answerable ones.",
+        "Volume": 130319.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "SQuAD 1.1"
+        ],
+        "Paper Title": "Unanswerable Questions in SQuAD 2.0",
+        "Paper Link": "https://arxiv.org/abs/1806.03822",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Robin Jia",
+            "Percy Liang"
+        ],
+        "Affiliations": [
+            "Stanford University"
+        ],
+        "Abstract": "We present SQuAD 2.0, a new dataset for question answering that contains unanswerable questions. To create this dataset, we employed crowdworkers to write unanswerable questions for each paragraph in SQuAD 1.1. We show that SQuAD 2.0 is more challenging for existing models than SQuAD 1.1, and that it requires models to not only answer questions when possible, but also to determine when no answer is supported by the paragraph and abstain from answering."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00089837,
+        "input_tokens": 5933,
+        "output_tokens": 496
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1806.03822"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

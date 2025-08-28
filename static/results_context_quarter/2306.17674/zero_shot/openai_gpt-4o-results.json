@@ -1,0 +1,98 @@
+{
+    "metadata": {
+        "Name": "Multilingual Dialogue Dataset",
+        "Subsets": [
+            {
+                "Name": "French",
+                "Volume": 300,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "https://github.com/stanford-oval/genienlp",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "French",
+            "Hindi",
+            "Korean"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "The dataset is a multilingual dialogue dataset used for training and evaluating dialogue systems. It includes languages such as French, Hindi, and Korean, and is used to test various dialogue subtasks.",
+        "Volume": 500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [],
+        "Paper Title": "Multilingual Dialogue Dataset for Zero-Shot and Few-Shot Learning",
+        "Paper Link": "https://github.com/stanford-oval/genienlp",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "image captioning",
+            "text generation",
+            "relation extraction"
+        ],
+        "Venue Title": "Preprint",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Author A",
+            "Author B",
+            "Author C"
+        ],
+        "Affiliations": [
+            "Stanford University"
+        ],
+        "Abstract": "This paper presents a multilingual dialogue dataset designed for zero-shot and few-shot learning. The dataset includes languages such as French, Hindi, and Korean, and is used to evaluate dialogue systems on various subtasks. The dataset is manually curated and publicly available for research purposes."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0301475,
+        "input_tokens": 11643,
+        "output_tokens": 521
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

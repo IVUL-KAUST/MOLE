@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "MTNT",
+        "Link": "https://github.com/pmichel31415/mtnt",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "The dataset contains noisy sentences collected from Reddit in English, French and Japanese. It is designed to test machine translation models for robustness to noise.",
+        "Volume": 15000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "CMU"
+        ],
+        "Derived From": [
+            "WMT 2017 News translation task",
+            "WMT 2015 translation task",
+            "KFTT",
+            "JESC",
+            "TED talks"
+        ],
+        "Paper Title": "Instructions for EMNLP Proceedings",
+        "Paper Link": "https://aclanthology.org/D18-1488/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "First Author",
+            "Second Author"
+        ],
+        "Affiliations": [
+            "Affiliation / Address line 1",
+            "Affiliation / Address line 2",
+            "Affiliation / Address line 3"
+        ],
+        "Abstract": "This document contains the instructions for preparing a camera-ready manuscript for the proceedings of EMNLP. The document itself conforms to its own specifications, and is therefore an example of what your manuscript should look like. These instructions should be used for both papers submitted for review and for final versions of accepted papers. Authors are asked to conform to all the directions reported in this document."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00121047,
+        "input_tokens": 11826,
+        "output_tokens": 456
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

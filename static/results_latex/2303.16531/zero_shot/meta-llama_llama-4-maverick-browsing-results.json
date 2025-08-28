@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "SynthText",
+        "Link": "https://github.com/markovivl/SynthText",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2016,
+        "Language": "multilingual",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A dataset for synthetic text images",
+        "Volume": 800000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oxford"
+        ],
+        "Derived From": [
+            "IIIT-5K word dataset",
+            "News Group dataset"
+        ],
+        "Paper Title": "Synthetic Data for Text Localisation in Natural Images",
+        "Paper Link": "https://www.robots.ox.ac.uk/~vgg/data/scenetext/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "optical character recognition"
+        ],
+        "Venue Title": "CVPR",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Ankush Gupta",
+            "Andrea Vedaldi",
+            "Andrew Zisserman"
+        ],
+        "Affiliations": [
+            "University of Oxford"
+        ],
+        "Abstract": "This paper presents a method for generating synthetic text images for text localisation in natural images."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00252275,
+        "input_tokens": 12765,
+        "output_tokens": 703
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2303.16531"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

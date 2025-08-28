@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://huggingface.co/datasets/illuin/fquad2",
+        "HF Link": "https://huggingface.co/datasets/illuin/fquad2",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "FQuAD2.0 is an extension of the French Question Answering Dataset (FQuAD1.1), modeled after SQuAD2.0. It enriches the original dataset by adding over 17,000 human-generated unanswerable questions for the same contexts, challenging models to recognize when no answer is present in the provided text.",
+        "Volume": 79768.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "FQuAD1.1",
+            "Wikipedia"
+        ],
+        "Paper Title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+        "Paper Link": "https://aclanthology.org/2020.emnlp-main.420.pdf",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Quentin Heinrich",
+            "Gautier Viaud",
+            "Wacim Belblidia"
+        ],
+        "Affiliations": [
+            "Illuin Technology"
+        ],
+        "Abstract": "This paper introduces FQuAD2.0, a new French Question Answering dataset that extends FQuAD1.1 with unanswerable questions. Following the SQuAD2.0 creation process, annotators were asked to create unanswerable questions for paragraphs from the FQuAD dataset. These questions are relevant to the paragraph, and their plausible (but incorrect) answers appear in the text, forcing models to understand the text in depth. We show that this new task is much more complex than its previous version, FQuAD1.1, and provide a detailed analysis of the different types of unanswerable questions. We also establish strong baselines for FQuAD2.0 with monolingual and multilingual models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.04990125,
+        "input_tokens": 7100,
+        "output_tokens": 1686
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

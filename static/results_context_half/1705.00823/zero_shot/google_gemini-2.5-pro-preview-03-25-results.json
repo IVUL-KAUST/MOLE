@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "http://captions.stair.center/",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2016,
+        "Language": "jp",
+        "Domain": [
+            "public datasets",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A large-scale Japanese image caption dataset based on the MS-COCO, Flickr8k, and Flickr30k datasets. It contains over 965,000 captions for more than 190,000 images, with five Japanese captions per image collected via crowdsourcing.",
+        "Volume": 965310.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo",
+            "RIKEN"
+        ],
+        "Derived From": [
+            "MS-COCO",
+            "Flickr8k",
+            "Flickr30k"
+        ],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://arxiv.org/abs/1609.00129",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "image captioning"
+        ],
+        "Venue Title": "Proceedings of the 17th Annual Conference of the International Speech Communication Association (INTERSPEECH 2016)",
+        "Venue Type": "conference",
+        "Venue Name": "INTERSPEECH 2016",
+        "Authors": [
+            "Yuya Yoshikawa",
+            "Yutaro Shigeto",
+            "Akikazu Takeuchi"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "RIKEN"
+        ],
+        "Abstract": "Image captioning, which involves generating captions for given images, has been attracting a great deal of attention. One of the key drivers of recent progress in this field is the existence of a large-scale dataset. However, most of the existing datasets are for English, and there are no such large-scale datasets for other languages, such as Japanese. To address this issue, we constructed a new large-scale dataset of Japanese image captions, which we call STAIR Captions. This dataset is based on the MS-COCO dataset, which is one of the most popular datasets in the image captioning field. We collected five captions for each of the 164,062 images in the MS-COCO dataset (82,783 for training and 40,504 for validation, as in the original dataset, plus 40,775 for testing). This resulted in a total of 820,310 captions. To collect a large number of high-quality captions, we used a crowdsourcing service. We also developed a method for collecting captions that consists of three stages: translation, refinement, and re-captioning. In addition to the MS-COCO images, we also created Japanese captions for the Flickr8k and Flickr30k datasets. The STAIR Captions dataset is publicly available. We also present a quantitative evaluation of our dataset and a baseline for Japanese image captioning."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.069045,
+        "input_tokens": 3396,
+        "output_tokens": 2033
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

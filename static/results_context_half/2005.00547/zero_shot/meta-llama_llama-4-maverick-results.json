@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://github.com/google-research/google-research/tree/master/goemotions",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2021,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset of 58K Reddit comments labeled for 27 emotion categories or Neutral.",
+        "Volume": 58000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google"
+        ],
+        "Derived From": [
+            "Reddit data dump"
+        ],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://arxiv.org/abs/2005.00547",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "emotion classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Google Research"
+        ],
+        "Affiliations": [
+            "Google"
+        ],
+        "Abstract": "This paper introduces GoEmotions, a dataset of 58K Reddit comments labeled for 27 emotion categories or Neutral. The dataset is designed to facilitate research in emotion detection and sentiment analysis. The paper provides a detailed description of the dataset collection process, the taxonomy of emotions used, and baseline models for emotion classification."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.002222,
+        "input_tokens": 11204,
+        "output_tokens": 358
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

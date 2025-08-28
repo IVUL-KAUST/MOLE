@@ -1,0 +1,103 @@
+{
+    "metadata": {
+        "Name": "mWoZ",
+        "Subsets": [
+            {
+                "Name": "Development",
+                "Volume": 14.748,
+                "Unit": "utterances",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Test",
+                "Volume": 14.744,
+                "Unit": "utterances",
+                "Language": "Arabic"
+            }
+        ],
+        "Link": "https://pypi.org/project/googletrans",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "The mWoZ dataset is a multilingual extension of the MultiWOZ 2.1 dataset, translated into Arabic, Chinese, German, and Russian. It includes 2,000 dialogs from the development and test portions of the original English dataset, with a total of 29.5K utterances. The dataset was created through a two-step translation process involving automatic translation followed by manual post-editing.",
+        "Volume": 29.492,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "MWK Baden-W\u00fcrttemberg",
+            "Deutsche Forschungsgemeinschaft",
+            "European Research Council"
+        ],
+        "Derived From": [
+            "MultiWOZ 2.1"
+        ],
+        "Paper Title": "Cross-Lingual Transfer for Task-Oriented Dialog: A Multilingual Extension of MultiWOZ",
+        "Paper Link": "https://pypi.org/project/googletrans",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "Cross-Lingual Transfer for Task-Oriented Dialog",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Goran Glava\u0161",
+            "Simone Paolo Ponzetto",
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vuli\u0107"
+        ],
+        "Affiliations": [
+            "University of Cambridge",
+            "MWK Baden-W\u00fcrttemberg",
+            "Deutsche Forschungsgemeinschaft",
+            "European Research Council"
+        ],
+        "Abstract": "This paper presents a multilingual extension of the MultiWOZ 2.1 dataset, translated into Arabic, Chinese, German, and Russian. The dataset includes 2,000 dialogs from the development and test portions of the original English dataset, with a total of 29.5K utterances. The translation process involved automatic translation followed by manual post-editing to ensure quality. The dataset is intended for evaluating cross-lingual transfer for task-oriented dialog tasks such as dialog state tracking and response retrieval."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.032345,
+        "input_tokens": 11932,
+        "output_tokens": 668
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

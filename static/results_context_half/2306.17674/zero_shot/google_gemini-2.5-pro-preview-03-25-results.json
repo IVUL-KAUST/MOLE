@@ -1,0 +1,121 @@
+{
+    "metadata": {
+        "Name": "X-RiSAWOZ",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 18720,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 18720,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 18720,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 18720,
+                "Unit": "sentences",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "https://github.com/stanford-oval/X-RiSAWOZ",
+        "HF Link": "https://huggingface.co/datasets/stanford-oval/x-risawoz",
+        "License": "CC BY-NC-SA 4.0",
+        "Year": 2023,
+        "Language": [
+            "Chinese",
+            "English",
+            "French",
+            "Hindi",
+            "Korean"
+        ],
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A multi-domain, large-scale, and high-quality task-oriented dialogue benchmark, produced by translating the Chinese RiSAWOZ data to English, French, Hindi, Korean, and an English-Hindi code-mixed language. It is designed for training and evaluating end-to-end dialogue agents in zero- and few-shot settings.",
+        "Volume": 18720.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University",
+            "Meta AI"
+        ],
+        "Derived From": [
+            "RiSAWOZ"
+        ],
+        "Paper Title": "Zero-Shot and Few-Shot Task-Oriented Dialogue with an End-to-End Agent and a New Dataset",
+        "Paper Link": "https://aclanthology.org/2023.findings-emnlp.493",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "named entity recognition",
+            "information retrieval",
+            "intent classification"
+        ],
+        "Venue Title": "Findings of the Association for Computational Linguistics: EMNLP 2023",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Mehrad Moradshahi",
+            "Tian-Shun Allan S. Ong",
+            "Arash Einolghozati",
+            "Geng-Yuan Jeng",
+            "An-Ran Li",
+            "Chia-Hsuan Li",
+            "Sung-Feng Huang",
+            "Prashant Serai",
+            "Mahdi Namazifar",
+            "Di Jin",
+            "Monica S. Lam",
+            "Mike S. Lewis"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Meta AI"
+        ],
+        "Abstract": "We present a methodology and an associated toolkit for creating a multilingual task-oriented dialogue dataset by translating an existing high-quality dataset in another language. Our approach automates parts of the translation process and helps translators and annotators check their work, allowing for the fast and accurate creation of a new dialogue dataset. We apply our methodology to the Chinese RiSAWOZ dataset and create X-RiSAWOZ, a new multilingual dataset in English, French, Hindi, and Korean, as well as an English-Hindi code-mixed version. X-RiSAWOZ is a large-scale, high-quality dataset that can be used to train and evaluate end-to-end dialogue agents. We establish a new state-of-the-art on RiSAWOZ and show that our translated dataset can be used to train dialogue agents in the new languages in zero- and few-shot settings, achieving promising results. We are releasing our dataset, toolkit, and models to the community."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.1195175,
+        "input_tokens": 18171,
+        "output_tokens": 2810
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://github.com/google-research/google-research/tree/master/goemotions",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset of 58K Reddit comments labeled for 27 emotions or Neutral.",
+        "Volume": 58000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Google Research"
+        ],
+        "Derived From": [
+            "Reddit data dump"
+        ],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://arxiv.org/abs/2005.00547",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "emotion classification"
+        ],
+        "Venue Title": "ACL 2020",
+        "Venue Type": "conference",
+        "Venue Name": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Dorottya Demszky",
+            "Dana Movshovitz-Attias",
+            "Jena D. Hwang",
+            "Adam S. Miner",
+            "Katherine Lee",
+            "Vera Axelrod",
+            "Steven Bethard",
+            "Giovanni Campagna",
+            "Dilek Hakkani-Tur",
+            "Sonal Gupta",
+            "Sujith Ravi",
+            "Dan Jurafsky"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Google Research",
+            "University of Arizona",
+            "Carnegie Mellon University",
+            "University of California, Berkeley"
+        ],
+        "Abstract": "We introduce the GoEmotions dataset, a human-annotated dataset of 58k Reddit comments labeled for 27 emotion categories or Neutral. The emotions are chosen based on a survey of existing emotion frameworks in emotion research. We report on the creation of the dataset and its baseline performance using a variety of neural architectures. We also present a transfer learning experiment showing that GoEmotions can be used to improve performance on other emotion datasets."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8333333333333334
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00204336,
+        "input_tokens": 7583,
+        "output_tokens": 503
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

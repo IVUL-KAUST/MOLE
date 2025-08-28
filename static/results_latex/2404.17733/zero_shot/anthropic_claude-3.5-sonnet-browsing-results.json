@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "LLM-jp Corpus",
+        "Link": "",
+        "HF Link": "",
+        "License": "Apache-2.0",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "wikipedia",
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A large-scale multilingual corpus containing Japanese and English text from Wikipedia, mC4, Pile, and Stack datasets",
+        "Volume": 135.9,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [
+            "mC4",
+            "Wikipedia",
+            "Pile",
+            "Stack"
+        ],
+        "Paper Title": "",
+        "Paper Link": "https://arxiv.org/abs/2404.17733",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.8999999999999999,
+    "cost": {
+        "cost": 0.110724,
+        "input_tokens": 26049,
+        "output_tokens": 1130
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet-browsing",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2404.17733"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

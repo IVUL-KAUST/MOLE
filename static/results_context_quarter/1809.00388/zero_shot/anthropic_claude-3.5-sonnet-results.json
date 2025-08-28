@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "MTNT",
+        "Link": "https://github.com/pmichel31415/mtnt",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A noisy parallel dataset collected from Reddit comments in English, French and Japanese for machine translation",
+        "Volume": 1020.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [
+            "Reddit"
+        ],
+        "Paper Title": "Machine Translation of Noisy Text",
+        "Paper Link": "https://github.com/pmichel31415/mtnt",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "WMT",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Machine Translation",
+        "Authors": [
+            "Paul Michel",
+            "Xian Li"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "Machine translation systems are known to degrade when confronted with source-side noise. We present the first parallel dataset targeted at evaluating the robustness of machine translation systems to natural noise found on social media. We collect parallel data from Reddit, manually filter it to ensure quality, and characterize the types of noise encountered in the resulting dataset. We test the robustness of a sample of systems on this benchmark and find that they suffer significant degradation in performance when translating social media text. Finally, we propose methods to improve robustness to this type of noise."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.033336,
+        "input_tokens": 7642,
+        "output_tokens": 393
+    },
+    "config": {
+        "model_name": "anthropic_claude-3.5-sonnet",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

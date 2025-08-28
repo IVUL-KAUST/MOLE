@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "Name": "X-RiSAWOZ",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 1318,
+                "Unit": "utterances",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 1318,
+                "Unit": "utterances",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 1318,
+                "Unit": "utterances",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 1318,
+                "Unit": "utterances",
+                "Language": "Korean"
+            },
+            {
+                "Name": "English-Hindi Code-mixed",
+                "Volume": 1318,
+                "Unit": "utterances",
+                "Language": "Hindi"
+            }
+        ],
+        "Link": "https://github.com/stanford-oval/genienlp",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "French",
+            "Hindi",
+            "Korean"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "X-RiSAWOZ is a multi-domain, large-scale, and high-quality task-oriented dialogue benchmark, produced by translating the Chinese RiSAWOZ data to four diverse languages: English, French, Hindi, and Korean; and one code-mixed English-Hindi language.",
+        "Volume": 1318.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "RiSAWOZ"
+        ],
+        "Paper Title": "X-RiSAWOZ: A Multilingual Task-Oriented Dialogue Dataset",
+        "Paper Link": "https://github.com/stanford-oval/genienlp",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "text generation",
+            "dialect identification"
+        ],
+        "Venue Title": "Preprint",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Author 1",
+            "Author 2",
+            "Author 3"
+        ],
+        "Affiliations": [
+            "Stanford University"
+        ],
+        "Abstract": "In recent years, tremendous effort has been put into the research and development of task-oriented dialogue agents; yet, it has been mainly focused on only a handful of popular languages, hindering the adoption of dialogue technology around the globe. Collecting dialogue data from scratch for a new language is ideal but prohibitively expensive and time-consuming, leading to the current lack of reliable multilingual dialogue benchmarks."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.047885,
+        "input_tokens": 18171,
+        "output_tokens": 664
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

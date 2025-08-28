@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "ChGK",
+        "Link": "https://db.chgk.info/",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "A Russian Question-Answering dataset collected from the Chgk quiz database. It contains 379,284 quiz-like questions, including 29,375 from 'Own Game', the Russian version of Jeopardy!. The questions test logic and erudition.",
+        "Volume": 379284.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Tyumen State University"
+        ],
+        "Derived From": [],
+        "Paper Title": "Russian Jeopardy! Data Set for Question-Answering Systems",
+        "Paper Link": "https://aclanthology.org/2022.lrec-1.11",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering",
+            "named entity recognition",
+            "information retrieval"
+        ],
+        "Venue Title": "Proceedings of the Thirteenth Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Elena Mikhalkova",
+            "Alexander Khlyupin"
+        ],
+        "Affiliations": [
+            "Tyumen State University"
+        ],
+        "Abstract": "Question answering (QA) is one of the most common NLP tasks that relates to named entity recognition, fact extraction, semantic search and some other fields. In industry, it is much valued in chat-bots and corporate information systems. It is also a challenging task that attracted the attention of a very general audience at the quiz show Jeopardy! In this article we describe a Jeopardy!-like Russian QA data set collected from the official Russian quiz database Chgk che-ge-'ka:. The data set includes 379,284 quiz-like questions with 29,375 from the Russian analogue of Jeopardy! -- 'Own Game'. We observe its linguistic features and the related QA-task. We conclude about perspectives of a QA challenge based on the collected data set."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0439875,
+        "input_tokens": 5247,
+        "output_tokens": 1543
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2112.02325"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

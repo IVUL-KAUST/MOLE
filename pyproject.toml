@@ -1,0 +1,21 @@
+[project]
+name = "mole"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12.9"
+dependencies = [
+    "arxiv>=2.2.0",
+    "arxiv-latex-cleaner>=1.0.8",
+    "beautifulsoup4>=4.13.5",
+    "docling>=2.47.1",
+    "dotenv>=0.9.9",
+    "litellm>=1.76.0",
+    "numpy>=2.3.2",
+    "pandas>=2.3.2",
+    "pdfplumber>=0.11.7",
+    "plotext>=5.3.2",
+    "requests>=2.32.5",
+    "streamlit>=1.48.1",
+    "tabulate>=0.9.0",
+]

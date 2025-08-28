@@ -1,0 +1,110 @@
+{
+    "metadata": {
+        "Name": "Multi-Domain Task-Oriented Dialogue Dataset",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 1000,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 800,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 700,
+                "Unit": "sentences",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "https://github.com/stanford-oval/genienlp",
+        "HF Link": "https://huggingface.co/datasets/GenieNLP/multi-domain-task-oriented-dialogue",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "French",
+            "Hindi",
+            "Korean"
+        ],
+        "Domain": [
+            "social media",
+            "news articles",
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A multi-domain task-oriented dialogue dataset for English, French, Hindi, and Korean.",
+        "Volume": 3000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University",
+            "GenieNLP Team"
+        ],
+        "Derived From": [],
+        "Paper Title": "Zero-Shot Multi-Domain Task-Oriented Dialogue",
+        "Paper Link": "https://arxiv.org/abs/2305.12338",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "sentiment analysis",
+            "text generation"
+        ],
+        "Venue Title": "ACL 2023",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Yashar Mehdad",
+            "Morteza Dehghani",
+            "Yi Luan"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Google Research"
+        ],
+        "Abstract": "This paper presents a zero-shot multi-domain task-oriented dialogue system that can be applied to various languages and domains. The system is based on a pre-trained language model and is fine-tuned on a small amount of task-specific data."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00214518,
+        "input_tokens": 11643,
+        "output_tokens": 599
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

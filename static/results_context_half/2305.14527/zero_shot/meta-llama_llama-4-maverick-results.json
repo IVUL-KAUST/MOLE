@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "Slovo",
+        "Link": "https://github.com/hukenovs/slovo",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "videos",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "Russian Sign Language video dataset",
+        "Volume": 20000.0,
+        "Unit": "videos",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SaluteDevices"
+        ],
+        "Derived From": [],
+        "Paper Title": "Slovo: Russian Sign Language Dataset",
+        "Paper Link": "https://arxiv.org/abs/2305.14527",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sign language recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Kapitanov Alexander",
+            "Kvanchiani Karina",
+            "Nagaev Alexander",
+            "Petrova Elizaveta"
+        ],
+        "Affiliations": [
+            "SaluteDevices, Russia"
+        ],
+        "Abstract": "One of the main challenges of the sign language recognition task is the difficulty of collecting a suitable dataset due to the gap between hard-of-hearing and hearing societies. This paper presents the Russian Sign Language (RSL) video dataset Slovo, produced using crowdsourcing platforms. The dataset contains 20,000 FullHD recordings, divided into 1,000 classes of isolated RSL gestures received by 194 signers."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00146896,
+        "input_tokens": 6616,
+        "output_tokens": 347
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.14527"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

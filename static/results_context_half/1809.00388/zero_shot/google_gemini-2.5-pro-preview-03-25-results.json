@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "MTNT",
+        "Link": "https://github.com/pmichel31415/mtnt",
+        "HF Link": "https://huggingface.co/datasets/mtnt",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A parallel corpus of noisy comments from Reddit, translated from English to French and Japanese by professional translators. It serves as a testbed for machine translation of noisy text, containing more varied noise than standard benchmarks.",
+        "Volume": 88484.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [
+            "WMT 2017 News translation task",
+            "WMT 2015 translation task",
+            "KFTT",
+            "JESC",
+            "TED talks"
+        ],
+        "Paper Title": "MTNT: A Testbed for Machine Translation of Noisy Text",
+        "Paper Link": "https://aclanthology.org/D18-1172",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "language modeling"
+        ],
+        "Venue Title": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP",
+        "Authors": [
+            "Paul Michel",
+            "Graham Neubig"
+        ],
+        "Affiliations": [
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "We introduce MTNT, a testbed for machine translation of noisy text. MTNT is a parallel corpus of comments from Reddit, a social media website, translated from English to French and Japanese by professional translators. We describe the collection and filtering procedures we used to create this dataset and provide a quantitative analysis of the different types of noise it contains. We show that this dataset contains more noise than existing machine translation benchmarks and that models trained on clean data are ill-equipped to handle it. We report baseline results for models trained on clean data only, as well as for models adapted to the noisy domain of MTNT. We find that while domain adaptation is effective, there is still a large gap in performance between clean and noisy text, which we hope will be narrowed by future research using our dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.06166125,
+        "input_tokens": 11826,
+        "output_tokens": 1647
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
