@@ -1,0 +1,76 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "http://captions.stair.center/",
+        "HF Link": "https://huggingface.co/datasets/stair-lab/stair-captions",
+        "License": "custom",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A large-scale Japanese image caption dataset containing 820,344 Japanese captions for 164,068 images from the MS-COCO dataset. The captions were collected via crowdsourcing.",
+        "Volume": 820344.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo"
+        ],
+        "Derived From": [
+            "MS-COCO"
+        ],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://aclanthology.org/P17-2083/",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "image captioning"
+        ],
+        "Venue Title": "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Yuya Yoshikawa",
+            "Yutaro Shigeto",
+            "Akikazu Takeuchi"
+        ],
+        "Affiliations": [
+            "The University of Tokyo",
+            "Kyushu University"
+        ],
+        "Abstract": "Image captioning, which is the task of automatically generating a natural language description of an image, has attracted a great deal of attention. Although many methods have been proposed for this task, most of them have been developed for English. To accelerate research on image captioning for other languages, we construct a large-scale Japanese image caption dataset. We collected 820,344 Japanese captions for 164,068 images in the MS-COCO dataset. We call this dataset STAIR Captions. We describe the procedure used to construct STAIR Captions and analyze its properties. We also build a Japanese image captioning model and report its performance to provide a baseline for future research."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.03846,
+        "input_tokens": 4690,
+        "output_tokens": 1296
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 3,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

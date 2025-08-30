@@ -1,0 +1,150 @@
+{
+    "metadata": {
+        "Name": "AceGPT",
+        "Subsets": [
+            {
+                "Name": "Quora-Arabic-40K",
+                "Volume": 43050.0,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Alpaca-Arabic",
+                "Volume": 49969.0,
+                "Unit": "sentences",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Code-Alpaca-Arabic",
+                "Volume": 20022.0,
+                "Unit": "sentences",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Evol-Instruct-Arabic",
+                "Volume": 69997.0,
+                "Unit": "sentences",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "ACVA",
+                "Volume": 8000.0,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "https://github.com/FreedomIntelligence/AceGPT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "web pages",
+            "wikipedia",
+            "public datasets",
+            "social media",
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "LLM generated",
+            "machine annotation"
+        ],
+        "Description": "A collection of datasets for pre-training, supervised fine-tuning, and reinforcement learning to create AceGPT, an Arabic-localized Large Language Model. It includes instruction-following data from sources like Quora and Alpaca, and a new benchmark, ACVA, for evaluating cultural and value alignment.",
+        "Volume": 629293.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Shenzhen International Center for Industrial and Applied Mathematics",
+            "Shenzhen Research Institute of Big Data",
+            "The Chinese University of Hong Kong, Shenzhen",
+            "King Abdullah University of Science and Technology"
+        ],
+        "Derived From": [
+            "Arabic text 2022",
+            "Slim Pajama",
+            "Alpaca",
+            "Evol-Instruct",
+            "Code-Alpaca",
+            "ShareGPT",
+            "Quora",
+            "Anthropic helpfulness and harmlessness",
+            "OpenAI Summarize",
+            "OpenAssistant Conversations"
+        ],
+        "Paper Title": "AceGPT, Localizing Large Language Models in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2309.07202",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "instruction tuning",
+            "question answering",
+            "multiple choice question answering",
+            "linguistic acceptability",
+            "sentiment analysis"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Huang Huang",
+            "Fei Yu",
+            "Jianqing Zhu",
+            "Xuening Sun",
+            "Hao Cheng",
+            "Dingjie Song",
+            "Zhihong Chen",
+            "Abdulmohsen Alharthi",
+            "Bang An",
+            "Juncai He",
+            "Ziche Liu",
+            "Zhiyi Zhang",
+            "Junying Chen",
+            "Jianquan Li",
+            "Benyou Wang",
+            "Lian Zhang",
+            "Ruoyu Sun",
+            "Xiang Wan",
+            "Haizhou Li",
+            "Jinchao Xu"
+        ],
+        "Affiliations": [
+            "Shenzhen International Center for Industrial and Applied Mathematics, Shenzhen Research Institute of Big Data",
+            "The Chinese University of Hong Kong, Shenzhen, China",
+            "King Abdullah University of Science and Technology, Thuwal, Saudi Arabia",
+            "Shenzhen Research Institute of Big Data, Shenzhen, China"
+        ],
+        "Abstract": "This paper is devoted to the development of a localized Large Language Model (LLM) specifically for Arabic, a language imbued with unique cultural characteristics inadequately addressed by current mainstream models. Significant concerns emerge when addressing cultural sensitivity and local values. To address this, the paper proposes a comprehensive solution that includes further pre-training with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and GPT-4 responses in Arabic, alongside Reinforcement Learning with AI Feedback (RLAIF) employing a reward model attuned to local culture and values. The goal is to cultivate culturally cognizant and value-aligned Arabic LLMs capable of accommodating the diverse, application-specific needs of Arabic-speaking communities. Comprehensive evaluations reveal that the resulting model, dubbed 'AceGPT', sets the state-of-the-art standard for open Arabic LLMs across various benchmarks. Codes, data, and models are in https://github.com/FreedomIntelligence/AceGPT."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42857142857142855
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.10186948,
+        "input_tokens": 35254,
+        "output_tokens": 2211
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 1,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,116 @@
+{
+    "metadata": {
+        "Name": "AceGPT",
+        "Subsets": [],
+        "Link": "https://github.com/FreedomIntelligence/AceGPT",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "public datasets",
+            "web pages",
+            "LLM"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "LLM generated",
+            "manual curation"
+        ],
+        "Description": "A collection of datasets for training and evaluating AceGPT, a localized Arabic LLM. It includes pre-training corpora, supervised fine-tuning data from sources like Quora, and a new evaluation benchmark (ACVA) for cultural alignment.",
+        "Volume": 629293.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Shenzhen International Center for Industrial and Applied Mathematics",
+            "Shenzhen Research Institute of Big Data",
+            "The Chinese University of Hong Kong, Shenzhen",
+            "King Abdullah University of Science and Technology"
+        ],
+        "Derived From": [
+            "Arabic Wikipedia",
+            "CC100",
+            "OSCAR",
+            "Slim Pajama",
+            "Alpaca",
+            "Evol-Instruct",
+            "Code-Alpaca",
+            "ShareGPT",
+            "Quora"
+        ],
+        "Paper Title": "AceGPT, Localizing Large Language Models in Arabic",
+        "Paper Link": "https://arxiv.org/abs/2309.12053",
+        "Script": "Arab",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "instruction tuning",
+            "multiple choice question answering",
+            "sentiment analysis",
+            "natural language inference",
+            "dialect identification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Huang Huang",
+            "Fei Yu",
+            "Jianqing Zhu",
+            "Xuening Sun",
+            "Hao Cheng",
+            "Dingjie Song",
+            "Zhihong Chen",
+            "Abdulmohsen Alharthi",
+            "Bang An",
+            "Juncai He",
+            "Ziche Liu",
+            "Zhiyi Zhang",
+            "Junying Chen",
+            "Jianquan Li",
+            "Benyou Wang",
+            "Lian Zhang",
+            "Ruoyu Sun",
+            "Xiang Wan",
+            "Haizhou Li",
+            "Jinchao Xu"
+        ],
+        "Affiliations": [
+            "Shenzhen International Center for Industrial and Applied Mathematics",
+            "Shenzhen Research Institute of Big Data",
+            "The Chinese University of Hong Kong, Shenzhen",
+            "King Abdullah University of Science and Technology"
+        ],
+        "Abstract": "This paper is devoted to the development of a localized Large Language Model (LLM) specifically for Arabic, a language imbued with unique cultural characteristics inadequately addressed by current mainstream models. Significant concerns emerge when addressing cultural sensitivity and local values. To address this, the paper proposes a comprehensive solution that includes further pre-training with Arabic texts, Supervised Fine-Tuning (SFT) utilizing native Arabic instructions, and GPT-4 responses in Arabic, alongside Reinforcement Learning with AI Feedback (RLAIF) employing a reward model attuned to local culture and values. The goal is to cultivate culturally cognizant and value-aligned Arabic LLMs capable of accommodating the diverse, application-specific needs of Arabic-speaking communities. Comprehensive evaluations reveal that the resulting model, dubbed 'AceGPT', sets the state-of-the-art standard for open Arabic LLMs across various benchmarks. Codes, data, and models are in https://github.com/FreedomIntelligence/AceGPT."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.11888845,
+        "input_tokens": 37580,
+        "output_tokens": 2583
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 5,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12053"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

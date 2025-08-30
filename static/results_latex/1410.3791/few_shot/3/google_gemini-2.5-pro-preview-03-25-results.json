@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "Polyglot-NER",
+        "Subsets": [],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2013,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A massively multilingual named-entity recognition (NER) dataset bootstrapped from Wikipedia and Freebase. It supports 40 languages, including Arabic, and requires no hand-labeled training data. The models and code are publicly released.",
+        "Volume": 1300000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stony Brook University"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Freebase"
+        ],
+        "Paper Title": "Polyglot-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://epubs.siam.org/doi/abs/10.1137/1.9781611972832.76",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "Proceedings of the 2013 SIAM International Conference on Data Mining",
+        "Venue Type": "conference",
+        "Venue Name": "SIAM International Conference on Data Mining",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Stony Brook University"
+        ],
+        "Abstract": "We present a massively multilingual named-entity recognition (NER) system that requires no hand-labeled training data in any language. Our system bootstraps its knowledge from Wikipedia and Freebase, and uses a novel co-training style algorithm to expand its entity dictionary. We show that our system provides state-of-the-art performance on standard evaluation benchmarks in English, German, and Spanish. Further, we provide NER models for 40 major languages, and demonstrate that they provide reasonable performance on seven additional languages for which we could find evaluation data. We evaluate our system on the CoNLL, ACE, and LDC datasets, and show that it often performs better than fully-supervised systems. We are releasing our models and code to the community."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7142857142857143
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.04274648,
+        "input_tokens": 5700,
+        "output_tokens": 1426
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 3,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

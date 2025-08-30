@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "http://captions.stair.center/",
+        "HF Link": "https://huggingface.co/datasets/stair-lab/stair-captions",
+        "License": "CC BY 4.0",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "STAIR Captions is a large-scale dataset of Japanese image captions. It contains 820,360 captions for 164,062 images from the COCO dataset, created by crowdworkers who translated English captions and wrote new ones.",
+        "Volume": 820360.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo"
+        ],
+        "Derived From": [
+            "COCO"
+        ],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://aclanthology.org/P17-2061",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "image captioning"
+        ],
+        "Venue Title": "Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Yuya Yoshikawa",
+            "Yutaro Shigeto",
+            "Akikazu Takeuchi"
+        ],
+        "Affiliations": [
+            "The University of Tokyo"
+        ],
+        "Abstract": "This paper presents STAIR Captions, a large-scale dataset of Japanese image captions. The dataset contains 820,360 Japanese captions for 164,062 images from the COCO dataset. To construct the dataset, we hired crowdworkers to translate English captions in the COCO dataset and to create new captions. We describe the details of the data collection process and the statistics of the dataset. We also report the performance of image captioning models trained on this dataset. The dataset is freely available for research purposes."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.03725304,
+        "input_tokens": 5520,
+        "output_tokens": 1403
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 5,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
