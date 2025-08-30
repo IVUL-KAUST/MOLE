@@ -15,6 +15,9 @@ uv run plots.py --eval test --schema all --length --results_path static/results_
 # results each year
 uv run plots.py --eval test --schema all  --year  --non_browsing
 
+# fewshot
+uv run plots.py --eval test --schema all --type fewshot
+
 # other metrics (f1, precision, recall)
 uv run plots.py --eval test --schema all  --other_metrics  --non_browsing
 

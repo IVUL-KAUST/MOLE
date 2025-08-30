@@ -438,8 +438,11 @@ def plot_fewshot():
                 pred_metadata = json.load(open(json_file))['metadata']
             else:
                 few_shot_path = json_file.replace( f'zero_shot', f'few_shot/{i}').replace("results_latex", "results_fewshot")
+                new_few_shot_path = json_file.replace( f'zero_shot', f'few_shot/{i}')
                 if os.path.exists(few_shot_path):
                     pred_metadata = json.load(open(few_shot_path))['metadata']
+                elif os.path.exists(new_few_shot_path):
+                    pred_metadata = json.load(open(new_few_shot_path))['metadata']
                 else:
                     continue
 
