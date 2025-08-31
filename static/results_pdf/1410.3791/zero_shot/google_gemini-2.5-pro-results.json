@@ -1,0 +1,321 @@
+{
+    "metadata": {
+        "Name": "POLYGLOT-NER",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "English",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "United Kingdom"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Spain"
+            },
+            {
+                "Name": "French",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "France"
+            },
+            {
+                "Name": "German",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Germany"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Russia"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Poland"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Portugal"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Italy"
+            },
+            {
+                "Name": "Dutch",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Netherlands"
+            },
+            {
+                "Name": "Hebrew",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Israel"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "India"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "China"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "South Korea"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Japan"
+            },
+            {
+                "Name": "Tagalog",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Philippines"
+            },
+            {
+                "Name": "Malay",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Malaysia"
+            },
+            {
+                "Name": "Swedish",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Sweden"
+            },
+            {
+                "Name": "Serbian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Serbia"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Indonesia"
+            },
+            {
+                "Name": "Ukrainian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Ukraine"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Turkey"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Vietnam"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Thailand"
+            },
+            {
+                "Name": "Greek",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Greece"
+            },
+            {
+                "Name": "Hungarian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Hungary"
+            },
+            {
+                "Name": "Czech",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Czech Republic"
+            },
+            {
+                "Name": "Danish",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Denmark"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Finland"
+            },
+            {
+                "Name": "Romanian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Romania"
+            },
+            {
+                "Name": "Bulgarian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Bulgaria"
+            },
+            {
+                "Name": "Lithuanian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Lithuania"
+            },
+            {
+                "Name": "Latvian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Latvia"
+            },
+            {
+                "Name": "Catalan",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Spain"
+            },
+            {
+                "Name": "Slovak",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Slovakia"
+            },
+            {
+                "Name": "Slovenian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Slovenia"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Estonia"
+            },
+            {
+                "Name": "Persian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Iran"
+            },
+            {
+                "Name": "Croatian",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Croatia"
+            },
+            {
+                "Name": "Nepali",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Dialect": "Nepal"
+            }
+        ],
+        "Link": "https://bit.ly/polyglot-ner",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2014,
+        "Language": "multilingual",
+        "Dialect": "Modern Standard Arabic",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A multilingual Named Entity Recognition (NER) dataset for 40 languages created by automatically extracting entity mentions from Wikipedia articles using their internal link structure and Freebase attributes. The method is language-agnostic and does not require human-annotated data for training.",
+        "Volume": 0.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stony Brook University"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Freebase"
+        ],
+        "Paper Title": "POLYGLOT-NER: Massive Multilingual Named Entity Recognition",
+        "Paper Link": "https://arxiv.org/abs/1410.0173",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "named entity recognition"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "ArXiv",
+        "Authors": [
+            "Rami Al-Rfou",
+            "Vivek Kulkarni",
+            "Bryan Perozzi",
+            "Steven Skiena"
+        ],
+        "Affiliations": [
+            "Department of Computer Science",
+            "Stony Brook University"
+        ],
+        "Abstract": "The increasing diversity of languages used on the web introduces a new level of complexity to Information Retrieval (IR) systems. We can no longer assume that textual content is written in one language or even the same language family. In this paper, we demonstrate how to build massive multilingual annotators with minimal human expertise and intervention. We describe a system that builds Named Entity Recognition (NER) annotators for 40 major languages using Wikipedia and Freebase. Our approach does not require NER human annotated datasets or language specific resources like treebanks, parallel corpora, and orthographic rules. The novelty of approach lies therein-using only language agnostic techniques, while achieving competitive performance. Our method learns distributed word representations (word embeddings) which encode semantic and syntactic features of words in each language. Then, we automatically generated datasets from Wikipedia link structure and Freebase attributes. Finally, we apply two preprocessing stages (oversampling and exact surface form matching) which do not require any linguistic expertise. Our evaluation is twofold: First, we demonstrate the system performance on human annotated datasets. Second, for languages where no gold-standard benchmarks are available, we propose a new method, distant evaluation, based on statistical machine translation."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6190476190476191
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.08789375,
+        "input_tokens": 16490,
+        "output_tokens": 3303
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": "2014",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1410.3791"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,98 @@
+{
+    "metadata": {
+        "Name": "NEREL",
+        "Link": "https://github.com/nerel-ds/NEREL",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A Russian dataset for named entity recognition and relation extraction. It features annotation of nested named entities, relations within nested entities, and relations at the discourse level. It also includes annotation of events involving named entities and their roles.",
+        "Volume": 900.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Lomonosov Moscow State University",
+            "HSE University",
+            "Huawei Noah\u2019s Ark lab",
+            "Novosibirsk State University",
+            "Ural Federal University",
+            "Innopolis University",
+            "Kazan Federal University",
+            "SberAI",
+            "Wiseyak"
+        ],
+        "Derived From": [
+            "Wikinews"
+        ],
+        "Paper Title": "NEREL: A Russian Dataset with Nested Named Entities, Relations and Events",
+        "Paper Link": "https://arxiv.org/abs/2108.13112",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "relation extraction"
+        ],
+        "Venue Title": "arXiv:2108.13112",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Natalia Loukachevitch",
+            "Ekaterina Artemova",
+            "Tatiana Batura",
+            "Pavel Braslavski",
+            "Ilia Denisov",
+            "Vladimir Ivanov",
+            "Suresh Manandhar",
+            "Alexander Pugachev",
+            "Elena Tutubalina"
+        ],
+        "Affiliations": [
+            "Lomonosov Moscow State University, Russia",
+            "HSE University, Russia",
+            "Huawei Noah\u2019s Ark lab, Russia",
+            "Novosibirsk State University, Russia",
+            "Ural Federal University, Russia",
+            "Innopolis University, Russia",
+            "Kazan Federal University, Russia",
+            "SberAI, Russia",
+            "Wiseyak, United States"
+        ],
+        "Abstract": "In this paper, we present NEREL (Named Entities and RELations), a new Russian dataset with annotated named entities and relations. In developing the annotation schema, we aimed to accommodate recent advances in information extraction methods and datasets. In particular, nested named entities and relations within named entities are annotated in NEREL. Both of these provide a richer and more complete annotation compared with a flat annotation scheme. Current datasets with nested named entities (Ringland et al., 2019; Benikova et al., 2014) are not annotated with relations. Therefore, most state-of-the-art relation extraction models (Joshi et al., 2020; Alt et al., 2019) do not work with relations between nested and overlapping entities. NEREL aims to address these deficiencies with the addition of nested named entities and relations within nested entities. Secondly, NEREL relations are annotated across sentence boundaries at the discourse level allowing for more realistic information extraction experiments. Figure 1 illustrates annotation of nested entities, relations between overlapping entities, as well as cross-sentence relations on a sample NEREL sentence. Finally, NEREL provides annotation for factual events (such as meetings, negotiations, incidents, etc.) involving named entities and their roles in the events. The NEREL collection is available via https://github.com/nerel-ds/NEREL."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0510475,
+        "input_tokens": 13799,
+        "output_tokens": 1540
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2108.13112"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

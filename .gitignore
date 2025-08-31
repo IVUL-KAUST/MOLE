@@ -27,3 +27,5 @@ slurm/
 train_dataset.csv
 
 [qQ]wen*
+
+static/synth_dataset

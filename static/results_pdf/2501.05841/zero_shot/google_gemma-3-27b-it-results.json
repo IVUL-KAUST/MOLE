@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "Name": "Russian Financial Statements Database",
+        "Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "HF Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "License": "unknown",
+        "Year": 2011,
+        "Language": "ru",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "An open, harmonized collection of annual unconsolidated financial statements of the universe of Russian firms in 2011\u20132023.",
+        "Volume": 56600000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "EuropeanUniversityatSaintPetersburg"
+        ],
+        "Derived From": [],
+        "Paper Title": "Russian Financial Statements Database: A firm-level collection of the universe of financial statements",
+        "Paper Link": "https://arxiv.org/abs/2501.05841",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "lexicon analysis"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Sergey Bondarkov",
+            "Viktor Ledenev",
+            "Dmitry Skougarevskiy"
+        ],
+        "Affiliations": [
+            "EuropeanUniversityatSaintPetersburg"
+        ],
+        "Abstract": "The Russian Financial Statements Database (RFSD) is an open, harmonized collection of annual unconsolidated financial statements of the universe of Russian firms in 2011\u20132023. It is the first open dataset with information on every active firm in the country, including non-filing firms. With 56.6 million geolocated firm-year observations gathered from two official sources, the RFSD features multiple end-user quality-of-life improvements such as data imputation, statement articulation, harmonization across data providers and formats, and data enrichment. Extensive internal and external validation shows that most statements articulate well while their aggregates display higher correlation with the regional GDP than the previous gridded GDP data products. We also examine the direction and magnitude of the reporting bias by comparing the universe of firms that are required to file with the actual filers. The RFSD can be used in various economic applications as diverse as calibration of micro-founded models, estimation of markups and productivity, or assessing industry organization and market power."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00271505,
+        "input_tokens": 25668,
+        "output_tokens": 557
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

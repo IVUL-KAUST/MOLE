@@ -1,0 +1,113 @@
+{
+    "metadata": {
+        "Name": "RELX",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 815689,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 652842,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 652062,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 397875,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 57114,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            }
+        ],
+        "Link": "https://github.com/boun-tabi/RELX",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "French",
+            "German",
+            "Spanish",
+            "Turkish"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation"
+        ],
+        "Description": "A cross-lingual relation classification benchmark dataset for English, French, German, Spanish, and Turkish.",
+        "Volume": 815689.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Bogazici University"
+        ],
+        "Derived From": [
+            "KBP-37",
+            "Wikipedia",
+            "Wikidata"
+        ],
+        "Paper Title": "RELX Dataset and Matching the Multilingual Blanks for Cross-Lingual Relation Classification",
+        "Paper Link": "https://arxiv.org/abs/2009.03355",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "emotion classification"
+        ],
+        "Venue Title": "arXiv preprint",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Abdullatif Koksal",
+            "Arzucan Ozgur"
+        ],
+        "Affiliations": [
+            "Bogazici University"
+        ],
+        "Abstract": "Relation classification is one of the key topics in information extraction, which can be used to construct knowledge bases or to provide useful information for question answering. Current approaches for relation classification are mainly focused on the English language and require lots of training data with human annotations. Creating and annotating a large amount of training data for low-resource languages is impractical and expensive. To overcome this issue, we propose two cross-lingual relation classification models: a baseline model based on Multilingual BERT and a new multilingual pretraining setup, which significantly improves the baseline with distant supervision. For evaluation, we introduce a new public benchmark dataset for cross-lingual relation classification in English, French, German, Spanish, and Turkish, called RELX."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0026208,
+        "input_tokens": 15228,
+        "output_tokens": 654
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.09381"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

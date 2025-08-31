@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "RuDSI",
+        "Link": "https://github.com/kategavrishina/RuDSI",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2022,
+        "Language": "ru",
+        "Domain": [
+            "news articles",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A graph-based word sense induction dataset for Russian",
+        "Volume": 840.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "National Research University Higher School of Economics",
+            "University of Oslo"
+        ],
+        "Derived From": [
+            "Russian National Corpus"
+        ],
+        "Paper Title": "RuDSI: graph-based word sense induction dataset for Russian",
+        "Paper Link": "https://www.example.com/rudsi-paper",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "word prediction",
+            "named entity recognition"
+        ],
+        "Venue Title": "Computational Linguistics and Intellectual Technologies",
+        "Venue Type": "conference",
+        "Venue Name": "Dialogue",
+        "Authors": [
+            "Anna Aksenova",
+            "Ekaterina Gavrishina",
+            "Elisey Rykov",
+            "Andrey Kutuzov"
+        ],
+        "Affiliations": [
+            "National Research University Higher School of Economics",
+            "University of Oslo"
+        ],
+        "Abstract": "This paper presents RuDSI, a novel graph-based word sense induction dataset for Russian. The dataset was created using manual annotation and semi-automatic clustering of Word Usage Graphs (WUGs)."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0024138,
+        "input_tokens": 14943,
+        "output_tokens": 380
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2209.13750"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

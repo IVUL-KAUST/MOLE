@@ -1,0 +1,64 @@
+{
+    "metadata": {
+        "Name": "MS MARCO",
+        "Link": "https://huggingface.co/datasets/msmarco",
+        "HF Link": "https://huggingface.co/datasets/msmarco",
+        "License": "CC BY-SA 4.0",
+        "Year": 2017,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "MS MARCO is a large-scale dataset for information retrieval and question answering. It consists of real user queries from Bing search logs and corresponding web documents.",
+        "Volume": 0.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "MS MARCO: A Human Generated Dataset for Training Conversational Search Systems",
+        "Paper Link": "https://arxiv.org/abs/1709.00202",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Upon-Request",
+        "Cost": "Free",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "We present MS MARCO, a new dataset for training conversational search systems. MS MARCO consists of over one million human-generated question-answer pairs, created from real queries issued to the Bing search engine. The dataset includes both human-written questions and relevant passages extracted from web pages. We also provide a set of human-generated relevance judgments for the passages, which can be used to train ranking models. We evaluate several state-of-the-art retrieval models on MS MARCO and show that our dataset leads to significant improvements in performance."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.4444444444444444
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0022038362424,
+        "input_tokens": 30285,
+        "output_tokens": 455
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.07759"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

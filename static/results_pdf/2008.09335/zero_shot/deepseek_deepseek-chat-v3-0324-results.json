@@ -1,0 +1,123 @@
+{
+    "metadata": {
+        "Name": "MTOP",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 22288,
+                "Unit": "utterances",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 15459,
+                "Unit": "utterances",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "French",
+                "Volume": 16584,
+                "Unit": "utterances",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 18788,
+                "Unit": "utterances",
+                "Language": "German"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 16131,
+                "Unit": "utterances",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 15195,
+                "Unit": "utterances",
+                "Language": "Thai"
+            }
+        ],
+        "Link": "https://fb.me/mtop_dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Spanish",
+            "French",
+            "German",
+            "Hindi",
+            "Thai"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A multilingual task-oriented semantic parsing dataset covering 6 languages and 11 domains, with 100k annotated utterances.",
+        "Volume": 22288.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook"
+        ],
+        "Derived From": [],
+        "Paper Title": "MTOP: A Comprehensive Multilingual Task-Oriented Semantic Parsing Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2008.09335",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing",
+            "irony detection",
+            "semantic parsing"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Haoran Li",
+            "Abhinav Arora",
+            "Shuohui Chen",
+            "Anchit Gupta",
+            "Sonal Gupta",
+            "Yashar Mehdad"
+        ],
+        "Affiliations": [
+            "Facebook"
+        ],
+        "Abstract": "With the rising adoption of virtual assistant products, task-oriented dialog systems have been attracting more attention in both academic and industrial communities. One of the first steps in these systems is to extract meaning from the natural language used in conversation to build a semantic representation of the user utterance. Typical systems achieve this by classifying the intent of the utterance and tagging the corresponding slots. With the goal of handling more complex queries, recent approaches propose hierarchical representations that are expressive enough to capture the task-specific semantics of complex nested queries. Scaling semantic parsing models for task-oriented dialog systems to new languages is often expensive and time-consuming due to the lack of available datasets. Available datasets suffer from several shortcomings: a) they contain few languages b) they contain small amounts of labeled examples per language c) they are based on the simple intent and slot detection paradigm for non-compositional queries. In this paper, we present a new multilingual dataset, called MTOP, comprising of 100k annotated utterances in 6 languages across 11 domains. We use this dataset and other publicly available datasets to conduct a comprehensive benchmarking study on using various state-of-the-art multilingual pre-trained models for task-oriented semantic parsing. We achieve an average improvement of +6.3 points on Slot F1 for the two existing multilingual datasets, over best results reported in their experiments. Furthermore, we demonstrate strong zero-shot performance using pre-trained models combined with automatic translation and alignment, and a proposed distant supervision method to reduce the noise in slot label projection."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00545447,
+        "input_tokens": 15828,
+        "output_tokens": 830
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2008.09335"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

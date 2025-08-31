@@ -1,0 +1,173 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 0,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "English",
+                "Volume": 400,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "Haitian Creole",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Eastern Apur\u00edmac Quechua",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Eastern Apur\u00edmac Quechua"
+            },
+            {
+                "Name": "Kiswahili",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Mandarin Chinese",
+                "Volume": 100,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "github.com/cambridgeltl/xcopa",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2020,
+        "Language": [
+            "Arabic",
+            "English",
+            "Estonian",
+            "Haitian Creole",
+            "Indonesian",
+            "Italian",
+            "Eastern Apur\u00edmac Quechua",
+            "Swahili",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Chinese"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "manual curation"
+        ],
+        "Description": "A multilingual dataset for causal commonsense reasoning in 11 languages, including resource-poor languages like Eastern Apur\u00edmac Quechua and Haitian Creole.",
+        "Volume": 500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Derived From": [],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://arxiv.org/abs/2005.00333",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Edoardo M. Ponti",
+            "Goran Glavas\u02c7",
+            "Olga Majewska",
+            "Qianchu Liu",
+            "Ivan Vulic\u00b4",
+            "Anna Korhonen"
+        ],
+        "Affiliations": [
+            "Language Technology Lab, TAL, University of Cambridge, UK",
+            "Data and Web Science Group, University of Mannheim, Germany"
+        ],
+        "Abstract": "Ultimately,itshapestheindividuals\u2019expectations abouttypicalsituations(Shoham,1990).1 In order to simulate human language capacity, natural language processing systems Aseminalworkonthequantitativeevaluationof commonsense reasoning is the Choice Of PlausibleAlternativesdataset(COPA;Roemmeleetal., 2011),whichfocusesoncause\u2013effectrelationships. Inrecentyears,moredatasetshavebeendedicated to other facets of world knowledge (Sakaguchi et al., 2020; Bisk et al., 2020; Bhagavatula et al., 2020;Rashkinetal.,2018;Sapetal.,2019,inter alia). Unfortunately,theextensiveeffortsrelatedto thisthreadofresearchhavesofarbeenlimitedonly totheEnglishlanguage.2 Suchanarrowscopenot onlycurbsthedevelopmentofnaturallanguageun- derstandingtoolsinotherlanguages(Bender,2011; Pontietal.,2019a),butalsoexacerbatestheAnglo- centricbiasinmodelingcommonsensereasoning. Infact,theexpectationsabouttypicalsituationsdo varyacrosscultures(Thomas,1983). Datasetsthatcovermultiplelanguagesforother natural understanding tasks, such as language in- ference(Conneauetal.,2018),questionanswering (Lewis et al., 2020; Artetxe et al., 2020a; Clark et al., 2020), and paraphrase identification (Yang etal.,2019b)havereceivedincreasingattention. In fact,therequirementtogeneralisetonewlanguages encouragesthedevelopmentofmoreversatilelan- guageunderstandingmodels,whichcanbeported across different grammars and lexica. These ef- forts havereceivedincreasingattention. However, acomprehensivemultilingualbenchmarkforcommonsense reasoninginparticularisstillmissing. Inordertoaddressthisgap,wedevelopanovel dataset, XCOPA (see examples in Table 1), by carefullytranslatingandre-annotatingthevalidation and test sets of English COPA into 11 target languages. Akeydesignchoiceistheselectionof atypologicallydiversesampleoflanguages. Inpar- ticular,weprivilegevarietyovertheabundancein digitaltexts. Sinceresource-richlanguagestendto belongtoafewfamiliesandareas,samplesinspired bythiscriterionarehighlybiasedandnotindica- tiveoftruemodels\u2019performance(Gerzetal.,2018; Pontietal.,2019a;Joshietal.,2020;Lauscher etal.,2020). Followingthisguidingprinciple,we select11languagesfrom11distinctfamilies,and5 geographicalmacro-areas(Africa,Eurasia,Papune- sia,NorthAmerica,andSouthAmerica). We leverage XCOPA to benchmark a series of state-of-the-artpretrainedmultilingualmodels,in- cluding XLM-R (Conneau et al., 2020), MBERT (Devlinetal.,2019),andmultilingualUSE (Yang etal.,2019a). TwoXCOPAlanguages(i.e.,South- ernQuechuaandHaitianCreole)areout-of-sample forthepretrainedmodels: thisnaturallyraisesthe questionofhowtoadaptthepretrainedmodelsto such unseen languages. In particular, we investi- gatetheresource-leanscenarioswhereeithersome monolingualdataorabilingualdictionarywithEn- glish(orboth)areavailableforthetargetlanguage. In summary, we offer the following contribu- tions. 1)Wecreatethefirstlarge-scalemultilingual evaluation set for commonsense reasoning, span- ning 11 languages, and discuss the challenges in accounting for world knowledge across different culturesandlanguages. 2)Weproposequantitative metrics to measure the internal variety of a lan- guagesample,whichcanguidethedesignofany multilingualdatasetinthefuture. 3)Webenchmark pretrainedstate-of-the-artmodelsincross-lingual transfer of commonsense knowledge, and 4) in- vestigate how to (post-hoc) improve transfer for multilingualmodelstoout-of-sampleresource-lean languageswhereonlyasmallcorpusorabilin- gual dictionary is available, and report sub- stantial improvements over the random baseline."
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42105263157894735
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0020654924868,
+        "input_tokens": 21206,
+        "output_tokens": 1854
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

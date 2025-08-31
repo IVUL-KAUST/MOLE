@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "Name": "X-stance",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 59915,
+                "Unit": "answers",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 20679,
+                "Unit": "answers",
+                "Language": "French"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 173,
+                "Unit": "answers",
+                "Language": "Italian"
+            }
+        ],
+        "Link": "http://doi.org/10.5281/zenodo.3831317",
+        "HF Link": "",
+        "License": "CC BY-NC 4.0",
+        "Year": 2020,
+        "Language": [
+            "German",
+            "French",
+            "Italian"
+        ],
+        "Domain": [
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A multilingual dataset for stance detection on political issues in Switzerland.",
+        "Volume": 67000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Zurich",
+            "University of Edinburgh"
+        ],
+        "Derived From": [],
+        "Paper Title": "X-stance: A Multilingual Multi-Target Dataset for Stance Detection",
+        "Paper Link": "https://arxiv.org/abs/2003.08385",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "stance detection"
+        ],
+        "Venue Title": "arXiv preprint",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Jannis Vamvas",
+            "Rico Sennrich"
+        ],
+        "Affiliations": [
+            "Department of Computational Linguistics, University of Zurich",
+            "School of Informatics, University of Edinburgh"
+        ],
+        "Abstract": "This paper presents X-stance, a multilingual dataset for stance detection on political issues in Switzerland. The dataset contains comments from candidates of elections in Switzerland, annotated with their stance towards a target entity. The dataset is multilingual, covering German, French, and Italian. We use the dataset to train a single model on all the issues and evaluate its performance on zero-shot cross-lingual and cross-target transfer."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0024495,
+        "input_tokens": 13658,
+        "output_tokens": 512
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2003.08385"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

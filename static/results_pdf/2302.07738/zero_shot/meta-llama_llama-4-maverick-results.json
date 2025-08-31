@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Alloprof",
+        "Link": "https://github.com/mila-aia/alloprof-data",
+        "HF Link": "https://huggingface.co/datasets/antoinelb7/alloprof",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "captions",
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A French question-answering dataset collected from Alloprof, a Quebec-based primary and high-school help website.",
+        "Volume": 29349.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Alloprof",
+            "Mila-Quebec AI Institute",
+            "Polytechnique Montr\u00e9al"
+        ],
+        "Derived From": [],
+        "Paper Title": "Alloprof: a French question-answer education dataset and its use in an information retrieval case study",
+        "Paper Link": "https://arxiv.org/abs/2305.14671",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Antoine Lefebvre-Brossard",
+            "Stephane Gazaille",
+            "Michel C. Desmarais"
+        ],
+        "Affiliations": [
+            "Mila-Quebec AI Institute",
+            "Polytechnique Montr\u00e9al"
+        ],
+        "Abstract": "This paper introduces a new public French question-answering dataset collected from Alloprof, a Quebec-based primary and high-school help website. The dataset contains 29349 questions and their explanations in a variety of school subjects from 10368 students, with more than half of the explanations containing links to other questions or some of the 2596 reference pages on the website."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00317663,
+        "input_tokens": 15365,
+        "output_tokens": 444
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2302.07738"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

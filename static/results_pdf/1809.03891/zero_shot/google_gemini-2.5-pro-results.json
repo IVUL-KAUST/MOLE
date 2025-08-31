@@ -1,0 +1,96 @@
+{
+    "metadata": {
+        "Name": "OpenITI",
+        "Subsets": [],
+        "Link": "https://github.com/OpenITI",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "ar",
+        "Dialect": "mixed",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "machine annotation"
+        ],
+        "Description": "A large-scale diachronic corpus of the written Arabic language, spanning 1400 years. It contains approximately 1.5 billion words from primarily religious and literary texts, collected from sources like Shamela, the Shia online library, and Al-Jami\u2019 Al-Kabir. The corpus has been preprocessed for NLP tasks.",
+        "Volume": 1500000000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "University of Rhode Island",
+            "Qatar Computing Research Institute, HBKU",
+            "Bar-Ilan University",
+            "Dicta: The Israel Center for Text Analysis",
+            "University of Vienna"
+        ],
+        "Derived From": [
+            "Al-Maktaba Al-Shamela",
+            "Shia online library",
+            "Al-Jami\u2019 Al-Kabir"
+        ],
+        "Paper Title": "Studying the History of the Arabic Language: Language Technology and a Large-Scale Historical Corpus",
+        "Paper Link": "https://arxiv.org/abs/1809.03891",
+        "Script": "Arab",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "embedding evaluation",
+            "part of speech tagging",
+            "morphological analysis",
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Yonatan Belinkov",
+            "Alexander Magidow",
+            "Alberto Barr\u00f3n-Cede\u00f1o",
+            "Avi Shmidman",
+            "Maxim Romanov"
+        ],
+        "Affiliations": [
+            "MIT Computer Science and Artificial Intelligence Laboratory",
+            "University of Rhode Island",
+            "Qatar Computing Research Institute, HBKU",
+            "Bar-Ilan University",
+            "Dicta: The Israel Center for Text Analysis",
+            "University of Vienna"
+        ],
+        "Abstract": "Arabic is a widely-spoken language with a long and rich history, but existing corpora and language technology focus mostly on modern Arabic and its varieties. Therefore, studying the history of the language has so far been mostly limited to manual analyses on a small scale. In this work, we present a large-scale historicalcorpusofthewrittenArabiclanguage,spanning1400years.Wedescribe our efforts to clean and process this corpus using Arabic NLP tools, including the identification of reused text. We study the history of the Arabic language using a novel automatic periodization algorithm, as well as other techniques. Our findings confirm the established division of written Arabic into Modern Standard and Classical Arabic, and confirm other established periodizations, while suggesting that written Arabic may be divisible into still further periods of development."
+    },
+    "validation": {
+        "DIVERSITY": 0.6666666666666666,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47619047619047616
+    },
+    "length_forcing": 1.0,
+    "cost": {
+        "cost": 0.07339125,
+        "input_tokens": 26558,
+        "output_tokens": 1557
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.03891"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

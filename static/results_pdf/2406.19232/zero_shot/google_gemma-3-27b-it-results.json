@@ -1,0 +1,92 @@
+{
+    "metadata": {
+        "Name": "RuBLiMP",
+        "Link": "https://huggingface.co/datasets/RussianNLP/rublimp",
+        "HF Link": "https://huggingface.co/datasets/RussianNLP/rublimp",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "web pages",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation"
+        ],
+        "Description": "RuBLiMP is a benchmark of 45k minimal pairs for the Russian language, covering morphological, syntactic, and semantic phenomena.",
+        "Volume": 45000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "HSE University",
+            "University of Edinburgh",
+            "University of Groningen",
+            "Ghent University",
+            "Salute Devices",
+            "Toloka AI",
+            "University of Oslo"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuBLiMP: Russian Benchmark of Linguistic Minimal Pairs",
+        "Paper Link": "https://aclanthology.org/2023.rublimp.1/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "morphological analysis",
+            "semantic parsing",
+            "semantic parsing"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ekaterina Taktasheva",
+            "Maxim Bazhukov",
+            "Kirill Koncha",
+            "Alena Fenogenova",
+            "Ekaterina Artemova",
+            "Vladislav Mikhailov"
+        ],
+        "Affiliations": [
+            "University of Edinburgh",
+            "HSE University",
+            "University of Groningen",
+            "Ghent University",
+            "Salute Devices",
+            "Toloka AI",
+            "University of Oslo"
+        ],
+        "Abstract": "Language Size #Paradigm MethodnBLiMP English 67k 67 Dictionary&templatesnCLiMP Chinese 16k 16 Translation&templatesnMinimalpairsareawell-establishedapproachntoevaluatingthegrammaticalknowledgeoflan-nguagemodels. However,existingresourcesfornminimalpairsaddressalimitednumberoflan-nguagesandlackdiversityoflanguage-specificngrammatical phenomena. This paper intro-nduces the Russian Benchmark of LinguisticnMinimal Pairs (RuBLiMP), which includesn45kpairsofsentencesthatdifferingrammat-icalityandisolateamorphological,syntactic,nor semantic phenomenon. In contrast to ex-nistingbenchmarksoflinguisticminimalpairs,nRuBLiMP is created by applying linguisticnperturbations to automatically annotated sen-ntencesfromopentextcorporaanddecontam-ninatingtestdata. Wedescribethedatacollec-ntionprotocolandpresenttheresultsofevalu-nating 25 language models in various scenar-nios. We find that the widely used LMs fornRussian are sensitive to morphological andnagreement-oriented contrasts, but fall behindnhumans on phenomena requiring the under-nstandingofstructuralrelations,negation,transi-ntivity,andtense. RuBLiMP,thecodebase,andnothermaterialsarepubliclyavailable."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0037083377304,
+        "input_tokens": 46538,
+        "output_tokens": 784
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.19232"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

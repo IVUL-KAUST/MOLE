@@ -1,0 +1,97 @@
+{
+    "metadata": {
+        "Name": "CRAFT",
+        "Link": "https://arxiv.org/abs/2406.12870",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "books",
+            "wikipedia",
+            "web pages",
+            "social media",
+            "news articles",
+            "captions",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "CRAFT is a dataset for cultural adaptation of text-to-image generation models, specifically for Russian culture.",
+        "Volume": 200000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "SberAI",
+            "Moscow Institute of Physics and Technology",
+            "Information Technologies, Mechanics and Optics University",
+            "Artificial Intelligence Research Institute"
+        ],
+        "Derived From": [
+            "LAION-5B",
+            "MS COCO"
+        ],
+        "Paper Title": "CRAFT: CULTURAL RUSSIAN-ORIENTED DATASET ADAPTATION FOR FOCUSED TEXT-TO-IMAGE GENERATION",
+        "Paper Link": "https://arxiv.org/abs/2406.12870",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "text generation",
+            "text generation"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Viacheslav Vasilev",
+            "Vladimir Arkhipkin",
+            "Julia Agafonova",
+            "Tatiana Nikulina",
+            "Evelina Mironova",
+            "Alisa Shichanina",
+            "Nikolai Gerasimenko",
+            "Mikhail Shoytov",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "SberAI",
+            "Moscow Institute of Physics and Technology",
+            "Information Technologies, Mechanics and Optics University",
+            "Artificial Intelligence Research Institute"
+        ],
+        "Abstract": "The abstract of the paper is about improving text-to-image generation models' cultural awareness, specifically for Russian culture, by creating a dataset and fine-tuning the Kandinsky 3.1 model."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.003156,
+        "input_tokens": 14533,
+        "output_tokens": 506
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2505.04851"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

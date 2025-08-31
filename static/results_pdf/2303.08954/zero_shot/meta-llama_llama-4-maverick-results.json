@@ -1,0 +1,176 @@
+{
+    "metadata": {
+        "Name": "PRESTO",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 83584,
+                "Unit": "examples",
+                "Language": "German"
+            },
+            {
+                "Name": "English",
+                "Volume": 95671,
+                "Unit": "examples",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 96164,
+                "Unit": "examples",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "French",
+                "Volume": 95870,
+                "Unit": "examples",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 72107,
+                "Unit": "examples",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 109528,
+                "Unit": "examples",
+                "Language": "Japanese"
+            }
+        ],
+        "Link": "https://github.com/google-research-datasets/presto",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "Spanish",
+            "French",
+            "German",
+            "Hindi",
+            "Japanese"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A multilingual dataset for parsing realistic task-oriented dialogs.",
+        "Volume": 274743.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Inc."
+        ],
+        "Derived From": [],
+        "Paper Title": "PRESTO: A Multilingual Dataset for Parsing Realistic Task-Oriented Dialogs",
+        "Paper Link": "https://arxiv.org/abs/2303.08954",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "sentiment analysis",
+            "language modeling",
+            "topic classification",
+            "dialect identification",
+            "text generation",
+            "cross-lingual information retrieval",
+            "named entity recognition",
+            "question answering",
+            "multiple choice question answering",
+            "information retrieval",
+            "part of speech tagging",
+            "language identification",
+            "summarization",
+            "speaker identification",
+            "transliteration",
+            "morphological analysis",
+            "offensive language detection",
+            "review classification",
+            "gender identification",
+            "fake news detection",
+            "dependency parsing",
+            "irony detection",
+            "meter classification",
+            "natural language inference",
+            "instruction tuning",
+            "linguistic acceptability",
+            "commonsense reasoning",
+            "word prediction",
+            "image captioning",
+            "word similarity",
+            "grammatical error correction",
+            "intent classification",
+            "sign language recognition",
+            "optical character recognition",
+            "fill-in-the blank",
+            "relation extraction",
+            "stance detection",
+            "emotion classification",
+            "semantic parsing",
+            "text to SQL",
+            "lexicon analysis",
+            "embedding evaluation",
+            "other"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Rahul Goel",
+            "Waleed Ammar",
+            "Aditya Gupta",
+            "Siddharth Vashishtha",
+            "Motoki Sano",
+            "Faiz Surani",
+            "Max Chang",
+            "Hyun Jeong Choe",
+            "David Greene",
+            "Kyle He",
+            "Rattima Nitisaroj",
+            "Anna Trukhina",
+            "Shachi Paul",
+            "Pararth Shah",
+            "Rushin Shah",
+            "Zhou Yu"
+        ],
+        "Affiliations": [
+            "Google Inc.",
+            "University of Rochester",
+            "University of California, Santa Barbara",
+            "Columbia University"
+        ],
+        "Abstract": "Virtual dialog agents (a.k.a. 'assistants') are increasingly becoming a part of our everyday life. From setting up alarms to controlling one's home environment, users now converse with their devices to accomplish many tasks previously done manually. Parsing task-oriented dialogs is the problem of understanding the user's intent and any associated arguments so that the assistant can fulfill the requested task. Given the prominence of data-driven methods in NLP, public availability of relevant datasets dictates which problems can be effectively studied by the research community at large. Datasets such as MultiWoz (Budzianowski et al., 2018; Eric et al., 2020), TOP (Gupta et al., 2018), MTOP (Li et al., 2021), and SMCalFlow (Andreas et al., 2020) have enabled researchers to study numerous developments in conversational semantic parsing, e.g., Budzianowski and Vulic (2019), Pasupat et al. (2021). However, many challenging aspects of parsing, such as disfluencies, code-switching, and the use of the structured context which grounds conversations, have been missing in these datasets, stifling meaningful research progress in those areas. With that in mind, we present PRESTO, a dataset that better represents real conversations users have with their virtual assistants. PRESTO consists of: * Challenging conversational phenomena such as disfluencies, code-switching and user revisions, addressing some of the aforementioned limitations of current virtual assistants and enabling researchers to test new methods of addressing these challenges. * Realistic multilingual dialogues. Unlike in other datasets, conversations in each language were not obtained by translating English dialog, but instead contributed by native speakers of each language. * Human and synthetic structured context with the conversations. The data contributors were instructed to look at and optionally reference relevant context in the user's virtual environment. For example, contributors could reference the user's contact list while initiating a phone call or sending a message using the virtual assistant."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0035114,
+        "input_tokens": 16288,
+        "output_tokens": 1299
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2303.08954"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "SciQ",
+        "Link": "http://allenai.org/data.html",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset of 13.7K multiple choice science exam questions created by leveraging a corpus of domain-specific text and a small set of existing questions.",
+        "Volume": 13679.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Allen Institute for Artificial Intelligence",
+            "University College London",
+            "University of Washington"
+        ],
+        "Derived From": [],
+        "Paper Title": "Crowdsourcing Multiple Choice Science Questions",
+        "Paper Link": "https://arxiv.org/abs/1707.06209",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "multiple choice question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Johannes Welbl",
+            "Nelson F. Liu",
+            "Matt Gardner"
+        ],
+        "Affiliations": [
+            "Computer Science Department, University College London",
+            "Paul G. Allen School of Computer Science & Engineering, University of Washington",
+            "Allen Institute for Artificial Intelligence"
+        ],
+        "Abstract": "We present a novel method for obtain-ing high-quality, domain-targeted multiple choice questions from crowd workers. Generatingthesequestionscanbedifficult withouttradingawayoriginality,relevance or diversity in the answer options. Our methodaddressestheseproblemsbylever-aging a large corpus of domain-specific text and a small set of existing ques-tions. It produces model suggestions for document selection and answer distractor choicewhichaidthehumanquestiongen-erationprocess. Withthismethodwehave assembled SciQ, a dataset of 13.7K mul-tiple choice science exam questions.1 We demonstrate that the method produces in-domainquestionsbyprovidingananalysis ofthisnewdatasetandbyshowingthathu-manscannotdistinguishthecrowdsourced questions from original questions. When using SciQ as additional training data to existing questions, we observe accuracy improvementsonrealscienceexams."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00222053,
+        "input_tokens": 16588,
+        "output_tokens": 544
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1707.06209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

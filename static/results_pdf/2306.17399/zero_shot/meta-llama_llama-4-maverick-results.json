@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "JaLeCoN",
+        "Link": "https://github.com/naist-nlp/jalecon",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "Dataset of Japanese Lexical Complexity for Non-Native Readers",
+        "Volume": 18000.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Nara Institute of Science and Technology"
+        ],
+        "Derived From": [],
+        "Paper Title": "Japanese Lexical Complexity for Non-Native Readers: A New Dataset",
+        "Paper Link": "https://arxiv.org/abs/2306.17399",
+        "Script": "mixed",
+        "Tokenized": true,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "word prediction"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Yusuke Ide",
+            "Masato Mita",
+            "Adam Nohejl",
+            "Hiroki Ouchi",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "Nara Institute of Science and Technology",
+            "CyberAgent Inc.",
+            "RIKEN"
+        ],
+        "Abstract": "Lexical complexity prediction (LCP) is the task of predicting the complexity of words in a text on a continuous scale. This paper presents JaLeCoN, the first Japanese LCP dataset, which provides separate complexity scores for Chinese/Korean annotators and others. The dataset includes complexity scores for single words and multi-word expressions (MWEs) and is sourced from news articles and government press conference transcripts."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00229993,
+        "input_tokens": 11764,
+        "output_tokens": 391
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17399"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

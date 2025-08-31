@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://github.com/illuin/FQuAD2.0",
+        "HF Link": "https://huggingface.co/datasets/illuin/FQuAD2.0",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "FQuAD2.0 extends FQuAD1.1 with 17,000+ unanswerable questions, annotated adversarially, to train French Question Answering models to distinguish unanswerable questions.",
+        "Volume": 79982.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "FQuAD1.1"
+        ],
+        "Paper Title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+        "Paper Link": "https://arxiv.org/abs/2103.15867",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Quentin Heinrich",
+            "Gautier Viaud",
+            "Wacim Belblidia"
+        ],
+        "Affiliations": [
+            "Illuin Technology",
+            "Paris,France"
+        ],
+        "Abstract": "As SQuAD1.1(Rajpurkar etal.,2016),SQuAD2.0 (Rajpurkaretal.,2018),BoolQ(Clarketal.,2019), QuestionAnswering,includingReadingCom- CoQA (Reddy et al., 2018), Natural Questions prehension, is one of the NLP research ar- (Kwiatkowskietal.,2019),onlytociteafew. Sec- eas that has seen significant scientific break- ond,theprogressinLanguageModelingwiththe throughs over the past few years, thanks to introductionoftransformersmodel(Vaswanietal., the concomitant advances in Language Mod- 2017),leveragingself-supervisedtrainingonvery eling. Most of these breakthroughs, however, large text corpus, followed by fine-tuning on a are centered on the English language. In downstreamtask(Devlinetal.,2018). Thisprocess 2020, as a first strong initiative to bridge the has now become a de-facto standard for most of gap to the French language, Illuin Technol- these tasks, including Question Answering. ogy introduced FQuAD1.1, a French Native Whilst most of these recent transformers mod- ReadingComprehensiondatasetcomposedof els are English models, French language mod- 60,000+ questions and answers samples ex- elshavealsobeenreleased,inparticularCamem- tracted from Wikipedia articles. Nonetheless, BERT (Martin et al., 2019) and FlauBERT (Le mostofthesetasks,includingQuestionAnswering. etal.,2019),aswellasmultilingualmodelssuch Question Answering models trained on this asmBERT(Piresetal.,2019)orXLM-RoBERTa dataset have a major drawback: they are not (Conneauetal.,2019). Thesemodelsfosteredthe able to predict when a given question has no state-of-the-artinNLPforFrenchlanguage,allow- answer in the paragraph of interest, therefore ingtobenefitfromthislarge-scaletransferlearning makingunreliablepredictionsinvariousindus- mechanism. However,nativeFrenchresourcesfor trial use-cases. In the present work, we intro- QuestionAnsweringremainscarcerthanEnglish duceFQuAD2.0,whichextendsFQuADwith resources. Nonetheless,in2020,FQuAD1.1was 17,000+ unanswerable questions, annotated introduced by Illuin Technology (d\u2019Hoffschmidt adversarially,inordertobesimilartoanswer- etal.,2020). With60,000+question-answerpairs, ableones.Thisnewdataset,comprisingatotal itenabledthedevelopmentofQAmodelssurpass- of almost 80,000 questions, makes it possible ing the human performance in the Reading Com- to train French Question Answering models prehensiontask."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0016374,
+        "input_tokens": 15491,
+        "output_tokens": 1014
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

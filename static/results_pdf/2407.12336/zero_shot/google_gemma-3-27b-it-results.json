@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "Name": "M2DS",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 67000.0,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": 32000.0,
+                "Unit": "documents",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 29000.0,
+                "Unit": "documents",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 27000.0,
+                "Unit": "documents",
+                "Language": "Korean"
+            },
+            {
+                "Name": "Sinhala",
+                "Volume": 23500.0,
+                "Unit": "documents",
+                "Language": "Sinhala"
+            }
+        ],
+        "Link": "https://huggingface.co/datasets/KushanH/m2ds",
+        "HF Link": "https://huggingface.co/datasets/KushanH/m2ds",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "Japanese",
+            "Korean",
+            "Tamil",
+            "Sinhala"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "The Multilingual Dataset for Multi-document Summarisation (M2DS) is a new dataset containing document-summary pairs in five languages from BBC articles published during the 2010-2023 period.",
+        "Volume": 180000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "ConscientAI",
+            "University of Moratuwa"
+        ],
+        "Derived From": [
+            "M3LS"
+        ],
+        "Paper Title": "M2DS: Multilingual Dataset for Multi-document Summarisation",
+        "Paper Link": "https://arxiv.org/abs/2407.12336",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Kushan Hewapathirana",
+            "Nisansa de Silva",
+            "C.D. Athuraliya"
+        ],
+        "Affiliations": [
+            "Dept. of Computer Science & Engineering, University of Moratuwa, Sri Lanka",
+            "ConscientAI, Sri Lanka"
+        ],
+        "Abstract": "In the rapidly evolving digital era, there is an increasing demand for concise information as individuals seek to distil key insightsfromvarioussources.RecentattentionfromresearchersonMulti-document Summarisation (MDS) has resulted in diverse datasets cov-ering customer reviews, academic papers, medical and legal documents, and news articles. However, the English-centric nature of these datasets hascreatedaconspicuousvoidformultilingualdatasetsintoday\u2019sglob-alised digital landscape, where linguistic diversity is celebrated. Media platformssuchasBritishBroadcastingCorporation(BBC)havedissem-inatednewsin20+languagesfordecades.Withonly380millionpeople speakingEnglishnativelyastheirfirstlanguage,accountingforlessthan 5% of the global population, the vast majority primarily relies on other languages. These facts underscore the need for inclusivity in MDS re-search, utilising resources from diverse languages. Recognising this gap, wepresenttheMultilingualDatasetforMulti-documentSummarisation (M2DS), which, to the best of our knowledge, is the first dataset of its kind. It includes document-summary pairs in five languages from BBC articles published during the 2010-2023 period. This paper introduces M2DS,emphasisingitsuniquemultilingualaspect,andincludesbaseline scores from state-of-the-art MDS models evaluated on our dataset."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.8947368421052632
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0011769857136,
+        "input_tokens": 12839,
+        "output_tokens": 881
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12336"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

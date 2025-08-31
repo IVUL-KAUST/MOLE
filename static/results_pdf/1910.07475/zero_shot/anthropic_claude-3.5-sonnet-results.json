@@ -7,18 +7,18 @@
         "License": "custom",
         "Year": 2025,
         "Language": [
-            "Portuguese"
+            "Sinhala"
         ],
         "Domain": [
             "other"
         ],
-        "Form": "images",
+        "Form": "videos",
         "Collection Style": [
             "other"
         ],
         "Description": "",
         "Volume": 0.0,
-        "Unit": "images",
+        "Unit": "videos",
         "Ethical Risks": "High",
         "Provider": [],
         "Derived From": [],
@@ -48,9 +48,9 @@
     },
     "length_forcing": 0.8666666666666666,
     "cost": {
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "cost": 0
+        "cost": 0.1002,
+        "input_tokens": 22980,
+        "output_tokens": 812
     },
     "config": {
         "model_name": "anthropic_claude-3.5-sonnet",

@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "JAFFE",
+        "Link": "https://zenodo.org/record/4026982",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 1996,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "JAFFE\u2014The Japanese Female Facial Expression dataset\u2014is a set of images depicting facial expressions posed by Japanese women, accompanied by semantic ratings on nouns describing the expressions. It was created for a study of face perception and comparing a mathematical model of facial expression representation with human observers.",
+        "Volume": 213.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Ritsumeikan University",
+            "Kyushu University"
+        ],
+        "Derived From": [],
+        "Paper Title": "\u201cExcavating AI\u201d Re-excavated: Debunking a Fallacious Account of the JAFFE Dataset",
+        "Paper Link": "https://arxiv.org/abs/2107.13998",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "image captioning"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Michael J. Lyons"
+        ],
+        "Affiliations": [
+            "Ritsumeikan University"
+        ],
+        "Abstract": "Twenty-five years ago, my colleagues Miyuki Kamachi and Jiro Gyoba and I designed and photographed JAFFE, a set of facial expression images intended for use in a study of face perception. In 2019, without seeking permission or informing us, Kate Crawford and Trevor Paglen exhibited JAFFE in two widely publicized art shows. In addition, they published a nonfactual account of the images in the essay \u201cExcavating AI: The Politics of Images in Machine Learning Training Sets.\u201d The present article recounts the creation of the JAFFE dataset and unravels each of Crawford and Paglen\u2019s fallacious statements. I also discuss JAFFE more broadly in connection with research on facial expression, affective computing, and human-computer interaction."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0019281,
+        "input_tokens": 16619,
+        "output_tokens": 513
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2107.13998"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

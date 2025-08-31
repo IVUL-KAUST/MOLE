@@ -1,0 +1,698 @@
+{
+    "metadata": {
+        "Name": "FLORES-101",
+        "Subsets": [
+            {
+                "Name": "Afrikaans",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Amharic",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "Modern Standard Arabic"
+            },
+            {
+                "Name": "Armenian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Assamese",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Asturian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Azerbaijani",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Belarusian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Bengali",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Bosnian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Bulgarian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Burmese",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Catalan",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Cebuano",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Chinese (Simplified)",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Chinese (Traditional)",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Croatian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Czech",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Danish",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Dutch",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Filipino (Tagalog)",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Finnish",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "French",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Fula",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Galician",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Ganda",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Georgian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "German",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Greek",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Gujarati",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Hausa",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Hebrew",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Hungarian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Icelandic",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Igbo",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Irish",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Javanese",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Kabuverdianu",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Kamba",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Kannada",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Kazakh",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Khmer",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Kyrgyz",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Lao",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Latvian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Lingala",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Lithuanian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Luo",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Luxembourgish",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Macedonian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Malay",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Malayalam",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Maltese",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Maori",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Marathi",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Mongolian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Nepali",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Northern Sotho",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Norwegian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Nyanja",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Occitan",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Oriya",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Oromo",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Pashto",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Persian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Portuguese (Brazil)",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Punjabi",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Romanian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Serbian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Shona",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Sindhi",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Slovak",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Slovenian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Somali",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "Somalia"
+            },
+            {
+                "Name": "Sorani Kurdish",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "Iraq"
+            },
+            {
+                "Name": "Spanish (Latin America)",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Swahili",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Swedish",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Tajik",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Telugu",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Ukrainian",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Umbundu",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Urdu",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Uzbek",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Welsh",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Wolof",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Xhosa",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Yoruba",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            },
+            {
+                "Name": "Zulu",
+                "Volume": 3001,
+                "Unit": "sentences",
+                "Dialect": "mixed"
+            }
+        ],
+        "Link": "https://dl.fbaipublicfiles.com/flores101/dataset/flores101_dataset.tar.gz",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "multilingual",
+        "Dialect": "mixed",
+        "Domain": [
+            "wikipedia",
+            "news articles",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A multilingual machine translation evaluation benchmark consisting of 3001 sentences extracted from English Wikipedia. These sentences have been professionally translated into 101 languages, enabling many-to-many evaluation.",
+        "Volume": 3001.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Facebook AI Research"
+        ],
+        "Derived From": [
+            "Wikipedia"
+        ],
+        "Paper Title": "The FLORES-101 Evaluation Benchmark for Low-Resource and Multilingual Machine Translation",
+        "Paper Link": "https://arxiv.org/abs/2106.03193",
+        "Script": "Arab-Latin",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "topic classification",
+            "language identification",
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Naman Goyal",
+            "Cynthia Gao",
+            "Vishrav Chaudhary",
+            "Peng-Jen Chen",
+            "Guillaume Wenzek",
+            "Da Ju",
+            "Sanjana Krishnan",
+            "Marc'Aurelio Ranzato",
+            "Francisco Guzm\u00e1n",
+            "Angela Fan"
+        ],
+        "Affiliations": [
+            "Facebook AI Research",
+            "LORIA"
+        ],
+        "Abstract": "One of the biggest challenges hindering progress in low-resource and multilingual machine translation is the lack of good evaluation benchmarks. Current evaluation benchmarks either lack good coverage of low-resource languages, consider only restricted domains, or are low quality because they are constructed using semi-automatic procedures. In this work, we introduce the FLORES-101 evaluation benchmark, consisting of 3001 sentences extracted from English Wikipedia and covering a variety of different topics and domains. These sentences have been translated in 101 languages by professional translators through a carefully controlled process. The resulting dataset enables better assessment of model quality on the long tail of low-resource languages, including the evaluation of many-to-many multilingual translation systems, as all translations are multilingually aligned. By publicly releasing such a high-quality and high-coverage dataset, we hope to foster progress in the machine translation community and beyond."
+    },
+    "validation": {
+        "DIVERSITY": 0.3333333333333333,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.42857142857142855
+    },
+    "length_forcing": 0.96875,
+    "cost": {
+        "cost": 0.2195425,
+        "input_tokens": 83556,
+        "output_tokens": 5218
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2106.03193"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

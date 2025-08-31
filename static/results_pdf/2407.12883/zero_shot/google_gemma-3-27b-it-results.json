@@ -1,0 +1,100 @@
+{
+    "metadata": {
+        "Name": "BRIGHT",
+        "Link": "https://github.com/xlang-ai/BRIGHT",
+        "HF Link": "https://huggingface.co/datasets/xlangai/BRIGHT",
+        "License": "Apache-2.0",
+        "Year": 2025,
+        "Language": "en",
+        "Domain": [
+            "social media",
+            "news articles",
+            "reviews",
+            "commentary",
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "BRIGHT is a retrieval benchmark requiring intensive reasoning to retrieve relevant documents. It consists of 1,384 real-world queries spanning diverse domains.",
+        "Volume": 1384.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "The University of Hong Kong",
+            "Princeton University",
+            "Stanford University",
+            "University of Washington",
+            "Google Cloud AI Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "BRIGHT: A REALISTIC AND CHALLENGING BENCHMARK FOR REASONING-INTENSIVE RETRIEVAL",
+        "Paper Link": "PublishedasaconferencepaperatICLR2025",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "information retrieval",
+            "question answering"
+        ],
+        "Venue Title": "ICLR",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [
+            "Hongjin Su",
+            "Howard Yen",
+            "Mengzhou Xia",
+            "Weijia Shi",
+            "Niklas Muennighoff",
+            "Han-yu Wang",
+            "Haisu Liu",
+            "Quan Shi",
+            "Zachary S. Siegel",
+            "Michael Tang",
+            "Ruoxi Sung",
+            "Jinsung Yoong",
+            "Sercan \u00d6. Ar\u0131kg",
+            "Danqi Chen",
+            "Tao Yu"
+        ],
+        "Affiliations": [
+            "The University of Hong Kong",
+            "Princeton University",
+            "Stanford University",
+            "University of Washington",
+            "Google Cloud AI Research"
+        ],
+        "Abstract": "Existing retrieval benchmarks primarily consist of information-seeking queries where keyword or semantic-based retrieval is usually sufficient. However, many complex real-world queries require in-depth reasoning to identify relevant documents that go beyond surface form matching. To better benchmark retrieval on such challenging queries, we introduce BRIGHT, the first text retrieval benchmark that requires intensive reasoning to retrieve relevant documents. Our dataset consists of 1,384 real-world queries spanning diverse domains, such as economics, psychology, mathematics, and coding. Extensive evaluation reveals that even state-of-the-art retrieval models perform poorly on BRIGHT."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0039172375836,
+        "input_tokens": 52319,
+        "output_tokens": 652
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12883"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

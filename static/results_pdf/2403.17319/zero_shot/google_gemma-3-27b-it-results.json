@@ -1,0 +1,80 @@
+{
+    "metadata": {
+        "Name": "JMultiWOZ",
+        "Link": "https://github.com/nu-dialogue/jmultiwoz",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "commentary",
+            "captions",
+            "captions",
+            "news articles",
+            "captions",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "The first Japanese large-scale multi-domain task-oriented dialogue dataset, containing 4,246 conversations spanning six travel-related domains.",
+        "Volume": 4246.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Nagoya University"
+        ],
+        "Derived From": [],
+        "Paper Title": "JMultiWOZ: A Large-Scale Japanese Multi-Domain Task-Oriented Dialogue Dataset",
+        "Paper Link": "https://arxiv.org/abs/2403.17319",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "text generation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Atsumoto Ohashi",
+            "Ryu Hirai",
+            "Shinya Iizuka",
+            "Ryuichiro Higashinaka"
+        ],
+        "Affiliations": [
+            "Graduate School of Informatics, Nagoya University, Japan"
+        ],
+        "Abstract": "Dialoguedatasetsarecrucialfordeeplearning-basedtask-orienteddialoguesystemresearch. WhilenumerousEnglishlanguagemulti-domaintask-orienteddialoguedatasetshavebeendevelopedandcontributedtosignificantadvancementsintask-orienteddialoguesystems,suchadatasetdoesnotexistinJapanese,andresearchinthisareaislimitedcomparedtothatinEnglish. Inthisstudy,towardstheadvancementofresearchanddevelopmentof task-orienteddialoguesystemsinJapanese,weconstructedJMultiWOZ,thefirstJapaneselanguagelarge-scale multi-domain task-oriented dialogue dataset. Using JMultiWOZ, we evaluated the dialogue state tracking and responsegenerationcapabilitiesofthestate-of-the-artmethodsontheexistingmajorEnglishbenchmarkdatasetMultiWOZ2.2andthelatestlargelanguagemodel(LLM)-basedmethods. OurevaluationresultsdemonstratedthatJMultiWOZprovidesabenchmarkthatisonparwithMultiWOZ2.2. Inaddition, throughevaluationexperiments ofinteractivedialogueswiththemodelsandhumanparticipants, weidentifiedlimitationsinthetaskcompletion capabilitiesofLLMsinJapanese."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.625,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00187396,
+        "input_tokens": 18633,
+        "output_tokens": 625
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.17319"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,100 @@
+{
+    "metadata": {
+        "Name": "RuBLiMP",
+        "Link": "https://hf.co/datasets/RussianNLP/rublimp",
+        "HF Link": "https://hf.co/datasets/RussianNLP/rublimp",
+        "License": "CC BY 4.0",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "public datasets",
+            "wikipedia",
+            "news articles",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "RuBLiMP is a Russian benchmark of linguistic minimal pairs, including 45k pairs of sentences differing in grammaticality and isolating morphological, syntactic, or semantic phenomena.",
+        "Volume": 45.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Edinburgh",
+            "HSE University",
+            "University of Groningen",
+            "Ghent University",
+            "Salute Devices",
+            "Toloka AI",
+            "University of Oslo"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Wikinews",
+            "Librusec"
+        ],
+        "Paper Title": "RuBLiMP: Russian Benchmark of Linguistic Minimal Pairs",
+        "Paper Link": "https://arxiv.org/abs/2312.02916",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "linguistic acceptability",
+            "grammatical error correction",
+            "morphological analysis",
+            "sentiment analysis",
+            "sentiment analysis"
+        ],
+        "Venue Title": "LREC-COLING 2024",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Ekaterina Taktasheva",
+            "Maxim Bazhukov",
+            "Kirill Koncha",
+            "Alena Fenogenova",
+            "Ekaterina Artemova",
+            "Vladislav Mikhailov"
+        ],
+        "Affiliations": [
+            "University of Edinburgh",
+            "HSE University",
+            "University of Groningen",
+            "Ghent University",
+            "Salute Devices",
+            "Toloka AI",
+            "University of Oslo"
+        ],
+        "Abstract": "Minimal pairs are a well-established approach to evaluating the grammatical knowledge of language models. This paper introduces the Russian Benchmark of Linguistic Minimal Pairs (RuBLiMP), which includes 45k pairs of sentences differing in grammaticality and isolating morphological, syntactic, or semantic phenomena. RuBLiMP is created by applying linguistic perturbations to automatically annotated sentences from open text corpora and decontaminating test data. We describe the data collection protocol and present the results of evaluating 25 language models in various scenarios."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.01395098,
+        "input_tokens": 46526,
+        "output_tokens": 600
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.19232"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

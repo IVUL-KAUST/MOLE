@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "Russian Financial Statements Database",
+        "Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "HF Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "public datasets",
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation"
+        ],
+        "Description": "The Russian Financial Statements Database is an open, harmonized collection of annual unconsolidated financial statements of Russian firms in 2011-2023.",
+        "Volume": 56.6,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "European University at Saint Petersburg",
+            "The Institute for the Rule of Law"
+        ],
+        "Derived From": [
+            "Uniform State Register of Legal Entities",
+            "Federal State Statistics Service of Russia"
+        ],
+        "Paper Title": "Russian Financial Statements Database: A firm-level collection of the universe of financial statements",
+        "Paper Link": "https://doi.org/10.5281/zenodo.14622209",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "language modeling",
+            "named entity recognition"
+        ],
+        "Venue Title": "Zenodo",
+        "Venue Type": "preprint",
+        "Venue Name": "Zenodo",
+        "Authors": [
+            "Sergey Bondarkov",
+            "Viktor Ledenev",
+            "Dmitry Skougarevskiy"
+        ],
+        "Affiliations": [
+            "European University at Saint Petersburg"
+        ],
+        "Abstract": "The Russian Financial Statements Database is an open, harmonized collection of annual unconsolidated financial statements of the universe of Russian firms in 2011-2023. It features multiple end-user quality-of-life improvements such as data imputation, statement articulation, harmonization across data providers and formats, and data enrichment."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0040275,
+        "input_tokens": 25668,
+        "output_tokens": 443
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
