@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "https://github.com/STAIR-Lab-CIT/STAIR-captions",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A large-scale Japanese image caption dataset constructed with human annotations.",
+        "Volume": 0.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "STAIR-Lab-CIT"
+        ],
+        "Derived From": [],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://aclanthology.org/P17-4016/",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "instruction tuning"
+        ],
+        "Venue Title": "ACL",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Yuya Yoshikawa",
+            "Yutaro Shigeto",
+            "Akikazu Takeuchi"
+        ],
+        "Affiliations": [
+            "STAIR-Lab-CIT"
+        ],
+        "Abstract": "This paper presents STAIR Captions, a large-scale Japanese image caption dataset. The dataset consists of images paired with Japanese captions, constructed through human annotation. The dataset is intended to support research in image captioning and related tasks."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.3684210526315789
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0022395,
+        "input_tokens": 3353,
+        "output_tokens": 358
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

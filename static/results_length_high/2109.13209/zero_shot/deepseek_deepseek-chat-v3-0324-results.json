@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://etiquette.illuin.tech/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "FQuAD2.0 is a French Question Answering dataset extending FQuAD1.1 with 17,000+ unanswerable questions, annotated adversarially to be difficult to distinguish from answerable ones.",
+        "Volume": 80000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "FQuAD1.1"
+        ],
+        "Paper Title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+        "Paper Link": "https://arxiv.org/abs/2109.13209",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "EMNLP",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Quentin Heinrich",
+            "Gautier Viaud",
+            "Wacim Belblidia"
+        ],
+        "Affiliations": [
+            "Illuin Technology"
+        ],
+        "Abstract": "Question Answering (QA) is a central task in Natural Language Understanding (NLU), with numerous industrial applications such as searching information in large corpus, extracting information from conversations or form filling. Amongst this domain, Reading Comprehension has gained a lot of traction in the past years thanks to two main factors. First, the release of numerous datasets such as SQuAD1.1, SQuAD2.0, BoolQ, CoQA, Natural Questions, only to cite a few. Second, the progress in Language Modeling with the introduction of transformers model, leveraging self-supervised training on very large text corpus, followed by fine-tuning on a downstream task. This process has now become a de-facto standard for most of Natural Language Processing (NLP) tasks and also contributed to the progress of state-of-the-art for most of these tasks, including Question Answering."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.00760605,
+        "input_tokens": 14823,
+        "output_tokens": 505
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

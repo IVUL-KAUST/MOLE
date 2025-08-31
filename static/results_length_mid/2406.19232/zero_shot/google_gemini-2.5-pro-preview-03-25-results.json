@@ -1,0 +1,95 @@
+{
+    "metadata": {
+        "Name": "RuBLiMP",
+        "Link": "https://huggingface.co/datasets/RussianNLP/rublimp",
+        "HF Link": "https://huggingface.co/datasets/RussianNLP/rublimp",
+        "License": "Apache-2.0",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia",
+            "news articles",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A Russian benchmark of 45k minimal pairs of sentences that differ in grammaticality. The pairs isolate specific morphological, syntactic, or semantic phenomena and are created by applying linguistic perturbations to sentences from open corpora.",
+        "Volume": 45000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Edinburgh",
+            "HSE University",
+            "University of Groningen",
+            "Ghent University",
+            "SaluteDevices",
+            "Toloka AI",
+            "University of Oslo"
+        ],
+        "Derived From": [
+            "Wikipedia",
+            "Wikinews",
+            "Librusec"
+        ],
+        "Paper Title": "RuBLiMP: Russian Benchmark of Linguistic Minimal Pairs",
+        "Paper Link": "https://arxiv.org/abs/2402.19172",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "Linguistic acceptability"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Ekaterina Taktasheva",
+            "Maxim Bazhukov",
+            "Kirill Koncha",
+            "Alena Fenogenova",
+            "Ekaterina Artemova",
+            "Vladislav Mikhailov"
+        ],
+        "Affiliations": [
+            "University of Edinburgh",
+            "HSE University",
+            "University of Groningen",
+            "Ghent University",
+            "SaluteDevices",
+            "Toloka AI",
+            "University of Oslo"
+        ],
+        "Abstract": "Minimal pairs are a well-established approach to evaluating the grammatical knowledge of language models. However, existing resources for minimal pairs address a limited number of languages and lack diversity of language-specific grammatical phenomena. This paper introduces the Russian Benchmark of Linguistic Minimal Pairs (RuBLiMP), which includes 45k pairs of sentences that differ in grammaticality and isolate a morphological, syntactic, or semantic phenomenon. In contrast to existing benchmarks of linguistic minimal pairs, RuBLiMP is created by applying linguistic perturbations to automatically annotated sentences from open text corpora and decontaminating test data. We describe the data collection protocol and present the results of evaluating 25 language models in various scenarios. We find that the widely used LMs for Russian are sensitive to morphological and agreement-oriented contrasts, but fall behind humans on phenomena requiring the understanding of structural relations, negation, transitivity, and tense. RuBLiMP, the codebase, and other materials are publicly available."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9310344827586203,
+    "cost": {
+        "cost": 0.10429375,
+        "input_tokens": 51623,
+        "output_tokens": 1411
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.19232"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

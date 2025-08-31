@@ -1,0 +1,91 @@
+{
+    "metadata": {
+        "Name": "RuBLiMP",
+        "Link": "https://huggingface.co/datasets/RussianNLP/rublimp",
+        "HF Link": "https://huggingface.co/datasets/RussianNLP/rublimp",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "news articles",
+            "wikipedia",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "RuBLiMP is a benchmark of linguistic minimal pairs for Russian, covering 45 different phenomena across morphology, syntax, and semantics.",
+        "Volume": 45000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Edinburgh",
+            "HSE University",
+            "University of Groningen",
+            "Ghent University",
+            "SaluteDevices",
+            "Toloka AI",
+            "University of Oslo"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuBLiMP: Russian Benchmark of Linguistic Minimal Pairs",
+        "Paper Link": "https://arxiv.org/abs/2404.16229",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "Linguistic acceptability"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Ekaterina Taktasheva",
+            "Maxim Bazhukov",
+            "Kirill Koncha",
+            "Alena Fenogenova",
+            "Ekaterina Artemova",
+            "Vladislav Mikhailov"
+        ],
+        "Affiliations": [
+            "University of Edinburgh",
+            "HSE University",
+            "University of Groningen",
+            "Ghent University",
+            "SaluteDevices",
+            "Toloka AI",
+            "University of Oslo"
+        ],
+        "Abstract": "This paper introduces RuBLiMP, a large-scale benchmark of 45,000 minimal pairs for evaluating the grammatical knowledge of language models in Russian. RuBLiMP covers 45 different phenomena across morphology, syntax, and semantics, and is created by applying linguistic perturbations to automatically annotated sentences from open text corpora and decontaminating test data."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9310344827586203,
+    "cost": {
+        "cost": 0.0092692,
+        "input_tokens": 51623,
+        "output_tokens": 495
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.19232"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

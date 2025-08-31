@@ -1,0 +1,138 @@
+{
+    "metadata": {
+        "Name": "MEE",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 190592,
+                "Unit": "tokens",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 48001,
+                "Unit": "tokens",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 25463,
+                "Unit": "tokens",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 62971,
+                "Unit": "tokens",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 38469,
+                "Unit": "tokens",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 18797,
+                "Unit": "tokens",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 19174,
+                "Unit": "tokens",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 12508,
+                "Unit": "tokens",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "unknown",
+        "HF Link": "unknown",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "Polish",
+            "Turkish",
+            "Hindi",
+            "Japanese",
+            "Korean"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A large-scale multilingual event extraction dataset covering 8 languages with comprehensive annotation for entity mentions, event triggers, and arguments.",
+        "Volume": 415975.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Derived From": [
+            "ACE 2005"
+        ],
+        "Paper Title": "MEE: A Novel Multilingual Event Extraction Dataset",
+        "Paper Link": "unknown",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Upon-Request",
+        "Cost": "unknown",
+        "Test Split": true,
+        "Tasks": [
+            "named entity recognition",
+            "irony detection",
+            "offensive language detection"
+        ],
+        "Venue Title": "unknown",
+        "Venue Type": "conference",
+        "Venue Name": "unknown",
+        "Authors": [
+            "Amir Pouran Ben Veyseh",
+            "Javid Ebrahimi",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+        ],
+        "Affiliations": [
+            "Department of Computer Science, University of Oregon, Eugene, OR, USA",
+            "Adobe Research, Seattle, WA, USA"
+        ],
+        "Abstract": "Event Extraction (EE) is one of the fundamental tasks in Information Extraction (IE) that aims to recognize event mentions and their arguments (i.e., participants) from text. Due to its importance, extensive methods and resources have been developed for Event Extraction. However, one limitation of current research for EE involves the under-exploration for non-English languages in which the lack of high-quality multilingual EE datasets for model training and evaluation has been the main hindrance. To address this limitation, we propose a novel Multilingual Event Extraction dataset (MEE) that provides annotation for more than 50K event mentions in 8 typologically different languages. MEE comprehensively annotates data for entity mentions, event triggers and event arguments. We conduct extensive experiments on the proposed dataset to reveal challenges and opportunities for multilingual EE."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.2857142857142857,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0042635,
+        "input_tokens": 14592,
+        "output_tokens": 795
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05955"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

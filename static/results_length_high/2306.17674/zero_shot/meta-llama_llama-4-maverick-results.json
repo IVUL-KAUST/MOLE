@@ -1,0 +1,138 @@
+{
+    "metadata": {
+        "Name": "X-RiSAWOZ",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 100,
+                "Unit": "dialogues",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 100,
+                "Unit": "dialogues",
+                "Language": "French"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 100,
+                "Unit": "dialogues",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 100,
+                "Unit": "dialogues",
+                "Language": "Korean"
+            },
+            {
+                "Name": "English-Hindi",
+                "Volume": 100,
+                "Unit": "dialogues",
+                "Language": "English-Hindi"
+            }
+        ],
+        "Link": "https://github.com/stanford-oval/dialogues",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "French",
+            "Hindi",
+            "Korean"
+        ],
+        "Domain": [
+            "social media",
+            "news articles",
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A multilingual task-oriented dialogue benchmark",
+        "Volume": 18000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University",
+            "Tianjin University"
+        ],
+        "Derived From": [
+            "RiSAWOZ"
+        ],
+        "Paper Title": "X-RiSAWOZ: High-Quality End-to-End Multilingual Dialogue Datasets and Few-shot Agents",
+        "Paper Link": "https://arxiv.org/abs/2303.10757",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "dialect identification",
+            "text generation"
+        ],
+        "Venue Title": "ACL 2023",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Mehrad Moradshahi",
+            "Tianhao Shen",
+            "Kalika Bali",
+            "Monojit Choudhury",
+            "Ga\u00ebl de Chalendar",
+            "Anmol Goel",
+            "Sungkyun Kim",
+            "Prashant Kodali",
+            "Ponnurangam Kumaraguru",
+            "Nasredine Semmar",
+            "Sina J. Semnani",
+            "Jiwon Seo",
+            "Vivek Seshadri",
+            "Manish Shrivastava",
+            "Michael Sun",
+            "Aditya Yadavalli",
+            "Chaobin You",
+            "Deyi Xiong",
+            "Monica S. Lam"
+        ],
+        "Affiliations": [
+            "Stanford University",
+            "Tianjin University",
+            "Microsoft",
+            "Universit\u00e9 Paris-Saclay",
+            "IIIT Hyderabad",
+            "Hanyang University",
+            "Karya Inc."
+        ],
+        "Abstract": "This paper presents a solution for balancing the trade-offs between standard machine translation and human post-editing. By standardizing and establishing best practices for ``translation with manual post-editing'', and releasing associated toolkits, post-editing can be made faster, more efficient, and cost-effective. We use our methodology to create X-RiSAWOZ, a new end-to-end, high-quality, and large multi-domain multilingual dialogue dataset, covering 5 diverse languages and 1 code-mixed language. We also provide strong baselines for zero/few-shot creation of dialogue agents via cross-lingual transfer. In the few-shot setting, our agents achieve between 60.7-84.6% on DST, 38.0-70.5% on DA, and 28.5-46.4% on RG subtasks across different languages."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.00478265,
+        "input_tokens": 30449,
+        "output_tokens": 761
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2306.17674"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

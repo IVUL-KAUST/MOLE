@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "JAFFE",
+        "Link": "https://zenodo.org/record/3451524",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 1998,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A dataset of facial expression images posed by Japanese women, accompanied by semantic ratings on nouns describing the expressions.",
+        "Volume": 213.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Michael J. Lyons",
+            "Miyuki Kamachi",
+            "Jiro Gyoba"
+        ],
+        "Derived From": [],
+        "Paper Title": "Excavating AI Re-excavated: Debunking a Fallacious Account of the JAFFE Dataset",
+        "Paper Link": "https://doi.org/10.1007/s00146-023-01663-1",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "zenodo",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "AI & Society",
+        "Venue Type": "journal",
+        "Venue Name": "AI & Society",
+        "Authors": [
+            "Michael J. Lyons"
+        ],
+        "Affiliations": [
+            "Ritsumeikan University"
+        ],
+        "Abstract": "The paper discusses the creation and misuse of the JAFFE dataset, a set of facial expression images used in research. It refutes fallacious statements made about the dataset in the essay 'Excavating AI: The Politics of Images in Machine Learning Training Sets' by Kate Crawford and Trevor Paglen. The paper provides a detailed account of the dataset's creation, its intended use, and the cultural specificity of the expressions it contains."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8947368421052632
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00274397,
+        "input_tokens": 14675,
+        "output_tokens": 405
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2107.13998"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

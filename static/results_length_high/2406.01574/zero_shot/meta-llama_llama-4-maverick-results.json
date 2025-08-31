@@ -1,0 +1,98 @@
+{
+    "metadata": {
+        "Name": "MMLU-Pro",
+        "Link": "https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro",
+        "HF Link": "https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "en",
+        "Domain": [
+            "web pages",
+            "captions",
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "MMLU-Pro is an enhanced dataset designed to extend the MMLU benchmark with more challenging, reasoning-focused questions and expanded choice sets.",
+        "Volume": 12.032,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Waterloo",
+            "University of Toronto",
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [
+            "MMLU",
+            "STEM Website",
+            "TheoremQA",
+            "SciBench"
+        ],
+        "Paper Title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2406.18572",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "ArXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Yubo Wang",
+            "Xueguang Ma",
+            "Ge Zhang",
+            "Yuansheng Ni",
+            "Abhranil Chandra",
+            "Shiguang Guo",
+            "Weiming Ren",
+            "Aaran Arulraj",
+            "Xuan He",
+            "Ziyan Jiang",
+            "Tianle Li",
+            "Max Ku",
+            "Kai Wang",
+            "Alex Zhuang",
+            "Rongqi Fan",
+            "Xiang Yue",
+            "Wenhu Chen"
+        ],
+        "Affiliations": [
+            "University of Waterloo",
+            "University of Toronto",
+            "Carnegie Mellon University"
+        ],
+        "Abstract": "This paper introduces MMLU-Pro, an enhanced dataset designed to extend the mostly knowledge-driven MMLU benchmark by integrating more challenging, reasoning-focused questions and expanding the choice set from four to ten options. MMLU-Pro eliminates trivial and noisy questions in MMLU. Experimental results show that MMLU-Pro not only raises the challenge but also demonstrates greater stability under varying prompts."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9310344827586203,
+    "cost": {
+        "cost": 0.0054246,
+        "input_tokens": 35256,
+        "output_tokens": 541
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2406.01574"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

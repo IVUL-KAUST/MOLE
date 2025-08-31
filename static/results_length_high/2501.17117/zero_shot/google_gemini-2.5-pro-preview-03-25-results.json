@@ -1,0 +1,82 @@
+{
+    "metadata": {
+        "Name": "HistoiresMorales",
+        "Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "HF Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "License": "Apache-2.0",
+        "Year": 2024,
+        "Language": "multilingual",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "HistoiresMorales is a French dataset for assessing moral alignment, derived from the English MoralStories dataset. It was created through translation using GPT-3.5 and refined by native French speakers for grammatical accuracy and cultural adaptation. The dataset contains 12,000 short narratives describing social situations, each with a moral and an immoral continuation, and is designed to evaluate how language models handle moral reasoning in French.",
+        "Volume": 12000.0,
+        "Unit": "documents",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Laboratoire Hubert Curien",
+            "Universit\u00e9 Lumi\u00e8re Lyon 2"
+        ],
+        "Derived From": [
+            "MoralStories"
+        ],
+        "Paper Title": "HistoiresMorales: A French Dataset for Assessing Moral Alignment",
+        "Paper Link": "https://aclanthology.org/2024.lrec-main.570/",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "multiple choice question answering"
+        ],
+        "Venue Title": "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+        "Venue Type": "conference",
+        "Venue Name": "Joint International Conference on Computational Linguistics, Language Resources and Evaluation",
+        "Authors": [
+            "Thibaud Leteno",
+            "Irina Proskurina",
+            "Antoine Gourru",
+            "Julien Velcin",
+            "Charlotte Laclau",
+            "Guillaume Metzler",
+            "Christophe Gravier"
+        ],
+        "Affiliations": [
+            "Laboratoire Hubert Curien, UMR CNRS 5516, Saint-Etienne, France",
+            "Universit\u00e9 Lumi\u00e8re Lyon 2, Universit\u00e9 Claude Bernard Lyon 1, ERIC, 69007, Lyon, France",
+            "T\u00e9l\u00e9com Paris, Institut Polytechnique de Paris, Paris, France"
+        ],
+        "Abstract": "Aligning language models with human values is crucial, especially as they become more integrated into everyday life. While models are often adapted to user preferences, it is equally important to ensure they align with moral norms and behaviours in real-world social situations. Despite significant progress in languages like English and Chinese, French has seen little attention in this area, leaving a gap in understanding how LLMs handle moral reasoning in this language. To address this gap, we introduce textsc{HistoiresMorales}, a French dataset derived from textsc{MoralStories}, created through translation and subsequently refined with the assistance of native speakers to guarantee grammatical accuracy and adaptation to the French cultural context. We also rely on annotations of the moral values within the dataset to ensure their alignment with French norms. textsc{HistoiresMorales} covers a wide range of social situations, including differences in tipping practices, expressions of honesty in relationships, and responsibilities toward animals. To foster future research, we also conduct preliminary experiments on the alignment of multilingual models on French and English data and the robustness of the alignment. We find that while LLMs are generally aligned with human moral norms by default, they can be easily influenced with user-preference optimization for both moral and immoral data."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.09102,
+        "input_tokens": 27518,
+        "output_tokens": 2132
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.17117"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

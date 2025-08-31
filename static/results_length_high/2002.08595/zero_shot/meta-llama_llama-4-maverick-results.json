@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "KaoKore",
+        "Link": "https://github.com/rois-codh/kaokore",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "news articles"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A dataset of faces extracted from pre-modern Japanese artwork",
+        "Volume": 5552.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "ROIS-DS Center for Open Data in the Humanities"
+        ],
+        "Derived From": [
+            "Collection of Facial Expressions"
+        ],
+        "Paper Title": "KaoKore: A Pre-modern Japanese Art Facial Expression Dataset",
+        "Paper Link": "https://arxiv.org/abs/2108.04667",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "meter classification"
+        ],
+        "Venue Title": "International Conference on Computational Creativity",
+        "Venue Type": "conference",
+        "Venue Name": "ICCC",
+        "Authors": [
+            "Yingtao Tian",
+            "Chikahiko Suzuki",
+            "Tarin Clanuwat",
+            "Mikel Bober-Irizar",
+            "Alex Lamb",
+            "Asanobu Kitamoto"
+        ],
+        "Affiliations": [
+            "Google Brain",
+            "ROIS-DS Center for Open Data in the Humanities",
+            "NII",
+            "University of Cambridge",
+            "MILA",
+            "Universit\u00e9 de Montr\u00e9al"
+        ],
+        "Abstract": "This paper introduces KaoKore, a dataset of faces extracted from pre-modern Japanese artwork. The dataset is designed to facilitate research in art history and machine learning, with applications in image classification and creative modeling. The dataset contains 5552 images, each annotated with gender and social status labels."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00198492,
+        "input_tokens": 10089,
+        "output_tokens": 427
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.08595"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

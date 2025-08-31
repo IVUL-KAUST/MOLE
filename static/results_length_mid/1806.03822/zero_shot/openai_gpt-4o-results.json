@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "SQuAD 2.0",
+        "Link": "https://bit.ly/2rDHBgY",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "SQuAD 2.0 is a challenging, diverse, and large-scale dataset that combines answerable questions from SQuAD 1.1 with over 50,000 unanswerable questions written adversarially by crowdworkers. It forces models to understand when a question cannot be answered given the context.",
+        "Volume": 130319.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "SQuAD 1.1"
+        ],
+        "Paper Title": "Know What You Don't Know: Unanswerable Questions for SQuAD",
+        "Paper Link": "https://bit.ly/2rDHBgY",
+        "Tokenized": false,
+        "Host": "CodaLab",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "natural language inference"
+        ],
+        "Venue Title": "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)",
+        "Venue Type": "conference",
+        "Venue Name": "ACL",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Robin Jia",
+            "Percy Liang"
+        ],
+        "Affiliations": [
+            "Computer Science Department, Stanford University"
+        ],
+        "Abstract": "We present SQuAD 2.0, a new dataset that combines answerable questions from the previous version of SQuAD (SQuAD 1.1) with 53,775 new, unanswerable questions about the same paragraphs. Crowdworkers crafted these questions so that they are relevant to the paragraph, and the paragraph contains a plausible answer. We confirm that SQuAD 2.0 is both challenging and high-quality. A state-of-the-art model achieves only 66.3% F1 score when trained and tested on SQuAD 2.0, whereas human accuracy is 89.5% F1, a full 23.2 points higher. We also show that our unanswerable questions are more challenging than ones created automatically, either via distant supervision or a rule-based method. We release SQuAD 2.0 to the public as a new version of SQuAD, and make it the primary benchmark on the official SQuAD leaderboard. We are optimistic that this new dataset will encourage the development of reading comprehension systems that know what they don't know."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.042605,
+        "input_tokens": 14518,
+        "output_tokens": 634
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1806.03822"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

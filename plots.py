@@ -44,15 +44,17 @@ def plot_by_length():
         if model_name in non_browsing_models:
             continue
         arxiv_id = get_id_from_path(json_file)
-        schema = get_schema_from_path(json_file)
+        # schema = get_schema_from_path(json_file)
         if arxiv_id not in ids:
             continue
         else:
             found_ids.append(arxiv_id)
         if model_name not in metric_results:
             metric_results[model_name] = []
-        metric_results[model_name].append(evaluate_lengths(results["metadata"], schema = schema, columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]))
-    
+        # metric_results[model_name].append(evaluate_lengths(results["metadata"], schema = schema, columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]))
+        if "length_forcing" not in results:
+            continue
+        metric_results[model_name].append(results["length_forcing"])
     final_results = {}
 
     for model_name in metric_results:
@@ -436,8 +438,11 @@ def plot_fewshot():
                 pred_metadata = json.load(open(json_file))['metadata']
             else:
                 few_shot_path = json_file.replace( f'zero_shot', f'few_shot/{i}').replace("results_latex", "results_fewshot")
+                new_few_shot_path = json_file.replace( f'zero_shot', f'few_shot/{i}')
                 if os.path.exists(few_shot_path):
                     pred_metadata = json.load(open(few_shot_path))['metadata']
+                elif os.path.exists(new_few_shot_path):
+                    pred_metadata = json.load(open(new_few_shot_path))['metadata']
                 else:
                     continue
 

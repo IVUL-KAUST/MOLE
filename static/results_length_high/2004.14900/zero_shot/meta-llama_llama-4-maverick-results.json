@@ -1,0 +1,120 @@
+{
+    "metadata": {
+        "Name": "MLSUM",
+        "Subsets": [
+            {
+                "Name": "French",
+                "Volume": 424763,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 242982,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 290645,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 27063,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 273617,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            }
+        ],
+        "Link": "https://github.com/recitalAI/MLSUM",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "French",
+            "German",
+            "Spanish",
+            "Russian",
+            "Turkish"
+        ],
+        "Domain": [
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A large-scale multilingual summarization dataset containing news articles from various online newspapers.",
+        "Volume": 1.5,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Thomas Scialom",
+            "Paul-Alexis Dray",
+            "Sylvain Lamprier",
+            "Benjamin Piwowarski",
+            "Jacopo Staiano"
+        ],
+        "Derived From": [
+            "CNN/Daily Mail"
+        ],
+        "Paper Title": "MLSUM: The Multilingual Summarization Corpus",
+        "Paper Link": "https://arxiv.org/",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "ACL 2020",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Thomas Scialom",
+            "Paul-Alexis Dray",
+            "Sylvain Lamprier",
+            "Benjamin Piwowarski",
+            "Jacopo Staiano"
+        ],
+        "Affiliations": [
+            "Sorbonne Universit\u00e9",
+            "CNRS",
+            "reciTAL"
+        ],
+        "Abstract": "This paper presents MLSUM, a large-scale multilingual summarization dataset. MLSUM contains over 1.5 million article-summary pairs in five different languages: French, German, Spanish, Russian, and Turkish. The dataset is built from online newspapers and is intended for research in multilingual summarization."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0027294,
+        "input_tokens": 16126,
+        "output_tokens": 645
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2004.14900"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

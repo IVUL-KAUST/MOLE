@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "STAIR Captions",
+        "Link": "",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "jp",
+        "Domain": [
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A large-scale Japanese image caption dataset.",
+        "Volume": 0.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "STAIR Lab"
+        ],
+        "Derived From": [],
+        "Paper Title": "STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset",
+        "Paper Link": "https://arxiv.org/abs/1705.00823",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "instruction tuning"
+        ],
+        "Venue Title": "ACL 2017",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Yuya Yoshikawa",
+            "Yutaro Shigeto",
+            "Akikazu Takeuchi"
+        ],
+        "Affiliations": [
+            "STAIR Lab"
+        ],
+        "Abstract": "The paper presents STAIR Captions, a large-scale Japanese image caption dataset. The dataset is manually curated and aims to facilitate research in image captioning for the Japanese language."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.47368421052631576
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.00751,
+        "input_tokens": 3353,
+        "output_tokens": 313
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2017",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1705.00823"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

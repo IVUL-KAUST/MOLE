@@ -1,0 +1,64 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "https://huggingface.co/datasets/lambada",
+        "HF Link": "https://huggingface.co/datasets/lambada",
+        "License": "CC BY 4.0",
+        "Year": 2019,
+        "Language": "en",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "LAMBADA is a challenging dataset for evaluating language models' ability to perform long-range dependency modeling. It consists of sentences where the last word is missing, and the task is to predict that word given the preceding context.",
+        "Volume": 6888.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Language Models are Unsupervised Multitask Learners",
+        "Paper Link": "https://arxiv.org/abs/1901.08746",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Upon-Request",
+        "Cost": "Free",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "ICLR",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "Language models (LMs) have recently shown remarkable performance on a wide range of natural language processing tasks. However, their ability to perform long-range dependency modeling remains an open question. In this paper, we introduce LAMBADA, a challenging dataset for evaluating LMs' ability to perform long-range dependency modeling. The dataset consists of sentences where the last word is missing, and the task is to predict that word given the preceding context. We show that LMs struggle to perform well on LAMBADA, even when trained on large amounts of text. This suggests that LMs may not be able to capture long-range dependencies as effectively as humans."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.2222222222222222
+    },
+    "length_forcing": 0.9310344827586203,
+    "cost": {
+        "cost": 0.0011771264052,
+        "input_tokens": 15084,
+        "output_tokens": 507
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

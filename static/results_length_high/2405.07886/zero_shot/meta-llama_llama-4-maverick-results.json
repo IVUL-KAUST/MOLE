@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "Russian-Language Multimodal Dataset for Automatic Summarization of Scientific Papers",
+        "Link": "https://github.com/iis-research-team/summarization-dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "news articles",
+            "books",
+            "wikipedia",
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A multimodal dataset of Russian-language scientific papers for automatic summarization",
+        "Volume": 1.07,
+        "Unit": "documents",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Novosibirsk State University",
+            "A.P. Ershov Institute of Informatics Systems"
+        ],
+        "Derived From": [],
+        "Paper Title": "Russian-Language Multimodal Dataset for Automatic Summarization of Scientific Papers",
+        "Paper Link": "https://arxiv.org/abs/2405.07886",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Tsanda Alena",
+            "Bruches Elena"
+        ],
+        "Affiliations": [
+            "Novosibirsk State University",
+            "A.P. Ershov Institute of Informatics Systems, Russia"
+        ],
+        "Abstract": "The paper discusses the creation of a multimodal dataset of Russian-language scientific papers and testing of existing language models for the task of automatic text summarization. A feature of the dataset is its multimodal data, which includes texts, tables and figures. The paper presents the results of experiments with two language models: Gigachat from SBER and YandexGPT from Yandex. The dataset consists of 420 papers and is publicly available on https://github.com/iis-research-team/summarization-dataset."
+    },
+    "validation": {
+        "ACCESSABILITY": 1.0,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9310344827586203,
+    "cost": {
+        "cost": 0.0020103,
+        "input_tokens": 12234,
+        "output_tokens": 437
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2405.07886"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

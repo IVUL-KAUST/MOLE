@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "Russian Financial Statements Database",
+        "Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "HF Link": "https://huggingface.co/datasets/irlspbru/RFSD",
+        "License": "unknown",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "social media",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "LLM generated",
+            "manual curation"
+        ],
+        "Description": "A dataset containing financial statements of Russian firms from 2011 to 2023",
+        "Volume": 56.6,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Federal Tax Service of Russia",
+            "Federal State Statistics Service of Russia"
+        ],
+        "Derived From": [
+            "Uniform State Register of Legal Entities",
+            "Statistical Register of Economic Entities"
+        ],
+        "Paper Title": "Russian Financial Statements Database: A firm-level collection of the universe of financial statements",
+        "Paper Link": "https://doi.org/10.5281/zenodo.14622209",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": false,
+        "Tasks": [
+            "morphological analysis",
+            "information retrieval"
+        ],
+        "Venue Title": "Zenodo",
+        "Venue Type": "preprint",
+        "Venue Name": "Zenodo",
+        "Authors": [
+            "Sergey Bondarkov",
+            "Viktor Ledenev",
+            "Dmitry Skougarevskiy"
+        ],
+        "Affiliations": [
+            "European University at Saint Petersburg"
+        ],
+        "Abstract": "The Russian Financial Statements Database (RFSD) is an open, harmonized collection of annual unconsolidated financial statements of Russian firms from 2011 to 2023. It includes data from various financial statements and provides extensive quality-of-life improvements for end-users."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9310344827586203,
+    "cost": {
+        "cost": 0.00383315,
+        "input_tokens": 25321,
+        "output_tokens": 424
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.05841"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

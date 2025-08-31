@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "Name": "RuBia",
+        "Link": "http://github.com/vergrig/RuBia-Dataset",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2024,
+        "Language": "ru",
+        "Domain": [
+            "social media",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "RuBia is a Russian language bias detection dataset designed to test if a large language model's behavior is fair. It contains nearly 2,000 unique sentence pairs spread over 19 subdomains.",
+        "Volume": 1989.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Queen's University",
+            "Higher School of Economics",
+            "Wildberries",
+            "Linguistic Convergence Laboratory",
+            "Toloka AI"
+        ],
+        "Derived From": [],
+        "Paper Title": "RuBia: A Russian Language Bias Detection Dataset",
+        "Paper Link": "https://arxiv.org/abs/2403.17553",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "irony detection",
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Veronika Grigoreva",
+            "Anastasiia Ivanova",
+            "Ilseyar Alimova",
+            "Ekaterina Artemova"
+        ],
+        "Affiliations": [
+            "Queen's University",
+            "Higher School of Economics",
+            "Wildberries",
+            "Linguistic Convergence Laboratory",
+            "Toloka AI"
+        ],
+        "Abstract": "Large language models tend to learn social and cultural biases present in the raw pre-training data. This work presents RuBia, a bias detection dataset specifically designed for the Russian language. The dataset is divided into 4 domains: gender, nationality, socio-economic status, and diverse, each further divided into multiple fine-grained subdomains. Every example consists of two sentences, with the first reinforcing a potentially harmful stereotype or trope and the second contradicting it. The dataset is intended for diagnostic evaluation of large language models."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.003316,
+        "input_tokens": 15784,
+        "output_tokens": 471
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.17553"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

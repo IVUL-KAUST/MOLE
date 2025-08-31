@@ -1,0 +1,134 @@
+{
+    "metadata": {
+        "Name": "SEAHORSE",
+        "Subsets": [
+            {
+                "Name": "German",
+                "Volume": 14591,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "English",
+                "Volume": 22339,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 14749,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 14542,
+                "Unit": "sentences",
+                "Language": "Russian"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 15418,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 15006,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            }
+        ],
+        "Link": "https://goo.gle/seahorse",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": [
+            "German",
+            "English",
+            "Spanish",
+            "Russian",
+            "Turkish",
+            "Vietnamese"
+        ],
+        "Domain": [
+            "news articles",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A large-scale, multilingual dataset for summarization evaluation, consisting of 96K summaries with human ratings along 6 quality dimensions: comprehensibility, repetition, grammar, attribution, main ideas, and conciseness. It covers 6 languages, 9 systems, and 4 source datasets.",
+        "Volume": 96645.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google DeepMind",
+            "Google Research"
+        ],
+        "Derived From": [
+            "XSum",
+            "XL-Sum",
+            "MLSum",
+            "WikiLingua"
+        ],
+        "Paper Title": "SEAHORSE: A Multilingual, Multifaceted Dataset for Summarization Evaluation",
+        "Paper Link": "https://aclanthology.org/2023.emnlp-main.818",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "natural language inference",
+            "Linguistic acceptability"
+        ],
+        "Venue Title": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Elizabeth Clark",
+            "Shruti Rijhwani",
+            "Sebastian Gehrmann",
+            "Joshua Maynez",
+            "Roee Aharoni",
+            "Vitaly Nikolaev",
+            "Thibault Sellam",
+            "Aditya Siddhant",
+            "Dipanjan Das",
+            "Ankur P. Parikh"
+        ],
+        "Affiliations": [
+            "Google DeepMind",
+            "Google Research"
+        ],
+        "Abstract": "Reliable automatic evaluation of summarization systems is challenging due to the multifaceted and subjective nature of the task. This is especially the case for languages other than English, where human evaluations are scarce. In this work, we introduce SEAHORSE, a dataset for multilingual, multifaceted summarization evaluation. SEAHORSE consists of 96K summaries with human ratings along 6 dimensions of text quality: comprehensibility, repetition, grammar, attribution, main ideas, and conciseness. SEAHORSE covers 6 languages, 9 systems (including the reference text), and 4 summarization datasets. As a result of its size and scope, SEAHORSE can serve both as a benchmark to evaluate learnt metrics, as well as a large-scale resource for training such metrics. We show that metrics trained with SEAHORSE achieve strong performance on two out-of-domain meta-evaluation benchmarks: TRUE and mFACE. We make the SEAHORSE dataset and metrics publicly available for future research on multilingual and multifaceted summarization evaluation."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.42857142857142855,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.09050375,
+        "input_tokens": 24269,
+        "output_tokens": 2343
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro-preview-03-25",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2305.13194"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

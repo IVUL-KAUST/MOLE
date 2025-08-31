@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "Japanese Fake News Dataset",
+        "Link": "https://hkefka385.github.io/dataset/fakenews-japanese/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "social media",
+            "news articles"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A dataset for fake news detection in Japanese, annotated with fine-grained labels for intent, harmfulness, and other aspects.",
+        "Volume": 471446.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "SANKEN Osaka University",
+            "NARA Institute of Science and Technology"
+        ],
+        "Derived From": [
+            "Fact Check Initiative Japan"
+        ],
+        "Paper Title": "Annotation-Scheme Reconstruction for 'Fake News' and Japanese Fake News Dataset",
+        "Paper Link": "https://lrec2022.org/",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fake news detection"
+        ],
+        "Venue Title": "LREC 2022",
+        "Venue Type": "conference",
+        "Venue Name": "Language Resources and Evaluation Conference",
+        "Authors": [
+            "Taichi Murayama",
+            "Shohei Hisada",
+            "Makoto Uehara",
+            "Shoko Wakamiya",
+            "Eiji Aramaki"
+        ],
+        "Affiliations": [
+            "SANKEN Osaka University",
+            "NARA Institute of Science and Technology"
+        ],
+        "Abstract": "This paper proposes a novel annotation scheme for fake news detection and constructs the first Japanese fake news dataset. The dataset is annotated with fine-grained labels for intent, harmfulness, and other aspects, providing a valuable resource for understanding fake news in Japan."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9333333333333332,
+    "cost": {
+        "cost": 0.0028342,
+        "input_tokens": 14027,
+        "output_tokens": 416
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.02718"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

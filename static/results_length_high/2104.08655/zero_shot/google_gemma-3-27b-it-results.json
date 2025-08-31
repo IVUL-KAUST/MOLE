@@ -1,0 +1,68 @@
+{
+    "metadata": {
+        "Name": "The dataset is not explicitly named in the provided text.",
+        "Subsets": [],
+        "Link": "Not available in the provided text.",
+        "HF Link": "Not available in the provided text.",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2025,
+        "Language": [
+            "Portuguese"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "The text describes a series of experiments and evaluations of a model on different languages (English, French, Spanish, German). It involves performance metrics like AUC and F1 scores. The dataset appears to be used for a classification or prediction task.",
+        "Volume": 0.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Not available in the provided text.",
+        "Paper Link": "Not available in the provided text.",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "Not available in the provided text.",
+        "Test Split": false,
+        "Tasks": [
+            "topic classification",
+            "speech recognition"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": ""
+    },
+    "validation": {
+        "DIVERSITY": 0.0,
+        "ACCESSABILITY": 0.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.21052631578947367
+    },
+    "length_forcing": 0.7333333333333333,
+    "cost": {
+        "cost": 0.001019906352,
+        "input_tokens": 12423,
+        "output_tokens": 391
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2104.08655"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
