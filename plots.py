@@ -196,7 +196,7 @@ def plot_by_year():
         # if gold_metadata["Year"] == 2025:
         #     print(arxiv_id)
         metric_results[model_name].append(
-            [gold_metadata["Year"], scores["AVERAGE"]]
+            [gold_metadata["Year"], scores["f1"]]
         )
 
     final_results = {}
@@ -304,7 +304,7 @@ def plot_langs():
                 gold_metadata, pred_metadata,
                 schema = lang
             )
-            scores = [scores["AVERAGE"]]
+            scores = [scores["f1"]]
             if use_annotations_paper:
                 average_ignore_mistakes = evaluate_metadata(
                     gold_metadata, pred_metadata, use_annotations_paper=True, schema=lang
@@ -385,7 +385,7 @@ def plot_context_length():
                 gold_metadata, pred_metadata,
                 schema = get_schema_from_path(json_file)
             )
-            scores = [scores["AVERAGE"]]
+            scores = [scores["f1"]]
             if use_annotations_paper:
                 average_ignore_mistakes = evaluate_metadata(
                     gold_metadata, pred_metadata, use_annotations_paper=True
@@ -451,7 +451,7 @@ def plot_fewshot():
                 schema = get_schema_from_path(json_file),
                 return_columns = True
             )
-            scores = [scores["AVERAGE"]]
+            scores = [scores["f1"]]
             if use_annotations_paper:
                 average_ignore_mistakes = evaluate_metadata(
                     gold_metadata, pred_metadata, use_annotations_paper=True

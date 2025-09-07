@@ -13,7 +13,7 @@ from base64 import b64decode
 from datetime import date
 from functools import wraps
 from glob import glob
-
+import numpy as np
 # Third-party imports
 import pandas as pd
 import requests
@@ -310,9 +310,10 @@ def get_schema_from_path(json_path):
         raise Exception(f"Schema not found for {id}")
 
 def evaluate_metadata(
-    gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar", return_columns=False
+    gold_metadata, pred_metadata, use_annotations_paper=False, schema="ar", return_columns=True
 ):
-    evaluation_subsets = schemata[schema]["evaluation_subsets"]       
+    evaluation_subsets = schemata[schema]["evaluation_subsets"]
+    annotations_from_paper = gold_metadata["annotations_from_paper"]       
     results = {c: 0 for c in evaluation_subsets}
 
     predictions = get_predictions(
@@ -330,6 +331,13 @@ def evaluate_metadata(
                     results[column] = predictions[column]
         results[subset] = results[subset] / len(evaluation_subsets[subset])
     results["AVERAGE"] = sum(predictions.values()) / len(predictions)
+    attributes = schemata[schema]["validation_columns"]
+    precision = np.mean([results[c] for c in attributes if c in results])
+    recall = np.mean([results[c] for c in attributes if annotations_from_paper[c] == 1])
+    f1 = 2 * precision * recall / (precision + recall)
+    results["f1"] = f1
+    results["precision"] = precision
+    results["recall"] = recall
     return results
 
 def get_title_from_link(link):
