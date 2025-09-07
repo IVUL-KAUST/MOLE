@@ -4,7 +4,7 @@ import json
 import argparse
 from constants import eval_datasets_ids, non_browsing_models, schemata, open_router_costs
 import numpy as np
-from plot_utils import print_table
+from plot_utils import print_table, print_latex_table
 from utils import get_predictions, evaluate_metadata, get_metadata_from_path, get_id_from_path, get_schema_from_path, evaluate_lengths
 import os
 args = argparse.ArgumentParser()
@@ -287,7 +287,7 @@ def remap_names(model_name):
 def plot_langs():
     json_files_by_language = get_jsons_by_lang()
     langs = list(json_files_by_language.keys())
-    headers = [ "Model"] + langs  + ["Average"] + ["Weighted Average"]
+    headers = [ "Model"] + langs  + ["Average"]
     metric_results = {}
     use_annotations_paper = args.use_annotations_paper
     ignore_length = args.ignore_length
@@ -340,13 +340,20 @@ def plot_langs():
             else:
                 per_model_results.append(0)
         weighted_average /= total_length
-        final_results[model_name]["Weighted Average"] = weighted_average
         
         assert len(per_model_results) == len(langs)
-        results.append([remap_names(model_name)] +per_model_results+ [np.mean(per_model_results, axis=0).tolist()] + [final_results[model_name]["Weighted Average"]])
+        results.append([remap_names(model_name)] +per_model_results+ [np.mean(per_model_results, axis=0).tolist()])
     # for r in results:
     #     assert(len(r)) == len(langs)+2, r
     print_table(results, headers, format = False)
+    
+    # Generate LaTeX table for Overleaf
+    caption = f"Performance comparison across languages ({args.eval} set)"
+    if use_annotations_paper:
+        caption += " with annotations from paper"
+    label = f"tab:lang_comparison_{args.eval}"
+    print_latex_table(results, headers, caption=caption, label=label)
+    
     if use_annotations_paper:
         print(
             "* Computed average by considering metadata exctracted from outside the paper."
@@ -532,6 +539,14 @@ def plot_table_by_other_metrics():
         )
 
     print_table(results, headers, format = True)
+    
+    # Generate LaTeX table for Overleaf
+    caption = f"Performance metrics (Precision, Recall, F1) ({args.eval} set)"
+    if use_annotations_paper:
+        caption += " with annotations from paper"
+    label = f"tab:metrics_{args.eval}"
+    print_latex_table(results, headers, caption=caption, label=label)
+    
     if use_annotations_paper:
         print(
             "* Computed average by considering metadata exctracted from outside the paper."
@@ -597,6 +612,14 @@ def plot_table():
         )
 
     print_table(results, headers, format = True)
+    
+    # Generate LaTeX table for Overleaf
+    caption = f"Performance by {args.group_by} ({args.eval} set)"
+    if use_annotations_paper:
+        caption += " with annotations from paper"
+    label = f"tab:{args.group_by}_{args.eval}"
+    print_latex_table(results, headers, caption=caption, label=label)
+    
     if use_annotations_paper:
         print(
             "* Computed average by considering metadata exctracted from outside the paper."
