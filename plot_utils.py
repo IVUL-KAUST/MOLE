@@ -113,9 +113,9 @@ def print_latex_table(results, headers, title="", caption="", label=""):
     for row in sorted_results:
         latex_row = []
         for i, cell in enumerate(row):
-            if i == 0:  # Model name - escape special characters
+            if i == 0:  # Model name - escape special characters and make bold
                 clean_cell = str(cell).replace("_", "\\_").replace("&", "\\&").replace("%", "\\%")
-                latex_row.append(clean_cell)
+                latex_row.append(f"\\textbf{{{clean_cell}}}")
             else:  # Numeric values
                 if isinstance(cell, (int, float)):
                     # Get the column values for comparison

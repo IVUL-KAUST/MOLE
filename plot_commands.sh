@@ -9,8 +9,6 @@ uv run plots.py --eval test --schema all  --group_by language --type context_len
 
 # length
 uv run plots.py --eval test --schema all --length --results_path static/results_latex --non_browsing
-uv run plots.py --eval test --schema all --length --results_path static/results_length_mid --non_browsing
-uv run plots.py --eval test --schema all --length --results_path static/results_length_high --non_browsing
 
 # results each year
 uv run plots.py --eval test --schema all  --year  --non_browsing

@@ -54,7 +54,9 @@ def plot_by_length():
         # metric_results[model_name].append(evaluate_lengths(results["metadata"], schema = schema, columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]))
         if "length_forcing" not in results:
             continue
-        metric_results[model_name].append(results["length_forcing"])
+        results_mid = json.load(open(json_file.replace("results_latex", "results_length_mid")))
+        results_high = json.load(open(json_file.replace("results_latex", "results_length_high")))
+        metric_results[model_name].append([results["length_forcing"], results_mid["length_forcing"], results_high["length_forcing"]])
     final_results = {}
 
     for model_name in metric_results:
@@ -63,9 +65,9 @@ def plot_by_length():
     results = []
     for model_name in final_results:
         results.append(
-            [model_name] + [(np.mean(final_results[model_name], axis=0)).tolist()]
+            [remap_names(model_name)] + (np.mean(final_results[model_name], axis=0)).tolist()
         )
-    headers = ["MODEL", "LENGTH"]
+    headers = ["MODEL", "LENGTH", "LENGTH MID", "LENGTH HIGH"]
     print_table(results, headers)
     
 def get_all_ids():
@@ -421,6 +423,74 @@ def plot_context_length():
             "* Computed average by considering metadata exctracted from outside the paper."
         )
 
+def plot_browsing():
+    headers = [ "MODEL"] + ["Non Browsing", "Browsing"]
+    ids = get_all_ids()
+    metric_results = {}
+    use_annotations_paper = args.use_annotations_paper
+
+    for json_file in json_files:
+        results = json.load(open(json_file))
+        arxiv_id = get_id_from_path(json_file)
+        if arxiv_id not in ids:
+            continue
+        
+        if any([x in json_file for x in ['random', 'keyword', 'human', 'browsing']]):
+            continue
+        model_name = results["config"]["model_name"]
+        pred_metadata = results["metadata"]
+        if model_name not in metric_results:
+            metric_results[model_name] = {}
+        gold_metadata = get_metadata_from_path(json_file)
+        
+        for i in ["non_browsing", "browsing"]:
+            if i not in metric_results[model_name]:
+                metric_results[model_name][i] = []
+
+            if i == "non_browsing":
+                pred_metadata = json.load(open(json_file))['metadata']
+            else:
+                browsing_path = json_file.replace( f'-results.json', f'-browsing-results.json')
+                if os.path.exists(browsing_path):
+                    pred_metadata = json.load(open(browsing_path))['metadata']
+                else:
+                    if model_name in metric_results:
+                        del metric_results[model_name]
+                    continue
+
+            scores = evaluate_metadata(
+                gold_metadata, pred_metadata,
+                schema = get_schema_from_path(json_file),
+                return_columns = True
+            )
+            scores = [scores["precision"]]
+            if use_annotations_paper:
+                average_ignore_mistakes = evaluate_metadata(
+                    gold_metadata, pred_metadata, use_annotations_paper=True
+                )["AVERAGE"]
+                scores = [average_ignore_mistakes]
+            metric_results[model_name][i].append(scores[0])
+    results = []
+    # print(metric_results)
+    for model_name in metric_results:
+        if "human" in model_name.lower():
+            continue
+        few_shot_scores = []
+        for i in ["non_browsing", "browsing"]:
+            try:
+                if len(metric_results[model_name][i]) == len(ids):
+                    few_shot_scores.append(float(np.mean(metric_results[model_name][i]) * 100))
+                else:
+                    few_shot_scores.append(0)
+            except:
+                few_shot_scores.append(0)
+        results.append([remap_names(model_name)] + few_shot_scores)
+    print_table(results, headers, format = False)
+    if use_annotations_paper:
+        print(
+            "* Computed average by considering metadata exctracted from outside the paper."
+        )
+
 def plot_fewshot():
     headers = [ "MODEL"] + [f'{idx}-fewshot' for idx in [0, 1, 3, 5]]
     ids = get_all_ids()
@@ -714,6 +784,8 @@ if __name__ == "__main__":
         plot_fewshot()
     elif args.type == 'context_length':
         plot_context_length()
+    elif args.type == 'browsing':
+        plot_browsing()
     elif args.errors:
         plot_by_errors()
     elif args.length:
