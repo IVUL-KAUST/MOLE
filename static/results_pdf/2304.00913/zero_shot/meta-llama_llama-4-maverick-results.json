@@ -1,0 +1,125 @@
+{
+    "metadata": {
+        "Name": "LAHM",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 105120,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 2734,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 5394,
+                "Unit": "sentences",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "French",
+                "Volume": 20809,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 8631,
+                "Unit": "sentences",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 55148,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            }
+        ],
+        "Link": "https://arxiv.org/abs/2203.07378",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2022,
+        "Language": [
+            "English",
+            "Hindi",
+            "Arabic",
+            "French",
+            "German",
+            "Spanish"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "A large annotated dataset for multi-domain and multilingual hate speech identification",
+        "Volume": 227836.0,
+        "Unit": "sentences",
+        "Ethical Risks": "High",
+        "Provider": [
+            "Logically.ai"
+        ],
+        "Derived From": [
+            "HateBase",
+            "MLMA",
+            "CONAN",
+            "MMHS150k"
+        ],
+        "Paper Title": "LAHM : Large Annotated Dataset for Multi-Domain and Multilingual Hate Speech Identification",
+        "Paper Link": "https://arxiv.org/abs/2203.07378",
+        "Tokenized": false,
+        "Host": "Gdrive",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "fake news detection",
+            "sentiment analysis"
+        ],
+        "Venue Title": "De-Factify: Workshop on Multimodal Fact Checking and Hate Speech Detection",
+        "Venue Type": "workshop",
+        "Venue Name": "De-Factify: Workshop on Multimodal Fact Checking and Hate Speech Detection, co-located with AAAI2022",
+        "Authors": [
+            "Ankit Yadav",
+            "Shubham Chandel",
+            "Sushant Chatufale",
+            "Anil Bandhakavi"
+        ],
+        "Affiliations": [
+            "Logically.ai, Brookfoot Mills, Brookfoot Industrial Estate, Brighouse, HD6 2RW, United Kingdom"
+        ],
+        "Abstract": "Current research on hate speech analysis is typically oriented towards monolingual and single classification tasks. This paper presents a new multilingual hate speech analysis dataset for English, Hindi, Arabic, French, German, and Spanish languages for multiple domains across hate speech - Abuse, Racism, Sexism, Religious Hate, and Extremism."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0030732,
+        "input_tokens": 13901,
+        "output_tokens": 687
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2304.00913"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

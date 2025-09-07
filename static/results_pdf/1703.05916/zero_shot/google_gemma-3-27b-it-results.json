@@ -1,0 +1,65 @@
+{
+    "metadata": {
+        "Name": "Word Similarity",
+        "Link": "https://aclanthology.org/W17-1408/",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2017,
+        "Language": "multilingual",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "This paper presents a method for learning word embeddings that capture semantic relationships between words. The approach utilizes recursive neural networks to create representations that are sensitive to the context in which words appear.",
+        "Volume": 0.0,
+        "Unit": "hours",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "Better Word Representations with Recursive Neural Networks",
+        "Paper Link": "https://aclanthology.org/W17-1408/",
+        "Script": "Katakana",
+        "Tokenized": false,
+        "Host": "ResearchGate",
+        "Access": "Upon-Request",
+        "Cost": "Free",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "This paper presents a method for learning word embeddings that capture semantic relationships between words. The approach utilizes recursive neural networks to create representations that are sensitive to the context in which words appear. The results show that the proposed method outperforms existing approaches on a variety of word similarity tasks."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.25,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.21052631578947367
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.000717833322,
+        "input_tokens": 8561,
+        "output_tokens": 414
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1703.05916"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

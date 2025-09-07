@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "Name": "JDocQA",
+        "Link": "https://github.com/riken-nlp/JDocQA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "public datasets",
+            "commentary"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "JDocQA is a large-scale document-based QA dataset in Japanese, requiring both visual and textual information to answer questions. It comprises 5,504 documents in PDF format and 11,600 question-answer instances.",
+        "Volume": 11600.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "RIKEN",
+            "Nara Institute of Science and Technology",
+            "ATR"
+        ],
+        "Derived From": [],
+        "Paper Title": "JDocQA: Japanese Document Question Answering",
+        "Paper Link": "https://arxiv.org/abs/2403.19454",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Eri Onami",
+            "Shuhei Kurita",
+            "Taiki Miyanishi",
+            "Taro Watanabe"
+        ],
+        "Affiliations": [
+            "Nara Institute of Science and Technology",
+            "RIKEN",
+            "ATR"
+        ],
+        "Abstract": "Document question answering is a task of question answering on given documents such as reports, slides, pamphlets, and websites, and it is a truly demanding task as paper and electronic forms of documents are so common in our society. This is known as a quite challenging task because it requires not only text understanding but also understanding of figures and tables, and hence visual question answering (VQA) methods are often examined in addition to textual approaches. We introduce Japanese Document Question Answering (JDocQA), a large-scale document-based QA dataset, essentially requiring both visual and textual information to answer questions, which comprises 5,504 documents in PDF format and annotated 11,600 question-and-answer instances in Japanese. Each QA instance includes references to the document pages and bounding boxes for the answer clues. We incorporate multiple categories of questions and unanswerable questions from the document for realistic question-answering applications. We empirically evaluate the effectiveness of our dataset with text-based large language models (LLMs) and multimodal models. Incorporating unanswerable questions in finetuning may contribute to harnessing the so-called hallucination generation."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7368421052631579
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0024163,
+        "input_tokens": 19548,
+        "output_tokens": 602
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19454"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

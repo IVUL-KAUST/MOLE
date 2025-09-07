@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "Alloprof",
+        "Link": "https://huggingface.co/datasets/antoinelb7/alloprof",
+        "HF Link": "https://huggingface.co/datasets/antoinelb7/alloprof",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "captions"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "A French question-answer education dataset collected from Alloprof, a Quebec-based primary and high-school help website, containing 29349 questions and their explanations.",
+        "Volume": 29349.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Mila-QuebecAIInstitute",
+            "PolytechniqueMontr\u00e9al"
+        ],
+        "Derived From": [],
+        "Paper Title": "Alloprof: a French question-answer education dataset and its use in an information retrieval case study",
+        "Paper Link": "https://arxiv.org/abs/2312.08406",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Antoine Lefebvre-Brossard",
+            "Stephane Gazaille",
+            "Michel C. Desmarais"
+        ],
+        "Affiliations": [
+            "Mila-QuebecAIInstitute",
+            "PolytechniqueMontr\u00e9al"
+        ],
+        "Abstract": "Teachers and students are increasingly relying on online learning resources to supplement the ones provided in school. This increase in the breadth and depth of available resources is a great thing for students, but only provided they are able to find answers to their queries. Question-answering and information retrieval systems alleviate the task of finding the relevant resources and public dataset of labeled data are essential to train and evaluate their algorithms, but most of these datasets are English text written by and for adults. We introduce a new public French question-answering dataset collected from Alloprof, a Quebec-based primary and high-school help website, containing 29349 questions and their explanations in a variety of school subjects from 10368 students, with more than half of the explanations containing links to other questions or some of the 2 596 reference pages on the website. We also present a case study using this dataset for an information retrieval task."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 0.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00155517,
+        "input_tokens": 15365,
+        "output_tokens": 582
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2302.07738"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "LAMBADA",
+        "Link": "http://clic.cimec.unitn.it/lambada/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2016,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A dataset for evaluating the capabilities of computational models for text understanding by means of a word prediction task.",
+        "Volume": 10.022,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "CIMeC-Center for Mind/Brain Sciences, University of Trento"
+        ],
+        "Derived From": [
+            "BookCorpus"
+        ],
+        "Paper Title": "The LAMBADA dataset: Word prediction requiring a broad discourse context",
+        "Paper Link": "https://arxiv.org/abs/1606.06031",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "word prediction"
+        ],
+        "Venue Title": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP 2016",
+        "Authors": [
+            "Denis Paperno",
+            "Germ\u00e1n Kruszewski",
+            "Angeliki Lazaridou",
+            "Quan Ngoc Pham",
+            "Raffaella Bernardi",
+            "Sandro Pezzelle",
+            "Marco Baroni",
+            "Gemma Boleda",
+            "Raquel Fern\u00e1ndez"
+        ],
+        "Affiliations": [
+            "CIMeC-Center for Mind/Brain Sciences, University of Trento",
+            "Institute for Logic, Language & Computation, University of Amsterdam"
+        ],
+        "Abstract": "This paper introduces the LAMBADA dataset, aimed at testing language models on their ability to take a broad discourse context into account when predicting a word. The dataset consists of 10,022 passages, divided into 4,869 development and 5,153 test passages, extracted from novels. The task is to guess the last word of the target sentence given the context."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0029188,
+        "input_tokens": 13614,
+        "output_tokens": 481
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2016",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1606.06031"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

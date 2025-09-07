@@ -1,0 +1,122 @@
+{
+    "metadata": {
+        "Name": "Multilingual Amazon Reviews Corpus",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "English"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "German",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 210000,
+                "Unit": "documents",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://registry.opendata.aws/amazon-reviews-ml/",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "Japanese",
+            "German",
+            "French",
+            "Spanish",
+            "Chinese"
+        ],
+        "Domain": [
+            "reviews"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "The Multilingual Amazon Reviews Corpus (MARC) is a large-scale collection of Amazon reviews for multilingual text classification. It contains reviews in English, Japanese, German, French, Spanish, and Chinese. The corpus is balanced across 5 star ratings, with each language having 200,000 training, 5,000 development, and 5,000 test reviews.",
+        "Volume": 210000.0,
+        "Unit": "documents",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Amazon"
+        ],
+        "Derived From": [],
+        "Paper Title": "The Multilingual Amazon Reviews Corpus",
+        "Paper Link": "https://arxiv.org/abs/2010.02573",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "review classification"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Phillip Keung",
+            "Yichao Lu",
+            "Gy\u00f6rgy Szarvas",
+            "Noah A. Smith"
+        ],
+        "Affiliations": [
+            "Amazon",
+            "University of Washington",
+            "Allen Institute for AI"
+        ],
+        "Abstract": "We present the Multilingual Amazon Reviews Corpus (MARC), a large-scale collection of Amazon reviews for multilingual text classification. The corpus contains reviews in English, Japanese, German, French, Spanish, and Chinese, which were collected between 2015 and 2019. Each record in the dataset contains the review text, the review title, the star rating, an anonymized reviewer ID, an anonymized product ID, and the coarse-grained product category (e.g., 'books', 'appliances', etc.) The corpus is balanced across the 5 possible star ratings, so each rating constitutes 20% of the reviews in each language. For each language, there are 200,000, 5,000, and 5,000 reviews in the training, development, and test sets, respectively. We report baseline results for supervised text classification and zero-shot crosslingual transfer learning by fine-tuning a multilingual BERT model on reviews data. We propose the use of mean absolute error (MAE) instead of classification accuracy for this task, since MAE accounts for the ordinal nature of the ratings."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0462225,
+        "input_tokens": 9663,
+        "output_tokens": 1432
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2010.02573"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

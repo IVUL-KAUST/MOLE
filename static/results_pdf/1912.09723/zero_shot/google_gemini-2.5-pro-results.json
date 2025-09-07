@@ -1,0 +1,77 @@
+{
+    "metadata": {
+        "Name": "SberQuAD",
+        "Link": "https://github.com/sberbank-ai/data-science-journey-2017",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2017,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "SberQuAD is a large-scale Russian reading comprehension dataset, analogous to SQuAD. It contains over 50,000 question-answer pairs created by crowdworkers based on paragraphs from Russian Wikipedia articles. The task is to find a contiguous text span from the paragraph that answers a given question.",
+        "Volume": 50364.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Sberbank"
+        ],
+        "Derived From": [],
+        "Paper Title": "SberQuAD \u2013 Russian Reading Comprehension Dataset: Description and Analysis",
+        "Paper Link": "https://arxiv.org/abs/1912.09279",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "information retrieval"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [
+            "Pavel Efimov",
+            "Andrey Chertok",
+            "Leonid Boytsov",
+            "Pavel Braslavski"
+        ],
+        "Affiliations": [
+            "Saint Petersburg State University",
+            "Sberbank",
+            "Ural Federal University",
+            "JetBrains Research"
+        ],
+        "Abstract": "SberQuAD\u2014a large scale analog of Stanford SQuAD in the Russian language\u2014is a valuable resource that has not been properly presented to the scientific community. We fill this gap by providing a description, a thorough analysis, and baseline experimental results."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 1.0,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.9444444444444444
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.05528625,
+        "input_tokens": 16039,
+        "output_tokens": 1268
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1912.09723"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

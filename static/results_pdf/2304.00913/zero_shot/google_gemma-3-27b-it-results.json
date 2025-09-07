@@ -1,0 +1,131 @@
+{
+    "metadata": {
+        "Name": "LAHM",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 184339,
+                "Unit": "tweets",
+                "Language": "English"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 59321,
+                "Unit": "tweets",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Arabic",
+                "Volume": 27374,
+                "Unit": "tweets",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "French",
+                "Volume": 75126,
+                "Unit": "tweets",
+                "Language": "French"
+            },
+            {
+                "Name": "German",
+                "Volume": 30868,
+                "Unit": "tweets",
+                "Language": "German"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 120632,
+                "Unit": "tweets",
+                "Language": "Spanish"
+            }
+        ],
+        "Link": "https://www.logically.ai/team/leadership/anil-bandhakavi",
+        "HF Link": "",
+        "License": "CC BY 4.0",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "Hindi",
+            "Arabic",
+            "French",
+            "German",
+            "Spanish"
+        ],
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "This paper presents a new multilingual hate speech analysis dataset for English, Hindi, Arabic, French, German and Spanish languages for multiple domains across hate speech - Abuse, Racism, Sexism, Religious Hate and Extremism.",
+        "Volume": 497660.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Logically.ai"
+        ],
+        "Derived From": [
+            "HateBase",
+            "BBC Monitoring",
+            "counterextremism.com",
+            "GAOhatefulness",
+            "TRAC",
+            "offensive",
+            "MLMA",
+            "MMHS150k",
+            "HASOC",
+            "CONAN"
+        ],
+        "Paper Title": "LAHM : Large Annotated Dataset for Multi-Domain and Multilingual Hate Speech Identification",
+        "Paper Link": "https://arxiv.org/abs/2304.00913",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "fake news detection",
+            "cross-lingual information retrieval",
+            "offensive language detection"
+        ],
+        "Venue Title": "De-Factify:WorkshoponMultimodalFactCheckingandHateSpeechDetection",
+        "Venue Type": "workshop",
+        "Venue Name": "",
+        "Authors": [
+            "AnkitYadav",
+            "ShubhamChandel",
+            "SushantChatufale",
+            "AnilBandhakavi"
+        ],
+        "Affiliations": [
+            "Logically.ai"
+        ],
+        "Abstract": "Currentresearchonhatespeechanalysisistypicallyorientedtowardsmonolingualandsingleclassi-ficationtasks. Inthispaper,wepresentanewmultilingualhatespeechanalysisdatasetforEnglish,Hindi,Arabic,French,GermanandSpanishlanguagesformultipledomainsacrosshatespeech-Abuse,Racism,Sexism,ReligiousHateandExtremism. Tothebestofourknowledge,thispaperisthefirsttoaddresstheproblemofidentifyingvarioustypesofhatespeechinthesefivewidedomainsinthese sixlanguages.Inthiswork,wedescribehowwecreatedthedataset,createdannotationsathighlevelandlowlevelfordifferentdomainsandhowweuseittotestthecurrentstate-of-the-artmultilingualandmultitasklearningapproaches.Weevaluateourdatasetinvariousmonolingual,cross-lingualandmachinetranslationclassificationsettingsandcompareitagainstopensourceEnglishdatasetsthatweaggregatedandmergedforthistask.Thenwediscusshowthisapproachcanbeusedtocreatelargescalehate-speechdatasetsandhowtoleverageourannotationsinordertoimprovehatespeechdetectionandclassificationingeneral."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0015311,
+        "input_tokens": 13913,
+        "output_tokens": 933
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2304.00913"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

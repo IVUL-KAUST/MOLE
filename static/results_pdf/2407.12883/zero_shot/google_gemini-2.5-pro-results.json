@@ -1,0 +1,107 @@
+{
+    "metadata": {
+        "Name": "BRIGHT",
+        "Link": "https://huggingface.co/datasets/xlangai/BRIGHT",
+        "HF Link": "https://huggingface.co/datasets/xlangai/BRIGHT",
+        "License": "custom",
+        "Year": 2025,
+        "Language": "en",
+        "Domain": [
+            "social media",
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A text retrieval benchmark for reasoning-intensive queries. It consists of 1,384 real-world queries from diverse domains like economics, psychology, math, and coding, designed to test retrieval models beyond simple keyword or semantic matching by requiring in-depth reasoning to find relevant documents.",
+        "Volume": 1384.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Hong Kong",
+            "Princeton University",
+            "Stanford University",
+            "University of Washington",
+            "Google Cloud AI Research"
+        ],
+        "Derived From": [
+            "StackExchange",
+            "LeetCode",
+            "Pony dataset (Su et al., 2024)",
+            "GSM8K",
+            "MATH",
+            "AQuA-RAT",
+            "TheoremQA",
+            "CAMEL-Math",
+            "ProofWiki",
+            "CodeSearchNet"
+        ],
+        "Paper Title": "BRIGHT: A REALISTIC AND CHALLENGING BENCHMARK FOR REASONING-INTENSIVE RETRIEVAL",
+        "Paper Link": "https://arxiv.org/abs/2405.17288",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "information retrieval",
+            "question answering"
+        ],
+        "Venue Title": "ICLR 2025",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Learning Representations",
+        "Authors": [
+            "Hongjin Su",
+            "Howard Yen",
+            "Mengzhou Xia",
+            "Weijia Shi",
+            "Niklas Muennighoff",
+            "Han-yu Wang",
+            "Haisu Liu",
+            "Quan Shi",
+            "Zachary S. Siegel",
+            "Michael Tang",
+            "Ruoxi Sun",
+            "Jinsung Yoon",
+            "Sercan \u00d6. Ar\u0131k",
+            "Danqi Chen",
+            "Tao Yu"
+        ],
+        "Affiliations": [
+            "The University of Hong Kong",
+            "Princeton University",
+            "Stanford University",
+            "University of Washington",
+            "Google Cloud AI Research"
+        ],
+        "Abstract": "Existing retrieval benchmarks primarily consist of information-seeking queries (e.g., aggregated questions from search engines) where keyword or semantic-based retrieval is usually sufficient. However, many complex real-world queries require in-depth reasoning to identify relevant documents that go beyond surface form matching. For example, finding documentation for a coding question requires understanding the logic and syntax of the functions involved. To better benchmark retrieval on such challenging queries, we introduce BRIGHT, the first text retrieval benchmark that requires intensive reasoning to retrieve relevant documents. Our dataset consists of 1,384 real-world queries spanning diverse domains, such as economics, psychology, mathematics, and coding. These queries are drawn from naturally occurring and carefully curated human data. Extensive evaluation reveals that even state-of-the-art retrieval models perform poorly on BRIGHT. The leading model on the MTEB leaderboard (Muennighoff et al., 2023) SFR-Embedding- Mistral (Meng et al., 2024), which achieves a score of 59.0 nDCG@10,1 produces a score of nDCG@10 of 18.3 on BRIGHT. We show that incorporating explicit reasoning about the query improves retrieval performance by up to 12.2 points. Moreover, incorporating retrieved documents from the top-performing retriever boosts question-answering performance. We believe that BRIGHT paves the way for future research on retrieval systems in more realistic and challenging settings."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.11566625,
+        "input_tokens": 52307,
+        "output_tokens": 1931
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2407.12883"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

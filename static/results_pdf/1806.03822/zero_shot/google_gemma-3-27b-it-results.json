@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "SQuAD 2.0",
+        "Link": "https://bit.ly/2rDHBgY",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "SQuAD 2.0 is a challenging reading comprehension dataset that combines existing SQuAD data with over 50,000 unanswerable questions written adversarially by crowdworkers.",
+        "Volume": 130319.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "SQuAD 1.1"
+        ],
+        "Paper Title": "Know What You Don\u2019t Know: Unanswerable Questions for SQuAD",
+        "Paper Link": "https://arxiv.org/abs/1806.03822",
+        "Tokenized": false,
+        "Host": "CodaLab",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "question answering"
+        ],
+        "Venue Title": "",
+        "Venue Type": "conference",
+        "Venue Name": "",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Robin Jia",
+            "Percy Liang"
+        ],
+        "Affiliations": [
+            "Computer Science Department, Stanford University"
+        ],
+        "Abstract": "Article:EndangeredSpeciesActnParagraph: \u201c...Otherlegislationfollowed,includingnthe Migratory Bird Conservation Act of 1929, a 1937ntreatyprohibitingthehuntingofrightandgraywhales,nandtheBaldEagleProtectionActof1940. Theselaternlawshadalowcosttosociety\u2014thespecieswererela-ntivelyrare\u2014andlittleoppositionwasraised.\u201dnQuestion1:\u201cWhichlawsfacedsignificantopposition?\u201dnPlausibleAnswer:laterlawsnQuestion2:\u201cWhatwasthenameofthe1937treaty?\u201dnPlausibleAnswer:BaldEagleProtectionActnnExtractive reading comprehension sys-ntemscanoftenlocatethecorrectanswertonaquestioninacontextdocument,buttheynalso tend to make unreliable guesses onnquestions for which the correct answer isnnotstatedinthecontext. Existingdatasetsneither focus exclusively on answerablenquestions, or use automatically generatednunanswerable questions that are easy tonidentify. Toaddresstheseweaknesses,wenpresent SQuAD 2.0, the latest version ofnthe Stanford Question Answering Datasetn(SQuAD). SQuAD 2.0 combines exist-ning SQuAD data with over 50,000 unan-nswerable questions written adversariallynby crowdworkers to look similar to an-nswerableones. TodowellonSQuAD2.0,nsystemsmustnotonlyanswerquestionsnwhenpossible,butalsodeterminewhennonanswer is supported by the paragraph andnabstain from answering. SQuAD 2.0 is anchallenging natural language understand-ningtaskforexistingmodels: astrongneu-ralsystemthatgets86%F1onSQuAD1.1nachievesonly66%F1onSQuAD2.0."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0014276,
+        "input_tokens": 10364,
+        "output_tokens": 768
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1806.03822"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

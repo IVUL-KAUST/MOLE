@@ -1,0 +1,89 @@
+{
+    "metadata": {
+        "Name": "RusCode",
+        "Link": "https://github.com/ai-forever/RusCode",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "multilingual",
+        "Domain": [
+            "social media",
+            "news articles",
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "A benchmark dataset for evaluating the quality of text-to-image generation models containing elements of Russian cultural code.",
+        "Volume": 1250.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "SberAI",
+            "SberDevices",
+            "MIPT",
+            "ITMOUniversity",
+            "AIRI"
+        ],
+        "Derived From": [],
+        "Paper Title": "RusCode: Russian Cultural Code Benchmark for Text-to-Image Generation",
+        "Paper Link": "https://arxiv.org/abs/2407.00263",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation"
+        ],
+        "Venue Title": "EMNLP 2024",
+        "Venue Type": "conference",
+        "Venue Name": "The 2024 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Viacheslav Vasilev",
+            "Julia Agafonova",
+            "Nikolai Gerasimenko",
+            "Alexander Kapitanov",
+            "Polina Mikhailova",
+            "Evelina Mironova",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "SberAI",
+            "MIPT",
+            "ITMOUniversity",
+            "SberDevices",
+            "AIRI"
+        ],
+        "Abstract": "The paper proposes a benchmark dataset RusCode for evaluating the quality of text-to-image generation models containing elements of Russian cultural code. The dataset consists of 1250 complex textual descriptions in Russian and their translations into English, covering various aspects of Russian culture."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0028138,
+        "input_tokens": 16496,
+        "output_tokens": 455
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2502.07455"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

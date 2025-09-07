@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "SQuAD2.0",
+        "Link": "https://rajpurkar.github.io/SQuAD-explorer/",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2018,
+        "Language": "en",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "SQuAD2.0 is a reading comprehension dataset that combines existing SQuAD data with over 50,000 unanswerable questions written adversarially by crowdworkers.",
+        "Volume": 130319.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Stanford University"
+        ],
+        "Derived From": [
+            "SQuAD1.1"
+        ],
+        "Paper Title": "Know What You Don't Know: Unanswerable Questions for SQuAD",
+        "Paper Link": "https://arxiv.org/abs/1806.03822",
+        "Tokenized": false,
+        "Host": "CodaLab",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "Empirical Methods in Natural Language Processing",
+        "Venue Type": "conference",
+        "Venue Name": "EMNLP",
+        "Authors": [
+            "Pranav Rajpurkar",
+            "Robin Jia",
+            "Percy Liang"
+        ],
+        "Affiliations": [
+            "Computer Science Department, Stanford University"
+        ],
+        "Abstract": "Machine reading comprehension has become a central task in natural language understanding. Recent work has shown that neural models can achieve high accuracy on reading comprehension benchmarks. However, these models are still far from true language understanding. One root cause of these problems is that existing datasets focus on questions for which a correct answer is guaranteed to exist in the context document. In this work, we construct SQuAD2.0, a new dataset that combines answerable questions from the previous version of SQuAD with unanswerable questions written adversarially by crowdworkers. We confirm that SQuAD2.0 is both challenging and high-quality. A state-of-the-art model achieves only 66.3% F1 score when trained and tested on SQuAD2.0, whereas human accuracy is 89.5% F1, a full 23.2 points higher."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.8571428571428571,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0022908,
+        "input_tokens": 10352,
+        "output_tokens": 514
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1806.03822"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

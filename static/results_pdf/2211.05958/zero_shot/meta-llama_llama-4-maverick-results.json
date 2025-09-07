@@ -1,0 +1,137 @@
+{
+    "metadata": {
+        "Name": "MINION",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 17000,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 6000,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 2000,
+                "Unit": "sentences",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 12000,
+                "Unit": "sentences",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 8000,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 2000,
+                "Unit": "sentences",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 2000,
+                "Unit": "sentences",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 2000,
+                "Unit": "sentences",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "https://github.com/apouranbenveyseh/MINION",
+        "HF Link": "",
+        "License": "MIT License",
+        "Year": 2023,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "Polish",
+            "Turkish",
+            "Hindi",
+            "Japanese",
+            "Korean"
+        ],
+        "Domain": [
+            "news articles",
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "A large-scale multilingual dataset for event detection",
+        "Volume": 50000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Derived From": [
+            "ACE 2005"
+        ],
+        "Paper Title": "MINION: a Large-Scale and Diverse Dataset for Multilingual Event Detection",
+        "Paper Link": "https://arxiv.org/abs/2305.12393",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "irony detection"
+        ],
+        "Venue Title": "EMNLP 2023",
+        "Venue Type": "conference",
+        "Venue Name": "The 2023 Conference on Empirical Methods in Natural Language Processing",
+        "Authors": [
+            "Amir Pouran Ben Veyseh",
+            "Minh Van Nguyen",
+            "Franck Dernoncourt",
+            "Thien Huu Nguyen"
+        ],
+        "Affiliations": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Abstract": "Event Detection (ED) is the task of identifying and classifying trigger words of event mentions in text. Despite considerable research efforts in recent years for English text, the task of ED in other languages has been significantly less explored. To address such issues, our goal is to introduce a new Multilingual Event Detection dataset (called MINION) to support multilingual research for ED. In particular, we provide a large-scale dataset that manually annotates event triggers for 8 typologically different languages, i.e., English, Spanish, Portuguese, Polish, Turkish, Hindi, Japanese, and Korean."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00487014,
+        "input_tokens": 19438,
+        "output_tokens": 762
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05958"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

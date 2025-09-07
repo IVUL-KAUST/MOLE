@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "FREEMmaxOA",
+        "Link": "https://github.com/sgabay/FREEMmaxOA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "fr",
+        "Domain": [
+            "books",
+            "wikipedia",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "other"
+        ],
+        "Description": "A large corpus for Early Modern French",
+        "Volume": 185643482.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Inria",
+            "Universite de Geneve",
+            "Sorbonne Universite"
+        ],
+        "Derived From": [],
+        "Paper Title": "From FREEM to D'AlemBERT: a Large Corpus and a Language Model for Early Modern French",
+        "Paper Link": "https://arxiv.org/abs/2202.05424",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "language modeling",
+            "part of speech tagging"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Simon Gabay",
+            "Pedro Ortiz Suarez",
+            "Alexandre Bartz",
+            "Alix Chague",
+            "Rachel Bawden",
+            "Philippe Gambette",
+            "Benoit Sagot"
+        ],
+        "Affiliations": [
+            "Inria",
+            "Sorbonne Universite",
+            "Universite de Geneve",
+            "LIGM, Universite Gustave Eiffel, CNRS"
+        ],
+        "Abstract": "Language models for historical states of language are becoming increasingly important to allow the optimal digitisation and analysis of old textual sources. In this paper, we present our efforts to develop NLP tools for Early Modern French. We present the FREEMmax corpus of Early Modern French and D'AlemBERT, a RoBERTa-based language model trained on FREEMmax. We evaluate the usefulness of D'AlemBERT by fine-tuning it on a part-of-speech tagging task, outperforming previous work on the test set."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00420066,
+        "input_tokens": 14369,
+        "output_tokens": 469
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2202.09452"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

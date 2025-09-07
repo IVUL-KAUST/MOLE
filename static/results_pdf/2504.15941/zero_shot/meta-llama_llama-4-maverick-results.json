@@ -1,0 +1,73 @@
+{
+    "metadata": {
+        "Name": "FairTranslate",
+        "Link": "https://huggingface.co/datasets/fanny-jourdan/FairTranslate",
+        "HF Link": "https://huggingface.co/datasets/fanny-jourdan/FairTranslate",
+        "License": "CC BY 4.0",
+        "Year": 2025,
+        "Language": "multilingual",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "A dataset for evaluating gender bias in machine translation from English to French, focusing on inclusive gender forms.",
+        "Volume": 2418.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "FairTranslate: An English-French Dataset for Gender Bias Evaluation in Machine Translation by Overcoming Gender Binarity",
+        "Paper Link": "https://doi.org/10.1145/3715275.3732013",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation",
+            "gender identification"
+        ],
+        "Venue Title": "FAccT '25",
+        "Venue Type": "conference",
+        "Venue Name": "2025 ACM Conference on Fairness, Accountability, and Transparency",
+        "Authors": [
+            "Fanny Jourdan",
+            "Yannick Chevalier",
+            "C\u00e9cile Favre"
+        ],
+        "Affiliations": [
+            "IRTSaintExupery",
+            "Universit\u00e9Lumi\u00e8reLyon2",
+            "Universit\u00e9Toulouse, IHRIM UMR 5317 Claude Bernard Lyon 1, ERIC Lyon"
+        ],
+        "Abstract": "This paper presents FairTranslate, a novel English-French translation dataset designed to evaluate non-binary gender biases in machine translation systems. The dataset includes 2418 English-French sentence pairs related to occupations, annotated with rich metadata such as stereotypical alignment of the occupation, grammatical gender indicator ambiguity, and the ground-truth gender label (male, female, or inclusive)."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.2857142857142857,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5555555555555556
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00408595,
+        "input_tokens": 22104,
+        "output_tokens": 487
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2504.15941"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

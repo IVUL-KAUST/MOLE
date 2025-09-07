@@ -1,0 +1,122 @@
+{
+    "metadata": {
+        "Name": "MTOP",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 22288,
+                "Unit": "utterances",
+                "Language": "English"
+            },
+            {
+                "Name": "German",
+                "Volume": 18788,
+                "Unit": "utterances",
+                "Language": "German"
+            },
+            {
+                "Name": "French",
+                "Volume": 16584,
+                "Unit": "utterances",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 15459,
+                "Unit": "utterances",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 16131,
+                "Unit": "utterances",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 15195,
+                "Unit": "utterances",
+                "Language": "Thai"
+            }
+        ],
+        "Link": "https://fb.me/mtop_dataset",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2018,
+        "Language": [
+            "English",
+            "German",
+            "French",
+            "Spanish",
+            "Hindi",
+            "Thai"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "human annotation"
+        ],
+        "Description": "A multilingual dataset comprising 100k annotated utterances in 6 languages across 11 domains for task-oriented semantic parsing.",
+        "Volume": 100000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Facebook"
+        ],
+        "Derived From": [],
+        "Paper Title": "MTOP: A Comprehensive Multilingual Task-Oriented Semantic Parsing Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2008.09335",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "semantic parsing",
+            "speaker identification"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Haoran Li",
+            "Abhinav Arora",
+            "Shuohui Chen",
+            "Anchit Gupta",
+            "Sonal Gupta",
+            "Yashar Mehdad"
+        ],
+        "Affiliations": [
+            "Facebook"
+        ],
+        "Abstract": "Although,therehavebeensizableeffortsarounddevelopingsuccessfulsemanticparsingmodelsfortask-orienteddialogsystemsinEnglish(Mesnil etal.,2013;LiuandLane,2016;Guptaetal.,2018;Rongali et al., 2020), we have only seen limited works for other languages. This is mainly due tothepainstakingprocessofmanuallyannotatingandcreatinglargedatasetsforthistaskinnewlan-guages. Inadditiontotheshortageofsuchdatasets,existing datasets (Upadhyay et al., 2018; Schus-teretal.,2019a)arenotsufficientlydiversifiedintermsoflanguagesanddomains,anddonotcapturecomplexnestedqueries. Thismakesitdifficulttoperformmoresystematicandrigorousexperimentationandevaluationforthistaskacrossmultiplelanguages. Buildingontheseconsiderationsandrecentadvancements on cross-lingual pre-trained models(Devlin et al., 2019; Lample and Conneau, 2019;Conneauetal.,2020),thispaperismakinganefforttobridgetheabovementionedgaps. Themaincontributionsofthispapercanbesummarizedasfollows:\u2022 MTOPDataset: Wereleaseanalmost-parallelmultilingual task-oriented semantic parsing dataset covering 6 languages and 11 do-mains. To the best of our knowledge, this isthefirstmultilingualdatasetwhichcontainscompositionalrepresentationsthatallowcomplexnestedqueries. \u2022 WebuildstrongbenchmarksonthereleasedMTOP dataset using state-of-the-art multilingual pre-trained models for both flat and compositional representations. We demonstratetheeffectivenessofourapproachesbyachievingnewstate-of-the-artresultonexistingmultilingualtask-orientedsemanticparsingdatasets. \u2022 Wedemonstratestrongperformanceonzero-shotcross-lingualtransferusingautomatictranslation and alignment, combined with a proposed distant supervisionmethodtoreducethenoiseinslotlabelprojection."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.631578947368421
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00172161,
+        "input_tokens": 15828,
+        "output_tokens": 983
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2008.09335"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

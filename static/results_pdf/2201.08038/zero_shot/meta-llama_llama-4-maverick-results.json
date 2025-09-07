@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "Name": "Japanese Grammatical Error Correction Quality Estimation Dataset",
+        "Link": "https://github.com/dsuzuki3/Japanese-GEC-QE-Dataset",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": "jp",
+        "Domain": [
+            "news articles",
+            "books",
+            "wikipedia",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "This dataset is created for building a quality estimation model for Japanese Grammatical Error Correction (GEC). It contains pairs of error-containing and corrected sentences with manual evaluation scores.",
+        "Volume": 2192.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Tokyo Metropolitan University",
+            "RIKEN"
+        ],
+        "Derived From": [
+            "NAIST Lang-8 Learner Corpora",
+            "TEC-JL"
+        ],
+        "Paper Title": "Construction of a Quality Estimation Dataset for Automatic Evaluation of Japanese Grammatical Error Correction",
+        "Paper Link": "https://arxiv.org/abs/2202.00202",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "grammatical error correction",
+            "transliteration"
+        ],
+        "Venue Title": "Language Resources and Evaluation Conference",
+        "Venue Type": "conference",
+        "Venue Name": "LREC",
+        "Authors": [
+            "Daisuke Suzuki",
+            "Yujin Takahashi",
+            "Ikumi Yamashita",
+            "Taichi Aida",
+            "Tosho Hirasawa",
+            "Michitaka Nakatsuji",
+            "Masato Mita",
+            "Mamoru Komachi"
+        ],
+        "Affiliations": [
+            "Tokyo Metropolitan University",
+            "RIKEN"
+        ],
+        "Abstract": "In grammatical error correction (GEC), automatic evaluation is an important factor for research and development of GEC systems. Previous studies on automatic evaluation have demonstrated that quality estimation models built from datasets with manual evaluation can achieve high performance in automatic evaluation of English GEC without using reference sentences. However, quality estimation models have not yet been studied in Japanese, because there are no datasets for constructing quality estimation models. Therefore, in this study, we created a quality estimation dataset with manual evaluation to build an automatic evaluation model for Japanese GEC. Moreover, we conducted a meta-evaluation to verify the dataset\u2019s usefulness in building the Japanese quality estimation model."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9666666666666666,
+    "cost": {
+        "cost": 0.0022121,
+        "input_tokens": 11908,
+        "output_tokens": 546
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2201.08038"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

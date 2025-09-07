@@ -1,0 +1,86 @@
+{
+    "metadata": {
+        "Name": "KaoKore",
+        "Link": "https://github.com/rois-codh/kaokore",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2019,
+        "Language": "jp",
+        "Domain": [
+            "other"
+        ],
+        "Form": "images",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "KaoKore is a dataset of faces extracted from pre-modern Japanese artwork, annotated with gender and social status labels.",
+        "Volume": 5552.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Google Brain",
+            "ROIS-DS Center for Open Data in the Humanities"
+        ],
+        "Derived From": [
+            "Collection of Facial Expressions"
+        ],
+        "Paper Title": "KaoKore: A Pre-modern Japanese Art Facial Expression Dataset",
+        "Paper Link": "https://arxiv.org/abs/2002.08595",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "meter classification",
+            "language modeling"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Yingtao Tian",
+            "Chikahiko Suzuki",
+            "Tarin Clanuwat",
+            "Mikel Bober-Irizar",
+            "Alex Lamb",
+            "Asanobu Kitamoto"
+        ],
+        "Affiliations": [
+            "Google Brain",
+            "ROIS-DS Center for Open Data in the Humanities",
+            "University of Cambridge",
+            "MILA",
+            "Universit\u00e9 de Montr\u00e9al",
+            "NII"
+        ],
+        "Abstract": "Emakimono or a picturebook (\u7d75\u672c, Ehon), accompanying cursive writing of the story itself. These stories include a diverse array of characters (see Figure 1), and thus provide valuable materials for the study of Japanese art history. In art history research, comparative style study, based on the visual comparison of characteristics in artworks, is a typical approach to answering research questions about works, such as the identification of creators, the period of production, and the skill of the painter. Among many attributes that appear in artworks, facial expressions offer especially rich information not only about the content but also about how the artworks were created. To accelerate comparative studies, Collection of Facial Expressions [26] has been created as a collection of cropped faces from multiple artworks with basic metadata annotated manually by art history experts. It was made possible leveraging recent technological developments, such as mass digitization of historical Japanese artworks and image sharing using IIIF [18], implemented using JSON-LD, a JSON serialization pattern for Resource Description Framework), to ensure interoperability with Linked Data."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.7142857142857143,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.75,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.6842105263157895
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00333869,
+        "input_tokens": 9350,
+        "output_tokens": 580
+    },
+    "config": {
+        "model_name": "deepseek_deepseek-chat-v3-0324",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2002.08595"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

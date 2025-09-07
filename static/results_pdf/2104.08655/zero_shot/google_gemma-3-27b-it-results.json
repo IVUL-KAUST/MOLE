@@ -1,0 +1,107 @@
+{
+    "metadata": {
+        "Name": "DiS-ReX",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 532499,
+                "Unit": "sentences",
+                "Language": "English"
+            },
+            {
+                "Name": "French",
+                "Volume": 409087,
+                "Unit": "sentences",
+                "Language": "French"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 456418,
+                "Unit": "sentences",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "German",
+                "Volume": 438315,
+                "Unit": "sentences",
+                "Language": "German"
+            }
+        ],
+        "Link": "https://github.com/dair-iitd/DiS-ReX",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "English",
+            "French",
+            "Spanish",
+            "German"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "DiS-ReX is a multilingual dataset for distantly supervised relation extraction, containing over 1.5 million sentences across 4 languages with 36 relation classes + 1 no relation class.",
+        "Volume": 1500000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Indian Institute of Technology"
+        ],
+        "Derived From": [
+            "DBpedia",
+            "Wikipedia"
+        ],
+        "Paper Title": "DiS-ReX: A Multilingual Dataset for Distantly Supervised Relation Extraction",
+        "Paper Link": "https://arxiv.org/abs/2104.08655",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Abhyuday Bhartiya",
+            "Kartikeya Badola",
+            "Mausam"
+        ],
+        "Affiliations": [
+            "Indian Institute of Technology New Delhi"
+        ],
+        "Abstract": "Distantsupervision(DS)isawellestablishedtechniqueforcreatinglarge-scaledatasetsforrelationextraction(RE)withoutusinghumanannotations. However,researchinDS-REhasbeenmostlylimitedtotheEnglishlanguage. ConstrainingREtoasinglelanguageinhibitsutilizationoflargeamountsofdatainotherlanguageswhichcouldallowextractionofmorediversefacts. Veryrecently,adatasetformultilingualDS-REhasbeenreleased. However,ouranalysisrevealsthattheproposeddatasetexhibitsunrealisticcharacteristics suchas1)lackofsentencesthatdonotexpressanyrelation,and2)allsentencesforagivenentitypairexpressingexactlyonerelation. Weshownthatthesecharacteristicsleadtoagrossoverestimationofthemodelperformance. Inresponse,weproposeanewdataset,DiS-ReX,whichalleviates theseissues. Ourdataset hasmorethan1.5millionsentences,spanningacross4languageswith36relationclasses+1norelation(NA)class. WealsomodifythewidelyusedbagattentionmodelsbyencodingsentencesusingmBERTandprovidethefirstbenchmarkresultsonmultilingualDS-RE. Unlikethecompetingdataset,weshownthatourdatasetischallengingandleavesenoughroomforfutureresearchtotakeplace."
+    },
+    "validation": {
+        "DIVERSITY": 1.0,
+        "ACCESSABILITY": 0.8571428571428571,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.7894736842105263
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.0016605,
+        "input_tokens": 11566,
+        "output_tokens": 808
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2104.08655"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

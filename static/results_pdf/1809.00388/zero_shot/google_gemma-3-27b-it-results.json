@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "Name": "MTNT",
+        "Link": "http://www.cs.cmu.edu/~pmichel1/mtnt/",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2018,
+        "Language": "multilingual",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A testbed for machine translation of noisy text, consisting of noisy comments on Reddit and professionally sourced translations.",
+        "Volume": 81631.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Carnegie Mellon University"
+        ],
+        "Derived From": [],
+        "Paper Title": "MTNT: A Testbed for Machine Translation of Noisy Text",
+        "Paper Link": "https://arxiv.org/abs/1809.00388",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "machine translation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Paul Michel",
+            "Graham Neubig"
+        ],
+        "Affiliations": [
+            "Language Technologies Institute, Carnegie Mellon University"
+        ],
+        "Abstract": "the past few years due to the advent of Neu-nral Machine Translation (NMT) (Kalchbrennernand Blunsom; Sutskever et al., 2014; Bahdanaunet al., 2014; Wu et al., 2016), systems are stillnnot robust to noisy input like this (Belinkov andnBisk, 2018; Khayrallah and Koehn). For exam-nple, GoogleTranslate3 translates theabove exam-npleintoFrenchas: n#nlprocestentraindef*ingdurhbnwhich translates back into English as \u201c#nlproc isnin the process of [f * ing] hard hb\u201d. This showsnthatnoisyinputcanleadtoerroneoustranslationsnthatcanbemisinterpretedorevenoffensive.nNoise in social media text is a known issuenthat has been investigated in a variety of pre-nvious work (Eisenstein; Baldwin et al.). Mostnrecently, Belinkov and Bisk (2018) have fo-ncused on the difficulties that character basednNMT models have translating text with characternlevel noise within individual words (from scram-nbling to simulated human errors such as typos ornspelling/conjugation errors). This is a good firstnsteptowardsnoise-robustNMTsystems,butaswendemonstrate in \u00a72, word-by-word replacement ornscrambling of characters doesn\u2019t cover all the id-niosyncrasiesoflanguageontheInternet. nAt this point, despite the obvious utility of cre-nating noise-robust MT systems, and the scientificnchallenges contained therein, there is currently anbottleneckinthatthereisnostandardopenbench-nmark for researchers and developers of MT sys-ntems to test the robustness of their models tonheseandotherphenomenafoundinnoisytextonnthe Internet. In this work, we introduce MTNT,na new, realistic dataset aimed at testing robust-nness of MT systems to these phenomena. Thendataset contains naturally created noisy sourcensentenceswithprofessionallysourcedtranslations \u2022 Internet slang: \u201cto be honest\u201d \u2192 \u201ctbh\u201d,nboth in a pair of typologically close languages \u201cshaking myhead\u201d \u2192\u201csmh\u201d, \u201cmortde rire\u201dn(English and French) and distant languages (En- \u2192\u201cmdr\u201d,\u201c\u7b11\u201d\u2192\u201cw\u201d/\u201c\u8349\u201dnglish and Japanese), as well as French and Japanese comments intonEnglish, ontheorderof7k-37ksentencespernlanguage pair. We qualitatively and quantita- \u2022 Proper nouns (with or without correct capi-ntively examine the types of noise included in talization): \u201cReddit\u201d\u2192\u201creddit\u201dnthisdataset,thendemonstratethatexistingMTnmodelsfailbadlyonanumberofnoise-relatednphenomena, even after performing adaptationn\u2022 Dialects: African American Vernacular En-nonasmalltrainingsetofin-domaindata. Thisnglish, Scottish, Proven\u00e7al, Qu\u00e9b\u00e9cois, Kan-nindicates that this dataset can provide an at- sai,Tohoku...ntractive testbed for methods tailored to han-ndlingnoisytextinMT.2"
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7222222222222222
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0013139413668,
+        "input_tokens": 14271,
+        "output_tokens": 1026
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2018",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/1809.00388"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

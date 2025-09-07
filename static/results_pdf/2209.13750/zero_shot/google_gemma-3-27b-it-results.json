@@ -1,0 +1,64 @@
+{
+    "metadata": {
+        "Name": "RuBERT",
+        "Link": "https://github.com/DeepPavlov/bert-large-russian",
+        "HF Link": "https://huggingface.co/DeepPavlov/bert-large-russian",
+        "License": "Apache-2.0",
+        "Year": 2019,
+        "Language": "ru",
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "other"
+        ],
+        "Description": "RuBERT is a transformer-based language model pre-trained on a large corpus of Russian text. It is designed for various NLP tasks such as text classification, named entity recognition, and question answering.",
+        "Volume": 0.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [],
+        "Derived From": [],
+        "Paper Title": "RuBERT: A Russian Transformer-based Language Model",
+        "Paper Link": "https://arxiv.org/abs/1910.06792",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "Free",
+        "Test Split": false,
+        "Tasks": [
+            "other"
+        ],
+        "Venue Title": "arXiv",
+        "Venue Type": "preprint",
+        "Venue Name": "arXiv",
+        "Authors": [],
+        "Affiliations": [],
+        "Abstract": "We present RuBERT, a Russian language model based on the BERT architecture. RuBERT is pre-trained on a large corpus of Russian text and achieves state-of-the-art results on a variety of Russian NLP tasks. We provide a detailed description of the model architecture, training procedure, and evaluation results. We also release the pre-trained model and code for reproducibility."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.2857142857142857,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.3333333333333333
+    },
+    "length_forcing": 0.9655172413793099,
+    "cost": {
+        "cost": 0.0011858530824,
+        "input_tokens": 14955,
+        "output_tokens": 495
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2209.13750"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

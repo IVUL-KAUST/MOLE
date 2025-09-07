@@ -1,0 +1,159 @@
+{
+    "metadata": {
+        "Name": "XCOPA",
+        "Subsets": [
+            {
+                "Name": "Haitian Creole",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Haitian Creole"
+            },
+            {
+                "Name": "Eastern Apur\u00edmac Quechua",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Eastern Apur\u00edmac Quechua"
+            },
+            {
+                "Name": "Indonesian",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Indonesian"
+            },
+            {
+                "Name": "Italian",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Italian"
+            },
+            {
+                "Name": "Estonian",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Estonian"
+            },
+            {
+                "Name": "Kiswahili",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Swahili"
+            },
+            {
+                "Name": "Tamil",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Tamil"
+            },
+            {
+                "Name": "Thai",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Thai"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Vietnamese",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Vietnamese"
+            },
+            {
+                "Name": "Mandarin Chinese",
+                "Volume": 500,
+                "Unit": "sentences",
+                "Language": "Chinese"
+            }
+        ],
+        "Link": "https://github.com/cambridgeltl/xcopa",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": [
+            "Haitian Creole",
+            "Eastern Apur\u00edmac Quechua",
+            "Indonesian",
+            "Italian",
+            "Estonian",
+            "Swahili",
+            "Tamil",
+            "Thai",
+            "Turkish",
+            "Vietnamese",
+            "Chinese"
+        ],
+        "Domain": [
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "XCOPA is a multilingual dataset for causal commonsense reasoning in 11 languages.",
+        "Volume": 500.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Derived From": [
+            "COPA"
+        ],
+        "Paper Title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning",
+        "Paper Link": "https://arxiv.org/abs/2005.00613",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "commonsense reasoning"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Edoardo M. Ponti",
+            "Goran Glavas",
+            "Olga Majewska",
+            "Qianchu Liu",
+            "Ivan Vulic",
+            "Anna Korhonen"
+        ],
+        "Affiliations": [
+            "University of Cambridge",
+            "University of Mannheim"
+        ],
+        "Abstract": "Commonsense reasoning is a critical component of any natural language understanding system. Contrary to textual entailment, commonsense reasoning must bridge between premises and possible hypotheses with world knowledge that is not explicit in text. We introduce XCOPA, a typologically diverse multilingual dataset for causal commonsense reasoning in 11 languages."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.5714285714285714,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5789473684210527
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00592865,
+        "input_tokens": 21194,
+        "output_tokens": 888
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00333"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

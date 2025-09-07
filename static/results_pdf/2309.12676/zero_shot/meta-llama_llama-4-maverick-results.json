@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "Name": "JCoLA",
+        "Link": "https://github.com/osekilab/JCoLA",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "jp",
+        "Domain": [
+            "books",
+            "news articles",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation"
+        ],
+        "Description": "JCoLA is a Japanese Corpus of Linguistic Acceptability consisting of 10,020 sentences annotated with binary acceptability judgments.",
+        "Volume": 10020.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "The University of Tokyo"
+        ],
+        "Derived From": [],
+        "Paper Title": "JCoLA: Japanese Corpus of Linguistic Acceptability",
+        "Paper Link": "https://arxiv.org/abs/2309.12673",
+        "Script": "mixed",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "linguistic acceptability"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Taiga Someya",
+            "Yushi Sugimoto",
+            "Yohei Oseki"
+        ],
+        "Affiliations": [
+            "The University of Tokyo"
+        ],
+        "Abstract": "This paper introduces JCoLA, a Japanese Corpus of Linguistic Acceptability, which consists of 10,020 sentences annotated with binary acceptability judgments. The sentences are manually extracted from linguistics textbooks, handbooks, and journal articles. The corpus is split into in-domain and out-of-domain data, with the latter categorized by 12 linguistic phenomena. The paper evaluates the syntactic knowledge of nine different Japanese language models on JCoLA, demonstrating that several models can surpass human performance for the in-domain data, while no models exceed human performance for the out-of-domain data."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.875,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.8947368421052632
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00262865,
+        "input_tokens": 15325,
+        "output_tokens": 430
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2309.12676"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

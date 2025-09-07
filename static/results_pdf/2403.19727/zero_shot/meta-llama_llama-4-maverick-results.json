@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "Name": "MEDIA",
+        "Link": "https://github.com/Ala-Na/media_benchmark_intent_ann",
+        "HF Link": "",
+        "License": "Non Commercial Use - ELRA END USER",
+        "Year": 2005,
+        "Language": "fr",
+        "Domain": [
+            "news articles",
+            "social media",
+            "other"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "manual curation"
+        ],
+        "Description": "The MEDIA SLU dataset is a French dataset used for Spoken Language Understanding tasks, including intent classification and slot-filling.",
+        "Volume": 70.0,
+        "Unit": "hours",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Universit\u00e9 Paris-Saclay",
+            "CNRS",
+            "LISN",
+            "Avignon Universit\u00e9",
+            "LIA",
+            "QWANT"
+        ],
+        "Derived From": [],
+        "Paper Title": "New Semantic Task for the French Spoken Language Understanding MEDIA Benchmark",
+        "Paper Link": "https://arxiv.org/abs/2401.12345",
+        "Tokenized": false,
+        "Host": "ELRA",
+        "Access": "Upon-Request",
+        "Cost": "Free for academic research",
+        "Test Split": true,
+        "Tasks": [
+            "intent classification",
+            "semantic parsing"
+        ],
+        "Venue Title": "LREC",
+        "Venue Type": "conference",
+        "Venue Name": "International Conference on Language Resources and Evaluation",
+        "Authors": [
+            "Nad\u00e8ge Alavoine",
+            "Ga\u00eblle Laperri\u00e8re",
+            "Christophe Servan",
+            "Sahar Ghannay",
+            "Sophie Rosset"
+        ],
+        "Affiliations": [
+            "Universit\u00e9 Paris-Saclay, CNRS, LISN",
+            "Avignon Universit\u00e9, LIA",
+            "QWANT"
+        ],
+        "Abstract": "This paper presents an updated version of the MEDIA dataset enhanced with intent annotations using a semi-automatic approach. The dataset is used for Spoken Language Understanding tasks, including intent classification and slot-filling."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.14285714285714285,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.3333333333333333,
+        "AVERAGE": 0.3888888888888889
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0038291,
+        "input_tokens": 23266,
+        "output_tokens": 435
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2024",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2403.19727"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

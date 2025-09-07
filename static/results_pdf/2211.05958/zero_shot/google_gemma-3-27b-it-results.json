@@ -1,0 +1,134 @@
+{
+    "metadata": {
+        "Name": "MINION",
+        "Subsets": [
+            {
+                "Name": "English",
+                "Volume": 13000,
+                "Unit": "segments",
+                "Language": "English"
+            },
+            {
+                "Name": "Spanish",
+                "Volume": 3268,
+                "Unit": "segments",
+                "Language": "Spanish"
+            },
+            {
+                "Name": "Portuguese",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Portuguese"
+            },
+            {
+                "Name": "Polish",
+                "Volume": 4479,
+                "Unit": "segments",
+                "Language": "Polish"
+            },
+            {
+                "Name": "Turkish",
+                "Volume": 4480,
+                "Unit": "segments",
+                "Language": "Turkish"
+            },
+            {
+                "Name": "Hindi",
+                "Volume": 1499,
+                "Unit": "segments",
+                "Language": "Hindi"
+            },
+            {
+                "Name": "Japanese",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Japanese"
+            },
+            {
+                "Name": "Korean",
+                "Volume": 1500,
+                "Unit": "segments",
+                "Language": "Korean"
+            }
+        ],
+        "Link": "",
+        "HF Link": "",
+        "License": "custom",
+        "Year": 2021,
+        "Language": [
+            "English",
+            "Spanish",
+            "Portuguese",
+            "Polish",
+            "Turkish",
+            "Hindi",
+            "Japanese",
+            "Korean"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling"
+        ],
+        "Description": "A large-scale multilingual dataset for event detection, annotating events for 8 different languages, including 5 not covered by existing datasets. It contains over 50K annotated event triggers.",
+        "Volume": 50000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Derived From": [],
+        "Paper Title": "MINION: a Large-Scale and Diverse Dataset for Multilingual Event Detection",
+        "Paper Link": "https://arxiv.org/abs/2211.05958",
+        "Tokenized": false,
+        "Host": "other",
+        "Access": "With-Fee",
+        "Cost": "",
+        "Test Split": false,
+        "Tasks": [
+            "irony detection"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "AmirPouranBenVeyseh",
+            "MinhVanNguyen",
+            "FranckDernoncourt",
+            "ThienHuuNguyen"
+        ],
+        "Affiliations": [
+            "University of Oregon",
+            "Adobe Research"
+        ],
+        "Abstract": "Event Detection (ED) is the task of identifying and classifying trigger words of event mentions in text. Despite considerable research efforts in recent years for English text, the task of ED in other languages has been significantly less explored. To answer those questions, it is crucial to obtain multilingual ED datasets that provide consistent event annotation for multiple languages. We introduce a new large-scale multilingual dataset for ED (called MINION) that consistently annotates events for 8 different languages; 5 of them have not been supported by existing multilingual datasets. We also perform extensive experiments and analysis to demonstrate the challenges and transferability of ED across languages in MINION."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00267957,
+        "input_tokens": 19450,
+        "output_tokens": 783
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2211.05958"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

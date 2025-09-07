@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "WikiOmnia",
+        "Link": "https://huggingface.co/datasets/sberquad",
+        "HF Link": "https://huggingface.co/datasets/sberquad",
+        "License": "unknown",
+        "Year": 2021,
+        "Language": "ru",
+        "Domain": [
+            "wikipedia",
+            "news articles",
+            "reviews",
+            "social media",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "machine annotation"
+        ],
+        "Description": "WikiOmnia is a large Russian QA dataset obtained in a fully automated way. It contains QA pairs and corresponding Russian Wikipedia article summary sections, composed with a fully automated generation and filtration pipeline.",
+        "Volume": 15900000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Artificial Intelligence Research Institute",
+            "SberDevices"
+        ],
+        "Derived From": [],
+        "Paper Title": "WikiOmnia: filtration and evaluation of the generated QA corpus on the whole Russian Wikipedia",
+        "Paper Link": "https://arxiv.org/abs/2204.08009",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering",
+            "language modeling",
+            "machine translation"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "DinaPisarevskaya",
+            "TatianaShavrina"
+        ],
+        "Affiliations": [
+            "IndependentResearcher",
+            "ArtificialIntelligenceResearchInstitute(AIRI)",
+            "SberDevices"
+        ],
+        "Abstract": "everyarticleofRussianWikipedia1,basedonthe summarysections. WikiOmniaconsistsof2parts: 1. thevoluminous,automaticallygeneratedpart: 15,9milliontripletsconsistingoftheoriginal article summary, a corresponding generated questionandageneratedanswer; 2. thefilteredpart: thesubsampleof3,5million triplets,fullyverifiedwithautomaticmeans. Apartfromthedata,wepresentafully-automated pipelineforSQuAD-likedatagenerationforRus- sian,basedongenerativepart representedbythe ruGPT-3XL2 andruT5-large3 models,andfilter- ingpartthatincludesRussianBERT4 baselineand rich heuristic approach. All stated models were fine-tunedonSberQuAD(Efimovetal.,2020)that is based on the methodology of the original En- glishSQuAD(Rajpurkaretal.,2016). Thewhole automatedandunsupervisedgenerationandfiltra- tionpipelinewasalsotestedforcreatingSQuAD- formatted QA on other domains: newstexts,cus- tomer reviews, fiction, and social media. QA datasetsgeneratedwithruGPT3XLandruT5will beavailableonHuggingFace."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.42857142857142855,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.5
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00160077,
+        "input_tokens": 15357,
+        "output_tokens": 656
+    },
+    "config": {
+        "model_name": "google_gemma-3-27b-it",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2204.08009"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "Name": "HISTOIRESMORALES",
+        "Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "HF Link": "https://hf.co/datasets/LabHC/histoires_morales",
+        "License": "MIT License",
+        "Year": 2024,
+        "Language": "fr",
+        "Domain": [
+            "social media",
+            "books"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "A French dataset for assessing moral alignment",
+        "Volume": 12000.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "LabHC"
+        ],
+        "Derived From": [
+            "MORALSTORIES"
+        ],
+        "Paper Title": "HISTOIRESMORALES: A French Dataset for Assessing Moral Alignment",
+        "Paper Link": "https://arxiv.org/abs/2402.00786",
+        "Tokenized": false,
+        "Host": "HuggingFace",
+        "Access": "Free",
+        "Cost": "0",
+        "Test Split": true,
+        "Tasks": [
+            "sentiment analysis",
+            "commonsense reasoning"
+        ],
+        "Venue Title": "LREC-COLING 2024",
+        "Venue Type": "conference",
+        "Venue Name": "LREC-COLING 2024",
+        "Authors": [
+            "Thibaud Leteno",
+            "Irina Proskurina",
+            "Antoine Gourru",
+            "Julien Velcin",
+            "Charlotte Laclau",
+            "Guillaume Metzler",
+            "Christophe Gravier"
+        ],
+        "Affiliations": [
+            "Laboratoire Hubert Curien",
+            "Universit\u00e9 Lumi\u00e8re Lyon 2",
+            "T\u00e9l\u00e9com Paris"
+        ],
+        "Abstract": "This paper introduces HISTOIRESMORALES, a French dataset for assessing moral alignment. The dataset is built upon the MORALSTORIES dataset and consists of 12,000 stories that describe moral and deviant behavior in social situations."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 0.6666666666666666,
+        "AVERAGE": 0.6111111111111112
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0055596,
+        "input_tokens": 27398,
+        "output_tokens": 430
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2025",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2501.17117"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

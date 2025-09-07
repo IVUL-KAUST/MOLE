@@ -1,0 +1,81 @@
+{
+    "metadata": {
+        "Name": "FREDSum",
+        "Link": "https://github.com/linto-ai/FREDSum",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "fr",
+        "Domain": [
+            "captions",
+            "web pages"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A dataset of French political debates for dialogue summarization",
+        "Volume": 28619.8,
+        "Unit": "sentences",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Linagora",
+            "\u00c9cole Polytechnique",
+            "Grenoble Ecole de Management"
+        ],
+        "Derived From": [],
+        "Paper Title": "FREDSum: A Dialogue Summarization Corpus for French Political Debates",
+        "Paper Link": "https://arxiv.org/abs/2312.04843",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "summarization",
+            "summarization"
+        ],
+        "Venue Title": "",
+        "Venue Type": "preprint",
+        "Venue Name": "",
+        "Authors": [
+            "Virgile Rennard",
+            "Guokan Shang",
+            "Damien Grari",
+            "Julie Hunter",
+            "Michalis Vazirgiannis"
+        ],
+        "Affiliations": [
+            "Linagora, France",
+            "\u00c9cole Polytechnique, France",
+            "Grenoble Ecole de Management, France"
+        ],
+        "Abstract": "Recent advances in deep learning have improved abstractive summarization systems, but most research has focused on written documents, neglecting multi-party dialogue summarization. This paper presents FREDSum, a dataset of French political debates for enhancing resources for multi-lingual dialogue summarization."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.5714285714285714,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00492828,
+        "input_tokens": 17383,
+        "output_tokens": 390
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2312.04843"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

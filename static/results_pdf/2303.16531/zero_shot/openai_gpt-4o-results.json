@@ -1,0 +1,78 @@
+{
+    "metadata": {
+        "Name": "RusTitW",
+        "Link": "https://github.com/markovivl/SynthText",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2023,
+        "Language": "ru",
+        "Domain": [
+            "web pages",
+            "public datasets"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation",
+            "machine annotation"
+        ],
+        "Description": "RusTitW is a large-scale human-labeled dataset for Russian text recognition in-the-wild. It includes both real-world and synthetic images with paragraph-level annotations, designed to improve automated text-in-the-wild recognition systems.",
+        "Volume": 13.795,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "AIRI",
+            "SberAI"
+        ],
+        "Derived From": [],
+        "Paper Title": "RusTitW: Russian Language Text Dataset for Visual Text in-the-Wild Recognition",
+        "Paper Link": "https://viXra.org/abs/2303.13561",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "text generation",
+            "optical character recognition"
+        ],
+        "Venue Title": "viXra",
+        "Venue Type": "preprint",
+        "Venue Name": "viXra",
+        "Authors": [
+            "Igor Markov",
+            "Sergey Nesteruk",
+            "Andrey Kuznetsov",
+            "Denis Dimitrov"
+        ],
+        "Affiliations": [
+            "AIRI",
+            "SberAI"
+        ],
+        "Abstract": "Information surrounds people in modern life. Text is a very efficient type of information that people use for communication for centuries. However, automated text-in-the-wild recognition remains a challenging problem. The major limitation for a DL system is the lack of training data. For the competitive performance, training set must contain many samples that replicate the real-world cases. While there are many high-quality datasets for English text recognition; there are no available datasets for Russian language. In this paper, we present a large-scale human-labeled dataset for Russian text recognition in-the-wild. We also publish a synthetic dataset and code to reproduce the generation process."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.8571428571428571,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.7777777777777778
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.0228825,
+        "input_tokens": 8706,
+        "output_tokens": 512
+    },
+    "config": {
+        "model_name": "openai_gpt-4o",
+        "few_shot": 0,
+        "month": null,
+        "year": "2023",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2303.16531"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

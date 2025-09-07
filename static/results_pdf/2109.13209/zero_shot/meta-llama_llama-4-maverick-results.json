@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "Name": "FQuAD2.0",
+        "Link": "https://github.com/illuin-technology/FQuAD2.0",
+        "HF Link": "",
+        "License": "CC BY-SA 4.0",
+        "Year": 2021,
+        "Language": "fr",
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "human annotation"
+        ],
+        "Description": "FQuAD2.0 is a French Question Answering dataset with 80,000 questions, extending FQuAD1.1 with 17,000+ unanswerable questions.",
+        "Volume": 80000.0,
+        "Unit": "tokens",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "Illuin Technology"
+        ],
+        "Derived From": [
+            "FQuAD1.1"
+        ],
+        "Paper Title": "FQuAD2.0: French Question Answering and knowing that you know nothing",
+        "Paper Link": "https://arxiv.org/abs/2109.03370",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "question answering"
+        ],
+        "Venue Title": "EMNLP 2021",
+        "Venue Type": "conference",
+        "Venue Name": "Findings of the Association for Computational Linguistics: EMNLP 2021",
+        "Authors": [
+            "Quentin Heinrich",
+            "Gautier Viaud",
+            "Wacim Belblidia"
+        ],
+        "Affiliations": [
+            "Illuin Technology"
+        ],
+        "Abstract": "This paper introduces FQuAD2.0, a French Question Answering dataset that extends FQuAD1.1 with unanswerable questions. The dataset is designed to evaluate the ability of models to distinguish between answerable and unanswerable questions."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.42857142857142855,
+        "DIVERSITY": 1.0,
+        "CONTENT": 0.7142857142857143,
+        "EVALUATION": 1.0,
+        "AVERAGE": 0.6666666666666666
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.00292179,
+        "input_tokens": 15479,
+        "output_tokens": 407
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2021",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2109.13209"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}

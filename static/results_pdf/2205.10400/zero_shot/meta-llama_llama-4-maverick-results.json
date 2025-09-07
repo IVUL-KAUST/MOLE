@@ -1,0 +1,115 @@
+{
+    "metadata": {
+        "Name": "MULTI2WOZ",
+        "Subsets": [
+            {
+                "Name": "Arabic",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Arabic"
+            },
+            {
+                "Name": "Chinese",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Chinese"
+            },
+            {
+                "Name": "German",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "German"
+            },
+            {
+                "Name": "Russian",
+                "Volume": 2000,
+                "Unit": "dialogs",
+                "Language": "Russian"
+            }
+        ],
+        "Link": "https://github.com/umanlp/Multi2WOZ",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2022,
+        "Language": [
+            "Arabic",
+            "Chinese",
+            "German",
+            "Russian"
+        ],
+        "Domain": [
+            "wikipedia"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "machine annotation",
+            "human annotation"
+        ],
+        "Description": "A multilingual multi-domain task-oriented dialog dataset derived from MultiWOZ",
+        "Volume": 8000.0,
+        "Unit": "images",
+        "Ethical Risks": "Low",
+        "Provider": [
+            "University of Mannheim",
+            "Bocconi University",
+            "University of Cambridge",
+            "University of Wuerzburg"
+        ],
+        "Derived From": [
+            "MultiWOZ"
+        ],
+        "Paper Title": "Multi2WOZ: A Robust Multilingual Dataset and Conversational Pretraining for Task-Oriented Dialog",
+        "Paper Link": "https://arxiv.org/abs/2202.11923",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "relation extraction",
+            "information retrieval"
+        ],
+        "Venue Title": "ACL 2022",
+        "Venue Type": "conference",
+        "Venue Name": "Association for Computational Linguistics",
+        "Authors": [
+            "Chia-Chien Hung",
+            "Anne Lauscher",
+            "Ivan Vulic",
+            "Simone Paolo Ponzetto",
+            "Goran Glavas"
+        ],
+        "Affiliations": [
+            "University of Mannheim",
+            "Bocconi University",
+            "University of Cambridge",
+            "University of Wuerzburg"
+        ],
+        "Abstract": "This paper introduces MULTI2WOZ, a multilingual multi-domain task-oriented dialog dataset derived from MultiWOZ. The dataset is translated into four languages: Arabic, Chinese, German, and Russian."
+    },
+    "validation": {
+        "DIVERSITY": 0.5,
+        "ACCESSABILITY": 0.7142857142857143,
+        "CONTENT": 0.5714285714285714,
+        "EVALUATION": 0.0,
+        "AVERAGE": 0.5263157894736842
+    },
+    "length_forcing": 0.9999999999999999,
+    "cost": {
+        "cost": 0.00497794,
+        "input_tokens": 20829,
+        "output_tokens": 555
+    },
+    "config": {
+        "model_name": "meta-llama_llama-4-maverick",
+        "few_shot": 0,
+        "month": null,
+        "year": "2022",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2205.10400"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
