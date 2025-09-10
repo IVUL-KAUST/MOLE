@@ -266,7 +266,13 @@ def get_predictions(
     return results
 
 
-def evaluate_lengths(pred_metadata, schema = "ar" , columns = None):
+def evaluate_lengths(pred_metadata, schema = "ar" , columns = None, length = "all"):
+    if length == "mid":
+        schema += "_mid"
+    elif length == "high":
+        schema += "_high"
+    else:
+        pass
     validation_columns = schemata[schema]["validation_columns"]
     answer_types = schemata[schema]["answer_types"]
     answer_lengths = schemata[schema]['answer_lengths']
@@ -288,8 +294,10 @@ def evaluate_lengths(pred_metadata, schema = "ar" , columns = None):
                 length_forcing += 1/len(columns)
             elif pred_len <= r[1]:
                 length_forcing += 1/len(columns)
+            else:
+                print(c, pred_metadata[c], r)
         else:
-            pass
+            print(c, pred_metadata[c], r)
     return length_forcing
 
 def get_schema_from_path(json_path):
@@ -323,14 +331,21 @@ def evaluate_metadata(
         schema=schema,
     )
     for subset in evaluation_subsets:
+        subset_precision = 0 
+        subset_recall = 0 
+
         for column in evaluation_subsets[subset]:
             if column in predictions:
-                results[subset] += predictions[column]
+                subset_precision += predictions[column]
+                if annotations_from_paper[column] == 1:
+                    subset_recall += predictions[column]
             if return_columns:
                 if column not in results:
                     results[column] = predictions[column]
-        results[subset] = results[subset] / len(evaluation_subsets[subset])
-    results["AVERAGE"] = sum(predictions.values()) / len(predictions)
+        subset_precision = subset_precision / (len(evaluation_subsets[subset]) + 1e-6) 
+        subset_recall = subset_recall / (sum(annotations_from_paper[c] for c in evaluation_subsets[subset]) + 1e-6)
+        results[subset] = 2 * subset_precision * subset_recall / (subset_precision + subset_recall+1e-6)
+    results["AVERAGE"] = np.mean([results[c] for c in results if c in evaluation_subsets])
     attributes = schemata[schema]["validation_columns"]
     precision = np.mean([results[c] for c in attributes if c in results])
     recall = np.mean([results[c] for c in attributes if annotations_from_paper[c] == 1])
