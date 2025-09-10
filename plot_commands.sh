@@ -4,6 +4,12 @@ uv run plots.py --eval test --schema all --results_path static/results_maged --i
 # main results by language
 uv run plots.py --eval test --schema all  --group_by language --non_browsing
 
+# main results by category
+uv run plots.py --eval test --schema all --non_browsing
+
+# browsing difference 
+uv run plots.py --eval test --schema all --group_by attributes
+
 # context length
 uv run plots.py --eval test --schema all  --group_by language --type context_length --non_browsing
 
