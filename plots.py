@@ -7,6 +7,7 @@ import numpy as np
 from plot_utils import print_table, print_latex_table
 from utils import get_predictions, evaluate_metadata, get_metadata_from_path, get_id_from_path, get_schema_from_path, evaluate_lengths
 import os
+from tqdm import tqdm
 args = argparse.ArgumentParser()
 args.add_argument("--eval", type=str, default="valid")
 args.add_argument("--subsets", action="store_true")
@@ -51,12 +52,19 @@ def plot_by_length():
             found_ids.append(arxiv_id)
         if model_name not in metric_results:
             metric_results[model_name] = []
-        # metric_results[model_name].append(evaluate_lengths(results["metadata"], schema = schema, columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]))
         if "length_forcing" not in results:
             continue
+        schema = get_schema_from_path(json_file)
         results_mid = json.load(open(json_file.replace("results_latex", "results_length_mid")))
         results_high = json.load(open(json_file.replace("results_latex", "results_length_high")))
-        metric_results[model_name].append([results["length_forcing"], results_mid["length_forcing"], results_high["length_forcing"]])
+        schema_results= [results, results_mid, results_high]
+        length_results = []
+        # columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]
+        columns = None
+        for i, length_type in enumerate(["all", "mid", "high"]):
+            length = evaluate_lengths(schema_results[i]["metadata"], schema = schema, columns = columns, length = length_type)
+            length_results.append(length)
+        metric_results[model_name].append(length_results)
     final_results = {}
 
     for model_name in metric_results:
@@ -96,8 +104,10 @@ def plot_by_errors():
     types_of_errors = {}
     ids = get_all_ids()
     metric_results = {}
-    json_files = glob(f"static/results_**/**/**/**/*.json") + glob(f"static/results_**/**/**/*.json")
-    print(len(json_files))
+    json_files = []
+    for path in ["results_latex"]:
+        json_files.extend(glob(f"static/{path}/**/**/*.json"))
+    print(len(json_files))  
     for json_file in json_files:
         results = json.load(open(json_file))
         arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
@@ -117,8 +127,10 @@ def plot_by_errors():
             types_of_errors[results["error"]] = 1
         metric_results[model_name].append([is_error])
     final_results = {}
+    print(len(metric_results))
     for model_name in metric_results:
-        final_results[model_name] = metric_results[model_name]
+        if len(metric_results[model_name]) % len(ids) == 0:
+            final_results[model_name] = metric_results[model_name]
 
     results = []
     for model_name in final_results:
@@ -142,13 +154,17 @@ def plot_by_cost():
             continue
         if model_name not in metric_results:
             metric_results[model_name] = []
+        try:
+            cost = get_openrouter_cost(model_name, results["cost"]["input_tokens"], results["cost"]["output_tokens"])
+        except:
+            continue
         metric_results[model_name].append(
             [
                 results["cost"]["input_tokens"],
                 results["cost"]["output_tokens"],
                 results["cost"]["input_tokens"] + results["cost"]["output_tokens"],
-                results["cost"]["cost"],
-                get_openrouter_cost(model_name, results["cost"]["input_tokens"], results["cost"]["output_tokens"]),
+                # results["cost"]["cost"],
+                cost,
             ]
         )
     final_results = {}
@@ -162,8 +178,9 @@ def plot_by_cost():
             [remap_names(model_name)] + (np.sum(final_results[model_name], axis=0)).tolist()
         )
 
-    headers = ["Model", "Input Tokens", "Output Tokens", "Total Tokens", "Cost (USD)", "Cost (OpenRouter)"]
+    headers = ["Model", "Input Tokens", "Output Tokens", "Total Tokens", "Cost (OpenRouter)"]
     print_table(results, headers)
+    print_latex_table(results, headers)   
 
 
 def plot_by_year():
@@ -643,7 +660,9 @@ def plot_table():
     metric_results = {}
     use_annotations_paper = args.use_annotations_paper
     ids = get_all_ids()
-    for json_file in json_files:
+    for json_file in tqdm(json_files):
+        if "baseline" in json_file:
+            continue
         results = json.load(open(json_file))
         arxiv_id = get_id_from_path(json_file)
         if arxiv_id not in ids:
@@ -655,7 +674,7 @@ def plot_table():
             metric_results[model_name] = []
         # human_json_path = human_json_path.replace(f"/{args.type}", "")
         gold_metadata = get_metadata_from_path(json_file)
-
+        
         scores = evaluate_metadata(
             gold_metadata, pred_metadata,
             schema = schema,
@@ -676,19 +695,39 @@ def plot_table():
             final_results[model_name] = metric_results[model_name]
 
     results = []
-    for model_name in final_results:
-        results.append(
-            [remap_names(model_name)] + (np.mean(final_results[model_name], axis=0) * 100).tolist()
-        )
+    model_names = final_results.keys()
+    diff = True
+    for model_name in model_names:
+        mapped_name = remap_names(model_name)
+        if args.group_by == "attributes":
+            mapped_name = mapped_name.split(" ")[0]
+        avg = np.mean(final_results[model_name], axis=0)
+        if diff:
+            if 'browsing' in model_name.lower():
+                continue
+            browsing_results = final_results[model_name + "-browsing"]
+            avg_browsing = np.mean(browsing_results, axis=0)
+            del browsing_results
+            avg = avg_browsing - avg
 
-    print_table(results, headers, format = True)
+        results.append(
+            [mapped_name] + (avg * 100).tolist()
+        )
+    
+    flip = False
+    sort = True
+    if args.group_by == "attributes":
+        flip = True
+        sort = False
+        
+    print_table(results, headers, format = True, flip = flip, sort = sort)
     
     # Generate LaTeX table for Overleaf
     caption = f"Performance by {args.group_by} ({args.eval} set)"
     if use_annotations_paper:
         caption += " with annotations from paper"
     label = f"tab:{args.group_by}_{args.eval}"
-    print_latex_table(results, headers, caption=caption, label=label)
+    print_latex_table(results, headers, caption=caption, label=label, flip = flip, sort = sort)
     
     if use_annotations_paper:
         print(

@@ -1,5 +1,6 @@
 from tabulate import tabulate  # type: ignore
 import re
+import pandas as pd
 
 def remove_average(results, headers):
     # if both Weighted Average and Average are in the headers, remove the Average
@@ -14,20 +15,28 @@ def remove_average(results, headers):
         output_results = results
     return output_results, headers
 
-def print_table(results, headers, title="", format=False):
+def transpose(results, headers):
+    df= pd.DataFrame(results, columns=headers).T
+    rows = df.reset_index().values.tolist()
+    headers = rows[0]
+    rows = rows[1:]
+    return rows, headers
+
+def print_table(results, headers, title="", format=False, flip = False, sort = True):
+    if flip:
+        results, headers = transpose(results, headers)
     results, headers = remove_average(results, headers)
+    print(results)
     RED = "\033[103m"
     UNDERLINE = "\033[4m"
     END = "\033[0m"
 
     if not format:
+        if sort:
+            results = sorted(results, key=lambda x: x[-1], reverse=False)
         print(
             tabulate(
-                sorted(
-                    results,
-                    key=lambda x: x[-1],
-                    reverse=False,
-                ),
+                results,
                 headers=headers,
                 tablefmt="github",
                 floatfmt=".2f",
@@ -57,27 +66,29 @@ def print_table(results, headers, title="", format=False):
     if title:
         print(f"\n{title}\n")
 
+    if sort:
+        formatted_results = sorted(formatted_results, key=lambda x: x[-1], reverse=False)
+    
     print(
         tabulate(
-            sorted(
-                formatted_results,
-                key=lambda x: float(
-                    x[-1].replace(RED, "").replace(UNDERLINE, "").replace(END, "")
-                ),
-                reverse=False,
-            ),
+            formatted_results,
             headers=headers,
             tablefmt="github",
             floatfmt=".2f"
         )
     )
 
-def print_latex_table(results, headers, title="", caption="", label=""):
+def print_latex_table(results, headers, title="", caption="", label="", flip = False, sort = True):
     """Generate LaTeX table format for copying to Overleaf"""
     results, headers = remove_average(results, headers)
+    if flip:
+        results, headers = transpose(results, headers)
     
     # Sort results by the last column (typically average score)
-    sorted_results = sorted(results, key=lambda x: x[-1], reverse=False)
+    if sort:
+        sorted_results = sorted(results, key=lambda x: x[-1], reverse=False)
+    else:
+        sorted_results = results
     
     # Clean headers for LaTeX (replace spaces with proper formatting)
     latex_headers = []
