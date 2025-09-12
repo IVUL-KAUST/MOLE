@@ -96,6 +96,8 @@ class Int(BaseType):
             return 0
     
     def compare(self, attr1, attr2):
+        if attr1 == attr2:
+            return 1
         return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2)) # TODO: revise
     
 class Bool(BaseType):
