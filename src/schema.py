@@ -136,9 +136,20 @@ class Schema(BaseModel):
         schema = cls.dict()
         return schema[key]['answer_max']
     
-    def get_system_prompt():
-        raise NotImplementedError("get_system_prompt is not implemented for this schema")
-
+    @classmethod
+    def get_system_prompt(cls):
+        return f"""
+            You are a professional metadata extractor of datasets from research papers. 
+            You will be provided 'Paper Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
+            The 'Output JSON' is a JSON with key:answer where the answer retrieves an attribute of the 'Input Schema' from the 'Paper Text'. 
+            Each attribute in the 'Input Schema' has the following fields:
+            'options' : If the attribute has 'options' then the answer must be at least one of the options.
+            'answer_type': The output type represents the type of the answer.
+            'answer_min' : The minimum length of the answer depending on the 'answer_type'.
+            'answer_max' : The maximum length of the answer depending on the 'answer_type'.
+            The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
+            The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
+        """
     def get_answer_type(self, key):
         return self.model_fields[key].annotation
     
@@ -160,7 +171,22 @@ class Schema(BaseModel):
     def get_default(cls, key):
         type = cls.get_answer_object(key)
         return type.get_default()
-    
+
+    @classmethod
+    def get_system_prompt(self):
+        return f"""
+            You are a professional metadata extractor of datasets from research papers. 
+            You will be provided 'Paper Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
+            The 'Output JSON' is a JSON with key:answer where the answer retrieves an attribute of the 'Input Schema' from the 'Paper Text'. 
+            Each attribute in the 'Input Schema' has the following fields:
+            'options' : If the attribute has 'options' then the answer must be at least one of the options.
+            'answer_type': The output type represents the type of the answer.
+            'answer_min' : The minimum length of the answer depending on the 'answer_type'.
+            'answer_max' : The maximum length of the answer depending on the 'answer_type'.
+            The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
+            The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
+        """
+        
     def evaluate_length(self):
         accuracy = 0
         metadata = self.model_dump()
@@ -259,22 +285,41 @@ class DatasetSchema(Schema):
                         Input Schema: {schema}
                         Paper Text: {paper_text}
                     """
-        system_prompt = f"""
-            You are a professional metadata extractor of datasets from research papers. 
-            You will be provided 'Paper Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
-            The 'Output JSON' is a JSON with key:answer where the answer retrieves an attribute of the 'Input Schema' from the 'Paper Text'. 
-            Each attribute in the 'Input Schema' has the following fields:
-            'options' : If the attribute has 'options' then the answer must be at least one of the options.
-            'answer_type': The output type represents the type of the answer.
-            'answer_min' : The minimum length of the answer depending on the 'answer_type'.
-            'answer_max' : The maximum length of the answer depending on the 'answer_type'.
-            The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
-            The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
-        """
+        system_prompt = cls.get_system_prompt()
         if version == "2.0":
             system_prompt += "Use the following guidelines to extract the answer from the 'Paper Text':\n\n"
             system_prompt += open('GUIDELINES.md').read()
 
+        return prompt, system_prompt
+
+class Model(Schema):
+    Name: Field(Str, 1, 5)
+    Num_Parameters: Field(Float, 1, 1000)
+    Unit: Field(Str, 1, 1, ['Millions', 'Billions', 'Trillions'])
+    Type: Field(Str, 1, 3, ["Base", "Code", "Chat"])
+    Think: Field(Bool, 1, 1)
+
+class ModelSchema(Model):
+    Version: Field(Float, 1, 1)
+    Models: Field(List[Model], 1, 10)
+    License: Field(Str, 1, 1, licenses)
+    Year: Field(Year, 1900, 2025)
+    Benchmarks: Field(List[Str],1, 20)
+    Architecture: Field(Str, 1, 1, ["Transfromer", "MoE", "SSM", "RNN", "CNN", "Hybrid", "other"])
+    Context: Field(Int, 1)
+    Language: Field(Str, 1, 1, ['monolingual', 'bilingual', 'multilingual'])
+    Provider: Field(Str, 1, 1)
+    
+    @classmethod
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+        schema = cls.schema()
+        prompt = f"""Schema Name: {cls.get_schema_name()}
+                    Input Schema: {schema}
+                    Paper Text: {paper_text}
+                """
+        system_prompt = cls.get_system_prompt().replace("datasets", "models")
+        system_prompt += "Use the following guidelines to extract the answer from the 'Paper Text':\n\n"
+        system_prompt += open('GUIDELINES_MODEL.md').read()
         return prompt, system_prompt
 
 class ResourceSchema(Schema):
@@ -400,5 +445,7 @@ def get_schema(schema_name):
         return TestSchema
     elif schema_name == 'resource':
         return ResourceSchema
+    elif schema_name == 'model':
+        return ModelSchema
     else:
         raise ValueError(f"Invalid schema name: {schema_name}")
