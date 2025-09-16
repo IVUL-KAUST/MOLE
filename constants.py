@@ -229,10 +229,11 @@ open_router_costs = {
 import os
 
 schemata = {}
-
-for schema_file in os.listdir("schema"):
-    schema = json.load(open(f"schema/{schema_file}", "r"))
-    schema_name = schema_file.split(".")[0]
+schema_path = "schema"
+schema_files = glob(f"{schema_path}/*.json")+glob(f"{schema_path}_length_mid/*.json")+glob(f"{schema_path}_length_high/*.json")
+for schema_file in schema_files:
+    schema = json.load(open(schema_file, "r"))
+    schema_name = schema_file.split("/")[1].replace(".json", "")
     columns = list(schema.keys())
     columns_with_lists = [c for c in columns if "List[str]" == schema[c]["answer_type"]]
     system_prompt = f"""
@@ -293,7 +294,10 @@ for schema_file in os.listdir("schema"):
         if 'answer_max' in schema[c]:
             r[1] = schema[c]['answer_max']
         answer_lengths[c] = r
-
+    if "mid" in schema_file:
+        schema_name += "_mid"
+    elif "high" in schema_file:
+        schema_name += "_high"
     schemata[schema_name] = {}
     schemata[schema_name]["columns"] = columns
     schemata[schema_name]["answer_types"] = answer_types
@@ -306,7 +310,7 @@ for schema_file in os.listdir("schema"):
     schemata[schema_name]['answer_lengths'] = answer_lengths
     examples = []
     for i in range(1, 5 + 1):
-        path = f"examples/{schema_name}/example{i}"
+        path = f"examples/{schema_name.split('_')[0]}/example{i}"
         if os.path.exists(f"{path}.tex"):
             with open(f"{path}.tex", "r") as f:
                 input_text = f.read()

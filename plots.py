@@ -4,9 +4,10 @@ import json
 import argparse
 from constants import eval_datasets_ids, non_browsing_models, schemata, open_router_costs
 import numpy as np
-from plot_utils import print_table
+from plot_utils import print_table, print_latex_table
 from utils import get_predictions, evaluate_metadata, get_metadata_from_path, get_id_from_path, get_schema_from_path, evaluate_lengths
 import os
+from tqdm import tqdm
 args = argparse.ArgumentParser()
 args.add_argument("--eval", type=str, default="valid")
 args.add_argument("--subsets", action="store_true")
@@ -51,10 +52,19 @@ def plot_by_length():
             found_ids.append(arxiv_id)
         if model_name not in metric_results:
             metric_results[model_name] = []
-        # metric_results[model_name].append(evaluate_lengths(results["metadata"], schema = schema, columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]))
         if "length_forcing" not in results:
             continue
-        metric_results[model_name].append(results["length_forcing"])
+        schema = get_schema_from_path(json_file)
+        results_mid = json.load(open(json_file.replace("results_latex", "results_length_mid")))
+        results_high = json.load(open(json_file.replace("results_latex", "results_length_high")))
+        schema_results= [results, results_mid, results_high]
+        length_results = []
+        # columns = ["Name", "Description", "Provider", "Derived From", "Tasks"]
+        columns = None
+        for i, length_type in enumerate(["all", "mid", "high"]):
+            length = evaluate_lengths(schema_results[i]["metadata"], schema = schema, columns = columns, length = length_type)
+            length_results.append(length)
+        metric_results[model_name].append(length_results)
     final_results = {}
 
     for model_name in metric_results:
@@ -63,9 +73,9 @@ def plot_by_length():
     results = []
     for model_name in final_results:
         results.append(
-            [model_name] + [(np.mean(final_results[model_name], axis=0)).tolist()]
+            [remap_names(model_name)] + (np.mean(final_results[model_name], axis=0)).tolist()
         )
-    headers = ["MODEL", "LENGTH"]
+    headers = ["MODEL", "LENGTH", "LENGTH MID", "LENGTH HIGH"]
     print_table(results, headers)
     
 def get_all_ids():
@@ -94,8 +104,10 @@ def plot_by_errors():
     types_of_errors = {}
     ids = get_all_ids()
     metric_results = {}
-    json_files = glob(f"static/results_**/**/**/**/*.json") + glob(f"static/results_**/**/**/*.json")
-    print(len(json_files))
+    json_files = []
+    for path in ["results_latex"]:
+        json_files.extend(glob(f"static/{path}/**/**/*.json"))
+    print(len(json_files))  
     for json_file in json_files:
         results = json.load(open(json_file))
         arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
@@ -115,8 +127,10 @@ def plot_by_errors():
             types_of_errors[results["error"]] = 1
         metric_results[model_name].append([is_error])
     final_results = {}
+    print(len(metric_results))
     for model_name in metric_results:
-        final_results[model_name] = metric_results[model_name]
+        if len(metric_results[model_name]) % len(ids) == 0:
+            final_results[model_name] = metric_results[model_name]
 
     results = []
     for model_name in final_results:
@@ -140,13 +154,17 @@ def plot_by_cost():
             continue
         if model_name not in metric_results:
             metric_results[model_name] = []
+        try:
+            cost = get_openrouter_cost(model_name, results["cost"]["input_tokens"], results["cost"]["output_tokens"])
+        except:
+            continue
         metric_results[model_name].append(
             [
                 results["cost"]["input_tokens"],
                 results["cost"]["output_tokens"],
                 results["cost"]["input_tokens"] + results["cost"]["output_tokens"],
-                results["cost"]["cost"],
-                get_openrouter_cost(model_name, results["cost"]["input_tokens"], results["cost"]["output_tokens"]),
+                # results["cost"]["cost"],
+                cost,
             ]
         )
     final_results = {}
@@ -160,8 +178,9 @@ def plot_by_cost():
             [remap_names(model_name)] + (np.sum(final_results[model_name], axis=0)).tolist()
         )
 
-    headers = ["Model", "Input Tokens", "Output Tokens", "Total Tokens", "Cost (USD)", "Cost (OpenRouter)"]
+    headers = ["Model", "Input Tokens", "Output Tokens", "Total Tokens", "Cost (OpenRouter)"]
     print_table(results, headers)
+    print_latex_table(results, headers)   
 
 
 def plot_by_year():
@@ -196,7 +215,7 @@ def plot_by_year():
         # if gold_metadata["Year"] == 2025:
         #     print(arxiv_id)
         metric_results[model_name].append(
-            [gold_metadata["Year"], scores["AVERAGE"]]
+            [gold_metadata["Year"], scores["f1"]]
         )
 
     final_results = {}
@@ -287,7 +306,7 @@ def remap_names(model_name):
 def plot_langs():
     json_files_by_language = get_jsons_by_lang()
     langs = list(json_files_by_language.keys())
-    headers = [ "Model"] + langs  + ["Average"] + ["Weighted Average"]
+    headers = [ "Model"] + langs  + ["Average"]
     metric_results = {}
     use_annotations_paper = args.use_annotations_paper
     ignore_length = args.ignore_length
@@ -304,7 +323,7 @@ def plot_langs():
                 gold_metadata, pred_metadata,
                 schema = lang
             )
-            scores = [scores["AVERAGE"]]
+            scores = [scores["f1"]]
             if use_annotations_paper:
                 average_ignore_mistakes = evaluate_metadata(
                     gold_metadata, pred_metadata, use_annotations_paper=True, schema=lang
@@ -340,13 +359,20 @@ def plot_langs():
             else:
                 per_model_results.append(0)
         weighted_average /= total_length
-        final_results[model_name]["Weighted Average"] = weighted_average
         
         assert len(per_model_results) == len(langs)
-        results.append([remap_names(model_name)] +per_model_results+ [np.mean(per_model_results, axis=0).tolist()] + [final_results[model_name]["Weighted Average"]])
+        results.append([remap_names(model_name)] +per_model_results+ [np.mean(per_model_results, axis=0).tolist()])
     # for r in results:
     #     assert(len(r)) == len(langs)+2, r
     print_table(results, headers, format = False)
+    
+    # Generate LaTeX table for Overleaf
+    caption = f"Performance comparison across languages ({args.eval} set)"
+    if use_annotations_paper:
+        caption += " with annotations from paper"
+    label = f"tab:lang_comparison_{args.eval}"
+    print_latex_table(results, headers, caption=caption, label=label)
+    
     if use_annotations_paper:
         print(
             "* Computed average by considering metadata exctracted from outside the paper."
@@ -385,7 +411,7 @@ def plot_context_length():
                 gold_metadata, pred_metadata,
                 schema = get_schema_from_path(json_file)
             )
-            scores = [scores["AVERAGE"]]
+            scores = [scores["f1"]]
             if use_annotations_paper:
                 average_ignore_mistakes = evaluate_metadata(
                     gold_metadata, pred_metadata, use_annotations_paper=True
@@ -400,6 +426,74 @@ def plot_context_length():
         few_shot_scores = []
         for i in ["quarter", "half", "all"]:
             print(i, len(metric_results[model_name][i]), len(ids))
+            try:
+                if len(metric_results[model_name][i]) == len(ids):
+                    few_shot_scores.append(float(np.mean(metric_results[model_name][i]) * 100))
+                else:
+                    few_shot_scores.append(0)
+            except:
+                few_shot_scores.append(0)
+        results.append([remap_names(model_name)] + few_shot_scores)
+    print_table(results, headers, format = False)
+    if use_annotations_paper:
+        print(
+            "* Computed average by considering metadata exctracted from outside the paper."
+        )
+
+def plot_browsing():
+    headers = [ "MODEL"] + ["Non Browsing", "Browsing"]
+    ids = get_all_ids()
+    metric_results = {}
+    use_annotations_paper = args.use_annotations_paper
+
+    for json_file in json_files:
+        results = json.load(open(json_file))
+        arxiv_id = get_id_from_path(json_file)
+        if arxiv_id not in ids:
+            continue
+        
+        if any([x in json_file for x in ['random', 'keyword', 'human', 'browsing']]):
+            continue
+        model_name = results["config"]["model_name"]
+        pred_metadata = results["metadata"]
+        if model_name not in metric_results:
+            metric_results[model_name] = {}
+        gold_metadata = get_metadata_from_path(json_file)
+        
+        for i in ["non_browsing", "browsing"]:
+            if i not in metric_results[model_name]:
+                metric_results[model_name][i] = []
+
+            if i == "non_browsing":
+                pred_metadata = json.load(open(json_file))['metadata']
+            else:
+                browsing_path = json_file.replace( f'-results.json', f'-browsing-results.json')
+                if os.path.exists(browsing_path):
+                    pred_metadata = json.load(open(browsing_path))['metadata']
+                else:
+                    if model_name in metric_results:
+                        del metric_results[model_name]
+                    continue
+
+            scores = evaluate_metadata(
+                gold_metadata, pred_metadata,
+                schema = get_schema_from_path(json_file),
+                return_columns = True
+            )
+            scores = [scores["precision"]]
+            if use_annotations_paper:
+                average_ignore_mistakes = evaluate_metadata(
+                    gold_metadata, pred_metadata, use_annotations_paper=True
+                )["AVERAGE"]
+                scores = [average_ignore_mistakes]
+            metric_results[model_name][i].append(scores[0])
+    results = []
+    # print(metric_results)
+    for model_name in metric_results:
+        if "human" in model_name.lower():
+            continue
+        few_shot_scores = []
+        for i in ["non_browsing", "browsing"]:
             try:
                 if len(metric_results[model_name][i]) == len(ids):
                     few_shot_scores.append(float(np.mean(metric_results[model_name][i]) * 100))
@@ -451,7 +545,7 @@ def plot_fewshot():
                 schema = get_schema_from_path(json_file),
                 return_columns = True
             )
-            scores = [scores["AVERAGE"]]
+            scores = [scores["f1"]]
             if use_annotations_paper:
                 average_ignore_mistakes = evaluate_metadata(
                     gold_metadata, pred_metadata, use_annotations_paper=True
@@ -532,6 +626,14 @@ def plot_table_by_other_metrics():
         )
 
     print_table(results, headers, format = True)
+    
+    # Generate LaTeX table for Overleaf
+    caption = f"Performance metrics (Precision, Recall, F1) ({args.eval} set)"
+    if use_annotations_paper:
+        caption += " with annotations from paper"
+    label = f"tab:metrics_{args.eval}"
+    print_latex_table(results, headers, caption=caption, label=label)
+    
     if use_annotations_paper:
         print(
             "* Computed average by considering metadata exctracted from outside the paper."
@@ -558,7 +660,9 @@ def plot_table():
     metric_results = {}
     use_annotations_paper = args.use_annotations_paper
     ids = get_all_ids()
-    for json_file in json_files:
+    for json_file in tqdm(json_files):
+        if "baseline" in json_file:
+            continue
         results = json.load(open(json_file))
         arxiv_id = get_id_from_path(json_file)
         if arxiv_id not in ids:
@@ -570,7 +674,7 @@ def plot_table():
             metric_results[model_name] = []
         # human_json_path = human_json_path.replace(f"/{args.type}", "")
         gold_metadata = get_metadata_from_path(json_file)
-
+        
         scores = evaluate_metadata(
             gold_metadata, pred_metadata,
             schema = schema,
@@ -591,12 +695,40 @@ def plot_table():
             final_results[model_name] = metric_results[model_name]
 
     results = []
-    for model_name in final_results:
-        results.append(
-            [remap_names(model_name)] + (np.mean(final_results[model_name], axis=0) * 100).tolist()
-        )
+    model_names = final_results.keys()
+    diff = True
+    for model_name in model_names:
+        mapped_name = remap_names(model_name)
+        if args.group_by == "attributes":
+            mapped_name = mapped_name.split(" ")[0]
+        avg = np.mean(final_results[model_name], axis=0)
+        if diff:
+            if 'browsing' in model_name.lower():
+                continue
+            browsing_results = final_results[model_name + "-browsing"]
+            avg_browsing = np.mean(browsing_results, axis=0)
+            del browsing_results
+            avg = avg_browsing - avg
 
-    print_table(results, headers, format = True)
+        results.append(
+            [mapped_name] + (avg * 100).tolist()
+        )
+    
+    flip = False
+    sort = True
+    if args.group_by == "attributes":
+        flip = True
+        sort = False
+        
+    print_table(results, headers, format = True, flip = flip, sort = sort)
+    
+    # Generate LaTeX table for Overleaf
+    caption = f"Performance by {args.group_by} ({args.eval} set)"
+    if use_annotations_paper:
+        caption += " with annotations from paper"
+    label = f"tab:{args.group_by}_{args.eval}"
+    print_latex_table(results, headers, caption=caption, label=label, flip = flip, sort = sort)
+    
     if use_annotations_paper:
         print(
             "* Computed average by considering metadata exctracted from outside the paper."
@@ -691,6 +823,8 @@ if __name__ == "__main__":
         plot_fewshot()
     elif args.type == 'context_length':
         plot_context_length()
+    elif args.type == 'browsing':
+        plot_browsing()
     elif args.errors:
         plot_by_errors()
     elif args.length:
