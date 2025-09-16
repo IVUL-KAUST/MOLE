@@ -25,6 +25,8 @@ args.add_argument("--errors", action="store_true")
 args.add_argument("--group_by", type = str, default = "evaluation_subsets")
 args.add_argument("--ignore_length", action="store_true")
 args.add_argument("--other_metrics", action="store_true")
+args.add_argument("--diff", action="store_true")
+args.add_argument("--format", action="store_true")
 args = args.parse_args()
 
 # evaluation_subsets = schema[args.schema]['evaluation_subsets']
@@ -378,6 +380,70 @@ def plot_langs():
             "* Computed average by considering metadata exctracted from outside the paper."
         )
 
+def plot_format():
+    headers = [ "MODEL"] + ["latex", "pdf", "docling"]
+    ids = get_all_ids()
+    metric_results = {}
+    use_annotations_paper = args.use_annotations_paper
+
+    for json_file in json_files:
+        results = json.load(open(json_file))
+        arxiv_id = get_id_from_path(json_file)
+        if arxiv_id not in ids:
+            continue
+        model_name = results["config"]["model_name"]
+        pred_metadata = results["metadata"]
+        if model_name not in metric_results:
+            metric_results[model_name] = {}
+        gold_metadata = get_metadata_from_path(json_file)
+        for i in ["latex", "pdf", "docling"]:
+            if i not in metric_results[model_name]:
+                metric_results[model_name][i] = []
+
+            if i == "latex":
+                pred_metadata = json.load(open(json_file))['metadata']
+            else:
+                format_path = json_file.replace("results_latex", f"results_{i}")
+                if os.path.exists(format_path):
+                    pred_metadata = json.load(open(format_path))['metadata']
+                else:
+                    continue
+
+            scores = evaluate_metadata(
+                gold_metadata, pred_metadata,
+                schema = get_schema_from_path(json_file)
+            )
+            scores = [scores["f1"]]
+            if use_annotations_paper:
+                average_ignore_mistakes = evaluate_metadata(
+                    gold_metadata, pred_metadata, use_annotations_paper=True
+                )["AVERAGE"]
+                scores = [average_ignore_mistakes]
+            metric_results[model_name][i].append(scores[0])
+    results = []
+    # print(metric_results)
+    for model_name in metric_results:
+        if "human" in model_name.lower() or 'baseline' in model_name.lower():
+            continue
+        few_shot_scores = []
+        for i in ["latex", "pdf", "docling"]:
+            print(model_name) 
+            print(i)   
+            print(i, len(metric_results[model_name][i]), len(ids))
+            try:
+                if len(metric_results[model_name][i]) == len(ids):
+                    few_shot_scores.append(float(np.mean(metric_results[model_name][i]) * 100))
+                else:
+                    few_shot_scores.append(0)
+            except:
+                few_shot_scores.append(0)
+        results.append([remap_names(model_name)] + few_shot_scores)
+    print_table(results, headers, format = False)
+    if use_annotations_paper:
+        print(
+            "* Computed average by considering metadata exctracted from outside the paper."
+        )
+
 def plot_context_length():
     headers = [ "MODEL"] + ["quarter", "half", "all"]
     ids = get_all_ids()
@@ -696,13 +762,12 @@ def plot_table():
 
     results = []
     model_names = final_results.keys()
-    diff = True
     for model_name in model_names:
         mapped_name = remap_names(model_name)
         if args.group_by == "attributes":
             mapped_name = mapped_name.split(" ")[0]
         avg = np.mean(final_results[model_name], axis=0)
-        if diff:
+        if args.diff:
             if 'browsing' in model_name.lower():
                 continue
             browsing_results = final_results[model_name + "-browsing"]
@@ -831,6 +896,8 @@ if __name__ == "__main__":
         plot_by_length()
     elif args.year:
         plot_by_year()
+    elif args.format:
+        plot_format()
     elif args.cost:
         plot_by_cost()
     elif args.group_by == 'language':
