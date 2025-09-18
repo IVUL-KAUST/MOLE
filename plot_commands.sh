@@ -4,6 +4,9 @@ uv run plots.py --eval test --schema all --results_path static/results_maged --i
 # main results by language
 uv run plots.py --eval test --schema all  --group_by language --non_browsing
 
+# plot by different format
+uv run plots.py --eval test --schema all --non_browsing --format
+
 # main results by category
 uv run plots.py --eval test --schema all --non_browsing
 

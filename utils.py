@@ -367,7 +367,7 @@ def validate(metadata, use_split=None, title="", link="", schema="ar"):
 
     matched_row = None
     if use_split is not None:
-        dataset = eval_datasets[schema][use_split]
+        dataset = eval_datasets[schema.replace("_mid", "").replace("_high", "")][use_split]
     else:
         pass
 
@@ -520,7 +520,7 @@ def get_dummy_results():
 
 
 def get_metadata_human(title="", link="", use_split="test", schema="ar"):
-    dataset = eval_datasets[schema][use_split]
+    dataset = eval_datasets[schema.replace("_mid", "").replace("_high", "")][use_split]
 
     for row in dataset:
         if title != "":
