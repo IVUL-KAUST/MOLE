@@ -106,10 +106,7 @@ def plot_by_errors():
     types_of_errors = {}
     ids = get_all_ids()
     metric_results = {}
-    json_files = []
-    for path in ["results_latex"]:
-        json_files.extend(glob(f"static/{path}/**/**/*.json"))
-    print(len(json_files))  
+    print(len(json_files))
     for json_file in json_files:
         results = json.load(open(json_file))
         arxiv_id = json_file.split("/")[2].replace("_arXiv", "").replace('.pdf', '')
