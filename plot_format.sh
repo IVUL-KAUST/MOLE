@@ -1,0 +1,1 @@
+uv run plots.py --eval test --schema all --non_browsing --format

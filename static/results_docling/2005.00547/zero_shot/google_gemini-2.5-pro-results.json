@@ -1,0 +1,105 @@
+{
+    "metadata": {
+        "Name": "GoEmotions",
+        "Link": "https://github.com/google-research/google-research/tree/master/goemotions",
+        "HF Link": "",
+        "License": "unknown",
+        "Year": 2020,
+        "Language": "en",
+        "Domain": [
+            "social media"
+        ],
+        "Form": "text",
+        "Collection Style": [
+            "crawling",
+            "manual curation",
+            "human annotation"
+        ],
+        "Description": "A large-scale, manually annotated dataset of 58k English Reddit comments, labeled for 27 fine-grained emotion categories or Neutral. The dataset is designed for emotion classification and has been shown to generalize well to other domains and taxonomies.",
+        "Volume": 58009.0,
+        "Unit": "sentences",
+        "Ethical Risks": "Medium",
+        "Provider": [
+            "Stanford Linguistics",
+            "Google Research",
+            "Amazon Alexa"
+        ],
+        "Derived From": [
+            "Reddit"
+        ],
+        "Paper Title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+        "Paper Link": "https://aclanthology.org/2020.acl-main.372",
+        "Tokenized": false,
+        "Host": "GitHub",
+        "Access": "Free",
+        "Cost": "",
+        "Test Split": true,
+        "Tasks": [
+            "emotion classification",
+            "sentiment analysis"
+        ],
+        "Venue Title": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+        "Venue Type": "conference",
+        "Venue Name": "Annual Meeting of the Association for Computational Linguistics",
+        "Authors": [
+            "Dorottya Demszky",
+            "Dana Movshovitz-Attias",
+            "Jeongwoo Ko",
+            "Alan Cowen",
+            "Gaurav Nemade",
+            "Sujith Ravi"
+        ],
+        "Affiliations": [
+            "Stanford Linguistics",
+            "Google Research",
+            "Amazon Alexa"
+        ],
+        "Abstract": "Understanding emotion expressed in language has a wide range of applications, from building empathetic chatbots to detecting harmful online behavior. Advancement in this area can be improved using large-scale datasets with a fine-grained typology, adaptable to multiple downstream tasks. We introduce GoEmotions, the largest manually annotated dataset of 58k English Reddit comments, labeled for 27 emotion categories or Neutral. We demonstrate the high quality of the annotations via Principal Preserved Component Analysis. We conduct transfer learning experiments with existing emotion benchmarks to show that our dataset generalizes well to other domains and different emotion taxonomies. Our BERTbased model achieves an average F1-score of .46 across our proposed taxonomy, leaving much room for improvement."
+    },
+    "validation": {
+        "ACCESSABILITY": 0.6666660694448128,
+        "DIVERSITY": 0.9999985000012501,
+        "CONTENT": 0.8571422346941868,
+        "EVALUATION": 0.6666659444448935,
+        "Link": 1,
+        "HF Link": 0,
+        "License": 0,
+        "Provider": 0,
+        "Host": 1,
+        "Access": 1,
+        "Cost": 1,
+        "Language": 1,
+        "Domain": 1,
+        "Form": 1,
+        "Collection Style": 0,
+        "Volume": 1,
+        "Unit": 1,
+        "Ethical Risks": 1,
+        "Tokenized": 1,
+        "Derived From": 0,
+        "Test Split": 1,
+        "Tasks": 1,
+        "AVERAGE": 0.7976181871462859,
+        "f1": 0.7647058823529411,
+        "precision": 0.7222222222222222,
+        "recall": 0.8125
+    },
+    "length_forcing": 0.9999999999999996,
+    "cost": {
+        "cost": 0.05253625,
+        "input_tokens": 16864,
+        "output_tokens": 1267
+    },
+    "config": {
+        "model_name": "google_gemini-2.5-pro",
+        "few_shot": 0,
+        "month": null,
+        "year": "2020",
+        "keywords": [
+            ""
+        ],
+        "link": "https://arxiv.org/abs/2005.00547"
+    },
+    "ratio_filling": 1.0,
+    "error": null
+}
