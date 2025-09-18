@@ -19,10 +19,10 @@ if __name__ == "__main__":
         links = []
         if args.masader_validate:
             use_split = "valid"
-            dataset = eval_datasets[args.schema][use_split]
+            dataset = eval_datasets[args.schema.replace("_mid", "").replace("_mid", "")][use_split]
         else:
             use_split = "test"
-            dataset = eval_datasets[args.schema][use_split]
+            dataset = eval_datasets[args.schema.replace("_mid", "").replace("_mid", "")][use_split]
         
         for x in dataset:
             titles.append(str(x["Paper Title"]))
