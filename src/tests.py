@@ -3,6 +3,8 @@
 from schema import Schema
 from pydantic import Field
 from type_classes import *
+from search import run
+from rich import print
 
 gold_metadata1  = {
     "Name": "ahmad",
@@ -33,6 +35,8 @@ class Parent(Person):
 predicted_metadata = Parent(
     path = 'testfiles/test1.json'
 )
+print(predicted_metadata.schema())
+raise
 evaluation_results = predicted_metadata.compare_with(gold_metadata1)
 
 for m in evaluation_results:
@@ -164,3 +168,14 @@ for m in evaluation_results:
     else:
         assert evaluation_results[m] == 1, f'❌ {m} value should be 1 but got {evaluation_results[m]}'
 print('✅ passed test11')
+
+from arg_utils import args
+
+args.model_name='moonshotai/kimi-k2'
+args.schema_name='model'
+args.backend='openrouter'
+args.results_path='synth_dataset_models'
+args.format='pdf_plumber'
+args.overwrite=True
+results = run("https://arxiv.org/pdf/2507.20534", args)
+print(results[args.model_name]['metadata'])
