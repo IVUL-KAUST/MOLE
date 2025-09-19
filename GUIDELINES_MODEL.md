@@ -1,8 +1,8 @@
 # Guidelines for Model Schema
 In this task we want to extract models' metadata from papers. Here is a discribtion of the mdatadata:
 
-1. **Name**: if there are multiple models in the paper, choose the biggest one and the chat version
-2. **Num_Parameters**: the number of parameters of the largest model
+1. **Name**: Name of the model family
+2. **Num_Parameters**: the number of parameters of the largest model, if there are multiple models in the paper, choose the biggest one, mostly chat version
 3. **Unit**: the unit of the number of parameters
 4. **Type**: the type of the model
 5. **Think**: whether the model is a thinking/ reasoning model or not
@@ -15,3 +15,4 @@ In this task we want to extract models' metadata from papers. Here is a discribt
 12. **Context**: the context size of the model
 13. **Language**: the language of the model was pretrained on
 14. **Provider**: which company or organization provided the model
+15. **Paper_Link**: the link to the paper

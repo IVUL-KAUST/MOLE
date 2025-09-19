@@ -295,7 +295,7 @@ class DatasetSchema(Schema):
 class Model(Schema):
     Name: Field(Str, 1, 5)
     Num_Parameters: Field(Float, 1, 1000)
-    Unit: Field(Str, 1, 1, ['Millions', 'Billions', 'Trillions'])
+    Unit: Field(Str, 1, 1, ['Million', 'Billion', 'Trillion'])
     Type: Field(Str, 1, 3, ["Base", "Code", "Chat"])
     Think: Field(Bool, 1, 1)
 
@@ -309,6 +309,8 @@ class ModelSchema(Model):
     Context: Field(Int, 1)
     Language: Field(Str, 1, 1, ['monolingual', 'bilingual', 'multilingual'])
     Provider: Field(Str, 1, 1)
+    Modality: Field(Str, 1, 1, ['text', 'audio', 'video', 'image', 'multimodal'])
+    Paper_Link: Field(URL, 1, 1)
     
     @classmethod
     def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
@@ -321,6 +323,31 @@ class ModelSchema(Model):
         system_prompt += "Use the following guidelines to extract the answer from the 'Paper Text':\n\n"
         system_prompt += open('GUIDELINES_MODEL.md').read()
         return prompt, system_prompt
+
+class TestSchema(Schema):
+    Name: Field(Str, 1, 5)
+    Hobbies: Field(List[Str], 1, 3, ['Hiking', 'Swimming', 'Reading'])
+    Age : Field(Int, 1, 100)
+
+    @classmethod
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+        schema = cls.schema()
+        prompt = f"""Schema Name: {cls.get_schema_name()}
+                    Input Schema: {schema}
+                    Text: {paper_text}
+                """
+        system_prompt = """You are a professional metadata extractor from a given Text. 
+            You will be provided 'Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
+            The 'Output JSON' is a JSON with key:answer where the answer retrieves an attribute of the 'Input Schema' from the 'Paper Text'. 
+            Each attribute in the 'Input Schema' has the following fields:
+            'options' : If the attribute has 'options' then the answer must be at least one of the options.
+            'answer_type': The output type represents the type of the answer.
+            'answer_min' : The minimum length of the answer depending on the 'answer_type'.
+            'answer_max' : The maximum length of the answer depending on the 'answer_type'.
+            The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
+            The 'Output JSON' must have ONLY the keys in the 'Input Schema'."""
+        return prompt, system_prompt
+    
 
 class ResourceSchema(Schema):
     Name: Field(Str, 1, 5)
