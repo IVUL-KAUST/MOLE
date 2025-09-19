@@ -1,0 +1,103 @@
+{
+    "Name": "RWKV",
+    "Num_Parameters": 14.0,
+    "Unit": "Billion",
+    "Type": "Base",
+    "Think": false,
+    "Version": 4.0,
+    "Models": [
+        {
+            "Name": "RWKV-169M",
+            "Num_Parameters": 169,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "RWKV-430M",
+            "Num_Parameters": 430,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "RWKV-1.5B",
+            "Num_Parameters": 1.5,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "RWKV-3B",
+            "Num_Parameters": 3.0,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "RWKV-7B",
+            "Num_Parameters": 7.0,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "RWKV-14B",
+            "Num_Parameters": 14.0,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        }
+    ],
+    "License": "Apache-2.0",
+    "Year": 2023,
+    "Benchmarks": [
+        "ARC-Challenge",
+        "ARC-Easy",
+        "BoolQ",
+        "COPA",
+        "HeadQA",
+        "HellaSwag",
+        "LAMBADA",
+        "OpenBookQA",
+        "PIQA",
+        "ReCoRD",
+        "SciQ",
+        "Winogrande",
+        "Long-Range Arena",
+        "Enwik8",
+        "Aggresion", 
+        "Sarcasm", 
+        "Unhealthy", 
+        "MathQA", 
+        "TweetSent",
+        "RTE",
+        "WNLI",
+        "GoEmotions",
+        "PolEmo2"
+    ],
+    "Architecture": "RNN",
+    "Context": 1024,
+    "Language": "monolingual",
+    "Provider": "EleutherAI",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 0,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2305.13048"
+}

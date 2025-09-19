@@ -1,0 +1,69 @@
+{
+    "Name": "gpt-oss",
+    "Num_Parameters": 116.8,
+    "Unit": "Billion",
+    "Type": "Chat",
+    "Think": true,
+    "Version": 1.0,
+    "Models": [
+        {
+            "Name": "gpt-oss-120b",
+            "Num_Parameters": 116.8,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": true
+        },
+        {
+            "Name": "gpt-oss-20b",
+            "Num_Parameters": 20.9,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": true
+        }
+    ],
+    "License": "Apache-2.0",
+    "Year": 2025,
+    "Benchmarks": [
+        "AIME 2024",
+        "AIME 2025",
+        "GPQA Diamond",
+        "HLE",
+        "MMLU",
+        "SWE-Bench Verified",
+        "Tau-Bench Retail",
+        "Tau-Bench Airline",
+        "Aider Polyglot",
+        "MMMLU",
+        "HealthBench",
+        "HealthBench Hard",
+        "HealthBench Consensus",
+        "Codeforces",
+        "SimpleQA",
+        "PersonQA",
+        "BBQ"
+    ],
+    "Architecture": "MoE",
+    "Context": 131072,
+    "Language": "multilingual",
+    "Provider": "OpenAI",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 1,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2508.10925"
+}

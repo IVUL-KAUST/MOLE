@@ -1,0 +1,85 @@
+{
+    "Name": "SAMBA",
+    "Num_Parameters": 3.8,
+    "Unit": "Billion",
+    "Type": "Base",
+    "Think": false,
+    "Version": 1.0,
+    "Models": [
+        {
+            "Name": "SAMBA-421M",
+            "Num_Parameters": 0.421,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "SAMBA-1.3B",
+            "Num_Parameters": 1.3,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "SAMBA-1.7B",
+            "Num_Parameters": 1.7,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "SAMBA-3.8B",
+            "Num_Parameters": 3.8,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        }
+    ],
+    "License": "unknown",
+    "Year": 2025,
+    "Benchmarks": [
+        "MMLU",
+        "GSM8K",
+        "HumanEval",
+        "GovReport",
+        "SQuALITY",
+        "ARC-Easy",
+        "ARC-Challenge",
+        "PIQA",
+        "WinoGrande",
+        "SIQA",
+        "HellaSwag",
+        "BoolQ",
+        "OpenbookQA",
+        "SQuAD",
+        "TruthfulQA",
+        "MBPP",
+        "GPQA",
+        "MMLU-Pro",
+        "LAMBADA"
+    ],
+    "Architecture": "Hybrid",
+    "Context": 1000000,
+    "Language": "monolingual",
+    "Provider": "Microsoft",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 1,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2406.07522?"
+}
