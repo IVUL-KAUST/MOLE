@@ -31,8 +31,7 @@ args = args.parse_args()
 
 random.seed(args.seed)
 
-categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
-# evaluation_subsets = schema[args.schema_name]['evaluation_subsets']
+categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi', 'model']
 
 def get_all_ids():
     ids = []
