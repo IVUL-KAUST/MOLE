@@ -39,6 +39,9 @@ class BaseType:
     @classmethod
     def compare(cls, attr1, attr2):
         return attr1 == attr2
+    
+    def modify_length(self, value):
+        return value
 
 class Float(BaseType):
     base_type = float
@@ -90,16 +93,23 @@ class Int(BaseType):
         return int(value)
     
     def validate_length(self, value):
-        if value >= self.answer_min and value <= self.answer_max:
-            return 1
-        else:
-            return 0
+        if value >= self.answer_min:
+            if self.answer_max < 0:
+                return 1
+            elif value <=self.answer_max:
+                return 1
+            else:
+                return 0
+        return 0
     
     def compare(self, attr1, attr2):
         if attr1 == attr2:
             return 1
         return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2)) # TODO: revise
     
+    def modify_length(self, value):
+        modified_value = value * random.randint(2, 5)
+        return modified_value
 class Bool(BaseType):
     base_type = bool
 
@@ -144,6 +154,14 @@ class Year(Int):
         attr1 = abs(attr1 - 2010)
         attr2 = abs(attr2 - 2010)
         return super().compare(attr1, attr2)
+    
+    def modify_length(self, value):
+        if random.random() < 0.5:
+            modified_value = 2025 +  random.randint(1, 10)
+        else:
+            modified_value = 1900 -  random.randint(1, 10)
+        
+        return modified_value
          
     
 class Str(BaseType):
@@ -167,7 +185,7 @@ class Str(BaseType):
     
     def validate_length(self, value):
         metric = value.split(' ')
-        return len(metric) >= self.answer_min and len(metric) <= self.answer_max or self.options is not None
+        return int(len(metric) >= self.answer_min and len(metric) <= self.answer_max or self.options is not None)
     
     def compare(self, attr1, attr2):
         if len(attr1) == len(attr2) == 0:
@@ -246,7 +264,13 @@ class List(BaseType):
         return len_match / max(len(attr1), len(attr2)) # TODO: revise
     
     def validate_length(self, value):
-        return len(value) >= self.answer_min and len(value) <= self.answer_max
+        return int(len(value) >= self.answer_min and len(value) <= self.answer_max)
+    
+    def modify_length(self, value):
+        modified_value = value.copy()
+        if self.options is not None:
+            modified_value = modified_value + random.choices(self.options, k=random.randint(0, 10))
+        return modified_value
     
 class Cars(BaseModel):
     Model: Field(Str)
