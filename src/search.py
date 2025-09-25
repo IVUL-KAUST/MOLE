@@ -140,10 +140,20 @@ def get_metadata(
                 },
             })
         else:
-            message = client.chat.completions.create(
+            if "qwen3" in model_name.lower():
+                message = client.chat.completions.create(
                         model=model_name,
                         messages=messages,
                         temperature=0.0,
+                        extra_body={
+                            "chat_template_kwargs": {"enable_thinking": False},
+                        }
+                    )
+            else:
+                message = client.chat.completions.create(
+                        model=model_name,
+                        messages=messages,
+                        temperature=0.0
                     )
         try:
             if backend == "openrouter":
@@ -157,7 +167,8 @@ def get_metadata(
             response =  message.choices[0].message.content
             predictions = read_json(response)
         except json.JSONDecodeError as e:
-            error = str(e)  
+            error = str(e)
+            logger.show_warning(message.choices[0].message.content)  
         except Exception as e:
             if message is None:
                 error = "Timeout"
