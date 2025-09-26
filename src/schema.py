@@ -188,8 +188,8 @@ class Schema(BaseModel):
         for key in self.get_attributes():
             type  = self.get_answer_object(key)
             length = type.validate_length(metadata[key])
-            if length < 1:
-                print(type.answer_min,type.answer_max, key, metadata[key])
+            # if length < 1:
+            #     print(type.answer_min,type.answer_max, key, metadata[key])
             accuracy += length
         return accuracy / len(self.get_attributes())
     
