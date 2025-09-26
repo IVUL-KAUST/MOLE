@@ -1,5 +1,5 @@
 #!/bin/bash
-MODEL_NAME="Qwen2.5-1.5B-Instruct-kimi-k2-dpo-merged-200"
+MODEL_NAME=$1
 # Function to check if vLLM server is running
 check_vllm_server() {
     curl -s http://localhost:8787/v1/models > /dev/null 2>&1
@@ -75,13 +75,14 @@ else
 fi
 
 echo "🚀 Starting evaluation..."
-uv run src/evaluate.py \
-    --split test \
-    --backend vllm \
-    --model $MODEL_NAME \
-    --schema_name model \
-    --max_model_len 8192 \
-    --max_output_len 2048 \
-    --overwrite
-
+for schema_name in ar en jp fr ru multi model; do
+    echo "🚀 Starting evaluation for $schema_name..."
+    uv run src/evaluate.py \
+        --split test \
+        --backend vllm \
+        --model $MODEL_NAME \
+        --schema_name $schema_name \
+        --max_model_len 8192 \
+        --max_output_len 2048 
+done
 echo "✅ Evaluation completed!"
