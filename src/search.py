@@ -446,7 +446,12 @@ def run(
             else:
                 message = None
     logger.show_info("🔍 Validating Metadata ...")
-    metadata = schema(metadata = metadata)
+    try:
+        metadata = schema(metadata = metadata)
+    except Exception as e:
+        logger.show_error(f"Failed to validate metadata: {metadata}")
+        metadata = schema.generate_metadata(method = 'default')
+        
     results = {}
     results["metadata"] = metadata.json()
     gold_metadata = get_metadata_human(paper_link=paper_link, schema_name=args.schema_name)
