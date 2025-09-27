@@ -70,6 +70,7 @@ class Schema(BaseModel):
             "float": "number",
             "url": "string",
             "year": "integer",
+            "bool": [True, False],
             "list[str]": "multi-label"
         }
         schema_json = json.loads(cls.schema())
