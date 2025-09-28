@@ -56,7 +56,7 @@
         "MMLU",
         "HumanEval"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 2048,
     "Language": "multilingual",
     "Provider": "Technology Innovation Institute",
