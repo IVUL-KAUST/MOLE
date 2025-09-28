@@ -319,7 +319,7 @@ class ModelSchema(Model):
     License: Field(Str, 1, 1, licenses)
     Year: Field(Year, 1900, 2025)
     Benchmarks: Field(List[Str],1, 20)
-    Architecture: Field(Str, 1, 1, ["Transfromer", "MoE", "SSM", "RNN", "CNN", "Hybrid", "other"])
+    Architecture: Field(Str, 1, 1, ["Transformer", "MoE", "SSM", "RNN", "CNN", "Hybrid", "other"])
     Context: Field(Int, 1)
     Language: Field(Str, 1, 1, ['monolingual', 'bilingual', 'multilingual'])
     Provider: Field(Str, 1, 5)
