@@ -151,7 +151,7 @@
         "LV-Eval",
         "LongBench-Chat"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 262144,
     "Language": "multilingual",
     "Provider": "QwenTeam",

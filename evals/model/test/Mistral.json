@@ -45,7 +45,7 @@
         "AGI Eval",
         "MT Bench"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 8192,
     "Language": "multilingual",
     "Provider": "Mistral AI",
