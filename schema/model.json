@@ -1,6 +1,6 @@
 {
     "Name": {
-        "question": "What is the name of the dataset?",
+        "question": "What is the name of the model?",
         "answer_type": "str",
         "answer_min": 1,
         "answer_max": 5
@@ -26,7 +26,7 @@
         "answer_max": 1
     },
     "Think": {
-        "question": "Does the model think?",
+        "question": "Is the model is a thinking/ reasoning model?",
         "options": [true, false],
         "answer_type": "bool",
         "answer_min": 1,
@@ -39,7 +39,7 @@
         "answer_max": 1
     },
     "Models": {
-        "question": "What are the models in the paper?",
+        "question": "What are all model variants listed in the paper?",
         "answer_type": "List[Dict[Name, Num_Parameters, Unit, Type, Think]]",
         "answer_min": 1,
         "answer_max": 10
@@ -52,13 +52,13 @@
         "answer_max": 1
     },
     "Year": {
-        "question": "What is the year of the model?",
+        "question": "What year was the model published?",
         "answer_type": "int",
         "answer_min": 1,
         "answer_max": 1
     },
     "Benchmarks": {
-        "question": "What are the benchmarks of the model?",
+        "question": "What are the evaluation benchmarks of the model?",
         "answer_type": "List[str]",
         "answer_min": 1,
         "answer_max": 64
@@ -84,7 +84,7 @@
         "answer_max": 1
     },
     "Provider": {
-        "question": "What is the provider of the model?",
+        "question": "Which company or organization provided the model?",
         "answer_type": "List[str]",
         "answer_min": 1,
         "answer_max": 5
