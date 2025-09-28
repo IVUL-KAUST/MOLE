@@ -65,7 +65,7 @@
         "XStoryCloze",
         "CrowS-Pairs"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 2048,
     "Language": "multilingual",
     "Provider": "BigScience",

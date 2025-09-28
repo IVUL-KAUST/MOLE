@@ -30,7 +30,7 @@
         "SWAG",
         "CoNLL-2003 NER"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 512,
     "Language": "monolingual",
     "Provider": "Google AI",
