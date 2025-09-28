@@ -318,7 +318,7 @@ class ModelSchema(Model):
     Models: Field(List[Model], 1, 10)
     License: Field(Str, 1, 1, licenses)
     Year: Field(Year, 1900, 2025)
-    Benchmarks: Field(List[Str],1, 20)
+    Benchmarks: Field(List[Str],1, 64)
     Architecture: Field(Str, 1, 1, ["Transformer", "MoE", "SSM", "RNN", "CNN", "Hybrid", "other"])
     Context: Field(Int, 1)
     Language: Field(Str, 1, 1, ['monolingual', 'bilingual', 'multilingual'])
