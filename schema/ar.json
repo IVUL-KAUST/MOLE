@@ -19,7 +19,7 @@
         "answer_min": 1,
         "answer_max": 1
     },
-    "HF Link": {
+    "HF_Link": {
         "question": "What is the Huggingface link of the dataset?",
         "answer_type": "url",
         "validation_group":"ACCESSABILITY",
@@ -169,7 +169,7 @@
         "answer_min": 1,
         "answer_max": 1
     },
-    "Collection Style": {
+    "Collection_Style": {
         "question": "How was this dataset collected?",
         "options": [
             "crawling",
@@ -220,7 +220,7 @@
         "answer_min": 1,
         "answer_max": 1
     },
-    "Ethical Risks": {
+    "Ethical_Risks": {
         "question": "What is the level of the ethical risks of the dataset?",
         "options": ["Low", "Medium", "High"],
         "option_description": {
@@ -240,18 +240,18 @@
         "answer_min": 0,
         "answer_max": 10
     },
-    "Derived From": {
+    "Derived_From": {
         "question": "What datasets were used to create the dataset?",
         "answer_type": "List[str]",
         "validation_group":"EVALUATION",
         "answer_min": 0
     },
-    "Paper Title": {
+    "Paper_Title": {
         "question": "What is the title of the paper?",
         "answer_type": "str",
         "answer_min" : 3
     },
-    "Paper Link": {
+    "Paper_Link": {
         "question": "What is the link to the paper?",
         "answer_type": "url",
         "answer_min": 1
@@ -329,7 +329,7 @@
         "validation_group":"ACCESSABILITY",
         "answer_min": 0
     },
-    "Test Split": {
+    "Test_Split": {
         "question": "Does the dataset contain a train/valid and test split?",
         "options": [true, false],
         "option_description": {
@@ -396,19 +396,19 @@
         "answer_max": 5
 
     },
-    "Venue Title": {
+    "Venue_Title": {
         "question": "What is the venue title of the published paper?",
         "answer_type": "str",
         "answer_min": 1
     },
-    "Venue Type": {
+    "Venue_Type": {
         "question": "What is the venue type?",
         "options": ["conference", "workshop", "journal", "preprint"],
         "answer_type": "str",
         "answer_min": 1,
         "answer_max": 1
     },
-    "Venue Name": {
+    "Venue_Name": {
         "question": "What is the full name of the venue that published the paper?",
         "answer_type": "str",
         "answer_min" : 0 
