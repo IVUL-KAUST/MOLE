@@ -140,10 +140,20 @@ def get_metadata(
                 },
             })
         else:
-            message = client.chat.completions.create(
+            if "qwen3" in model_name.lower():
+                message = client.chat.completions.create(
                         model=model_name,
                         messages=messages,
                         temperature=0.0,
+                        extra_body={
+                            "chat_template_kwargs": {"enable_thinking": False},
+                        }
+                    )
+            else:
+                message = client.chat.completions.create(
+                        model=model_name,
+                        messages=messages,
+                        temperature=0.0
                     )
         try:
             if backend == "openrouter":
@@ -157,7 +167,8 @@ def get_metadata(
             response =  message.choices[0].message.content
             predictions = read_json(response)
         except json.JSONDecodeError as e:
-            error = str(e)  
+            error = str(e)
+            logger.show_warning(message.choices[0].message.content)  
         except Exception as e:
             if message is None:
                 error = "Timeout"
@@ -435,7 +446,12 @@ def run(
             else:
                 message = None
     logger.show_info("🔍 Validating Metadata ...")
-    metadata = schema(metadata = metadata)
+    try:
+        metadata = schema(metadata = metadata)
+    except Exception as e:
+        logger.show_error(f"Failed to validate metadata: {metadata}")
+        metadata = schema.generate_metadata(method = 'default')
+        
     results = {}
     results["metadata"] = metadata.json()
     gold_metadata = get_metadata_human(paper_link=paper_link, schema_name=args.schema_name)

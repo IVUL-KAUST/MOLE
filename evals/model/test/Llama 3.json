@@ -130,7 +130,7 @@
         "FLEURS",
         "Covost 2"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 128000,
     "Language": "multilingual",
     "Provider": "Meta",

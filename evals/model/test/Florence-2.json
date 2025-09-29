@@ -40,7 +40,7 @@
         "RefCOCOg",
         "ADE20K"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 768,
     "Language": "monolingual",
     "Provider": "Microsoft",

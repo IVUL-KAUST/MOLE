@@ -19,7 +19,7 @@
     "Benchmarks": [
         "LibriSpeech"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 18000,
     "Language": "monolingual",
     "Provider": "Google Research",

@@ -66,7 +66,7 @@
         "Earnings-21",
         "Earnings-22"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 30000,
     "Language": "multilingual",
     "Provider": "OpenAI",

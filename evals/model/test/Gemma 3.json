@@ -90,7 +90,7 @@
         "N2C",
         "IFEval"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 128000,
     "Language": "multilingual",
     "Provider": "Google DeepMind",

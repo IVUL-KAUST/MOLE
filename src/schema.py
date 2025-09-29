@@ -3,13 +3,8 @@
 from pydantic import BaseModel, ConfigDict
 from pydantic import model_validator
 import json
-import random
 from type_classes import *
 from glob import glob
-random.seed(42)
-ANSWER_MAX = 1000
-
-
 
 units = ['tokens', 'sentences', 'documents', 'images', 'videos', 'hours']
 dialects = ["Classical Arabic","Modern Standard Arabic","United Arab Emirates","Bahrain","Djibouti","Algeria","Egypt","Iraq","Jordan","Comoros","Kuwait","Lebanon","Libya","Morocco","Mauritania","Oman","Palestine","Qatar","Saudi Arabia","Sudan","Somalia","South Sudan","Syria","Tunisia","Yemen","Levant","North Africa","Gulf","mixed"]
@@ -75,6 +70,7 @@ class Schema(BaseModel):
             "float": "number",
             "url": "string",
             "year": "integer",
+            "bool": [True, False],
             "list[str]": "multi-label"
         }
         schema_json = json.loads(cls.schema())
@@ -193,8 +189,26 @@ class Schema(BaseModel):
         for key in self.get_attributes():
             type  = self.get_answer_object(key)
             length = type.validate_length(metadata[key])
+            # if length < 1:
+            #     print(type.answer_min,type.answer_max, key, metadata[key])
             accuracy += length
         return accuracy / len(self.get_attributes())
+    
+    def modify_length(self):
+        length = 0 
+        metadata = self.model_dump()
+        for key in self.get_attributes():
+            type  = self.get_answer_object(key)
+            modified_value = type.modify_length(metadata[key])
+            # print(type.validate_length(modified_value))
+            type_name = type.__class__.__name__
+            length_val = type.validate_length(modified_value)
+            # if length_val ==0:
+            #     print(type_name)
+            metadata[key] = modified_value
+            length += length_val
+        # print(length / len(self.get_attributes()))
+        return metadata
     
     def compare_with(self, gold_metadata, return_metrics_only = False, return_precision_only = False):
         results = {}
@@ -296,19 +310,19 @@ class Model(Schema):
     Name: Field(Str, 1, 5)
     Num_Parameters: Field(Float, 1, 1000)
     Unit: Field(Str, 1, 1, ['Million', 'Billion', 'Trillion'])
-    Type: Field(Str, 1, 3, ["Base", "Code", "Chat"])
+    Type: Field(Str, 1, 1, ["Base", "Code", "Chat"])
     Think: Field(Bool, 1, 1)
 
 class ModelSchema(Model):
-    Version: Field(Float, 1, 1)
+    Version: Field(Float, 0.0)
     Models: Field(List[Model], 1, 10)
     License: Field(Str, 1, 1, licenses)
     Year: Field(Year, 1900, 2025)
     Benchmarks: Field(List[Str],1, 20)
-    Architecture: Field(Str, 1, 1, ["Transfromer", "MoE", "SSM", "RNN", "CNN", "Hybrid", "other"])
+    Architecture: Field(Str, 1, 1, ["Transformer", "MoE", "SSM", "RNN", "CNN", "Hybrid", "other"])
     Context: Field(Int, 1)
     Language: Field(Str, 1, 1, ['monolingual', 'bilingual', 'multilingual'])
-    Provider: Field(Str, 1, 1)
+    Provider: Field(Str, 1, 5)
     Modality: Field(Str, 1, 1, ['text', 'audio', 'video', 'image', 'multimodal'])
     Paper_Link: Field(URL, 1, 1)
     
@@ -455,6 +469,16 @@ class MultiSchema(Dataset):
     Subsets: Field(List[MultiSubset], 0, len(languages))
     Language: Field(List[Str], 2, len(languages), languages)
 
+class Person(Schema):
+    Name: Field(Str, 1, 1)
+    Age: Field(Int, 1, 100)
+
+class Parent(Person):
+    Website: Field(URL, 1, 1)
+    Hobbies: Field(List[Str], 1, 3, options = ['reading', 'swimming', 'coding'])
+    Married: Field(Bool, 1, 1)
+    Sons: Field(List[Person], 0, 3)
+
 def get_schema(schema_name):
     if schema_name == 'ar':
         return ArSchema
@@ -474,5 +498,7 @@ def get_schema(schema_name):
         return ResourceSchema
     elif schema_name == 'model':
         return ModelSchema
+    elif schema_name == 'parent':
+        return Parent
     else:
         raise ValueError(f"Invalid schema name: {schema_name}")

@@ -52,7 +52,7 @@
         "AgentBench",
         "SafetyBench"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 128000,
     "Language": "multilingual",
     "Provider": "ZhipuAI",

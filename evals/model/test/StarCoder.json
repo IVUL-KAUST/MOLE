@@ -38,7 +38,7 @@
         "MMLU",
         "CoQA"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 8192,
     "Language": "multilingual",
     "Provider": "BigCode",

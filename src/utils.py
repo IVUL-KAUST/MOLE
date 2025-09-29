@@ -22,9 +22,6 @@ from bs4 import BeautifulSoup
 
 # Local imports
 from constants import *
-
-random.seed(0)
-
 import os
 import base64
 import requests

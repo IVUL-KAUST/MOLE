@@ -58,7 +58,7 @@
         "NIH",
         "OpenRewrite"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 8192,
     "Language": "monolingual",
     "Provider": "HuggingFace",
