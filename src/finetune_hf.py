@@ -417,6 +417,7 @@ trainer_stats = trainer.train()
 output_model_name = f"{args.model_name.split('/')[-1]}-{args.distilled_model.split('/')[-1]}-sft-{args.max_model_len}-r-{args.lora_r}-alpha-{args.lora_alpha}"
 model.save_pretrained(f'{args.output_dir}/{output_model_name}')
 tokenizer.save_pretrained(f'{args.output_dir}/{output_model_name}')
+print('trainer stats are:', trainer_stats)
 print(f"Model saved to {output_model_name}")
 
 # Run evaluation on both validation and test sets
