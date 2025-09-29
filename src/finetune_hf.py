@@ -13,24 +13,26 @@ from search import truncate_prompt
 from search import download_paper
 from rich import print
 from tqdm import tqdm
-import numpy as np
 import torch
 import json
 import glob
 import os
 
-
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-
 # Create argparse parser
+
 import argparse
+
 parser = argparse.ArgumentParser(description="Fine-tune model with HuggingFace")
 parser.add_argument('--output_model_name', default="qwen2.5-0.5b-instruct-sft", type=str, help="Output directory for the fine-tuned model")
-parser.add_argument('--model_name', default="/hdd/shared_models/Qwen2.5-0.5B-Instruct", type=str, help="Model name to fine-tune")
+# parser.add_argument('--model_name', default="/hdd/shared_models/Qwen2.5-0.5B-Instruct", type=str, help="Model name to fine-tune")
+parser.add_argument('--model_name', default="Qwen2.5-0.5B-Instruct", type=str, help="Model name to fine-tune")
 parser.add_argument('--output_dir', default="output", type=str, help="Output directory for the fine-tuned model")
 parser.add_argument('--max_model_len', default=8192, type=int, help="Maximum model length")
 parser.add_argument('--max_output_len', default=2048, type=int, help="Maximum output length")
 parser.add_argument('--distilled_model', default="moonshotai/kimi-k2", type=str, help="Distilled model name")
+parser.add_argument('--lora_r', default=8, type=int, help="LoRA rank")
+parser.add_argument('--lora_alpha', default=16, type=int, help="LoRA alpha")
+
 args = parser.parse_args()
 
 model = AutoModelForCausalLM.from_pretrained(
@@ -38,7 +40,6 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto",
     trust_remote_code=True,
     torch_dtype=torch.bfloat16,
-    max_length=args.max_model_len, 
 )
 
 
@@ -58,8 +59,8 @@ if tokenizer.pad_token is None:
 # Configure LoRA
 lora_config = LoraConfig(
     task_type=TaskType.CAUSAL_LM,
-    r=8,
-    lora_alpha=16,
+    r=args.lora_r,
+    lora_alpha=args.lora_alpha,
     lora_dropout=0.0,
     bias="none",
     target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
@@ -67,11 +68,11 @@ lora_config = LoraConfig(
 
 # Apply LoRA to model
 model = get_peft_model(model, lora_config)
-print(model.device)
+# print(model.device)
 
 def get_files():
     print('getting synthetic data files')
-    all_train_files = glob.glob("static/synth_datasetv2/**/**.json")
+    all_train_files = glob.glob("static/synth_dataset/**/**.json")
     all_train_files = [file for file in all_train_files if args.distilled_model in json.load(open(file))["config"]["model_name"]]
     test_files = []
     # valid_files = []  # getting validation from valid files
@@ -102,7 +103,8 @@ def get_files():
     # Old approach - uncomment to use separate validation files instead of splitting training
     # return all_train_files, valid_files, test_files
     
-    return train_files, valid_files, test_files
+    # return train_files, valid_files, test_files
+    return train_files, valid_files, test_files  # Use last 5% of training files as validation
 
 def create_prompts(examples):
     messages = []
@@ -167,7 +169,7 @@ def by_model(examples):
 def prepare_dataset(files):
     dataset = Dataset.from_list([{"path": file} for file in files])
     print("num examples: ", len(dataset))
-    dataset = dataset.map(create_prompts, batched=True, batch_size=10, num_proc=16)
+    dataset = dataset.map(create_prompts, batched=True, batch_size=100, num_proc=16)
     print("num examples after creating prompts: ", len(dataset))
     dataset = dataset.filter(lambda x: not bool(x["error"]))
     print("num examples after filtering errors: ", len(dataset))
@@ -199,7 +201,7 @@ def get_gold_metadata(link):
     return None
 
 # forward -> [t1, t2, t3, t4, ...., tN]
-def predict(examples):
+def predict(examples, dataset_name='validation'):
     model.eval()
     tokenized_text = []
     for example in examples['chat']:
@@ -217,15 +219,18 @@ def predict(examples):
         generation_config = json.load(open(generation_config_path))
     else:
         generation_config = {
-            "temperature": 1.0,
-            "top_p": 0.95,
-            "top_k": 64,
-            "repetition_penalty": 1.0
+            "do_sample": True,
+            "repetition_penalty": 1.05,
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "top_k": 20,
         }
+        # TODO: vllm should also receive these parameters
     with torch.no_grad():
         preds = model.generate(
             **tokenized_text,
             max_new_tokens = args.max_output_len, # Increase for longer outputs!
+            do_sample = generation_config['do_sample'],
             temperature = generation_config['temperature'], 
             top_p = generation_config['top_p'],
             top_k = generation_config['top_k'],
@@ -255,7 +260,7 @@ def predict(examples):
         except Exception as e:
             metadata = schema.generate_metadata(method='default').json()
         pred_metadata = schema(metadata=metadata)
-        result = pred_metadata.compare_with(gold_metadata, return_precision_only=True)
+        result = pred_metadata.compare_with(gold_metadata, return_precision_only=True if dataset_name=='validation' else False)
         results.append(result)
         output_example['metadata'] = pred_metadata.json()
         output_example['result'] = result
@@ -271,20 +276,21 @@ def preprocess_logits_for_metrics(logits, labels):
 # Custom callback for generation evaluation
 from transformers import TrainerCallback
 
-def evaluate(dataset, step, dataset_name = "validation"):
+def evaluate(dataset, step=None, dataset_name = "validation"):
     model.eval()
     print(f"\n=== Evaluating on {dataset_name} size: {len(dataset)} ===")
     results = {"metrics": [], "examples": []}
     batch_size = 8
     for i in tqdm(range(0, len(dataset), batch_size)):
         batch = dataset[i:i+batch_size]
-        batch_results = predict(batch)
+        batch_results = predict(batch, dataset_name=dataset_name)
         results['metrics'].extend(batch_results['metrics'])
         results['examples'].extend(batch_results['examples'])
     
     save_dir = f"{args.output_dir}/evals"
     os.makedirs(save_dir, exist_ok=True)
-    json.dump(results['examples'], open(save_dir + f'/examples_{step}.json', 'w'), indent=4)
+    if step:
+        json.dump(results['examples'], open(save_dir + f'/examples_step_{step}.json', 'w'), indent=4)
     all_results = results['metrics']
     # Calculate average results for the dataset
     if all_results:
@@ -318,8 +324,8 @@ print('test dataset:')
 print(test_dataset)
 
 # uncomment to print example texts
-print(train_dataset[1]['text'])
-print(valid_dataset[1]['text'])
+# print(train_dataset[1]['text'])
+# print(valid_dataset[1]['text'])
 
 
 per_device_train_batch_size = 2
@@ -339,7 +345,7 @@ print('save_steps: ', save_steps)
 class GenerationEvalCallback(TrainerCallback):
     def on_evaluate(self, args, state, control, **kwargs):
         if state.global_step % eval_steps == 0:  # Every 2 steps
-            results = evaluate(valid_dataset, state.global_step)
+            results = evaluate(valid_dataset, step=state.global_step, dataset_name="validation")
             print(results)
 
 training_args = SFTConfig(
@@ -365,17 +371,21 @@ training_args = SFTConfig(
     load_best_model_at_end=True,
     metric_for_best_model="eval_loss",  # Use eval_loss as the metric to monitor
     greater_is_better=False,  # For loss, lower is better
-    save_total_limit=3,  # Only keep the best checkpoint
+    save_total_limit=1,  # Only keep the best checkpoint
     dataset_text_field="text", 
     packing=False, 
     output_dir=f"./{args.output_dir}",
+    max_length=args.max_model_len,
+    completion_only_loss=True,
+    chat_template_path='default_qwen_chat_template.jinja',
 )
 
 # Create early stopping callback with good patience and threshold
 early_stopping_callback = EarlyStoppingCallback(
-    early_stopping_patience=10,  # Stop if no improvement for 10 evaluation steps
-    early_stopping_threshold=0.01  # Minimum improvement threshold (1%)
+    early_stopping_patience=10,  # Stop if no improvement for 5 evaluation steps
+    early_stopping_threshold=0.001  # Minimum improvement threshold (1%)
 )
+
 
 # Create trainer with updated TRL API
 trainer = SFTTrainer(
@@ -386,7 +396,7 @@ trainer = SFTTrainer(
     callbacks=[early_stopping_callback],  # Add early stopping callback
 )
 
-trainer.add_callback(GenerationEvalCallback())
+# trainer.add_callback(GenerationEvalCallback())
 
 # Print example to verify formatting
 # if len(trainer.train_dataset) > 0:
@@ -394,23 +404,35 @@ trainer.add_callback(GenerationEvalCallback())
 #     print(trainer.train_dataset[0]["text"])
 #     print("=" * 50)
 
-# initial_validation_results = evaluate(valid_dataset, "validation")
+# initial_validation_results = evaluate(valid_dataset, dataset_name="validation")
 # print(initial_validation_results)
+
+# print('validation resutls before training:')
+# evaluate(valid_dataset, dataset_name="validation")
 
 # Train the model
 trainer_stats = trainer.train()
 
 # # Save the model
-# output_model_name = f"{args.model_name.split('/')[-1]}-{args.distilled_model.split('/')[-1]}-sft-{args.max_model_len}"
-# model.save_pretrained(output_model_name)
-# tokenizer.save_pretrained(output_model_name)
-
-# print(f"Model saved to {output_model_name}")
+output_model_name = f"{args.model_name.split('/')[-1]}-{args.distilled_model.split('/')[-1]}-sft-{args.max_model_len}-r-{args.lora_r}-alpha-{args.lora_alpha}"
+model.save_pretrained(f'{args.output_dir}/{output_model_name}')
+tokenizer.save_pretrained(f'{args.output_dir}/{output_model_name}')
+print(f"Model saved to {output_model_name}")
 
 # Run evaluation on both validation and test sets
 print("\n" + "="*80)
-print("RUNNING EVALUATIONS")
+print("RUNNING EVALUATIONS AFTER TRAINING")
 print("="*80)
+print('validation results:')
+validation_results = evaluate(valid_dataset, dataset_name="validation")
+print('test results:')
+test_results = evaluate(test_dataset, dataset_name="test")
 
-# validation_results = evaluate(valid_dataset, "validation")
-test_results = evaluate(test_dataset, "test")
+
+
+# TODO:
+'''
+- checkout the error that comes in the evaluate.py.
+- finetune on 1.5b and 3b models.
+- send these lora tuned models to Z.
+'''
