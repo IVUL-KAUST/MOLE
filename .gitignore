@@ -39,3 +39,4 @@ MagedAnnotations/
 qwen2.5-0.5b-instruct-sft/
 output/*
 lora_tuning_adapters*
+Qwen2.5-0.5B-Instruct
