@@ -115,6 +115,8 @@ def get_metadata(
                 base_url=base_url
             )
         elif backend == "vllm":
+            if model_name == "MOLE":
+                model_name = "Qwen2.5-3B-Instruct"
             tokenizer = AutoTokenizer.from_pretrained(model_name)
             # Support custom base URL from environment variable for SLURM jobs
             base_url = "http://localhost:8787/v1"
@@ -449,7 +451,9 @@ def run(
     try:
         metadata = schema(metadata = metadata)
     except Exception as e:
-        logger.show_error(f"Failed to validate metadata: {metadata}")
+        logger.show_error(f"Failed to validate metadata:")
+        logger.show_warning(metadata)
+        logger.show_error(f"{e}")
         metadata = schema.generate_metadata(method = 'default')
         
     results = {}

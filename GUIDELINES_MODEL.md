@@ -15,4 +15,5 @@ In this task we want to extract models' metadata from papers. Here is a discribt
 12. **Context**: the context size of the model
 13. **Language**: the language of the model was pretrained on
 14. **Provider**: which company or organization provided the model
-15. **Paper_Link**: the link to the paper
+15. **Modality**: the modality of the model
+16. **Paper_Link**: the link to the paper

@@ -318,7 +318,7 @@ class ModelSchema(Model):
     Models: Field(List[Model], 1, 10)
     License: Field(Str, 1, 1, licenses)
     Year: Field(Year, 1900, 2025)
-    Benchmarks: Field(List[Str],1, 20)
+    Benchmarks: Field(List[Str],1, 64)
     Architecture: Field(Str, 1, 1, ["Transformer", "MoE", "SSM", "RNN", "CNN", "Hybrid", "other"])
     Context: Field(Int, 1)
     Language: Field(Str, 1, 1, ['monolingual', 'bilingual', 'multilingual'])
@@ -328,14 +328,20 @@ class ModelSchema(Model):
     
     @classmethod
     def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
-        schema = cls.schema()
+        if version == "2.0":
+            schema = cls.schema()
+        elif version == "1.0":
+            schema = cls.get_mole_schema()
+        else:
+            raise ValueError(f"Invalid version: {version}")
         prompt = f"""Schema Name: {cls.get_schema_name()}
                     Input Schema: {schema}
                     Paper Text: {paper_text}
                 """
         system_prompt = cls.get_system_prompt().replace("datasets", "models")
-        system_prompt += "Use the following guidelines to extract the answer from the 'Paper Text':\n\n"
-        system_prompt += open('GUIDELINES_MODEL.md').read()
+        if version == "2.0":
+            system_prompt += "Use the following guidelines to extract the answer from the 'Paper Text':\n\n"
+            system_prompt += open('GUIDELINES_MODEL.md').read()
         return prompt, system_prompt
 
 class TestSchema(Schema):

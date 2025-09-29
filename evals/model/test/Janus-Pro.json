@@ -34,7 +34,7 @@
         "SEED",
         "MM-Vet"
     ],
-    "Architecture": "Transfromer",
+    "Architecture": "Transformer",
     "Context": 4096,
     "Language": "multilingual",
     "Provider": "DeepSeek-AI",
