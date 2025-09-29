@@ -1,3 +1,8 @@
+# import os
+
+# os.environ['CUDA_VISIBLE_DEVICES'] = '2,3'
+
+
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer, 
@@ -260,7 +265,11 @@ def predict(examples, dataset_name='validation'):
         except Exception as e:
             metadata = schema.generate_metadata(method='default').json()
         pred_metadata = schema(metadata=metadata)
-        result = pred_metadata.compare_with(gold_metadata, return_precision_only=True if dataset_name=='validation' else False)
+        result = pred_metadata.compare_with(
+            gold_metadata,
+            return_precision_only=True if dataset_name=='validation' else False,
+            return_metrics_only=True,
+        )
         results.append(result)
         output_example['metadata'] = pred_metadata.json()
         output_example['result'] = result
