@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from constants import non_browsing_models
 import time
 from openai import OpenAI
-from utils import read_json, get_metadata_human, create_hash, get_metadata_judge, get_repo_link, fetch_repository_metadata, TextLogger
+from utils import read_json, get_metadata_human, create_hash, get_metadata_judge, get_repo_link, fetch_repository_metadata, TextLogger, get_paper_content_from_docling
 from traditional import get_metadata_keyword, get_metadata_qa, get_metadata_langextract
 from schema import get_schema
 from transformers import AutoTokenizer
