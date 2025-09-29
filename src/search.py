@@ -107,7 +107,7 @@ def get_metadata(
 
         
         if backend == "openrouter":
-            logger.show_info(f"🔑 Using OpenRouter backend")
+            logger.show_info("🔑 Using OpenRouter backend")
             api_key = os.environ.get("OPENROUTER_API_KEY")
             base_url = "https://openrouter.ai/api/v1"
             client = OpenAI(
@@ -451,7 +451,7 @@ def run(
     try:
         metadata = schema(metadata = metadata)
     except Exception as e:
-        logger.show_error(f"Failed to validate metadata:")
+        logger.show_error("Failed to validate metadata:")
         logger.show_warning(metadata)
         logger.show_error(f"{e}")
         metadata = schema.generate_metadata(method = 'default')
