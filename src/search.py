@@ -135,7 +135,6 @@ def get_metadata(
             message = client.chat.completions.create(
                 model=model_name,
                 messages=messages,
-                temperature=0.0,
                 extra_body={
                 "chat_template_kwargs": {
                     "template": json.dumps(json.loads(template), indent=4)
@@ -146,7 +145,6 @@ def get_metadata(
                 message = client.chat.completions.create(
                         model=model_name,
                         messages=messages,
-                        temperature=0.0,
                         extra_body={
                             "chat_template_kwargs": {"enable_thinking": False},
                         }
@@ -155,7 +153,6 @@ def get_metadata(
                 message = client.chat.completions.create(
                         model=model_name,
                         messages=messages,
-                        temperature=0.0
                     )
         try:
             if backend == "openrouter":
