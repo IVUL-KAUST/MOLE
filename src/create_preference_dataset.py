@@ -15,7 +15,7 @@ import random
 MAX_TOKENS = 2048
 
 
-model_name = "Qwen/Qwen2.5-0.5B-Instruct"
+model_name = "Qwen2.5-0.5B-Instruct"
 distilled_model = "moonshotai/kimi-k2"
 base_path = "static/synth_datasetv2/**/*.json"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -26,6 +26,7 @@ def create_prompts(examples):
     messages = []
     lengths = []
     schemas = []
+    prompts = [] 
     for path in examples['path']:
         data = json.load(open(path))
         if "metadata" in data:
@@ -62,12 +63,15 @@ def create_prompts(examples):
         length = predicted_metadata.evaluate_length()
         messages.append([{'role': 'system', 'content': system_prompt}, {'role': 'user', 'content': prompt}, {'role': 'assistant', 'content': json.dumps(metadata)}])
         lengths.append(length)
+        prompts.append(prompt)
     return {"chosen": messages, "lengths": lengths, "schemas": schemas}
 
 def different_format(response):
     if random.random() < 0.5:
-        return {"answer": response}
+        print('add answer key')
+        return json.dumps({"answer": json.loads(response)})
     else:
+        print('convert to another format')
         output = ""
         for k, v in json.loads(response).items():
             output += f"### {k}\n{v}\n"
@@ -83,7 +87,6 @@ def malformed_response(response):
     elif random.random() < 0.8:
         return response.replace('"', "'")
     else:
-        # replace nth comma
         return response.replace(",", "", random.randint(1, len(response)))
 
 def manipulate_response(response, schema_name):
@@ -94,19 +97,18 @@ def manipulate_response(response, schema_name):
     elif random.random() < 0.6:
         return malformed_response(response)
     else:
-        return metadata.modify_length()
+        return json.dumps(metadata.modify_length())
 
 def create_rejected_prompts(examples):
-    reject = []
+    rejected = []
     for i, chat in enumerate(examples['chosen']):
-        system_prompt = chat[0]['content']
+        system = chat[0]['content']
         prompt = chat[1]['content']
         response = chat[2]['content']
         schema_name = examples['schemas'][i]
-        rejected_response = json.dumps(manipulate_response(response, schema_name))
-        rejected_response = truncate_prompt(rejected_response, system_prompt, tokenizer, max_model_len=8192, max_output_len=2048, log=False)
-        reject.append([{'role': 'system', 'content': system_prompt}, {'role': 'user', 'content': prompt}, {'role': 'assistant', 'content': rejected_response}])
-    return {"rejected": reject}
+        rejected_response = manipulate_response(response, schema_name)
+        rejected.append([{'role': 'system', 'content': system}, {'role': 'user', 'content': prompt}, {'role': 'assistant', 'content': rejected_response}])
+    return {"rejected": rejected}
 
 def prepare_dataset(files):
     dataset = Dataset.from_list([{"path": file} for file in files])
@@ -117,6 +119,6 @@ def prepare_dataset(files):
 
 if __name__ == "__main__":
     dataset = prepare_dataset(model_files)
-    dataset = dataset.train_test_split(test_size=0.2)
+    dataset = dataset.train_test_split(test_size=0.2, seed=42)
     dataset.push_to_hub("Zaid/mole_preference", private = True)
     print(dataset)
