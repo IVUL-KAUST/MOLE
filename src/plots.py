@@ -71,6 +71,13 @@ def remap_names(model_name):
         model_name = "GPT 4o"
     elif model_name == "anthropic_claude-3.5-sonnet":
         model_name = "Claude 3.5 Sonnet"
+    if 'r_8_alpha_16' in model_name:
+        if '200' in model_name:
+            model_name = model_name.replace("Instruct-kimi-k2-sft-merged-r_8_alpha_16-dpo-merged-r_8_alpha_16-200", "")
+            model_name = model_name.replace("Qwen2.5-", "MeXtract ").replace('-','')+ ' DPO'
+        if 'dpo' not in model_name:
+            model_name = model_name.replace("Instruct-kimi-k2-sft-merged-r_8_alpha_16", "")
+            model_name = model_name.replace("Qwen2.5-", "MeXtract ").replace('-','')
     else:
         model_name = model_name.replace("-", " ").title()
 
@@ -394,7 +401,20 @@ def plot_by_group():
 
 
 if __name__ == "__main__":
-    json_files = glob(f"{args.results_path}/**/*.json")
+    all_files = glob(f"{args.results_path}/**/*.json")
+    print(len(all_files))
+    json_files = []
+    for file in all_files:
+        json_data = json.load(open(file))
+        model_name = json_data['config']['model_name']
+        if 'kimi-k2' in model_name.lower():
+            if 'r_8_alpha_16' in model_name.lower():
+                if '200' in model_name.lower():
+                    json_files.append(file)
+                if 'dpo' not in model_name.lower():
+                    json_files.append(file)
+        else:
+            json_files.append(file)
     if args.model is not None:
         json_files = [file for file in json_files if args.model in json.load(open(file))['config']['model_name']]
 
