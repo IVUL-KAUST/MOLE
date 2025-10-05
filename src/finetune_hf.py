@@ -1,3 +1,8 @@
+# import os
+
+# os.environ['CUDA_VISIBLE_DEVICES'] = '2,3'
+
+
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer, 
@@ -260,7 +265,11 @@ def predict(examples, dataset_name='validation'):
         except Exception as e:
             metadata = schema.generate_metadata(method='default').json()
         pred_metadata = schema(metadata=metadata)
-        result = pred_metadata.compare_with(gold_metadata, return_precision_only=True if dataset_name=='validation' else False)
+        result = pred_metadata.compare_with(
+            gold_metadata,
+            return_precision_only=True if dataset_name=='validation' else False,
+            return_metrics_only=True,
+        )
         results.append(result)
         output_example['metadata'] = pred_metadata.json()
         output_example['result'] = result
@@ -417,6 +426,7 @@ trainer_stats = trainer.train()
 output_model_name = f"{args.model_name.split('/')[-1]}-{args.distilled_model.split('/')[-1]}-sft-{args.max_model_len}-r-{args.lora_r}-alpha-{args.lora_alpha}"
 model.save_pretrained(f'{args.output_dir}/{output_model_name}')
 tokenizer.save_pretrained(f'{args.output_dir}/{output_model_name}')
+print('trainer stats are:', trainer_stats)
 print(f"Model saved to {output_model_name}")
 
 # Run evaluation on both validation and test sets

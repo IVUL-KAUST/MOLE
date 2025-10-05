@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from constants import non_browsing_models
 import time
 from openai import OpenAI
-from utils import read_json, get_metadata_human, create_hash, get_metadata_judge, get_repo_link, fetch_repository_metadata, TextLogger
+from utils import read_json, get_metadata_human, create_hash, get_metadata_judge, get_repo_link, fetch_repository_metadata, TextLogger, get_paper_content_from_docling
 from traditional import get_metadata_keyword, get_metadata_qa, get_metadata_langextract
 from schema import get_schema
 from transformers import AutoTokenizer
@@ -107,7 +107,7 @@ def get_metadata(
 
         
         if backend == "openrouter":
-            logger.show_info(f"🔑 Using OpenRouter backend")
+            logger.show_info("🔑 Using OpenRouter backend")
             api_key = os.environ.get("OPENROUTER_API_KEY")
             base_url = "https://openrouter.ai/api/v1"
             client = OpenAI(
@@ -448,7 +448,7 @@ def run(
     try:
         metadata = schema(metadata = metadata)
     except Exception as e:
-        logger.show_error(f"Failed to validate metadata:")
+        logger.show_error("Failed to validate metadata:")
         logger.show_warning(metadata)
         logger.show_error(f"{e}")
         metadata = schema.generate_metadata(method = 'default')
