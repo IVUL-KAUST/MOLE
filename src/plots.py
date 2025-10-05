@@ -32,11 +32,17 @@ args = args.parse_args()
 random.seed(args.seed)
 
 categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi', 'model']
+categories_no_model = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
 
 def get_all_ids():
     ids = []
     if args.schema_name == 'all':
         for cat in categories:
+            schema = get_schema(cat)
+            data = schema.get_eval_datasets(args.split)
+            ids += [create_hash(paper['Paper_Link']) for paper in data]
+    elif args.schema_name in 'all-model':
+        for cat in categories_no_model:
             schema = get_schema(cat)
             data = schema.get_eval_datasets(args.split)
             ids += [create_hash(paper['Paper_Link']) for paper in data]
@@ -149,6 +155,8 @@ def get_group():
     headers = []
     if args.group_by_x == "attributes_few":
         headers += ["Link", "License", "Tasks", "Domain", "Collection_Style", "Volume"]
+    if args.group_by_x == "attributes_model":
+        headers += ["License", "Benchmarks", "Architecture", "Context", "Modality", "Provider"]
     elif args.group_by_x == "attributes_hard":
         headers += ["Link","License", "HF_Link", "Volume", "Year", "Derived_From", "Host", "Domain", "Collection_Style"]
     elif args.group_by_x == "attributes":
@@ -407,12 +415,14 @@ if __name__ == "__main__":
     for file in all_files:
         json_data = json.load(open(file))
         model_name = json_data['config']['model_name']
+        # if any([model in model_name.lower() for model in ['gemini', 'moonshotai', 'x-ai']]):
+        #     json_files.append(file)
         if 'kimi-k2' in model_name.lower():
             if 'r_8_alpha_16' in model_name.lower():
                 if '200' in model_name.lower():
                     json_files.append(file)
-                if 'dpo' not in model_name.lower():
-                    json_files.append(file)
+        #         # if 'dpo' not in model_name.lower():
+        #         #     json_files.append(file)
         else:
             json_files.append(file)
     if args.model is not None:
