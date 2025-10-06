@@ -80,11 +80,11 @@ for schema_name in ar en jp fr ru multi model; do
     uv run src/evaluate.py \
         --split test \
         --backend vllm \
-        --model $MODEL_NAME \
+        --model MOLE \
         --schema_name $schema_name \
         --max_model_len 8192 \
         --max_output_len 2048 \
-        --version 2.0 \
+        --version 1.0 \
         --overwrite >> logs/results_${MODEL_NAME}.log 2>&1 
 done
 echo "✅ Evaluation completed!"
