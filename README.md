@@ -75,3 +75,9 @@ uv run src/finetune_preference.py \
 ```bash
 uv run src/plots.py --split test --schema_name all --group_by_x category
 ```
+
+## Download Models 
+
+All the 3 models are available through Gogle cloud in this link 
+
+https://storage.googleapis.com/mextract-models
