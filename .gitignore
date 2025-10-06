@@ -34,7 +34,6 @@ NuExtract-*
 unsloth*
 benchmark_results/
 dcgm/
-MagedAnnotations/
 .streamlit
 qwen2.5-0.5b-instruct-sft/
 output/*
