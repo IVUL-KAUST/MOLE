@@ -5,6 +5,9 @@ import os
 from glob import glob
 from tqdm import tqdm
 from collections import Counter
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from search_acl import annotate_schema
 
 dfs = []
 manual_annotation = False
