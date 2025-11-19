@@ -1,0 +1,79 @@
+{
+    "Name": "ChatGLM",
+    "Num_Parameters": 130.0,
+    "Unit": "Billion",
+    "Type": "Chat",
+    "Think": true,
+    "Version": 4.0,
+    "Models": [
+        {
+            "Name": "GLM-4",
+            "Num_Parameters": 130,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": true
+        },
+        {
+            "Name": "GLM-4-Air",
+            "Num_Parameters": 130,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": true
+        },
+        {
+            "Name": "GLM-4-9B",
+            "Num_Parameters": 9,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": true
+        }
+    ],
+    "License": "custom",
+    "Year": 2024,
+    "Benchmarks": [
+        "MMLU",
+        "GSM8K",
+        "MATH",
+        "BBH",
+        "GPQA",
+        "HumanEval",
+        "BoolQ",
+        "CommonSenseQA",
+        "Hellaswag",
+        "PIQA",
+        "DROP",
+        "C-EVAL",
+        "GAOKAO-Bench",
+        "C3",
+        "IFEVal",
+        "AlignBench",
+        "LongBench-Chat",
+        "NaturalCodeBench",
+        "AgentBench",
+        "SafetyBench"
+    ],
+    "Architecture": "Transformer",
+    "Context": 128000,
+    "Language": "multilingual",
+    "Provider": "ZhipuAI",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 0,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2406.12793"
+}

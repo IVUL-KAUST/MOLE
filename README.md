@@ -1,148 +1,83 @@
-# MOLE
+# MeXtract
 
-A framework and dataset for extracting and validation metadata extraction from scientific papers. 
-
-<img src = "images/pipeline.png" />
-
-## Features
-- Extract arXiv papers by keywords, month, and year
-- Clean and process LaTeX/PDF papers
-- Extract detailed metadata using AI models (Claude, ChatGPT, Gemini)
-- Validate extracted metadata against a reference dataset
+MeXtract is a family of light-weight models fintuned using Qwen2.5. This repository provides the scripts to finetune and evaluate these models.
 
 ## Installation
+
+Install uv from https://github.com/astral-sh/uv
+
 ```bash
-git clone https://github.com/zaidalyafeai/MOLE
-cd MOLE
-pip install -r requirements.txt
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Clone the repository and install dependencies:
+
+```bash
+uv sync
+```
+
+Create a `.env` file in the project root with your API keys:
+
+```bash
+OPENROUTER_API_KEY=sk-***
+# Add other API keys as needed
+```
+## Finetuning 
+
+### Supervised Fine-Tuning (SFT)
+
+```bash
+uv run src/finetune_hf.py \
+    --model_name_or_path base_model_path \
+    --output_model_name sft_model_path \
+    --max_model_len 8192 \
+    --max_output_len 2048
+```
+
+### Direct Preference Optimization (DPO)
+
+```bash
+uv run src/finetune_preference.py \
+    --dataset_name preference_data_path \
+    --model_name_or_path sft_model_path  \
+    --learning_rate 5.0e-6 \
+    --num_train_epochs 1 \
+    --per_device_train_batch_size 2 \
+    --max_steps 300 \
+    --gradient_accumulation_steps 8 \
+    --gradient_checkpointing \
+    --eval_strategy steps \
+    --eval_steps 100 \
+    --save_strategy steps \
+    --save_steps 100 \
+    --output_dir dpo_adapters_path \
+    --no_remove_unused_columns \
+    --use_peft \
+    --lora_r 8 \
+    --lora_alpha 16
 ```
 
 ## Evaluation
-Given a schema we can run evaluation using the following code. We use OpenRouter to run inference. You have to create `.env` file in the directory and save the API key `OPENROUTER_API_KEY=sk-***`. 
+
 ```bash
-python src/evaluate.py --model google/gemini-flash-1.5 --backend openrouter --split valid --schema_name ar --results_path static/results
+    uv run src/evaluate.py \
+        --split test \
+        --backend vllm \
+        --model dpo_model_path \
+        --schema_name model \
+        --max_model_len 8192 \
+        --max_output_len 2048 \
+        --overwrite
 ```
 
-Parameters
+## Visualization 
 
-- `--models` the name of the models from OpenRouter.
-- `-mv` validation or use `-mt` for testing
-- `--schema` the name of the schema. You can choose from `ar,en,jp,fr,ru,multi`
-- `-o` overwrite the current results. if not set, the it will load the saved metadata
-- `--few_shot` fewshot size, 0 for zeroshot.
-- `--results_path` the save path in the static directory. 
-- `--pdf_mode` use this parameter to use the pdf mode. You can set either `plumber` or `docling`.
-
-## Plots 
-
-```
-python src/plots.py --split valid --results_path static/results --group_by metric
+```bash
+uv run src/plots.py --split test --schema_name all --group_by_x category
 ```
 
-| Model             |   ar |   en |   jp |   fr |   ru | multi | Average |
-|-------------------|------|------|------|------|------|--------|---------|
-| baseline-random   | 31.97 | 26.46 | 32.33 | 30.16 | 32.01 | 23.81 | 29.46 |
-| baseline-keyword  | 44.22 | 41.27 | 43.11 | 44.44 | 44.71 | 36.59 | 42.39 |
-| Gemma 3 27B       | 57.14 | 65.87 | 67.92 | 67.20 | 66.93 | 59.40 | 64.08 |
-| Qwen 2.5 72B      | 64.40 | 64.02 | 67.92 | 69.84 | 64.81 | 63.66 | 65.78 |
-| Llama 4 Maverick  | 58.96 | 69.58 | 69.67 | 67.99 | 70.11 | 65.91 | 67.04 |
-| DeepSeek V3       | 64.40 | 69.84 | 68.42 | 70.11 | 70.63 | 62.91 | 67.72 |
-| GPT 4o            | 64.85 | 72.22 | 68.17 | 70.63 | 72.75 | 65.41 | 69.01 |
-| Claude 3.5 Sonnet | 63.04 | 67.72 | 69.17 | 73.54 | 74.34 | 66.67 | 69.08 |
-| Gemini 2.5 Pro    | 66.44 | 76.98 | 74.19 | 72.75 | 76.72 | 68.92 | 72.67 |
+## Download Models 
 
+All the 3 models are available through Gogle cloud in this link 
 
-parameters
-
-- `--schema` choose the schema, `all` for all schema
-- `--eval` what split to use, either `valid` or `test`
-- `--results_path` the path to fetch the results from
-- `--group_by` how to show the results, choose from the following `evaluation_subsets, attributes, attributes_few, language`
-- `--browsing` show the results for browsing only or `--non_borwsing` will show for non browsing models.
-
-## Server
-
-You can run the server using the following code
-
-```
-uvicorn main:app
-```
-
-Run inference using the running server
-
-```
-curl -X POST "http://localhost:8000/run" \
-  -F "link=https://arxiv.org/abs/2004.14303" \
-  -F "schema=ar" 
-```
-
-Example extracted metadata using Gemini 2.5 Pro
-
-```python
-{
-    "metadata": {
-        "Name": "TUNIZI",
-        "Subsets": [],
-        "Link": "https://github.com/chaymafourati/TUNIZI-Sentiment-Analysis-Tunisian-Arabizi-Dataset",
-        "HF Link": "",
-        "License": "unknown",
-        "Year": 2020,
-        "Language": "ar",
-        "Dialect": "Tunisia",
-        "Domain": [
-            "social media"
-        ],
-        "Form": "text",
-        "Collection Style": [
-            "crawling",
-            "manual curation",
-            "human annotation"
-        ],
-        "Description": "TUNIZI is a sentiment analysis dataset of over 9,000 Tunisian Arabizi sentences collected from YouTube comments, preprocessed, and manually annotated by native Tunisian speakers.",
-        "Volume": 9210.0,
-        "Unit": "sentences",
-        "Ethical Risks": "Medium",
-        "Provider": [
-            "iCompass"
-        ],
-        "Derived From": [],
-        "Paper Title": "TUNIZI: A TUNISIAN ARABIZI SENTIMENT ANALYSIS DATASET",
-        "Paper Link": "https://arxiv.org/abs/2004.14303",
-        "Script": "Latin",
-        "Tokenized": false,
-        "Host": "GitHub",
-        "Access": "Free",
-        "Cost": "",
-        "Test Split": false,
-        "Tasks": [
-            "sentiment analysis"
-        ],
-        "Venue Title": "International Conference on Learning Representations",
-        "Venue Type": "conference",
-        "Venue Name": "International Conference on Learning Representations 2020",
-        "Authors": [
-            "Chayma Fourati",
-            "Abir Messaoudi",
-            "Hatem Haddad"
-        ],
-        "Affiliations": [
-            "iCompass"
-        ],
-        "Abstract": "On social media, Arabic people tend to express themselves in their own local dialects. More particularly, Tunisians use the informal way called 'Tunisian Arabizi'. Analytical studies seek to explore and recognize online opinions aiming to exploit them for planning and prediction purposes such as measuring the customer satisfaction and establishing sales and marketing strategies. However, analytical studies based on Deep Learning are data hungry. On the other hand, African languages and dialects are considered low resource languages. For instance, to the best of our knowledge, no annotated Tunisian Arabizi dataset exists. In this paper, we introduce TUNIZI as a sentiment analysis Tunisian Arabizi Dataset, collected from social networks, preprocessed for analytical studies and annotated manually by Tunisian native speakers."
-    },
-}
-```
-
-## Citation
-
-```
-@misc{mole,
-      title={MOLE: Metadata Extraction and Validation in Scientific Papers Using LLMs}, 
-      author={Zaid Alyafeai and Maged S. Al-Shaibani and Bernard Ghanem},
-      year={2025},
-      eprint={2505.19800},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2505.19800}, 
-}
-```
+https://storage.googleapis.com/mextract-models

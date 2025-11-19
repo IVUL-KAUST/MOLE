@@ -1,7 +1,9 @@
 import pandas as pd
 from glob import glob
 import json
-from helpers.fix_abstracts import get_arxiv_abstract_from_pdf_link
+import re
+import requests
+import xml.etree.ElementTree as ET
 results = []
 
 other_papers = [
@@ -95,8 +97,33 @@ other_papers = [
   }
 ]
 
+def get_arxiv_abstract_from_pdf_link(pdf_url):
+    # Extract arXiv ID from the PDF link
+    if '.pdf' not in pdf_url:
+        pdf_url = pdf_url + ".pdf"
+    match = re.search(r'arxiv\.org/pdf/(\d{4}\.\d{4,5})(v\d+)?\.pdf', pdf_url)
+    if not match:
+        raise ValueError("Invalid arXiv PDF URL")
+    arxiv_id = match.group(1)
 
-for file_name in glob('evals/*/test/*.json'):
+    # Query arXiv API
+    api_url = f'http://export.arxiv.org/api/query?id_list={arxiv_id}'
+    response = requests.get(api_url)
+    if response.status_code != 200:
+        raise Exception("Failed to fetch from arXiv API")
+
+    # Parse XML to get the abstract
+    root = ET.fromstring(response.text)
+    ns = {'atom': 'http://www.w3.org/2005/Atom'}
+    abstract = root.find('atom:entry/atom:summary', ns).text.strip()
+
+    return abstract
+
+
+files = []
+for schema_name in ['ar', 'en', 'ru', 'jp', 'fr', 'multi',]:
+    files.extend(glob(f'evals/{schema_name}/test/*.json'))
+for file_name in files:
 
     dataset = json.load(open(file_name))
     title = dataset['Paper_Title']
@@ -117,7 +144,7 @@ for paper in other_papers:
         'schema_name': 'other'
     })
 df = pd.DataFrame(results)
-df.to_csv('test_dataset.csv', index=False)
+df.to_csv('data/test_dataset.csv', index=False)
 
 
 

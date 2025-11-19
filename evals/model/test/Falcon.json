@@ -1,0 +1,83 @@
+{
+    "Name": "Falcon",
+    "Num_Parameters": 180.0,
+    "Unit": "Billion",
+    "Type": "Chat",
+    "Think": true,
+    "Version": 1.0,
+    "Models": [
+        {
+            "Name": "Falcon-7B",
+            "Num_Parameters": 7,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": true
+        },
+        {
+            "Name": "Falcon-40B",
+            "Num_Parameters": 40,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": true
+        },
+        {
+            "Name": "Falcon-180B",
+            "Num_Parameters": 180,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": true
+        }
+    ],
+    "License": "Apache-2.0",
+    "Year": 2023,
+    "Benchmarks": [
+        "WebQuestions",
+        "WSC",
+        "LAMBADA",
+        "RACE",
+        "BoolQ",
+        "COPA",
+        "PIQA",
+        "OpenBookQA",
+        "BoolQ",
+        "CB",
+        "RTE",
+        "WiC",
+        "ReCORD",
+        "ANLI",
+        "Date",
+        "SciQ",
+        "The Pile",
+        "ARC-Easy",
+        "ARC-Challenge",
+        "OpenAI-Chat",
+        "HellaSwag",
+        "Winogrande",
+        "MMLU",
+        "HumanEval"
+    ],
+    "Architecture": "Transformer",
+    "Context": 2048,
+    "Language": "multilingual",
+    "Provider": "Technology Innovation Institute",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 1,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2311.16867"
+}

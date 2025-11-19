@@ -103,7 +103,7 @@ parser.add_argument(
 )
 parser.add_argument(
     "--log",
-    action="store_true",
+    action="store_false",
     help="log the progress",
 )
 parser.add_argument(

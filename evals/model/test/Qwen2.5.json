@@ -1,0 +1,178 @@
+{
+    "Name": "Qwen2.5",
+    "Num_Parameters": 72.0,
+    "Unit": "Billion",
+    "Type": "Chat",
+    "Think": false,
+    "Version": 2.5,
+    "Models": [
+        {
+            "Name": "Qwen2.5-0.5B",
+            "Num_Parameters": 0.5,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-1.5B",
+            "Num_Parameters": 1.5,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-3B",
+            "Num_Parameters": 3,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-7B",
+            "Num_Parameters": 7,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-14B",
+            "Num_Parameters": 14,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-32B",
+            "Num_Parameters": 32,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-72B",
+            "Num_Parameters": 72,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-0.5B-Instruct",
+            "Num_Parameters": 0.5,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-1.5B-Instruct",
+            "Num_Parameters": 1.5,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-3B-Instruct",
+            "Num_Parameters": 3,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-7B-Instruct",
+            "Num_Parameters": 7,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-14B-Instruct",
+            "Num_Parameters": 14,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-32B-Instruct",
+            "Num_Parameters": 32,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-72B-Instruct",
+            "Num_Parameters": 72,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-Turbo",
+            "Num_Parameters": 72,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        },
+        {
+            "Name": "Qwen2.5-Plus",
+            "Num_Parameters": 72,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        }
+    ],
+    "License": "Apache-2.0",
+    "Year": 2025,
+    "Benchmarks": [
+        "MMLU",
+        "MMLU-Pro",
+        "MMLU-redux",
+        "BBH",
+        "ARC-Challenge",
+        "TruthfulQA",
+        "Winogrande",
+        "HellaSwag",
+        "GPQA",
+        "TheoremQA",
+        "MATH",
+        "GSM8K",
+        "HumanEval",
+        "HumanEval+",
+        "MBPP",
+        "MBPP+",
+        "MultiPL-E",
+        "Multi-Exam",
+        "Multi-Understanding",
+        "Multi-Mathematics",
+        "Multi-Translation",
+        "LiveCodeBench",
+        "IFEval",
+        "Arena-Hard",
+        "MT-Bench",
+        "RULER",
+        "LV-Eval",
+        "LongBench-Chat"
+    ],
+    "Architecture": "Transformer",
+    "Context": 262144,
+    "Language": "multilingual",
+    "Provider": "QwenTeam",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 1,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2412.15115"
+}

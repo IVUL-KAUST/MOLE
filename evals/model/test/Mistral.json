@@ -1,0 +1,72 @@
+{
+    "Name": "Mistral",
+    "Num_Parameters": 7.0,
+    "Unit": "Billion",
+    "Type": "Chat",
+    "Think": false,
+    "Version": 1.0,
+    "Models": [
+        {
+            "Name": "Mistral 7B",
+            "Num_Parameters": 7.0,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Mistral 7B - Instruct",
+            "Num_Parameters": 7.0,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        }
+    ],
+    "License": "Apache-2.0",
+    "Year": 2023,
+    "Benchmarks": [
+        "Hellaswag",
+        "Winogrande",
+        "PIQA",
+        "SIQA",
+        "OpenbookQA",
+        "ARC-Easy",
+        "ARC-Challenge",
+        "CommonsenseQA",
+        "NaturalQuestions",
+        "TriviaQA",
+        "BoolQ",
+        "QuAC",
+        "GSM8K",
+        "MATH",
+        "HumanEval",
+        "MBPP",
+        "MMLU",
+        "BBH",
+        "AGI Eval",
+        "MT Bench"
+    ],
+    "Architecture": "Transformer",
+    "Context": 8192,
+    "Language": "multilingual",
+    "Provider": "Mistral AI",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 1,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2310.06825"
+}

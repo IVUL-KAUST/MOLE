@@ -1,0 +1,67 @@
+{
+    "Name": "Florence-2",
+    "Num_Parameters": 770,
+    "Unit": "Million",
+    "Type": "Base",
+    "Think": false,
+    "Version": 2.0,
+    "Models": [
+        {
+            "Name": "Florence-2-B",
+            "Num_Parameters": 232,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Florence-2-L",
+            "Num_Parameters": 770,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        }
+    ],
+    "License": "MIT License",
+    "Year": 2023,
+    "Benchmarks": [
+        "COCO Caption",
+        "COCO Object Detection",
+        "Flickr30k",
+        "RefCOCO Referring Segmentation",
+        "VQAv2",
+        "TextCaps",
+        "TextVQA",
+        "VizWiz VQA",
+        "NoCaps",
+        "OKVQA",
+        "AOKVQA",
+        "RefCOCO",
+        "RefCOCO+",
+        "RefCOCOg",
+        "ADE20K"
+    ],
+    "Architecture": "Transformer",
+    "Context": 768,
+    "Language": "monolingual",
+    "Provider": "Microsoft",
+    "Modality": "audio",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 0,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2311.06242"
+}

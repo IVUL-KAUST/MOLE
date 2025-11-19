@@ -1,0 +1,85 @@
+{
+    "Name": "SmolLM2",
+    "Num_Parameters": 1.7,
+    "Unit": "Billion",
+    "Type": "Chat",
+    "Think": false,
+    "Version": 2.0,
+    "Models": [
+        {
+            "Name": "SmolLM2-1.7B",
+            "Num_Parameters": 1.7,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "SmolLM2-1.7B-Instruct",
+            "Num_Parameters": 1.7,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": false
+        },
+        {
+            "Name": "SmolLM2-360M",
+            "Num_Parameters": 360,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "SmolLM2-135M",
+            "Num_Parameters": 135,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        }
+    ],
+    "License": "Apache-2.0",
+    "Year": 2024,
+    "Benchmarks": [
+        "MMLU",
+        "HellaSwag",
+        "ARC",
+        "OpenBookQA",
+        "PIQA",
+        "CommonsenseQA",
+        "Winogrande",
+        "GSM8K",
+        "MATH",
+        "HumanEval",
+        "MT-Bench",
+        "IFEval",
+        "DROP",
+        "CoQA",
+        "SQuADv2",
+        "Jeopardy",
+        "HELMET",
+        "NIH",
+        "OpenRewrite"
+    ],
+    "Architecture": "Transformer",
+    "Context": 8192,
+    "Language": "monolingual",
+    "Provider": "HuggingFace",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 0,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2502.02737"
+}

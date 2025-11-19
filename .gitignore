@@ -38,3 +38,11 @@ MagedAnnotations/
 .streamlit
 qwen2.5-0.5b-instruct-sft/
 output/*
+lora_tuning_adapters*
+Qwen2.5-0.5B-Instruct
+Falcon3-3B-Instruct/
+Llama3-2-3B-Instruct/
+r_16_alpha_32/*
+r_32_alpha_32/*
+logs/
+models/*

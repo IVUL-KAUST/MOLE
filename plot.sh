@@ -1,0 +1,1 @@
+uv run src/plots.py --split test --schema_name model --group_by_x metric

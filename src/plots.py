@@ -31,13 +31,18 @@ args = args.parse_args()
 
 random.seed(args.seed)
 
-categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
-# evaluation_subsets = schema[args.schema_name]['evaluation_subsets']
+categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi', 'model']
+categories_no_model = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
 
 def get_all_ids():
     ids = []
     if args.schema_name == 'all':
         for cat in categories:
+            schema = get_schema(cat)
+            data = schema.get_eval_datasets(args.split)
+            ids += [create_hash(paper['Paper_Link']) for paper in data]
+    elif args.schema_name in 'all-model':
+        for cat in categories_no_model:
             schema = get_schema(cat)
             data = schema.get_eval_datasets(args.split)
             ids += [create_hash(paper['Paper_Link']) for paper in data]
@@ -72,6 +77,13 @@ def remap_names(model_name):
         model_name = "GPT 4o"
     elif model_name == "anthropic_claude-3.5-sonnet":
         model_name = "Claude 3.5 Sonnet"
+    if 'r_8_alpha_16' in model_name:
+        if '200' in model_name:
+            model_name = model_name.replace("Instruct-kimi-k2-sft-merged-r_8_alpha_16-dpo-merged-r_8_alpha_16-200", "")
+            model_name = model_name.replace("Qwen2.5-", "MeXtract ").replace('-','')+ ' DPO'
+        if 'dpo' not in model_name:
+            model_name = model_name.replace("Instruct-kimi-k2-sft-merged-r_8_alpha_16", "")
+            model_name = model_name.replace("Qwen2.5-", "MeXtract ").replace('-','')
     else:
         model_name = model_name.replace("-", " ").title()
 
@@ -143,6 +155,8 @@ def get_group():
     headers = []
     if args.group_by_x == "attributes_few":
         headers += ["Link", "License", "Tasks", "Domain", "Collection_Style", "Volume"]
+    if args.group_by_x == "attributes_model":
+        headers += ["License", "Benchmarks", "Architecture", "Context", "Modality", "Provider"]
     elif args.group_by_x == "attributes_hard":
         headers += ["Link","License", "HF_Link", "Volume", "Year", "Derived_From", "Host", "Domain", "Collection_Style"]
     elif args.group_by_x == "attributes":
@@ -395,7 +409,22 @@ def plot_by_group():
 
 
 if __name__ == "__main__":
-    json_files = glob(f"{args.results_path}/**/*.json")
+    all_files = glob(f"{args.results_path}/**/*.json")
+    print(len(all_files))
+    json_files = []
+    for file in all_files:
+        json_data = json.load(open(file))
+        model_name = json_data['config']['model_name']
+        # if any([model in model_name.lower() for model in ['gemini', 'moonshotai', 'x-ai']]):
+        #     json_files.append(file)
+        if 'kimi-k2' in model_name.lower():
+            if 'r_8_alpha_16' in model_name.lower():
+                if '200' in model_name.lower():
+                    json_files.append(file)
+        #         # if 'dpo' not in model_name.lower():
+        #         #     json_files.append(file)
+        else:
+            json_files.append(file)
     if args.model is not None:
         json_files = [file for file in json_files if args.model in json.load(open(file))['config']['model_name']]
 

@@ -1,0 +1,61 @@
+{
+    "Name": "Janus-Pro",
+    "Num_Parameters": 7.0,
+    "Unit": "Billion",
+    "Type": "Base",
+    "Think": false,
+    "Version": 1.0,
+    "Models": [
+        {
+            "Name": "Janus-Pro-1B",
+            "Num_Parameters": 1.5,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Janus-Pro-7B",
+            "Num_Parameters": 7,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        }
+    ],
+    "License": "custom",
+    "Year": 2025,
+    "Benchmarks": [
+        "POPE",
+        "MME-Perception",
+        "GQA",
+        "MMMU",
+        "GenEval",
+        "DPG-Bench",
+        "MMBench",
+        "SEED",
+        "MM-Vet"
+    ],
+    "Architecture": "Transformer",
+    "Context": 4096,
+    "Language": "multilingual",
+    "Provider": "DeepSeek-AI",
+    "Modality": "multimodal",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 0,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2501.17811"
+}

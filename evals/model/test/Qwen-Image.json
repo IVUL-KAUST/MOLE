@@ -1,0 +1,62 @@
+{
+    "Name": "Qwen-Image",
+    "Num_Parameters": 20.0,
+    "Unit": "Billion",
+    "Type": "Base",
+    "Think": false,
+    "Version": 1.0,
+    "Models": [
+        {
+            "Name": "Qwen-Image",
+            "Num_Parameters": 20,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        }
+    ],
+    "License": "Apache-2.0",
+    "Year": 2025,
+    "Benchmarks": [
+        "Imagenet",
+        "GenEval",
+        "DPG",
+        "OneIG-Bench",
+        "GEdit",
+        "ImgEdit",
+        "GSO",
+        "LongText-Bench",
+        "ChineseWord",
+        "CVTG-2K",
+        "TIIF Bench",
+        "GEdit-Bench",
+        "NYUv2",
+        "KITTI",
+        "ScanNet",
+        "DIODE",
+        "ETH3D"
+    ],
+    "Architecture": "Transformer",
+    "Context": 1328,
+    "Language": "multilingual",
+    "Provider": "QwenTeam",
+    "Modality": "image",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 0,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2508.02324"
+}

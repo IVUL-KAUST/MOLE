@@ -1,0 +1,62 @@
+{
+    "Name": "Phi-4",
+    "Num_Parameters": 14.0,
+    "Unit": "Billion",
+    "Type": "Chat",
+    "Think": true,
+    "Version": 4.0,
+    "Models": [
+        {
+            "Name": "phi-4",
+            "Num_Parameters": 14.0,
+            "Unit": "Billion",
+            "Type": "Chat",
+            "Think": true
+        }
+    ],
+    "License": "MIT License",
+    "Year": 2024,
+    "Benchmarks": [
+        "MMLU",
+        "GPQA",
+        "MATH",
+        "HumanEval",
+        "MGSM",
+        "SimpleQA",
+        "DROP",
+        "MMLUPro",
+        "HumanEval+",
+        "ArenaHard",
+        "LiveBench",
+        "IFEval",
+        "PhiBench",
+        "ARC-Challenge",
+        "MBPP",
+        "TriviaQA",
+        "HELMET"
+    ],
+    "Architecture": "Transformer",
+    "Context": 16000,
+    "Language": "multilingual",
+    "Provider": "Microsoft Research",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 0,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2412.08905"
+}

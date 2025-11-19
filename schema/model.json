@@ -1,0 +1,105 @@
+{
+    "Name": {
+        "question": "What is the name of the model?",
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 5
+    },
+    "Num_Parameters": {
+        "question": "What is the number of parameters of the model?",
+        "answer_type": "Float",
+        "answer_min": 1,
+        "answer_max": 1000
+    },
+    "Unit": {
+        "question": "What is the unit of the number of parameters?",
+        "options": ["Million", "Billion", "Trillion"],
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Type": {
+        "question": "What is the type of the model?",
+        "options": ["Base", "Code", "Chat"],
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Think": {
+        "question": "Is the model is a thinking/ reasoning model?",
+        "options": [true, false],
+        "answer_type": "bool",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Version": {
+        "question": "What is the version of the model?",
+        "answer_type": "float",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Models": {
+        "question": "What are all model variants listed in the paper?",
+        "answer_type": "List[Dict[Name, Num_Parameters, Unit, Type, Think]]",
+        "answer_min": 1,
+        "answer_max": 10
+    },
+    "License": {
+        "question": "What is the license of the model?",
+        "options": ["Apache-1.0", "Apache-2.0", "Non Commercial Use - ELRA END USER", "BSD", "CC BY 1.0", "CC BY 2.0", "CC BY 3.0", "CC BY 4.0", "CC BY-NC 1.0", "CC BY-NC 2.0", "CC BY-NC 3.0", "CC BY-NC 4.0", "CC BY-NC-ND 1.0", "CC BY-NC-ND 2.0", "CC BY-NC-ND 3.0", "CC BY-NC-ND 4.0", "CC BY-SA 1.0", "CC BY-SA 2.0", "CC BY-SA 3.0", "CC BY-SA 4.0", "CC BY-NC 1.0", "CC BY-NC 2.0", "CC BY-NC 3.0", "CC BY-NC-SA 1.0","CC BY-NC-SA 2.0","CC BY-NC-SA 3.0","CC BY-NC-SA 4.0", "CC BY-NC 4.0", "CC0", "CDLA-Permissive-1.0", "CDLA-Permissive-2.0", "GPL-1.0", "GPL-2.0", "GPL-3.0", "LDC User Agreement", "LGPL-2.0", "LGPL-3.0", "MIT License", "ODbl-1.0", "MPL-1.0", "MPL-2.0", "ODC-By", "AFL-3.0", "CDLA-SHARING-1.0", "unknown", "custom"],
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Year": {
+        "question": "What year was the model published?",
+        "answer_type": "int",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Benchmarks": {
+        "question": "What are the evaluation benchmarks of the model?",
+        "answer_type": "List[str]",
+        "answer_min": 1,
+        "answer_max": 64
+    },
+    "Architecture": {
+        "question": "What is the architecture of the model?",
+        "options": ["Transformer", "MoE", "SSM", "RNN", "CNN", "Hybrid", "other"],
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Context": {
+        "question": "What is the context of the model?",
+        "answer_type": "int",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Language": {
+        "question": "What languages are in the dataset?",
+        "options": ["monolingual", "bilingual", "multilingual"],
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Provider": {
+        "question": "Which company or organization provided the model?",
+        "answer_type": "List[str]",
+        "answer_min": 1,
+        "answer_max": 5
+    },
+    "Modality": {
+        "question": "What is the modality of the model?",
+        "options": ["text", "audio", "video", "image", "multimodal"],
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+   "Paper_Link": {
+        "question": "What is the link to the paper?",
+        "answer_type": "url",
+        "answer_min": 1,
+        "answer_max": 1
+    }
+}

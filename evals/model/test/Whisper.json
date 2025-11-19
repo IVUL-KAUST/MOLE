@@ -1,0 +1,93 @@
+{
+    "Name": "Whisper",
+    "Num_Parameters": 1.55,
+    "Unit": "Billion",
+    "Type": "Base",
+    "Think": false,
+    "Version": 2.0,
+    "Models": [
+        {
+            "Name": "Whisper-tiny",
+            "Num_Parameters": 39,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Whisper-base",
+            "Num_Parameters": 74,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Whisper-small",
+            "Num_Parameters": 244,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Whisper-medium",
+            "Num_Parameters": 769,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "Whisper-large",
+            "Num_Parameters": 1.55,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        }
+    ],
+    "License": "Apache-2.0",
+    "Year": 2022,
+    "Benchmarks": [
+        "LibriSpeech",
+        "TEDLIUM",
+        "Common Voice",
+        "FLEURS",
+        "CoVoST2",
+        "VoxPopuli",
+        "MLS",
+        "CHiME-6",
+        "WSJ",
+        "Switchboard",
+        "CallHome",
+        "CORAAL",
+        "AMI-IHM",
+        "AMI-SDM1",
+        "Artie",
+        "Meanwhile",
+        "Kincaid46",
+        "Rev16",
+        "Earnings-21",
+        "Earnings-22"
+    ],
+    "Architecture": "Transformer",
+    "Context": 30000,
+    "Language": "multilingual",
+    "Provider": "OpenAI",
+    "Modality": "audio",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 0,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2212.04356"
+}

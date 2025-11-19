@@ -1,0 +1,92 @@
+{
+    "Name": "BLOOM",
+    "Num_Parameters": 176.0,
+    "Unit": "Billion",
+    "Type": "Base",
+    "Think": false,
+    "Version": 1.0,
+    "Models": [
+        {
+            "Name": "BLOOM-560M",
+            "Num_Parameters": 560,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "BLOOM-1.1B",
+            "Num_Parameters": 1.1,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "BLOOM-1.7B",
+            "Num_Parameters": 1.7,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "BLOOM-3B",
+            "Num_Parameters": 3,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "BLOOM-7.1B",
+            "Num_Parameters": 7.1,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "BLOOM",
+            "Num_Parameters": 176,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        }
+    ],
+    "License": "custom",
+    "Year": 2022,
+    "Benchmarks": [
+        "SuperGLUE",
+        "WMT'14",
+        "Flores-101",
+        "DiaBLa",
+        "WikiLingua",
+        "HumanEval",
+        "HELM",
+        "XNLI",
+        "XWinograd",
+        "XCOPA",
+        "XStoryCloze",
+        "CrowS-Pairs"
+    ],
+    "Architecture": "Transformer",
+    "Context": 2048,
+    "Language": "multilingual",
+    "Provider": "BigScience",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 1,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2211.05100"
+}

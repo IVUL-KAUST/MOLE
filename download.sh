@@ -1,0 +1,1 @@
+uv run hf download numind/NuExtract-2.0-8B --local-dir NuExtract-2.0-8B

@@ -8,7 +8,7 @@ from collections import Counter
 
 dfs = []
 manual_annotation = False
-base_dir = "../.cache/jql-a**/"
+base_dir = "/ibex/ai/home/alyafez/.cache/jql-a**/"
 if manual_annotation:
     papers = annotate_schema()
     df = pd.DataFrame(papers)
@@ -34,6 +34,7 @@ dataset = Dataset.from_pandas(df, preserve_index=False)
 
 acceptable_schemas = ['ar', 'en', 'ru', 'jp', 'fr', 'multi', 'other', 'none']
 dataset = dataset.filter(lambda x: x['schema_name'] in acceptable_schemas)
+print('after discarding papers with unknown schema')
 print(dataset)
 
 print(Counter(dataset["schema_name"]))
@@ -57,6 +58,8 @@ def filter_by_distance(examples):
             output.append(True)
     return output
 dataset = dataset.filter(filter_by_distance, batched=True, num_proc=4)
+print('after filtering the test dataset')
+print(dataset)
 print(Counter(dataset["schema_name"]))
 
 df = dataset.to_pandas()
@@ -77,7 +80,7 @@ print(train_df['schema_name'].value_counts())
 print(train_df.shape[0])
 
 print(train_df.head())
-train_df[['title', 'abstract', 'url', 'schema_name', 'reasoning']].to_csv('train_dataset.csv', index=False, encoding='utf-8')
+train_df[['title', 'abstract', 'url', 'schema_name', 'reasoning']].to_csv('data/train_dataset.csv', index=False, encoding='utf-8')
 
     
 

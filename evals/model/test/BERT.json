@@ -1,0 +1,57 @@
+{
+    "Name": "BERT",
+    "Num_Parameters": 340.0,
+    "Unit": "Million",
+    "Type": "Base",
+    "Think": false,
+    "Version": 1.0,
+    "Models": [
+        {
+            "Name": "BERT_BASE",
+            "Num_Parameters": 110,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "BERT_LARGE",
+            "Num_Parameters": 340,
+            "Unit": "Million",
+            "Type": "Base",
+            "Think": false
+        }
+    ],
+    "License": "Apache-2.0",
+    "Year": 2018,
+    "Benchmarks": [
+        "GLUE",
+        "SQuAD v1.1",
+        "SQuAD v2.0",
+        "SWAG",
+        "CoNLL-2003 NER"
+    ],
+    "Architecture": "Transformer",
+    "Context": 512,
+    "Language": "monolingual",
+    "Provider": "Google AI",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 0,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/1810.04805"
+}

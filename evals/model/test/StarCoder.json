@@ -1,0 +1,65 @@
+{
+    "Name": "StarCoder",
+    "Num_Parameters": 15.5,
+    "Unit": "Billion",
+    "Type": "Code",
+    "Think": false,
+    "Version": 1.0,
+    "Models": [
+        {
+            "Name": "StarCoderBase",
+            "Num_Parameters": 15.5,
+            "Unit": "Billion",
+            "Type": "Base",
+            "Think": false
+        },
+        {
+            "Name": "StarCoder",
+            "Num_Parameters": 15.5,
+            "Unit": "Billion",
+            "Type": "Code",
+            "Think": false
+        }
+    ],
+    "License": "custom",
+    "Year": 2023,
+    "Benchmarks": [
+        "HumanEval",
+        "MBPP",
+        "DS-1000",
+        "ODEX",
+        "MultiPL-E",
+        "Asleep at the Keyboard",
+        "FIM",
+        "CodeXGLUE",
+        "StereoSet",
+        "RealToxicityPrompts",
+        "GSM8K",
+        "MMLU",
+        "CoQA"
+    ],
+    "Architecture": "Transformer",
+    "Context": 8192,
+    "Language": "multilingual",
+    "Provider": "BigCode",
+    "Modality": "text",
+    "annotations_from_paper": {
+        "Name": 1,
+        "Num_Parameters": 1,
+        "Unit": 1,
+        "Type": 1,
+        "Think": 1,
+        "Version": 1,
+        "Models": 1,
+        "License": 1,
+        "Year": 1,
+        "Benchmarks": 1,
+        "Architecture": 1,
+        "Context": 1,
+        "Language": 1,
+        "Provider": 1,
+        "Modality": 1,
+        "Paper_Link": 1
+    },
+    "Paper_Link": "https://arxiv.org/pdf/2305.06161"
+}
