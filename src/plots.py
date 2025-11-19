@@ -41,7 +41,7 @@ def get_all_ids():
             schema = get_schema(cat)
             data = schema.get_eval_datasets(args.split)
             ids += [create_hash(paper['Paper_Link']) for paper in data]
-    elif args.schema_name in 'all-model':
+    elif args.schema_name == 'all-model':
         for cat in categories_no_model:
             schema = get_schema(cat)
             data = schema.get_eval_datasets(args.split)
