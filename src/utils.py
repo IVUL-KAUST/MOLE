@@ -32,6 +32,31 @@ import requests
 # from docling.datamodel.pipeline_options import PdfPipelineOptions, TableFormerMode
 # from docling.document_converter import PdfFormatOption
 
+from openai.types.chat import ChatCompletion, ChatCompletionMessage
+from openai.types.chat.chat_completion import Choice
+from datetime import datetime, timezone
+import uuid
+
+def create_chat_completion(model_name, response):
+    completion = ChatCompletion(
+        id=f"chatcmpl-{uuid.uuid4().hex[:12]}",
+        object="chat.completion",
+        created=int(datetime.now(timezone.utc).timestamp()),
+        model=model_name,
+        choices=[
+            Choice(
+                index=0,
+                message=ChatCompletionMessage(
+                    role="assistant",
+                    content=response
+                ),
+                finish_reason="stop"
+            )
+        ],
+        usage={"prompt_tokens": -1, "completion_tokens": -1, "total_tokens": -1}
+    )
+    return completion
+
 def create_hash(paper_id: str) -> str:
     """Create a hash for a given paper ID."""
     return hashlib.sha256(paper_id.encode()).hexdigest()[:8]

@@ -10,8 +10,9 @@ from openai import OpenAI
 from utils import read_json, get_metadata_human, create_hash, get_metadata_judge, get_repo_link, fetch_repository_metadata, TextLogger, get_paper_content_from_docling
 from traditional import get_metadata_keyword, get_metadata_qa, get_metadata_langextract
 from schema import get_schema
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM
 from search_acl import ACLDownloader, Downloader
+from utils import create_chat_completion
 
 load_dotenv()
 
@@ -90,6 +91,7 @@ def get_metadata(
     max_output_len = 1024,
     timeout = 3,
     version = "2.0",
+    schema = None,
     log = True,
 ):
     cost = {
@@ -98,7 +100,8 @@ def get_metadata(
         "cost": 0,
     }
     logger = TextLogger(log = log)
-    schema = get_schema(schema_name)
+    if schema is None:
+        schema = get_schema(schema_name)
     for i in range(max_retries):
         predictions = {}
         error = None
@@ -127,6 +130,33 @@ def get_metadata(
             logger.show_info(f"🔑 Using VLLM backend")
             prompt = truncate_prompt(prompt, sys_prompt, tokenizer, max_model_len, max_output_len = max_output_len, log = log)
             messages[1]["content"] = prompt
+        
+        elif backend == "transformers":
+            tokenizer = AutoTokenizer.from_pretrained(model_name)
+            prompt = truncate_prompt(prompt, sys_prompt, tokenizer, max_model_len, max_output_len = max_output_len, log = log)
+            messages[1]["content"] = prompt
+            model = AutoModelForCausalLM.from_pretrained(
+                model_name,
+                torch_dtype="auto",
+                device_map="auto"
+            )
+
+            text = tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+            model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
+
+            generated_ids = model.generate(
+                **model_inputs,
+                max_new_tokens=2084
+            )
+            generated_ids = [
+                output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+            ]
+
+            response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
         else:
             raise ValueError(f"Invalid backend: {backend}")
 
@@ -149,6 +179,8 @@ def get_metadata(
                             "chat_template_kwargs": {"enable_thinking": False},
                         }
                     )
+            elif backend == "transformers":
+                message = create_chat_completion(model_name, response)
             else:
                 message = client.chat.completions.create(
                         model=model_name,
