@@ -344,11 +344,7 @@ class ModelSchema(Model):
             system_prompt += open('GUIDELINES_MODEL.md').read()
         return prompt, system_prompt
 
-class TestSchema(Schema):
-    Name: Field(Str, 1, 5)
-    Hobbies: Field(List[Str], 1, 3, ['Hiking', 'Swimming', 'Reading'])
-    Age : Field(Int, 1, 100)
-
+class TextSchema(Schema):
     @classmethod
     def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
         schema = cls.schema()
@@ -367,7 +363,11 @@ class TestSchema(Schema):
             The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
             The 'Output JSON' must have ONLY the keys in the 'Input Schema'."""
         return prompt, system_prompt
-    
+
+class TestSchema(TextSchema):
+    Name: Field(Str, 1, 5)
+    Hobbies: Field(List[Str], 1, 3, ['Hiking', 'Swimming', 'Reading'])
+    Age : Field(Int, 1, 100)
 
 class ResourceSchema(Schema):
     Name: Field(Str, 1, 5)
