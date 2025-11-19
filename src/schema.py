@@ -136,9 +136,20 @@ class Schema(BaseModel):
         schema = cls.dict()
         return schema[key]['answer_max']
     
-    def get_system_prompt():
-        raise NotImplementedError("get_system_prompt is not implemented for this schema")
-
+    @classmethod
+    def get_system_prompt(cls):
+        return f"""
+            You are a professional metadata extractor of datasets from research papers. 
+            You will be provided 'Paper Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
+            The 'Output JSON' is a JSON with key:answer where the answer retrieves an attribute of the 'Input Schema' from the 'Paper Text'. 
+            Each attribute in the 'Input Schema' has the following fields:
+            'options' : If the attribute has 'options' then the answer must be at least one of the options.
+            'answer_type': The output type represents the type of the answer.
+            'answer_min' : The minimum length of the answer depending on the 'answer_type'.
+            'answer_max' : The maximum length of the answer depending on the 'answer_type'.
+            The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
+            The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
+        """
     def get_answer_type(self, key):
         return self.model_fields[key].annotation
     
@@ -161,6 +172,8 @@ class Schema(BaseModel):
         type = cls.get_answer_object(key)
         return type.get_default()
     
+    def get_system_prompt(self):
+        pass
     def evaluate_length(self):
         accuracy = 0
         metadata = self.model_dump()
@@ -259,22 +272,28 @@ class DatasetSchema(Schema):
                         Input Schema: {schema}
                         Paper Text: {paper_text}
                     """
-        system_prompt = f"""
-            You are a professional metadata extractor of datasets from research papers. 
-            You will be provided 'Paper Text', 'Schema Name', 'Input Schema' and you must respond with an 'Output JSON'.
-            The 'Output JSON' is a JSON with key:answer where the answer retrieves an attribute of the 'Input Schema' from the 'Paper Text'. 
-            Each attribute in the 'Input Schema' has the following fields:
-            'options' : If the attribute has 'options' then the answer must be at least one of the options.
-            'answer_type': The output type represents the type of the answer.
-            'answer_min' : The minimum length of the answer depending on the 'answer_type'.
-            'answer_max' : The maximum length of the answer depending on the 'answer_type'.
-            The 'Output JSON' is a JSON that can be parsed using Python `json.load()`. USE double quotes "" not single quotes '' for the keys and values.
-            The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
-        """
+        system_prompt = cls.get_system_prompt()
         if version == "2.0":
             system_prompt += "Use the following guidelines to extract the answer from the 'Paper Text':\n\n"
             system_prompt += open('GUIDELINES.md').read()
 
+        return prompt, system_prompt
+
+class ModelSchema(Schema):
+    Name: Field(Str, 1, 5)
+    Num_Parameters: Field(Float, 1, 100)
+    Unit: Field(Str, 1, 1, options = ['Million', 'Billion', 'Trilion'])
+    Link: Field(URL, 0, 1)
+    License: Field(Str, 1, 1, options = licenses)
+    Year: Field(Year, 1900, 2025)
+
+    def get_prompts(cls, paper_text, readme, metadata = None):
+        schema = cls.schema()
+        prompt = f"""Schema Name: {cls.get_schema_name()}
+                    Input Schema: {schema}
+                    Paper Text: {paper_text}
+                """
+        system_prompt = cls.get_system_prompt().replace("datasets", "models")
         return prompt, system_prompt
 
 class ResourceSchema(Schema):
@@ -400,5 +419,7 @@ def get_schema(schema_name):
         return TestSchema
     elif schema_name == 'resource':
         return ResourceSchema
+    elif schema_name == 'model':
+        return ModelSchema
     else:
         raise ValueError(f"Invalid schema name: {schema_name}")
