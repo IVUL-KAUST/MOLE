@@ -369,6 +369,23 @@ class TestSchema(TextSchema):
     Hobbies: Field(List[Str], 1, 3, ['Hiking', 'Swimming', 'Reading'])
     Age : Field(Int, 1, 100)
 
+class ModelSchema(Schema):
+    Name: Field(Str, 1, 5)
+    Num_Parameters: Field(Float, 1, 100)
+    Unit: Field(Str, 1, 1, options = ['Million', 'Billion', 'Trilion'])
+    Link: Field(URL, 0, 1)
+    License: Field(Str, 1, 1, options = licenses)
+    Year: Field(Year, 1900, 2025)
+
+    def get_prompts(cls, paper_text, readme, metadata = None):
+        schema = cls.schema()
+        prompt = f"""Schema Name: {cls.get_schema_name()}
+                    Input Schema: {schema}
+                    Paper Text: {paper_text}
+                """
+        system_prompt = cls.get_system_prompt().replace("datasets", "models")
+        return prompt, system_prompt
+
 class ResourceSchema(Schema):
     Name: Field(Str, 1, 5)
     Category: Field(Str, 1, 1, ['ar', 'en', 'jp', 'ru', 'fr', 'multi', 'other'])
