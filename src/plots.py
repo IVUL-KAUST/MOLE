@@ -27,6 +27,9 @@ args.add_argument("--group_by_y", type = str, default = None)
 args.add_argument("--ignore_length", action="store_true")
 args.add_argument("--show_examples", type = int, default = 0)
 args.add_argument("--seed", type = int, default = 42)
+args.add_argument("--use_exact_match", action="store_true")
+args.add_argument("--penalize_errors", action="store_true")
+args.add_argument("--eval_path", type = str, default = "evals")
 args = args.parse_args()
 
 random.seed(args.seed)
@@ -39,16 +42,16 @@ def get_all_ids():
     if args.schema_name == 'all':
         for cat in categories:
             schema = get_schema(cat)
-            data = schema.get_eval_datasets(args.split)
+            data = schema.get_eval_datasets(args.split, args.eval_path)
             ids += [create_hash(paper['Paper_Link']) for paper in data]
     elif args.schema_name in 'all-model':
         for cat in categories_no_model:
             schema = get_schema(cat)
-            data = schema.get_eval_datasets(args.split)
+            data = schema.get_eval_datasets(args.split, args.eval_path)
             ids += [create_hash(paper['Paper_Link']) for paper in data]
     else:
         schema = get_schema(args.schema_name)
-        data = schema.get_eval_datasets(args.split)
+        data = schema.get_eval_datasets(args.split, args.eval_path)
         ids = [create_hash(paper['Paper_Link']) for paper in data]
     return ids
 
@@ -83,7 +86,7 @@ def remap_names(model_name):
             model_name = model_name.replace("Qwen2.5-", "MeXtract ").replace('-','')+ ' DPO'
         if 'dpo' not in model_name:
             model_name = model_name.replace("Instruct-kimi-k2-sft-merged-r_8_alpha_16", "")
-            model_name = model_name.replace("Qwen2.5-", "MeXtract ").replace('-','')
+            model_name = model_name.replace("Qwen2.5-", "MeXtract ").replace('-',' SFT')
     else:
         model_name = model_name.replace("-", " ").title()
 
@@ -104,7 +107,7 @@ def plot_context_length():
         pred_metadata = results["metadata"]
         if model_name not in metric_results:
             metric_results[model_name] = {}
-        gold_metadata = get_metadata_from_path(json_file)
+        gold_metadata = get_metadata_from_path(json_file, eval_path=args.eval_path)
         for i in ["quarter", "half", "all"]:
             if i not in metric_results[model_name]:
                 metric_results[model_name][i] = []
@@ -225,8 +228,8 @@ def show_examples():
             schema = get_schema(schema_name)
             pred_metadata = schema(metadata = results["metadata"])
 
-            gold_metadata = get_metadata_from_path(json_file)
-            scores = pred_metadata.compare_with(gold_metadata)
+            gold_metadata = get_metadata_from_path(json_file, eval_path = args.eval_path)
+            scores = pred_metadata.compare_with(gold_metadata, exact_match = args.use_exact_match)
             if model_name not in metric_results:
                 metric_results[model_name] = {column: [] for column in attributes}
             if 'Gold' not in metric_results:
@@ -286,11 +289,14 @@ def extract_results(json_file, headers):
     pred_metadata = schema(metadata = results["metadata"])
 
     # human_json_path = human_json_path.replace(f"/{args.type}", "")
-    gold_metadata = get_metadata_from_path(json_file)
-    scores = pred_metadata.compare_with(gold_metadata)
+    gold_metadata = get_metadata_from_path(json_file, eval_path = args.eval_path)
+    scores = pred_metadata.compare_with(gold_metadata, exact_match = args.use_exact_match)
     
     if args.group_by_x == "category":
-        output[schema_name].append(scores['f1'])
+        if args.penalize_errors and results["error"] is not None:
+            output[schema_name].append(0)
+        else:
+            output[schema_name].append(scores['f1'])
     elif args.group_by_x == "year":
         year = gold_metadata["Year"]
         output[year].append(scores['f1'])
@@ -310,6 +316,11 @@ def extract_results(json_file, headers):
         if value == 1:
             print(results["error"])
         output["error"].append(value)
+    elif args.group_by_x == "length":
+        if results["error"] is not None and args.penalize_errors:
+            output["length"].append(0)
+        else:
+            output["length"].append(scores["length"])
     else:
         for metric in scores:
             if metric in headers:
@@ -322,7 +333,9 @@ def plot_by_group():
     headers += get_group()
     metric_results = {}
     ids = get_all_ids()
+    print(ids)
     grouped_files = group_files_by_model_name(json_files, ids)
+    print(grouped_files)
     all_files = []
     for model_name in grouped_files:
         all_files += grouped_files[model_name]
@@ -409,7 +422,9 @@ def plot_by_group():
 
 
 if __name__ == "__main__":
+    print(args.results_path)
     all_files = glob(f"{args.results_path}/**/*.json")
+    print(all_files)
     print(len(all_files))
     json_files = []
     for file in all_files:
@@ -417,14 +432,15 @@ if __name__ == "__main__":
         model_name = json_data['config']['model_name']
         # if any([model in model_name.lower() for model in ['gemini', 'moonshotai', 'x-ai']]):
         #     json_files.append(file)
-        if 'kimi-k2' in model_name.lower():
-            if 'r_8_alpha_16' in model_name.lower():
-                if '200' in model_name.lower():
-                    json_files.append(file)
+        # if 'kimi-k2' in model_name.lower():
+        #     if 'r_8_alpha_16' in model_name.lower():
+        #         if '200' in model_name.lower(): #or ('sft-merged' in model_name.lower() and 'dpo-merged' not in model_name.lower()):
+        #             json_files.append(file)
         #         # if 'dpo' not in model_name.lower():
         #         #     json_files.append(file)
-        else:
-            json_files.append(file)
+        # else:
+        json_files.append(file)
+    print(json_files)
     if args.model is not None:
         json_files = [file for file in json_files if args.model in json.load(open(file))['config']['model_name']]
 
