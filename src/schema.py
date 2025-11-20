@@ -35,9 +35,9 @@ class Schema(BaseModel):
         return cls.__name__.replace('Schema', '').lower()
     
     @classmethod
-    def get_eval_datasets(cls, split = 'test'):
+    def get_eval_datasets(cls, split = 'test', path = "evals"):
         datasets = []
-        for file in glob(f'evals/{cls.get_schema_name()}/{split}/**.json'):
+        for file in glob(f'{path}/{cls.get_schema_name()}/{split}/**.json'):
             data = json.load(open(file))
             datasets.append(data)
         return datasets
@@ -210,13 +210,13 @@ class Schema(BaseModel):
         # print(length / len(self.get_attributes()))
         return metadata
     
-    def compare_with(self, gold_metadata, return_metrics_only = False, return_precision_only = False):
+    def compare_with(self, gold_metadata, return_metrics_only = False, return_precision_only = False, exact_match = False):
         results = {}
         for key in gold_metadata.keys():
             if key in ['annotations_from_paper']:
                 continue
             try:
-                results[key] = self.match_attributes(key, gold_metadata[key], self.model_dump()[key])
+                results[key] = self.match_attributes(key, gold_metadata[key], self.model_dump()[key], exact_match = exact_match)
             except:
                 print(key, gold_metadata[key], self.model_dump()[key])
                 raise ValueError(f"Invalid type: {type(gold_metadata[key])}")
@@ -226,7 +226,10 @@ class Schema(BaseModel):
         annotations_from_paper = gold_metadata['annotations_from_paper']
         annotated_attributes = [key for key in gold_metadata.keys() if key in annotations_from_paper and annotations_from_paper[key]]
         recall = sum([value for key, value in results.items() if key in annotated_attributes]) / len(annotated_attributes)
-        f1 = 2 * precision * recall / (precision + recall)
+        if precision + recall == 0:
+            f1 = 0
+        else:
+            f1 = 2 * precision * recall / (precision + recall)
         length = self.evaluate_length()
         results['precision'] = precision
         results['recall'] = recall
@@ -236,9 +239,9 @@ class Schema(BaseModel):
             return {'precision': precision, 'recall': recall, 'f1': f1, 'length': length}
         return results
 
-    def match_attributes(self, key, attr1, attr2):
+    def match_attributes(self, key, attr1, attr2, exact_match = False):
         t = self.get_answer_object(key)   
-        return t.compare(attr1, attr2)
+        return t.compare(attr1, attr2, exact_match = exact_match)
     
     @classmethod
     def get_random(cls, key):

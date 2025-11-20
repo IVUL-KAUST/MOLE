@@ -195,9 +195,9 @@ def get_id_from_path(path):
     # static/results_context_half/1410.3791/*.json
     return path.split("/")[2]
 
-def get_metadata_from_path(json_path):
+def get_metadata_from_path(json_path, eval_path="evals"):
     id = get_id_from_path(json_path)
-    for path in glob("evals/**/**/*.json", recursive=True):
+    for path in glob(f"{eval_path}/**/**/*.json", recursive=True):
         metadata = json.load(open(path, "r"))
         if id == create_hash(metadata["Paper_Link"]):
             return metadata
