@@ -37,8 +37,8 @@ class BaseType:
         return handler(cls.base_type)
     
     @classmethod
-    def compare(cls, attr1, attr2):
-        return attr1 == attr2
+    def compare(cls, attr1, attr2, exact_match = False):
+        return int(attr1 == attr2)
     
     def modify_length(self, value):
         return value
@@ -72,7 +72,9 @@ class Float(BaseType):
                 return 0
         return 0
         
-    def compare(self, attr1, attr2):
+    def compare(self, attr1, attr2, exact_match = False):
+        if exact_match:
+            return int(attr1 == attr2)
         if attr1 == attr2:
             return 1
         return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2)) # TODO: revise
@@ -102,7 +104,9 @@ class Int(BaseType):
                 return 0
         return 0
     
-    def compare(self, attr1, attr2):
+    def compare(self, attr1, attr2, exact_match = False):
+        if exact_match:
+            return int(attr1 == attr2)
         if attr1 == attr2:
             return 1
         return 1 - abs(float(attr1) - float(attr2))/ max(float(attr1), float(attr2)) # TODO: revise
@@ -136,7 +140,7 @@ class Bool(BaseType):
                 return False
         return bool(value)
     
-    def compare(self, attr1, attr2):
+    def compare(self, attr1, attr2, exact_match = False):
         return int(bool(attr1) == bool(attr2))
     
 class Year(Int):
@@ -149,7 +153,9 @@ class Year(Int):
     def cast(self, value):
         return int(value)
     
-    def compare(self, attr1, attr2):
+    def compare(self, attr1, attr2, exact_match = False):
+        if exact_match:
+            return int(attr1 == attr2)
         # normalize by 2010
         attr1 = abs(attr1 - 2010)
         attr2 = abs(attr2 - 2010)
@@ -187,14 +193,18 @@ class Str(BaseType):
         metric = value.split(' ')
         return int(len(metric) >= self.answer_min and len(metric) <= self.answer_max or self.options is not None)
     
-    def compare(self, attr1, attr2):
+    def compare(self, attr1, attr2, exact_match = False):
+        if exact_match:
+            return int(attr1 == attr2)
         if len(attr1) == len(attr2) == 0:
             return 1
         else:
             return 1 - levenshtein_distance(attr1, attr2) / max(len(attr1), len(attr2)) # TODO: revise
 
 class LongStr(Str):
-    def compare(self, attr1, attr2):
+    def compare(self, attr1, attr2, exact_match = False):
+        if exact_match:
+            return int(attr1 == attr2)
         # use rouge score
         results = scorer.score(attr1, attr2)
         return results['rouge1'].fmeasure
@@ -209,7 +219,9 @@ class URL(Str):
     def cast(self, value):
         return str(value)
     
-    def compare(self, attr1, attr2):
+    def compare(self, attr1, attr2, exact_match = False):
+        if exact_match:
+            return int(attr1 == attr2)
         if len(attr1) == len(attr2) == 0:
             return 1
         else:
@@ -254,7 +266,9 @@ class List(BaseType):
             return f'list[{self._inner_type().get_type() if hasattr(self._inner_type(), "get_type") else self._inner_type}]'
     
     @classmethod
-    def compare(cls, attr1, attr2):
+    def compare(cls, attr1, attr2, exact_match = False):
+        if exact_match:
+            return int(attr1 == attr2)
         len_match = 0
         if len(attr1) == len(attr2) == 0:
             return 1
