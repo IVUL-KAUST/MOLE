@@ -186,13 +186,14 @@ class Schema(BaseModel):
     def evaluate_length(self):
         accuracy = 0
         metadata = self.model_dump()
-        for key in self.get_attributes():
+        attributes = self.get_attributes()
+        for key in attributes:
             type  = self.get_answer_object(key)
             length = type.validate_length(metadata[key])
             # if length < 1:
             #     print(type.answer_min,type.answer_max, key, metadata[key])
             accuracy += length
-        return accuracy / len(self.get_attributes())
+        return accuracy / len(attributes)
     
     def modify_length(self):
         length = 0 
