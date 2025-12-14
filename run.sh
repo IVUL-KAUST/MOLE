@@ -1,5 +1,6 @@
 #!/bin/bash
 MODEL_NAME=$1
+MAX_LEN=8192
 # Function to check if vLLM server is running
 check_vllm_server() {
     curl -s http://localhost:8787/v1/models > /dev/null 2>&1
@@ -14,7 +15,7 @@ start_vllm_server() {
     uv run vllm serve $MODEL_NAME \
         --host localhost \
         --port 8787 \
-        --max-model-len 8192 \
+        --max-model-len $MAX_LEN \
         --max-num-seqs 50 \
         --tensor-parallel-size 1 \
         --gpu-memory-utilization 0.9 \
@@ -82,7 +83,7 @@ for schema_name in ar en jp fr ru multi model; do
         --backend vllm \
         --model $MODEL_NAME \
         --schema_name $schema_name \
-        --max_model_len 8192 \
+        --max_model_len $MAX_LEN \
         --max_output_len 2048 
 done
 echo "✅ Evaluation completed!"
