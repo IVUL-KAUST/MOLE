@@ -44,3 +44,6 @@ Llama3-2-3B-Instruct/
 r_16_alpha_32/*
 r_32_alpha_32/*
 logs/
+helpers/human_annotated_data/
+helpers/kimi_annotated_data/
+helpers/results_kimi
