@@ -7,11 +7,11 @@ For each attribute, you label the attribute and a binary value {0,1} to say if t
 5. **License** mostly doesn’t exist in the paper. We search the web. 
 6. **Year** the year the paper was published.
 7. **Language** this attribute highlights if the dataset is multilingual or not for [ar,ru,jp,fr,en] and the languages for multi.
-8. **Dialect:** only for Arabic, the value is mixed if there are multiple dialects.
+8. **Dialect** only for Arabic, the value is mixed if there are multiple dialects.
 9. **Domain** is the source or the content  of the data; for example, Domain=Wikipedia means the dataset is extracted from Wikipedia and news articles, if the dataset is extracted from news outlets
 10. **Form** can be text, spoken, images, or videos.
-11. **Collection style** is how the dataset is extracted, and the annotation strategy of the dataset.
-12. **Description:** a short description of the dataset. 
+11. **Collection Style** is how the dataset is extracted, and the annotation strategy of the dataset.
+12. **Description** a short description of the dataset. 
 13. **Volume** The volume is the total samples for all languages for the multi schema and the monolingual split for other schemas. If the schema is monolingual but the dataset is multilingual, then we say ”multilingual,” but the Volume is the size of the language subset.
 14. **Unit** We use 'Units' = sentences if the dataset has short samples, even if there are multiple sentences. Unit=documents is usually for datasets that have documents, like language modelling, topic classification, etc. For datasets that have multiple inputs, like question answering, which has (question, context), then we usually use the question to indicate the Unit and Volume i.e., Unit=sentences, Volume=number of questions.. 
 15. **Ethical Risks** "Low": "most likely no ethical risks associated with this dataset", "Medium": "social media datasets or web-extracted datasets", "High": "hate/offensive datasets from social media, or web pages".

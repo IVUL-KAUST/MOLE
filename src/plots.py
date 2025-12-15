@@ -34,7 +34,7 @@ args = args.parse_args()
 
 random.seed(args.seed)
 
-categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi', 'model']
+categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi', 'model', 'tool']
 categories_no_model = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
 
 def get_all_ids():
@@ -333,9 +333,7 @@ def plot_by_group():
     headers += get_group()
     metric_results = {}
     ids = get_all_ids()
-    print(ids)
     grouped_files = group_files_by_model_name(json_files, ids)
-    print(grouped_files)
     all_files = []
     for model_name in grouped_files:
         all_files += grouped_files[model_name]
@@ -424,8 +422,6 @@ def plot_by_group():
 if __name__ == "__main__":
     print(args.results_path)
     all_files = glob(f"{args.results_path}/**/*.json")
-    print(all_files)
-    print(len(all_files))
     json_files = []
     for file in all_files:
         json_data = json.load(open(file))
@@ -440,7 +436,6 @@ if __name__ == "__main__":
         #         #     json_files.append(file)
         # else:
         json_files.append(file)
-    print(json_files)
     if args.model is not None:
         json_files = [file for file in json_files if args.model in json.load(open(file))['config']['model_name']]
 

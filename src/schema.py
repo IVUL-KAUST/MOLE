@@ -10,6 +10,7 @@ units = ['tokens', 'sentences', 'documents', 'images', 'videos', 'hours']
 dialects = ["Classical Arabic","Modern Standard Arabic","United Arab Emirates","Bahrain","Djibouti","Algeria","Egypt","Iraq","Jordan","Comoros","Kuwait","Lebanon","Libya","Morocco","Mauritania","Oman","Palestine","Qatar","Saudi Arabia","Sudan","Somalia","South Sudan","Syria","Tunisia","Yemen","Levant","North Africa","Gulf","mixed"]
 languages = ['Arabic', 'English', 'French', 'Spanish', 'German', 'Greek', 'Bulgarian', 'Russian', 'Turkish', 'Vietnamese', 'Thai', 'Chinese', 'Simplified Chinese', 'Hindi', 'Swahili', 'Urdu', 'Bengali', 'Finnish', 'Japanese', 'Korean', 'Telugu', 'Indonesian', 'Italian', 'Polish', 'Portuguese', 'Estonian', 'Haitian Creole', 'Eastern Apur\u00edmac Quechua', 'Tamil', 'Sinhala']
 tasks = ["machine translation", "speech recognition", "sentiment analysis", "language modeling", "topic classification", "dialect identification", "text generation", "cross-lingual information retrieval", "named entity recognition", "question answering", "multiple choice question answering", "information retrieval", "part of speech tagging", "language identification", "summarization", "speaker identification", "transliteration", "morphological analysis", "offensive language detection", "review classification", "gender identification", "fake news detection", "dependency parsing", "irony detection", "meter classification", "natural language inference", "instruction tuning", "linguistic acceptability", "commonsense reasoning", "word prediction", "image captioning", "word similarity", "grammatical error correction", "intent classification", "sign language recognition", "optical character recognition", "fill-in-the blank", "relation extraction", "stance detection", "emotion classification", "semantic parsing", "text to SQL", "lexicon analysis", "embedding evaluation", "other"]
+tool_tasks = ["topic modeling", "slot filling", "intent detection",  "interpretability", "data annotation", "data visualization", "data exploration", "data synthesis", "data scrapping", "model pretraining", "model finetuning", "model evaluation", "model post-training", "machine translation", "named entity recognition", "question answering", "information retrieval", "chatbot", "model inference", "model deployment"]
 hosts = ['GitHub', 'CodaLab', 'data.world', 'Dropbox', 'Gdrive', 'LDC', 'MPDI', 'Mendeley Data', 'Mozilla', 'OneDrive', 'QCRI Resources', 'ResearchGate', 'sourceforge', 'zenodo', 'HuggingFace', 'ELRA', 'other']
 domains = ['social media', 'news articles', 'reviews', 'commentary', 'books', 'wikipedia', 'web pages', 'public datasets', 'TV Channels', 'captions', 'LLM', 'other']
 collection_styles = ['crawling', 'human annotation', 'machine annotation', 'manual curation', 'LLM generated', 'other']
@@ -348,6 +349,42 @@ class ModelSchema(Model):
             system_prompt += open('GUIDELINES_MODEL.md').read()
         return prompt, system_prompt
 
+class ToolSchema(Schema):
+    Name: Field(Str, 1, 5)
+    Link: Field(URL, 1, 1)
+    License: Field(Str, 1, 1, licenses)
+    Year: Field(Year, 1900, 2025)
+    Access: Field(Str, 1, 1, ['anonymous', 'authenticated'])
+    Version: Field(Float, 0.0)
+    Description: Field(Str, 1, 50)
+    Provider: Field(List[Str], 1, 5)
+    Paper_Title: Field(LongStr, 1, 100)
+    Paper_Link: Field(URL, 1, 1)
+    Tasks: Field(List[Str], 1, 5, tool_tasks)
+    Interface: Field(List[Str], 1, 3, ['API', 'CLI', 'GUI', 'unknown', 'other'])
+    Host: Field(Str, 1, 1, hosts)
+    Code_Execution: Field(List[Str], 1, 4, ['Source', 'Package', 'Live Demo', 'Docker', 'unknown', 'other'])
+    Supported_OS: Field(List[Str], 1, 3, ['Windows', 'Linux', 'macOS', 'unknown', 'other'])
+    Programming_Language: Field(List[Str], 1, 3, ['Python', 'Java', 'C++', 'C#', 'JavaScript', 'TypeScript', 'Go', 'Rust', 'R', 'MATLAB', 'unknown', 'other'])
+    
+    @classmethod
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+        if version == "2.0":
+            schema = cls.schema()
+        elif version == "1.0":
+            schema = cls.get_mole_schema()
+        else:
+            raise ValueError(f"Invalid version: {version}")
+        prompt = f"""Schema Name: {cls.get_schema_name()}
+                    Input Schema: {schema}
+                    Paper Text: {paper_text}
+                """
+        system_prompt = cls.get_system_prompt().replace("datasets", "tools")
+        if version == "2.0":
+            system_prompt += "Use the following guidelines to extract the answer from the 'Paper Text':\n\n"
+            system_prompt += open('GUIDELINES_TOOL.md').read()
+        return prompt, system_prompt
+
 class TestSchema(Schema):
     Name: Field(Str, 1, 5)
     Hobbies: Field(List[Str], 1, 3, ['Hiking', 'Swimming', 'Reading'])
@@ -508,6 +545,8 @@ def get_schema(schema_name):
         return ResourceSchema
     elif schema_name == 'model':
         return ModelSchema
+    elif schema_name == 'tool':
+        return ToolSchema
     elif schema_name == 'parent':
         return Parent
     else:
