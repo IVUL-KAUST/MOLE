@@ -112,6 +112,48 @@ parser.add_argument(
     default="2.0",
     help="version to use",
 )
-# Parse arguments
-args = parser.parse_args()
+# Parse arguments conditionally
+import sys
+
+def get_default_args():
+    """Return default arguments as a dictionary"""
+    return {
+        'paper_link': '',
+        'model_name': 'gemini-1.5-flash',
+        'title': '',
+        'abstract': '',
+        'browse_web': False,
+        'overwrite': False,
+        'split': 'test',
+        'schema_name': 'ar',
+        'format': 'pdf_plumber',
+        'few_shot': 0,
+        'results_path': 'results',
+        'save_paper_text': False,
+        'backend': 'openrouter',
+        'repeat_on_error': False,
+        'context': 'all',
+        'max_model_len': None,
+        'max_output_len': None,
+        'timeout': 0,
+        'log': False,
+        'version': '2.0'
+    }
+
+# Create a simple class to mimic argparse.Namespace behavior
+class Args:
+    def __init__(self, **kwargs):
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
+# Check if we're in a FastAPI/web context (no command line args)
+try:
+    # Try to parse args, but handle the case where there are no CLI args
+    if len(sys.argv) == 1:  # Only script name, no arguments
+        args = Args(**get_default_args())
+    else:
+        args = parser.parse_args()
+except SystemExit:
+    # argparse calls sys.exit() when there are issues, catch this for web contexts
+    args = Args(**get_default_args())
     
