@@ -263,7 +263,7 @@ def download_paper(paper_link, download_path="static/papers/", log = True):
         # download the paper from acl anthology
         downloader = ACLDownloader(download_path=download_path, log= log)
         success, paper_path = downloader.download_paper(paper_link)
-    elif '.pdf' in paper_link:
+    elif 'pdf' in paper_link:
         downloader = Downloader(download_path=download_path, log= log)
         success, paper_path = downloader.download_paper(paper_link)
     else:
@@ -463,7 +463,7 @@ def run(
             f"📊 precision: {evaluation_results['precision']*100:.2f} %, recall: {evaluation_results['recall']*100:.2f} %, f1: {evaluation_results['f1']*100:.2f} %, length: {evaluation_results['length']*100:.2f} %"
         )
     else:
-        logger.show_info("🚧 No gold metadata found")
+        logger.show_info(f"🚧 No gold metadata found for {paper_link}")
         results["validation"] = {}
 
     try:
