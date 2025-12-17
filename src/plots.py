@@ -34,7 +34,7 @@ args = args.parse_args()
 
 random.seed(args.seed)
 
-categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi', 'model', 'tool']
+categories = ['ar', 'en', 'jp', 'fr', 'ru', 'multi', 'model', 'tool', 's2orc']
 categories_no_model = ['ar', 'en', 'jp', 'fr', 'ru', 'multi']
 
 def get_all_ids():
