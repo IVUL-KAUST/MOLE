@@ -1,0 +1,22 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/hep-ph/0612114",
+    "Title": "Atmospheric Neutrino Mixing and b \u2192 s Transitions: Testing Lopsided SO(10) Flavor Structure in B physics",
+    "Abstract": "We point out that the correlation between the large atmospheric neutrino mixing and the b! s transition, if exists, comes from the lopsided flavor structure in SO(10) grand unification theory. We suggest testing the correlation by studying the deviation of SKS and S\ufffd'KS from the standard model predictions along with the constraints fromMBS and b! s in a realistic SO(10) model with lopsided flavor structure. We find a specific correlation between SKS and S\ufffd'KS that is intrinsic to the lopsided structure and discuss how to confirm or rule out this flavor pattern by the more accurate measurements of these CP violation quantities in B decay. The standard model (SM), although has passed many precision experimental tests, still has a number of out- standing problems which beg for a more fundamental the- ory. In terms of phenomenology, there are many places to test the more fundamental theory and, quite often, it is not one piece of phenomenology but a specific pattern of many pieces of phenomenology that fulfils this job. Neutrino oscillation clearly indicates the beyond SM physics in that it violates the accidental symmetry Le,\u00b5,\ufffd of SM lepton flavor. Moreover, the tiny neutrino masses can be most naturally explained by the seesaw mech- anism (1), indicating the Majorana nature of neutrinos that leads to violation of another accidental symmetry B \u2212 L of SM at a very high scale close to the grand unification theory (GUT) scale. For this reason, study- ing neutrino oscillation in the GUT framework becomes particularly interesting. In SO(10) GUT, quarks and leptons are unified into a single 16 multiplet, yet experimental data shows that the 2-3 (generation) mixing is dramatically different in the quark and lepton sectors. While the quark mixing an- gle \u03b8 CKM is around 0.04, the lepton mixing angle \u03b8 PMNS (atmospheric mixing angle) is quite large and could be a maximum of \u03c0/4. This difference can be rather naturally explained by the lopsidedness in the 2-3 sector of mass matrices of down-type quarks and charged leptons:",
+    "Authors": [
+        "Xiangdong Ji",
+        "Yingchuan Li",
+        "Yue Zhang"
+    ],
+    "Year": 2006,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

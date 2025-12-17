@@ -1,0 +1,53 @@
+{
+    "Name": "TexSmart",
+    "Link": "https://texsmart.qq.com/en",
+    "License": "unknown",
+    "Year": 2021,
+    "Access": "anonymous",
+    "Version": 0.2,
+    "Description": "A text understanding system that supports fine-grained named entity recognition (NER) and enhanced semantic analysis.",
+    "Provider": [
+        "Tencent AI"
+    ],
+    "Paper_Title": "TexSmart: A text understanding system for fine-grained NER and enhanced semantic analysis",
+    "Paper_Link": "https://aclanthology.org/2021.acl-demo.1.pdf",
+    "Tasks": [
+        "named entity recognition"
+    ],
+    "Interface": [
+        "API",
+        "GUI"
+    ],
+    "Host": "other",
+    "Code_Execution": [
+        "Package"
+    ],
+    "Supported_OS": [
+        "Linux",
+        "Windows"
+    ],
+    "Programming_Language": [
+        "C",
+        "C++",
+        "Python",
+        "Java"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

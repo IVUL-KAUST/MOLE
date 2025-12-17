@@ -1,0 +1,50 @@
+{
+    "Name": "FUNDUS",
+    "Link": "https://github.com/flairNLP/fundus",
+    "License": "unknown",
+    "Year": 2024,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "A user-friendly news scraper optimized for high-quality article extraction with bespoke parsers.",
+    "Provider": [
+        "Humboldt-Universit\u00e4t zu Berlin"
+    ],
+    "Paper_Title": "FUNDUS: A Simple-to-Use News Scraper Optimized for High Quality Extractions",
+    "Paper_Link": "https://aclanthology.org/2024.acl-demos.29.pdf",
+    "Tasks": [
+        "data scrapping",
+        "data preprocessing"
+    ],
+    "Interface": [
+        "CLI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source",
+        "Package"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

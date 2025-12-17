@@ -1,0 +1,49 @@
+{
+    "Name": "ELLA",
+    "Link": "https://github.com/Huyt00/ELLA",
+    "License": "unknown",
+    "Year": 2024,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "A tool that augments legal LLMs with interactive retrieval of articles and cases for accurate, interpretable legal advice.",
+    "Provider": [
+        "Peking University"
+    ],
+    "Paper_Title": "ELLA: Empowering LLMs for Interpretable, Accurate and Informative Legal Advice",
+    "Paper_Link": "https://aclanthology.org/2024.acl-demos.36.pdf",
+    "Tasks": [
+        "chatbot",
+        "information retrieval"
+    ],
+    "Interface": [
+        "GUI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Live Demo"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 0,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

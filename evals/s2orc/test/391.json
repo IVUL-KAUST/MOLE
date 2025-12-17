@@ -1,0 +1,24 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1404.6876",
+    "Title": "Conditional Density Estimation with Dimensionality Reduction via Squared-Loss Conditional Entropy Minimization",
+    "Abstract": "Regression aims at estimating the conditional mean of output given input. However, regression is not informative enough if the conditional density is multimodal, heteroskedastic, and asymmetric. In such a case, estimating the conditional density itself is preferable, but conditional density estimation (CDE) is challenging in high-dimensional space. A naive approach to coping with high dimensionality is to first perform dimensionality reduction (DR) and then execute CDE. However, a two-step process does not perform well in practice because the error incurred in the first DR step can be magnified in the second CDE step. In this letter, we propose a novel single-shot procedure that performs CDE and DR simultaneously in an integrated way. Our key idea is to formulate DR as the problem of minimizing a squared-loss variant of conditional entropy, and this is solved using CDE. Thus, an additional CDE step is not needed after DR. We demonstrate the usefulness of the proposed method through extensive experiments on various data sets, including humanoid robot transition and computer art.",
+    "Authors": [
+        "Voot Tangkaratt",
+        "Ning Xie",
+        "Masashi Sugiyama"
+    ],
+    "Year": 2015,
+    "Field": [
+        "Mathematics",
+        "Computer Science",
+        "Medicine"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

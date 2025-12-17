@@ -1,0 +1,49 @@
+{
+    "Name": "TULUN",
+    "Link": "https://github.com/raphaelmerx/tulun/",
+    "License": "MIT License",
+    "Year": 2025,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "Open-source web platform combining neural MT with LLM-based post-editing guided by glossaries and translation memories for low-resource languages.",
+    "Provider": [
+        "The University of Melbourne"
+    ],
+    "Paper_Title": "TULUN: Transparent and Adaptable Low-resource Machine Translation",
+    "Paper_Link": "https://aclanthology.org/2025.acl-demo.13.pdf",
+    "Tasks": [
+        "machine translation"
+    ],
+    "Interface": [
+        "GUI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Live Demo",
+        "Source"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

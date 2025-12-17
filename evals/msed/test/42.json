@@ -1,0 +1,51 @@
+{
+    "Paper_Link": "https://genomemedicine.biomedcentral.com/track/pdf/10.1186/s13073-021-00962-3",
+    "Title": "Single-cell exome sequencing reveals multiple subclones in metastatic colorectal carcinoma",
+    "Link": [
+        "http://bigd.big.ac.cn/gsa-human[37].",
+        "https://pms.cd120.com/CRC/CRC_download.",
+        "https://doi.",
+        "https://bigd.big.ac.cn/gsa-human/browse/HRA000762.",
+        "https://pms.cd120.com/CRC/CRC_downloa"
+    ],
+    "Abstract": "Background: Colorectal cancer (CRC) is a major cancer type whose mechanism of metastasis remains elusive.Methods: In this study, we characterised the evolutionary pattern of metastatic CRC (mCRC) by analysing bulk and single-cell exome sequencing data of primary and metastatic tumours from 7 CRC patients with liver metastases. Here, 7 CRC patients were analysed by bulk whole-exome sequencing (WES); 4 of these were also analysed using single-cell sequencing. Results: Despite low genomic divergence between paired primary and metastatic cancers in the bulk data, singlecell WES (scWES) data revealed rare mutations and defined two separate cell populations, indicative of the diverse evolutionary trajectories between primary and metastatic tumour cells. We further identified 24 metastatic cellspecific-mutated genes and validated their functions in cell migration capacity.Conclusions: In summary, scWES revealed rare mutations that failed to be detected by bulk WES. These rare mutations better define the distinct genomic profiles of primary and metastatic tumour cell clones.BackgroundColorectal cancer (CRC) is the third most commonly diagnosed cancer [1] and the fourth leading cause of cancer-related death worldwide[2]. Distant metastasis occurs in approximately 20% of newly diagnosed CRC patients[3]and is one of the major causes of patient death and a poor prognosis. However, the mechanism of the metastatic cascade in metastatic CRCs (mCRCs) remains unclear. Previous studies have revealed a number of driver genes, including APC, TP53, NRAS, and KRAS  [4], that exhibit high mutational frequency in matched primary and metastatic tumours[5]and are acquired early in CRC carcinogenesis[6]. Studies based on targeted gene panels have also shown high mutational consistency between primary and metastatic CRC tumours[5,7]. However, recent studies have shown high intra-tumoural heterogeneity (ITH) and subclone mixing in CRCs[6,8], suggesting more complex dynamics in the cell population during metastasis. Therefore, previous strategies that focussed on sequencing bulk tissues present with considerable limitations.Single-cell sequencing methods have emerged as powerful tools to resolve ITH and trace clonal lineages",
+    "Author": [
+        "Jie Tang",
+        "Kailing Tu",
+        "Keying Lu",
+        "Jiaxun Zhang",
+        "Kai Luo",
+        "Haoxuan Jin",
+        "Lei Wang",
+        "Lie Yang",
+        "Weiran Xiao",
+        "Qilin Zhang",
+        "Xiaoling Liu",
+        "Xin Yi Ge",
+        "Guibo Li",
+        "Zongguang Zhou",
+        "Dan Xie"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1186/s13073-021-00962-3R",
+        "10.1186/s13073-021-00962-3."
+    ],
+    "Email": [],
+    "Date": [
+        "October 27, 2015",
+        "July 21, 2017"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

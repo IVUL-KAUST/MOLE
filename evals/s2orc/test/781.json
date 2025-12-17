@@ -1,0 +1,26 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1705.02084",
+    "Title": "Cosmic Ray Removal in Fiber Spectroscopic Image",
+    "Abstract": "Single-exposure spectra in large spectral surveys are valuable for time domain studies such as stellar variability, but there is no available method to eliminate cosmic rays for single-exposure, multi-fiber spectral images. In this paper, we describe a new method to detect and remove cosmic rays in multi-fiber spectroscopic single exposures. Through the use of two-dimensional profile fitting and a noise model that considers the position-dependent errors, we successfully detect as many as 80% of the cosmic rays and correct the cosmic ray polluted pixels to an average accuracy of 97.8%. Multiple tests and comparisons with both simulated data and real LAMOST data show that the method works properly in detection rate, false detection rate, and validity of cosmic ray correction.",
+    "Authors": [
+        "Zhongrui Bai",
+        "Haotong Zhang",
+        "Hailong Yuan",
+        "Jeffrey L. Carlin",
+        "Guangwei Li",
+        "Yongheng Zhao",
+        "Zihuang Cao"
+    ],
+    "Year": 2017,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

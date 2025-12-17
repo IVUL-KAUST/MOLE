@@ -1,0 +1,54 @@
+{
+    "Paper_Link": "https://bmcproc.biomedcentral.com/track/pdf/10.1186/1753-6561-1-S1-S49",
+    "Title": "BMC Proceedings Familial aggregation analysis of gene expressions",
+    "Link": [
+        "http://www.biomedcentral.com/info/publishing_adv.aspBioMedcentral",
+        "http://genepi.cwru.edu/Statistical",
+        "http://genepi.cwru.edu/]"
+    ],
+    "Abstract": "Traditional studies of familial aggregation are aimed at defining the genetic (and non-genetic) causes of a disease from physiological or clinical traits. However, there has been little attempt to use genome-wide gene expressions, the direct phenotypic measures of genes, as the traits to investigate several extended issues regarding the distributions of familially aggregated genes on chromosomes or in functions. In this study we conducted a genome-wide familial aggregation analysis by using the in vitro cell gene expressions of 3300 human autosome genes (Problem 1 data provided to Genetic Analysis Workshop 15) in order to answer three basic genetics questions. First, we investigated how gene expressions aggregate among different types (degrees) of relative pairs. Second, we conducted a bioinformatics analysis of highly familially aggregated genes to see how they are distributed on chromosomes. Third, we performed a gene ontology enrichment test of familially aggregated genes to find evidence to support their functional consensus. The results indicated that 1) gene expressions did aggregate in families, especially between sibs. Of 3300 human genes analyzed, there were a total of 1105 genes with one or more significant (empirical p < 0.05) familial correlation; 2) there were several genomic hot spots where highly familially aggregated genes (e.g., the chromosome 6 HLA genes cluster) were clustered; 3) as we expected, gene ontology enrichment tests revealed that the 1105 genes were aggregating not only in families but also in functional categories.",
+    "Author": [
+        "Shao-Qi Rao shao-qirao",
+        "Yue-Ying Yang"
+    ],
+    "Authoraffiliation": [
+        "Department of Bioinformatics\nHarbin Medical University\n150086HarbinPeople's Republic of China",
+        "Departments of Molecular Cardiology and Cardiovascular Medicine\nThe Cleveland Clinic Foundation\n9500 Euclid Avenue44195ClevelandOhioUSA",
+        "Biomedical Engineering Institute\nCapital University of Medical Sciences\n100054BeijingPeople's Republic of China",
+        "Department of Bioinformatics\nHarbin Medical University\n150086HarbinPeople's Republic of China",
+        "The First Clinical College\nHarbin Medical University\n150081HarbinPeople's Republic of China",
+        "Department of Bioinformatics\nHarbin Medical University\n150086HarbinPeople's Republic of China",
+        "Biomedical Engineering Institute\nCapital University of Medical Sciences\n100054BeijingPeople's Republic of China",
+        "Department of Computer Science\nHarbin Institute of Technology\n150080HarbinPeople's Republic of China",
+        "Departments of Molecular Cardiology and Cardiovascular Medicine\nThe Cleveland Clinic Foundation\n9500 Euclid Avenue44195ClevelandOhioUSA",
+        "Departments of Molecular Cardiology and Cardiovascular Medicine\nThe Cleveland Clinic Foundation\n9500 Euclid Avenue44195ClevelandOhioUSA",
+        "Department of Bioinformatics\nHarbin Medical University\n150086HarbinPeople's Republic of China",
+        "Department of Bioinformatics\nHarbin Medical University\n150086HarbinPeople's Republic of China",
+        "Department of Bioinformatics\nHarbin Medical University\n150086HarbinPeople's Republic of China",
+        "Department of Bioinformatics\nHarbin Medical University\n150086HarbinPeople's Republic of China",
+        "Department of Bioinformatics\nHarbin Medical University\n150086HarbinPeople's Republic of China",
+        "Department of Bioinformatics\nHarbin Medical University\n150086HarbinPeople's Republic of China",
+        "Departments of Molecular Cardiology and Cardiovascular Medicine\nThe Cleveland Clinic Foundation\n9500 Euclid Avenue44195ClevelandOhioUSA"
+    ],
+    "Doi": [],
+    "Email": [
+        "-raos@ccf.org",
+        "guang-meizhang-zhanggm@ems.hrbmu.edu.cn",
+        "lixia@ems.hrbmu.edu.cn",
+        "gong-qingshen-sheng@ccf.org",
+        "zhangfan@gmail.com"
+    ],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

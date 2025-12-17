@@ -1,0 +1,32 @@
+{
+    "Paper_Link": "https://bmcwomenshealth.biomedcentral.com/track/pdf/10.1186/s12905-021-01198-4",
+    "Title": "The role of serum \u03b2-trophin and endostatin in patients with polycystic ovary syndrome: Are they correlated?",
+    "Link": [],
+    "Abstract": "Background: It's necessary to investigate the serum \u03b2-trophin and endostatin (ES) level and its influencing factors in patients with newly diagnosed polycystic ovary syndrome (PCOS).Methods:Newly diagnosed PCOS patients treated in our hospital were selected, and healthy women who took physical examination during the same period as healthy controls. We detected and compared the related serum indicators between two groups, Pearson correlation were conducted to identify the factors associated with \u03b2-trophin and ES, and the influencing factors of \u03b2-trophin and ES were analyzed by logistic regression.Results: A total of 62 PCOS patients and 65 healthy controls were included. The BMI, WHI, LH, FSH, TT, FAI, FBG, FINS, HOMA-IR, TC, TG, LDL, ES in PCOS patients were significantly higher than that of healthy controls, while the SHBG and HDL in PCOS patients were significantly lower than that of healthy controls (all p < 0.05). \u03b2-trophin was closely associated with BMI (r = 0.427), WHR (r = 0.504), FBG (r = 0.385), TG (r = 0.405) and LDL (r = 0.302, all p < 0.05), and ES was closely associated with BMI (r = 0.358), WHR (r = 0.421), FBG (r = 0.343), TC (r = 0.319), TG (r = 0.404, all p < 0.05). TG, BMI, WHR and FBG were the main factors affecting the serum \u03b2-trophin levels (all p < 0.05). FBG, TC and BMI were the main factors affecting the serum ES levels (all p < 0.05). The TG, \u03b2-trophin, ES level in PCOS patients with insulin resistance (IR) were significantly higher than that of those without IR (all p < 0.05).Conclusion:Increased \u03b2-trophin is closely associated with increased ES in patients with PCOS, which may be the useful indicators for the management of PCOS.",
+    "Author": [
+        "Wei Gong",
+        "Aikmu Bilixzi",
+        "Xinmei Wang",
+        "Yanli Lu",
+        "Wan Li",
+        "Lu Han"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1186/s12905-021-01198-4Gong"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

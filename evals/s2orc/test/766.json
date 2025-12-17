@@ -1,0 +1,20 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/0902.4537",
+    "Title": "Commutation relations for the electromagnetic field in the presence of dielectrics and conductors",
+    "Abstract": "We determine the commutation relations satisfied by the quantized electromagnetic field in the presence of macroscopic dielectrics and conductors, with arbitrary dispersive and dissipative properties. We consider in detail the case of two plane-parallel material slabs, separated by an empty gap, and we show that at all points in the empty region between the slabs, including their surfaces, the electromagnetic fields always satisfy free-field canonical equal-time commutation relations. This result is a consequence of general analyticity and fall-off properties at large frequencies satisfied by the reflection coefficients of all real materials. It is also shown that this result does not obtain in the case of conductors, if the latter are modelled as perfect mirrors. In such a case, the free-field form of the commutation relations is recovered only at large distances from the mirrors, in agreement with the findings of previous authors. Failure of perfect-mirror boundary conditions to reproduce the correct form of the commutation relations near the surfaces of the conductors, suggests that caution should be used when these idealized boundary conditions are used in investigations of proximity phenomena originating from the quantized electromagnetic field, like the Casimir effect.",
+    "Authors": [
+        "Giuseppe Bimonte"
+    ],
+    "Year": 2009,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

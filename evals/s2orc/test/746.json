@@ -1,0 +1,22 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1012.3744",
+    "Title": "Testing the Gaussianity and Statistical Isotropy of the Universe",
+    "Abstract": "The last few years have seen a surge in excitement about measurements of statistics of the primordial fluctuations beyond the power spectrum. New ideas for precision tests of Gaussianity and statistical isotropy in the data are developing simultaneously with proposals for a wide range of new theoretical possibilities. From both the observations and theory, it has become clear that there is a huge discovery potential from upcoming measurements. The twin principles of statistical isotropy and homogeneity are a crucial ingredient in obtaining most important results in modern cosmology. For example, with these assumptions temperature and density fluctuations in different directions on the sky can be averaged out, leading to accurate constraints on cosmological parameters that we have today. Nevertheless, there is no fundamental reason why these must be obeyed by our universe. Statistical isotropy and homogeneity are starting to be sharply tested using the Cosmic Microwave Background (CMB) and large-scale structure data. Recently, there has been particular activity in these areas, given Wilkinson Microwave Anisotropy Probe\u2019s remarkable maps, combined with claims of large-angle \u2019anomalies\u2019 indicating departures from statistical isotropy as predicted by standard inflationary models. The statement that primordial curvature fluctuations are nearly Gaussian on scales measured by the CMB is remarkably precise, but doesn\u2019t reveal much about their source. Current constraints on the amplitude of the three-point correlation function of fluctuations are nearly four orders of magnitude above predictions from single field slow-roll inflation models and at least an order of magnitude above what is expected just from non-linearities that develop after the primordial spectrum is laid down. There is a wide spectrum of interesting models that can be ruled out by tightening this constraint; conversely, a detection of non-Gaussianity would rule out single field slow-roll inflation. While current observations of the CMB fluctuations provide reasonably strong evidence for a primordial source of fluctuations from inflaton, only measurements of higher order statistics can truly shed light on the physics of inflation. Departures from statistical isotropy and Gaussianity involve a rich set of observable quantities, with diverse signatures that can be measured in the CMB or in large-scale structure using sophisticated statistical methods. These signatures, which carry information about",
+    "Authors": [
+        "Dragan Huterer",
+        "Eiichiro Komatsu",
+        "Sarah Shandera"
+    ],
+    "Year": 2010,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

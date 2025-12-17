@@ -1,0 +1,33 @@
+{
+    "Paper_Link": "https://pubs.rsc.org/en/content/articlepdf/2019/RA/C9RA03042E",
+    "Title": "Electronic and optical absorption properties of organic-inorganic perovskites as influenced by different long-chain diamine molecules: first- principles calculations \u2020",
+    "Link": [
+        "www.nrel.gov/pv/assets/pdfs/pv-"
+    ],
+    "Abstract": "Organic-inorganic perovskites have demonstrated significant promise as photovoltaic materials due to their excellent photoelectric properties. However, monoamino three-dimensional (3D) perovskites, such as CH 3 NH 3 PbI 3 (MAPbI 3 ) and NH 2 CHNH 2 PbI 3 (FAPbI 3 ) exhibit low thermal and chemical stability, leading to low device durability. As such, we sought to address this problem by evaluating the performance of five diamino-3D perovskites with different molecule chain lengths, including NH 3 (CH 2 ) 2 NH 3 PbI 4 (EDAPbI 4 ), NH 3 (CH 2 ) 3 NH 3 PbI 4 (DPAPbI 4 ), NH 3 (CH 2 ) 4 NH 3 PbI 4 (BDAPbI 4 ), NH 3 (CH 2 ) 5 NH 3 PbI 4 (PDAPbI 4 ), and NH 3 (CH 2 ) 6 NH 3 PbI 4 (HDAPbI 4 ), as well as one monoamino-2D perovskite, (CH 3 (CH 2 ) 3 NH 3 ) 2 PbI 4 (BA 2 PbI 4 ) using first-principles calculations. We analyzed the geometries, formation energies, electronic structures, and optical absorption properties of each of these materials. We determined the composition of the conduction and valence bands and analyzed the charge transfer between the inorganic layer and organic molecules. The transport characteristics of the electrons in the different directions were analyzed by calculating the effective mass in different directions. Based on these results, BDAPbI 4 was predicted to exhibit the best photovoltaic performance, as well as demonstrating a light effective mass of the electrons and holes, a reduced bandgap, and a large optical absorption, compared to the other perovskites assessed in this study.",
+    "Author": [
+        "Wangzhe Zhou",
+        "Dan Li",
+        "Di Zhang",
+        "He ZhangHu Tang",
+        "Chunjun Liang"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1039/c9ra03042e"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

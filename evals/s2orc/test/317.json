@@ -1,0 +1,23 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/0708.3321",
+    "Title": "CP Violation in Two Texture Zero Neutrino Mass Matrices",
+    "Abstract": "It has been shown that the neutrino mass matrices with two texture zeros in the charged lepton basis predict non-zero 1-3 mixing and are necessarily CP violating with one possible exception in class C for maximal mixing",
+    "Authors": [
+        "S. Dev",
+        "Sanjeev Kumar",
+        "Surender Verma",
+        "Shivani Gupta"
+    ],
+    "Year": 2007,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

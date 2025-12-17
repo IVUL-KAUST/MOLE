@@ -1,0 +1,22 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1908.05479",
+    "Title": "CCD UBVRI photometry of the open cluster Berkeley 8",
+    "Abstract": "The poorly studied Berkeley 8 (Be8) open cluster is analysed from CCD UBVRI photometric data taken with the 0.90 m telescope at the Sierra Nevada Observatory. The Z = +0.008 PARSEC isochrone gave us a reddening of E(B-V) = 0.69 +- 0.03, a distance of 3410 +- 300 pc and an age of 2.8 +- 0.2 Gyr. Its median Gaia DR2 distance, d = 3676 +- 810 pc is in good agreement with our photometric distances, 3410 - 3620 pc within the uncertainties. The kinematic parameters of five likely members of Be 8 with the circular orbits, ecc = [0.23, 0.30] reflect the properties of the Galactic thin disc, which is also consistent with what is expected of its metal content ([M/H] = -0.27). Be8 with R > 9 kpc (co-rotation gap at 9 kpc) may have been originating from different galactic radius or different star formation region.",
+    "Authors": [
+        "Hikmet cCakmak",
+        "Ra'ul Michel",
+        "Yuksel Karatacs"
+    ],
+    "Year": 2019,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

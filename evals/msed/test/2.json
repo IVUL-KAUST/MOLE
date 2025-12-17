@@ -1,0 +1,31 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1110.2860v2.pdf",
+    "Title": "Explicit approximate controllability of the Schr\u00f6dinger equation with a polarizability term",
+    "Link": [],
+    "Abstract": "We consider a controlled Schr\u00f6dinger equation with a dipolar and a polarizability term, used when the dipolar approximation is not valid. The control is the amplitude of the external electric field, it acts non linearly on the state. We extend in this infinite dimensional framework previous techniques used by Coron, Grigoriu, Lefter and Turinici for stabilization in finite dimension. We consider a highly oscillating control and prove the semi-global weak H 2 stabilization of the averaged system using a Lyapunov function introduced by Nersesyan. Then it is proved that the solutions of the Schr\u00f6dinger equation and of the averaged equation stay close on every finite time horizon provided that the control is oscillating enough. Combining these two results, we get approximate controllability to the ground state for the polarizability system with explicit controls. Numerical simulations are presented to illustrate those theoretical results.",
+    "Author": [
+        "Morgan Morancey"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1051/cocv/2010041J.-F.",
+        "10.1051/cocv/2010041."
+    ],
+    "Email": [],
+    "Date": [
+        "February 3, 2013",
+        "February 3, 2013"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

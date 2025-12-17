@@ -1,0 +1,36 @@
+{
+    "Paper_Link": "https://actavetscand.biomedcentral.com/track/pdf/10.1186/1751-0147-54-77",
+    "Title": "Physiological evaluation of free-ranging moose (Alces alces) immobilized with etorphine-xylazine-acepromazine in Northern Sweden",
+    "Link": [
+        "http://www.actavetscand.com/content/54/1/77",
+        "www.biomedcentral.com/submitCite",
+        "www.biomedcentral.com/submit"
+    ],
+    "Abstract": "Background: Evaluation of physiology during capture and anesthesia of free-ranging wildlife is useful for determining the effect that capture methods have on both ecological research results and animal welfare. This study evaluates capture and anesthesia of moose (Alces alces) with etorphine-xylazine-acepromazine in Northern Sweden.Methods: Fifteen adult moose aged 3-15 years were darted from a helicopter with a combination of 3.37 mg etorphine, 75 mg xylazine, and 15 mg acepromazine. Paired arterial blood samples were collected 15 minutes apart with the first sample at 15-23 minutes after darting and were analyzed immediately with an i-STAT W 1 Portable Clinical Analyzer.Results: All animals developed hypoxemia (PaO 2 <10 kPa) with nine animals having marked hypoxemia (PaO 2 5.5-8 kPa). All moose were acidemic (ph<7.35) with nine moose having marked acidemia (pH<7.20). For PaCO 2, 14 moose had mild hypercapnia (PaCO 2 6-8 kPa) and two had marked hypercapnia (PaCO 2 >8 kPa). Pulse, respiratory rate, pH and HCO 3 increased significantly over time from darting whereas lactate decreased. Conclusions: The hypoxemia found in this study is a strong indication for investigating alternative drug doses or combinations or treatment with supplemental oxygen.",
+    "Author": [
+        "Alina L Evans",
+        "\u00c5sa Fahlman",
+        "G\u00f6ran Ericsson",
+        "Henning Andreas Haga",
+        "Jon M Arnemo"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1186/1751-0147-54-77J",
+        "10.1186/1751-0147-54-77"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/hep-ph/0209363",
+    "Title": "HIPPOPO - a Monte-Carlo generator for particle production in the Quark-Gluon String Model",
+    "Abstract": "",
+    "Authors": [
+        "S. P. Baranov"
+    ],
+    "Year": 2002,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

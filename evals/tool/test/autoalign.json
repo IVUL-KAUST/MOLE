@@ -1,0 +1,54 @@
+{
+    "Name": "AUTOALIGN",
+    "Link": "https://github.com/icip-cas/AutoAlign",
+    "License": "unknown",
+    "Year": 2025,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "An open-source toolkit unifying automated alignment techniques for large language models with minimal annotations.",
+    "Provider": [
+        "University of Chinese Academy of Sciences"
+    ],
+    "Paper_Title": "AUTOALIGN: Get Your LLM Aligned with Minimal Annotations",
+    "Paper_Link": "https://aclanthology.org/2025.acl-demo.19.pdf",
+    "Tasks": [
+        "data synthesis",
+        "model pretraining",
+        "model finetuning",
+        "model evaluation",
+        "model deployment",
+        "data visualization"
+    ],
+    "Interface": [
+        "GUI",
+        "CLI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

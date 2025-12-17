@@ -1,0 +1,20 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1701.01017",
+    "Title": "The Diffuse Light of the Universe",
+    "Abstract": "In 1965, the discovery of a new type of uniform radiation, located between radiowaves and infrared light, was accidental. Known today as Cosmic Microwave background (CMB), this diffuse radiation is commonly interpreted as a fossil light released in an early hot and dense universe and constitutes today the main 'pilar' of the big bang cosmology. Considerable efforts have been devoted to derive fundamental cosmological parameters from the characteristics of this radiation that led to a surprising universe that is shaped by at least three major unknown components: inflation, dark matter and dark energy. This is an important weakness of the present consensus cosmological model that justifies raising several questions on the CMB interpretation. Can we consider its cosmological nature as undisputable? Do other possible interpretations exist in the context of other cosmological theories or simply as a result of other physical mechanisms that could account for it? In an effort to questioning the validity of scientific hypotheses and the under-determination of theories compared to observations, we examine here the difficulties that still exist on the interpretation of this diffuse radiation and explore other proposed tracks to explain its origin. We discuss previous historical concepts of diffuse radiation before and after the CMB discovery and underline the limit of our present understanding.",
+    "Authors": [
+        "Jean-Marc Bonnet-Bidaud"
+    ],
+    "Year": 2016,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

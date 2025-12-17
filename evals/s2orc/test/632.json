@@ -1,0 +1,22 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/astro-ph/0004398",
+    "Title": "Secondary Cosmic Muon Angular Distributions with High Statistics",
+    "Abstract": "Project GRAND preents a map in right ascension and declination for single cosmic secondary tracks which have been identified as muons. These muons are measured in stations of proportional wire chambers (PWCs) which have a mean angular resolution of 0.26 deg. A 50 mm steel plate interspersed with the PWCs is used to distinguish muons from electrons. Two years of data are accumulated in a map of right ascension and declination which covers all of the northern hemisphere and a small portion of the southern hemisphere. The total number of muon tracks in this data sample are 40 billion. Significant large angular structure is found in this map; the deviations from average are small compared to the average, but because of the high statistics, the deviations from average are statistically significant to many standard deviations. Systematic effects in the data are minimized by averaging over this two year period. These results are similar to those obtained in previous data.",
+    "Authors": [
+        "J. A. Poirier",
+        "J. Gress",
+        "T. F. Lin"
+    ],
+    "Year": 2000,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

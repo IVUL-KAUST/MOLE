@@ -1,0 +1,30 @@
+{
+    "Paper_Link": "https://pubs.rsc.org/en/content/articlepdf/2019/sc/c9sc02185j",
+    "Title": "Solid-state Suzuki-Miyaura cross-coupling reactions: olefin-accelerated C-C coupling using mechanochemistry \u2020",
+    "Link": [],
+    "Abstract": "The Suzuki-Miyaura cross-coupling reaction is one of the most reliable methods for the construction of carbon-carbon bonds in solution. However, examples for the corresponding solid-state cross-coupling reactions remain scarce. Herein, we report the first broadly applicable mechanochemical protocol for a solid-state palladium-catalyzed organoboron cross-coupling reaction using an olefin additive. Compared to previous studies, the newly developed protocol shows a substantially broadened substrate scope. Our mechanistic data suggest that olefin additives might act as dispersants for the palladiumbased catalyst to suppress higher aggregation of the nanoparticles, and also as stabilizer for the active monomeric Pd(0) species, thus facilitating these challenging solid-state C-C bond forming crosscoupling reactions.",
+    "Author": [
+        "Tamae Seo",
+        "Tatsuo Ishiyama",
+        "Koji Kubota",
+        "Hajime Ito"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1039/c9sc02185j"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

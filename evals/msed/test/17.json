@@ -1,0 +1,43 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1510.05637v1.pdf",
+    "Title": "Observing Near-Earth Objects with the James Webb Space Telescope",
+    "Link": [],
+    "Abstract": "The James Webb Space Telescope (JWST) has the potential to enhance our understanding of near-Earth objects (NEOs). We present results of investigations into the observability of NEOs given the nominal observing requirements of JWST on elongation (85-135 degrees) and non-sidereal rates (<30mas/s). We find that approximately 75% of NEOs can be observed in a given year. However, observers will need to wait for appropriate observing windows. We find that JWST can easily execute photometric observations of meter-sized NEOs which will enhance our understanding of the small NEO population.",
+    "Author": [
+        "Vishnu Reddy"
+    ],
+    "Authoraffiliation": [
+        "NASA Goddard Space Flight Center\n8800, 20771Greenbelt Rd., GreenbeltMD",
+        "Oak Ridge Associated Universities 3 Planetary Science Institute\nNASA Postdoctoral Program\n1700 East Fort Lowell, Suite 106TucsonAZ",
+        "NASA Johnson Space Center\n2101 NASA, 77058Parkway, HoustonTX",
+        "Jet Propulsion Laboratory\n4800 Oak Grove Dr91011PasadenaCA",
+        "Lowell Observatory\n1400 West Mars Hill Rd86011FlagstaffAZ",
+        "Rijksuniversiteit Groningen\nKapteyn Astronomical Institute\nPostbus 8009700 AVGroningenthe Netherlands",
+        "Astrophysics Research Group\nSRON Netherlands Institute for Space Research\nPostbus 8009700 AVGroningenthe Netherlands",
+        "JHU-Applied Physics Laboratory\n11100 Johns Hopkins Rd20723LaurelMD",
+        "NASA Goddard Space Flight Center\n8800, 20771Greenbelt Rd., GreenbeltMD",
+        "Department of Astronomy\nUniversity of Maryland\n20742College ParkMD",
+        "Oak Ridge Associated Universities 3 Planetary Science Institute\nNASA Postdoctoral Program\n1700 East Fort Lowell, Suite 106TucsonAZ",
+        "Space Telescope Science Institute\n3700 San Martin Drive21218 -3BaltimoreMD"
+    ],
+    "Doi": [],
+    "Email": [
+        "cristina.a.thomas@nasa.gov"
+    ],
+    "Date": [
+        "January 1, 2019",
+        "January 1, 2020"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

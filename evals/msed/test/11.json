@@ -1,0 +1,64 @@
+{
+    "Paper_Link": "https://www.nature.com/articles/srep41010.pdf",
+    "Title": "DoGMP1 from Dendrobium officinale contributes to mannose content of water-soluble polysaccharides and plays a role in salt stress response OPEN",
+    "Link": [
+        "http://bioinformatics.psb.ugent.be/webtools/plantcare/"
+    ],
+    "Abstract": "GDP-mannose pyrophosphorylase (GMP) catalyzed the formation of GDP-mannose, which serves as a donor for the biosynthesis of mannose-containing polysaccharides. In this study, three GMP genes from Dendrobium officinale (i.e., DoGMPs) were cloned and analyzed. The putative 1000 bp upstream regulatory region of these DoGMPs was isolated and cis-elements were identified, which indicates their possible role in responses to abiotic stresses. The DoGMP1 protein was shown to be localized in the cytoplasm. To further study the function of the DoGMP1 gene, 35S:DoGMP1 transgenic A. thaliana plants with an enhanced expression level of DoGMP1 were generated. Transgenic plants were indistinguishable from wild-type (WT) plants in tissue culture or in soil. However, the mannose content of the extracted water-soluble polysaccharides increased 67%, 96% and 92% in transgenic lines #1, #2 and #3, respectively more than WT levels. Germination percentage of seeds from transgenic lines was higher than WT seeds and the growth of seedlings from transgenic lines was better than WT seedlings under salinity stress (150 mM NaCl). Our results provide genetic evidence for the involvement of GMP genes in the biosynthesis of mannose-containing polysaccharides and the mediation of GMP genes in the response to salt stress during seed germination and seedling growth.GDP-mannose pyrophosphorylase (GMP, E.C. 2.7.7.13), also known as mannose-1-phosphate guanyltransferase, catalyzes the conversion of mannose-1-phosphate to GDP-mannose. A number of nucleotide sugars such as GDP-L-galactose, GDP-L-fucose and GDP-D-rhamnose are synthesized using GDP-mannose as the precursor 1,2 . Moreover, GDP-mannose is an important intermediate product related to a wide range of metabolic pathways in plants, such as N-glycosylation 3,4 and the synthesis of ascorbic acid (AsA) and polysaccharides 1 . Insertion of the GMP gene into Saccharomyces cerevisiae restored the viability of alg1 N-glycosylation mutants 5 . GDP-mannose deficiency, which is caused by GMP deficiency, is responsible for N-glycosylation deficiency, and results in inhibited root growth in the presence of NH 4 + 6,7 .In plants, the GMP gene is involved in AsA synthesis and has been shown to improve the tolerance of plants under abiotic stress. For example, in an ozone-sensitive Arabidopsis thaliana mutant (sozi/vct1/cyt1) that contained only 30% of the wild-type (WT) AsA concentration, the VCT1 gene, which encodes a GMP 1 , was shown to be responsible for AsA deficiency8,9. GMP from rice (Oryza sativa L.) improved salinity stress tolerance in tobacco (Nicotiana tabacum L.) 10 . A tobacco GMP is involved in tolerance to temperature stress11,12.Previous studies demonstrated that mannan synthase isolated from plant species such as pea (Pisum sativum L.), fenugreek (Trigonella foenum-graecum L.) and guar (Cyamopsis tetragonoloba L.), used GDP-mannose as a substrate to synthesize a mannan backbone in vitro13,14. The cellulose synthase-like A (CSLA) family, which belongs to the cellulose synthase (CesA) superfamily of glycosyltransferase family 2 (GT2), encodes proteins responsible for mannan polysaccharides by using GDP-mannose as the substrate 15-17 . Transformants of potato (Solanum tuberosum L.) with reduced GMP activity had 30-50% lower mannose content than WT plants 4 .Although the vast majority of the characterized GMPs from A. thaliana, rice or other higher plant species have been analyzed, it has been proposed that the involvement of GMPs in AsA synthesis and stress tolerance is conserved. However, it is not possible to predict gene functions of possible GMPs based only on nucleotide or amino acid sequence similarities. For example, a probable GDP-mannose pyrophosphorylase (TAIR number: AT1G74910), predicted by amino acid sequence similarly, lacks GDP-mannose pyrophosphorylase activity 18 . In this study, we report on the cloning and characterization of three GMPs from D. officinale. We generated 35S:DoGMP1 A. thaliana transgenic lines, studied the relationship between DoGMP1 and mannose content of water-soluble polysaccharides, and assessed the tolerance of these lines to salinity stress. This work can provide insight into understanding the molecular mechanisms of polysaccharide biosynthesis in D. officinale. Furthermore, this work also has implications for the development of abiotic stress-tolerant crops to overcome environmental stress limitations and improve production efficiency in the face of a burgeoning world population.Materials and MethodsPlant materials and growth conditions. Potted D. officinale plants used to clone genes were grown and maintained in a greenhouse (Guangzhou, Guangdong, China) under natural conditions. The stems of D. officinale (about one year old) were harvested, frozen rapidly in liquid nitrogen and kept at \u2212 80 \u00b0C until RNA extraction. A. thaliana (ecotype Columbia) was used as the WT in this study. WT and DoGMP1 overexpression lines were cultured in a growth chamber in a 16-h photoperiod (100 \u03bc mol m \u22122 s \u22121 ) at 22 \u00b0C.",
+    "Author": [
+        "Xinhua Zhang"
+    ],
+    "Authoraffiliation": [
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China",
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China",
+        "University of Chinese Academy of Sciences\n100049BeijingChina",
+        "Miki-cho, Kagawa-kenP. O. Box 73011-2, 761-0799Miki-cho post office, IkenobeJapan",
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China",
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China",
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China",
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China",
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China",
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China",
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China",
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China",
+        "School of Food Science and Engineering and Biotechnology\nHefei University of Technology\n230009HefeiChina",
+        "Key Laboratory of South China Agricultural Plant Molecular Analysis and Gene Improvement\nBotanical Garden\nChinese Academy of Sciences\n510650GuangzhouSouth China, China"
+    ],
+    "Doi": [
+        "10.1038/srep41010received:",
+        "10.1038/srep41010",
+        "10.1038/srep41010",
+        "10.1038/srep41010",
+        "10.1038/srep41010",
+        "10.1038/srep41010",
+        "10.1038/srep41010",
+        "10.1038/srep41010",
+        "10.1038/srep41010",
+        "10.1038/srep41010Scientific",
+        "10.1038/srep41010",
+        "10.1111/j.1365-313X.2009.03977.xThe",
+        "10.1111/j.1365-313X.2009.03977.x",
+        "10.1371/journal.pgen.1005125PLoS",
+        "10.1371/journal.",
+        "10.1146/annurev.arplant.48.1.355Annual",
+        "10.1146/annurev.arplant.48.1.355",
+        "10.1038/srep41010Scientific",
+        "10.1038/srep41010"
+    ],
+    "Email": [
+        "duanj@scib.ac.cn"
+    ],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "Paper_Link": "https://export.arxiv.org/pdf/2207.14391v2.pdf",
+    "Title": "Distributed Stochastic Bandit Learning with Delayed Context Observation",
+    "Link": [],
+    "Abstract": "We consider the problem where M agents collaboratively interact with an instance of a stochastic K-armed contextual bandit, where K M. The goal of the agents is to simultaneously minimize the cumulative regret over all the agents over a time horizon T . We consider a setting where the exact context is observed after a delay and at the time of choosing the action the agents are unaware of the context and only a distribution on the set of contexts is available. Such a situation arises in different applications where at the time of the decision the context needs to be predicted (e.g., weather forecasting or stock market prediction), and the context can be estimated once the reward is obtained. We propose an Upper Confidence Bound (UCB)-based distributed algorithm and prove that our algorithm achieves regret and communications bounds of O(d \u221a MT log 2 T ) and O(M 1.5 d 3 ), respectively, for linearly parametrized reward functions. We validated the performance of our algorithm via numerical simulations on synthetic data and real-world Movielens data.",
+    "Author": [
+        "Jiabin Lin",
+        "Member, IEEEShana Moothedath"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1501.01359",
+    "Title": "Reanalysis of near-infrared extragalactic background light based on the IRTS observation",
+    "Abstract": "We reanalyze data of near-infrared background taken by Infrared Telescope in Space (IRTS) based on up-to-date observational results of zodiacal light, integrated star light and diffuse Galactic light. We confirm the existence of residual isotropic emission, which is slightly lower but almost the same as previously reported. At wavelengths longer than 2 {\\mu}m, the result is fairly consistent with the recent observation with AKARI. We also perform the same analysis using a different zodiacal light model by Wright and detected residual isotropic emission that is slightly lower than that based on the original Kelsall model. Both models show the residual isotropic emission that is significantly brighter than the integrated light of galaxies.",
+    "Authors": [
+        "T. Matsumoto",
+        "M. G. Kim",
+        "J. Pyo",
+        "K. Tsumura"
+    ],
+    "Year": 2015,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

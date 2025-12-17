@@ -1,0 +1,32 @@
+{
+    "Paper_Link": "https://link.springer.com/content/pdf/10.3758/s13423-018-1497-7.pdf",
+    "Title": "Flexible voices: Identity perception from variable vocal signals",
+    "Link": [
+        "https://doi.org/10.1016/"
+    ],
+    "Abstract": "Human voices are extremely variable: The same person can sound very different depending on whether they are speaking, laughing, shouting or whispering. In order to successfully recognise someone from their voice, a listener needs to be able to generalize across these different vocal signals ('telling people together'). However, in most studies of voice-identity processing to date, the substantial within-person variability has been eliminated through the use of highly controlled stimuli, thus focussing on how we tell people apart. We argue that this obscures our understanding of voice-identity processing by controlling away an essential feature of vocal stimuli that may include diagnostic information. In this paper, we propose that we need to extend the focus of voice-identity research to account for both Btelling people together^as well as Btelling people apart.^That is, we must account for whether, and to what extent, listeners can overcome within-person variability to obtain a stable percept of person identity from vocal cues. To do this, our theoretical and methodological frameworks need to be adjusted to explicitly include the study of within-person variability.",
+    "Author": [
+        "Nadine Lavan",
+        "Sophie K Scott",
+        "Carolyn Mcgettigan"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.3758/s13423-018-1497-7THEORETICAL",
+        "10.1016/j.neuropsychologia.2018.03.039Maguinness"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

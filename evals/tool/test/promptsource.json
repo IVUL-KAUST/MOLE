@@ -1,0 +1,49 @@
+{
+    "Name": "PromptSource",
+    "Link": "https://github.com/bigscience-workshop/promptsource",
+    "License": "unknown",
+    "Year": 2022,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "A system for creating, sharing, and using natural language prompts, featuring a templating language, prompt management tools, and a community-driven repository.",
+    "Provider": [
+        "BigScience"
+    ],
+    "Paper_Title": "PromptSource: An Integrated Development Environment and Repository for Natural Language Prompts",
+    "Paper_Link": "https://aclanthology.org/2022.acl-demo.9.pdf",
+    "Tasks": [
+        "data annotation"
+    ],
+    "Interface": [
+        "GUI",
+        "CLI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

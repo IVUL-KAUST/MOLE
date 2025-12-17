@@ -1,0 +1,55 @@
+{
+    "Name": "PRIMEQA",
+    "Link": "https://github.com/primeqa",
+    "License": "Apache-2.0",
+    "Year": 2023,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "Open-source QA toolkit for retrieval, reading comprehension, and question generation.",
+    "Provider": [
+        "IBM Research AI"
+    ],
+    "Paper_Title": "PRIMEQA: The Prime Repository for State-of-the-Art Multilingual Question Answering Research and Development",
+    "Paper_Link": "https://aclanthology.org/2023.acl-demo.5.pdf",
+    "Tasks": [
+        "information retrieval",
+        "question answering"
+    ],
+    "Interface": [
+        "API",
+        "CLI",
+        "GUI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source",
+        "Docker",
+        "Live Demo"
+    ],
+    "Supported_OS": [
+        "Linux",
+        "Windows",
+        "macOS"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

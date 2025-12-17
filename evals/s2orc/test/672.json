@@ -1,0 +1,20 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1210.0978",
+    "Title": "Understanding our Galaxy - key contributions from the Parkes telescope",
+    "Abstract": "Young massive stars, with their spectacular masers and HII regions, dominate our Galaxy, and are a cornerstone for understanding Galactic structure. I will highlight the role of Parkes in contributing to these studies - past, present and future.",
+    "Authors": [
+        "J. L. Caswell"
+    ],
+    "Year": 2012,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

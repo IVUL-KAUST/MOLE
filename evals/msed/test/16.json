@@ -1,0 +1,32 @@
+{
+    "Paper_Link": "https://www.matec-conferences.org/articles/matecconf/pdf/2022/15/matecconf_newtech22_01002.pdf",
+    "Title": "The Influence of Lubrication on the Roughness of the Vibroburnished Surface",
+    "Link": [],
+    "Abstract": "One of the processes by which hardening of the surface layer and diminishing the heights of the surface roughness occur in the case of steel parts is vibroburnishing. The analysis of the conditions of using the vibroburnishing process of the cylindrical surfaces showed that the use of lubrication could influence the heights of the asperities resulting from the processing. The problem of conducting experimental research was formulated to highlight the intensity of the influence exerted by some input factors in the vibroburnishing process on the roughness of the processed surfaces, evaluated by using the roughness parameter Ra. An experimental program was designed aiming to use different values of ball diameter, ball pressing force, and initial roughness, in conditions of dry vibroburnishing and using lubricating oil, respectively. The experimental results were processed using a software based on the least-squares method. The determined empirical mathematical models showed that, under the conditions in which the experimental tests were performed, the strongest influence on the value of the roughness parameter Ra is exerted by the initial surface roughness, followed by the size of the ball pressing force on the surface and by the ball diameter, the latter exerting very little influence. It was confirmed that the presence of a lubricant in the processing area results in a decrease in the size of the roughness parameter Ra, compared to the situation where such a lubricant is not used.",
+    "Author": [
+        "Gheorghe Nag\u00ee\u021b"
+    ],
+    "Authoraffiliation": [
+        "Gheorghe Asachi\" Technical University of Ia\u0219i\nBlvd. D. Mangeron, 39700050Ia\u0219iRom\u00e2nia",
+        "Dun\u0103rea de Jos\"\nUniversity of Gala\u021bi\nStr. Domneasc\u0103 47Rom\u00e2nia"
+    ],
+    "Doi": [
+        "10.1051/matecconf/202236801002VibroburnishingLubrication",
+        "10.1051/matecconf/202236801002",
+        "10.1051/matecconf/202236801002"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

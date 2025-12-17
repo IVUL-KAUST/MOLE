@@ -1,0 +1,35 @@
+{
+    "Paper_Link": "https://respiratory-research.biomedcentral.com/track/pdf/10.1186/1465-9921-12-130",
+    "Title": "Evaluation of epithelial mesenchymal transition in patients with chronic obstructive pulmonary disease",
+    "Link": [],
+    "Abstract": "Background: The reticular basement membrane (Rbm) in smokers and especially smokers with COPD is fragmented with \"clefts\" containing cells staining for the collagenase matrix-metalloproteinase-9 (MMP-9) and fibroblast protein, S100A4. These cells are also present in the basal epithelium. Such changes are likely hallmarks of epithelial mesenchymal transition (EMT). We aimed to confirm the epithelial origin of these Rbm cells, and to exclude potential confounding by infiltrating inflammatory cells. Methods: Endobronchial biopsy sections from 17 COPD current smokers, with documented Rbm splitting and cellularity were stained for neutrophil elastase (neutrophil marker), CD68 (macrophage/mature fibroblasts), CD4+/CD8 + T lymphocytes, CD19 (B-cells), CD11c (dendritic cells/inflammatory cells), and S100 (Langerhans cells). The number of cells in the Rbm and epithelium staining for these \"inflammatory\" cell markers were then compared to numbers staining for S100A4, \"a documented EMT epitope\". Slides were double stained for S100A4 and cytokeratin(s). Results: In the basal epithelium significantly more cells stained for S100A4 compared to infiltrating macrophages, fibroblasts or immune cells: median, 26 (21.3 -37.3) versus 0 (0 -9.6) per mm, p < 0.003. Markedly more S100A4 staining cells were also observed in the Rbm compared to infiltrating macrophages, neutrophils, fibroblasts or immune cells or any sub-type: 58 (37.3 -92.6) versus 0 (0 -4.8) cells/mm Rbm, p < 0.003. Cells in the basal epithelium 26 (21.3 -37.3) per mm) and Rbm (5.9 (2.3 -13.8) per mm) frequently double stained for both cytokeratin and S100A4. Conclusions: These data provide additional support for active EMT in COPD airways.",
+    "Author": [
+        "Sukhwinder S Sohal",
+        "David Reid",
+        "Amir Soltani",
+        "Chris Ward",
+        "Steven Weston",
+        "Konrad Muller",
+        "Richard Wood-Baker",
+        "E Haydn Walters"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1186/1465-9921-12-130J",
+        "10.1186/1465-9921-12-130"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

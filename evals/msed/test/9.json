@@ -1,0 +1,28 @@
+{
+    "Paper_Link": "https://www.nature.com/articles/s41467-020-14970-1.pdf",
+    "Title": "Supplementary Information Vibronic mixing enables ultrafast energy flow in light-harvesting complex II",
+    "Link": [],
+    "Abstract": "In order to demonstrate the role of vibrational coherences, or rather lack thereof, in 2DEV spectra, control experiments were performed on cresyl violet (CV) dissolved in deuterated methanol. CV was chosen because it is well-documented in the literature that when both twodimensional electronic spectroscopy (2DES) and visible pump-visible probe spectroscopy have been applied to CV, strong vibrational coherences with a frequency of ~590 cm -1 were observed. 1-3 However, in a 2DEV experiment, performed under the same broadband excitation conditions as in previous 2DES and visible pump-visible probe experiments (SupplementaryFigure 1), no vibrational coherences were observed. In the following text, these results are presented along with a short discussion.Representative 2DEV spectra of CV are shown inSupplementary Figure 2. Throughout the remainder of the discussion, we will apply the same analysis as in the main text to the strong Supplementary Figure 2. 2DEV spectra of cresyl violet. a)-e) 2DEV spectra of cresyl violet at T = 55 fs, 160 fs, 431 fs, 700 fs, and 1000 fs, respectively. All spectra have been normalized to T = 0 fs. Contour levels are drawn in 6.6% intervals. The absorption spectrum and laser excitation spectrum are shown above a) and the main feature of interest, GSB 1 , has been labeled in a).Supplementary Figure 1. Linear absorption spectrum of cresyl violet.Absorption spectrum of cresyl violet dissolved in deuterated methanol at 298 K (grey) together with laser excitation spectrum (green).",
+    "Author": [
+        "Arsenault"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1073/pnas.1701390115Proc.",
+        "10.1073/pnas.1701390115"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

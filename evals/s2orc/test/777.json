@@ -1,0 +1,21 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1404.3276",
+    "Title": "A k-deformed Model of Growing Complex Networks with Fitness",
+    "Abstract": "The Barab\\'asi-Bianconi (BB) fitness model can be solved by a mapping between the original network growth model to an idealized bosonic gas. The well-known transition to Bose-Einstein condensation in the latter then corresponds to the emergence of\"super-hubs\"in the network model. Motivated by the preservation of the scale-free property, thermodynamic stability and self-duality, we generalize the original extensive mapping of the BB fitness model by using the nonextensive Kaniadakis k-distribution. Through numerical simulation and mean-field calculations we show that deviations from extensivity do not compromise qualitative features of the phase transition. Analysis of the critical temperature yields a monotonically decreasing dependence on the nonextensive parameter k.",
+    "Authors": [
+        "Massimo Stella",
+        "Markus Brede"
+    ],
+    "Year": 2014,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

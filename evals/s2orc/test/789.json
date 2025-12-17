@@ -1,0 +1,22 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1402.4705",
+    "Title": "A WISE Survey of Circumstellar Disks in Taurus",
+    "Abstract": "We have compiled photometry at 3.4, 4.6, 12 and 22 $\\mu$m from the all-sky survey performed by the Wide-field Infrared Survey Explorer (WISE) for all known members of the Taurus complex of dark clouds. Using these data and photometry from the Spitzer Space Telescope, we have identified members with infrared excess emission from circumstellar disks and have estimated the evolutionary stages of the detected disks, which include 31 new full disks and 16 new candidate transitional, evolved, evolved transitional, and debris disks. We have also used the WISE All-Sky Source Catalog to search for new disk-bearing members of Taurus based on their red infrared colors. Through optical and near-infrared spectroscopy, we have confirmed 26 new members with spectral types of M1 - M7. The census of disk-bearing stars in Taurus should now be largely complete for spectral types earlier than $\\sim$M8 ($M \\gtrsim 0.03$ $M_\\odot$).",
+    "Authors": [
+        "T. L. Esplin",
+        "K. L. Luhman",
+        "E. E. Mamajek"
+    ],
+    "Year": 2014,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

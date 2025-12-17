@@ -1,0 +1,59 @@
+{
+    "Paper_Link": "https://bmccancer.biomedcentral.com/counter/pdf/10.1186/s12885-021-07922-5",
+    "Title": "Osimertinib in advanced EGFR- T790M mutation-positive non-small cell lung cancer patients treated within the Special Use Medication Program in Spain: OSIREX-Spanish Lung Cancer Group",
+    "Link": [],
+    "Abstract": "Background: AURA study reported 61% objective response rate and progression-free survival of 9.6 months with osimertinib in patients with EGFR/T790M+ non-small cell lung cancer. Due to lack of real-world data, we proposed this study to describe the experience with osimertinib in Spain. Methods: Post-authorization, non-interventional Special Use Medication Program, multicenter, retrospective study in advanced EGFR/T790M+ non-small cell lung cancer. One hundred-fifty five patients were enrolled (August 2016-December 2018) from 30 sites. Primary objective: progression-free survival. Secondary objectives: toxicity profile, objective response rate, and use of health service resources.Results: 70% women, median age 66. 63.9% were non-smokers and 99% had adenocarcinoma. Most patients had received at least one prior treatment (97%), 91.7% had received previous EGFR-tyrosine kinase inhibitors and 2.8% osimertinib as first-line treatment. At data cutoff, median follow-up was 11.8 months. One hundred-fifty five patients were evaluable for response, 1.3% complete response, 40.6% partial response, 31% stable disease and 11.6% disease progression. Objective response rate was 42%. Median progression-free survival was 9.4 months. Of the 155 patients who received treatment, 76 (49%) did not reported any adverse event, 51% presented some adverse event, most of which were grade 1 or 2. The resource cost study indicates early use is warranted.(Continued on next page)",
+    "Author": [
+        "Mariano Provencio",
+        "Josefa Terrasa",
+        "Pilar Garrido",
+        "Rosario Garc\u00eda Campelo",
+        "Francisco Aparisi",
+        "Pilar Diz",
+        "David Aguiar",
+        "Carlos Garc\u00eda-Giron",
+        "Julia Hidalgo",
+        "Carlos Aguado",
+        "Jorge Garc\u00eda Gonz\u00e1lez",
+        "Emilio Esteban",
+        "Lorenzo G\u00f3mez-Aldavar\u00ed",
+        "Teresa Moran",
+        "Oscar Juan",
+        "Lu\u00edsEnrique Chara",
+        "Juan L Marti",
+        "Rafael L\u00f3pez Castro",
+        "Ana Laura Ortega",
+        "Elia Mart\u00ednez Moreno",
+        "Juan Coves",
+        "Ana M S\u00e1nchez Pe\u00f1a",
+        "Joaquim Bosch-Barrera",
+        "Amparo S\u00e1nchez Gastaldo",
+        "Natalia Fern\u00e1ndez N\u00fa\u00f1ez",
+        "Edel Del Barco",
+        "Manuel Cobo",
+        "Dolores Isla",
+        "Margarita Majem",
+        "F\u00e1tima Navarro",
+        "Virginia Calvo"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1186/s12885-021-07922-5R"
+    ],
+    "Email": [],
+    "Date": [
+        "31/12/2018"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

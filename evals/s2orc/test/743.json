@@ -1,0 +1,21 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1607.08848",
+    "Title": "Effect of a magnetic field on massive star winds I: mass-loss and velocity for a dipole field",
+    "Abstract": "We generalize the Rigid-Field Hydrodynamic equations to accommodate arbitrary magnetic field topologies, resulting in a new Arbitrary Rigid-Field hydrodynamic (ARFHD) formalism. We undertake a critical point calculation of the steady-state ARFHD equations with a CAK-type radiative acceleration and determine the effects of a dipole magnetic field on the usual CAK mass-loss rate and velocity structure. Enforcing the proper optically-thin limit for the radiative line-acceleration is found to decrease both the mass-loss and wind acceleration, while rotation boosts both properties. We define optically-thin-correction and rotation parameters to quantify these effects on the global mass-loss rate and develop scaling laws for the surface mass-flux as a function of surface colatitude. These scaling laws are found to agree with previous laws derived from magnetohydrodynamic simulations of magnetospheres. The dipole magnetosphere velocity structure is found to differ from a global beta-velocity law, which contradicts a central assumption of the previously-developed XADM model of X-ray emission from magnetospheres.",
+    "Authors": [
+        "Christopher Bard",
+        "Richard H.D. Townsend"
+    ],
+    "Year": 2016,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "Paper_Link": "https://angeo.copernicus.org/articles/30/1633/2012/angeo-30-1633-2012.pdf",
+    "Title": "Association of cusp energetic ions with geomagnetic storms and substorms",
+    "Link": [
+        "http://omniweb.gsfc.nasa.gov/.",
+        "www.ann-geophys.net/30/1633/2012/",
+        "www.ann-geophys.net/30/1633/2012/"
+    ],
+    "Abstract": "Energetic ions observed in the cusp have been explained as a result of processes within the magnetosphere, but also proposed as a driver of some of those same processes.This study assesses potential connections between energetic ions observed in the cusp and geomagnetic storm and substorm activity.These connections may suggest sources of cusp energetic particles (CEPs), or imply effects of these particles on magnetospheric dynamics.We identify CEPs from six years of cusp crossings by the Polar satellite, relating them to storm and substorm onsets.CEPs showed no significant dependence on storms but did show a weak, statistically significant, increase after substorm onsets.CEPs had no significant association with subsequent storm or substorm onsets.We conclude that substorm acceleration may contribute to CEPs but CEPs are unlikely to contribute to global magnetospheric dynamics.",
+    "Author": [
+        "Annales Geophysicae"
+    ],
+    "Authoraffiliation": [
+        "MS-D466\nLos Alamos National Laboratory\n87545Los AlamosNMUSA",
+        "formerly at: Boston University Center for Space Physics\n725 Commonwealth Ave02215BostonMAUSA",
+        "MS-D466\nLos Alamos National Laboratory\n87545Los AlamosNMUSA",
+        "MS-D466\nLos Alamos National Laboratory\n87545Los AlamosNMUSA"
+    ],
+    "Doi": [
+        "10.5194/angeo-30-1633-2012Received:",
+        "10.5194/angeo-23-2217-2005Ann.",
+        "10.1029/96JA03032J.",
+        "10.1007/s11214-012-9874-4Space",
+        "10.1029/2010JA016007doi:10.1029/2010JA016007Cusp",
+        "10.1029/92JA02556J.",
+        "10.5194/angeo-24-3481-2006Ann.",
+        "10.1029/98GL52808Geophys.",
+        "10.1029/1999JA900468J.",
+        "10.1029/1998GL900122Geophys.",
+        "10.1007/s10712-005-1873-5Surv.",
+        "10.1029/97GL01369Geophys.",
+        "10.1029/97JA02246J.",
+        "10.1029/2003JA010027doi:10.1029/2003JA010027J.",
+        "10.1029/2004GL019989Geophys.",
+        "10.1029/2004JA010607J.",
+        "10.1016/S0273-1177(99)00656-0Adv.",
+        "10.1029/2002JA009476J.",
+        "10.1016/j.jastp.2010.02.013The",
+        "10.1029/2000JA000125J.",
+        "10.1029/2010JA015578J.",
+        "10.1029/2001JA000179J.",
+        "10.1029/96JA04020J.",
+        "10.1029/2006GL028891Geophys.",
+        "10.2172/10354972012Los",
+        "10.1016/j.jastp.2011.08.012doi:10.1016/j.jastp.2011.08.012J.",
+        "10.1029/1998JA000437J.",
+        "10.1029/91JA01161J.",
+        "10.1007/BF00751338Space",
+        "10.1007/BF00833344Space",
+        "10.1029/2009JA014919doi:10.1029/2009JA014919J.",
+        "10.1029/2011JA016828J.",
+        "10.5194/angeo-25-1175-2007Ann.",
+        "10.1029/2004JA010562J.",
+        "10.1029/2003GL019128Geophys.",
+        "10.1007/s10712-005-1879-zSurv."
+    ],
+    "Email": [
+        "jniehof@lanl.gov"
+    ],
+    "Date": [
+        "August 27, 1996"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

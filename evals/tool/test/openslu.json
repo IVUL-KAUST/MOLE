@@ -1,0 +1,52 @@
+{
+    "Name": "OpenSLU",
+    "Link": "https://github.com/LightChen233/OpenSLU",
+    "License": "unknown",
+    "Year": 2023,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "A unified, modularized, and extensible open-source toolkit for spoken language understanding covering single- and multi-intent scenarios with 10 SLU models.",
+    "Provider": [
+        "Central South University "
+    ],
+    "Paper_Title": "OpenSLU: A Unified, Modularized, and Extensible Toolkit for Spoken Language Understanding",
+    "Paper_Link": "https://aclanthology.org/2023.acl-demo.9.pdf",
+    "Tasks": [
+        "intent detection",
+        "data visualization",
+        "model finetuning",
+        "model deployment",
+        "model evaluation"
+    ],
+    "Interface": [
+        "CLI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

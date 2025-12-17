@@ -1,0 +1,22 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/astro-ph/9802302",
+    "Title": "Evolution of Cluster Morphology: X-ray data vs. CDM models",
+    "Abstract": "We compare the evolution of morphology in X-ray cluster data and in clusters obtained in a simulation of flat CDM, normalized to the observed cluster abundance. We find that the evolution rate in model clusters is significantly higher than in data clusters. The results is stricking, as our cluster data are all just for $z \\simlt 0.2$, but is not contrary to expectations, as is known that the CDM spectrum is too flat, around the cluster scale, and therefore induces the presence of too many substructures. The cluster simulations were run using a TREESPH code and therefore include hydrodynamical effects. The test we performed, which turns out to be very sensitive, starts from the so--called power ratios introduced by Buote and Tsai, and makes use of the 2--dimensional generalization of the Kolmogorov--Smirnov test. The discrepancy between data and model is however directly visible through linear regression techniques and using simpler statistical tests.",
+    "Authors": [
+        "Riccardo Valdarnini",
+        "Simona Ghizzardi",
+        "Silvio Bonometto"
+    ],
+    "Year": 1998,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

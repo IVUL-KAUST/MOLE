@@ -1,0 +1,25 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1908.05544",
+    "Title": "On gossip-based information dissemination in pervasive recommender systems",
+    "Abstract": "Pervasive computing systems employ distributed and embedded devices in order to raise, communicate, and process data in an anytime-anywhere fashion. Certainly, its most prominent device is the smartphone due to its wide proliferation, growing computation power, and wireless networking capabilities. In this context, we revisit the implementation of digitalized word-of-mouth that suggests exchanging item preferences between smartphones offline and directly in immediate proximity. Collaboratively and decentrally collecting data in this way has two benefits. First, it allows to attach for instance location-sensitive context information in order to enrich collected item preferences. Second, model building does not require network connectivity. Despite the benefits, the approach naturally raises data privacy and data scarcity issues. In order to address both, we propose Propagate and Filter, a method that translates the traditional approach of finding similar peers and exchanging item preferences among each other from the field of decentralized to that of pervasive recommender systems. Additionally, we present preliminary results on a prototype mobile application that implements the proposed device-to-device information exchange. Average ad-hoc connection delays of 25.9 seconds and reliable connection success rates within 6 meters underpin the approach's technical feasibility.",
+    "Authors": [
+        "Tobias Eichinger",
+        "Felix Beierle",
+        "Robin Papke",
+        "Lucas Rebscher",
+        "Hong Chinh Tran",
+        "Magdalena Trzeciak"
+    ],
+    "Year": 2019,
+    "Field": [
+        "Computer Science"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

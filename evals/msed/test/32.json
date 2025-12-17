@@ -1,0 +1,59 @@
+{
+    "Paper_Link": "https://springerplus.springeropen.com/track/pdf/10.1186/2193-1801-1-4",
+    "Title": "The age-phenome database",
+    "Link": [
+        "http://rubinlab.med.ad.",
+        "http://rubinlab.",
+        "http://rubinlab.med.ad.bgu.ac.il/apk/",
+        "http://agephenome-wiki.med.ad.bgu.ac.il/index.php?",
+        "http://www.ncbi.nlm.nih.gov/pubmed/."
+    ],
+    "Abstract": "Data linking specific ages or age ranges with disease are abundant in biomedical literature. However, these data are organized such that searching for age-phenotype relationships is difficult. Recently, we described the Age-Phenome Knowledge-base (APK), a computational platform for storage and retrieval of information concerning age-related phenotypic patterns. Here, we report that data derived from over 1.5 million human-related PubMed abstracts have been added to APK. Using a text-mining pipeline, 35,683 entries which describe relationships between age and phenotype (such as disease) have been introduced into the database. Comparing the results to those obtained by a human reader reveals that the overall accuracy of these entries is estimated to exceed 80%. The usefulness of these data for obtaining new insight regarding age-disease relationships is demonstrated using clustering analysis, which is shown to capture obvious, as well as potentially interesting relationships between diseases. In addition, a new tool for browsing and searching the APK database is presented. We thus present a unique resource and a new framework for studying age-disease relationships and other phenotypic processes.",
+    "Author": [
+        "Nophar Geifman",
+        "Eitan Rubin"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1186/1471-2105-5-147BMC",
+        "10.1186/1471-2105-5-147.",
+        "10.1186/1471-2105-4-11BMC",
+        "10.1186/1471-",
+        "10.1136/jamia.1994.95236146J",
+        "10.1136/jamia.1994.95236146.",
+        "10.1186/1471-2105-12-229BMC",
+        "10.1186/1471-2105-12-229.",
+        "10.1093/bioinformatics/18.12.1553Bioinformatics.",
+        "10.1093/bioinformatics/18.12.1553.",
+        "10.1016/j.jbi.2005.11.004J",
+        "10.1016/j.jbi.2005.11.004.",
+        "10.1093/bioinformatics/btg232Bioinformatics.",
+        "10.1093/bioinformatics/btg232.",
+        "10.1093/bioinformatics/btg279Bioinformatics.",
+        "10.1093/bioinformatics/btg279.",
+        "10.1136/jnnp.56.12.1259J",
+        "10.1136/jnnp.56.12.1259.",
+        "10.1363/3600604Sexually",
+        "10.1363/3600604.",
+        "10.1016/S0264-410X(99)00489-2Vaccine.",
+        "10.1016/S0264-410X(99)00489-2.",
+        "10.1186/1472-6947-6-30BMC",
+        "10.1186/1472-6947-6-30.",
+        "10.1186/2193-1801-1-4AMIA",
+        "10.1186/2193-1801-1-4"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

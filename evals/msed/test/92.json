@@ -1,0 +1,57 @@
+{
+    "Paper_Link": "https://www.aclanthology.org/2022.sdp-1.18.pdf",
+    "Title": "Named Entity Recognition Based Automatic Generation of Research Highlights",
+    "Link": [
+        "https://www.sciencedirect.com/science/article/pii/S037722171300307X",
+        "https://www.sciencedirect.com/science/article/pii/S0010448514001857",
+        "https://www.sciencedirect.com/science/article/pii/S0010448514001821",
+        "https://www.sciencedirect.com/science/article/pii/S0010448514001821",
+        "https://www.sciencedirect.com/).",
+        "https://spacy.io/usage/"
+    ],
+    "Abstract": "A scientific paper is traditionally prefaced by an abstract that summarizes the paper. Recently, research highlights that focus on the main findings of the paper have emerged as a complementary summary in addition to an abstract. However, highlights are not yet as common as abstracts, and are absent in many papers. In this paper, we aim to automatically generate research highlights using different sections of a research paper as input. We investigate whether the use of named entity recognition on the input improves the quality of the generated highlights. In particular, we have used two deep learning-based models: the first is a pointer-generator network, and the second augments the first model with coverage mechanism. We then augment each of the above models with named entity recognition features. The proposed method can be used to produce highlights for papers with missing highlights. Our experiments show that adding named entity information improves the performance of the deep learning-based summarizers in terms of ROUGE, METEOR and BERTScore measures.",
+    "Author": [
+        "Tohida Rehman",
+        "Debarshi Kumar Sanyal",
+        "Prasenjit Majumder",
+        "Samiran Chattopadhyay"
+    ],
+    "Authoraffiliation": [
+        "Indian Association for the Cultivation of Science\nJadavpur University\nIndia",
+        "TCG CREST\nTCG CREST\nIndia",
+        "Jadavpur University\nIndia"
+    ],
+    "Doi": [
+        "10.1057/s41599-021-00903-wHumanities",
+        "10.18653/v1/K17-1021Proceedings",
+        "10.1016/j.eswa.2020.113679Expert",
+        "10.5555/974305.9743291st",
+        "10.18653/v1/W16-1608Proceedings",
+        "10.1016/S0004-3702(02)00222-9Artificial",
+        "10.1145/215206.215333Proceedings",
+        "10.1016/j.datak.2013.08.005Data",
+        "10.1147/rd.22.0159IBM",
+        "10.1162/089120102762671927Computational",
+        "10.18653/v1/P17-1099Proceedings",
+        "10.1162/089120102762671936Computational"
+    ],
+    "Email": [
+        "tohida.rehman@gmail.com",
+        "debarshisanyal@gmail.com",
+        "prasenjit.majumder@gmail.com",
+        "samirancju@gmail.com"
+    ],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/quant-ph/0311124",
+    "Title": "The Helmholtz Theorem and Superluminal Signals",
+    "Abstract": "The conventional decomposition of a vector field into longitudinal (potential) and transverse (vortex) components (Helmholtz's theorem) is claimed in [1] to be inapplicable to the time-dependent vector fields and, in particular, to the retarded solutions of Maxwell's equations. Because of this, according to [1], a number of conclusions drawn in [2] on the basis of the Helmholtz theorem turns out to be erroneous. The Helmholtz theorem is proved in this letter to hold for arbitrary vector field, both static and time-dependent. Therefore, the conclusions of the paper [2] questioned in [1] are true. The validity of Helmholtz's theorem in the general case is due to the fact that the decomposition above of vector field does not influence the field time coordinate, which plays, thus, a passive role in the decomposition procedure. An analysis is given of the mistakes made in [1]. It is noted that for point particle the longitudinal and transverse components of electric field, taken separately, are characterized by the infinitely great velocity of propagation. However, superluminal contributions to the expression for the total electric field cancel each other.",
+    "Authors": [
+        "V. P. Oleinik"
+    ],
+    "Year": 2003,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "Name": "NeurST",
+    "Link": "https://github.com/bytedance/neurst",
+    "License": "unknown",
+    "Year": 2021,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "An open-source toolkit for neural speech translation supporting end-to-end speech translation.",
+    "Provider": [
+        "ByteDance AI Lab"
+    ],
+    "Paper_Title": "NeurST: Neural Speech Translation Toolkit",
+    "Paper_Link": "https://aclanthology.org/2021.acl-demo.7.pdf",
+    "Tasks": [
+        "machine translation",
+        "model pretraining",
+        "model deployment",
+        "data preprocessing"
+    ],
+    "Interface": [
+        "CLI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source",
+        "Package"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

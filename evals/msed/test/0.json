@@ -1,0 +1,44 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/2103.05759v1.pdf",
+    "Title": "Word Embedding Techniques for Malware Evolution Detection",
+    "Link": [
+        "https://israelg99.github.io/2017-03-23-",
+        "www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?",
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-",
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-",
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-",
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-",
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-",
+        "www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?",
+        "https://www.microsoft.com/security/portal/threat/encyclopedia/entry.aspx?",
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-",
+        "http://www.",
+        "https://www.",
+        "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-",
+        "https://www.",
+        "https://www.cs.sjsu.edu/"
+    ],
+    "Abstract": "Malware detection is a critical aspect of information security. One difficulty that arises is that malware often evolves over time. To maintain effective malware detection, it is necessary to determine when malware evolution has occurred so that appropriate countermeasures can be taken. We perform a variety of experiments aimed at detecting points in time where a malware family has likely evolved, and we consider secondary tests designed to confirm that evolution has actually occurred. Several malware families are analyzed, each of which includes a number of samples collected over an extended period of time. Our experiments indicate that improved results are obtained using feature engineering based on word embedding techniques. All of our experiments are based on machine learning models, and hence our evolution detection strategies require minimal human intervention and can easily be automated.",
+    "Author": [
+        "Sunhera Paul",
+        "Mark Stamp"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [],
+    "Email": [],
+    "Date": [
+        "2017-03-23"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

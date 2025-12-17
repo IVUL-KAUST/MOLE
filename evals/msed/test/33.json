@@ -1,0 +1,35 @@
+{
+    "Paper_Link": "https://bmcgenomics.biomedcentral.com/counter/pdf/10.1186/s12864-020-06932-0",
+    "Title": "Genome-wide scan for common variants associated with intramuscular fat and moisture content in rainbow trout",
+    "Link": [
+        "https://doi.org/10.",
+        "http://nce.ads.uga.edu/wiki/lib/exe/fetch.php?media=28-07.pdf]."
+    ],
+    "Abstract": "Background: Genetic improvement of fillet quality attributes is a priority of the aquaculture industry. Muscle composition impacts quality attributes such as flavor, appearance, texture, and juiciness. Fat and moisture make up about~80% of the tissue weight. The genetic architecture underlying the fat and moisture content of the muscle is still to be fully explored in fish. A 50 K gene transcribed SNP chip was used for genotyping 789 fish with available phenotypic data for fat and moisture content. Genotyped fish were obtained from two consecutive generations produced in the National Center for Cool and Cold Water Aquaculture (NCCCWA) growth-selective breeding program. Estimates of SNP effects from weighted single-step GBLUP (WssGBLUP) were used to perform genomewide association (GWA) analysis to identify quantitative trait loci (QTL) associated with the studied traits. Results: Using genomic sliding windows of 50 adjacent SNPs, 137 and 178 SNPs were identified as associated with fat and moisture content, respectively. Chromosomes 19 and 29 harbored the highest number of SNPs explaining at least 2% of the genetic variation in fat and moisture content. A total of 61 common SNPs on chromosomes 19 and 29 affected the aforementioned traits; this association suggests common mechanisms underlying intramuscular fat and moisture content. Additionally, based on single-marker GWA analyses, 8 and 24 SNPs were identified in association with fat and moisture content, respectively. Conclusion: SNP-harboring genes were primarily involved in lipid metabolism, cytoskeleton remodeling, and protein turnover. This work provides putative SNP markers that could be prioritized and used for genomic selection in breeding programs.",
+    "Author": [
+        "Ali Ali",
+        "Rafet Al-Tobasei",
+        "Daniela Lourenco",
+        "Tim Leeds",
+        "Brett Kenney",
+        "Mohamed Salem"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1186/s12864-020-06932-0R"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

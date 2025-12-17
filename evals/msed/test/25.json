@@ -1,0 +1,37 @@
+{
+    "Paper_Link": "https://bmcmicrobiol.biomedcentral.com/track/pdf/10.1186/1471-2180-14-65",
+    "Title": "The antibacterial effect of nitric oxide against ESBL-producing uropathogenic E. coli is improved by combination with miconazole and polymyxin B nonapeptide",
+    "Link": [
+        "www.folkhal"
+    ],
+    "Abstract": "Background: Nitric oxide (NO) is produced as part of the host immune response to bacterial infections, including urinary tract infections. The enzyme flavohemoglobin, coded by the hmp gene, is involved in protecting bacterial cells from the toxic effects of NO and represents a potentially interesting target for development of novel treatment concepts against resistant uropathogenic bacteria. The aim of the present study was to investigate if the in vitro antibacterial effects of NO can be enhanced by pharmacological modulation of the enzyme flavohemoglobin.Results: Four clinical isolates of multidrug-resistant extended-spectrum \u03b2-lactamase (ESBL)-producing uropathogenic E. coli were included in the study. It was shown that the NO-donor substance DETA/NO, but not inactivated DETA/NO, caused an initial growth inhibition with regrowth noted after 8 h of exposure. An hmp-deficient strain showed a prolonged growth inhibition in response to DETA/NO compared to the wild type. The imidazole antibiotic miconazole, that has been shown to inhibit bacterial flavohemoglobin activity, prolonged the DETA/NO-evoked growth inhibition. When miconazole was combined with polymyxin B nonapeptide (PMBN), in order to increase the bacterial wall permeability, DETA/NO caused a prolonged bacteriostatic response that lasted for up to 24 h. Conclusion: An NO-donor in combination with miconazole and PMBN showed enhanced antimicrobial effects and proved effective against multidrug-resistant ESBL-producing uropathogenic E. coli.",
+    "Author": [
+        "Charlotte Sahlberg Bang",
+        "Annica Kinnunen",
+        "Marie Karlsson",
+        "Anna \u00d6nnberg",
+        "Bo S\u00f6derquist",
+        "Katarina Persson"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1186/1471-2180-14-65Science.",
+        "10.1186/1471-2180-14-65"
+    ],
+    "Email": [],
+    "Date": [
+        "2180/14/65"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

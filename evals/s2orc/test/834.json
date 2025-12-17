@@ -1,0 +1,23 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1011.3297",
+    "Title": "Approximate quantum state sharing via two private quantum channels",
+    "Abstract": "We investigate a quantum communication protocol, of ::: so-called approximate quantum state sharing (AQSS), that protocol is basically ::: based on pair of private quantum channels. In this paper, we prove that the ::: scheme is secure against any external and internal attacks of wiretapping in ::: principle. Although the protocol leaks small amount of information corresponding ::: to a security parameter , the scheme still preserves its information-theoretic ::: security.",
+    "Authors": [
+        "Dong Pyo Chi",
+        "Kabgyun Jeong"
+    ],
+    "Year": 2010,
+    "Field": [
+        "Computer Science",
+        "Physics",
+        "Mathematics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

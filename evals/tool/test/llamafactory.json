@@ -1,0 +1,50 @@
+{
+    "Name": "LLAMAFACTORY",
+    "Link": "https://github.com/hiyouga/LLaMA-Factory",
+    "License": "Apache-2.0",
+    "Year": 2024,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "A unified efficient fine-tuning framework for 100+ language models with minimal resources and high throughput.",
+    "Provider": [
+        "Beihang University"
+    ],
+    "Paper_Title": "LLAMAFACTORY: Unified Efficient Fine-Tuning of 100+ Language Models",
+    "Paper_Link": "https://aclanthology.org/2024.acl-demos.38.pdf",
+    "Tasks": [
+        "model finetuning",
+        "model evaluation"
+    ],
+    "Interface": [
+        "CLI",
+        "GUI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

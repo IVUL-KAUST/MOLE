@@ -1,0 +1,26 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1711.00655",
+    "Title": "Energy scaling law for nanostructured materials",
+    "Abstract": "The equilibrium binding energy is an important factor in the design of materials and devices. However, it presents great computational challenges for materials built up from nanostructures. Here we investigate the binding-energy scaling law from first-principles calculations. We show that the equilibrium binding energy per atom between identical nanostructures can scale up or down with nanostructure size. From the energy scaling law, we predict finite large-size limits of binding energy per atom. We find that there are two competing factors in the determination of the binding energy: Nonadditivities of van der Waals coefficients and center-to-center distance between nanostructures. To uncode the detail, the nonadditivity of the static multipole polarizability is investigated. We find that the higher-order multipole polarizability displays ultra-strong intrinsic nonadditivity, no matter if the dipole polarizability is additive or not.",
+    "Authors": [
+        "Jianmin Tao",
+        "Yang Jiao",
+        "Yuxiang Mo",
+        "Zeng-Hui Yang",
+        "Jian-Xin Zhu",
+        "Per Hyldgaard",
+        "John P. Perdew"
+    ],
+    "Year": 2017,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

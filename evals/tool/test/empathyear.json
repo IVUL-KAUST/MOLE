@@ -1,0 +1,48 @@
+{
+    "Name": "EmpathyEar",
+    "Link": "https://github.com/scofield7419/EmpathyEar",
+    "License": "unknown",
+    "Year": 2024,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "An open-source avatar-based multimodal empathetic chatbot that accepts text, speech, or video input and generates synchronized talking-face empathetic responses.",
+    "Provider": [
+        "National University of Singapore"
+    ],
+    "Paper_Title": "EmpathyEar: An Open-source Avatar Multimodal Empathetic Chatbot",
+    "Paper_Link": " https://aclanthology.org/2024.acl-demos.7.pdf",
+    "Tasks": [
+        "chatbot"
+    ],
+    "Interface": [
+        "GUI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "unknown"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

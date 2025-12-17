@@ -1,0 +1,53 @@
+{
+    "Name": "TOPMOST",
+    "Link": "https://github.com/bobxwu/topmost",
+    "License": "unknown",
+    "Year": 2024,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "Topic Modeling System Toolkit supporting basic, hierarchical, dynamic, and cross-lingual topic modeling with latest neural models.",
+    "Provider": [
+        "Nanyang Technological University"
+    ],
+    "Paper_Title": "Towards the TOPMOST: A Topic Modeling System Toolkit",
+    "Paper_Link": "https://aclanthology.org/2024.acl-demos.4.pdf",
+    "Tasks": [
+        "topic modeling",
+        "data preprocessing",
+        "model evaluation",
+        "model pretraining",
+        "data visualization"
+    ],
+    "Interface": [
+        "CLI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source",
+        "Live Demo"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

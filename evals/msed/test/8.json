@@ -1,0 +1,45 @@
+{
+    "Paper_Link": "https://www.nature.com/articles/npp200966.pdf",
+    "Title": "Antidepressant-and anxiolytic-like effects of the phosphodiesterase-4 (PDE4) inhibitor rolipram on behavior depend on cyclic AMP-response element binding protein (CREB)-mediated neurogenesis in the hippocampus HHS Public Access",
+    "Link": [],
+    "Abstract": "Inhibition of phosphodiesterase-4 (PDE4), an enzyme that catalyzes the hydrolysis of cyclic AMP (cAMP), increases phosphorylation of cAMP-response element binding protein (pCREB) and hippocampal neurogenesis, and produces antidepressant-like effects on behavior; however, causal links among these have not been established. In the present study, chronic administration of rolipram produced antidepressant-and anxiolytic-like effects on behavior in mice. It also increased cAMP and pCREB levels in the hippocampus and prefrontal cortex, but increased Sox2, a marker for mitotic progenitor cells, only in the hippocampus. Chronic rolipram treatment also increased hippocampal neurogenesis, as evidenced by increased bromodeoxyuridine (BrdU)positive cells in the hippocampal dentate gyrus. Methylazoxymethanol (MAM), which is toxic to proliferating cells, reversed rolipram-induced increases in BrdU-positive cells and pCREB in the hippocampus and partially blocked its behavioral effects. Approximately 84% of BrdU-positive cells became newborn neurons, 93% of which co-expressed pCREB; these proportions were not altered by rolipram or MAM, either alone or in combination. Finally, three weeks following the end of MAM treatment, when neurogenesis was no longer inhibited, rolipram again increased hippocampal pCREB, with its antidepressant-and anxiolytic-like effects resumed. Overall, the present results suggest that rolipram produces its effects on behavior in a manner that at least partially depends on its neurogenic action in the hippocampus, targeting mitotic progenitor cells Users may view, print, copy, and download text and data-mine the content in such documents, for the purposes of academic research, subject always to the full Conditions of use:rather than newborn or mature neurons; cAMP/CREB signaling in hippocampal newborn neurons is critical for neurogenesis and contributes to the behavioral effects of rolipram.",
+    "Author": [
+        "M.DHan-Ting Zhang",
+        "Han-Ting Zhang",
+        "James M O"
+    ],
+    "Authoraffiliation": [
+        "Department of Behavioral Medicine & Psychiatry\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "Department of Physiology & Pharmacology\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "Department of Behavioral Medicine & Psychiatry\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "Department of Neurobiology & Anatomy\nDepartment of Behavioral Medicine and Psychiatry West\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "DISCLOSURE/CONFLICT OF INTEREST\nVirginia University Health Sciences Center Morgantown\n26506, 9137WV",
+        "Department of Behavioral Medicine & Psychiatry\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "Department of Physiology & Pharmacology\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "Department of Behavioral Medicine & Psychiatry\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "Department of Neurobiology & Anatomy\nDepartment of Behavioral Medicine and Psychiatry West\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "DISCLOSURE/CONFLICT OF INTEREST\nVirginia University Health Sciences Center Morgantown\n26506, 9137WV",
+        "Department of Behavioral Medicine & Psychiatry\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "Department of Neurobiology & Anatomy\nDepartment of Behavioral Medicine and Psychiatry West\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "DISCLOSURE/CONFLICT OF INTEREST\nVirginia University Health Sciences Center Morgantown\n26506, 9137WV",
+        "Department of Behavioral Medicine & Psychiatry\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA",
+        "Department of Physiology & Pharmacology\nVirginia University Health Sciences Center\n26506MorgantownWest, WVUSA"
+    ],
+    "Doi": [
+        "10.1038/npp.2009.66Corresponding"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/0808.3545",
+    "Title": "Scientific Workflow Systems for 21st Century e-Science, New Bottle or New Wine?",
+    "Abstract": "With the advances in e-Sciences and the growing complexity of scientific analyses, more and more scientists and researchers are relying on workflow systems for process coordination, derivation automation, provenance tracking, and bookkeeping. While workflow systems have been in use for decades, it is unclear whether scientific workflows can or even should build on existing workflow technologies, or they require fundamentally new approaches. In this paper, we analyze the status and challenges of scientific workflows, investigate both existing technologies and emerging languages, platforms and systems, and identify the key challenges that must be addressed by workflow systems for e-science in the 21st century.",
+    "Authors": [
+        "Yong Zhao",
+        "Ioan Raicu",
+        "Ian Foster"
+    ],
+    "Year": 2008,
+    "Field": [
+        "Computer Science"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

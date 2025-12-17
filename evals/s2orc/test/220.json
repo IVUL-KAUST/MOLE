@@ -1,0 +1,22 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1501.07418",
+    "Title": "Distributionally Robust Counterpart in Markov Decision Processes",
+    "Abstract": "This technical note studies Markov decision processes under parameter uncertainty. We adapt the distributionally robust optimization framework, assume that the uncertain parameters are random variables following an unknown distribution, and seek the strategy which maximizes the expected performance under the most adversarial distribution. In particular, we generalize a previous study [1] which concentrates on distribution sets with very special structure to a considerably more generic class of distribution sets, and show that the optimal strategy can be obtained efficiently under mild technical conditions. This significantly extends the applicability of distributionally robust MDPs by incorporating probabilistic information of uncertainty in a more flexible way.",
+    "Authors": [
+        "Pengqian Yu",
+        "Huan Xu"
+    ],
+    "Year": 2016,
+    "Field": [
+        "Mathematics",
+        "Computer Science"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

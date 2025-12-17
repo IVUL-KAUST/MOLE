@@ -1,0 +1,48 @@
+{
+    "Name": "OLMO-TRACE",
+    "Link": "https://playground.allenai.org",
+    "License": "Apache-2.0",
+    "Year": 2025,
+    "Access": "anonymous",
+    "Version": 1.3877787807814457e-16,
+    "Description": "OLMO-TRACE traces language-model outputs back to their full, multi-trillion-token training data in real time.",
+    "Provider": [
+        "Allen Institute for AI"
+    ],
+    "Paper_Title": "OLMO-TRACE: Tracing Language Model Outputs Back to Trillions of Training Tokens",
+    "Paper_Link": "https://aclanthology.org/2025.acl-demo.18.pdf",
+    "Tasks": [
+        "data exploration"
+    ],
+    "Interface": [
+        "GUI"
+    ],
+    "Host": "other",
+    "Code_Execution": [
+        "Live Demo"
+    ],
+    "Supported_OS": [
+        "Linux"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

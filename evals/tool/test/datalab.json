@@ -1,0 +1,53 @@
+{
+    "Name": "DATALAB",
+    "Link": "https://github.com/ExpressAI/DataLab",
+    "License": "unknown",
+    "Year": 2022,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "Unified data-oriented platform for interactive dataset diagnostics, processing and recommendation.",
+    "Provider": [
+        "ExperssAI"
+    ],
+    "Paper_Title": "DATALAB: A Platform for Data Analysis and Intervention",
+    "Paper_Link": "https://aclanthology.org/2022.acl-demo.18.pdf",
+    "Tasks": [
+        "data exploration",
+        "data visualization",
+        "data preprocessing"
+    ],
+    "Interface": [
+        "API",
+        "GUI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source",
+        "Package",
+        "Live Demo"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

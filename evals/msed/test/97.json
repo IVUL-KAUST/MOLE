@@ -1,0 +1,48 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/2107.10202v1.pdf",
+    "Title": "REVISITING FAIGLE GEOMETRIES FROM A PERSPECTIVE OF SEMIMODULAR LATTICES",
+    "Link": [
+        "www.math.u-szeged.hu/~czedli/m/listak/publ-psml.pdf.",
+        "www.math.u-szeged.hu/~czedli/m/listak/publ-psml.pdf",
+        "http://arxiv.org/abs/2101.02929",
+        "http://arxiv.org/abs/2105.12868",
+        "http://arxiv.org/abs/2102.00526",
+        "http://arxiv.org/abs/2103.04458",
+        "http://cgasa.sbu.ac.ir/article",
+        "http://arxiv.org/abs/2105.10604",
+        "https://arxiv.org/abs/2104.02534",
+        "https://arxiv.org/abs/2106.03241.pdf",
+        "http://arxiv.org/abs/2105.12868",
+        "http://cgasa.sbu.ac.ir/article",
+        "http://www.math.u-szeged.hu/~czedli/"
+    ],
+    "Abstract": "In 1980, U. Faigle introduced a sort of finite geometries on posets that are in bijective correspondence with finite semimodular lattices. His result has almost been forgotten in lattice theory. Here we simplify the axiomatization of these geometries, which we call Faigle geometries. To exemplify their usefulness, we give a short proof of a theorem of Gr\u00e4tzer and E.  asserting that each slim semimodular lattice L has a congruence-preserving extension to a slim rectangular lattice of the same length as L. As another application of Faigle geometries, we give a short proof of G. Gr\u00e4tzer and E. W. Kiss' result from 1986 (also proved by M. Wild in 1993, the present author and E. T. Schmidt in 2010, and B. Skublics in 2013) that each finite semimodular lattice L has an extension to a geometric lattice of the same length as L.Date: July 21, 2021 Hint: check the author's website for preprints and possible updates.",
+    "Author": [
+        "G\u00e1bor Cz\u00e9dli"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.14232/actasm-021-865-yActa",
+        "10.14232/actasm-021-865-y"
+    ],
+    "Email": [
+        "czedli@math.u-szeged.hu"
+    ],
+    "Date": [
+        "July 19, 2021",
+        "78-3-7084",
+        "78-3-7084"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

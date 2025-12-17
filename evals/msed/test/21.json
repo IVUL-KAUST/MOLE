@@ -1,0 +1,35 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/2105.00644v1.pdf",
+    "Title": "Schema-Aware Deep Graph Convolutional Networks for Heterogeneous Graphs",
+    "Link": [
+        "https://www.dgl.ai/",
+        "https://pytorch.org/",
+        "https://openreview.net/forum?id=rJXMpikCZ"
+    ],
+    "Abstract": "Graph convolutional network (GCN) based approaches have achieved significant progress for solving complex, graph-structured problems. GCNs incorporate the graph structure information and the node (or edge) features through message passing and computes 'deep' node representations. Despite significant progress in the field, designing GCN architectures for heterogeneous graphs still remains an open challenge. Due to the schema of a heterogeneous graph, useful information may reside multiple hops away.A key question is how to perform message passing to incorporate information of neighbors multiple hops away while avoiding the well-known over-smoothing problem in GCNs. To address this question, we propose our GCN framework Deep Heterogeneous Graph Convolutional Network (DHGCN), which takes advantage of the schema of a heterogeneous graph and uses a hierarchical approach to effectively utilize information many hops away. It first computes representations of the target nodes based on their schema-derived ego-network (SEN). It then links the nodes of the same type with various pre-defined metapaths and performs message passing along these links to compute final node representations. Our design choices naturally capture the way a heterogeneous graph is generated from the schema. The experimental results on real and synthetic datasets corroborate the design choice and illustrate the performance gains relative to competing alternatives.",
+    "Author": [
+        "Journal Of L A T E X Class",
+        "Files"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1145/2623330.2623732Proceedings",
+        "10.1145/2623330.2623732",
+        "10.1145/2736277.2741093Proceedings",
+        "10.1145/2736277.2741093"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

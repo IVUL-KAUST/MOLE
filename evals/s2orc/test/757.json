@@ -1,0 +1,20 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/nucl-th/9905005",
+    "Title": "Quark-Gluon Plasma",
+    "Abstract": "An elementary introduction to the physics of quark-gluon plasma is given. We start with a sketchy presentation of the Quantum Chromodynamics which is the fundamental theory of strong interactions. The structure of hadrons built up of quarks and gluons is briefly discussed with a special emphasis on the confinement hypothesis. Then, we explain what is the quark-gluon plasma and consider why and when the hadrons can dissolve liberating the quarks and gluons. The heavy-ion collisions at high-energies, which provide a unique opportunity to get a droplet of the quark-gluon plasma in the terrestrial conditions, are described. We also consider the most promising experimental signatures of the quark-gluon plasma produced in nucleus-nucleus collisions. At the end, the perspectives of the quark-gluon plasma studies at the future accelerators are mentioned.",
+    "Authors": [
+        "Stanis\u0142aw Mr\u00f3wczy\u0144ski"
+    ],
+    "Year": 1999,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

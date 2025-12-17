@@ -1,0 +1,39 @@
+{
+    "Paper_Link": "https://www.scielo.br/j/bjps/a/nGZqbT6GRdNrJkz7KmCWgJx/?format=pdf&lang=en",
+    "Title": "Preparation and in vitro characterization of monoclonal antibody ranibizumab conjugated magnetic nanoparticles for ocular drug delivery",
+    "Link": [],
+    "Abstract": "ArticleGold coated magnetite nanoparticles were prepared and coated with ranibizumab as an ocular drug delivery system. The surface morphologies of the nanoparticles were determined by Scanning Electron Microscopy (SEM). The size and surface charge were determined by using the dynamic light scattering (DLS) technique. Crystallographic properties of the gold coated Fe 3 O 4 nanoparticles were recorded on X-ray diffractometer (XRD) the XRD pattern of nanoparticlees were shown to have uniqe Fe 3 O 4 and gold peaks. Conjugation of ranibizumab onto nanoparticles was achieved using the physical adsorption method. The amount of ranibizumab on the surface of the nanoparticles was determined by thermogravimetric analysis (TGA). In the in vitro release studies performed using UV spectroscopy; it was found that almost 60% of antibodies were released within the first 30 minutes. Antibody activity after release studies was also proved with ELISA. Non-toxicity of gold coated Fe 3 O 4 particles were proved with MTT. Results of the studies, showed that the antibody conjugated magnetic nanoparticle system could be a potential treatment system for ocular diseases.",
+    "Author": [
+        "A D Sezer",
+        "Ne\u015fe Ayata",
+        "Ali Demir Sezer",
+        "Seyda Bucak",
+        "Eda Tahir Turanl\u0131"
+    ],
+    "Authoraffiliation": [
+        "Department of Pharmaceutical Biotechnology\nFaculty of Pharmacy\nMarmara University\nHaydarpa\u015faIstanbulTurkey",
+        "Department of Pharmaceutical Biotechnology\nFaculty of Pharmacy\nMarmara University\nHaydarpa\u015faIstanbulTurkey",
+        "Department of Chemical Engineering\nFaculty of Engineering\nYeditepe University\nAta\u015fehirIstanbulTurkey",
+        "Department of Molecular Biology and Genetics\nFaculty of Science and Letters\nDepartment of Pharmaceutical Biotechnology\n\u0130stanbul Technical University\nSar\u0131yerIstanbulTurkey",
+        "Marmara University\n34668Haydarpa\u015fa, IstanbulTurkey"
+    ],
+    "Doi": [
+        "10.1590/s2175-97902020000118171Received"
+    ],
+    "Email": [
+        "adsezer@marmara.edu.tr"
+    ],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1508.00666v3.pdf",
+    "Title": "Anchored boundary conditions for locally isostatic networks",
+    "Link": [
+        "http://users.wpi.edu/\u02dcbservat",
+        "http://thorpe2.la.asu.edu/thorpe*",
+        "http://theran.lt",
+        "http://www.lancaster.ac.uk/maths/about-us/people/anthony-nixon",
+        "http://www.elissaross.ca",
+        "http://users.wpi.edu/\u02dcbservat",
+        "http://thorpe2.la.asu.edu/thorpe"
+    ],
+    "Abstract": "Finite pieces of locally isostatic networks have a large number of floppy modes because of missing constraints at the surface. Here we show that by imposing suitable boundary conditions at the surface, the network can be rendered effectively isostatic. We refer to these as anchored boundary conditions. An important example is formed by a two-dimensional network of corner sharing triangles, which is the focus of this paper. Another way of rendering such networks isostatic, is by adding an external wire along which all unpinned vertices can slide (sliding boundary conditions). This approach also allows for the incorporation of boundaries associated with internal holes and complex sample geometries, which are illustrated with examples. The recent synthesis of bilayers of vitreous silica has provided impetus for this work. Experimental results from the imaging of finite pieces at the atomic level needs such boundary conditions, if the observed structure is to be computer-refined so that the interior atoms have the perception of being in an infinite isostatic environment. arXiv:1508.00666v2 [cond-mat.dis-nn] 28 Sep 2015",
+    "Author": [
+        "Louis Theran",
+        "Anthony Nixon",
+        "Elissa Ross",
+        "Mahdi Sadjadi",
+        "Brigitte Servatius",
+        "M F Thorpe"
+    ],
+    "Authoraffiliation": [
+        "Department of Computer Science (CS)\nDepartment of Mathematics and Statistics\nAalto Science Institute (AScI\nAalto University\nPO Box 1550000076AaltoFinland",
+        "Lancaster University\nLA1 4YFLancasterEngland",
+        "Fields Institute for Research in the Mathematical Sciences\nDepartment of Physics\nMESH Consultants Inc\n222 College StreetM5T 3J1TorontoONCanada",
+        "Department of Mathematical Sciences\nArizona State University\n85287-1504TempeAZUSA",
+        "Department of Physics\nWorcester Polytechnic Institute\n100 Institute Road01609WorcesterMAUSA",
+        "and Rudolf Peierls Centre for Theoretical Physics\nArizona State University\n85287-1504TempeAZUSA",
+        "University of Oxford\n1 Keble RdOX1 3NPOxfordEngland"
+    ],
+    "Doi": [
+        "10.1103/PhysRevB.76.233401Phys.",
+        "10.1016/0022-3093(94)00545-1Journal",
+        "10.1088/0034-4885/78/7/073901Reports",
+        "10.1103/PhysRevLett.114.135501Phys.",
+        "10.1002/anie.201107097Angewandte",
+        "10.1103/PhysRevB.87.214108Phys.",
+        "10.1007/BF01534980J.",
+        "10.1103/PhysRevLett.75.4051Phys.",
+        "10.1103/PhysRevE.53.3682Phys.",
+        "10.1007/s00454-010-9283-yDiscrete",
+        "10.1080/14786446408643668Journal",
+        "10.1137/0401025SIAM",
+        "10.1007/BF01788678Graphs",
+        "10.1137/11084694427155N.",
+        "10.1137/0604049SIAM",
+        "10.1090/gsm/002Combinatorial",
+        "10.1007/978-1-84628-970-5Graph",
+        "10.1007/BF02187716Discrete",
+        "10.1007/s00454-008-9100-zDiscrete",
+        "10.1007/978-3-540-77974-2Computational"
+    ],
+    "Email": [
+        "ssadjadi@asu.edu",
+        "bservat@wpi.edu",
+        "mft@asu.edu",
+        "louis.theran@aalto.fi",
+        "a.nixon@lancaster.ac.uk",
+        "elissa.ross@meshconsultants.ca",
+        "ssadjadi@asu.edu",
+        "bservat@wpi.edu",
+        "mft@asu.edu"
+    ],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

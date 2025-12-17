@@ -1,0 +1,71 @@
+{
+    "Paper_Link": "https://appmicro.springeropen.com/track/pdf/10.1186/s42649-020-00033-8",
+    "Title": "Double staining method for array tomography using scanning electron microscopy",
+    "Link": [
+        "https://doi.org/",
+        "https://doi.",
+        "https://doi.org/10.",
+        "https://doi."
+    ],
+    "Abstract": "Scanning electron microscopy (SEM) plays a central role in analyzing structures by imaging a large area of brain tissue at nanometer scales. A vast amount of data in the large area are required to study structural changes of cellular organelles in a specific cell, such as neurons, astrocytes, oligodendrocytes, and microglia among brain tissue, at sufficient resolution. Array tomography is a useful method for large-area imaging, and the osmiumthiocarbohydrazide-osmium (OTO) and ferrocyanide-reduced osmium methods are commonly used to enhance membrane contrast. Because many samples prepared using the conventional technique without en bloc staining are considered inadequate for array tomography, we suggested an alternative technique using post-staining conventional samples and compared the advantages.",
+    "Author": [
+        "Eunjin Kim",
+        "Jiyoung Lee",
+        "Seulgi Noh",
+        "Ohkyung Kwon",
+        "Ji Young Mun"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1186/s42649-020-00033-8T",
+        "10.1016/bs.mcb.2019.04.004Methods",
+        "10.1016/bs.mcb.2019.04.004",
+        "10.3389/fnana.2015.00060Front.",
+        "10.3389/fnana.2015.00060",
+        "10.1016/j.conb.2011.10.022Curr.",
+        "10.1016/j.conb.2011.10.022",
+        "10.1371/journal.pbio.0020329PLoS",
+        "10.1371/journal.pbio.0020329",
+        "10.1016/B978-0-12-394620-1.00004-7Methods",
+        "10.1016/B978-",
+        "10.3389/fncir.2014.00068Front.",
+        "10.3389/fncir.2014.00068",
+        "10.1038/ncomms8923Nat.",
+        "10.1038/ncomms8923",
+        "10.1038/s41467-017-02768-7Nat.",
+        "10.1038/s41467-017-02768-7",
+        "10.3389/fncir.2018.00098Front.",
+        "10.1016/bs.mcb.2019.04.002Methods",
+        "10.1016/bs.mcb.2019.04.002",
+        "10.1016/j.neuron.2010.09.024Neuron.",
+        "10.1016/j.neuron.2010.09.024",
+        "10.3389/fnins.2011.0005Front",
+        "10.3389/fnins.2011.0005",
+        "10.1083/jcb.30.2.424J.",
+        "10.1083/jcb.30.2.424",
+        "10.1016/bs.mcb.2019.03.009Methods",
+        "10.1016/bs.mcb.2019.03.009",
+        "10.1126/science.aah5982Science.",
+        "10.1126/science.aah5982",
+        "10.1111/jmi.12244J.",
+        "10.1111/jmi.12244",
+        "10.1523/JNEUROSCI.1600-12.2013J.",
+        "10.1523/JNEUROSCI.1600-12.2013"
+    ],
+    "Email": [],
+    "Date": [
+        "0-12-3946"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

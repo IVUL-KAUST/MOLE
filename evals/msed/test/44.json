@@ -1,0 +1,26 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/0809.1891v1.pdf",
+    "Title": "WHEN IS TIGHT CLOSURE DETERMINED BY THE TEST IDEAL?",
+    "Link": [],
+    "Abstract": "We characterize the rings in which the equality (\u03c4 I : \u03c4 ) = I * holds for every ideal I \u2282 R. Under certain assumptions, these rings must be either weakly F-regular or one-dimensional.",
+    "Author": [
+        "Janet C Vassilev",
+        "Adela N Vraciu"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

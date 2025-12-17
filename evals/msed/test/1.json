@@ -1,0 +1,60 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1710.09876v1.pdf",
+    "Title": "Computing the Line Index of Balance Using Integer Programming Optimisation",
+    "Link": [],
+    "Abstract": "An important measure of a signed graph is the line index of balance which has several applications in many fields. However, this graph-theoretic measure was underused for decades because of the inherent complexity in its computation which is closely related to solving NP-hard graph optimisation problems like MAXCUT. We develop new quadratic and linear programming models to compute the line index of balance exactly. Using the Gurobi integer programming optimisation solver, we evaluate the line index of balance on real-world and synthetic datasets. The synthetic data involves Erd\u0151s-R\u00e9nyi graphs, Barab\u00e1si-Albert graphs, and specially structured random graphs. We also use well known datasets from the sociology literature, such as signed graphs inferred from students' choice and rejection as well as datasets from the biology literature including gene regulatory networks. The results show that exact values of the line index of balance in relatively large signed graphs can be efficiently computed using our suggested optimisation models. We find that most real-world social networks and some biological networks have small line index of balance which indicates that they are close to balanced.Mathematics Subject Classification (MSC 2010):05C22 15C22 90C09 90C11 90C90 90C35Reference format: Aref, S., Mason, A.J., Wilson, M.C.: Computing the line index of balance using integer programming optimisation. In: Graphs' optimization problems and their computational complexities, Springer(2018)",
+    "Author": [
+        "Samin Aref",
+        "Andrew J Mason",
+        "Mark C Wilson",
+        "Samin Aref",
+        "Andrew J Mason",
+        "Mark C Wilson"
+    ],
+    "Authoraffiliation": [
+        "Department of Computer Science\nDepartment of Engineering Science\nUniversity of Auckland Auckland\nPrivate Bag 92019New Zealand",
+        "Department of Computer Science\nUniversity of Auckland\nUniversity of Auckland"
+    ],
+    "Doi": [
+        "10.1002/bs.3830030102Behavioral",
+        "10.1002/bs.3830030102",
+        "10.1016/0166-218X(81)90001-9Discrete",
+        "10.1016/0166-218X(81)90001-9",
+        "10.1093/nar/29.1.75Nucleic",
+        "10.1093/nar/29.1.75",
+        "10.1016/j.dam.2006.12.003Discrete",
+        "10.1016/j.dam.2006.",
+        "10.1073/pnas.1109521108Proceedings",
+        "10.1073/pnas.1109521108",
+        "10.1137/0204019SIAM",
+        "10.1137/0204019",
+        "10.1002/bs.3830040405Behavioral",
+        "10.1002/bs.3830040405",
+        "10.1093/imaman/13.3.201IMA",
+        "10.1093/imaman/13.3.201",
+        "10.1063/1.1703953Journal",
+        "10.1063/1.1703953",
+        "10.1016/j.sorms.2012.12.001Surveys",
+        "10.1016/j.sorms.2012.12.001",
+        "10.1137/1.",
+        "10.1137/1.",
+        "10.1016/j.knosys.2015.05.006Knowledge-Based",
+        "10.1016/j.knosys.2015.05.006",
+        "10.1103/PhysRevLett.35.1792Physical",
+        "10.1103/PhysRevLett.35.1792"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

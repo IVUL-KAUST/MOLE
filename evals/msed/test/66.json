@@ -1,0 +1,27 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1706.00623v1.pdf",
+    "Title": "Structures on the way from classical to quantum spaces and their tensor products",
+    "Link": [],
+    "Abstract": "We study tensor products of two structures situated, in a sense, between normed spaces and (abstract) operator spaces. We call them Lambert and proto-Lambert spaces and pay more attention to the latter ones. The considered two tensor products lead to essentially different norms in the respective spaces. Moreover, the proto-Lambert tensor product is especially nice for spaces with the maximal proto-Lambert norm and in particular, for L 1 -spaces. At the same time the Lambert tensor product is nice for Hilbert spaces with the minimal Lambert norm.",
+    "Author": [
+        "A Ya Helemskii"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [],
+    "Email": [],
+    "Date": [
+        "15-01-0839"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

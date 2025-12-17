@@ -1,0 +1,31 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/2110.11051v2.pdf",
+    "Title": "ALMOST SURE LOCAL WELLPOSEDNESS AND SCATTERING FOR THE ENERGY-CRITICAL CUBIC NONLINEAR SCHR\u00d6DINGER EQUATION WITH SUPERCRITICAL DATA",
+    "Link": [],
+    "Abstract": "We study the cubic defocusing nonlinear Schr\u00f6dinger equation on R 4 with supercritical initial data. For randomized initial data in H s (R 4 ), we prove almost sure local wellposedness for 1 7 < s < 1 and almost sure scattering for 5 7 < s < 1. The randomization is based on a unit-scale decomposition in frequency space, a decomposition in the angular variable, and -for the almost sure scattering result -an additional unit-scale decomposition in physical space. We employ new probabilistic estimates for the linear Schr\u00f6dinger flow with randomized data, where we effectively combine the advantages of the different decompositions.",
+    "Author": [
+        "Martin Spitz"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1080/03605302.2021.1983595Comm.",
+        "10.1080/03605302.2021.1983595."
+    ],
+    "Email": [
+        "mspitz@math.uni",
+        "mspitz@math.uni-bielefeld.de"
+    ],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

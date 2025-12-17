@@ -1,0 +1,21 @@
+{
+    "Paper_Link": "https://arxiv.org/pdf/1901.03339",
+    "Title": "The Effect of General Relativistic Precession on Tidal Disruption Events from Eccentric Nuclear Disks",
+    "Abstract": "An eccentric nuclear disk consists of stars moving on apsidally-aligned orbits around a central black hole. The secular gravitational torques that dynamically stabilize these disks can also produce tidal disruption events (TDEs) at very high rates in Newtonian gravity. General relativity, however, is known to quench secular torques via rapid apsidal precession. ::: Here we show that for a disk to black hole mass ratio $\\gtrsim 10^{-3}$, the system is in the full loss cone regime. The magnitude of the torque per orbital period acting on a stellar orbit means that general relativistic precession does not have a major effect on the dynamics. Thus we find that TDE rates from eccentric nuclear disks are not affected by general relativistic precession. Furthermore, we show that orbital elements between successive TDEs from eccentric nuclear disks are correlated, potentially resulting in unique observational signatures.",
+    "Authors": [
+        "Heather N. Wernke",
+        "Ann-Marie Madigan"
+    ],
+    "Year": 2019,
+    "Field": [
+        "Physics"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Abstract": 1,
+        "Authors": 1,
+        "Year": 1,
+        "Field": 1
+    }
+}

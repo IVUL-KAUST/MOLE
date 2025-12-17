@@ -1,0 +1,74 @@
+{
+    "Paper_Link": "https://www.jstage.jst.go.jp/article/transinf/E100.D/2/E100.D_2016EDP7204/_pdf",
+    "Title": "The Performance Stability of Defect Prediction Models with Class Imbalance: An Empirical Study",
+    "Link": [
+        "http://openscience.us/repo/",
+        "http://www.cs.waikato.ac.nz/ml/weka/"
+    ],
+    "Abstract": "Class imbalance has drawn much attention of researchers in software defect prediction. In practice, the performance of defect prediction models may be affected by the class imbalance problem. In this paper, we present an approach to evaluating the performance stability of defect prediction models on imbalanced datasets. First, random sampling is applied to convert the original imbalanced dataset into a set of new datasets with different levels of imbalance ratio. Second, typical prediction models are selected to make predictions on these new constructed datasets, and Coefficient of Variation (C\u00b7V) is used to evaluate the performance stability of different models. Finally, an empirical study is designed to evaluate the performance stability of six prediction models, which are widely used in software defect prediction. The results show that the performance of C4.5 is unstable on imbalanced datasets, and the performance of Naive Bayes and Random Forest are more stable than other models.",
+    "Author": [
+        "Ieice Trans",
+        "Inf",
+        "Syst",
+        "N O Vol.E100-D"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1587/transinf.2016EDP7204265",
+        "10.1587/transinf.2016EDP7204",
+        "10.1109/icmla.2012.60Proc.",
+        "10.1016/j.dss.2009.07.011Decis.",
+        "10.1016/j.neunet.2007.12.031Neural",
+        "10.1587/transinf.e95.d.267IEICE",
+        "10.1109/tr.2013.2259203IEEE",
+        "10.1016/j.patcog.2014.11.014Pattern",
+        "10.1016/j.ins.2013.07.007Inform.",
+        "10.1080/03610920802187448Commun.",
+        "10.1016/j.ins.2010.12.016Inform.",
+        "10.1007/s10664-014-9346-4Empir.",
+        "10.1016/j.patcog.2012.03.014Pattern",
+        "10.1016/j.neucom.2014.06.021Neurocomputing.",
+        "10.1016/j.asoc.2015.04.045Appl.",
+        "10.1016/j.infsof.2014.07.005Inform.",
+        "10.1145/2601248.2601294Proc.",
+        "10.1109/tsmcc.2011.2161285IEEE",
+        "10.1016/j.ins.2008.12.001Inform.",
+        "10.1007/s10515-011-0090-3Automat.",
+        "10.1016/j.infsof.2014.11.006Inform.",
+        "10.1109/ase.2015.56Proc.",
+        "10.1109/esem.2011.29Proc.",
+        "10.1002/spe.1043Softw.",
+        "10.1007/s10796-013-9430-0Inform.",
+        "10.1145/2556777ACM",
+        "10.1007/bf00153759Mach.",
+        "10.2307/2347628Appl.",
+        "10.1016/s0893-6080(97)00010-5Neural",
+        "10.1109/tkde.2005.50IEEE",
+        "10.1109/issre.2009.13Proc.",
+        "10.1016/j.eswa.2014.10.025Expert",
+        "10.1145/2884781.2884857Proc.",
+        "10.1109/tse.2013.11IEEE",
+        "10.1016/j.infsof.2013.09.003Inform.",
+        "10.1109/ictai.2007.46Proc."
+    ],
+    "Email": [
+        "shjjiang@cumt.edu.cn"
+    ],
+    "Date": [
+        "May 17, 2016",
+        "September 28, 2016",
+        "November 4, 2016"
+    ],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "Paper_Link": "https://export.arxiv.org/pdf/1911.04724v1.pdf",
+    "Title": "Temperature-field phase diagrams of one-way quantum work deficit in two-qubit XXZ spin systems",
+    "Link": [],
+    "Abstract": "The spin-1/2 XXZ chain in a uniform magnetic field at thermal equilibrium is considered. For this model, we give a complete classification of all qualitatively different phase diagrams for the one-way quantum work (information) deficit. The diagrams can contain regions (phases, fractions) with both stationary and variable (state-dependent) angles of optimal measurement. We found cases of phase diagrams in which the sizes of regions with the variable optimal measurement angle are large and perhaps such regions can be detected experimentally. We also established a relationship between the behavior of optimal measurement angles near the boundaries separated different regions and Landau's theory of phase transitions of the second and first kind.",
+    "Author": [
+        "M A Yurischev"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [],
+    "Email": [
+        "yur@itp.ac.ru"
+    ],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

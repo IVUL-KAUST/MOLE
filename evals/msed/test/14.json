@@ -1,0 +1,31 @@
+{
+    "Paper_Link": "https://pubs.rsc.org/en/content/articlepdf/2021/sc/d0sc02342f",
+    "Title": "Stabilization of hydrated Ac III cation: the role of superatom states in actinium-water bonding \u2020",
+    "Link": [
+        "https://iupac.org/what-we-do/periodic-table-of-elements/."
+    ],
+    "Abstract": "225 Ac-based radiopharmaceuticals have the potential to become invaluable in designated cancer therapy.However, the limited understanding of the solution chemistry and bonding properties of actinium has hindered the development of existing and emerging targeted radiotherapeutics, which also poses a significant challenge in the discovery of new agents. Herein, we report the geometric and electronic structural properties of hydrated Ac III cations in the [Ac III (H 2 O) n ] 3+ (n \u00bc 4-11) complexes in aqueous solution and gas-phase using density functional theory. We found that nine water molecules coordinated to the Ac III cation is the most stable complex due to an enhanced hydration Gibbs free energy. This complex adopts a closed-shell 18-electron configuration (1S 2 1P 6 1D 10 ) of a superatom state, which indicates a non-negligible covalent character and involves H 2 O / Ac III s donation interaction between s-/p-/d-type atomic orbitals of the Ac atom and 2p atomic orbitals of the O atoms. Furthermore, potentially existing 10-coordinated complexes need to overcome an energy barrier (>0.10 eV) caused by hydrogen bonding to convert to 9-coordination. These results imply the importance of superatom states in actinide chemistry generally, and specifically in Ac III solution chemistry, and highlight the conversion mechanism between different coordination numbers. \u2020 Electronic supplementary information (ESI) available: Part 1. Different isomers of Ac III aquo complexes; part 2. Ac-O water bond lengths of Ac III aquo complexes; part 3. Detailed composition of superatom MOs of Ac III (H 2 O) 9 ] 3+ complexes; part 4. Molecular orbitals of [Ac III (H 2 O) 9 ] 3+ and [Ac@Au 14 ] \u00c0 based on the Jellium model; part 5. EDA-NOCV results with and without the explicit second water shell; part 6. Electronic structure of [Ac III (NH 3 ) 9 ] 3+ and [Ac III (PH 3 ) 9 ] 3+ complexes; part 7. Electronic structure diagrams for the Ac cation with coordination numbers from 7 to 10; part 8. Optimized geometry of the aq [Ac III (H 2 O) 10 (H 2 O) 35 ] 3+ complex. See",
+    "Author": [
+        "Yang Gao",
+        "Payal Grover",
+        "Georg Schreckenbach"
+    ],
+    "Authoraffiliation": [],
+    "Doi": [
+        "10.1039/d0sc02342f"
+    ],
+    "Email": [],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

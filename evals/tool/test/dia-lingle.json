@@ -1,0 +1,49 @@
+{
+    "Name": "Dia-Lingle",
+    "Link": "https://dia-lingle.ivia.ch/",
+    "License": "CC BY 4.0",
+    "Year": 2025,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "A gamified web platform for collecting and labeling dialectal data through quiz and map-matching tasks.",
+    "Provider": [
+        "ETH Zurich"
+    ],
+    "Paper_Title": "Dia-Lingle: A Gamified Interface for Dialectal Data Collection",
+    "Paper_Link": "https://aclanthology.org/2025.acl-demo.15.pdf",
+    "Tasks": [
+        "data annotation",
+        "data collection"
+    ],
+    "Interface": [
+        "GUI"
+    ],
+    "Host": "other",
+    "Code_Execution": [
+        "Live Demo"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

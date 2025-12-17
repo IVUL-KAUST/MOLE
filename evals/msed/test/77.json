@@ -1,0 +1,41 @@
+{
+    "Paper_Link": "https://www.frontiersin.org/articles/10.3389/fncom.2010.00153/pdf",
+    "Title": "Frontiers in Computational Neuroscience Waiting is the hardest part: comparison of two computational strategies for performing a compelled-response task",
+    "Link": [],
+    "Abstract": "The neural basis of choice behavior is commonly investigated with tasks in which a subject analyzes a stimulus and reports his or her perceptual experience with an appropriate motor action. We recently developed a novel task, the compelled-saccade task, with which the influence of the sensory information on the subject's choice can be tracked through time with millisecond resolution, thus providing a new tool for correlating neuronal activity and behavior. This paradigm has a crucial feature: the signal that instructs the subject to make an eye movement is given before the cue that indicates which of two possible choices is the correct one. Previously, we found that psychophysical performance in this task could be accurately replicated by a model in which two developing oculomotor plans race to a threshold and the incoming perceptual information differentially accelerates their trajectories toward it. However, the task design suggests an alternative mechanism: instead of modifying an ongoing oculomotor plan on the fly as the sensory information becomes available, the subject could try to wait, withholding the oculomotor response until the sensory cue is revealed. Here, we use computer simulations to explore and compare the performance of these two types of model. We find that both reproduce the main features of the psychophysical data in the compelled-saccade task, but they give rise to distinct behavioral and neurophysiological predictions. Although, superficially, the waiting model is intuitively appealing, it is ultimately inconsistent with experimental results from this and other tasks.",
+    "Author": [
+        "Emilio Salinas",
+        "Swetha Shankar",
+        "M Gabriela Costello",
+        "Dantong Zhu",
+        "Terrence R Stanford",
+        "Stefano Fusi",
+        "Emilio Salinas"
+    ],
+    "Authoraffiliation": [
+        "Department of Neurobiology and Anatomy\nWake Forest University School of Medicine\nWinston-SalemNCUSA",
+        "Department of Neurobiology and Anatomy, Wake Forest University School of Medicine\nColumbia University\nWinston-Salem27157-1010NCUSA, USA"
+    ],
+    "Doi": [
+        "10.3389/fncom.2010.00153COMPUTATIONAL",
+        "10.3389/fncom.2010.00153",
+        "10.1371/journal.pbio.0040079PLoS",
+        "10.1371/journal.pbio.0040079"
+    ],
+    "Email": [
+        "esalinas@wfubmc.edu"
+    ],
+    "Date": [],
+    "annotations_from_paper": {
+        "Paper_Link": 1,
+        "Title": 1,
+        "Link": 1,
+        "Abstract": 1,
+        "Author": 1,
+        "Authoraffiliation": 1,
+        "Doi": 1,
+        "Email": 1,
+        "Date": 1,
+        "annotations_from_paper": 1
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "Name": "LM Transparency Tool",
+    "Link": "https://github.com/facebookresearch/llm-transparency-tool",
+    "License": "unknown",
+    "Year": 2024,
+    "Access": "anonymous",
+    "Version": 0.0,
+    "Description": "Interactive open-source toolkit for analyzing internal decision-making in Transformer language models.",
+    "Provider": [
+        "Meta AI (FAIR)"
+    ],
+    "Paper_Title": "LM Transparency Tool: Interactive Tool for Analyzing Transformer Language Models",
+    "Paper_Link": "https://aclanthology.org/2024.acl-demos.6.pdf",
+    "Tasks": [
+        "interpretability",
+        "data visualization"
+    ],
+    "Interface": [
+        "GUI",
+        "CLI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source"
+    ],
+    "Supported_OS": [
+        "unknown"
+    ],
+    "Programming_Language": [
+        "Python"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}

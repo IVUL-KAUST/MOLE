@@ -1,0 +1,53 @@
+{
+    "Name": "Trafilatura",
+    "Link": "https://trafilatura.readthedocs.io/",
+    "License": "GPL-3.0",
+    "Year": 2021,
+    "Access": "anonymous",
+    "Version": 0.8,
+    "Description": "A web scraping library and command-line tool for text discovery and extraction.",
+    "Provider": [
+        "Center for Digital Lexicography of German (ZDL)",
+        "Berlin-Brandenburg Academy of Sciences (BBAW)"
+    ],
+    "Paper_Title": "Trafilatura: A Web Scraping Library and Command-Line Tool for Text Discovery and Extraction",
+    "Paper_Link": "https://aclanthology.org/2021.acl-demo.15.pdf",
+    "Tasks": [
+        "data scrapping"
+    ],
+    "Interface": [
+        "CLI"
+    ],
+    "Host": "GitHub",
+    "Code_Execution": [
+        "Source",
+        "Package"
+    ],
+    "Supported_OS": [
+        "Linux",
+        "macOS",
+        "Windows"
+    ],
+    "Programming_Language": [
+        "Python",
+        "R"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Link": 1,
+        "License": 1,
+        "Year": 1,
+        "Access": 1,
+        "Version": 1,
+        "Description": 1,
+        "Provider": 1,
+        "Paper_Title": 1,
+        "Paper_Link": 1,
+        "Tasks": 1,
+        "Interface": 1,
+        "Host": 1,
+        "Code_Execution": 1,
+        "Supported_OS": 1,
+        "Programming_Language": 1
+    }
+}
