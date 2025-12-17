@@ -179,7 +179,7 @@ class ArxivSourceDownloader:
             return temp_path
             
         except requests.exceptions.RequestException as e:
-            self.logger.error(f"Failed to download source files: {e}")
+            self.logger.show_error(f"Failed to download source files: {e}")
             return None
 
     def _get_pdf_url(self, paper_id: str) -> Optional[str]:
@@ -189,7 +189,7 @@ class ArxivSourceDownloader:
             paper = next(self.client.results(search))
             return paper.pdf_url
         except Exception as e:
-            self.logger.error(f"Error getting PDF URL: {e}")
+            self.logger.show_error(f"Error getting PDF URL: {e}")
             return None
 
     def _process_source_file(self, file_path: str, extract_path: str) -> bool:
@@ -215,7 +215,7 @@ class ArxivSourceDownloader:
                 return self._handle_tar(file_path, extract_path)
                 
         except Exception as e:
-            self.logger.error(f"Error processing source file: {e}")
+            self.logger.show_error(f"Error processing source file: {e}")
             return False
 
     def download_paper(self, identifier: str, download_pdf: bool = True, download_source: bool = True) -> Tuple[bool, str]:
@@ -240,7 +240,10 @@ class ArxivSourceDownloader:
         if download_pdf:
             if os.path.exists(os.path.join(paper_dir, f"paper.pdf")):
                 return True, paper_dir
-            pdf_url = self._get_pdf_url(paper_id)
+            if len(identifier.split("/")) > 5:
+                pdf_url = identifier
+            else:
+                pdf_url = self._get_pdf_url(paper_id)
             if pdf_url:
                 pdf_path = os.path.join(paper_dir, f"paper.pdf")
                 if os.path.exists(pdf_path):
