@@ -42,19 +42,33 @@ class Downloader:
             if os.path.exists(os.path.join(paper_dir, f"paper.pdf")):
                 self.logger.show_info(f"📄 PDF already exists at {paper_dir}")
                 return True, paper_dir
+            
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'Connection': 'keep-alive',
+                'Upgrade-Insecure-Requests': '1',
+                'Cache-Control': 'max-age=0'
+            }
+            
             for i in range(3):
                 try:
-                    response = requests.get(identifier, timeout=10)
-                    break
+                    response = requests.get(identifier, headers=headers, timeout=30, allow_redirects=True)
+                    if response.status_code == 200:
+                        break
+                    time.sleep(2)  # Wait longer between retries
                 except Exception as e:
-                    self.logger.show_warning(f"Error downloading paper {identifier}: {e}")
-                    time.sleep(1)
+                    self.logger.show_warning(f"Error downloading paper {identifier} (attempt {i+1}/3): {e}")
+                    time.sleep(2)
+                    
             if response is not None and response.status_code == 200:
                 with open(os.path.join(paper_dir, f"paper.pdf"), "wb") as f:
                     f.write(response.content)
                 self.logger.show_info(f"📄 PDF downloaded successfully to {paper_dir}")
             else:
-                self.logger.show_warning(f"Failed to download PDF for {identifier}")
+                status_code = response.status_code if response is not None else 'No response'
+                self.logger.show_warning(f"Failed to download PDF for {identifier}. Status code: {status_code}")
                 return False, paper_dir
         return True, paper_dir
 
