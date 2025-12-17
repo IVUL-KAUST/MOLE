@@ -14,5 +14,6 @@ In this task we want to extract tools' metadata from papers. Here is a discribti
 11. **Tasks**: the tasks the tool is designed to perform
 12. **Interface**: the interface of the tool
 13. **Host**: the host of the tool
-14. **Code**: how to run the tool
-15. **Programming_Language**: the programming language of the tool
+14. **Code_Execution**: how to run the tool
+15. **Supported_OS**: the operating systems supported by the tool
+16. **Programming_Language**: the programming language of the tool
