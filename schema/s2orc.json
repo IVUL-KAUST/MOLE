@@ -1,0 +1,47 @@
+    {
+    "Title": {
+        "question": "What is the title of the paper",
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 100
+    },
+    "Paper_Link": {
+        "question": "What is the link to the paper?",
+        "answer_type": "url",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Authors": {
+        "question": "Who are the authors of the paper?",
+        "answer_type": "List[str]",
+        "answer_min": 1,
+        "answer_max": 100
+    },
+    "Abstract": {
+        "question": "What is the abstract of the paper?",
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1000
+    },
+    "Year": {
+        "question": "What year was the paper published?",
+        "answer_type": "date[year]",
+        "answer_min": 1900,
+        "answer_max": 2025
+    },
+    "Field": {
+        "question": "What is the field of the paper?",
+        "options": [
+            "Mathematics",
+            "Computer Science",
+            "Medicine",
+            "Physics",
+            "Statistics",
+            "Engineering",
+            "Other"
+        ],
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    }
+}

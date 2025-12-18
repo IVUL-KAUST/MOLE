@@ -1,0 +1,232 @@
+
+{
+    "Name": {
+        "question": "What is the name of the tool?",
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 5
+    },
+    "Link": {
+        "question": "What is the link to access the tool?",
+        "answer_type": "url",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "License": {
+        "question": "",
+        "options": [
+            "Apache-1.0",
+            "Apache-2.0",
+            "Non Commercial Use - ELRA END USER",
+            "BSD",
+            "CC BY 1.0",
+            "CC BY 2.0",
+            "CC BY 3.0",
+            "CC BY 4.0",
+            "CC BY-NC 1.0",
+            "CC BY-NC 2.0",
+            "CC BY-NC 3.0",
+            "CC BY-NC 4.0",
+            "CC BY-NC-ND 1.0",
+            "CC BY-NC-ND 2.0",
+            "CC BY-NC-ND 3.0",
+            "CC BY-NC-ND 4.0",
+            "CC BY-SA 1.0",
+            "CC BY-SA 2.0",
+            "CC BY-SA 3.0",
+            "CC BY-SA 4.0",
+            "CC BY-NC 1.0",
+            "CC BY-NC 2.0",
+            "CC BY-NC 3.0",
+            "CC BY-NC 4.0",
+            "CC BY-NC-SA 1.0",
+            "CC BY-NC-SA 2.0",
+            "CC BY-NC-SA 3.0",
+            "CC BY-NC-SA 4.0",
+            "CC0",
+            "CDLA-Permissive-1.0",
+            "CDLA-Permissive-2.0",
+            "GPL-1.0",
+            "GPL-2.0",
+            "GPL-3.0",
+            "LDC User Agreement",
+            "LGPL-2.0",
+            "LGPL-3.0",
+            "MIT License",
+            "ODbl-1.0",
+            "MPL-1.0",
+            "MPL-2.0",
+            "ODC-By",
+            "AFL-3.0",
+            "CDLA-SHARING-1.0",
+            "unknown",
+            "custom"
+        ],
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Year": {
+        "question": "What year was the tool published?",
+        "answer_type": "date[year]",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Access": {
+        "question": "How to access the tool?",
+        "answer_type": "str",
+        "options": [
+            "anonymous",
+            "authenticated"
+        ],
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Version": {
+        "question": "What is the version of the tool?",
+        "answer_type": "float",
+        "answer_min": 0
+    },
+    "Description":{
+        "question": "Write a brief description about the tool",
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 50
+    },
+    "Provider": {
+        "question": "What entity is the provider of the tool?",
+        "answer_type": "List[str]",
+        "answer_min": 1,
+        "answer_max": 5
+    },
+    "Paper_Title": {
+        "question": "What is the title of the paper?",
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 100
+    },
+    "Paper_Link": {
+        "question": "What is the link to the paper?",
+        "answer_type": "url",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Tasks": {
+        "question": "What NLP tasks is this tool intended for?",
+        "answer_type": "List[str]",
+        "options": [
+            "topic modeling", 
+            "slot filling", 
+            "intent detection",
+            "interpretability",
+            "data annotation",
+            "data visualization",
+            "data exploration",
+            "data synthesis",
+            "data scrapping", 
+            "data preprocessing",
+            "model pretraining",
+            "model finetuning",
+            "model evaluation",
+            "model post-training",
+            "machine translation",
+            "named entity recognition",
+            "question answering",
+            "information retrieval",
+            "chatbot",
+            "model inference",
+            "model deployment"
+        ],
+        "answer_min": 1,
+        "answer_max": 5
+    },
+    "Interface": {
+        "question": "What is the interface of the tool?",
+        "answer_type": "List[str]",
+        "options": [
+            "API",
+            "CLI",
+            "GUI",
+            "unknown",
+            "other"
+        ],
+        "answer_min": 1,
+        "answer_max": 3
+    },
+    "Host": {
+        "question": "What is name of the repository that hosts the dataset?",
+        "options": [
+            "CAMeL Resources",
+            "CodaLab",
+            "data.world",
+            "Dropbox",
+            "Gdrive",
+            "GitHub",
+            "GitLab",
+            "kaggle",
+            "LDC",
+            "MPDI",
+            "Mendeley Data",
+            "Mozilla",
+            "OneDrive",
+            "QCRI Resources",
+            "ResearchGate",
+            "sourceforge",
+            "zenodo",
+            "HuggingFace",
+            "ELRA",
+            "other"
+        ],
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Code_Execution": {
+        "question": "What is the code execution method of the tool?",
+        "answer_type": "List[str]",
+        "options": [
+            "Source",
+            "Package",
+            "Live Demo",
+            "Docker",
+            "unknown",
+            "other"
+        ],
+        "answer_min": 1,
+        "answer_max": 4
+    },
+    "Supported_OS": {
+        "question": "What is the supported OS of the tool?",
+        "answer_type": "List[str]",
+        "options": [
+            "Windows",
+            "Linux",
+            "macOS",
+            "unknown",
+            "other"
+        ],
+        "answer_min": 1,
+        "answer_max": 3
+    },
+    "Programming_Language": {
+        "question": "What is the programming language of the tool?",
+        "answer_type": "List[str]",
+        "options": [
+            "Python",
+            "Java",
+            "C",
+            "C++",
+            "C#",
+            "JavaScript",
+            "TypeScript",
+            "Go",
+            "Rust",
+            "R",
+            "MATLAB",
+            "unknown",
+            "other"
+        ],
+        "answer_min": 1,
+        "answer_max": 3
+    }
+        
+}
