@@ -13,7 +13,7 @@ async def main(args):
     logger = TextLogger(log = args.log)
     
     # Create a thread pool executor
-    with concurrent.futures.ThreadPoolExecutor(max_workers=len(dataset)) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         loop = asyncio.get_event_loop()
         tasks = []
         
