@@ -28,6 +28,7 @@ dependencies = [
     "trl>=0.21.0",
     "uvicorn==0.34.2",
     "vllm>=0.10.1",
+    "wikipedia-api>=0.8.1",
 ]
 
 [tool.uv.sources]

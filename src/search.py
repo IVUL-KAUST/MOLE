@@ -1,6 +1,7 @@
 from glob import glob
 import os
 from search_arxiv import ArxivSourceDownloader
+from search_wiki import WikiDownloader
 import json
 import pdfplumber
 from dotenv import load_dotenv
@@ -265,6 +266,9 @@ def download_paper(paper_link, download_path="static/papers/", log = True):
         success, paper_path = downloader.download_paper(paper_link)
     elif 'pdf' in paper_link:
         downloader = Downloader(download_path=download_path, log= log)
+        success, paper_path = downloader.download_paper(paper_link)
+    elif 'wiki' in paper_link:
+        downloader = WikiDownloader(download_path=download_path, log= log)
         success, paper_path = downloader.download_paper(paper_link)
     else:
         raise ValueError(f"Invalid paper link: {paper_link}")
