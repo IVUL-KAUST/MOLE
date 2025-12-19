@@ -1,0 +1,28 @@
+{
+    "Name": "Enrico Fermi",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Enrico_Fermi",
+    "YearOfBirth": 1901,
+    "YearOfDeath": 1954,
+    "Nationality": "Italian",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "Italian and naturalized American physicist, creator of the first nuclear reactor, key member of the Manhattan Project, and awarded the 1938 Nobel Prize for Physics.",
+    "Awards": [
+        "Nobel Prize in Physics (1938)",
+        "Matteucci Medal (1926)",
+        "Hughes Medal (1942)",
+        "Franklin Medal (1947)",
+        "Rumford Prize (1953)"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

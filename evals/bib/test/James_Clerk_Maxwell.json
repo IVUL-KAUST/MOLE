@@ -1,0 +1,24 @@
+{
+    "Name": "James Clerk Maxwell",
+    "Paper_Link": "https://en.wikipedia.org/wiki/James_Clerk_Maxwell",
+    "YearOfBirth": 1831,
+    "YearOfDeath": 1879,
+    "Nationality": "Scottish",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "Pioneer of classical electromagnetic theory and statistical mechanics; formulated Maxwell's equations and developed early control theory.",
+    "Awards": [
+        "Adams Prize"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

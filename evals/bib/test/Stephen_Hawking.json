@@ -1,0 +1,28 @@
+{
+    "Name": "Stephen Hawking",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Stephen_Hawking",
+    "YearOfBirth": 1942,
+    "YearOfDeath": 2018,
+    "Nationality": "English",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "English theoretical physicist, cosmologist, and author who made groundbreaking contributions to general relativity and black hole physics, and popularized science through bestselling books such as A Brief History of Time.",
+    "Awards": [
+        "Fellow of the Royal Society",
+        "Presidential Medal of Freedom",
+        "Copley Medal",
+        "Wolf Prize in Physics",
+        "Adams Prize"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

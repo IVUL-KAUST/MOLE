@@ -1,0 +1,24 @@
+{
+    "Name": "Albert Einstein",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Albert_Einstein",
+    "YearOfBirth": 1879,
+    "YearOfDeath": 1955,
+    "Nationality": "German",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "German-born theoretical physicist best known for developing the theory of relativity and making important contributions to quantum theory.",
+    "Awards": [
+        "1921 Nobel Prize in Physics"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

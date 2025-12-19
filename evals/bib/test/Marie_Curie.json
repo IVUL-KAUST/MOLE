@@ -1,0 +1,28 @@
+{
+    "Name": "Marie Curie",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Marie_Curie",
+    "YearOfBirth": 1867,
+    "YearOfDeath": 1934,
+    "Nationality": "Polish",
+    "Gender": "Female",
+    "Field": "Physics",
+    "Description": "Polish-French physicist and chemist who pioneered research on radioactivity, won two Nobel Prizes, discovered radium and polonium, founded the Curie Institutes.",
+    "Awards": [
+        "Nobel Prize in Physics (1903)",
+        "Nobel Prize in Chemistry (1911)",
+        "Davy Medal (1903)",
+        "Franklin Medal (1921)",
+        "Legion of Honour (1911, refused)"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

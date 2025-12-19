@@ -1,0 +1,28 @@
+{
+    "Name": "Richard Feynman",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Richard_Feynman",
+    "YearOfBirth": 1918,
+    "YearOfDeath": 1988,
+    "Nationality": "American",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "Theoretical physicist renowned for quantum electrodynamics and Feynman diagrams.",
+    "Awards": [
+        "Nobel Prize in Physics",
+        "Albert Einstein Award",
+        "Oersted Medal",
+        "National Medal of Science",
+        "Ernest Orlando Lawrence Award"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

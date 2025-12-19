@@ -1,0 +1,22 @@
+{
+    "Name": "Gregor Mendel",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+    "YearOfBirth": 1822,
+    "YearOfDeath": 1884,
+    "Nationality": "Austrian",
+    "Gender": "Male",
+    "Field": "Biology",
+    "Description": "Augustinian friar and abbot who founded modern genetics through pea-plant experiments that established the laws of heredity.",
+    "Awards": [],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

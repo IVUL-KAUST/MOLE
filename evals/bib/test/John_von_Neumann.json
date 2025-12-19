@@ -1,0 +1,26 @@
+{
+    "Name": "John von Neumann",
+    "Paper_Link": "https://en.wikipedia.org/wiki/John_von_Neumann",
+    "YearOfBirth": 1903,
+    "YearOfDeath": 1957,
+    "Nationality": "Hungarian",
+    "Gender": "Male",
+    "Field": "Mathematics",
+    "Description": "John von Neumann was a Hungarian-American mathematician, physicist, computer scientist, and engineer, renowned for founding the mathematical framework for quantum mechanics, pioneering game theory, and laying the foundations of computer science with the stored-program architecture.",
+    "Awards": [
+        "Medal for Merit",
+        "Medal of Freedom",
+        "Enrico Fermi Award"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

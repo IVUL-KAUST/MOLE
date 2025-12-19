@@ -1,0 +1,26 @@
+{
+    "Name": "Mohammad Abdus Salam",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Abdus_Salam",
+    "YearOfBirth": 1926,
+    "YearOfDeath": 1996,
+    "Nationality": "Pakistani",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "Pakistani theoretical physicist who shared the 1979 Nobel Prize in Physics and founded Pakistan\u2019s space and theoretical physics programs.",
+    "Awards": [
+        "Nobel Prize in Physics",
+        "Star of Pakistan",
+        "Nishan-e-Imtiaz"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

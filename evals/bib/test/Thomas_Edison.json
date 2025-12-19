@@ -1,0 +1,28 @@
+{
+    "Name": "Thomas Alva Edison",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Thomas_Edison",
+    "YearOfBirth": 1847,
+    "YearOfDeath": 1931,
+    "Nationality": "American",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "American inventor and businessman who pioneered electric light, sound recording, motion pictures, and established the first industrial research laboratory.",
+    "Awards": [
+        "honorary PhD from Union College",
+        "Officer of the Legion of Honour",
+        "John Scott Medal",
+        "Franklin Medal of The Franklin Institute",
+        "Congressional Gold Medal"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

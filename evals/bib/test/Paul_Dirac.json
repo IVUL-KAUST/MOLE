@@ -1,0 +1,24 @@
+{
+    "Name": "Paul Adrien Maurice Dirac",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Paul_Dirac",
+    "YearOfBirth": 1902,
+    "YearOfDeath": 1984,
+    "Nationality": "British",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "British theoretical physicist and one of the founders of quantum mechanics, famous for the Dirac equation and predicting antimatter.",
+    "Awards": [
+        "Nobel Prize in Physics"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

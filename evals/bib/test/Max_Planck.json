@@ -1,0 +1,24 @@
+{
+    "Name": "Max Karl Ernst Ludwig Planck",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Max_Planck",
+    "YearOfBirth": 1858,
+    "YearOfDeath": 1947,
+    "Nationality": "German",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "A German theoretical physicist who initiated quantum theory and was awarded the 1918 Nobel Prize in Physics",
+    "Awards": [
+        "Nobel Prize in Physics 1918"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

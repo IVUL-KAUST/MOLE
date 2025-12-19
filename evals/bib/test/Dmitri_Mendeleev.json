@@ -1,0 +1,25 @@
+{
+    "Name": "Dmitri Mendeleev",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Dmitri_Mendeleev",
+    "YearOfBirth": 1834,
+    "YearOfDeath": 1907,
+    "Nationality": "Russian",
+    "Gender": "Male",
+    "Field": "Chemistry",
+    "Description": "Russian chemist who formulated the periodic law and created a version of the periodic table of elements.",
+    "Awards": [
+        "Davy Medal",
+        "Copley Medal"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

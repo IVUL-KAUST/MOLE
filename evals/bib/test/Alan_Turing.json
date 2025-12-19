@@ -1,0 +1,24 @@
+{
+    "Name": "Alan Mathison Turing",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Alan_Turing",
+    "YearOfBirth": 1912,
+    "YearOfDeath": 1954,
+    "Nationality": "English",
+    "Gender": "Male",
+    "Field": "Mathematics",
+    "Description": "English mathematician, computer scientist, logician, cryptanalyst, philosopher and theoretical biologist highly influential in the development of theoretical computer science.",
+    "Awards": [
+        "Officer of the Order of the British Empire"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

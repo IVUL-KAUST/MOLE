@@ -1,0 +1,25 @@
+{
+    "Name": "Linus Carl Pauling",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Linus_Pauling",
+    "YearOfBirth": 1901,
+    "YearOfDeath": 1994,
+    "Nationality": "American",
+    "Gender": "Male",
+    "Field": "Chemistry",
+    "Description": "American chemist and peace activist who won two unshared Nobel Prizes and pioneered quantum chemistry and molecular biology.",
+    "Awards": [
+        "Nobel Prize in Chemistry",
+        "Nobel Peace Prize"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

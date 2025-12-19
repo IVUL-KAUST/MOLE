@@ -1,0 +1,28 @@
+{
+    "Name": "Nikola Tesla",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Nikola_Tesla",
+    "YearOfBirth": 1856,
+    "YearOfDeath": 1943,
+    "Nationality": "Serbian-American",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "Nikola Tesla was a pioneer of electrical and mechanical engineering, best known for developing the modern alternating current electricity supply system, widely used today.",
+    "Awards": [
+        "Elliott Cresson Medal",
+        "AIEE Edison Medal",
+        "Grand Cross of the Order of the White Lion",
+        "Order of the White Eagle",
+        "John Scott Medal"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

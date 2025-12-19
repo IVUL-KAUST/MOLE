@@ -1,0 +1,24 @@
+{
+    "Name": "Niels Henrik David Bohr",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Niels_Bohr",
+    "YearOfBirth": 1885,
+    "YearOfDeath": 1962,
+    "Nationality": "Danish",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "Danish theoretical physicist who made foundational contributions to understanding atomic structure and quantum theory.",
+    "Awards": [
+        "Nobel Prize in Physics 1922"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "Name": "Rosalind Elsie Franklin",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Rosalind_Franklin",
+    "YearOfBirth": 1920,
+    "YearOfDeath": 1958,
+    "Nationality": "English",
+    "Gender": "Female",
+    "Field": "Chemistry",
+    "Description": "Chemist and X-ray crystallographer whose work proved crucial to the discovery of the double-helix structure of DNA.",
+    "Awards": [
+        "Royal Society Rosalind Franklin Award",
+        "Louisa Gross Horwitz Prize (honorary)"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}

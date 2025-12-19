@@ -1,0 +1,27 @@
+{
+    "Name": "Michael Faraday",
+    "Paper_Link": "https://en.wikipedia.org/wiki/Michael_Faraday",
+    "YearOfBirth": 1791,
+    "YearOfDeath": 1867,
+    "Nationality": "English",
+    "Gender": "Male",
+    "Field": "Physics",
+    "Description": "Prolific experimental scientist whose discoveries in electromagnetism and electrochemistry laid the foundations for modern electrical technology.",
+    "Awards": [
+        "Faraday Medal of the IET",
+        "Royal Society Michael Faraday Prize",
+        "Michael Faraday Medal and Prize of the Institute of Physics",
+        "Faraday Lectureship Prize of the Royal Society of Chemistry"
+    ],
+    "annotations_from_paper": {
+        "Name": 1,
+        "Paper_Link": 0,
+        "YearOfBirth": 1,
+        "YearOfDeath": 1,
+        "Nationality": 1,
+        "Gender": 1,
+        "Field": 1,
+        "Description": 1,
+        "Awards": 1
+    }
+}
