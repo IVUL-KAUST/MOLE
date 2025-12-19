@@ -1,0 +1,58 @@
+{
+    "Name": {
+        "question": "What is the name of the person?",
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 5
+    },
+    "Paper_Link": {
+        "question": "What is the link to the wiki page?",
+        "answer_type": "url",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "YearOfBirth": {
+        "question": "What is the year of birth?",
+        "answer_type": "date[year]",
+        "answer_min": 1000,
+        "answer_max": 2025
+    },
+    "YearOfDeath": {
+        "question": "What is the year of death?",
+        "answer_type": "date[year]",
+        "answer_min": 1000,
+        "answer_max": 2025
+    },
+    "Nationality": {
+        "question": "What is the nationality?",
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Gender": {
+        "question": "What is the gender?",
+        "options": ["Male", "Female"],
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Field": {
+        "question": "What is the field of work?",
+        "options": ["Physics", "Chemistry", "Mathematics", "Literature", "Peace", "Economics"],
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 1
+    },
+    "Description": {
+        "question": "What is the description?",
+        "answer_type": "str",
+        "answer_min": 1,
+        "answer_max": 100
+    },
+    "Awards": {
+        "question": "What are the awards?",
+        "answer_type": "List[str]",
+        "answer_min": 1,
+        "answer_max": 5
+    }
+}
