@@ -469,6 +469,31 @@ class BIBSchema(Schema):
             system_prompt += open('GUIDELINES_BIB.md').read()
         return prompt, system_prompt
 
+class NADLSchema(Schema):
+    Title: Field(LongStr, 1, 100)
+    Dataset_Link: Field(URL, 1, 1)
+    Paper_Link: Field(URL, 1, 1)
+    Abstract: Field(LongStr, 1, 1000)
+    
+    @classmethod
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+        if version == "2.0":
+            schema = cls.schema()
+        elif version == "1.0":
+            schema = cls.get_mole_schema()
+        else:
+            raise ValueError(f"Invalid version: {version}")
+        prompt = f"""Schema Name: {cls.get_schema_name()}
+                    Input Schema: {schema}
+                    Paper Text: {paper_text}
+                """
+        system_prompt = cls.get_system_prompt().replace("of datasets", "")
+        if version == "2.0":
+            system_prompt += "Use the following guidelines to extract the answer from the 'Paper Text':\n\n"
+            system_prompt += open('GUIDELINES_NADL.md').read()
+        return prompt, system_prompt
+
+
 class TestSchema(Schema):
     Name: Field(Str, 1, 5)
     Hobbies: Field(List[Str], 1, 3, ['Hiking', 'Swimming', 'Reading'])
@@ -639,5 +664,7 @@ def get_schema(schema_name):
         return BIBSchema
     elif schema_name == 'parent':
         return Parent
+    elif schema_name == 'nadl':
+        return NADLSchema
     else:
         raise ValueError(f"Invalid schema name: {schema_name}")
