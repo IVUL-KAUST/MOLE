@@ -108,7 +108,7 @@ class ArxivSourceDownloader:
                 return True
                 
         except Exception as e:
-            self.logger.error(f"Error extracting gzip file: {e}")
+            self.logger.show_error(f"Error extracting gzip file: {e}")
             return False
 
     def _handle_tar(self, file_path: str, extract_path: str) -> bool:
@@ -127,7 +127,7 @@ class ArxivSourceDownloader:
                 tar.extractall(path=extract_path, members=is_safe_path(tar))
             return True
         except Exception as e:
-            self.logger.error(f"Error extracting tar file: {e}")
+            self.logger.show_error(f"Error extracting tar file: {e}")
             return False
 
     def _save_direct(self, file_path: str, extract_path: str, file_type: str) -> bool:
@@ -137,7 +137,7 @@ class ArxivSourceDownloader:
             shutil.copy2(file_path, new_path)
             return True
         except Exception as e:
-            self.logger.error(f"Error saving file: {e}")
+            self.logger.show_error(f"Error saving file: {e}")
             return False
 
     def _download_file(self, url: str, output_path: str) -> bool:
@@ -161,7 +161,7 @@ class ArxivSourceDownloader:
             return True
             
         except Exception as e:
-            self.logger.error(f"Error downloading file from {url}: {e}")
+            self.logger.show_error(f"Error downloading file from {url}: {e}")
             return False
 
     def _download_source(self, url: str, paper_dir: str) -> Optional[str]:
@@ -306,10 +306,10 @@ class ArxivSourceDownloader:
             }
             
         except StopIteration:
-            self.logger.error(f"Paper not found: {paper_id}")
+            self.logger.show_error(f"Paper not found: {paper_id}")
             return None
         except Exception as e:
-            self.logger.error(f"Error fetching paper metadata: {e}")
+            self.logger.show_error(f"Error fetching paper metadata: {e}")
             return None
 
 class ArxivSearcher:
