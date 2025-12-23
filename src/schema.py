@@ -48,7 +48,7 @@ class Schema(BaseModel):
         return [key for key in cls.model_fields.keys() if key not in ['annotations_from_paper']]
 
     @classmethod
-    def schema(cls):    
+    def schema(cls, length_constrain = "low"):    
         schema_json = {}
         for key in cls.get_attributes():
             values = {}
@@ -57,6 +57,14 @@ class Schema(BaseModel):
             for constrain in ['answer_min', 'answer_max', 'options']:
                 attr =  getattr(ob, constrain)
                 if attr is not None and attr != -1:
+                    if constrain == "answer_max":
+                        answer_min =  getattr(ob, "answer_min")
+                        if length_constrain == "high":
+                            attr = max(attr // 4, answer_min)
+                        elif length_constrain == "mid":
+                            attr = max(attr // 2, answer_min)
+                        else:
+                            pass
                     values[constrain] = attr
             schema_json[key] = values
             
@@ -115,23 +123,23 @@ class Schema(BaseModel):
     def json(self):
         return json.loads(self.model_dump_json())
     
-    @classmethod
-    def get_options(cls, key):
-        schema = cls.dict()
-        if 'options' in schema[key]:
-            return schema[key]['options']
-        else:
-            return None
+    # @classmethod
+    # def get_options(cls, key):
+    #     schema = cls.dict()
+    #     if 'options' in schema[key]:
+    #         return schema[key]['options']
+    #     else:
+    #         return None
     
-    @classmethod
-    def get_answer_min(cls, key):
-        schema = cls.dict()
-        return schema[key]['answer_min']
+    # @classmethod
+    # def get_answer_min(cls, key):
+    #     schema = cls.dict()
+    #     return schema[key]['answer_min']
     
-    @classmethod
-    def get_answer_max(cls, key):
-        schema = cls.dict()
-        return schema[key]['answer_max']
+    # @classmethod
+    # def get_answer_max(cls, key):
+    #     schema = cls.dict()
+    #     return schema[key]['answer_max']
     
     @classmethod
     def get_system_prompt(cls):
@@ -287,9 +295,9 @@ class Schema(BaseModel):
        
 class DatasetSchema(Schema):
     @classmethod
-    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0", length_constrain = "low"):
         if version == "2.0":
-            schema = cls.schema()
+            schema = cls.schema(length_constrain = length_constrain)
         elif version == "1.0":
             schema = cls.get_mole_schema()
         else:
@@ -332,9 +340,9 @@ class ModelSchema(Model):
     Paper_Link: Field(URL, 1, 1)
     
     @classmethod
-    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0", length_constrain = "low"):
         if version == "2.0":
-            schema = cls.schema()
+            schema = cls.schema(length_constrain = length_constrain)
         elif version == "1.0":
             schema = cls.get_mole_schema()
         else:
@@ -368,9 +376,9 @@ class ToolSchema(Schema):
     Programming_Language: Field(List[Str], 1, 3, ['Python', 'Java', 'C', 'C++', 'C#', 'JavaScript', 'TypeScript', 'Go', 'Rust', 'R', 'MATLAB', 'unknown', 'other'])
     
     @classmethod
-    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0", length_constrain = "low"):
         if version == "2.0":
-            schema = cls.schema()
+            schema = cls.schema(length_constrain = length_constrain)
         elif version == "1.0":
             schema = cls.get_mole_schema()
         else:
@@ -397,9 +405,9 @@ class MsedSchema(Schema):
     Abstract: Field(Str, 1, 1000)
     
     @classmethod
-    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0", length_constrain = "low"):
         if version == "2.0":
-            schema = cls.schema()
+            schema = cls.schema(length_constrain = length_constrain)
         elif version == "1.0":
             schema = cls.get_mole_schema()
         else:
@@ -423,9 +431,9 @@ class S2ORCSchema(Schema):
     Field: Field(List[Str], 1, 3, ["Mathematics", "Computer Science", "Medicine", "Physics", "Statistics", "Engineering", "Other"])
     
     @classmethod
-    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0", length_constrain = "low"):
         if version == "2.0":
-            schema = cls.schema()
+            schema = cls.schema(length_constrain = length_constrain)
         elif version == "1.0":
             schema = cls.get_mole_schema()
         else:
@@ -452,9 +460,9 @@ class BIBSchema(Schema):
     Awards: Field(List[Str], 1, 5)
     
     @classmethod
-    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0", length_constrain = "low"):
         if version == "2.0":
-            schema = cls.schema()
+            schema = cls.schema(length_constrain = length_constrain)
         elif version == "1.0":
             schema = cls.get_mole_schema()
         else:
@@ -476,9 +484,9 @@ class NADLSchema(Schema):
     Abstract: Field(LongStr, 1, 1000)
     
     @classmethod
-    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0", length_constrain = "low"):
         if version == "2.0":
-            schema = cls.schema()
+            schema = cls.schema(length_constrain = length_constrain)
         elif version == "1.0":
             schema = cls.get_mole_schema()
         else:
@@ -500,8 +508,8 @@ class TestSchema(Schema):
     Age : Field(Int, 1, 100)
 
     @classmethod
-    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0"):
-        schema = cls.schema()
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0", length_constrain = "low"):
+        schema = cls.schema(length_constrain = length_constrain)
         prompt = f"""Schema Name: {cls.get_schema_name()}
                     Input Schema: {schema}
                     Text: {paper_text}
@@ -529,10 +537,10 @@ class ResourceSchema(Schema):
     Abstract: Field(Str, 1, 1000)  
     
     @classmethod
-    def get_prompts(cls, paper_text, readme, metadata = None):
+    def get_prompts(cls, paper_text, readme, metadata = None, version = "2.0", length_constrain = "low"):
         
         prompt = f"""Schema Name: {cls.get_schema_name()}
-                    Input Schema: {cls.schema()}
+                    Input Schema: {cls.schema(length_constrain = length_constrain)}
                     Paper Text: {paper_text}
                 """
         system_prompt = f"""

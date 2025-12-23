@@ -112,6 +112,13 @@ parser.add_argument(
     default="2.0",
     help="version to use",
 )
+parser.add_argument(
+    "--length_constrain",
+    type=str,
+    default="low",
+    help="length constrain to use",
+)
+
 # Parse arguments conditionally
 import sys
 

@@ -92,6 +92,7 @@ def get_metadata(
     timeout = 3,
     version = "2.0",
     log = True,
+    length_constrain = "low"
 ):
     cost = {
         "input_tokens": 0,
@@ -103,7 +104,7 @@ def get_metadata(
     for i in range(max_retries):
         predictions = {}
         error = None
-        prompt, sys_prompt = schema.get_prompts(paper_text, readme, metadata, version = version)
+        prompt, sys_prompt = schema.get_prompts(paper_text, readme, metadata, version = version, length_constrain = length_constrain)
         messages = [{"role": "system", "content": sys_prompt}, {"role": "user", "content": prompt}]
 
         
@@ -413,7 +414,7 @@ def run(
             cost = results["cost"]
         else:
             message, metadata, cost, error = get_metadata(
-                paper_text, args.model_name, schema_name=args.schema_name, few_shot = args.few_shot, backend = args.backend, max_model_len = args.max_model_len, max_output_len = args.max_output_len, version = args.version, log = args.log
+                paper_text, args.model_name, schema_name=args.schema_name, few_shot = args.few_shot, backend = args.backend, max_model_len = args.max_model_len, max_output_len = args.max_output_len, version = args.version, log = args.log, length_constrain = args.length_constrain
             )
         if args.browse_web:
             browsing_link = get_repo_link(
