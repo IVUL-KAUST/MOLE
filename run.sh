@@ -1,6 +1,12 @@
 #!/bin/bash
 MODEL_NAME=$1
-MAX_LEN=8192
+MAX_LEN=$2
+VERSION="2.0"
+SERVED_MODEL_NAME=$MODEL_NAME
+if [ $MODEL_NAME == "MOLE" ]; then
+    VERSION="1.0"
+    SERVED_MODEL_NAME="Qwen2.5-3B-Instruct"
+fi
 # Function to check if vLLM server is running
 check_vllm_server() {
     curl -s http://localhost:8787/v1/models > /dev/null 2>&1
@@ -12,7 +18,7 @@ start_vllm_server() {
     echo "🚀 Starting vLLM server..."
     
     # Start vLLM server in background
-    uv run vllm serve $MODEL_NAME \
+    uv run vllm serve $SERVED_MODEL_NAME \
         --host localhost \
         --port 8787 \
         --max-model-len $MAX_LEN \
@@ -76,13 +82,14 @@ else
 fi
 
 echo "🚀 Starting evaluation..."
-for schema_name in ar en jp fr ru multi model; do
+for schema_name in ar en ru jp fr multi model tool s2orc bib; do
     echo "🚀 Starting evaluation for $schema_name..."
     uv run src/evaluate.py \
         --split test \
         --backend vllm \
         --model $MODEL_NAME \
         --schema_name $schema_name \
+        --version $VERSION \
         --max_model_len $MAX_LEN \
         --max_output_len 2048 
 done
