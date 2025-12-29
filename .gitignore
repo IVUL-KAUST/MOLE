@@ -47,3 +47,5 @@ logs/
 helpers/human_annotated_data/
 helpers/kimi_annotated_data/
 helpers/results_kimi
+r_8_alpha_16_maxlen_16384/
+evals/nadl/
