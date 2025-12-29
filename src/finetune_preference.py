@@ -144,14 +144,15 @@ def main(script_args, training_args, model_args, dataset_args):
         )
     else:
         raise ValueError("Either `datasets` or `dataset_name` must be provided.")
-
+    dataset_test_split = "test" if "test" in dataset else "validation"
+    dataset_train_split = "train"
     # Initialize the DPO trainer
     trainer = DPOTrainer(
         model,
         ref_model,
         args=training_args,
-        train_dataset=dataset[script_args.dataset_train_split],
-        eval_dataset=dataset[script_args.dataset_test_split] if training_args.eval_strategy != "no" else None,
+        train_dataset=dataset[dataset_train_split],
+        eval_dataset=dataset[dataset_test_split] if training_args.eval_strategy != "no" else None,
         processing_class=tokenizer,
         peft_config=peft_config,
     )
