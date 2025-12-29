@@ -1,0 +1,8 @@
+{
+    "Name": "ahmad",
+    "Age": 20,
+    "Website": "https://www.google.com",
+    "Hobbies": ["reading", "swimming", "coding"],
+    "Sons": [ "khalid" ],
+    "Married": true
+}
