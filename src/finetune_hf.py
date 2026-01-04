@@ -77,7 +77,7 @@ model = get_peft_model(model, lora_config)
 
 def get_files():
     print('getting synthetic data files')
-    all_train_files = glob.glob("static/synth_dataset/**/**.json")
+    all_train_files = glob.glob("static/synth_datasetv2/**/**.json")
     all_train_files = [file for file in all_train_files if args.distilled_model in json.load(open(file))["config"]["model_name"]]
     test_files = []
     # valid_files = []  # getting validation from valid files
