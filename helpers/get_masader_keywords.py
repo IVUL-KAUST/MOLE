@@ -19,7 +19,7 @@ def get_words_from_paper(paper):
 
 
 keywords = []
-files = glob.glob('/ibex/ai/home/alyafez/masader/datasets/*.json')
+files = glob.glob('../masader/datasets/*.json')
 stop_words = set(stopwords.words('english'))
 for file in tqdm(files):
     data = json.load(open(file, 'r'))

@@ -1,14 +1,16 @@
 import pandas as pd
-import time
-import concurrent.futures
-import os
 from glob import glob
-from tqdm import tqdm
 from collections import Counter
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--base_dir", type=str, default="../.cache/jql-a**/")
+args = parser.parse_args()
+
+base_dir = args.base_dir
 
 dfs = []
 manual_annotation = False
-base_dir = "/ibex/ai/home/alyafez/.cache/jql-a**/"
 if manual_annotation:
     papers = annotate_schema()
     df = pd.DataFrame(papers)

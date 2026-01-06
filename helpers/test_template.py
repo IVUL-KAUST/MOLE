@@ -92,6 +92,6 @@ predicted_metadata = json.loads(chat_response.choices[0].message.content)
 
 predicted_metadata = RuSchema(metadata=predicted_metadata)
 
-gold_metadata = json.load(open('/ibex/ai/home/alyafez/MOLE/evals/ru/test/rucola.json'))
+gold_metadata = json.load(open('evals/ru/test/rucola.json'))
 evaluation_results = predicted_metadata.compare_with(gold_metadata)
 print(evaluation_results)
