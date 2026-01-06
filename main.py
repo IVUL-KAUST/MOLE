@@ -7,8 +7,9 @@ from schema import get_schema
 import arg_utils
 import json
 
-keys_order = ["Name", "Subsets", "HF_Link", "Link", "License", "Year", "Language", "Dialect", "Domain", "Form", "Collection_Style", "Description", "Volume", "Unit", "Ethical_Risks", "Provider", "Derived_From", "Paper_Title", "Paper_Link", "Script", "Tokenized", "Host", "Access", "Cost", "Test_Split", "Tasks", "Venue_Title", "Venue_Type", "Venue_Name", "Authors", "Affiliations", "Abstract", "Added_By"]
-keys_order_tool = ["Name", "Link", "License", "Year", "Access", "Version", "Description", "Provider", "Paper_Title", "Paper_Link", "Tasks", "Interface", "Host", "Code", "Programming_Language"]
+keys_order_datasets = ["Name", "Subsets", "HF_Link", "Link", "License", "Year", "Language", "Dialect", "Domain", "Form", "Collection_Style", "Description", "Volume", "Unit", "Ethical_Risks", "Provider", "Derived_From", "Paper_Title", "Paper_Link", "Script", "Tokenized", "Host", "Access", "Cost", "Test_Split", "Tasks", "Venue_Title", "Venue_Type", "Venue_Name", "Authors", "Affiliations", "Abstract", "Added_By"]
+keys_order_tool = ["Name", "Link", "License", "Year", "Access", "Version", "Description", "Provider", "Paper_Title", "Paper_Link", "Tasks", "Interface", "Host", "Code_Execution", "Supported_OS", "Programming_Language"]
+keys_order_msed = ["Title", "Paper_Link", "Link", "Author", "Authoraffiliation", "Doi", "Email", "Date", "Abstract", "Added_By"]
 app = FastAPI()
 
 @app.post("/run")
@@ -23,6 +24,7 @@ async def func(link: str =  Form(''), schema_name: str = Form(''), file: UploadF
     _args.format = 'pdf_plumber'
     _args.overwrite = True
     _args.log = True
+    print(link)
     results = run(link, _args)
     
     # print(results)
@@ -37,8 +39,13 @@ async def func(name: str =  Form('')):
     schema = get_schema(name)
     schema_dict = json.loads(schema.schema())
     readme = 'GUIDELINES.md'
+    keys_order = keys_order_datasets
     if name == 'tool':
         readme = 'GUIDELINES_TOOL.md'
+        keys_order = keys_order_tool
+    elif name == 'msed':
+        readme = 'GUIDELINES_MSED.md'
+        keys_order = keys_order_msed
     
     for line in open(readme, 'r').readlines():
         if '**' in line:
@@ -50,7 +57,5 @@ async def func(name: str =  Form('')):
         "answer_max": 1,
         "description": "Your full name"
     }
-    if name == 'tool':
-        return {key: schema_dict[key] for key in keys_order_tool}
     return {key: schema_dict[key] for key in keys_order}
     
