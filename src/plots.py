@@ -49,6 +49,11 @@ def get_all_ids():
             schema = get_schema(cat)
             data = schema.get_eval_datasets(args.split, args.eval_path)
             ids += [create_hash(paper['Paper_Link']) for paper in data]
+    elif "," in args.schema_name:
+        for schema_name in args.schema_name.split(","):
+            schema = get_schema(schema_name)
+            data = schema.get_eval_datasets(args.split, args.eval_path)
+            ids += [create_hash(paper['Paper_Link']) for paper in data]
     else:
         schema = get_schema(args.schema_name)
         data = schema.get_eval_datasets(args.split, args.eval_path)
@@ -299,7 +304,8 @@ def extract_results(json_file, headers):
             output[schema_name].append(scores['f1'])
     elif args.group_by_x == "year":
         year = gold_metadata["Year"]
-        output[year].append(scores['f1'])
+        if year in output:
+            output[year].append(scores['f1'])
     elif args.group_by_x == "few_shot":
         few_shot = results["config"]["few_shot"]
         output[few_shot].append(scores['f1'])
@@ -317,9 +323,10 @@ def extract_results(json_file, headers):
             print(results["error"])
         output["error"].append(value)
     elif args.group_by_x == "length":
-        if results["error"] is not None and args.penalize_errors:
-            output["length"].append(0)
-        else:
+        # if results["error"] is not None and args.penalize_errors:
+        #     output["length"].append(0)
+        # else:
+        if results["error"] is None:
             output["length"].append(scores["length"])
     else:
         for metric in scores:
@@ -418,7 +425,13 @@ def plot_by_group():
     else:
         print_table(results, headers, format = True)
 
-
+def skip_mextract_variants(model_name):
+    if 'maxlen' in model_name:
+        return True
+    if '100' in model_name or '300' in model_name:
+        return True
+    return False
+    
 if __name__ == "__main__":
     print(args.results_path)
     all_files = glob(f"{args.results_path}/**/*.json")
@@ -428,14 +441,14 @@ if __name__ == "__main__":
         model_name = json_data['config']['model_name']
         # if any([model in model_name.lower() for model in ['gemini', 'moonshotai', 'x-ai']]):
         #     json_files.append(file)
-        # if 'kimi-k2' in model_name.lower():
-        #     if 'r_8_alpha_16' in model_name.lower():
-        #         if '200' in model_name.lower(): #or ('sft-merged' in model_name.lower() and 'dpo-merged' not in model_name.lower()):
-        #             json_files.append(file)
-        #         # if 'dpo' not in model_name.lower():
-        #         #     json_files.append(file)
-        # else:
-        json_files.append(file)
+        if 'kimi-k2' in model_name.lower():
+            if 'r_8_alpha_16' in model_name.lower():
+                if skip_mextract_variants(model_name):
+                    continue
+                json_files.append(file)
+        else:
+            json_files.append(file)
+
     if args.model is not None:
         json_files = [file for file in json_files if args.model in json.load(open(file))['config']['model_name']]
 
