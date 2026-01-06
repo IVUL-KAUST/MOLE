@@ -53,11 +53,12 @@ class Schema(BaseModel):
         for key in cls.get_attributes():
             values = {}
             ob = cls.model_fields[key].metadata[0]
+            cls_name = ob.__class__.__name__
             values['answer_type'] = ob.get_type()
             for constrain in ['answer_min', 'answer_max', 'options']:
                 attr =  getattr(ob, constrain)
                 if attr is not None and attr != -1:
-                    if constrain == "answer_max":
+                    if constrain == "answer_max" and not any(cls_name in name for name in ['Int', 'Year', 'Float']):
                         answer_min =  getattr(ob, "answer_min")
                         if length_constrain == "high":
                             attr = max(attr // 4, answer_min)
@@ -192,32 +193,34 @@ class Schema(BaseModel):
             The 'Output JSON' must have ONLY the keys in the 'Input Schema'.
         """
         
-    def evaluate_length(self):
+    def evaluate_length(self, length_constrain = "low"):
         accuracy = 0
         metadata = self.model_dump()
-        attributes = self.get_attributes()
+        # attributes = self.get_attributes()
+        cls = self.__class__
+        schema = json.loads(cls.schema(length_constrain = length_constrain))
+        attributes = schema.keys()
+        # print(schema)
         for key in attributes:
             type  = self.get_answer_object(key)
-            length = type.validate_length(metadata[key])
-            # if length < 1:
-            #     print(type.answer_min,type.answer_max, key, metadata[key])
+            answer_min = schema[key]['answer_min']
+            answer_max = -1 if "answer_max" not in schema[key] else schema[key]['answer_max']
+            length = type.validate_length(metadata[key], answer_min, answer_max)
+            if length < 1:
+                # print(length, answer_min,answer_max, key, metadata[key])
+                pass
             accuracy += length
         return accuracy / len(attributes)
     
-    def modify_length(self):
-        length = 0 
+    def modify_length(self, length_constrain = 'low', accepted=True):
         metadata = self.model_dump()
+        schema = json.loads(self.__class__.schema(length_constrain=length_constrain))
         for key in self.get_attributes():
             type  = self.get_answer_object(key)
-            modified_value = type.modify_length(metadata[key])
-            # print(type.validate_length(modified_value))
-            type_name = type.__class__.__name__
-            length_val = type.validate_length(modified_value)
-            # if length_val ==0:
-            #     print(type_name)
+            answer_min = schema[key]['answer_min']
+            answer_max = -1 if "answer_max" not in schema[key] else schema[key]['answer_max']
+            modified_value = type.modify_length(metadata[key], answer_min, answer_max, accepted)
             metadata[key] = modified_value
-            length += length_val
-        # print(length / len(self.get_attributes()))
         return metadata
     
     def compare_with(self, gold_metadata, return_metrics_only = False, return_precision_only = False, exact_match = False):
