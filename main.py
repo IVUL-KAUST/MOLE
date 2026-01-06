@@ -27,8 +27,6 @@ async def func(link: str =  Form(''), schema_name: str = Form(''), file: UploadF
     print(link)
     results = run(link, _args)
     
-    # print(results)
-    # results = json.load(open('/Users/zaidalyafeai/Documents/Development/masader_bot/static/results_latex/1410.3791/zero_shot/google_gemma-3-27b-it-browsing-results.json'))
     metadata = results[model_name]['metadata']
     metadata['Added_By'] = model_name
     print(metadata)
