@@ -211,6 +211,7 @@ class Str(BaseType):
         return modified_value
 
 class LongStr(Str):
+    """bug: this should have get_type attribute"""
     def compare(self, attr1, attr2, exact_match = False):
         if exact_match:
             return int(attr1 == attr2)
