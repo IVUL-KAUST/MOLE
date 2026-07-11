@@ -30,6 +30,3 @@ dependencies = [
     "vllm>=0.10.1",
     "wikipedia-api>=0.8.1",
 ]
-
-[tool.uv.sources]
-langextract = { git = "https://github.com/google/langextract" }

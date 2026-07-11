@@ -1727,7 +1727,7 @@ wheels = [
 [[package]]
 name = "langextract"
 version = "1.0.8"
-source = { git = "https://github.com/google/langextract#f98377a44b087c64c5218d912477d2d90bd1a1a4" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "absl-py" },
     { name = "aiohttp" },
@@ -1745,6 +1745,10 @@ dependencies = [
     { name = "requests" },
     { name = "tqdm" },
     { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2e/d8/95666e87f02f3c83420ed030f14085c9c6acd986da336b514443dee6d649/langextract-1.0.8.tar.gz", hash = "sha256:dc4c65058969486faf119d2c0cd82a12ccdff1d9785212b96fd67c52cbbe74c7", size = 78418, upload-time = "2025-08-15T07:19:33.732Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f7/70/f5eba44ee7a8c8fe651b14585618a4ca600dd41a6fdc156b4377f4f53bb1/langextract-1.0.8-py3-none-any.whl", hash = "sha256:17b5985154ec1d58f5dd8fe4d6135d0cd4b4d650a075f8cf36eca705e2459263", size = 84987, upload-time = "2025-08-15T07:19:32.587Z" },
 ]
 
 [[package]]
@@ -2313,7 +2317,7 @@ requires-dist = [
     { name = "datasets", specifier = ">=4.1.1" },
     { name = "docling", specifier = "~=2.30" },
     { name = "fastapi", specifier = "==0.115.12" },
-    { name = "langextract", git = "https://github.com/google/langextract" },
+    { name = "langextract", specifier = ">=1.0.8" },
     { name = "levenshtein", specifier = "==0.27.1" },
     { name = "litellm", specifier = "==1.65.4.post1" },
     { name = "pandas", specifier = "==2.2.3" },
