@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "acl-anthology>=0.5.3",
+    # "acl-anthology>=0.5.3",
     "arxiv==2.1.3",
     "arxiv-latex-cleaner==1.0.8",
     "beautifulsoup4==4.12.3",
@@ -13,7 +13,7 @@ dependencies = [
     "datasets>=4.1.1",
     "docling~=2.30",
     "fastapi==0.115.12",
-    "langextract>=1.0.8",
+    # "langextract>=1.0.8",
     "levenshtein==0.27.1",
     "litellm==1.65.4.post1",
     "pandas==2.2.3",

@@ -1,5 +1,5 @@
 
-from acl_anthology import Anthology
+# from acl_anthology import Anthology
 import argparse
 import pandas as pd
 from tqdm import tqdm
@@ -127,51 +127,13 @@ def get_cached_papers():
     return data
 
 def annotate_schema(limit=None, redownload=False):
-    if not redownload:
-        papers = get_cached_papers()
-    else:
-        anthology = Anthology.from_repo()
-        papers = anthology.papers()
-
-    results = []
-    # pbar = tqdm(total=limit, desc="Searching ACL Anthology")
-    if limit is None:
-        limit = len(papers)
-    bpar = tqdm(total=limit, desc="Annotating schema", position=0)
-    for paper in papers:
-        bpar.update(1)
-        if limit is not None and len(results) >= limit:
-            break
-        schema = filter_schema(paper)
-        if schema == 'discard':
-            continue
-        # pbar.update(1)
-        results.append({
-            'id': paper.id,
-            'title': paper.title,
-            'year': paper.year,
-            'url': paper.url,
-            'abstract': paper.abstract,
-            'schema_name': schema
-        })
-        
-    bpar.close()
-    return results
+    raise NotImplementedError("acl-anthology is disabled")
 
 def count_all_papers():
-    anthology = Anthology.from_repo()
-    return len(list(anthology.papers()))
+    raise NotImplementedError("acl-anthology is disabled")
 
 def count_papers_per_venue():
-    anthology = Anthology.from_repo()
-    venue_counts = {}
-    for paper in anthology.papers():
-        if paper.venue_ids:
-            for v_id in paper.venue_ids:
-                if v_id in anthology.venues:
-                    venue_name = anthology.venues[v_id].name
-                    venue_counts[venue_name] = venue_counts.get(venue_name, 0) + 1
-    return venue_counts
+    raise NotImplementedError("acl-anthology is disabled")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Search the ACL Anthology or count all papers.')

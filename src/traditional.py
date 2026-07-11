@@ -3,7 +3,7 @@ import re
 import json
 from dotenv import load_dotenv
 import os
-import langextract as lx
+# import langextract as lx
 import json
 import torch
 from transformers import pipeline
@@ -162,61 +162,7 @@ def get_metadata_langextract(
     paper_text,
     schema_name = "ar",
 ):
-    config = lx.factory.ModelConfig(
-        model_id="google/gemini-2.5-flash",
-        provider="OpenAILanguageModel",
-        provider_kwargs={"api_key": os.getenv("OPENROUTER_API_KEY"), "base_url": "https://openrouter.ai/api/v1"}
-    )
-    model = lx.factory.create_model(config)
-
-    # 1. Define the prompt and extraction rules
-    prompt = textwrap.dedent("""Extract datasets metadata from scholarly articles
-    CRITICAL: Return valid JSON only. Escape all quotes and newlines properly.
-    Return your answer as a JSON object with this format:
-    {
-        "extractions": [
-            {
-                "extraction_class": "exclusion",
-                "extraction_text": "exact text from the policy document",
-                "attributes": {...}
-            }
-        ]
-    }
-    """)
-
-    # 2. Provide a high-quality example to guide the model
-    example = open(f'examples/{schema_name}/example1.tex').read()
-    output = json.load(open(f'examples/{schema_name}/example1.json'))
-    extractions = []
-    for key, value in output.items():
-        extractions.append(lx.data.Extraction(extraction_class=key.replace(" ", "_"), extraction_text=value))
-    examples = [
-        lx.data.ExampleData(
-            text=example,
-            extractions=extractions,
-        )
-    ]
-    
-    # Run the extraction
-    result = lx.extract(
-        text_or_documents=paper_text,
-        prompt_description=prompt,
-        examples=examples,
-        model = model,
-        extraction_passes=1,
-        max_workers=20,
-    )
-
-    output = {}
-    for extraction in result.extractions:
-        try:
-            output[extraction.extraction_class] = eval(extraction.extraction_text)
-        except:
-            output[extraction.extraction_class] = extraction.extraction_text
-    print(output)
-
-    return output
+    raise NotImplementedError("langextract is disabled")
 
 
-    
     
