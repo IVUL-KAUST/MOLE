@@ -37,6 +37,9 @@ class ArxivSourceDownloader:
             
         if identifier.startswith('arxiv:'):
             identifier = identifier[6:]
+
+        if identifier.endswith('.pdf'):
+            identifier = identifier[:-4]
             
         return identifier.split('v')[0].strip()
 
@@ -240,7 +243,7 @@ class ArxivSourceDownloader:
         if download_pdf:
             if os.path.exists(os.path.join(paper_dir, f"paper.pdf")):
                 return True, paper_dir
-            if len(identifier.split("/")) > 5:
+            if identifier.endswith(".pdf") or "/pdf/" in identifier:
                 pdf_url = identifier
             else:
                 pdf_url = self._get_pdf_url(paper_id)

@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File, Form # type: ignore
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException # type: ignore
 # add absolute path from src 
 import sys
 sys.path.append('src')
@@ -15,7 +15,7 @@ app = FastAPI()
 @app.post("/run")
 async def func(link: str =  Form(''), schema_name: str = Form(''), file: UploadFile = File(None)):
     browse_web = False
-    model_name = 'moonshotai/kimi-k2'
+    model_name = 'google/gemini-3-flash-preview'
 
     # Call your processing function with the file content and link
     _args = arg_utils.args
@@ -26,6 +26,9 @@ async def func(link: str =  Form(''), schema_name: str = Form(''), file: UploadF
     _args.log = True
     print(link)
     results = run(link, _args)
+    
+    if model_name not in results:
+        raise HTTPException(status_code=422, detail=f"Failed to process paper: {link}")
     
     metadata = results[model_name]['metadata']
     metadata['Added_By'] = model_name

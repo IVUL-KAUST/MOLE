@@ -144,7 +144,8 @@ def get_default_args():
         'max_output_len': None,
         'timeout': 0,
         'log': False,
-        'version': '2.0'
+        'version': '2.0',
+        'length_constrain': 'low',
     }
 
 # Create a simple class to mimic argparse.Namespace behavior
